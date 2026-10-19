@@ -3,11 +3,12 @@
 Status: In Progress (Milestone M0)
 
 ## Check 1: Parse Verification
-- [ ] Total tips = 765
-- [ ] Evidence grades: A = 495, B = 218, C = 52
-- [ ] Value tiers: Very high = 122, High = 344, Average = 299
-- [ ] Disputed tips = 88; Still being verified = 3
-- [ ] Scope counts: Lifespan = 274, Money = 290, Freedom = 124, Time = 77
+- [x] Total tips = 765 (Verified: 765)
+- [x] Evidence grades: A = 495, B = 218, C = 52 (Verified: A=495, B=218, C=52)
+- [x] Value tiers: Very high = 122, High = 344, Average = 299 (Verified: 122 / 344 / 299)
+- [x] Disputed tips = 88; Still being verified = 3 (Verified: 88 / 3)
+- [x] Scope counts: Lifespan = 274, Money = 290, Freedom = 124, Time = 77 (Verified: 274 / 290 / 124 / 77)
+- **Status:** PASS (Run on 2026-10-19)
 
 ## Check 2: Translation & Content Integrity
 - [ ] 0 CJK characters in production build (`dist/`)
