@@ -1,0 +1,254 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="About & Legal Attribution - How To Live Better"
+  description="Licensing, source attribution, medical/legal disclaimers, and privacy commitments for How To Live Better."
+>
+  <article class="prose-container">
+    <header class="page-header">
+      <span class="comic-sticker sticker-scope">Attribution & Legal</span>
+      <h1 class="page-title">About This Project</h1>
+      <p class="page-lead">
+        A fast, mobile-first English translation of <em>How To Live Better</em>, built with an Apple-style glass interface and playful comic-layer illustrations.
+      </p>
+    </header>
+
+    <!-- Essential Legal & Attribution Notice (Non-Negotiable) -->
+    <section class="info-card liquid-glass accent-border">
+      <h2 class="card-heading">Licence & Source Attribution</h2>
+      <p>
+        This work is based on <a href="https://github.com/eternity4719/HowToLiveBetter" target="_blank" rel="noopener noreferrer" class="link"><strong>How To Live Better by eternity4719</strong></a>.
+      </p>
+      <p style="margin-top: 0.75rem;">
+        The underlying text is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer" class="link"><strong>Creative Commons Attribution 4.0 International License (CC BY 4.0)</strong></a>.
+      </p>
+      <blockquote class="attribution-quote">
+        "Translated into English and reformatted for the web. Changes were made. Not endorsed by the author."
+      </blockquote>
+      <p style="margin-top: 0.75rem; font-size: 0.875rem; color: var(--color-ink-muted);">
+        The web application code is open-source under the MIT License.
+      </p>
+    </section>
+
+    <!-- Geographic & Disclaimers -->
+    <section class="info-card liquid-glass">
+      <h2 class="card-heading">Mainland China Notice & Professional Deference</h2>
+      <div class="callout-box">
+        <strong>Geographic Context:</strong> Written for mainland China. Laws, public health guidelines, health insurance policies, and administrative procedures elsewhere may differ significantly.
+      </div>
+      <p style="margin-top: 1rem;">
+        <strong>Crucial Caveat:</strong> The contents of this project are for informational and educational purposes only. Content may be outdated, incomplete, or wrong. Science and legislation evolve continuously.
+      </p>
+      <p style="margin-top: 0.75rem;">
+        <strong>Readers should always defer to local authorities, qualified medical doctors, and licensed legal counsel</strong> before acting upon any medical, financial, or legal advice presented herein.
+      </p>
+    </section>
+
+    <!-- Privacy & Offline First -->
+    <section class="info-card liquid-glass">
+      <h2 class="card-heading">Zero-Tracking Privacy Promise</h2>
+      <ul class="clean-list">
+        <li><strong>No Analytics or Cookies:</strong> Zero telemetry, Google Analytics, trackers, or marketing beacons.</li>
+        <li><strong>No Third-Party Network Requests:</strong> All web fonts and assets are 100% self-hosted.</li>
+        <li><strong>Local Storage Only:</strong> Your reading progress, streaks, bookmarks, and settings remain exclusively in your browser's <code>localStorage</code>. Nothing is sent to any server.</li>
+      </ul>
+    </section>
+
+    <!-- The Guide Totals -->
+    <section class="info-card liquid-glass">
+      <h2 class="card-heading">Dataset Totals & Coverage</h2>
+      <p>The English edition maintains strict numerical and categorical fidelity with the Chinese source:</p>
+      <div class="stats-grid">
+        <div class="stat-box">
+          <span class="stat-number">765</span>
+          <span class="stat-label">Total Tips</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-number">495</span>
+          <span class="stat-label">Evidence Grade A</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-number">122</span>
+          <span class="stat-label">Very High ROI</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-number">34</span>
+          <span class="stat-label">Chapters</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="cta-row">
+      <a href="/start/" class="action-btn-secondary">Start Reading Guide</a>
+      <a href="/chapters/" class="action-btn-primary">Browse Chapters →</a>
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .prose-container {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 1rem 0 3rem;
+  }
+
+  .page-header {
+    margin-bottom: 2rem;
+  }
+
+  .page-title {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 5vw, 2.75rem);
+    letter-spacing: -0.02em;
+    margin: 0.75rem 0 0.5rem;
+    color: var(--color-ink);
+  }
+
+  .page-lead {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: var(--color-ink-muted);
+  }
+
+  .info-card {
+    background: var(--color-glass-fill);
+    border: 1px solid var(--color-glass-border);
+    border-radius: var(--radius-card);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: var(--shadow-glass);
+  }
+
+  .accent-border {
+    border-left: 4px solid var(--color-jade);
+  }
+
+  .card-heading {
+    font-family: var(--font-display);
+    font-size: 1.35rem;
+    margin-bottom: 0.75rem;
+    color: var(--color-ink);
+  }
+
+  .link {
+    color: var(--color-jade);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: 600;
+  }
+
+  .link:hover {
+    color: var(--color-amber);
+  }
+
+  .attribution-quote {
+    margin: 1rem 0;
+    padding: 0.875rem 1.25rem;
+    background: rgba(0, 0, 0, 0.25);
+    border-left: 3px solid var(--color-amber);
+    border-radius: 6px;
+    font-style: italic;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--color-ink);
+  }
+
+  .callout-box {
+    padding: 0.875rem 1rem;
+    background: color-mix(in srgb, var(--color-amber) 12%, transparent);
+    border: 1px solid color-mix(in srgb, var(--color-amber) 30%, transparent);
+    border-radius: var(--radius-card);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: var(--color-ink);
+  }
+
+  .clean-list {
+    list-style: none;
+    padding: 0;
+    margin: 0.5rem 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .clean-list li {
+    padding-left: 1.5rem;
+    position: relative;
+    line-height: 1.5;
+    color: var(--color-ink-muted);
+  }
+
+  .clean-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--color-jade);
+    font-weight: 700;
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  @media (min-width: 480px) {
+    .stats-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  .stat-box {
+    text-align: center;
+    padding: 1rem 0.5rem;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--color-glass-border);
+    border-radius: var(--radius-sm);
+  }
+
+  .stat-number {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 1.75rem;
+    color: var(--color-jade);
+  }
+
+  .stat-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-ink-muted);
+  }
+
+  .cta-row {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .action-btn-primary {
+    background: var(--color-jade);
+    color: #04110F;
+    padding: 0.75rem 1.5rem;
+    border-radius: 999px;
+    font-weight: 700;
+    text-decoration: none;
+    border: 2px solid #04110F;
+    box-shadow: 2px 2px 0 #04110F;
+  }
+
+  .action-btn-secondary {
+    background: var(--color-glass-fill);
+    color: var(--color-ink);
+    padding: 0.75rem 1.5rem;
+    border-radius: 999px;
+    font-weight: 600;
+    text-decoration: none;
+    border: 1px solid var(--color-glass-border);
+  }
+</style>

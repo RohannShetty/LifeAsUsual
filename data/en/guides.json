@@ -1,0 +1,1308 @@
+[
+  {
+    "slug": "what-to-do-first-after-being-laid-off",
+    "title": "What to Do First After Being Laid Off",
+    "subtitle": "A step-by-step survival checklist from the day of notification to months of transition",
+    "summary": "The administrative, legal, and financial actions required when terminated or laid off. Arranged chronologically from the hour before signing to months after.",
+    "readingTime": "5 min read",
+    "sourceFile": "guide.md",
+    "sections": [
+      {
+        "heading": "Day 1: Before Signing Anything",
+        "items": [
+          {
+            "text": "If the company hands you a form stating \"Voluntary Resignation for Personal Reasons,\" do not sign it. Signing usually wipes out both statutory economic severance (N) and unemployment insurance claims.",
+            "tipRef": {
+              "chapter": 19,
+              "tip": 7,
+              "label": "Do not sign voluntary resignation"
+            }
+          },
+          {
+            "text": "If management urges you to \"sign first so HR can process it, severance will follow,\" demand severance terms be written directly into the severance agreement on the spot. If omitted, refuse to sign; you face zero legal penalty for refusing to sign on day one.",
+            "tipRef": {
+              "chapter": 19,
+              "tip": 7,
+              "label": "Severance in agreement"
+            }
+          },
+          {
+            "text": "Turn on audio recording directly when entering severance meetings. Under mainland Chinese law, you do not need the other party's consent to record conversations in which you personally participate.",
+            "tipRef": {
+              "chapter": 8,
+              "tip": 41,
+              "label": "Audio recording in negotiations"
+            }
+          },
+          {
+            "text": "Before handing back your laptop and account access, back up pay stubs, attendance records, employment contracts, social security statements, and key chat records.",
+            "tipRef": {
+              "chapter": 19,
+              "tip": 8,
+              "label": "Preserve evidence before leaving"
+            }
+          },
+          {
+            "text": "Only preserve evidence directly proving your labor relationship. Never download or take proprietary company source code, customer directories, or technical design documents.",
+            "tipRef": {
+              "chapter": 11,
+              "tip": 7,
+              "label": "Do not take proprietary code"
+            }
+          },
+          {
+            "text": "Hand over all administrative credentials and permissions cleanly. Do not delete data, alter passwords, or tamper with systems, even if the employer owes you wages.",
+            "tipRef": {
+              "chapter": 11,
+              "tip": 6,
+              "label": "Clean account handover"
+            }
+          }
+        ]
+      },
+      {
+        "heading": "Day 1 to the First Few Days: Calculate the Money",
+        "items": [
+          {
+            "text": "Calculate your statutory severance (N): 1 month of wages for every full year of service. Any period over 6 months counts as 1 year; any period under 6 months pays half a month.",
+            "tipRef": {
+              "chapter": 19,
+              "tip": 4,
+              "label": "Calculate statutory N severance"
+            }
+          },
+          {
+            "text": "Monthly salary must be calculated from your true average total compensation across the past 12 months, including performance bonuses, allowances, and subsidies. This is the figure employers most commonly manipulate downward.",
+            "tipRef": {
+              "chapter": 19,
+              "tip": 4,
+              "label": "Average compensation calculation"
+            }
+          },
+          {
+            "text": "Clarify the exact statutory clause used for termination. Notice pay (+1 month) is legally mandated in only 3 scenarios where 30 days prior written notice was not given: medical inability after sickness period, competence failure after training/reassignment, or fundamental change in objective conditions. Economic layoffs or mutual separations do not require +1 month.",
+            "tipRef": {
+              "chapter": 19,
+              "tip": 5,
+              "label": "30-day notice requirement (+1)"
+            }
+          },
+          {
+            "text": "If termination is unlawful under labor contract law, compensation is 2N (double severance). Consult a lawyer or free legal aid hotline (12348) to confirm unlawful termination status before deciding between settlement or arbitration.",
+            "tipRef": {
+              "chapter": 19,
+              "tip": 6,
+              "label": "Unlawful termination 2N"
+            }
+          },
+          {
+            "text": "Settle unused annual statutory leave pro-rated for the portion of the year already worked.",
+            "tipRef": {
+              "chapter": 19,
+              "tip": 2,
+              "label": "Settlement of accrued annual leave"
+            }
+          },
+          {
+            "text": "Itemize and demand any accrued unpaid overtime pay before finalizing the termination receipt.",
+            "tipRef": {
+              "chapter": 19,
+              "tip": 1,
+              "label": "Unpaid overtime claims"
+            }
+          }
+        ]
+      },
+      {
+        "heading": "Week 1: Securing Safety Nets",
+        "items": [
+          {
+            "text": "Register for unemployment immediately. Unemployment benefits are calculated starting from the registration date; delaying by a month costs you a full month of payments.",
+            "tipRef": {
+              "chapter": 7,
+              "tip": 1,
+              "label": "Register for unemployment"
+            }
+          },
+          {
+            "text": "Complete unemployment registration at public employment service centers; public agencies charge zero fees.",
+            "tipRef": {
+              "chapter": 7,
+              "tip": 5,
+              "label": "Free public employment services"
+            }
+          },
+          {
+            "text": "Apply for monthly unemployment insurance via the \"Handheld 12333\" App or electronic social security card mini-program. You are eligible if premiums were paid for at least 1 year and departure was involuntary.",
+            "tipRef": {
+              "chapter": 7,
+              "tip": 1,
+              "label": "Unemployment insurance benefit eligibility"
+            }
+          },
+          {
+            "text": "While receiving unemployment insurance, your basic employee medical insurance is covered directly by the unemployment fund without paying out of pocket.",
+            "tipRef": {
+              "chapter": 7,
+              "tip": 1,
+              "label": "Medical insurance covered during unemployment"
+            }
+          },
+          {
+            "text": "If litigation costs are prohibitive, call 12348 to apply for state-funded legal aid. You no longer need to travel to your registered hometown for poverty certificates.",
+            "tipRef": {
+              "chapter": 7,
+              "tip": 3,
+              "label": "Free legal aid hotline 12348"
+            }
+          },
+          {
+            "text": "Retain original non-compete agreements. The former employer must pay monthly compensation; if they fail to pay for 3 consecutive months due to employer fault, you may request termination of the non-compete.",
+            "tipRef": {
+              "chapter": 11,
+              "tip": 12,
+              "label": "Non-compete compensation rules"
+            }
+          },
+          {
+            "text": "Anchor a strict daily routine: wake at regular hours, block dedicated time for job applications, and avoid remaining isolated at home all day.",
+            "tipRef": {
+              "chapter": 29,
+              "tip": 3,
+              "label": "Establish daily routine post-layoff"
+            }
+          }
+        ]
+      },
+      {
+        "heading": "Month 1: Enforcement & Job Hunting",
+        "items": [
+          {
+            "text": "If wages or severance are withheld, lodge a complaint with the Labor Inspection Bureau via 12333 before filing labor arbitration. Both channels are completely free.",
+            "tipRef": {
+              "chapter": 7,
+              "tip": 2,
+              "label": "Labor inspection hotline 12333"
+            }
+          },
+          {
+            "text": "Even if employed by an unlicensed workshop or contractor, labor inspection and arbitration still apply. For general contractors vs subcontractors, hold the general contractor liable.",
+            "tipRef": {
+              "chapter": 7,
+              "tip": 22,
+              "label": "Employer entity identification"
+            }
+          },
+          {
+            "text": "Labor arbitration must be formally filed within 1 year of termination. Once the 1-year statute of limitations expires, the employer can dismiss claims simply by citing the time bar.",
+            "tipRef": {
+              "chapter": 8,
+              "tip": 19,
+              "label": "1-year labor arbitration deadline"
+            }
+          },
+          {
+            "text": "Use public employment agencies for verified job placement and resume clinics; steer clear of commercial agencies demanding advance recruitment fees.",
+            "tipRef": {
+              "chapter": 7,
+              "tip": 5,
+              "label": "Avoid paid intermediary recruiters"
+            }
+          },
+          {
+            "text": "Instantly reject offers demanding \"pay fee before onboarding\", \"mandatory training before placement\", or multi-level referral recruiting.",
+            "tipRef": {
+              "chapter": 7,
+              "tip": 15,
+              "label": "Never sign training-loan scams"
+            }
+          },
+          {
+            "text": "Check the municipal Human Resources and Social Security Bureau's official subsidized vocational skills catalogue before enrolling in paid training classes.",
+            "tipRef": {
+              "chapter": 7,
+              "tip": 13,
+              "label": "Subsidized skills catalog"
+            }
+          }
+        ]
+      },
+      {
+        "heading": "Subsequent Months: Protecting Continuity",
+        "items": [
+          {
+            "text": "Cover ongoing daily living expenses strictly from your liquid emergency reserve fund; do not take high-interest consumer credit or liquidate long-term investments at a loss.",
+            "tipRef": {
+              "chapter": 5,
+              "tip": 27,
+              "label": "Use emergency reserve fund"
+            }
+          },
+          {
+            "text": "Postpone major irreversible decisions for at least 3 months: selling property, investing entire severance sums into new businesses, entering speculative partnerships, or guaranteeing third-party loans.",
+            "tipRef": {
+              "chapter": 29,
+              "tip": 12,
+              "label": "Defer irreversible decisions"
+            }
+          },
+          {
+            "text": "If unemployment benefits expire before finding work, maintain medical coverage by paying resident medical insurance independently on an annual basis to avoid the 3-month reimbursement waiting period upon lapse.",
+            "tipRef": {
+              "chapter": 7,
+              "tip": 9,
+              "label": "Resident medical insurance continuity"
+            }
+          },
+          {
+            "text": "Pension contributions never zero out upon interruption; historical years accumulate permanently. Never spend money paying fraudulent intermediary agencies for fake employer affiliations.",
+            "tipRef": {
+              "chapter": 7,
+              "tip": 18,
+              "label": "Pension years never reset"
+            }
+          },
+          {
+            "text": "If distress becomes overwhelming, dial the free national crisis counseling line 12356.",
+            "tipRef": {
+              "chapter": 29,
+              "tip": 11,
+              "label": "Mental health support line 12356"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "after-chronic-illness-diagnosis",
+    "title": "Right After Being Diagnosed with a Chronic Illness",
+    "subtitle": "What to do in your first week, first three months, and subsequent maintenance years",
+    "summary": "A time-ordered checklist for those newly diagnosed with hypertension, diabetes, hyperlipidemia, or gout. Focuses on concrete actions, cost-saving state policies, and long-term organ preservation.",
+    "readingTime": "6 min read",
+    "sourceFile": "guide.md",
+    "sections": [
+      {
+        "heading": "The First Week of Diagnosis",
+        "items": [
+          {
+            "text": "If the diagnosis is severe, have a trusted companion accompany you when picking up reports. Defer major life disruptions like resigning or selling real estate.",
+            "tipRef": {
+              "chapter": 29,
+              "tip": 2,
+              "label": "Week of critical medical diagnosis"
+            }
+          },
+          {
+            "text": "If medication is prescribed, start immediately and do not stop when symptoms temporarily subside.",
+            "tipRef": {
+              "chapter": 16,
+              "tip": 1,
+              "label": "Adhere strictly to chronic medication"
+            }
+          },
+          {
+            "text": "Blood pressure and cholesterol medications must be taken consistently every single day; never halt them independently.",
+            "tipRef": {
+              "chapter": 2,
+              "tip": 12,
+              "label": "Consistent hypertension and lipid therapy"
+            }
+          },
+          {
+            "text": "Purchase an upper-arm electronic blood pressure monitor, measure regularly at home, and bring values down to clinical targets.",
+            "tipRef": {
+              "chapter": 1,
+              "tip": 7,
+              "label": "Home blood pressure monitoring"
+            }
+          },
+          {
+            "text": "When having prescriptions filled, proactively ask the physician for bioequivalent generic drugs selected under national centralized bulk procurement (centralized bulk procurement).",
+            "tipRef": {
+              "chapter": 5,
+              "tip": 12,
+              "label": "Centralized procurement generic drugs"
+            }
+          },
+          {
+            "text": "For newly diagnosed Type 2 diabetes, undergo an immediate dilated fundus eye examination. Type 1 diabetes should begin annual screening 5 years after onset.",
+            "tipRef": {
+              "chapter": 16,
+              "tip": 7,
+              "label": "Immediate retinal examination for diabetes"
+            }
+          },
+          {
+            "text": "For confirmed gout, initiate continuous uric acid-lowering therapy to maintain serum urate below 360 µmol/L permanently.",
+            "tipRef": {
+              "chapter": 16,
+              "tip": 9,
+              "label": "Sustained urate-lowering therapy"
+            }
+          },
+          {
+            "text": "Han Chinese patients should consult their doctor regarding HLA-B*5801 genetic testing prior to initiating allopurinol to avoid severe cutaneous reactions.",
+            "tipRef": {
+              "chapter": 16,
+              "tip": 9,
+              "label": "HLA-B*5801 screening before allopurinol"
+            }
+          },
+          {
+            "text": "If a routine health check shows high uric acid without any prior inflammatory gout flares, do not start urate-lowering drugs without medical evaluation.",
+            "tipRef": {
+              "chapter": 6,
+              "tip": 19,
+              "label": "Asymptomatic hyperuricemia management"
+            }
+          },
+          {
+            "text": "Smokers must set a firm cessation date and quit entirely in one attempt rather than tapering.",
+            "tipRef": {
+              "chapter": 2,
+              "tip": 4,
+              "label": "Set a definitive smoking cessation day"
+            }
+          },
+          {
+            "text": "Do not rely solely on sheer willpower to quit smoking; seek prescription pharmacotherapy from hospital smoking-cessation outpatient clinics.",
+            "tipRef": {
+              "chapter": 2,
+              "tip": 3,
+              "label": "Evidence-based cessation clinics"
+            }
+          }
+        ]
+      },
+      {
+        "heading": "The First Three Months",
+        "items": [
+          {
+            "text": "Maintain a dedicated physical health notebook: record the date, laboratory indicators, medication names, and exact dosages at every follow-up visit.",
+            "tipRef": {
+              "chapter": 16,
+              "tip": 3,
+              "label": "Log chronic markers in one notebook"
+            }
+          },
+          {
+            "text": "Archive personal copies of all outpatient medical records, laboratory sheets, and diagnostic imaging scans.",
+            "tipRef": {
+              "chapter": 24,
+              "tip": 5,
+              "label": "Keep copies of reports and imaging"
+            }
+          },
+          {
+            "text": "Register for Outpatient Chronic & Serious Disease Reimbursement Status (outpatient chronic disease designation) in your insurance district. If consulting doctors in other cities, complete cross-regional medical filing.",
+            "tipRef": {
+              "chapter": 16,
+              "tip": 2,
+              "label": "Outpatient chronic disease registration"
+            }
+          },
+          {
+            "text": "If family members hold formal employee basic medical insurance, bind Family Mutual-Aid Sharing (family mutual-aid account sharing) to allow their personal account balance to pay for your medications.",
+            "tipRef": {
+              "chapter": 5,
+              "tip": 13,
+              "label": "Family medical mutual aid binding"
+            }
+          },
+          {
+            "text": "When signing with a community family doctor, verify in advance which specific services are covered by public insurance versus out-of-pocket.",
+            "tipRef": {
+              "chapter": 16,
+              "tip": 6,
+              "label": "Verify family doctor coverage"
+            }
+          },
+          {
+            "text": "Replace household table salt with low-sodium potassium salt (unless renal impairment or potassium-sparing medications are present).",
+            "tipRef": {
+              "chapter": 2,
+              "tip": 9,
+              "label": "Switch to low-sodium potassium salt"
+            }
+          },
+          {
+            "text": "Walk 7,000–8,000 steps daily or accumulate 150–300 minutes of moderate-intensity brisk walking every week.",
+            "tipRef": {
+              "chapter": 2,
+              "tip": 11,
+              "label": "Walk 7,000 to 8,000 steps daily"
+            }
+          },
+          {
+            "text": "Minimize or completely eliminate alcohol consumption.",
+            "tipRef": {
+              "chapter": 2,
+              "tip": 19,
+              "label": "Cut down or eliminate alcohol"
+            }
+          },
+          {
+            "text": "Never suspend validated medical therapy to experiment with unverified folk remedies, health tonics, or herbal supplements.",
+            "tipRef": {
+              "chapter": 16,
+              "tip": 4,
+              "label": "Never suspend therapy for remedies"
+            }
+          },
+          {
+            "text": "When purchasing cold or pain medications, verify ingredients to ensure paracetamol (acetaminophen) is present in only one single formulation to prevent liver failure.",
+            "tipRef": {
+              "chapter": 34,
+              "tip": 1,
+              "label": "Avoid duplicate paracetamol intake"
+            }
+          }
+        ]
+      },
+      {
+        "heading": "Long-Term Disease Stability",
+        "items": [
+          {
+            "text": "Once clinical parameters stabilize, request 12-week long prescriptions at community health service centers in one visit.",
+            "tipRef": {
+              "chapter": 16,
+              "tip": 5,
+              "label": "12-week chronic prescription refill"
+            }
+          },
+          {
+            "text": "For diabetic patients, perform an annual neurological foot examination and dilated eye screening at recommended intervals.",
+            "tipRef": {
+              "chapter": 16,
+              "tip": 7,
+              "label": "Annual diabetic foot and eye checks"
+            }
+          },
+          {
+            "text": "Kidney stone patients should maintain a fluid intake of 2.5 to 3.0 liters per day and reduce sodium consumption under 6 grams.",
+            "tipRef": {
+              "chapter": 16,
+              "tip": 8,
+              "label": "2.5 to 3 liters daily water intake"
+            }
+          },
+          {
+            "text": "Individuals with cardiovascular conditions must receive an annual influenza vaccination every autumn.",
+            "tipRef": {
+              "chapter": 1,
+              "tip": 20,
+              "label": "Annual autumn influenza vaccination"
+            }
+          },
+          {
+            "text": "Always consult community tier-1 hospitals first; when hospital admission is necessary, utilize tiered hierarchical referral to retain deductible carry-over.",
+            "tipRef": {
+              "chapter": 24,
+              "tip": 1,
+              "label": "Hierarchical referral through community"
+            }
+          },
+          {
+            "text": "Each ascending hospital grade lowers public insurance reimbursement by approximately 10 percentage points within the same municipal pool.",
+            "tipRef": {
+              "chapter": 24,
+              "tip": 2,
+              "label": "Reimbursement drops by hospital tier"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "checklist-before-and-after-childbirth",
+    "title": "Administrative Tasks Before and After Childbirth",
+    "subtitle": "A chronological guide to records, insurance claims, hukou registration, and vaccines",
+    "summary": "A complete administrative timeline spanning prenatal hospital establishment, birth certification, newborn medical insurance, and mandatory childhood immunizations.",
+    "readingTime": "5 min read",
+    "sourceFile": "guide.md",
+    "sections": [
+      {
+        "heading": "During Pregnancy",
+        "items": [
+          {
+            "text": "Complete hospital prenatal establishment (maternity record establishment) in early pregnancy to lock in delivery beds at designated maternity hospitals.",
+            "tipRef": {
+              "chapter": 27,
+              "tip": 1,
+              "label": "Early prenatal hospital registration"
+            }
+          },
+          {
+            "text": "Supplement 400 micrograms of folic acid daily starting before conception through the end of the first trimester to prevent neural tube defects.",
+            "tipRef": {
+              "chapter": 27,
+              "tip": 2,
+              "label": "400 mcg daily folic acid"
+            }
+          },
+          {
+            "text": "Complete Down syndrome screening or non-invasive prenatal testing (NIPT) at designated gestational weeks.",
+            "tipRef": {
+              "chapter": 27,
+              "tip": 4,
+              "label": "Prenatal genetic screening"
+            }
+          },
+          {
+            "text": "Confirm active status of your employer maternity insurance (maternity insurance) to qualify for full medical fee reimbursement and statutory paid maternity leave allowance.",
+            "tipRef": {
+              "chapter": 27,
+              "tip": 7,
+              "label": "Maternity insurance coverage"
+            }
+          }
+        ]
+      },
+      {
+        "heading": "At Delivery & Hospital Discharge",
+        "items": [
+          {
+            "text": "Ensure both parents have original national ID cards and marriage certificates ready for the issuance of the Medical Birth Certificate (Medical Birth Certificate).",
+            "tipRef": {
+              "chapter": 20,
+              "tip": 1,
+              "label": "Medical birth certificate"
+            }
+          },
+          {
+            "text": "Carefully confirm the child's official legal name before the certificate is printed; changing names later on household registration requires police administrative approval.",
+            "tipRef": {
+              "chapter": 20,
+              "tip": 1,
+              "label": "Naming and official birth certificate"
+            }
+          },
+          {
+            "text": "Ensure the newborn receives initial Hepatitis B and BCG vaccinations prior to hospital discharge and obtain the official Vaccination Certificate (Vaccination Certificate).",
+            "tipRef": {
+              "chapter": 20,
+              "tip": 2,
+              "label": "Newborn initial immunizations"
+            }
+          }
+        ]
+      },
+      {
+        "heading": "First Month After Birth",
+        "items": [
+          {
+            "text": "Register the infant's household registration (Hukou registration) at the local police station (local police station) using the birth certificate and parents' household register.",
+            "tipRef": {
+              "chapter": 20,
+              "tip": 3,
+              "label": "Household registration (Hukou)"
+            }
+          },
+          {
+            "text": "Enroll the infant in Urban and Rural Resident Basic Medical Insurance (Resident Basic Medical Insurance) within 90 days of birth to enable retroactive reimbursement of birth-related hospital expenses.",
+            "tipRef": {
+              "chapter": 20,
+              "tip": 4,
+              "label": "Newborn resident medical insurance within 90 days"
+            }
+          },
+          {
+            "text": "Apply for the child's physical Social Security Card at a designated bank or government public service center.",
+            "tipRef": {
+              "chapter": 20,
+              "tip": 5,
+              "label": "Newborn social security card"
+            }
+          },
+          {
+            "text": "Submit the formal maternity allowance (maternity allowance) claim via the provincial HR & Social Security platform.",
+            "tipRef": {
+              "chapter": 27,
+              "tip": 8,
+              "label": "Maternity allowance claim"
+            }
+          }
+        ]
+      },
+      {
+        "heading": "First Year Vaccinations & Care",
+        "items": [
+          {
+            "text": "Strictly follow the National Immunization Program (Category 1 free vaccines) schedule at your community health center.",
+            "tipRef": {
+              "chapter": 20,
+              "tip": 6,
+              "label": "National mandatory immunization schedule"
+            }
+          },
+          {
+            "text": "Prioritize key self-funded Category 2 vaccines with strong evidence: 13-valent pneumococcal conjugate vaccine and rotavirus vaccine.",
+            "tipRef": {
+              "chapter": 20,
+              "tip": 7,
+              "label": "Pneumococcal and rotavirus vaccines"
+            }
+          },
+          {
+            "text": "Maintain safe sleep practices: place infants on their back to sleep on a firm mattress with zero pillows, loose blankets, or soft toys to eliminate SIDS risks.",
+            "tipRef": {
+              "chapter": 20,
+              "tip": 8,
+              "label": "Safe infant sleep guidelines"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "home-emergency-equipment-checklist",
+    "title": "Family Emergency Equipment & Preparedness Checklist",
+    "subtitle": "The essential hardware, food, first aid, and documentation for home crises",
+    "summary": "A practical, non-paranoid inventory of household emergency supplies covering clean water, shelf-stable nutrition, power, illumination, trauma care, and vital paper documents.",
+    "readingTime": "6 min read",
+    "sourceFile": "guide.md",
+    "sections": [
+      {
+        "heading": "Drinking Water & Nutrition (Minimum 3-Day Buffer)",
+        "items": [
+          {
+            "text": "Store 3 liters of commercially bottled drinking water per person per day (a minimum of 9 to 10 liters per individual for a standard 72-hour emergency).",
+            "tipRef": {
+              "chapter": 13,
+              "tip": 4,
+              "label": "3L drinking water per person per day"
+            }
+          },
+          {
+            "text": "Keep shelf-stable, ready-to-eat foods that do not require refrigeration or cooking: compressed energy biscuits, canned meats, and vacuum-sealed nuts.",
+            "tipRef": {
+              "chapter": 13,
+              "tip": 5,
+              "label": "High-density shelf-stable emergency food"
+            }
+          },
+          {
+            "text": "Keep a manual, non-electric rotary can opener next to stored canned goods.",
+            "tipRef": {
+              "chapter": 13,
+              "tip": 5,
+              "label": "Manual rotary can opener"
+            }
+          }
+        ]
+      },
+      {
+        "heading": "First Aid & Prescription Medicines",
+        "items": [
+          {
+            "text": "Equip a dedicated first aid kit: sterile pressure bandages, medical tourniquet, adhesive dressings, nitrile gloves, and povidone-iodine disinfectant swabs.",
+            "tipRef": {
+              "chapter": 13,
+              "tip": 6,
+              "label": "Home trauma and wound first aid kit"
+            }
+          },
+          {
+            "text": "Maintain a minimum 2-to-4 week rolling reserve of daily essential prescription medications for family members with chronic illnesses (blood pressure, insulin, cardiac drugs).",
+            "tipRef": {
+              "chapter": 16,
+              "tip": 5,
+              "label": "Maintain rolling chronic medication buffer"
+            }
+          },
+          {
+            "text": "Stock oral rehydration salts (ORS III) and basic antipyretics (paracetamol / ibuprofen) with strict adherence to single-ingredient guidelines.",
+            "tipRef": {
+              "chapter": 34,
+              "tip": 1,
+              "label": "Stock verified household OTC essentials"
+            }
+          }
+        ]
+      },
+      {
+        "heading": "Emergency Power, Light & Communication",
+        "items": [
+          {
+            "text": "Keep an AM/FM emergency radio with hand-crank and solar backup charging to receive civil defense announcements when cell towers collapse.",
+            "tipRef": {
+              "chapter": 13,
+              "tip": 7,
+              "label": "Hand-crank emergency radio"
+            }
+          },
+          {
+            "text": "Store high-lumen LED flashlights and spare rechargeable batteries kept stored at 70%–80% charge level.",
+            "tipRef": {
+              "chapter": 13,
+              "tip": 8,
+              "label": "LED flashlights and battery storage"
+            }
+          },
+          {
+            "text": "Maintain high-capacity power banks recharged quarterly and keep standard charging cables for all household devices in the emergency bag.",
+            "tipRef": {
+              "chapter": 13,
+              "tip": 8,
+              "label": "Power bank maintenance"
+            }
+          }
+        ]
+      },
+      {
+        "heading": "Safety, Evacuation & Escape Hardware",
+        "items": [
+          {
+            "text": "Provide fire evacuation filter hoods (certified 30-minute toxic gas smoke filtering) for every family member kept near bedroom exits.",
+            "tipRef": {
+              "chapter": 13,
+              "tip": 9,
+              "label": "Certified fire smoke escape hoods"
+            }
+          },
+          {
+            "text": "Keep heavy-duty heat-resistant work gloves for handling debris, shattered glass, or hot surfaces during an evacuation.",
+            "tipRef": {
+              "chapter": 13,
+              "tip": 10,
+              "label": "Heavy-duty protective gloves"
+            }
+          },
+          {
+            "text": "Equip each grab-bag with high-decibel pealess whistles for signaling rescuers without depleting vocal stamina.",
+            "tipRef": {
+              "chapter": 13,
+              "tip": 11,
+              "label": "High-decibel emergency whistle"
+            }
+          }
+        ]
+      },
+      {
+        "heading": "Critical Paper Documents & Physical Cash",
+        "items": [
+          {
+            "text": "Store physical cash in small denominations (¥10, ¥20, and ¥50 banknotes) in waterproof bags; card readers, cellular point-of-sale terminals, and QR code payments fail during grid collapses.",
+            "tipRef": {
+              "chapter": 13,
+              "tip": 12,
+              "label": "Small-denomination physical cash reserve"
+            }
+          },
+          {
+            "text": "Keep waterproof sealed pouches containing physical copies of national ID cards, household registration registers (Hukou), property deeds, and medical cards.",
+            "tipRef": {
+              "chapter": 13,
+              "tip": 13,
+              "label": "Waterproof document archive"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "before-changing-jobs-or-cities",
+    "title": "Checklists Before Changing Jobs or Relocating Cities",
+    "subtitle": "Financial calculations, commute thresholds, social insurance portability, and non-competes",
+    "summary": "A rigorous evaluation methodology for evaluating new job offers, comparing net living compensation across cities, preserving insurance continuity, and avoiding contractual traps.",
+    "readingTime": "6 min read",
+    "sourceFile": "guide、guide.md",
+    "sections": [
+      {
+        "heading": "Offer Evaluation & True Compensation",
+        "items": [
+          {
+            "text": "Calculate your actual social security and housing fund contribution base. Many employers promise high gross salaries while reporting the minimum legal baseline, drastically diminishing true total compensation.",
+            "tipRef": {
+              "chapter": 19,
+              "tip": 3,
+              "label": "Verify true social security contribution base"
+            }
+          },
+          {
+            "text": "Deconstruct variable annual bonuses: evaluate historical payout rates and ascertain whether bonus terms are formally codified in the contract or left to unilateral management discretion.",
+            "tipRef": {
+              "chapter": 19,
+              "tip": 9,
+              "label": "Contractual bonus terms vs discretion"
+            }
+          },
+          {
+            "text": "Calculate true hourly wage factoring in mandatory uncompensated overtime, transit times, and expected weekend work.",
+            "tipRef": {
+              "chapter": 4,
+              "tip": 1,
+              "label": "Calculate true hourly wage"
+            }
+          }
+        ]
+      },
+      {
+        "heading": "Commute and Housing Economics",
+        "items": [
+          {
+            "text": "Set an absolute hard ceiling of 45 minutes for one-way commute times; longer daily commutes significantly increase chronic stress, hypertension, and sleep deficit.",
+            "tipRef": {
+              "chapter": 4,
+              "tip": 3,
+              "label": "Keep one-way commute under 45 minutes"
+            }
+          },
+          {
+            "text": "When moving cities, factor in initial cash outlays: apartment deposits (usually deposit plus three months' rent upfront), agency commission, and relocation logistics.",
+            "tipRef": {
+              "chapter": 15,
+              "tip": 2,
+              "label": "Rental deposit cash budgeting"
+            }
+          },
+          {
+            "text": "Verify whether rental utility billing is calculated at residential municipal rates or commercial tier rates.",
+            "tipRef": {
+              "chapter": 15,
+              "tip": 5,
+              "label": "Check residential vs commercial utilities"
+            }
+          }
+        ]
+      },
+      {
+        "heading": "Legal Red Lines & Restrictive Covenants",
+        "items": [
+          {
+            "text": "Scrutinize non-compete agreements. In mainland China, non-competes legally apply only to senior executives, senior technical personnel, and those bound by confidentiality obligations.",
+            "tipRef": {
+              "chapter": 11,
+              "tip": 12,
+              "label": "Statutory non-compete scope"
+            }
+          },
+          {
+            "text": "Never download or transfer proprietary source code, internal repositories, or client records when transitioning between employers.",
+            "tipRef": {
+              "chapter": 11,
+              "tip": 7,
+              "label": "Zero code export on transition"
+            }
+          },
+          {
+            "text": "Ensure the previous employer issues an official Termination Certificate (Termination Certificate) promptly, as the new employer requires it to complete lawful onboarding.",
+            "tipRef": {
+              "chapter": 19,
+              "tip": 10,
+              "label": "Obtain statutory termination certificate"
+            }
+          }
+        ]
+      },
+      {
+        "heading": "Inter-City Social Security & Medical Portability",
+        "items": [
+          {
+            "text": "Initiate inter-provincial pension account transfers via the national 12333 social security portal after establishing your new employment relationship.",
+            "tipRef": {
+              "chapter": 7,
+              "tip": 18,
+              "label": "National pension portability transfer"
+            }
+          },
+          {
+            "text": "Coordinate medical insurance transition carefully to ensure coverage does not lapse beyond 3 months, which triggers a reset of reimbursement waiting periods in many municipalities.",
+            "tipRef": {
+              "chapter": 7,
+              "tip": 9,
+              "label": "Avoid medical insurance interruption"
+            }
+          },
+          {
+            "text": "Transfer your Housing Provident Fund (Housing Provident Fund) balance via the national Housing Provident Fund Mini-Program after 6 months of continuous deposits in the destination city.",
+            "tipRef": {
+              "chapter": 15,
+              "tip": 8,
+              "label": "Housing fund inter-city transfer"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "circadian-rhythm-and-night-shifts",
+    "title": "Circadian Rhythms, Shift Work, and Health Preservation",
+    "subtitle": "Mitigating cardiovascular, metabolic, and cognitive harm from irregular work hours",
+    "summary": "Evidence-based strategies for shift workers, overnight personnel, and frequent travelers to stabilize circadian clocks, protect sleep architecture, and reduce long-term morbidity.",
+    "readingTime": "6 min read",
+    "sourceFile": "guide.md",
+    "sections": [
+      {
+        "heading": "Biological Principles of Circadian Disruption",
+        "prose": [
+          "The human circadian pacemaker resides in the suprachiasmatic nucleus (SCN) of the hypothalamus, synchronized primarily by optical light exposure. Melatonin synthesis by the pineal gland is profoundly suppressed by short-wavelength blue spectrum light.",
+          "Chronic circadian misalignment from erratic shift work is classified as a probable human carcinogen and significantly elevates long-term risks of cardiovascular disease, Type 2 diabetes, and depression."
+        ]
+      },
+      {
+        "heading": "Shift Scheduling Strategies",
+        "items": [
+          {
+            "text": "Permanent fixed night shifts cause substantially less circadian turbulence than erratic, constantly rotating shifts.",
+            "tipRef": {
+              "chapter": 3,
+              "tip": 8,
+              "label": "Fixed shifts over irregular rotations"
+            }
+          },
+          {
+            "text": "When rotating schedules are unavoidable, insist on clockwise forward rotation (Day shift -> Evening shift -> Night shift -> Rest), allowing natural phase delays rather than punishing counter-clockwise shifts.",
+            "tipRef": {
+              "chapter": 3,
+              "tip": 9,
+              "label": "Clockwise forward shift rotation"
+            }
+          }
+        ]
+      },
+      {
+        "heading": "The Daytime Sleep Sanctuary Protocol",
+        "items": [
+          {
+            "text": "Wear high-grade polarized sunglasses during your morning commute home after an overnight shift to prevent sunlight from resetting your morning circadian clock.",
+            "tipRef": {
+              "chapter": 3,
+              "tip": 10,
+              "label": "Wear sunglasses on morning commute home"
+            }
+          },
+          {
+            "text": "Install 100% total blackout curtains in your bedroom; even minimal ambient daylight penetration significantly degrades slow-wave sleep quality.",
+            "tipRef": {
+              "chapter": 3,
+              "tip": 11,
+              "label": "100% total blackout curtains"
+            }
+          },
+          {
+            "text": "Use custom-fit silicone earplugs and soundproofing to isolate against daytime domestic and traffic disturbances.",
+            "tipRef": {
+              "chapter": 3,
+              "tip": 12,
+              "label": "Silicone earplugs for daytime sleep"
+            }
+          }
+        ]
+      },
+      {
+        "heading": "Strategic Caffeine & Nutritional Timing",
+        "items": [
+          {
+            "text": "Concentrate caffeine consumption during the initial first half of the work shift; cut off all caffeine intake at least 6 hours prior to your target sleep window.",
+            "tipRef": {
+              "chapter": 3,
+              "tip": 13,
+              "label": "Strategic caffeine cutoff timing"
+            }
+          },
+          {
+            "text": "Avoid heavy high-glycemic carbohydrates during overnight shifts; consume light, protein-focused meals to maintain glucose stability without inducing postprandial somnolence.",
+            "tipRef": {
+              "chapter": 2,
+              "tip": 15,
+              "label": "Low-glycemic nutrition during shifts"
+            }
+          },
+          {
+            "text": "Conduct annual fasting blood glucose, lipid panel, and blood pressure monitoring to catch metabolic shifts early.",
+            "tipRef": {
+              "chapter": 1,
+              "tip": 7,
+              "label": "Annual metabolic and cardiovascular checks"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "is-marriage-worth-it",
+    "title": "The Legal and Economic Calculus of Marriage",
+    "subtitle": "Analyzing property rights, debt exposure, risk pooling, and divorce statutes under the Civil Code",
+    "summary": "A factual analysis of the legal and financial mechanisms established by civil marriage. Covers pre-marital assets, joint debts, estate inheritance, and property titling.",
+    "readingTime": "7 min read",
+    "sourceFile": "guide.md",
+    "sections": [
+      {
+        "heading": "What Marriage Is in the Eyes of the Law",
+        "prose": [
+          "Legally speaking, marriage is an economic partnership contract defined by the Civil Code. It automatically links property rights, debt liabilities, inheritance claims, and fiduciary care obligations between two individuals.",
+          "Entering marriage without understanding its legal framework creates substantial unintended exposure to liabilities, shared debt risks, and protracted property division."
+        ]
+      },
+      {
+        "heading": "Pre-Marital vs Joint Marital Property",
+        "items": [
+          {
+            "text": "Assets owned prior to marriage (bank balances, vehicles, real estate titled solely in one party's name before marriage) remain individual separate property and do not automatically convert to joint property through time.",
+            "tipRef": {
+              "chapter": 10,
+              "tip": 2,
+              "label": "Pre-marital property separation"
+            }
+          },
+          {
+            "text": "Income earned during marriage (salaries, business revenues, investment yields, housing fund contributions) belongs jointly to both spouses regardless of who earned more.",
+            "tipRef": {
+              "chapter": 10,
+              "tip": 3,
+              "label": "Joint marital income rights"
+            }
+          },
+          {
+            "text": "Real estate bought prior to marriage with a personal down payment but amortized jointly with post-marital income belongs to the titled purchaser upon divorce, but the other spouse is entitled to full compensation for the amortized capital and proportional market appreciation.",
+            "tipRef": {
+              "chapter": 10,
+              "tip": 4,
+              "label": "Post-marital mortgage amortization calculus"
+            }
+          }
+        ]
+      },
+      {
+        "heading": "Joint Marital Debt & Liability Shielding",
+        "items": [
+          {
+            "text": "Under Article 1064 of the Civil Code, debts incurred jointly by both spouses or ratified retroactively are joint debts. Debts incurred by one spouse exceeding normal household family needs are individual debts unless the creditor proves they benefited the family.",
+            "tipRef": {
+              "chapter": 10,
+              "tip": 5,
+              "label": "Article 1064 joint debt boundaries"
+            }
+          },
+          {
+            "text": "Never sign as a co-borrower or guarantor for a spouse's commercial business loans or speculative ventures unless you intend to assume unlimited personal joint liability.",
+            "tipRef": {
+              "chapter": 8,
+              "tip": 25,
+              "label": "Never sign third-party loan guarantees"
+            }
+          }
+        ]
+      },
+      {
+        "heading": "The Economic Balance Sheet: Pros vs Cons",
+        "table": {
+          "headers": [
+            "Dimension",
+            "Legal Marriage",
+            "Remaining Unmarried / Single"
+          ],
+          "rows": [
+            [
+              "Risk Pooling",
+              "High: mutual legal obligation to support during catastrophic illness or disability",
+              "Zero: individual self-reliance and commercial insurance buffers"
+            ],
+            [
+              "Tax & Welfare",
+              "Parental care deduction sharing, family health insurance mutual aid",
+              "Single individual deduction caps"
+            ],
+            [
+              "Asset Dissolution",
+              "Complex statutory division, 30-day cooling-off period, potential litigation",
+              "Clean separation of individually held accounts and titles"
+            ],
+            [
+              "Inheritance",
+              "Primary first-order statutory heir with statutory right to estate",
+              "No automatic statutory inheritance without explicit will"
+            ]
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "slug": "licenses-for-building-a-platform",
+    "title": "What Licenses and Permits Are Needed to Run an Online Platform",
+    "subtitle": "From basic ICP filing to EDI commercial permits, public security records, and multi-tier cybersecurity protection",
+    "summary": "A structured regulatory guide for developers, founders, and engineers operating internet services in mainland China. Distinguishes non-commercial filing from mandatory commercial licenses.",
+    "readingTime": "6 min read",
+    "sourceFile": "guide.md",
+    "sections": [
+      {
+        "heading": "Core Regulatory Requirements for Every Website",
+        "items": [
+          {
+            "text": "Non-commercial ICP Filing (ICP Filing): Mandated for any website or API hosted on mainland Chinese servers. Requires registered domain name and verifiable corporate or personal identity.",
+            "tipRef": {
+              "chapter": 26,
+              "tip": 1,
+              "label": "Basic ICP filing requirement"
+            }
+          },
+          {
+            "text": "Public Security Filing (Public Security Filing): Must be completed within 30 days of site launch via the National Public Security Bureau platform.",
+            "tipRef": {
+              "chapter": 26,
+              "tip": 2,
+              "label": "30-day public security filing"
+            }
+          },
+          {
+            "text": "Domain Real-Name Verification: Domain names must be authenticated through approved domestic registrars; failure to complete real-name verification blocks DNS resolution.",
+            "tipRef": {
+              "chapter": 26,
+              "tip": 3,
+              "label": "Domain real-name registration"
+            }
+          }
+        ]
+      },
+      {
+        "heading": "Commercial Telecom Licenses (Value-Added Telecom)",
+        "items": [
+          {
+            "text": "Commercial ICP License (Value-Added Telecom Permit - B25): Legally required if the platform charges users for access to digital content, paywalled articles, or paid subscriptions.",
+            "tipRef": {
+              "chapter": 26,
+              "tip": 4,
+              "label": "Commercial ICP license (B25)"
+            }
+          },
+          {
+            "text": "EDI License (B21 Online Data Processing): Mandated when operating a multi-vendor marketplace where third-party merchants transact with consumers.",
+            "tipRef": {
+              "chapter": 26,
+              "tip": 5,
+              "label": "EDI marketplace license (B21)"
+            }
+          }
+        ]
+      },
+      {
+        "heading": "Special Industry Approvals & Cybersecurity Compliance",
+        "items": [
+          {
+            "text": "Classified Cybersecurity Protection (MLPS Level 2 / Level 3): Platforms collecting large-scale user datasets must undergo formal graded evaluation by accredited security testing institutions.",
+            "tipRef": {
+              "chapter": 26,
+              "tip": 6,
+              "label": "Multi-level protection scheme (MLPS)"
+            }
+          },
+          {
+            "text": "Online Cultural Business Permit (Online Cultural Operation Permit): Required if publishing anime, comics, games, or streamed music.",
+            "tipRef": {
+              "chapter": 26,
+              "tip": 7,
+              "label": "Cultural business permit"
+            }
+          },
+          {
+            "text": "Internet Drug Information Service Qualification: Mandatory before publishing any medical or pharmaceutical information, even for non-commercial education.",
+            "tipRef": {
+              "chapter": 26,
+              "tip": 8,
+              "label": "Drug information publishing qualification"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "should-you-stop-for-a-stranger-in-trouble",
+    "title": "Encountering a Stranger in Trouble: Walk Away or Stop and Help?",
+    "subtitle": "A cost-benefit breakdown across legal liability, bystander risks, and emergency procedures",
+    "summary": "An objective analysis of the three courses of action when encountering an injured stranger or sudden collapse in public. Details Civil Code Article 184 protections and defensive evidence protocols.",
+    "readingTime": "5 min read",
+    "sourceFile": "guide.md",
+    "sections": [
+      {
+        "heading": "The Three Available Paths",
+        "table": {
+          "headers": [
+            "Dimension",
+            "1. Walk Away",
+            "2. Stop But Do Not Touch",
+            "3. Stop and Provide Direct Care"
+          ],
+          "rows": [
+            [
+              "Legality",
+              "Fully legal under PRC law (no statutory duty for ordinary citizens to rescue strangers)",
+              "Fully legal",
+              "Fully legal"
+            ],
+            [
+              "Time Outlay",
+              "0 minutes",
+              "A few minutes (making 120 / 110 call)",
+              "Hours (accompanying ambulance to emergency department)"
+            ],
+            [
+              "Extortion / Dispute Risk",
+              "Absolute lowest",
+              "Low (phone number is logged with dispatch)",
+              "Highest (immediate physical proximity before cameras verified)"
+            ],
+            [
+              "Benefit to Stranger",
+              "0 benefit",
+              "Substantial (ambulance dispatched earlier)",
+              "Maximum possible rescue impact"
+            ]
+          ]
+        }
+      },
+      {
+        "heading": "Legal Protections: Civil Code Article 184",
+        "prose": [
+          "Under Article 184 of the Civil Code of the People's Republic of China (the \"Good Samaritan clause\"): \"A person who voluntarily undertakes emergency rescue and causes harm to the recipient shall not bear civil liability.\"",
+          "While Article 184 shields the rescuer from eventual liability in court, it does not prevent the rescuer from being questioned, summoned, or entangled in preliminary investigations before video footage is examined."
+        ]
+      },
+      {
+        "heading": "Defensive Action Protocols for Good Samaritans",
+        "items": [
+          {
+            "text": "Turn on video recording on your smartphone before stepping forward, capturing the surrounding context, ambient scene, and visible witnesses.",
+            "tipRef": {
+              "chapter": 13,
+              "tip": 2,
+              "label": "Document scene before assisting"
+            }
+          },
+          {
+            "text": "Loudly recruit adjacent bystanders: \"Let us call 120 together and look after this person together\" to eliminate single-witness vulnerability.",
+            "tipRef": {
+              "chapter": 13,
+              "tip": 2,
+              "label": "Recruit co-witnesses loudly"
+            }
+          },
+          {
+            "text": "Never move or drag an injured stranger suspected of spinal or cervical trauma unless there is an imminent peril of explosion, building collapse, or road traffic.",
+            "tipRef": {
+              "chapter": 13,
+              "tip": 3,
+              "label": "Never move suspected spinal trauma"
+            }
+          },
+          {
+            "text": "If the individual is in cardiac arrest, perform chest compressions or retrieve an automated external defibrillator (AED) immediately.",
+            "tipRef": {
+              "chapter": 13,
+              "tip": 1,
+              "label": "CPR and AED emergency response"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,148 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import guides from '../../../data/en/guides.json';
+---
+
+<BaseLayout
+  title="Standalone Guides - How To Live Better"
+  description="Nine deep-dive tactical guides covering life transitions, chronic illness, emergency kits, marriage economics, and legal protection."
+>
+  <div class="guides-container">
+    <header class="page-header">
+      <span class="comic-sticker sticker-scope">Field Manuals</span>
+      <h1 class="page-title">Practical Life Guides</h1>
+      <p class="page-lead">
+        Nine standalone chronological checklists and analytical deep-dives synthesising rules across chapters for critical life transitions.
+      </p>
+    </header>
+
+    <div class="guides-grid">
+      {guides.map((guide, idx) => (
+        <a href={`/guides/${guide.slug}/`} class="guide-card liquid-glass">
+          <div class="card-top">
+            <span class="guide-number">#{idx + 1}</span>
+            <span class="reading-time">{guide.readingTime}</span>
+          </div>
+          <h2 class="guide-title">{guide.title}</h2>
+          <p class="guide-subtitle">{guide.subtitle}</p>
+          <p class="guide-summary">{guide.summary}</p>
+          <div class="card-footer">
+            <span class="card-link">Read Field Guide →</span>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .guides-container {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 1rem 0 3rem;
+  }
+
+  .page-header {
+    margin-bottom: 2rem;
+  }
+
+  .page-title {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 5vw, 2.75rem);
+    letter-spacing: -0.02em;
+    margin: 0.75rem 0 0.5rem;
+    color: var(--color-ink);
+  }
+
+  .page-lead {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: var(--color-ink-muted);
+  }
+
+  .guides-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  @media (min-width: 640px) {
+    .guides-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .guide-card {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    background: var(--color-glass-fill);
+    border: 1px solid var(--color-glass-border);
+    border-radius: var(--radius-card);
+    text-decoration: none;
+    transition: transform var(--duration-fast) var(--ease-out), border-color var(--duration-fast);
+    box-shadow: var(--shadow-glass);
+  }
+
+  .guide-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--color-jade);
+  }
+
+  .card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+  }
+
+  .guide-number {
+    font-family: var(--font-display);
+    font-size: 1.125rem;
+    color: var(--color-jade);
+  }
+
+  .reading-time {
+    font-size: 0.8rem;
+    color: var(--color-ink-muted);
+    background: rgba(0, 0, 0, 0.2);
+    padding: 0.2rem 0.5rem;
+    border-radius: 999px;
+    border: 1px solid var(--color-glass-border);
+  }
+
+  .guide-title {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    line-height: 1.35;
+    margin-bottom: 0.5rem;
+    color: var(--color-ink);
+  }
+
+  .guide-subtitle {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-amber);
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+  }
+
+  .guide-summary {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: var(--color-ink-muted);
+    flex-grow: 1;
+    margin-bottom: 1.25rem;
+  }
+
+  .card-footer {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .card-link {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--color-jade);
+  }
+</style>

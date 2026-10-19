@@ -1,0 +1,385 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import guides from '../../../data/en/guides.json';
+import allChapters from '../../../data/en/all-chapters.json';
+
+export async function getStaticPaths() {
+  return guides.map((guide) => ({
+    params: { slug: guide.slug },
+    props: { guide },
+  }));
+}
+
+const { guide } = Astro.props;
+
+// Build helper map of chapter number to chapter slug for accurate linking
+const chapterSlugMap = new Map(
+  allChapters.map((ch) => [ch.chapter, ch.slug])
+);
+
+function getTipLink(chapter: number, tip: number) {
+  const chSlug = chapterSlugMap.get(chapter);
+  if (!chSlug) return `/chapters/`;
+  const pad = String(chapter).padStart(2, '0');
+  return `/chapters/${pad}-${chSlug}/#${chapter}-${tip}`;
+}
+---
+
+<BaseLayout
+  title={`${guide.title} - How To Live Better`}
+  description={guide.summary}
+>
+  <article class="guide-article">
+    <nav class="guide-breadcrumb">
+      <a href="/guides/" class="back-link">← All Field Guides</a>
+      <span class="reading-pill">{guide.readingTime}</span>
+    </nav>
+
+    <!-- Mainland China Context Banner -->
+    <aside class="geo-banner liquid-glass" id="guide-geo-notice">
+      <span>Written for mainland China. Laws, insurance policies, and procedures elsewhere may differ.</span>
+      <button type="button" class="dismiss-btn" onclick="document.getElementById('guide-geo-notice').style.display='none'">✕</button>
+    </aside>
+
+    <header class="guide-header">
+      <span class="comic-sticker sticker-benefit">Field Guide</span>
+      <h1 class="guide-title">{guide.title}</h1>
+      <p class="guide-subtitle">{guide.subtitle}</p>
+      <p class="guide-summary">{guide.summary}</p>
+    </header>
+
+    <div class="guide-body">
+      {guide.sections.map((section, sIdx) => (
+        <section class="guide-section">
+          <h2 class="section-title">
+            <span class="section-index">{sIdx + 1}.</span> {section.heading}
+          </h2>
+
+          {section.prose && (
+            <div class="section-prose info-card liquid-glass">
+              {section.prose.map((paragraph) => (
+                <p>{paragraph}</p>
+              ))}
+            </div>
+          )}
+
+          {section.items && (
+            <div class="items-list">
+              {section.items.map((item, iIdx) => (
+                <div class="checklist-item liquid-glass">
+                  <div class="item-header">
+                    <span class="item-badge">{iIdx + 1}</span>
+                    <p class="item-text">{item.text}</p>
+                  </div>
+                  {item.tipRef && (
+                    <div class="tip-reference-row">
+                      <a href={getTipLink(item.tipRef.chapter, item.tipRef.tip)} class="tip-pill-link">
+                        <span class="tip-id">Tip #{item.tipRef.chapter}-{item.tipRef.tip}</span>
+                        <span class="tip-label">{item.tipRef.label} →</span>
+                      </a>
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          )}
+
+          {section.table && (
+            <div class="table-wrapper liquid-glass">
+              <table class="guide-table">
+                <thead>
+                  <tr>
+                    {section.table.headers.map((hdr) => (
+                      <th>{hdr}</th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {section.table.rows.map((row) => (
+                    <tr>
+                      {row.map((cell, cIdx) => (
+                        <td class={cIdx === 0 ? 'row-label' : ''}>{cell}</td>
+                      ))}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          )}
+        </section>
+      ))}
+    </div>
+
+    <footer class="guide-bottom-cta">
+      <a href="/guides/" class="action-btn-secondary">← Back to All Guides</a>
+      <a href="/chapters/" class="action-btn-primary">Explore All Chapters →</a>
+    </footer>
+  </article>
+</BaseLayout>
+
+<style>
+  .guide-article {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 1rem 0 4rem;
+  }
+
+  .guide-breadcrumb {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.25rem;
+  }
+
+  .back-link {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--color-jade);
+    text-decoration: none;
+  }
+
+  .back-link:hover {
+    color: var(--color-amber);
+  }
+
+  .reading-pill {
+    font-size: 0.8rem;
+    color: var(--color-ink-muted);
+    background: rgba(0, 0, 0, 0.25);
+    padding: 0.2rem 0.6rem;
+    border-radius: 999px;
+    border: 1px solid var(--color-glass-border);
+  }
+
+  .geo-banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.625rem 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.85rem;
+    color: var(--color-ink);
+    background: color-mix(in srgb, var(--color-amber) 15%, transparent);
+    border: 1px solid color-mix(in srgb, var(--color-amber) 35%, transparent);
+    border-radius: var(--radius-sm);
+  }
+
+  .dismiss-btn {
+    background: none;
+    border: none;
+    color: var(--color-ink-muted);
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 0 0.5rem;
+  }
+
+  .guide-header {
+    margin-bottom: 2.5rem;
+  }
+
+  .guide-title {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 5vw, 2.75rem);
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    margin: 0.75rem 0 0.5rem;
+    color: var(--color-ink);
+  }
+
+  .guide-subtitle {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-amber);
+    margin-bottom: 1rem;
+    line-height: 1.4;
+  }
+
+  .guide-summary {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: var(--color-ink-muted);
+  }
+
+  .guide-section {
+    margin-bottom: 2.5rem;
+  }
+
+  .section-title {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: var(--color-ink);
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+  }
+
+  .section-index {
+    color: var(--color-jade);
+  }
+
+  .section-prose {
+    padding: 1.25rem;
+    border-radius: var(--radius-card);
+    background: var(--color-glass-fill);
+    border: 1px solid var(--color-glass-border);
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    color: var(--color-ink);
+  }
+
+  .section-prose p + p {
+    margin-top: 0.75rem;
+  }
+
+  .items-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.875rem;
+  }
+
+  .checklist-item {
+    padding: 1.125rem;
+    border-radius: var(--radius-card);
+    background: var(--color-glass-fill);
+    border: 1px solid var(--color-glass-border);
+    box-shadow: var(--shadow-glass);
+    transition: border-color var(--duration-fast);
+  }
+
+  .checklist-item:hover {
+    border-color: var(--color-jade);
+  }
+
+  .item-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .item-badge {
+    font-family: var(--font-display);
+    font-size: 0.9rem;
+    color: #04110F;
+    background: var(--color-jade);
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 0.15rem;
+    border: 1.5px solid #04110F;
+  }
+
+  .item-text {
+    font-size: 0.95rem;
+    line-height: 1.55;
+    color: var(--color-ink);
+    margin: 0;
+  }
+
+  .tip-reference-row {
+    margin-top: 0.75rem;
+    padding-left: 2.25rem;
+  }
+
+  .tip-pill-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.35rem 0.75rem;
+    background: rgba(0, 0, 0, 0.25);
+    border: 1px solid var(--color-glass-border);
+    border-radius: 999px;
+    text-decoration: none;
+    font-size: 0.8rem;
+    transition: background var(--duration-fast), border-color var(--duration-fast);
+  }
+
+  .tip-pill-link:hover {
+    background: color-mix(in srgb, var(--color-jade) 15%, transparent);
+    border-color: var(--color-jade);
+  }
+
+  .tip-id {
+    font-weight: 700;
+    color: var(--color-jade);
+  }
+
+  .tip-label {
+    color: var(--color-ink-muted);
+  }
+
+  .table-wrapper {
+    overflow-x: auto;
+    border-radius: var(--radius-card);
+    border: 1px solid var(--color-glass-border);
+    background: var(--color-glass-fill);
+    margin-top: 1rem;
+  }
+
+  .guide-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.875rem;
+    text-align: left;
+  }
+
+  .guide-table th,
+  .guide-table td {
+    padding: 0.875rem 1rem;
+    border-bottom: 1px solid var(--color-glass-border);
+  }
+
+  .guide-table th {
+    background: rgba(0, 0, 0, 0.3);
+    color: var(--color-jade);
+    font-family: var(--font-display);
+    font-weight: normal;
+    letter-spacing: 0.02em;
+  }
+
+  .guide-table tr:last-child td {
+    border-bottom: none;
+  }
+
+  .row-label {
+    font-weight: 700;
+    color: var(--color-amber);
+    white-space: nowrap;
+  }
+
+  .guide-bottom-cta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--color-glass-border);
+  }
+
+  .action-btn-primary {
+    background: var(--color-jade);
+    color: #04110F;
+    padding: 0.75rem 1.5rem;
+    border-radius: 999px;
+    font-weight: 700;
+    text-decoration: none;
+    border: 2px solid #04110F;
+    box-shadow: 2px 2px 0 #04110F;
+  }
+
+  .action-btn-secondary {
+    background: var(--color-glass-fill);
+    color: var(--color-ink);
+    padding: 0.75rem 1.5rem;
+    border-radius: 999px;
+    font-weight: 600;
+    text-decoration: none;
+    border: 1px solid var(--color-glass-border);
+  }
+</style>

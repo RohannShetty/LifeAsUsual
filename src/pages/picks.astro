@@ -1,0 +1,112 @@
+---
+import fs from 'node:fs';
+import path from 'node:path';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import TipCard from '../components/TipCard.astro';
+import type { EnglishChapter, EnglishTip } from '../../scripts/ingest-parveen';
+
+const enAllPath = path.resolve('data/en/all-chapters.json');
+let allTips: EnglishTip[] = [];
+try {
+  const chapters: EnglishChapter[] = JSON.parse(fs.readFileSync(enAllPath, 'utf-8'));
+  for (const ch of chapters) {
+    allTips.push(...ch.tips);
+  }
+} catch (e) {
+  console.warn('Could not load tips for picks:', e);
+}
+---
+
+<BaseLayout 
+  title="My Picks - How To Live Better"
+  description="Your personally saved tips and high-priority life decisions."
+>
+  <header style="margin-bottom: 2rem;">
+    <span class="comic-sticker sticker-benefit">Saved Bookmarks</span>
+    <h1 style="font-family: var(--font-comic); font-size: 2.2rem; color: var(--theme-text); margin: 0.5rem 0;">
+      My Picks
+    </h1>
+    <p style="color: var(--theme-text-muted); font-size: 0.95rem;">
+      The book's spirit: picking one or two tips counts. These are the ones you selected.
+    </p>
+  </header>
+
+  <!-- Empty State -->
+  <div id="picks-empty-state" class="liquid-glass empty-box">
+    <div style="font-size: 2rem; margin-bottom: 0.5rem;">★</div>
+    <h3 style="font-family: var(--font-sans); font-size: 1.15rem; font-weight: 700; margin-bottom: 0.35rem;">
+      No Saved Picks Yet
+    </h3>
+    <p style="color: var(--theme-text-muted); font-size: 0.9rem; max-width: 400px; margin: 0 auto 1.25rem;">
+      Tap the "Save" button on any tip card while reading to pin it here for quick reference.
+    </p>
+    <a href="/chapters/" class="action-btn-primary">Browse Chapters →</a>
+  </div>
+
+  <!-- Picks Grid (rendered client-side by filtering allTips) -->
+  <div id="picks-container" class="tips-stream" style="display: none;">
+    {allTips.map(tip => (
+      <div class="pick-wrapper" data-tip-id={tip.id} style="display: none;">
+        <TipCard tip={tip} />
+      </div>
+    ))}
+  </div>
+</BaseLayout>
+
+<style>
+  .empty-box {
+    text-align: center;
+    padding: 3rem 1.5rem;
+    margin-top: 1rem;
+  }
+
+  .action-btn-primary {
+    display: inline-flex;
+    padding: 8px 18px;
+    background: var(--color-jade);
+    color: var(--color-ink);
+    border-radius: var(--radius-capsule);
+    font-family: var(--font-sans);
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 0.88rem;
+  }
+</style>
+
+<script>
+  import { subscribeLedger } from '../scripts/storage-ledger';
+
+  function initPicksPage() {
+    const emptyState = document.getElementById('picks-empty-state');
+    const container = document.getElementById('picks-container');
+    const pickWrappers = document.querySelectorAll('.pick-wrapper');
+
+    subscribeLedger((state) => {
+      const picksSet = new Set(state.picks);
+      let count = 0;
+
+      pickWrappers.forEach((w) => {
+        const wrap = w as HTMLElement;
+        const tipId = wrap.dataset.tipId;
+        if (tipId && picksSet.has(tipId)) {
+          wrap.style.display = 'block';
+          count++;
+        } else {
+          wrap.style.display = 'none';
+        }
+      });
+
+      if (count > 0) {
+        if (emptyState) emptyState.style.display = 'none';
+        if (container) container.style.display = 'block';
+      } else {
+        if (emptyState) emptyState.style.display = 'block';
+        if (container) container.style.display = 'none';
+      }
+    });
+  }
+
+  if (typeof window !== 'undefined') {
+    document.addEventListener('astro:page-load', initPicksPage);
+  }
+</script>

@@ -17,11 +17,11 @@
 
 ## 3. Phase 3: Chapter Reader & Core Application Routes (Milestone M3.3)
 
-- [ ] 3.1 Implement chapter reader dynamic route `src/pages/chapters/[n]-[slug].astro` generating static pages for all 34 chapters from `data/en/` with sticky header, progress indicator, and "On this page" bottom sheet. Verify all 34 chapter pages generate at build time. *(Tools/Skills: Astro `getStaticPaths`, static data ingestion)*
-- [ ] 3.2 Implement `src/pages/chapters/index.astro` listing all 34 chapters with chapter descriptions, read percentage bars, and total tip counts. Verify chapter cards render cleanly. *(Tools/Skills: Astro component, CSS tokens)*
-- [ ] 3.3 Implement `src/pages/index.astro` Home page featuring the Daily Quick Win hero (selected deterministically by local date from 122 Very High tips), Continue reading action, overall progress ring, and 4 payoff shortcuts. Verify daily rotation logic. *(Tools/Skills: Deterministic PRNG / date hashing)*
-- [ ] 3.4 Implement `src/pages/start.astro` (reader-facing onboarding adapted from README), `src/pages/picks.astro` (saved bookmarks), and `src/pages/about.astro` (CC BY 4.0 license, eternity4719 author credit, mainland China disclaimers). Verify content compliance. *(Tools/Skills: Non-negotiable legal checklist)*
-- [ ] 3.5 Implement `src/pages/guides/[slug].astro` rendering the 9 standalone guides from `source/docs/`. Verify static generation. *(Tools/Skills: Markdown parsing, Astro getStaticPaths)*
+- [x] 3.1 Implement chapter reader dynamic route `src/pages/chapters/[n]-[slug].astro` generating static pages for all 34 chapters from `data/en/` with sticky header, progress indicator, and "On this page" bottom sheet. Verify all 34 chapter pages generate at build time. *(Tools/Skills: Astro `getStaticPaths`, static data ingestion)*
+- [x] 3.2 Implement `src/pages/chapters/index.astro` listing all 34 chapters with chapter descriptions, read percentage bars, and total tip counts. Verify chapter cards render cleanly. *(Tools/Skills: Astro component, CSS tokens)*
+- [x] 3.3 Implement `src/pages/index.astro` Home page featuring the Daily Quick Win hero (selected deterministically by local date from 122 Very High tips), Continue reading action, overall progress ring, and 4 payoff shortcuts. Verify daily rotation logic. *(Tools/Skills: Deterministic PRNG / date hashing)*
+- [x] 3.4 Implement `src/pages/start.astro` (reader-facing onboarding adapted from README), `src/pages/picks.astro` (saved bookmarks), and `src/pages/about.astro` (CC BY 4.0 license, eternity4719 author credit, mainland China disclaimers). Verify content compliance. *(Tools/Skills: Non-negotiable legal checklist)*
+- [x] 3.5 Implement `src/pages/guides/[slug].astro` rendering the 9 standalone guides from `source/docs/`. Verify static generation. *(Tools/Skills: Markdown parsing, Astro getStaticPaths)*
 
 ## 4. Phase 4: Comic Layer, Characters & Motion (Milestone M3b)
 

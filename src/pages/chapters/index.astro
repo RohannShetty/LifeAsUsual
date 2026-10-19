@@ -1,0 +1,190 @@
+---
+import fs from 'node:fs';
+import path from 'node:path';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import type { EnglishChapter } from '../../../scripts/ingest-parveen';
+
+const enAllPath = path.resolve('data/en/all-chapters.json');
+let chapters: EnglishChapter[] = [];
+try {
+  chapters = JSON.parse(fs.readFileSync(enAllPath, 'utf-8'));
+} catch (e) {
+  console.warn('Could not load chapters:', e);
+}
+---
+
+<BaseLayout 
+  title="Chapters - How To Live Better"
+  description="Explore all 34 chapters of How To Live Better, spanning longevity, emergency aid, personal finance, and legal rights."
+>
+  <header style="margin-bottom: 2rem;">
+    <div style="margin-bottom: 0.5rem;">
+      <span class="comic-sticker sticker-benefit">Table of Contents</span>
+    </div>
+    <h1 style="font-family: var(--font-comic); font-size: 2.2rem; color: var(--theme-text); margin-bottom: 0.5rem;">
+      All 34 Chapters
+    </h1>
+    <p style="color: var(--theme-text-muted); font-size: 1rem; line-height: 1.5;">
+      A menu of 765 evidence-graded life recommendations. Choose the chapters that matter to you now.
+    </p>
+  </header>
+
+  <div class="chapters-grid">
+    {chapters.map(ch => {
+      const url = `/chapters/${String(ch.chapter).padStart(2, '0')}-${ch.slug}/`;
+      return (
+        <a href={url} class="chapter-card liquid-glass" data-chapter={ch.chapter}>
+          <div class="card-header-line">
+            <span class="ch-badge">Chapter {ch.chapter}</span>
+            <span class="ch-tip-count">{ch.tips.length} tips</span>
+          </div>
+
+          <h2 class="ch-title">{ch.title}</h2>
+
+          <!-- Chapter Read Progress Bar -->
+          <div class="ch-progress-box">
+            <div class="ch-progress-track">
+              <div class="ch-progress-fill" id={`ch-fill-${ch.chapter}`} style="width: 0%;"></div>
+            </div>
+            <span class="ch-progress-pct" id={`ch-pct-${ch.chapter}`}>0%</span>
+          </div>
+        </a>
+      );
+    })}
+  </div>
+</BaseLayout>
+
+<style>
+  .chapters-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  @media (min-width: 640px) {
+    .chapters-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .chapter-card {
+    display: flex;
+    flex-direction: column;
+    padding: 1.4rem;
+    text-decoration: none;
+    color: var(--theme-text);
+    transition: transform var(--dur-fast) var(--spring-overshoot), box-shadow var(--dur-fast);
+  }
+
+  .chapter-card:hover {
+    transform: translateY(-3px);
+  }
+
+  .card-header-line {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
+  }
+
+  .ch-badge {
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    background: var(--color-ink);
+    color: var(--color-jade);
+    padding: 2px 7px;
+    border-radius: 6px;
+  }
+
+  [data-theme="light"] .ch-badge {
+    background: #04110F;
+    color: #FFFFFF;
+  }
+
+  .ch-tip-count {
+    font-family: var(--font-sans);
+    font-size: 0.8rem;
+    color: var(--theme-text-muted);
+    font-weight: 600;
+  }
+
+  .ch-title {
+    font-family: var(--font-sans);
+    font-size: 1.15rem;
+    font-weight: 700;
+    line-height: 1.35;
+    margin-bottom: 1.25rem;
+    flex: 1;
+  }
+
+  .ch-progress-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .ch-progress-track {
+    flex: 1;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+    overflow: hidden;
+  }
+
+  .ch-progress-fill {
+    height: 100%;
+    background: var(--color-jade);
+    border-radius: 3px;
+    transition: width var(--dur-settle) var(--ease-out);
+  }
+
+  .ch-progress-pct {
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--theme-text-muted);
+    min-width: 30px;
+    text-align: right;
+  }
+</style>
+
+<script>
+  import { subscribeLedger } from '../../scripts/storage-ledger';
+
+  function initChapterIndex() {
+    subscribeLedger((state) => {
+      const readSet = new Set(state.readTipIds);
+
+      document.querySelectorAll('.chapter-card').forEach((card) => {
+        const ch = (card as HTMLElement).dataset.chapter;
+        if (!ch) return;
+
+        // Count tips for this chapter that are read
+        let chReadCount = 0;
+        let chTotal = 0;
+
+        readSet.forEach((tipId) => {
+          if (tipId.startsWith(`${ch}-`)) chReadCount++;
+        });
+
+        const tipCountEl = card.querySelector('.ch-tip-count');
+        const m = tipCountEl?.textContent?.match(/(\d+)/);
+        if (m) chTotal = parseInt(m[1], 10);
+
+        const pct = chTotal > 0 ? Math.min(100, Math.round((chReadCount / chTotal) * 100)) : 0;
+
+        const fill = document.getElementById(`ch-fill-${ch}`);
+        const text = document.getElementById(`ch-pct-${ch}`);
+
+        if (fill) fill.style.width = `${pct}%`;
+        if (text) text.textContent = `${pct}%`;
+      });
+    });
+  }
+
+  if (typeof window !== 'undefined') {
+    document.addEventListener('astro:page-load', initChapterIndex);
+  }
+</script>

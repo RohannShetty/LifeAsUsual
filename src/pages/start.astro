@@ -1,0 +1,123 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout 
+  title="Start Here - How To Live Better"
+  description="How to read the guide, evidence grading criteria, and how to get the most value with the least effort."
+>
+  <article class="prose-container">
+    <header class="page-header">
+      <span class="comic-sticker sticker-benefit">Start Here</span>
+      <h1 class="page-title">How To Use This Guide</h1>
+      <p class="page-lead">
+        This book is a menu of options, not an onerous task list. Adopting even one or two tips provides immediate, compounding benefits.
+      </p>
+    </header>
+
+    <section class="info-card liquid-glass">
+      <h2 class="card-heading">1. You Don't Need To Do Everything</h2>
+      <p>
+        Most people never implement even a fraction of what they read. That is completely normal—the author has not mastered most of these rules either.
+        Treat this site as an evidence-backed reference manual. When a life transition occurs—a new job, a move, childbirth, an aging parent, or a medical diagnosis—turn to the relevant chapter.
+      </p>
+    </section>
+
+    <section class="info-card liquid-glass">
+      <h2 class="card-heading">2. Evidence Grading System</h2>
+      <p style="margin-bottom: 1rem;">
+        Every single tip in this guide is graded based on the rigor of its underlying source:
+      </p>
+      <ul class="evidence-list">
+        <li>
+          <strong class="grade-a">Grade A (495 tips):</strong> Supported by randomized controlled trials (RCTs), systematic meta-analyses, or statutory administrative law. The hardest conclusions available.
+        </li>
+        <li>
+          <strong class="grade-b">Grade B (218 tips):</strong> Supported by large multi-year observational cohorts, official agency statistics, or authoritative clinical guidelines.
+        </li>
+        <li>
+          <strong class="grade-c">Grade C (52 tips):</strong> Supported by expert consensus, single-institution retrospective reviews, or legal regulatory obligations without published mortality impact.
+        </li>
+      </ul>
+    </section>
+
+    <section class="info-card liquid-glass">
+      <h2 class="card-heading">3. Value-for-Money Tiers (ROI)</h2>
+      <p>
+        The author calculates a cost score based on three dimensions: <strong>Money</strong> (0 to 2), <strong>Time</strong> (0 to 2), and <strong>Willpower</strong> (0 to 2).
+      </p>
+      <p style="margin-top: 0.5rem;">
+        When an action requires zero money, negligible time, and zero willpower while producing large benefits, it is ranked <strong>Very High ROI</strong> (122 tips). Start with these for the biggest life wins with the least resistance.
+      </p>
+    </section>
+
+    <div class="cta-row">
+      <a href="/chapters/" class="action-btn-primary">Explore All Chapters →</a>
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .prose-container {
+    max-width: 680px;
+    margin: 0 auto;
+  }
+
+  .page-header {
+    margin-bottom: 2rem;
+  }
+
+  .page-title {
+    font-family: var(--font-comic);
+    font-size: 2.4rem;
+    color: var(--theme-text);
+    margin: 0.75rem 0 0.5rem;
+  }
+
+  .page-lead {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: var(--theme-text-muted);
+  }
+
+  .info-card {
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .card-heading {
+    font-family: var(--font-sans);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-jade);
+    margin-bottom: 0.75rem;
+  }
+
+  .evidence-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .grade-a { color: var(--color-jade); }
+  .grade-b { color: var(--color-amber); }
+  .grade-c { color: var(--color-steel); }
+
+  .cta-row {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .action-btn-primary {
+    display: inline-flex;
+    padding: 10px 24px;
+    background: var(--color-jade);
+    color: var(--color-ink);
+    border-radius: var(--radius-capsule);
+    font-family: var(--font-sans);
+    font-weight: 700;
+    text-decoration: none;
+  }
+</style>

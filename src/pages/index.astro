@@ -1,29 +1,456 @@
 ---
+import fs from 'node:fs';
+import path from 'node:path';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import ProgressRing from '../components/ProgressRing.astro';
+import ReadingMap from '../components/ReadingMap.astro';
+import type { EnglishChapter, EnglishTip } from '../../scripts/ingest-parveen';
+
+// Load all chapters and extract 122 Very High tips
+const enAllPath = path.resolve('data/en/all-chapters.json');
+let chapters: EnglishChapter[] = [];
+try {
+  chapters = JSON.parse(fs.readFileSync(enAllPath, 'utf-8'));
+} catch (e) {
+  console.warn('Could not load chapters for home page:', e);
+}
+
+const veryHighTips: EnglishTip[] = [];
+for (const ch of chapters) {
+  for (const t of ch.tips) {
+    if (t.valueTier === 'Very high') {
+      veryHighTips.push(t);
+    }
+  }
+}
+
+// Deterministic Daily Quick Win based on day of year
+const now = new Date();
+const startOfYear = new Date(now.getFullYear(), 0, 0);
+const diff = now.getTime() - startOfYear.getTime();
+const oneDay = 1000 * 60 * 60 * 24;
+const dayOfYear = Math.floor(diff / oneDay);
+
+const dailyTip = veryHighTips.length > 0 
+  ? veryHighTips[dayOfYear % veryHighTips.length] 
+  : null;
 ---
 
-<BaseLayout title="How To Live Better">
-  <main style="padding: 2rem 1.5rem; max-width: 720px; margin: 0 auto;">
-    <header style="margin-bottom: 2rem;">
-      <h1 style="font-family: var(--font-comic); font-size: 2.2rem; color: var(--color-jade); margin-bottom: 0.5rem;">
-        How To Live Better
-      </h1>
-      <p style="color: var(--theme-text-muted); font-size: 1.05rem;">
-        Spend the least money, time and effort to get back the most lifespan, money and personal freedom.
-      </p>
-    </header>
+<BaseLayout 
+  title="How To Live Better — Evidence-Based Life Guide"
+  description="Spend the least money, time and effort to get back the most lifespan, money and personal freedom. 765 verified tips."
+>
+  <!-- Comic Header Splash -->
+  <header class="home-header">
+    <div class="comic-badge-row">
+      <span class="comic-sticker sticker-benefit">Verified Life Decisions</span>
+      <span class="comic-sticker sticker-neutral">765 Tips</span>
+    </div>
 
-    <section class="liquid-glass" style="padding: 1.5rem; margin-bottom: 2rem;">
-      <div style="display: flex; gap: 0.5rem; margin-bottom: 0.75rem;">
+    <h1 class="home-headline">
+      How To Live Better
+    </h1>
+    <p class="home-tagline">
+      Spend the least money, time and effort to get back the most lifespan, money and personal freedom.
+    </p>
+    <p class="home-subtagline">
+      This is a menu, not a to-do list. Picking one or two tips counts.
+    </p>
+  </header>
+
+  <!-- Daily Quick Win Hero Panel (Comic Splash Framing) -->
+  {dailyTip && (
+    <section class="daily-win-panel liquid-glass comic-border-thick">
+      <div class="panel-eyebrow">
+        <span class="daily-badge">Daily Quick Win</span>
         <span class="comic-sticker sticker-benefit">ROI: Very High</span>
-        <span class="comic-sticker sticker-neutral">Evidence: Grade A</span>
+        <span class="comic-sticker sticker-neutral">Grade {dailyTip.evidenceGrade}</span>
       </div>
-      <h2 style="font-family: var(--font-sans); font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem;">
-        Daily Quick Win: Household Potassium Salt
-      </h2>
-      <p style="font-size: 0.95rem; line-height: 1.6; color: var(--theme-text);">
-        In plain words: In a 20,000-person study, swapping regular salt for potassium-enriched salt cut stroke risk by 14% and death by 12% over 5 years.
-      </p>
+
+      <div class="daily-title-row">
+        <a 
+          href={`/chapters/${String(dailyTip.chapter).padStart(2, '0')}-slug/#${dailyTip.chapter}-${dailyTip.tip}`}
+          class="daily-title-link"
+        >
+          <span class="daily-tip-num">{dailyTip.chapter}.{dailyTip.tip}</span>
+          <h2 class="daily-tip-title">{dailyTip.title}</h2>
+        </a>
+      </div>
+
+      <div class="daily-lead-box">
+        <p class="daily-lead-text">{dailyTip.inPlainWords}</p>
+      </div>
+
+      <div class="daily-cost-row">
+        <span class="cost-tag">Cost: {dailyTip.tags.money}</span>
+        <span class="cost-tag">Time: {dailyTip.tags.time}</span>
+        <span class="cost-tag">Willpower: {dailyTip.tags.willpower}</span>
+      </div>
+
+      <div class="daily-footer-row">
+        <a 
+          href={`/chapters/${String(dailyTip.chapter).padStart(2, '0')}-slug/#${dailyTip.chapter}-${dailyTip.tip}`}
+          class="read-tip-cta"
+        >
+          <span>Read Full Tip & Evidence →</span>
+        </a>
+      </div>
     </section>
-  </main>
+  )}
+
+  <!-- Quick Progress & Continue Reading Bar -->
+  <section class="overview-section liquid-glass">
+    <div class="overview-grid">
+      <div class="overview-ring-col">
+        <ProgressRing size={110} strokeWidth={9} />
+      </div>
+
+      <div class="overview-cta-col">
+        <h3 class="overview-heading">Reading Progress</h3>
+        <p class="overview-desc" id="resume-text">
+          Pick up where you left off or explore by your priorities.
+        </p>
+        <div class="overview-actions">
+          <a href="/chapters/01-do-not-die-early/" class="action-btn-primary" id="continue-reading-btn">
+            Continue Reading →
+          </a>
+          <a href="/chapters/" class="action-btn-secondary">
+            Browse Chapters
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 Payoff Shortcuts (Lifespan, Money, Time, Freedom) -->
+  <section class="shortcuts-section">
+    <h3 class="section-title">What do you want back?</h3>
+    <div class="shortcuts-grid">
+      <a href="/explore/?scope=Lifespan" class="shortcut-card liquid-glass">
+        <span class="shortcut-icon">❤️</span>
+        <div class="shortcut-text">
+          <strong class="shortcut-label">Lifespan</strong>
+          <span class="shortcut-desc">274 tips on longevity & safety</span>
+        </div>
+      </a>
+
+      <a href="/explore/?scope=Money" class="shortcut-card liquid-glass">
+        <span class="shortcut-icon">💰</span>
+        <div class="shortcut-text">
+          <strong class="shortcut-label">Money</strong>
+          <span class="shortcut-desc">290 tips on scams, rent & wages</span>
+        </div>
+      </a>
+
+      <a href="/explore/?scope=Time" class="shortcut-card liquid-glass">
+        <span class="shortcut-icon">⚡</span>
+        <div class="shortcut-text">
+          <strong class="shortcut-label">Time & Energy</strong>
+          <span class="shortcut-desc">77 tips on focus & sleep</span>
+        </div>
+      </a>
+
+      <a href="/explore/?scope=Freedom" class="shortcut-card liquid-glass">
+        <span class="shortcut-icon">🕊️</span>
+        <div class="shortcut-text">
+          <strong class="shortcut-label">Personal Freedom</strong>
+          <span class="shortcut-desc">124 tips on legal boundaries</span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- Reading Map Overview -->
+  <section class="map-section">
+    <ReadingMap />
+  </section>
 </BaseLayout>
+
+<style>
+  /* Header Splash */
+  .home-header {
+    margin-bottom: 2.25rem;
+  }
+
+  .comic-badge-row {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 0.85rem;
+  }
+
+  .home-headline {
+    font-family: var(--font-comic);
+    font-size: 2.8rem;
+    line-height: 1.1;
+    color: var(--theme-text);
+    margin-bottom: 0.65rem;
+    letter-spacing: -0.02em;
+  }
+
+  .home-tagline {
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: var(--color-jade);
+    line-height: 1.5;
+    margin-bottom: 0.4rem;
+  }
+
+  .home-subtagline {
+    font-size: 0.95rem;
+    color: var(--theme-text-muted);
+  }
+
+  /* Daily Win Panel */
+  .daily-win-panel {
+    padding: 1.75rem 1.5rem;
+    margin-bottom: 2.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .panel-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .daily-badge {
+    font-family: var(--font-sans);
+    font-size: 0.78rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-amber);
+  }
+
+  .daily-title-row {
+    margin-bottom: 1rem;
+  }
+
+  .daily-title-link {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    text-decoration: none;
+    color: var(--theme-text);
+  }
+
+  .daily-tip-num {
+    font-family: var(--font-sans);
+    font-weight: 800;
+    font-size: 1rem;
+    background: var(--color-ink);
+    color: var(--color-mist);
+    padding: 2px 7px;
+    border-radius: 6px;
+    flex-shrink: 0;
+  }
+
+  .daily-tip-title {
+    font-family: var(--font-sans);
+    font-size: 1.35rem;
+    font-weight: 700;
+    line-height: 1.3;
+  }
+
+  .daily-lead-box {
+    background: rgba(0, 0, 0, 0.16);
+    padding: 1rem 1.15rem;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+  }
+
+  [data-theme="light"] .daily-lead-box {
+    background: rgba(0, 0, 0, 0.04);
+  }
+
+  .daily-lead-text {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.65;
+    color: var(--theme-text);
+  }
+
+  .daily-cost-row {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+    flex-wrap: wrap;
+  }
+
+  .cost-tag {
+    font-family: var(--font-sans);
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--theme-text-muted);
+  }
+
+  .daily-footer-row {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .read-tip-cta {
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--color-jade);
+    text-decoration: none;
+  }
+
+  /* Overview & Ring Section */
+  .overview-section {
+    padding: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .overview-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  @media (min-width: 640px) {
+    .overview-grid {
+      flex-direction: row;
+      gap: 2rem;
+    }
+  }
+
+  .overview-cta-col {
+    flex: 1;
+  }
+
+  .overview-heading {
+    font-family: var(--font-sans);
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.35rem;
+  }
+
+  .overview-desc {
+    font-size: 0.9rem;
+    color: var(--theme-text-muted);
+    margin-bottom: 1rem;
+    line-height: 1.45;
+  }
+
+  .overview-actions {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+
+  .action-btn-primary {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 16px;
+    background: var(--color-jade);
+    color: var(--color-ink);
+    border-radius: var(--radius-capsule);
+    font-family: var(--font-sans);
+    font-weight: 700;
+    font-size: 0.88rem;
+    text-decoration: none;
+    transition: transform var(--dur-fast) var(--spring-overshoot);
+  }
+
+  .action-btn-primary:active {
+    transform: scale(0.96);
+  }
+
+  .action-btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 16px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: var(--theme-text);
+    border-radius: var(--radius-capsule);
+    font-family: var(--font-sans);
+    font-weight: 600;
+    font-size: 0.88rem;
+    text-decoration: none;
+  }
+
+  /* Shortcuts */
+  .shortcuts-section {
+    margin-bottom: 2.5rem;
+  }
+
+  .section-title {
+    font-family: var(--font-sans);
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--theme-text);
+  }
+
+  .shortcuts-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
+  }
+
+  @media (min-width: 640px) {
+    .shortcuts-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .shortcut-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 1rem 1.15rem;
+    text-decoration: none;
+    color: var(--theme-text);
+    transition: transform var(--dur-fast);
+  }
+
+  .shortcut-card:hover {
+    transform: translateY(-2px);
+  }
+
+  .shortcut-icon {
+    font-size: 1.5rem;
+  }
+
+  .shortcut-text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .shortcut-label {
+    font-family: var(--font-sans);
+    font-size: 0.98rem;
+    font-weight: 700;
+  }
+
+  .shortcut-desc {
+    font-size: 0.8rem;
+    color: var(--theme-text-muted);
+  }
+</style>
+
+<script>
+  import { getLedger } from '../scripts/storage-ledger';
+
+  function initHomeState() {
+    const state = getLedger();
+    const resumeBtn = document.getElementById('continue-reading-btn') as HTMLAnchorElement | null;
+    const resumeText = document.getElementById('resume-text');
+
+    if (state.lastPosition && resumeBtn && resumeText) {
+      resumeBtn.href = `/chapters/${String(state.lastPosition.chapter).padStart(2, '0')}-slug/#${state.lastPosition.chapter}-${state.lastPosition.tip}`;
+      resumeText.textContent = `You last read Tip ${state.lastPosition.chapter}.${state.lastPosition.tip}. Pick right back up!`;
+    }
+  }
+
+  if (typeof window !== 'undefined') {
+    document.addEventListener('astro:page-load', initHomeState);
+  }
+</script>
