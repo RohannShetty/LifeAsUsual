@@ -1,0 +1,501 @@
+---
+import fs from 'node:fs';
+import path from 'node:path';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import TipCard from '../components/TipCard.astro';
+import Character from '../cast/Character.astro';
+import Bubble from '../cast/Bubble.astro';
+import type { EnglishChapter, EnglishTip } from '../../scripts/ingest-parveen';
+
+const enAllPath = path.resolve('data/en/all-chapters.json');
+let allTips: EnglishTip[] = [];
+try {
+  const chapters: EnglishChapter[] = JSON.parse(fs.readFileSync(enAllPath, 'utf-8'));
+  for (const ch of chapters) {
+    allTips.push(...ch.tips);
+  }
+} catch (e) {
+  console.warn('Could not load tips for explore:', e);
+}
+---
+
+<BaseLayout
+  title="Explore & Filter Recommendations - How To Live Better"
+  description="Filter and search all 765 evidence-backed recommendations by evidence grade, ROI value tier, scope, and cost."
+>
+  <div class="explore-container">
+    <header class="explore-header">
+      <span class="comic-sticker sticker-benefit">Evidence Explorer</span>
+      <h1 class="page-title">Search & Filter 765 Tips</h1>
+      <p class="page-lead">
+        Find exact recommendations by keyword, evidence rigor, return-on-investment tier, or life domain.
+      </p>
+    </header>
+
+    <!-- Search Input & Filter Controls Bar -->
+    <section class="filter-controls-card liquid-glass">
+      <!-- Search Input -->
+      <div class="search-input-wrapper">
+        <span class="search-icon" aria-hidden="true">🔍</span>
+        <input 
+          type="search" 
+          id="explore-search" 
+          class="explore-search-input"
+          placeholder="Search by keywords, drugs, habits, laws, numbers..."
+          aria-label="Search tips"
+          autocomplete="off"
+        />
+        <button type="button" id="clear-search-btn" class="clear-btn" aria-label="Clear search">✕</button>
+      </div>
+
+      <!-- Filter Rows -->
+      <div class="filter-groups">
+        <!-- Evidence Grade -->
+        <div class="filter-group">
+          <span class="filter-label">Evidence:</span>
+          <div class="filter-chips" data-filter="evidence">
+            <button type="button" class="filter-chip active" data-value="all">All</button>
+            <button type="button" class="filter-chip chip-a" data-value="A">Grade A (495)</button>
+            <button type="button" class="filter-chip chip-b" data-value="B">Grade B (218)</button>
+            <button type="button" class="filter-chip chip-c" data-value="C">Grade C (52)</button>
+          </div>
+        </div>
+
+        <!-- ROI Value Tier -->
+        <div class="filter-group">
+          <span class="filter-label">ROI Tier:</span>
+          <div class="filter-chips" data-filter="tier">
+            <button type="button" class="filter-chip active" data-value="all">All</button>
+            <button type="button" class="filter-chip" data-value="Very high">Very High (122)</button>
+            <button type="button" class="filter-chip" data-value="High">High (344)</button>
+            <button type="button" class="filter-chip" data-value="Average">Average (299)</button>
+          </div>
+        </div>
+
+        <!-- Scope / Domain -->
+        <div class="filter-group">
+          <span class="filter-label">Scope:</span>
+          <div class="filter-chips" data-filter="scope">
+            <button type="button" class="filter-chip active" data-value="all">All</button>
+            <button type="button" class="filter-chip" data-value="Lifespan">Lifespan</button>
+            <button type="button" class="filter-chip" data-value="Money">Money</button>
+            <button type="button" class="filter-chip" data-value="Time and energy">Time & Energy</button>
+            <button type="button" class="filter-chip" data-value="Personal freedom">Freedom</button>
+          </div>
+        </div>
+
+        <!-- Money Cost -->
+        <div class="filter-group">
+          <span class="filter-label">Cost:</span>
+          <div class="filter-chips" data-filter="cost">
+            <button type="button" class="filter-chip active" data-value="all">All</button>
+            <button type="button" class="filter-chip" data-value="Free">Free</button>
+            <button type="button" class="filter-chip" data-value="Small cost">Small cost</button>
+            <button type="button" class="filter-chip" data-value="Real money">Real money</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Filter Stats & Reset Row -->
+      <div class="filter-summary-row">
+        <span class="results-count" id="results-count">Showing 765 of 765 tips</span>
+        <button type="button" id="reset-filters-btn" class="reset-link">Reset Filters</button>
+      </div>
+    </section>
+
+    <!-- Empty State -->
+    <div id="explore-empty-state" class="liquid-glass empty-box" style="display: none;">
+      <div class="empty-cast-row">
+        <Character character="minus" mood="surprised" size={64} />
+        <Bubble speaker="Minus" text="No picks saved yet. Tap any bookmark icon!" tailDirection="left" />
+      </div>
+      <h3 class="empty-title">No Recommendations Match</h3>
+      <p class="empty-desc">Try clearing filters or searching for broader terms like "sleep", "salt", "insurance", or "tax".</p>
+      <button type="button" id="empty-reset-btn" class="action-btn-primary">Clear All Filters</button>
+    </div>
+
+    <!-- Tips Feed -->
+    <main id="explore-results-feed" class="tips-stream">
+      {allTips.map((tip) => (
+        <div 
+          class="explore-tip-item"
+          data-id={tip.id}
+          data-evidence={tip.evidenceGrade}
+          data-tier={tip.valueTier}
+          data-scope={tip.tags.scope}
+          data-cost={tip.tags.money}
+          data-title={tip.title.toLowerCase()}
+          data-plain={tip.inPlainWords.toLowerCase()}
+          data-benefit={tip.benefit.toLowerCase()}
+        >
+          <TipCard tip={tip} />
+        </div>
+      ))}
+    </main>
+  </div>
+</BaseLayout>
+
+<script>
+  function initExplore() {
+    const searchInput = document.getElementById('explore-search') as HTMLInputElement | null;
+    const clearBtn = document.getElementById('clear-search-btn');
+    const resetBtn = document.getElementById('reset-filters-btn');
+    const emptyResetBtn = document.getElementById('empty-reset-btn');
+    const resultsCountEl = document.getElementById('results-count');
+    const emptyStateEl = document.getElementById('explore-empty-state');
+    const tipItems = Array.from(document.querySelectorAll<HTMLElement>('.explore-tip-item'));
+
+    if (!tipItems.length) return;
+
+    // Active filters state
+    const filters = {
+      query: '',
+      evidence: 'all',
+      tier: 'all',
+      scope: 'all',
+      cost: 'all',
+    };
+
+    // Parse URL search params
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('q')) filters.query = params.get('q') || '';
+    if (params.get('evidence')) filters.evidence = params.get('evidence') || 'all';
+    if (params.get('tier')) filters.tier = params.get('tier') || 'all';
+    if (params.get('scope')) filters.scope = params.get('scope') || 'all';
+    if (params.get('cost')) filters.cost = params.get('cost') || 'all';
+
+    // Reflect URL into UI
+    if (searchInput) searchInput.value = filters.query;
+
+    document.querySelectorAll<HTMLElement>('.filter-chips').forEach((group) => {
+      const type = group.dataset.filter as keyof typeof filters;
+      if (!type) return;
+      const targetVal = filters[type];
+      group.querySelectorAll<HTMLButtonElement>('.filter-chip').forEach((chip) => {
+        if (chip.dataset.value === targetVal) {
+          chip.classList.add('active');
+        } else {
+          chip.classList.remove('active');
+        }
+      });
+    });
+
+    function updateURL() {
+      const p = new URLSearchParams();
+      if (filters.query) p.set('q', filters.query);
+      if (filters.evidence !== 'all') p.set('evidence', filters.evidence);
+      if (filters.tier !== 'all') p.set('tier', filters.tier);
+      if (filters.scope !== 'all') p.set('scope', filters.scope);
+      if (filters.cost !== 'all') p.set('cost', filters.cost);
+
+      const newUrl = p.toString() ? `${window.location.pathname}?${p.toString()}` : window.location.pathname;
+      window.history.replaceState({}, '', newUrl);
+    }
+
+    function applyFilters() {
+      const q = filters.query.toLowerCase().trim();
+      let visibleCount = 0;
+
+      tipItems.forEach((item) => {
+        const evidence = item.dataset.evidence;
+        const tier = item.dataset.tier;
+        const scope = item.dataset.scope;
+        const cost = item.dataset.cost;
+        const title = item.dataset.title || '';
+        const plain = item.dataset.plain || '';
+        const benefit = item.dataset.benefit || '';
+
+        const matchesEvidence = filters.evidence === 'all' || evidence === filters.evidence;
+        const matchesTier = filters.tier === 'all' || tier === filters.tier;
+        const matchesScope = filters.scope === 'all' || scope === filters.scope;
+        const matchesCost = filters.cost === 'all' || cost === filters.cost;
+        const matchesQuery = !q || title.includes(q) || plain.includes(q) || benefit.includes(q);
+
+        if (matchesEvidence && matchesTier && matchesScope && matchesCost && matchesQuery) {
+          item.style.display = '';
+          visibleCount++;
+        } else {
+          item.style.display = 'none';
+        }
+      });
+
+      if (resultsCountEl) {
+        resultsCountEl.textContent = `Showing ${visibleCount} of ${tipItems.length} tips`;
+      }
+
+      if (emptyStateEl) {
+        emptyStateEl.style.display = visibleCount === 0 ? 'block' : 'none';
+      }
+
+      updateURL();
+    }
+
+    // Bind Search Input
+    searchInput?.addEventListener('input', () => {
+      filters.query = searchInput.value;
+      applyFilters();
+    });
+
+    clearBtn?.addEventListener('click', () => {
+      if (searchInput) {
+        searchInput.value = '';
+        filters.query = '';
+        applyFilters();
+      }
+    });
+
+    // Bind Filter Chips
+    document.querySelectorAll<HTMLElement>('.filter-chips').forEach((group) => {
+      const type = group.dataset.filter as keyof typeof filters;
+      if (!type) return;
+
+      group.addEventListener('click', (e) => {
+        const target = (e.target as HTMLElement).closest<HTMLButtonElement>('.filter-chip');
+        if (!target) return;
+
+        group.querySelectorAll('.filter-chip').forEach((c) => c.classList.remove('active'));
+        target.classList.add('active');
+
+        filters[type] = target.dataset.value || 'all';
+        applyFilters();
+      });
+    });
+
+    function resetAll() {
+      filters.query = '';
+      filters.evidence = 'all';
+      filters.tier = 'all';
+      filters.scope = 'all';
+      filters.cost = 'all';
+
+      if (searchInput) searchInput.value = '';
+
+      document.querySelectorAll<HTMLElement>('.filter-chips').forEach((group) => {
+        group.querySelectorAll('.filter-chip').forEach((c, idx) => {
+          if (idx === 0) c.classList.add('active');
+          else c.classList.remove('active');
+        });
+      });
+
+      applyFilters();
+    }
+
+    resetBtn?.addEventListener('click', resetAll);
+    emptyResetBtn?.addEventListener('click', resetAll);
+
+    // Initial Filter Run
+    applyFilters();
+  }
+
+  initExplore();
+  document.addEventListener('astro:page-load', initExplore);
+</script>
+
+<style>
+  .explore-container {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 1rem 0 4rem;
+  }
+
+  .explore-header {
+    margin-bottom: 2rem;
+  }
+
+  .page-title {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 5vw, 2.75rem);
+    letter-spacing: -0.02em;
+    margin: 0.75rem 0 0.5rem;
+    color: var(--color-ink);
+  }
+
+  .page-lead {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: var(--color-ink-muted);
+  }
+
+  .filter-controls-card {
+    padding: 1.5rem;
+    background: var(--color-glass-fill);
+    border: 1px solid var(--color-glass-border);
+    border-radius: var(--radius-card);
+    margin-bottom: 2.5rem;
+    box-shadow: var(--shadow-glass);
+  }
+
+  .search-input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .search-icon {
+    position: absolute;
+    left: 1rem;
+    font-size: 1.1rem;
+    pointer-events: none;
+    opacity: 0.6;
+  }
+
+  .explore-search-input {
+    width: 100%;
+    padding: 0.85rem 2.75rem 0.85rem 3rem;
+    border-radius: 999px;
+    background: rgba(0, 0, 0, 0.25);
+    border: 1px solid var(--color-glass-border);
+    color: var(--color-ink);
+    font-size: 1rem;
+    outline: none;
+    transition: border-color var(--duration-fast);
+  }
+
+  .explore-search-input:focus {
+    border-color: var(--color-jade);
+  }
+
+  .clear-btn {
+    position: absolute;
+    right: 1rem;
+    background: none;
+    border: none;
+    color: var(--color-ink-muted);
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 0.25rem;
+  }
+
+  .filter-groups {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .filter-group {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+
+  .filter-label {
+    font-size: 0.825rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-ink-muted);
+    min-width: 75px;
+  }
+
+  .filter-chips {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .filter-chip {
+    padding: 0.35rem 0.85rem;
+    border-radius: 999px;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--color-glass-border);
+    color: var(--color-ink-muted);
+    font-size: 0.825rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--duration-fast);
+  }
+
+  .filter-chip:hover {
+    border-color: var(--color-jade);
+    color: var(--color-ink);
+  }
+
+  .filter-chip.active {
+    background: var(--color-jade);
+    color: #04110F;
+    border-color: #04110F;
+    font-weight: 700;
+  }
+
+  .filter-chip.chip-a.active {
+    background: var(--color-jade);
+    color: #04110F;
+  }
+
+  .filter-chip.chip-b.active {
+    background: var(--color-amber);
+    color: #04110F;
+  }
+
+  .filter-summary-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    border-top: 1px solid var(--color-glass-border);
+  }
+
+  .results-count {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--color-ink);
+  }
+
+  .reset-link {
+    background: none;
+    border: none;
+    color: var(--color-amber);
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  .empty-box {
+    text-align: center;
+    padding: 3rem 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .empty-cast-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .empty-title {
+    font-family: var(--font-display);
+    font-size: 1.35rem;
+    color: var(--color-ink);
+    margin-bottom: 0.5rem;
+  }
+
+  .empty-desc {
+    color: var(--color-ink-muted);
+    font-size: 0.95rem;
+    max-width: 440px;
+    margin: 0 auto 1.5rem;
+  }
+
+  .action-btn-primary {
+    background: var(--color-jade);
+    color: #04110F;
+    padding: 0.75rem 1.5rem;
+    border-radius: 999px;
+    font-weight: 700;
+    border: 2px solid #04110F;
+    box-shadow: 2px 2px 0 #04110F;
+    cursor: pointer;
+  }
+
+  .tips-stream {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+</style>

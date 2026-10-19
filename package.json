@@ -4,19 +4,22 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "astro build && pagefind --site dist",
     "preview": "astro preview",
     "astro": "astro",
     "parse": "tsx scripts/parse.ts",
     "ingest": "tsx scripts/ingest-parveen.ts",
-    "verify": "tsx scripts/verify.ts"
+    "verify": "tsx scripts/verify.ts",
+    "pagefind": "pagefind --site dist"
   },
   "dependencies": {
     "astro": "^5.0.0",
     "zod": "^3.23.8"
   },
   "devDependencies": {
+    "@playwright/test": "^1.64.1",
     "@types/node": "^22.10.0",
+    "pagefind": "^1.5.2",
     "tsx": "^4.19.2",
     "typescript": "^5.7.2"
   }

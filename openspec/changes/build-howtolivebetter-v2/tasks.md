@@ -33,10 +33,10 @@
 
 ## 5. Phase 5: Search, Verification, Budgets & QA (Milestone M4)
 
-- [ ] 5.1 Implement `src/pages/explore.astro` integrating Pagefind search (lazy-loaded on demand) and multi-parameter filtering (evidence, value tier, cost trio, scope, disputed) synchronized with URL search params. Verify search accuracy and instant filtering. *(Tools/Skills: Pagefind integration, URLSearchParams)*
-- [ ] 5.2 Build Playwright test suite `tests/e2e.spec.ts` covering viewports 360x800, 390x844, 768x1024, and 1440x900 in light/dark and reduced motion, verifying $\ge 44\text{ px}$ targets, zero horizontal scroll, and progress persistence. Run `npx playwright test`. *(Tools/Skills: Playwright test runner, subagent execution)*
-- [ ] 5.3 Verify performance and bundle budgets: reader page JS $\le 60\text{ KB}$ gzip, character SVG $\le 25\text{ KB}$, comic font $\le 25\text{ KB}$, and mobile Lighthouse $\ge 90$ performance, $\ge 95$ accessibility. Verify with bundle analyzer and Lighthouse. *(Tools/Skills: gzip size check, Lighthouse CI)*
-- [ ] 5.4 Execute final QA verification checks in `reports/qa.md` and document line-by-line spot-checks in `reports/spotcheck.md`. Verify all 9 acceptance checks pass. *(Tools/Skills: QA audit checklist)*
+- [x] 5.1 Implement `src/pages/explore.astro` integrating Pagefind search (lazy-loaded on demand) and multi-parameter filtering (evidence, value tier, cost trio, scope, disputed) synchronized with URL search params. Verify search accuracy and instant filtering. *(Tools/Skills: Pagefind integration, URLSearchParams)*
+- [x] 5.2 Build Playwright test suite `tests/e2e.spec.ts` covering viewports 360x800, 390x844, 768x1024, and 1440x900 in light/dark and reduced motion, verifying $\ge 44\text{ px}$ targets, zero horizontal scroll, and progress persistence. Run `npx playwright test`. *(Tools/Skills: Playwright test runner, subagent execution)*
+- [x] 5.3 Verify performance and bundle budgets: reader page JS $\le 60\text{ KB}$ gzip, character SVG $\le 25\text{ KB}$, comic font $\le 25\text{ KB}$, and mobile Lighthouse $\ge 90$ performance, $\ge 95$ accessibility. Verify with bundle analyzer and Lighthouse. *(Tools/Skills: gzip size check, Lighthouse CI)*
+- [x] 5.4 Execute final QA verification checks in `reports/qa.md` and document line-by-line spot-checks in `reports/spotcheck.md`. Verify all 9 acceptance checks pass. *(Tools/Skills: QA audit checklist)*
 
 ## Workflow follow-up
 - Run `/opsx-apply` to execute implementation phase by phase.

@@ -1,0 +1,379 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProgressRing from '../components/ProgressRing.astro';
+import ReadingMap from '../components/ReadingMap.astro';
+import Character from '../cast/Character.astro';
+import Bubble from '../cast/Bubble.astro';
+---
+
+<BaseLayout
+  title="Reading Progress & Ledger - How To Live Better"
+  description="Visualise your reading journey through 765 evidence-backed recommendations across 34 chapters."
+>
+  <div class="progress-page-container">
+    <header class="progress-header">
+      <span class="comic-sticker sticker-benefit">Reading Ledger</span>
+      <h1 class="page-title">Your Progress Map</h1>
+      <p class="page-lead">
+        765 beads across 34 chapters. Beads glow jade as you read tips. All progress is kept strictly on your device.
+      </p>
+
+      <div class="cast-progress-row" aria-hidden="true">
+        <div class="cast-item">
+          <Character character="plus" mood="cheering" size={56} />
+          <Bubble speaker="Plus" text="Streak alive! Good to see you back." tailDirection="bottom-left" />
+        </div>
+        <div class="cast-item">
+          <Character character="minus" mood="smug" size={56} />
+          <Bubble speaker="Minus" text="Steady consistency wins." tailDirection="bottom-right" />
+        </div>
+      </div>
+    </header>
+
+    <!-- Top Summary Ring & Stats -->
+    <section class="overview-section liquid-glass">
+      <div class="ring-column">
+        <ProgressRing size={160} strokeWidth={12} showPercentage={true} />
+      </div>
+      <div class="stats-column">
+        <div class="stat-cell">
+          <span class="stat-val" id="stat-read-count">0</span>
+          <span class="stat-desc">Tips Read / 765</span>
+        </div>
+        <div class="stat-cell">
+          <span class="stat-val" id="stat-picks-count">0</span>
+          <span class="stat-desc">Bookmarked Picks</span>
+        </div>
+        <div class="stat-cell">
+          <span class="stat-val" id="stat-streak-days">1</span>
+          <span class="stat-desc">Day Active Streak</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 765 Beads SVG Map -->
+    <section class="map-section liquid-glass">
+      <div class="section-title-row">
+        <h2 class="section-title">The 765-Tip Bead Field</h2>
+        <span class="map-hint">Tap any bead to jump to that tip</span>
+      </div>
+      <ReadingMap />
+    </section>
+
+    <!-- Storage Management & Backup -->
+    <section class="storage-section liquid-glass">
+      <h2 class="section-title">Data Backup & Privacy Controls</h2>
+      <p class="storage-desc">
+        Your reading state is stored exclusively in your browser's <code>localStorage</code>. No telemetry, no external accounts, no cloud sync.
+      </p>
+
+      <div class="storage-actions-grid">
+        <div class="action-card">
+          <h3 class="action-title">Export Backup</h3>
+          <p class="action-desc">Download your reading progress, picks, and streak as a portable JSON file.</p>
+          <button type="button" id="btn-export-json" class="btn-action btn-jade">
+            Download Ledger (.json)
+          </button>
+        </div>
+
+        <div class="action-card">
+          <h3 class="action-title">Import Backup</h3>
+          <p class="action-desc">Restore your reading progress and bookmarks from an exported JSON ledger.</p>
+          <label class="btn-action btn-amber file-label">
+            <span>Select File to Restore</span>
+            <input type="file" id="input-import-json" accept=".json,application/json" class="hidden-file-input" />
+          </label>
+        </div>
+
+        <div class="action-card">
+          <h3 class="action-title">Reset All Progress</h3>
+          <p class="action-desc">Permanently wipe all read states, streak counters, and saved bookmarks.</p>
+          <button type="button" id="btn-reset-ledger" class="btn-action btn-danger">
+            Reset Progress...
+          </button>
+        </div>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<script>
+  import { 
+    subscribeLedger, 
+    exportLedgerJSON, 
+    importLedgerJSON, 
+    resetLedger 
+  } from '../scripts/storage-ledger';
+
+  function initProgressPage() {
+    const readCountEl = document.getElementById('stat-read-count');
+    const picksCountEl = document.getElementById('stat-picks-count');
+    const streakDaysEl = document.getElementById('stat-streak-days');
+
+    // Subscribe to state updates
+    subscribeLedger((state) => {
+      if (readCountEl) readCountEl.textContent = String(state.readTipIds.length);
+      if (picksCountEl) picksCountEl.textContent = String(state.picks.length);
+      if (streakDaysEl) streakDaysEl.textContent = String(state.streak.currentStreak || 1);
+    });
+
+    // Export button
+    const exportBtn = document.getElementById('btn-export-json');
+    exportBtn?.addEventListener('click', () => {
+      exportLedgerJSON();
+    });
+
+    // Import file input
+    const importInput = document.getElementById('input-import-json') as HTMLInputElement | null;
+    importInput?.addEventListener('change', async (e) => {
+      const file = importInput.files?.[0];
+      if (!file) return;
+
+      try {
+        const text = await file.text();
+        const success = importLedgerJSON(text);
+        if (success) {
+          alert('Ledger restored successfully!');
+          window.location.reload();
+        } else {
+          alert('Failed to import: file is invalid or corrupted.');
+        }
+      } catch (err) {
+        alert('Could not read file.');
+      }
+    });
+
+    // Reset button
+    const resetBtn = document.getElementById('btn-reset-ledger');
+    resetBtn?.addEventListener('click', () => {
+      const confirmed = window.confirm(
+        'Are you sure you want to reset all reading progress? This cannot be undone.'
+      );
+      if (confirmed) {
+        resetLedger();
+        window.location.reload();
+      }
+    });
+  }
+
+  initProgressPage();
+  document.addEventListener('astro:page-load', initProgressPage);
+</script>
+
+<style>
+  .progress-page-container {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 1rem 0 4rem;
+  }
+
+  .progress-header {
+    margin-bottom: 2.5rem;
+  }
+
+  .page-title {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 5vw, 2.75rem);
+    letter-spacing: -0.02em;
+    margin: 0.75rem 0 0.5rem;
+    color: var(--color-ink);
+  }
+
+  .page-lead {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: var(--color-ink-muted);
+  }
+
+  .cast-progress-row {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1.75rem;
+    flex-wrap: wrap;
+  }
+
+  .cast-item {
+    display: flex;
+    align-items: flex-end;
+    gap: 0.5rem;
+  }
+
+  .overview-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+    background: var(--color-glass-fill);
+    border: 1px solid var(--color-glass-border);
+    border-radius: var(--radius-card);
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow-glass);
+  }
+
+  @media (min-width: 640px) {
+    .overview-section {
+      flex-direction: row;
+      justify-content: space-around;
+    }
+  }
+
+  .stats-column {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .stat-cell {
+    text-align: center;
+    min-width: 110px;
+  }
+
+  .stat-val {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 2.25rem;
+    line-height: 1;
+    color: var(--color-jade);
+    margin-bottom: 0.35rem;
+  }
+
+  .stat-desc {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-ink-muted);
+  }
+
+  .map-section {
+    padding: 2rem;
+    background: var(--color-glass-fill);
+    border: 1px solid var(--color-glass-border);
+    border-radius: var(--radius-card);
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow-glass);
+  }
+
+  .section-title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .section-title {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    color: var(--color-ink);
+    margin: 0;
+  }
+
+  .map-hint {
+    font-size: 0.85rem;
+    color: var(--color-ink-muted);
+  }
+
+  .storage-section {
+    padding: 2rem;
+    background: var(--color-glass-fill);
+    border: 1px solid var(--color-glass-border);
+    border-radius: var(--radius-card);
+    box-shadow: var(--shadow-glass);
+  }
+
+  .storage-desc {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--color-ink-muted);
+    margin: 0.5rem 0 1.5rem;
+  }
+
+  .storage-actions-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  @media (min-width: 680px) {
+    .storage-actions-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .action-card {
+    display: flex;
+    flex-direction: column;
+    padding: 1.25rem;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--color-glass-border);
+    border-radius: var(--radius-sm);
+  }
+
+  .action-title {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-ink);
+  }
+
+  .action-desc {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: var(--color-ink-muted);
+    flex-grow: 1;
+    margin-bottom: 1.25rem;
+  }
+
+  .btn-action {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.65rem 1rem;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    cursor: pointer;
+    text-decoration: none;
+    border: 2px solid #04110F;
+    box-shadow: 2px 2px 0 #04110F;
+    transition: transform var(--duration-fast);
+  }
+
+  .btn-action:active {
+    transform: translate(1px, 1px);
+    box-shadow: 1px 1px 0 #04110F;
+  }
+
+  .btn-jade {
+    background: var(--color-jade);
+    color: #04110F;
+  }
+
+  .btn-amber {
+    background: var(--color-amber);
+    color: #04110F;
+  }
+
+  .btn-danger {
+    background: #FF6B6B;
+    color: #FFFFFF;
+  }
+
+  .file-label {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hidden-file-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+  }
+</style>
