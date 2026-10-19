@@ -1,0 +1,83 @@
+{
+  "first_visit": [
+    {
+      "lines": [
+        { "speaker": "Plus", "text": "Welcome! Ready to find a quick win today?" },
+        { "speaker": "Minus", "text": "Cost first, payoffs later." },
+        { "speaker": "Plus", "text": "Take your time. Even one pick counts." }
+      ]
+    }
+  ],
+  "daily_win": [
+    {
+      "lines": [
+        { "speaker": "Plus", "text": "Look at this payoff." },
+        { "speaker": "Minus", "text": "Cost is zero. Approved." }
+      ]
+    },
+    {
+      "lines": [
+        { "speaker": "Plus", "text": "Fresh tip for today." },
+        { "speaker": "Minus", "text": "Takes two seconds. Fair deal." }
+      ]
+    }
+  ],
+  "mark_read": [
+    {
+      "lines": [
+        { "speaker": "Plus", "text": "Another one in the bag!" }
+      ]
+    },
+    {
+      "lines": [
+        { "speaker": "Minus", "text": "Noted in the ledger." }
+      ]
+    }
+  ],
+  "pick_saved": [
+    {
+      "lines": [
+        { "speaker": "Plus", "text": "Saved to your personal picks!" }
+      ]
+    },
+    {
+      "lines": [
+        { "speaker": "Minus", "text": "Kept safe for later." }
+      ]
+    }
+  ],
+  "chapter_complete": [
+    {
+      "lines": [
+        { "speaker": "Plus", "text": "Chapter finished! Look at that wave!" },
+        { "speaker": "Minus", "text": "Well earned. Time for a break." }
+      ]
+    }
+  ],
+  "streak": [
+    {
+      "lines": [
+        { "speaker": "Plus", "text": "Streak alive! Good to see you back." }
+      ]
+    },
+    {
+      "lines": [
+        { "speaker": "Minus", "text": "Steady consistency wins." }
+      ]
+    }
+  ],
+  "empty_picks": [
+    {
+      "lines": [
+        { "speaker": "Plus", "text": "No picks saved yet. Tap any bookmark icon!" }
+      ]
+    }
+  ],
+  "not_found": [
+    {
+      "lines": [
+        { "speaker": "Minus", "text": "Page missing. Back to home?" }
+      ]
+    }
+  ]
+}

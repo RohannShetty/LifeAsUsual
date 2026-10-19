@@ -1,0 +1,29 @@
+---
+description: Core project rules, non-negotiables, acceptance checks, and do-nots for How To Live Better
+globs: *
+alwaysApply: true
+---
+
+# Project Rules: How To Live Better
+
+## 1. Non-Negotiables
+- **English only:** Zero CJK characters in anything shipped (`dist/`, slugs, OG image, JSON-LD, console).
+- **Faithful translation:** Never summarize, omit, add, or alter numbers, percentages, units, dates, DOIs, URLs, citations, or RMB (¥).
+- **Licence (CC BY 4.0):** Attribution to eternity4719 on every page footer, link to original repo and license, plus mainland China disclaimers.
+- **Privacy:** No analytics, no cookies, no third-party requests; self-host all fonts; state in `localStorage` only.
+- **Source untouched:** Read-only submodule `./source`.
+- **Character discipline:** Plus & Minus never comment on, rate, or joke about tips. Calm mode on sensitive chapters.
+
+## 2. Acceptance Criteria
+- 765 tips total; exact evidence grades and value tier counts match.
+- Zero CJK in output; all cross-references resolve.
+- Lighthouse $\ge 90$ performance, $\ge 95$ a11y, best practices, SEO.
+- Reader JS budget $\le 60\text{ KB}$ gzip; character SVG $\le 25\text{ KB}$; comic font $\le 25\text{ KB}$.
+- Playwright E2E passing on 360px mobile viewports with no overflow.
+
+## 3. Don'ts
+- Don't improve advice or invent statistics/hotlines.
+- Don't use external chart libraries or raster character art.
+- Don't put characters, halftone, or ink outlines inside the reading column.
+- Don't animate body text or hijack native scrolling.
+- Don't stop to ask unless fully blocked.

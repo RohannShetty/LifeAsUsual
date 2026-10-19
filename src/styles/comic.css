@@ -1,0 +1,92 @@
+/* Comic Layer Styling (Sections 8 & 9) */
+
+/* Halftone Pattern (CSS Radial Gradient, 6% to 10% Opacity) */
+.comic-halftone {
+  background-image: radial-gradient(rgba(4, 17, 15, 0.08) 1.5px, transparent 1.5px);
+  background-size: 8px 8px;
+}
+
+[data-theme="light"] .comic-halftone {
+  background-image: radial-gradient(rgba(4, 17, 15, 0.06) 1.5px, transparent 1.5px);
+}
+
+/* Comic Ink Outlines */
+.comic-border-thick {
+  border: 3px solid var(--color-ink);
+}
+
+.comic-border-thin {
+  border: 2px solid var(--color-ink);
+}
+
+/* Sticker Chips & Badges */
+.comic-sticker {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 0.82rem;
+  border-radius: var(--radius-capsule);
+  border: 2px solid var(--color-ink);
+  box-shadow: 2px 2px 0px var(--color-ink);
+  transform: translateY(0);
+  transition: transform var(--dur-fast) var(--spring-overshoot);
+  user-select: none;
+}
+
+.comic-sticker:active {
+  transform: translate(1px, 1px);
+  box-shadow: 1px 1px 0px var(--color-ink);
+}
+
+/* Sticker Variants by Domain */
+.sticker-benefit {
+  background-color: var(--color-jade);
+  color: var(--color-ink);
+}
+
+.sticker-cost {
+  background-color: var(--color-amber);
+  color: var(--color-ink);
+}
+
+.sticker-neutral {
+  background-color: var(--color-steel);
+  color: var(--color-ink);
+}
+
+.sticker-disputed {
+  background-color: #FF6B6B;
+  color: #FFFFFF;
+}
+
+/* SFX Sticker Pop Animations */
+.sfx-popup {
+  font-family: var(--font-comic);
+  color: var(--color-amber);
+  -webkit-text-stroke: 1.5px var(--color-ink);
+  text-shadow: 2px 2px 0px var(--color-ink);
+  display: inline-block;
+  animation: sfx-fly 700ms var(--spring-overshoot) forwards;
+}
+
+@keyframes sfx-fly {
+  0% {
+    opacity: 0;
+    transform: scale(0.6) rotate(-8deg);
+  }
+  30% {
+    opacity: 1;
+    transform: scale(1.08) rotate(3deg);
+  }
+  80% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-8px) scale(0.95);
+  }
+}
