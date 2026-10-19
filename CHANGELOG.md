@@ -6,6 +6,28 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ---
 
+## [2.2.0] - 2026-10-20
+
+### Added
+- **Mobile-First Auto-Hiding Sticky Header**: Smart directional scroll auto-hiding for chapter headers (`src/pages/chapters/[n]-[slug].astro`) on mobile screens to maximize vertical reading area and prevent viewport letterboxing.
+- **$\ge 44\text{px}$ Touch Targets Across Navigation & Drawers**:
+  - Expanded Table of Contents drawer links (`.toc-link`) with `10px 12px` padding and `min-height: 44px`.
+  - Enforced accessible $\ge 44\text{px}$ touch target areas across `.action-btn-primary`, `.action-btn-secondary`, `.read-tip-cta`, and `.shortcut-card`.
+- **Client-Side Pagefind Search Scope**: Attached `data-pagefind-body` to `<main class="reading-column">` in `BaseLayout.astro` ensuring search indexer captures reader content accurately.
+- **Design & Audit Skills**: Installed `frontend-design` and `impeccable` agent skills to guide visual hierarchy and automated anti-pattern detection.
+
+### Changed
+- **Editorial Typography & De-slopping Redesign**:
+  - Redesigned `TipCard.astro` to a clean editorial format: grouped top badges (ROI + Evidence Grade only), unified single-line metadata bar (Cost, Time, Effort, Scope), and enhanced serif reading typography (`1.05rem`, line-height `1.65`).
+  - Eliminated generic colored `border-left` side-tab accents on caveat boxes, about page quotes, and tip cards; replaced with subtle 1px borders and refined background tints.
+  - Replaced bounce and spring overshoot easing curves (`cubic-bezier(0.34, 1.3, 0.64, 1)`) with smooth natural deceleration (`cubic-bezier(0.16, 1, 0.3, 1)`) across `tokens.css`, `comic.css`, and drawer/navigation transitions.
+
+### Fixed
+- **Critical P0 Read Tracker Reconnection**: Connected `read-tracker.ts` inside `BaseLayout.astro`, fixing the defect where tip impression tracking, reading duration logging, and "Save to Picks" event delegation were inactive during client navigation.
+- **Homepage Resume Reading Navigation**: Resolved broken `-slug` routing bug in `src/pages/index.astro` by dynamically resolving chapter numbers to their actual URL slugs via `data-slug-map`.
+
+---
+
 ## [2.1.0] - 2026-10-20
 
 ### Added

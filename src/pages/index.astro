@@ -39,6 +39,7 @@ const dailyTip = veryHighTips.length > 0
   : null;
 const dailyChapter = dailyTip ? chapters.find(c => c.chapter === dailyTip.chapter) : null;
 const dailyChapterSlug = dailyChapter ? dailyChapter.slug : 'slug';
+const chapterSlugMap = Object.fromEntries(chapters.map(c => [c.chapter, c.slug]));
 ---
 
 <BaseLayout 
@@ -128,7 +129,12 @@ const dailyChapterSlug = dailyChapter ? dailyChapter.slug : 'slug';
           Pick up where you left off or explore by your priorities.
         </p>
         <div class="overview-actions">
-          <a href={resolvePath('/chapters/01-do-not-die-early/')} class="action-btn-primary" id="continue-reading-btn">
+          <a 
+            href={resolvePath('/chapters/01-do-not-die-early/')} 
+            class="action-btn-primary" 
+            id="continue-reading-btn"
+            data-slug-map={JSON.stringify(chapterSlugMap)}
+          >
             Continue Reading →
           </a>
           <a href={resolvePath('/chapters/')} class="action-btn-secondary">
@@ -325,11 +331,21 @@ const dailyChapterSlug = dailyChapter ? dailyChapter.slug : 'slug';
   }
 
   .read-tip-cta {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 8px 14px;
     font-family: var(--font-sans);
     font-size: 0.9rem;
     font-weight: 700;
     color: var(--color-jade);
     text-decoration: none;
+    border-radius: var(--radius-capsule);
+    transition: background var(--dur-fast);
+  }
+
+  .read-tip-cta:hover {
+    background: rgba(30, 215, 96, 0.1);
   }
 
   /* Overview & Ring Section */
@@ -379,33 +395,42 @@ const dailyChapterSlug = dailyChapter ? dailyChapter.slug : 'slug';
   .action-btn-primary {
     display: inline-flex;
     align-items: center;
-    padding: 8px 16px;
+    justify-content: center;
+    min-height: 44px;
+    padding: 10px 20px;
     background: var(--color-jade);
     color: var(--color-ink);
     border-radius: var(--radius-capsule);
     font-family: var(--font-sans);
     font-weight: 700;
-    font-size: 0.88rem;
+    font-size: 0.9rem;
     text-decoration: none;
-    transition: transform var(--dur-fast) var(--spring-overshoot);
+    transition: transform var(--dur-fast) var(--ease-out), background var(--dur-fast);
   }
 
   .action-btn-primary:active {
-    transform: scale(0.96);
+    transform: scale(0.97);
   }
 
   .action-btn-secondary {
     display: inline-flex;
     align-items: center;
-    padding: 8px 16px;
+    justify-content: center;
+    min-height: 44px;
+    padding: 10px 20px;
     background: rgba(255, 255, 255, 0.08);
     border: 1px solid rgba(255, 255, 255, 0.15);
     color: var(--theme-text);
     border-radius: var(--radius-capsule);
     font-family: var(--font-sans);
     font-weight: 600;
-    font-size: 0.88rem;
+    font-size: 0.9rem;
     text-decoration: none;
+    transition: background var(--dur-fast);
+  }
+
+  .action-btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.14);
   }
 
   /* Shortcuts */
@@ -437,14 +462,16 @@ const dailyChapterSlug = dailyChapter ? dailyChapter.slug : 'slug';
     display: flex;
     align-items: center;
     gap: 12px;
+    min-height: 56px;
     padding: 1rem 1.15rem;
     text-decoration: none;
     color: var(--theme-text);
-    transition: transform var(--dur-fast);
+    transition: transform var(--dur-fast) var(--ease-out), border-color var(--dur-fast);
   }
 
   .shortcut-card:hover {
     transform: translateY(-2px);
+    border-color: var(--color-jade);
   }
 
   .shortcut-icon {
@@ -470,6 +497,7 @@ const dailyChapterSlug = dailyChapter ? dailyChapter.slug : 'slug';
 
 <script>
   import { getLedger } from '../scripts/storage-ledger';
+  import { resolvePath } from '../utils/paths';
 
   function initHomeState() {
     const state = getLedger();
@@ -477,7 +505,17 @@ const dailyChapterSlug = dailyChapter ? dailyChapter.slug : 'slug';
     const resumeText = document.getElementById('resume-text');
 
     if (state.lastPosition && resumeBtn && resumeText) {
-      resumeBtn.href = `/chapters/${String(state.lastPosition.chapter).padStart(2, '0')}-slug/#${state.lastPosition.chapter}-${state.lastPosition.tip}`;
+      let slug = 'do-not-die-early';
+      try {
+        const slugMap = JSON.parse(resumeBtn.dataset.slugMap || '{}');
+        if (slugMap[state.lastPosition.chapter]) {
+          slug = slugMap[state.lastPosition.chapter];
+        }
+      } catch (e) {
+        // Fallback
+      }
+      const chNum = String(state.lastPosition.chapter).padStart(2, '0');
+      resumeBtn.href = resolvePath(`/chapters/${chNum}-${slug}/#${state.lastPosition.chapter}-${state.lastPosition.tip}`);
       resumeText.textContent = `You last read Tip ${state.lastPosition.chapter}.${state.lastPosition.tip}. Pick right back up!`;
     }
   }

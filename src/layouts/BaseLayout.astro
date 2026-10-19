@@ -58,7 +58,7 @@ const currentPath = Astro.url.pathname;
 
     <!-- Main Content Column -->
     <div class="app-layout-shell">
-      <main class="reading-column">
+      <main class="reading-column" data-pagefind-body>
         <slot />
       </main>
     </div>
@@ -68,6 +68,11 @@ const currentPath = Astro.url.pathname;
 
     <!-- Reading Settings Sheet -->
     <SettingsSheet />
+
+    <!-- Client-side reading tracker island -->
+    <script>
+      import '../scripts/read-tracker';
+    </script>
   </body>
 </html>
 
