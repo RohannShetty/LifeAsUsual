@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Character from '../cast/Character.astro';
 import Bubble from '../cast/Bubble.astro';
+import { resolvePath } from '../utils/paths';
 ---
 
 <BaseLayout 
@@ -58,7 +59,7 @@ import Bubble from '../cast/Bubble.astro';
     </section>
 
     <div class="cta-row">
-      <a href="/chapters/" class="action-btn-primary">Explore All Chapters →</a>
+      <a href={resolvePath('/chapters/')} class="action-btn-primary">Explore All Chapters →</a>
     </div>
   </article>
 </BaseLayout>

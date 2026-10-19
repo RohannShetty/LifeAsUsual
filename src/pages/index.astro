@@ -7,6 +7,7 @@ import ReadingMap from '../components/ReadingMap.astro';
 import Character from '../cast/Character.astro';
 import Bubble from '../cast/Bubble.astro';
 import type { EnglishChapter, EnglishTip } from '../../scripts/ingest-parveen';
+import { resolvePath } from '../utils/paths';
 
 // Load all chapters and extract 122 Very High tips
 const enAllPath = path.resolve('data/en/all-chapters.json');
@@ -36,6 +37,8 @@ const dayOfYear = Math.floor(diff / oneDay);
 const dailyTip = veryHighTips.length > 0 
   ? veryHighTips[dayOfYear % veryHighTips.length] 
   : null;
+const dailyChapter = dailyTip ? chapters.find(c => c.chapter === dailyTip.chapter) : null;
+const dailyChapterSlug = dailyChapter ? dailyChapter.slug : 'slug';
 ---
 
 <BaseLayout 
@@ -83,7 +86,7 @@ const dailyTip = veryHighTips.length > 0
 
       <div class="daily-title-row">
         <a 
-          href={`/chapters/${String(dailyTip.chapter).padStart(2, '0')}-slug/#${dailyTip.chapter}-${dailyTip.tip}`}
+          href={resolvePath(`/chapters/${String(dailyTip.chapter).padStart(2, '0')}-${dailyChapterSlug}/#${dailyTip.chapter}-${dailyTip.tip}`)}
           class="daily-title-link"
         >
           <span class="daily-tip-num">{dailyTip.chapter}.{dailyTip.tip}</span>
@@ -103,7 +106,7 @@ const dailyTip = veryHighTips.length > 0
 
       <div class="daily-footer-row">
         <a 
-          href={`/chapters/${String(dailyTip.chapter).padStart(2, '0')}-slug/#${dailyTip.chapter}-${dailyTip.tip}`}
+          href={resolvePath(`/chapters/${String(dailyTip.chapter).padStart(2, '0')}-${dailyChapterSlug}/#${dailyTip.chapter}-${dailyTip.tip}`)}
           class="read-tip-cta"
         >
           <span>Read Full Tip & Evidence →</span>
@@ -125,10 +128,10 @@ const dailyTip = veryHighTips.length > 0
           Pick up where you left off or explore by your priorities.
         </p>
         <div class="overview-actions">
-          <a href="/chapters/01-do-not-die-early/" class="action-btn-primary" id="continue-reading-btn">
+          <a href={resolvePath('/chapters/01-do-not-die-early/')} class="action-btn-primary" id="continue-reading-btn">
             Continue Reading →
           </a>
-          <a href="/chapters/" class="action-btn-secondary">
+          <a href={resolvePath('/chapters/')} class="action-btn-secondary">
             Browse Chapters
           </a>
         </div>
@@ -140,7 +143,7 @@ const dailyTip = veryHighTips.length > 0
   <section class="shortcuts-section">
     <h3 class="section-title">What do you want back?</h3>
     <div class="shortcuts-grid">
-      <a href="/explore/?scope=Lifespan" class="shortcut-card liquid-glass">
+      <a href={resolvePath('/explore/?scope=Lifespan')} class="shortcut-card liquid-glass">
         <span class="shortcut-icon">❤️</span>
         <div class="shortcut-text">
           <strong class="shortcut-label">Lifespan</strong>
@@ -148,7 +151,7 @@ const dailyTip = veryHighTips.length > 0
         </div>
       </a>
 
-      <a href="/explore/?scope=Money" class="shortcut-card liquid-glass">
+      <a href={resolvePath('/explore/?scope=Money')} class="shortcut-card liquid-glass">
         <span class="shortcut-icon">💰</span>
         <div class="shortcut-text">
           <strong class="shortcut-label">Money</strong>
@@ -156,7 +159,7 @@ const dailyTip = veryHighTips.length > 0
         </div>
       </a>
 
-      <a href="/explore/?scope=Time" class="shortcut-card liquid-glass">
+      <a href={resolvePath('/explore/?scope=Time')} class="shortcut-card liquid-glass">
         <span class="shortcut-icon">⚡</span>
         <div class="shortcut-text">
           <strong class="shortcut-label">Time & Energy</strong>
@@ -164,7 +167,7 @@ const dailyTip = veryHighTips.length > 0
         </div>
       </a>
 
-      <a href="/explore/?scope=Freedom" class="shortcut-card liquid-glass">
+      <a href={resolvePath('/explore/?scope=Freedom')} class="shortcut-card liquid-glass">
         <span class="shortcut-icon">🕊️</span>
         <div class="shortcut-text">
           <strong class="shortcut-label">Personal Freedom</strong>

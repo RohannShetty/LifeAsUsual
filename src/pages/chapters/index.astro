@@ -3,6 +3,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import type { EnglishChapter } from '../../../scripts/ingest-parveen';
+import { resolvePath } from '../../utils/paths';
 
 const enAllPath = path.resolve('data/en/all-chapters.json');
 let chapters: EnglishChapter[] = [];
@@ -31,7 +32,7 @@ try {
 
   <div class="chapters-grid">
     {chapters.map(ch => {
-      const url = `/chapters/${String(ch.chapter).padStart(2, '0')}-${ch.slug}/`;
+      const url = resolvePath(`/chapters/${String(ch.chapter).padStart(2, '0')}-${ch.slug}/`);
       return (
         <a href={url} class="chapter-card liquid-glass" data-chapter={ch.chapter}>
           <div class="card-header-line">

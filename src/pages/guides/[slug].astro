@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import guides from '../../../data/en/guides.json';
 import allChapters from '../../../data/en/all-chapters.json';
+import { resolvePath } from '../../utils/paths';
 
 export async function getStaticPaths() {
   return guides.map((guide) => ({
@@ -19,9 +20,9 @@ const chapterSlugMap = new Map(
 
 function getTipLink(chapter: number, tip: number) {
   const chSlug = chapterSlugMap.get(chapter);
-  if (!chSlug) return `/chapters/`;
+  if (!chSlug) return resolvePath('/chapters/');
   const pad = String(chapter).padStart(2, '0');
-  return `/chapters/${pad}-${chSlug}/#${chapter}-${tip}`;
+  return resolvePath(`/chapters/${pad}-${chSlug}/#${chapter}-${tip}`);
 }
 ---
 
@@ -31,7 +32,7 @@ function getTipLink(chapter: number, tip: number) {
 >
   <article class="guide-article">
     <nav class="guide-breadcrumb">
-      <a href="/guides/" class="back-link">← All Field Guides</a>
+      <a href={resolvePath('/guides/')} class="back-link">← All Field Guides</a>
       <span class="reading-pill">{guide.readingTime}</span>
     </nav>
 
@@ -111,8 +112,8 @@ function getTipLink(chapter: number, tip: number) {
     </div>
 
     <footer class="guide-bottom-cta">
-      <a href="/guides/" class="action-btn-secondary">← Back to All Guides</a>
-      <a href="/chapters/" class="action-btn-primary">Explore All Chapters →</a>
+      <a href={resolvePath('/guides/')} class="action-btn-secondary">← Back to All Guides</a>
+      <a href={resolvePath('/chapters/')} class="action-btn-primary">Explore All Chapters →</a>
     </footer>
   </article>
 </BaseLayout>

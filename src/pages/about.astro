@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { resolvePath } from '../utils/paths';
 ---
 
 <BaseLayout
@@ -81,8 +82,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </section>
 
     <div class="cta-row">
-      <a href="/start/" class="action-btn-secondary">Start Reading Guide</a>
-      <a href="/chapters/" class="action-btn-primary">Browse Chapters →</a>
+      <a href={resolvePath('/start/')} class="action-btn-secondary">Start Reading Guide</a>
+      <a href={resolvePath('/chapters/')} class="action-btn-primary">Browse Chapters →</a>
     </div>
   </article>
 </BaseLayout>

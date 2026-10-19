@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import guides from '../../../data/en/guides.json';
+import { resolvePath } from '../../utils/paths';
 ---
 
 <BaseLayout
@@ -18,7 +19,7 @@ import guides from '../../../data/en/guides.json';
 
     <div class="guides-grid">
       {guides.map((guide, idx) => (
-        <a href={`/guides/${guide.slug}/`} class="guide-card liquid-glass">
+        <a href={resolvePath(`/guides/${guide.slug}/`)} class="guide-card liquid-glass">
           <div class="card-top">
             <span class="guide-number">#{idx + 1}</span>
             <span class="reading-time">{guide.readingTime}</span>

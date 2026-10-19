@@ -6,6 +6,7 @@ import TipCard from '../components/TipCard.astro';
 import Character from '../cast/Character.astro';
 import Bubble from '../cast/Bubble.astro';
 import type { EnglishChapter, EnglishTip } from '../../scripts/ingest-parveen';
+import { resolvePath } from '../utils/paths';
 
 const enAllPath = path.resolve('data/en/all-chapters.json');
 let allTips: EnglishTip[] = [];
@@ -45,7 +46,7 @@ try {
     <p style="color: var(--theme-text-muted); font-size: 0.9rem; max-width: 400px; margin: 0 auto 1.25rem;">
       Tap the "Save" button on any tip card while reading to pin it here for quick reference.
     </p>
-    <a href="/chapters/" class="action-btn-primary">Browse Chapters →</a>
+    <a href={resolvePath('/chapters/')} class="action-btn-primary">Browse Chapters →</a>
   </div>
 
   <!-- Picks Grid (rendered client-side by filtering allTips) -->

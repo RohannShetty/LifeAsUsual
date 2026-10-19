@@ -2,6 +2,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import type { EnglishChapter } from '../../scripts/ingest-parveen';
+import { resolvePath } from '../utils/paths';
 
 // Load all chapters at build time
 const enAllPath = path.resolve('data/en/all-chapters.json');
@@ -37,7 +38,7 @@ try {
         <div class="cluster-beads">
           {ch.tips.map(tip => (
             <a 
-              href={`/chapters/${String(ch.chapter).padStart(2, '0')}-${ch.slug}/#${tip.chapter}-${tip.tip}`} 
+              href={resolvePath(`/chapters/${String(ch.chapter).padStart(2, '0')}-${ch.slug}/#${tip.chapter}-${tip.tip}`)} 
               class="map-bead" 
               data-tip-id={tip.id}
               title={`Tip ${tip.chapter}.${tip.tip}: ${tip.title}`}

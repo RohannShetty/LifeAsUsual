@@ -7,6 +7,7 @@ import Character from '../../cast/Character.astro';
 import Bubble from '../../cast/Bubble.astro';
 import calmChapters from '../../../data/calm-chapters.json';
 import type { EnglishChapter } from '../../../scripts/ingest-parveen';
+import { resolvePath } from '../../utils/paths';
 
 export async function getStaticPaths() {
   const enAllPath = path.resolve('data/en/all-chapters.json');
@@ -109,7 +110,7 @@ const isCalm = calmChapters.includes(chapter.chapter);
     <nav class="chapter-pagination" aria-label="Previous and Next Chapters">
       {prevChapter ? (
         <a 
-          href={`/chapters/${String(prevChapter.chapter).padStart(2, '0')}-${prevChapter.slug}/`} 
+          href={resolvePath(`/chapters/${String(prevChapter.chapter).padStart(2, '0')}-${prevChapter.slug}/`)} 
           class="pagination-card liquid-glass prev-card"
         >
           <span class="pagination-sub">← Previous Chapter</span>
@@ -119,7 +120,7 @@ const isCalm = calmChapters.includes(chapter.chapter);
 
       {nextChapter && (
         <a 
-          href={`/chapters/${String(nextChapter.chapter).padStart(2, '0')}-${nextChapter.slug}/`} 
+          href={resolvePath(`/chapters/${String(nextChapter.chapter).padStart(2, '0')}-${nextChapter.slug}/`)} 
           class="pagination-card liquid-glass next-card"
         >
           <span class="pagination-sub">Next Chapter →</span>
