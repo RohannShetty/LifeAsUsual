@@ -6,6 +6,32 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ---
 
+## [2.2.1] - 2026-10-20
+
+Accessibility and design-system repair following a full technical audit of the 2.2.0 redesign.
+
+### Fixed
+- **Invisible Headings in the Default Dark Theme (P1)**: 22 declarations across 13 files pointed body-level text at `--color-ink` (`#04110F`), which is an outline colour, not a text colour on a dark surface. Page titles, section titles, card headings, callouts, comic bubbles and secondary buttons rendered at **1.02–1.05:1**. They now use `--theme-text`; ink is kept only on jade, amber and steel fills where it belongs.
+- **Nine Undefined Design Tokens (P1)**: `--color-glass-fill`, `--color-glass-border`, `--shadow-glass`, `--radius-sm`, `--duration-fast`, `--font-display`, `--font-body` and `--color-ink-muted` were referenced but never defined, so cards lost their fills, borders, shadows and radii, transitions never ran, and every display heading silently fell back to the body serif. Defined in `src/styles/tokens.css`, with light-theme values for the glass and shadow tokens.
+- **Light-Theme Accent Contrast (P2)**: Accent colours used as text now resolve through new `--color-jade-text`, `--color-amber-text` and `--color-steel-text` tokens, which keep the luminous accents in dark mode and darken them under `[data-theme="light"]`. Disputed and verifying badges gained explicit light-theme inks.
+- **Heading Hierarchy (P2)**: Chapter pages opened with an `h2` before the `h1`, and tip titles were `h3` directly under page headings. The duplicate chapter kicker is now a paragraph, and tip titles, the Reading Map title and the empty-state title are `h2`. First heading on every route is now `h1`.
+- **Reading Settings Switch Focus and Hit Area (P2)**: `.switch-input` used `outline: none` with `appearance: none` and no replacement, and its 44×24 box was under the tap floor. Rebuilt as a 44×44 target with track and knob pseudo-elements and a `:focus-visible` ring. The Explore search input no longer suppresses its focus ring either.
+- **Missing Skip Link and Unlabeled Landmarks (P2)**: Added a focus-revealed `.skip-link` to `#main-content`, and `aria-label="Sections"` to the desktop rail navigation so both `<nav>` landmarks are named.
+- **Remaining Touch Targets (P1)**: Citation links gained `min-height: 44px`; bottom-nav labels and the `v2` sticker were raised from 10.4px to the 11px functional-text floor.
+- **`ProgressRing` Prop Mismatch**: Removed the unsupported `showPercentage` prop from `src/pages/progress.astro`, which astro check reported as `ts(2322)`.
+
+### Added
+- **`npm run check`**: `@astrojs/check` is now a dev dependency, so `.astro` files are type-checked in CI and locally alongside `tsc`.
+- `.codegraph/` and `graphify-out/` added to `.gitignore`.
+
+### Verified
+- astro check: 46 files, 0 errors, 0 warnings.
+- Rendered contrast probe, dark theme: **0 failures across 8 routes × 2 viewports**.
+- Playwright E2E: 24/24 passing.
+- Impeccable detector on `dist/`: 758 → 177 findings; `low-contrast` 292 → 52, `undersized-ui-text` 306 → 0, `skipped-heading` 36 → 1.
+
+---
+
 ## [2.2.0] - 2026-10-20
 
 ### Added

@@ -53,12 +53,13 @@ const currentPath = Astro.url.pathname;
     </script>
   </head>
   <body class="theme-root">
+    <a href="#main-content" class="skip-link">Skip to content</a>
     <!-- Desktop Left Rail -->
     <LeftRail currentPath={currentPath} />
 
     <!-- Main Content Column -->
     <div class="app-layout-shell">
-      <main class="reading-column" data-pagefind-body>
+      <main class="reading-column" id="main-content" tabindex="-1" data-pagefind-body>
         <slot />
       </main>
     </div>
@@ -97,6 +98,25 @@ const currentPath = Astro.url.pathname;
     min-height: 100dvh;
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
+  }
+
+  .skip-link {
+    position: absolute;
+    left: 1rem;
+    top: -4rem;
+    z-index: 200;
+    padding: 0.75rem 1.25rem;
+    border-radius: var(--radius-capsule);
+    background: var(--color-jade);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-weight: 700;
+    text-decoration: none;
+    transition: top var(--dur-fast) var(--ease-out);
+  }
+
+  .skip-link:focus-visible {
+    top: 1rem;
   }
 
   .app-layout-shell {

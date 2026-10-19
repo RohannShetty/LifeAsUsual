@@ -67,7 +67,7 @@ const roiClass = tip.valueTier === 'Very high' ? 'roi-very-high' : tip.valueTier
     </div>
 
     <!-- Title -->
-    <h3 class="tip-title">{tip.title}</h3>
+    <h2 class="tip-title">{tip.title}</h2>
 
     <!-- Disciplined Editorial Metadata Row -->
     <div class="tip-meta-bar">
@@ -219,7 +219,7 @@ const roiClass = tip.valueTier === 'Very high' ? 'roi-very-high' : tip.valueTier
 
   .tip-anchor-link:hover .tip-id-badge {
     border-color: var(--color-jade);
-    color: var(--color-jade);
+    color: var(--color-jade-text);
   }
 
   [data-theme="light"] .tip-id-badge {
@@ -251,19 +251,19 @@ const roiClass = tip.valueTier === 'Very high' ? 'roi-very-high' : tip.valueTier
 
   .roi-very-high {
     background: rgba(70, 217, 160, 0.14);
-    color: var(--color-jade);
+    color: var(--color-jade-text);
     border-color: rgba(70, 217, 160, 0.3);
   }
 
   .roi-high {
     background: rgba(245, 184, 90, 0.14);
-    color: var(--color-amber);
+    color: var(--color-amber-text);
     border-color: rgba(245, 184, 90, 0.3);
   }
 
   .roi-average {
     background: rgba(143, 179, 217, 0.14);
-    color: var(--color-steel);
+    color: var(--color-steel-text);
     border-color: rgba(143, 179, 217, 0.3);
   }
 
@@ -274,7 +274,7 @@ const roiClass = tip.valueTier === 'Very high' ? 'roi-very-high' : tip.valueTier
   }
 
   .evidence-ring {
-    color: var(--color-jade);
+    color: var(--color-jade-text);
   }
 
   .badge-disputed {
@@ -287,6 +287,14 @@ const roiClass = tip.valueTier === 'Very high' ? 'roi-very-high' : tip.valueTier
     background: rgba(226, 232, 240, 0.1);
     color: #CBD5E1;
     border-color: rgba(226, 232, 240, 0.2);
+  }
+
+  [data-theme="light"] .badge-disputed {
+    color: #9B1C1C;
+  }
+
+  [data-theme="light"] .badge-verifying {
+    color: #334155;
   }
 
   [data-theme="light"] .grade-badge {
@@ -418,11 +426,11 @@ const roiClass = tip.valueTier === 'Very high' ? 'roi-very-high' : tip.valueTier
   }
 
   .cost-block .metric-label {
-    color: var(--color-amber);
+    color: var(--color-amber-text);
   }
 
   .benefit-block .metric-label {
-    color: var(--color-jade);
+    color: var(--color-jade-text);
   }
 
   .metric-text {
@@ -452,7 +460,7 @@ const roiClass = tip.valueTier === 'Very high' ? 'roi-very-high' : tip.valueTier
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.04em;
-    color: var(--color-steel);
+    color: var(--color-steel-text);
     margin-bottom: 0.35rem;
   }
 
@@ -536,11 +544,14 @@ const roiClass = tip.valueTier === 'Very high' ? 'roi-very-high' : tip.valueTier
   }
 
   .source-bullet {
-    color: var(--color-steel);
+    color: var(--color-steel-text);
   }
 
   :global(.citation-link) {
-    color: var(--color-steel);
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    color: var(--color-steel-text);
     text-decoration: underline;
     word-break: break-all;
   }

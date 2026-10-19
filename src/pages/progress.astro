@@ -33,7 +33,7 @@ import Bubble from '../cast/Bubble.astro';
     <!-- Top Summary Ring & Stats -->
     <section class="overview-section liquid-glass">
       <div class="ring-column">
-        <ProgressRing size={160} strokeWidth={12} showPercentage={true} />
+        <ProgressRing size={160} strokeWidth={12} />
       </div>
       <div class="stats-column">
         <div class="stat-cell">
@@ -176,7 +176,7 @@ import Bubble from '../cast/Bubble.astro';
     font-size: clamp(2rem, 5vw, 2.75rem);
     letter-spacing: -0.02em;
     margin: 0.75rem 0 0.5rem;
-    color: var(--color-ink);
+    color: var(--theme-text);
   }
 
   .page-lead {
@@ -235,7 +235,7 @@ import Bubble from '../cast/Bubble.astro';
     font-family: var(--font-display);
     font-size: 2.25rem;
     line-height: 1;
-    color: var(--color-jade);
+    color: var(--color-jade-text);
     margin-bottom: 0.35rem;
   }
 
@@ -267,7 +267,7 @@ import Bubble from '../cast/Bubble.astro';
   .section-title {
     font-family: var(--font-display);
     font-size: 1.4rem;
-    color: var(--color-ink);
+    color: var(--theme-text);
     margin: 0;
   }
 
@@ -316,7 +316,7 @@ import Bubble from '../cast/Bubble.astro';
     font-family: var(--font-display);
     font-size: 1.1rem;
     margin-bottom: 0.5rem;
-    color: var(--color-ink);
+    color: var(--theme-text);
   }
 
   .action-desc {

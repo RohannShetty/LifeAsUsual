@@ -65,7 +65,7 @@
 /* SFX Sticker Pop Animations */
 .sfx-popup {
   font-family: var(--font-comic);
-  color: var(--color-amber);
+  color: var(--color-amber-text);
   -webkit-text-stroke: 1.5px var(--color-ink);
   text-shadow: 2px 2px 0px var(--color-ink);
   display: inline-block;

@@ -51,7 +51,7 @@ const isCalm = calmChapters.includes(chapter.chapter);
     <div class="header-inner">
       <div class="header-titles">
         <span class="chapter-badge">Ch {chapter.chapter}</span>
-        <h2 class="chapter-subheading">{chapter.title}</h2>
+        <p class="chapter-subheading">{chapter.title}</p>
       </div>
       <div class="header-actions">
         <button type="button" class="on-page-btn" id="open-toc-btn" aria-label="On this page">
@@ -198,6 +198,7 @@ const isCalm = calmChapters.includes(chapter.chapter);
   .chapter-subheading {
     font-family: var(--font-sans);
     font-size: 0.9rem;
+    margin: 0;
     font-weight: 700;
     color: var(--theme-text);
     white-space: nowrap;
@@ -374,7 +375,7 @@ const isCalm = calmChapters.includes(chapter.chapter);
     font-size: 0.75rem;
     font-weight: 700;
     text-transform: uppercase;
-    color: var(--color-jade);
+    color: var(--color-jade-text);
     margin-bottom: 0.3rem;
   }
 
@@ -433,7 +434,7 @@ const isCalm = calmChapters.includes(chapter.chapter);
   .toc-title {
     font-family: var(--font-comic);
     font-size: 1.2rem;
-    color: var(--color-jade);
+    color: var(--color-jade-text);
   }
 
   .toc-list {
@@ -482,7 +483,7 @@ const isCalm = calmChapters.includes(chapter.chapter);
   .toc-num {
     font-weight: 700;
     font-size: 0.8rem;
-    color: var(--color-steel);
+    color: var(--color-steel-text);
     flex-shrink: 0;
   }
 

@@ -57,11 +57,11 @@ const navItems = [
   <div class="rail-header">
     <a href={resolvePath('/')} class="rail-logo">
       <span class="logo-text">Live Better</span>
-      <span class="comic-sticker sticker-benefit" style="font-size: 0.65rem; padding: 1px 6px;">v2</span>
+      <span class="comic-sticker sticker-benefit" style="font-size: 0.7rem; padding: 1px 6px;">v2</span>
     </a>
   </div>
 
-  <nav class="rail-nav">
+  <nav class="rail-nav" aria-label="Sections">
     <ul class="rail-nav-list">
       {navItems.map(item => {
         const isActive = currentPath === item.href || (item.path !== '/' && currentPath.includes(item.path));
@@ -130,7 +130,7 @@ const navItems = [
     text-decoration: none;
     font-family: var(--font-comic);
     font-size: 1.45rem;
-    color: var(--color-jade);
+    color: var(--color-jade-text);
   }
 
   .rail-nav-list {
@@ -161,7 +161,7 @@ const navItems = [
 
   .rail-link.is-active {
     background: rgba(70, 217, 160, 0.12);
-    color: var(--color-jade);
+    color: var(--color-jade-text);
   }
 
   .rail-settings-btn {

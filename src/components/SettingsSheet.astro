@@ -120,7 +120,7 @@
   .sheet-title {
     font-family: var(--font-comic);
     font-size: 1.35rem;
-    color: var(--color-jade);
+    color: var(--color-jade-text);
     letter-spacing: -0.01em;
   }
 
@@ -215,34 +215,51 @@
   /* Switch Input */
   .switch-input {
     width: 44px;
-    height: 24px;
+    height: 44px;
     appearance: none;
-    background: rgba(255, 255, 255, 0.2);
+    background: transparent;
+    border: none;
     border-radius: 9999px;
     position: relative;
     cursor: pointer;
-    outline: none;
-    transition: background var(--dur-fast);
+    margin: 0;
   }
 
   .switch-input::before {
     content: '';
     position: absolute;
+    left: 0;
+    top: 10px;
+    width: 44px;
+    height: 24px;
+    border-radius: 9999px;
+    background: rgba(255, 255, 255, 0.2);
+    transition: background var(--dur-fast);
+  }
+
+  .switch-input::after {
+    content: '';
+    position: absolute;
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    top: 2px;
+    top: 12px;
     left: 2px;
     background: #FFFFFF;
     transition: transform var(--dur-fast) var(--spring-overshoot);
   }
 
-  .switch-input:checked {
+  .switch-input:checked::before {
     background: var(--color-jade);
   }
 
-  .switch-input:checked::before {
+  .switch-input:checked::after {
     transform: translateX(20px);
+  }
+
+  .switch-input:focus-visible {
+    outline: 2px solid var(--color-jade);
+    outline-offset: 2px;
   }
 </style>
 

@@ -14,11 +14,24 @@
   --theme-text: var(--color-mist);
   --theme-text-muted: rgba(232, 241, 239, 0.72);
   --theme-ink: var(--color-ink);
+  --color-ink-muted: var(--theme-text-muted);
+
+  /* Accent text (light-theme values override to darker inks below) */
+  --color-jade-text: var(--color-jade);
+  --color-amber-text: var(--color-amber);
+  --color-steel-text: var(--color-steel);
+
+  /* Glass surfaces */
+  --color-glass-fill: rgba(255, 255, 255, 0.1);
+  --color-glass-border: rgba(255, 255, 255, 0.2);
+  --shadow-glass: 0 12px 40px rgba(0, 0, 0, 0.28);
 
   /* Typography */
   --font-serif: "Literata", Georgia, serif;
   --font-sans: "Bricolage Grotesque", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --font-comic: "Lilita One", cursive, sans-serif;
+  --font-display: var(--font-sans);
+  --font-body: var(--font-serif);
 
   --text-body-size: 17px;
   --text-body-lh: 1.7;
@@ -34,12 +47,14 @@
   --dur-base: 250ms;
   --dur-settle: 400ms;
   --dur-slow: 600ms;
+  --duration-fast: var(--dur-fast);
 
   /* Radii */
   --radius-capsule: 9999px;
   --radius-outer: 24px;
   --radius-inner: 16px;
   --radius-card: 20px;
+  --radius-sm: 10px;
 }
 
 [data-theme="light"] {
@@ -48,4 +63,13 @@
   --theme-text: #04110F;
   --theme-text-muted: rgba(4, 17, 15, 0.68);
   --theme-ink: #04110F;
+
+  /* Accents stay luminous for fills, darken when used as text on a tint */
+  --color-jade-text: #0B6B47;
+  --color-amber-text: #7A4E00;
+  --color-steel-text: #2C5878;
+
+  --color-glass-fill: rgba(255, 255, 255, 0.55);
+  --color-glass-border: rgba(4, 17, 15, 0.08);
+  --shadow-glass: 0 12px 30px rgba(4, 17, 15, 0.08);
 }
