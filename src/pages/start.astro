@@ -1,5 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Character from '../cast/Character.astro';
+import Bubble from '../cast/Bubble.astro';
 ---
 
 <BaseLayout 
@@ -8,6 +10,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 >
   <article class="prose-container">
     <header class="page-header">
+      <div class="start-cast-welcome" aria-hidden="true">
+        <Character character="plus" mood="happy" size={56} />
+        <Bubble speaker="Plus" text="Take your time. Even one pick counts." tailDirection="bottom-left" />
+      </div>
       <span class="comic-sticker sticker-benefit">Start Here</span>
       <h1 class="page-title">How To Use This Guide</h1>
       <p class="page-lead">
@@ -65,6 +71,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   .page-header {
     margin-bottom: 2rem;
+  }
+
+  .start-cast-welcome {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    margin-bottom: 1.25rem;
+    flex-wrap: wrap;
   }
 
   .page-title {

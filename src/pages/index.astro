@@ -4,6 +4,8 @@ import path from 'node:path';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ProgressRing from '../components/ProgressRing.astro';
 import ReadingMap from '../components/ReadingMap.astro';
+import Character from '../cast/Character.astro';
+import Bubble from '../cast/Bubble.astro';
 import type { EnglishChapter, EnglishTip } from '../../scripts/ingest-parveen';
 
 // Load all chapters and extract 122 Very High tips
@@ -56,6 +58,18 @@ const dailyTip = veryHighTips.length > 0
     <p class="home-subtagline">
       This is a menu, not a to-do list. Picking one or two tips counts.
     </p>
+
+    <!-- Plus & Minus Cast Welcome -->
+    <div class="cast-welcome-row" aria-hidden="true">
+      <div class="cast-member">
+        <Character character="plus" mood="happy" size={56} />
+        <Bubble speaker="Plus" text="Welcome! Ready to find a quick win today?" tailDirection="bottom-left" />
+      </div>
+      <div class="cast-member">
+        <Character character="minus" mood="smug" size={56} />
+        <Bubble speaker="Minus" text="Cost first, payoffs later." tailDirection="bottom-right" />
+      </div>
+    </div>
   </header>
 
   <!-- Daily Quick Win Hero Panel (Comic Splash Framing) -->
@@ -198,6 +212,20 @@ const dailyTip = veryHighTips.length > 0
   .home-subtagline {
     font-size: 0.95rem;
     color: var(--theme-text-muted);
+  }
+
+  .cast-welcome-row {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 1.75rem 0 1rem;
+    flex-wrap: wrap;
+  }
+
+  .cast-member {
+    display: flex;
+    align-items: flex-end;
+    gap: 0.5rem;
   }
 
   /* Daily Win Panel */

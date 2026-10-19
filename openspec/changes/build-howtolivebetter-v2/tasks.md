@@ -25,11 +25,11 @@
 
 ## 4. Phase 4: Comic Layer, Characters & Motion (Milestone M3b)
 
-- [ ] 4.1 Implement `src/cast/Character.astro` inline SVG component rendering Plus (Jade `#46D9A0`) and Minus (Amber `#F5B85A`) across 6 moods (neutral, happy, surprised, smug, sleepy, cheering) with CSS breathing bob and blink, keeping total SVG under 25KB. Verify all moods visually. *(Tools/Skills: Inline SVG design, CSS keyframes)*
-- [ ] 4.2 Implement `src/cast/Bubble.astro` Liquid Glass speech bubble with ink tail, auto-dismissing after 6s and capped at 12 words per bubble. Verify bubble display and tap-to-dismiss. *(Tools/Skills: CSS glass tokens, auto-timer)*
-- [ ] 4.3 Implement `src/cast/dialogue-manager.ts` selecting lines from `data/dialogue.json` for UI triggers (first visit, daily win, mark read, streak, empty states) with automated lint enforcing zero advice, no numbers, and max 12 words. Verify dialogue linter passes. *(Tools/Skills: Automated regex linting)*
-- [ ] 4.4 Implement Calm Mode logic reading `data/calm-chapters.json`, suppressing characters, bubbles, SFX, and bursts on sensitive chapters (1, 13, 16, 25, 28, 29, 30, 33), alongside master Comic Effects toggle in Settings. Verify complete suppression in Calm Mode. *(Tools/Skills: Conditional rendering, settings state)*
-- [ ] 4.5 Implement View Transitions API comic panel diagonal wipe (350–450ms) with 200ms cross-fade fallback, Home splash sequence (<1.8s, tap to skip), and chapter complete canvas burst (<1.5KB) with `navigator.vibrate(10)`. Verify 60fps motion without layout shift. *(Tools/Skills: View Transitions API, lightweight HTML5 canvas burst)*
+- [x] 4.1 Implement `src/cast/Character.astro` inline SVG component rendering Plus (Jade `#46D9A0`) and Minus (Amber `#F5B85A`) across 6 moods (neutral, happy, surprised, smug, sleepy, cheering) with CSS breathing bob and blink, keeping total SVG under 25KB. Verify all moods visually. *(Tools/Skills: Inline SVG design, CSS keyframes)*
+- [x] 4.2 Implement `src/cast/Bubble.astro` Liquid Glass speech bubble with ink tail, auto-dismissing after 6s and capped at 12 words per bubble. Verify bubble display and tap-to-dismiss. *(Tools/Skills: CSS glass tokens, auto-timer)*
+- [x] 4.3 Implement `src/cast/dialogue-manager.ts` selecting lines from `data/dialogue.json` for UI triggers (first visit, daily win, mark read, streak, empty states) with automated lint enforcing zero advice, no numbers, and max 12 words. Verify dialogue linter passes. *(Tools/Skills: Automated regex linting)*
+- [x] 4.4 Implement Calm Mode logic reading `data/calm-chapters.json`, suppressing characters, bubbles, SFX, and bursts on sensitive chapters (1, 13, 16, 25, 28, 29, 30, 33), alongside master Comic Effects toggle in Settings. Verify complete suppression in Calm Mode. *(Tools/Skills: Conditional rendering, settings state)*
+- [x] 4.5 Implement View Transitions API comic panel diagonal wipe (350–450ms) with 200ms cross-fade fallback, Home splash sequence (<1.8s, tap to skip), and chapter complete canvas burst (<1.5KB) with `navigator.vibrate(10)`. Verify 60fps motion without layout shift. *(Tools/Skills: View Transitions API, lightweight HTML5 canvas burst)*
 
 ## 5. Phase 5: Search, Verification, Budgets & QA (Milestone M4)
 

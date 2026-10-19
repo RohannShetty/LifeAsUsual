@@ -3,6 +3,8 @@ import fs from 'node:fs';
 import path from 'node:path';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import TipCard from '../components/TipCard.astro';
+import Character from '../cast/Character.astro';
+import Bubble from '../cast/Bubble.astro';
 import type { EnglishChapter, EnglishTip } from '../../scripts/ingest-parveen';
 
 const enAllPath = path.resolve('data/en/all-chapters.json');
@@ -33,8 +35,11 @@ try {
 
   <!-- Empty State -->
   <div id="picks-empty-state" class="liquid-glass empty-box">
-    <div style="font-size: 2rem; margin-bottom: 0.5rem;">★</div>
-    <h3 style="font-family: var(--font-sans); font-size: 1.15rem; font-weight: 700; margin-bottom: 0.35rem;">
+    <div class="empty-cast-row">
+      <Character character="plus" mood="sleepy" size={64} />
+      <Bubble speaker="Plus" text="No picks saved yet. Tap any bookmark icon!" tailDirection="left" />
+    </div>
+    <h3 style="font-family: var(--font-sans); font-size: 1.15rem; font-weight: 700; margin: 1rem 0 0.35rem;">
       No Saved Picks Yet
     </h3>
     <p style="color: var(--theme-text-muted); font-size: 0.9rem; max-width: 400px; margin: 0 auto 1.25rem;">
@@ -58,6 +63,15 @@ try {
     text-align: center;
     padding: 3rem 1.5rem;
     margin-top: 1rem;
+  }
+
+  .empty-cast-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.25rem;
+    margin-bottom: 0.5rem;
+    flex-wrap: wrap;
   }
 
   .action-btn-primary {

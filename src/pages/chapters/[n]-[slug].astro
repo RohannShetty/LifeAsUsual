@@ -3,6 +3,9 @@ import fs from 'node:fs';
 import path from 'node:path';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import TipCard from '../../components/TipCard.astro';
+import Character from '../../cast/Character.astro';
+import Bubble from '../../cast/Bubble.astro';
+import calmChapters from '../../../data/calm-chapters.json';
 import type { EnglishChapter } from '../../../scripts/ingest-parveen';
 
 export async function getStaticPaths() {
@@ -34,12 +37,14 @@ interface Props {
 }
 
 const { chapter, prevChapter, nextChapter } = Astro.props;
+const isCalm = calmChapters.includes(chapter.chapter);
 ---
 
 <BaseLayout 
   title={`Chapter ${chapter.chapter}: ${chapter.title} - How To Live Better`}
   description={`Read Chapter ${chapter.chapter}: ${chapter.title}. ${chapter.tips.length} verified life recommendations.`}
 >
+  <div data-calm-chapter={isCalm ? "true" : "false"} class="chapter-page-root">
   <!-- Slim Sticky Chapter Header -->
   <aside class="sticky-chapter-header liquid-glass" aria-label="Chapter progress">
     <div class="header-inner">
@@ -89,6 +94,17 @@ const { chapter, prevChapter, nextChapter } = Astro.props;
       ))}
     </section>
 
+    <!-- Chapter Celebration (Non-Calm Chapters Only) -->
+    {!isCalm && (
+      <section class="chapter-celebration liquid-glass" id="chapter-celebration" aria-label="Chapter Completion Celebration">
+        <div class="celebration-cast">
+          <Character character="plus" mood="cheering" size={60} />
+          <Bubble speaker="Plus" text="Chapter finished! Look at that wave!" tailDirection="bottom-left" />
+          <Character character="minus" mood="happy" size={60} />
+        </div>
+      </section>
+    )}
+
     <!-- Chapter Pagination -->
     <nav class="chapter-pagination" aria-label="Previous and Next Chapters">
       {prevChapter ? (
@@ -132,6 +148,7 @@ const { chapter, prevChapter, nextChapter } = Astro.props;
       ))}
     </ul>
   </aside>
+  </div>
 </BaseLayout>
 
 <style>
@@ -251,6 +268,32 @@ const { chapter, prevChapter, nextChapter } = Astro.props;
   .chapter-meta-line {
     font-size: 0.95rem;
     color: var(--theme-text-muted);
+  }
+
+  /* Chapter Celebration */
+  .chapter-celebration {
+    padding: 2rem 1.5rem;
+    margin: 2.5rem 0 2rem;
+    border-radius: var(--radius-card);
+    text-align: center;
+    background: var(--color-glass-fill);
+    border: 2px solid #04110F;
+    box-shadow: 3px 3px 0 #04110F;
+  }
+
+  .celebration-cast {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+  }
+
+  /* Calm Mode Suppression */
+  [data-calm-chapter="true"] .chapter-celebration,
+  [data-calm-chapter="true"] .comic-bubble-wrapper,
+  [data-calm-chapter="true"] .character-wrapper {
+    display: none !important;
   }
 
   /* Pagination */
@@ -460,6 +503,24 @@ const { chapter, prevChapter, nextChapter } = Astro.props;
     document.querySelectorAll('.toc-link').forEach((link) => {
       link.addEventListener('click', closeToc);
     });
+
+    // Particle burst celebration on non-calm chapters
+    const celebrationEl = document.getElementById('chapter-celebration');
+    if (celebrationEl) {
+      let burstFired = false;
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !burstFired) {
+            burstFired = true;
+            import('../../cast/particle-burst').then(({ triggerChapterCompleteBurst }) => {
+              triggerChapterCompleteBurst();
+            });
+            observer.disconnect();
+          }
+        });
+      }, { threshold: 0.3 });
+      observer.observe(celebrationEl);
+    }
   }
 
   if (typeof window !== 'undefined') {

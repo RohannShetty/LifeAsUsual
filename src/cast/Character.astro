@@ -1,0 +1,330 @@
+---
+export interface Props {
+  character: 'plus' | 'minus';
+  mood?: 'neutral' | 'happy' | 'surprised' | 'smug' | 'sleepy' | 'cheering';
+  size?: number;
+  class?: string;
+  animate?: boolean;
+}
+
+const {
+  character,
+  mood = 'neutral',
+  size = 64,
+  class: className = '',
+  animate = true,
+} = Astro.props;
+
+// SVG viewBox is 0 0 100 100
+---
+
+<div 
+  class={`character-wrapper char-${character} mood-${mood} ${animate ? 'is-animated' : ''} ${className}`}
+  style={`width: ${size}px; height: ${size}px;`}
+  data-character={character}
+  data-mood={mood}
+  aria-hidden="true"
+>
+  {character === 'plus' ? (
+    /* PLUS: Round, jade #46D9A0, cheerful crest, lively eyes */
+    <svg 
+      viewBox="0 0 100 100" 
+      class="char-svg plus-svg" 
+      fill="none" 
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <!-- Drop shadow / ground indicator -->
+      <ellipse cx="50" cy="92" rx="28" ry="5" fill="rgba(4, 17, 15, 0.25)" class="char-shadow" />
+
+      <!-- Main Body -->
+      <g class="char-body">
+        <!-- Antenna / Top Plus Motif -->
+        <path 
+          d="M50 18 V6 M44 12 H56" 
+          stroke="#04110F" 
+          stroke-width="4.5" 
+          stroke-linecap="round" 
+        />
+        <circle cx="50" cy="12" r="3" fill="#46D9A0" stroke="#04110F" stroke-width="2" />
+
+        <!-- Round Body -->
+        <circle 
+          cx="50" 
+          cy="52" 
+          r="34" 
+          fill="#46D9A0" 
+          stroke="#04110F" 
+          stroke-width="4" 
+        />
+
+        <!-- Belly Specular Rim Light -->
+        <path 
+          d="M24 44 A26 26 0 0 1 50 26" 
+          stroke="rgba(255, 255, 255, 0.65)" 
+          stroke-width="3" 
+          stroke-linecap="round" 
+        />
+
+        <!-- Cheeks -->
+        <ellipse cx="32" cy="58" rx="4" ry="2.5" fill="#2AB680" opacity="0.6" />
+        <ellipse cx="68" cy="58" rx="4" ry="2.5" fill="#2AB680" opacity="0.6" />
+
+        <!-- Eyes and Mouth by Mood -->
+        {mood === 'neutral' && (
+          <g class="char-face">
+            <ellipse cx="40" cy="48" rx="4" ry="5" fill="#04110F" class="char-eye eye-left" />
+            <circle cx="41.5" cy="46" r="1.5" fill="#FFF" />
+            <ellipse cx="60" cy="48" rx="4" ry="5" fill="#04110F" class="char-eye eye-right" />
+            <circle cx="61.5" cy="46" r="1.5" fill="#FFF" />
+            <path d="M45 57 Q50 63 55 57" stroke="#04110F" stroke-width="3" stroke-linecap="round" />
+          </g>
+        )}
+
+        {mood === 'happy' && (
+          <g class="char-face">
+            <path d="M35 49 Q40 43 45 49" stroke="#04110F" stroke-width="3.5" stroke-linecap="round" />
+            <path d="M55 49 Q60 43 65 49" stroke="#04110F" stroke-width="3.5" stroke-linecap="round" />
+            <path d="M43 56 Q50 67 57 56 Z" fill="#04110F" />
+            <path d="M47 62 Q50 65 53 62" stroke="#FF758F" stroke-width="2" stroke-linecap="round" />
+          </g>
+        )}
+
+        {mood === 'surprised' && (
+          <g class="char-face">
+            <circle cx="39" cy="47" r="5" fill="#04110F" />
+            <circle cx="41" cy="45" r="1.8" fill="#FFF" />
+            <circle cx="61" cy="47" r="5" fill="#04110F" />
+            <circle cx="63" cy="45" r="1.8" fill="#FFF" />
+            <ellipse cx="50" cy="60" rx="4.5" ry="6" fill="#04110F" />
+          </g>
+        )}
+
+        {mood === 'smug' && (
+          <g class="char-face">
+            <path d="M36 47 Q41 44 46 47" stroke="#04110F" stroke-width="3.5" stroke-linecap="round" />
+            <ellipse cx="60" cy="47" rx="3.5" ry="4" fill="#04110F" />
+            <circle cx="61" cy="45.5" r="1.2" fill="#FFF" />
+            <path d="M45 57 Q53 62 58 54" stroke="#04110F" stroke-width="3" stroke-linecap="round" />
+          </g>
+        )}
+
+        {mood === 'sleepy' && (
+          <g class="char-face">
+            <path d="M36 49 Q41 53 46 49" stroke="#04110F" stroke-width="3" stroke-linecap="round" />
+            <path d="M54 49 Q59 53 64 49" stroke="#04110F" stroke-width="3" stroke-linecap="round" />
+            <ellipse cx="50" cy="58" rx="2.5" ry="2" fill="#04110F" />
+            <!-- Floating Zzz -->
+            <text x="68" y="36" font-family="var(--font-display)" font-size="10" fill="#04110F" font-weight="bold">z</text>
+            <text x="75" y="27" font-family="var(--font-display)" font-size="8" fill="#04110F" opacity="0.7">z</text>
+          </g>
+        )}
+
+        {mood === 'cheering' && (
+          <g class="char-face">
+            <!-- Sparkle Eyes -->
+            <path d="M40 43 L42 48 L47 50 L42 52 L40 57 L38 52 L33 50 L38 48 Z" fill="#04110F" />
+            <path d="M60 43 L62 48 L67 50 L62 52 L60 57 L58 52 L53 50 L58 48 Z" fill="#04110F" />
+            <path d="M42 56 Q50 70 58 56 Z" fill="#04110F" />
+            <!-- Upraised Little Arms -->
+            <path d="M19 46 Q12 36 16 30" stroke="#04110F" stroke-width="4" stroke-linecap="round" />
+            <path d="M81 46 Q88 36 84 30" stroke="#04110F" stroke-width="4" stroke-linecap="round" />
+          </g>
+        )}
+      </g>
+    </svg>
+  ) : (
+    /* MINUS: Soft-cornered hexagon/pill, amber #F5B85A, analytical visor, pragmatic posture */
+    <svg 
+      viewBox="0 0 100 100" 
+      class="char-svg minus-svg" 
+      fill="none" 
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <!-- Drop shadow / ground indicator -->
+      <ellipse cx="50" cy="92" rx="30" ry="5" fill="rgba(4, 17, 15, 0.25)" class="char-shadow" />
+
+      <!-- Main Body -->
+      <g class="char-body">
+        <!-- Minus Head Crest Bar -->
+        <rect 
+          x="38" 
+          y="10" 
+          width="24" 
+          height="6" 
+          rx="3" 
+          fill="#D69738" 
+          stroke="#04110F" 
+          stroke-width="3" 
+        />
+
+        <!-- Soft Capsule / Hexagon Body -->
+        <path 
+          d="M26 34 C26 26 34 20 50 20 C66 20 74 26 74 34 L76 66 C76 78 66 84 50 84 C34 84 24 78 24 66 Z" 
+          fill="#F5B85A" 
+          stroke="#04110F" 
+          stroke-width="4" 
+        />
+
+        <!-- Specular Highlight -->
+        <path 
+          d="M30 32 C34 26 44 24 50 24" 
+          stroke="rgba(255, 255, 255, 0.65)" 
+          stroke-width="3" 
+          stroke-linecap="round" 
+        />
+
+        <!-- Analytical Visor / Brow Line -->
+        <path d="M34 40 H66" stroke="#04110F" stroke-width="3.5" stroke-linecap="round" />
+
+        <!-- Eyes and Mouth by Mood -->
+        {mood === 'neutral' && (
+          <g class="char-face">
+            <rect x="36" y="46" width="9" height="5" rx="2.5" fill="#04110F" class="char-eye" />
+            <rect x="55" y="46" width="9" height="5" rx="2.5" fill="#04110F" class="char-eye" />
+            <path d="M44 64 H56" stroke="#04110F" stroke-width="3" stroke-linecap="round" />
+          </g>
+        )}
+
+        {mood === 'happy' && (
+          <g class="char-face">
+            <path d="M36 49 Q41 45 46 49" stroke="#04110F" stroke-width="3" stroke-linecap="round" />
+            <path d="M54 49 Q59 45 64 49" stroke="#04110F" stroke-width="3" stroke-linecap="round" />
+            <path d="M44 62 Q50 68 56 62" stroke="#04110F" stroke-width="3" stroke-linecap="round" />
+          </g>
+        )}
+
+        {mood === 'surprised' && (
+          <g class="char-face">
+            <circle cx="41" cy="48" r="4.5" fill="#04110F" />
+            <circle cx="42" cy="46.5" r="1.5" fill="#FFF" />
+            <circle cx="59" cy="48" r="4.5" fill="#04110F" />
+            <circle cx="60" cy="46.5" r="1.5" fill="#FFF" />
+            <rect x="46" y="61" width="8" height="8" rx="4" fill="#04110F" />
+          </g>
+        )}
+
+        {mood === 'smug' && (
+          <g class="char-face">
+            <!-- Raised eyebrow tilt -->
+            <path d="M35 38 L46 42" stroke="#04110F" stroke-width="3" stroke-linecap="round" />
+            <path d="M54 40 L65 37" stroke="#04110F" stroke-width="3" stroke-linecap="round" />
+            <circle cx="41" cy="48" r="3.5" fill="#04110F" />
+            <circle cx="59" cy="46" r="3.5" fill="#04110F" />
+            <path d="M45 63 Q52 65 57 59" stroke="#04110F" stroke-width="3" stroke-linecap="round" />
+          </g>
+        )}
+
+        {mood === 'sleepy' && (
+          <g class="char-face">
+            <path d="M36 48 H46" stroke="#04110F" stroke-width="3" stroke-linecap="round" />
+            <path d="M54 48 H64" stroke="#04110F" stroke-width="3" stroke-linecap="round" />
+            <path d="M46 64 H54" stroke="#04110F" stroke-width="2.5" stroke-linecap="round" />
+            <text x="68" y="32" font-family="var(--font-display)" font-size="9" fill="#04110F" font-weight="bold">z</text>
+          </g>
+        )}
+
+        {mood === 'cheering' && (
+          <g class="char-face">
+            <path d="M36 45 Q41 39 46 45" stroke="#04110F" stroke-width="3.5" stroke-linecap="round" />
+            <path d="M54 45 Q59 39 64 45" stroke="#04110F" stroke-width="3.5" stroke-linecap="round" />
+            <path d="M42 59 Q50 70 58 59 Z" fill="#04110F" />
+            <!-- Little Thumb / Stance -->
+            <path d="M22 55 Q16 48 18 42" stroke="#04110F" stroke-width="4" stroke-linecap="round" />
+            <path d="M78 55 Q84 48 82 42" stroke="#04110F" stroke-width="4" stroke-linecap="round" />
+          </g>
+        )}
+      </g>
+    </svg>
+  )}
+</div>
+
+<style>
+  .character-wrapper {
+    display: inline-block;
+    position: relative;
+    user-select: none;
+    vertical-align: middle;
+  }
+
+  .char-svg {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+  }
+
+  /* Breathing idle animation */
+  .is-animated .char-body {
+    transform-origin: 50% 90%;
+    animation: charBob 2.6s ease-in-out infinite;
+  }
+
+  .is-animated.char-minus .char-body {
+    animation-duration: 2.9s;
+    animation-delay: 0.3s;
+  }
+
+  .is-animated .char-shadow {
+    transform-origin: 50% 92%;
+    animation: charShadowScale 2.6s ease-in-out infinite;
+  }
+
+  .is-animated.char-minus .char-shadow {
+    animation-duration: 2.9s;
+    animation-delay: 0.3s;
+  }
+
+  @keyframes charBob {
+    0%, 100% {
+      transform: translateY(0) scale(1, 1);
+    }
+    50% {
+      transform: translateY(-4px) scale(0.98, 1.02);
+    }
+  }
+
+  @keyframes charShadowScale {
+    0%, 100% {
+      transform: scale(1);
+      opacity: 0.25;
+    }
+    50% {
+      transform: scale(0.88);
+      opacity: 0.15;
+    }
+  }
+
+  /* Eye blink keyframes */
+  .is-animated .char-eye {
+    transform-origin: 50% 50%;
+    animation: charBlink 4.5s ease-in-out infinite;
+  }
+
+  @keyframes charBlink {
+    0%, 94%, 100% {
+      transform: scaleY(1);
+    }
+    96%, 98% {
+      transform: scaleY(0.1);
+    }
+  }
+
+  /* Squash & Stretch on interactive tap / hover */
+  .character-wrapper:active .char-body {
+    transform: scale(1.1, 0.9) translateY(2px);
+    transition: transform 120ms ease;
+  }
+
+  /* Comic Effects Off toggle suppression */
+  :global([data-comic-effects="false"]) .character-wrapper {
+    display: none !important;
+  }
+
+  /* Respect reduced motion preference */
+  @media (prefers-reduced-motion: reduce) {
+    .is-animated .char-body,
+    .is-animated .char-shadow,
+    .is-animated .char-eye {
+      animation: none !important;
+    }
+  }
+</style>
