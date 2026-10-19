@@ -12,3 +12,5 @@ pnpm-debug.log*
 Thumbs.db
 test-results/
 playwright-report/
+.codegraph/
+graphify-out/

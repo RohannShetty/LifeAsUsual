@@ -10,6 +10,7 @@
     "parse": "tsx scripts/parse.ts",
     "ingest": "tsx scripts/ingest-parveen.ts",
     "verify": "tsx scripts/verify.ts",
+    "check": "astro check",
     "pagefind": "pagefind --site dist"
   },
   "dependencies": {
@@ -17,6 +18,7 @@
     "zod": "^3.23.8"
   },
   "devDependencies": {
+    "@astrojs/check": "^0.9.11",
     "@playwright/test": "^1.64.1",
     "@types/node": "^22.10.0",
     "pagefind": "^1.5.2",
