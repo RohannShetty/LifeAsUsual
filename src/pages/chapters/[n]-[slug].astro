@@ -201,13 +201,14 @@ const isCalm = calmChapters.includes(chapter.chapter);
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    padding: 5px 10px;
+    padding: 6px 14px;
+    min-height: 44px;
     background: rgba(255, 255, 255, 0.08);
     border: 1px solid rgba(255, 255, 255, 0.15);
     border-radius: var(--radius-capsule);
     color: var(--theme-text);
     font-family: var(--font-sans);
-    font-size: 0.78rem;
+    font-size: 0.82rem;
     font-weight: 600;
     cursor: pointer;
     white-space: nowrap;
@@ -245,12 +246,35 @@ const isCalm = calmChapters.includes(chapter.chapter);
   }
 
   .dismiss-banner-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
     background: transparent;
     border: none;
     color: var(--theme-text-muted);
-    font-size: 1rem;
+    font-size: 1.1rem;
     cursor: pointer;
-    padding: 0 4px;
+    padding: 0;
+  }
+
+  .close-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    color: var(--theme-text);
+    cursor: pointer;
+    transition: background var(--dur-fast);
+  }
+
+  .close-btn:hover {
+    background: rgba(255, 255, 255, 0.15);
   }
 
   /* Chapter Hero */
@@ -260,10 +284,11 @@ const isCalm = calmChapters.includes(chapter.chapter);
 
   .chapter-main-title {
     font-family: var(--font-comic);
-    font-size: 2.1rem;
+    font-size: clamp(1.65rem, 5.5vw, 2.3rem);
     line-height: 1.2;
     color: var(--theme-text);
     margin: 0.75rem 0 0.5rem;
+    overflow-wrap: break-word;
   }
 
   .chapter-meta-line {

@@ -94,6 +94,53 @@ try {
             <button type="button" class="filter-chip" data-value="Real money">Real money</button>
           </div>
         </div>
+
+        <!-- Target Audience -->
+        <div class="filter-group">
+          <span class="filter-label">Audience:</span>
+          <div class="filter-chips" data-filter="audience">
+            <button type="button" class="filter-chip active" data-value="all">All</button>
+            <button type="button" class="filter-chip" data-value="Pregnant or planning">Pregnant / Planning</button>
+            <button type="button" class="filter-chip" data-value="Child under 3">Child &lt; 3</button>
+            <button type="button" class="filter-chip" data-value="Child 3 to 18">Child 3–18</button>
+            <button type="button" class="filter-chip" data-value="Older relatives at home">Elderly at home</button>
+            <button type="button" class="filter-chip" data-value="Age 35+">Age 35+</button>
+            <button type="button" class="filter-chip" data-value="Age 60+">Age 60+</button>
+            <button type="button" class="filter-chip" data-value="Women">Women</button>
+          </div>
+        </div>
+
+        <!-- Time Commitment -->
+        <div class="filter-group">
+          <span class="filter-label">Time:</span>
+          <div class="filter-chips" data-filter="time">
+            <button type="button" class="filter-chip active" data-value="all">All</button>
+            <button type="button" class="filter-chip" data-value="Quick">Quick</button>
+            <button type="button" class="filter-chip" data-value="A few hours">A few hours</button>
+            <button type="button" class="filter-chip" data-value="Takes time every day">Takes time daily</button>
+          </div>
+        </div>
+
+        <!-- Willpower Required -->
+        <div class="filter-group">
+          <span class="filter-label">Willpower:</span>
+          <div class="filter-chips" data-filter="willpower">
+            <button type="button" class="filter-chip active" data-value="all">All</button>
+            <button type="button" class="filter-chip" data-value="None needed">None needed</button>
+            <button type="button" class="filter-chip" data-value="Some">Some</button>
+            <button type="button" class="filter-chip" data-value="A lot">A lot</button>
+          </div>
+        </div>
+
+        <!-- Editorial Verification Status -->
+        <div class="filter-group">
+          <span class="filter-label">Status:</span>
+          <div class="filter-chips" data-filter="status">
+            <button type="button" class="filter-chip active" data-value="all">All</button>
+            <button type="button" class="filter-chip chip-disputed" data-value="disputed">Disputed (88)</button>
+            <button type="button" class="filter-chip" data-value="verifying">Still Verifying (3)</button>
+          </div>
+        </div>
       </div>
 
       <!-- Filter Stats & Reset Row -->
@@ -124,6 +171,11 @@ try {
           data-tier={tip.valueTier}
           data-scope={tip.tags.scope}
           data-cost={tip.tags.money}
+          data-time={tip.tags.time}
+          data-willpower={tip.tags.willpower}
+          data-audience={(tip.tags.audience || []).join(',')}
+          data-disputed={tip.disputed ? "true" : "false"}
+          data-verifying={tip.stillVerifying ? "true" : "false"}
           data-title={tip.title.toLowerCase()}
           data-plain={tip.inPlainWords.toLowerCase()}
           data-benefit={tip.benefit.toLowerCase()}
@@ -131,6 +183,10 @@ try {
           <TipCard tip={tip} />
         </div>
       ))}
+      <!-- Scroll Sentinel for Progressive Batch Loading -->
+      <div id="explore-scroll-sentinel" class="scroll-sentinel" style="display: none;">
+        <span class="sentinel-badge">Loading more recommendations...</span>
+      </div>
     </main>
   </div>
 </BaseLayout>
@@ -143,9 +199,16 @@ try {
     const emptyResetBtn = document.getElementById('empty-reset-btn');
     const resultsCountEl = document.getElementById('results-count');
     const emptyStateEl = document.getElementById('explore-empty-state');
+    const sentinelEl = document.getElementById('explore-scroll-sentinel');
     const tipItems = Array.from(document.querySelectorAll<HTMLElement>('.explore-tip-item'));
 
     if (!tipItems.length) return;
+
+    const BATCH_SIZE = 25;
+    let visibleLimit = BATCH_SIZE;
+    let matchedItems: HTMLElement[] = [];
+    let filterTimeout: number | null = null;
+    let rafId: number | null = null;
 
     // Active filters state
     const filters = {
@@ -154,6 +217,10 @@ try {
       tier: 'all',
       scope: 'all',
       cost: 'all',
+      audience: 'all',
+      time: 'all',
+      willpower: 'all',
+      status: 'all',
     };
 
     // Parse URL search params
@@ -163,6 +230,10 @@ try {
     if (params.get('tier')) filters.tier = params.get('tier') || 'all';
     if (params.get('scope')) filters.scope = params.get('scope') || 'all';
     if (params.get('cost')) filters.cost = params.get('cost') || 'all';
+    if (params.get('audience')) filters.audience = params.get('audience') || 'all';
+    if (params.get('time')) filters.time = params.get('time') || 'all';
+    if (params.get('willpower')) filters.willpower = params.get('willpower') || 'all';
+    if (params.get('status')) filters.status = params.get('status') || 'all';
 
     // Reflect URL into UI
     if (searchInput) searchInput.value = filters.query;
@@ -187,20 +258,58 @@ try {
       if (filters.tier !== 'all') p.set('tier', filters.tier);
       if (filters.scope !== 'all') p.set('scope', filters.scope);
       if (filters.cost !== 'all') p.set('cost', filters.cost);
+      if (filters.audience !== 'all') p.set('audience', filters.audience);
+      if (filters.time !== 'all') p.set('time', filters.time);
+      if (filters.willpower !== 'all') p.set('willpower', filters.willpower);
+      if (filters.status !== 'all') p.set('status', filters.status);
 
       const newUrl = p.toString() ? `${window.location.pathname}?${p.toString()}` : window.location.pathname;
       window.history.replaceState({}, '', newUrl);
     }
 
+    function renderBatch() {
+      tipItems.forEach((item) => {
+        item.style.display = 'none';
+      });
+
+      for (let i = 0; i < Math.min(visibleLimit, matchedItems.length); i++) {
+        matchedItems[i].style.display = '';
+      }
+
+      if (resultsCountEl) {
+        resultsCountEl.textContent = `Showing ${matchedItems.length} of ${tipItems.length} tips`;
+      }
+
+      if (emptyStateEl) {
+        emptyStateEl.style.display = matchedItems.length === 0 ? 'block' : 'none';
+      }
+
+      if (sentinelEl) {
+        const remaining = matchedItems.length - Math.min(visibleLimit, matchedItems.length);
+        sentinelEl.style.display = remaining > 0 ? 'flex' : 'none';
+        const badge = sentinelEl.querySelector('.sentinel-badge');
+        if (badge) {
+          badge.textContent = `Loaded ${Math.min(visibleLimit, matchedItems.length)} of ${matchedItems.length} tips. Scroll for more...`;
+        }
+      }
+    }
+
     function applyFilters() {
       const q = filters.query.toLowerCase().trim();
-      let visibleCount = 0;
+      matchedItems = [];
 
       tipItems.forEach((item) => {
         const evidence = item.dataset.evidence;
         const tier = item.dataset.tier;
         const scope = item.dataset.scope;
         const cost = item.dataset.cost;
+        const time = item.dataset.time;
+        const willpower = item.dataset.willpower;
+        const audienceRaw = item.dataset.audience || '';
+        const audienceList = audienceRaw ? audienceRaw.split(',') : [];
+        const isDisputed = item.dataset.disputed === 'true';
+        const isVerifying = item.dataset.verifying === 'true';
+
         const title = item.dataset.title || '';
         const plain = item.dataset.plain || '';
         const benefit = item.dataset.benefit || '';
@@ -209,31 +318,57 @@ try {
         const matchesTier = filters.tier === 'all' || tier === filters.tier;
         const matchesScope = filters.scope === 'all' || scope === filters.scope;
         const matchesCost = filters.cost === 'all' || cost === filters.cost;
+        const matchesTime = filters.time === 'all' || time === filters.time;
+        const matchesWillpower = filters.willpower === 'all' || willpower === filters.willpower;
+        const matchesAudience = filters.audience === 'all' || audienceList.includes(filters.audience);
+
+        let matchesStatus = true;
+        if (filters.status === 'disputed') {
+          matchesStatus = isDisputed;
+        } else if (filters.status === 'verifying') {
+          matchesStatus = isVerifying;
+        }
+
         const matchesQuery = !q || title.includes(q) || plain.includes(q) || benefit.includes(q);
 
-        if (matchesEvidence && matchesTier && matchesScope && matchesCost && matchesQuery) {
-          item.style.display = '';
-          visibleCount++;
-        } else {
-          item.style.display = 'none';
+        if (matchesEvidence && matchesTier && matchesScope && matchesCost && matchesTime && matchesWillpower && matchesAudience && matchesStatus && matchesQuery) {
+          matchedItems.push(item);
         }
       });
 
-      if (resultsCountEl) {
-        resultsCountEl.textContent = `Showing ${visibleCount} of ${tipItems.length} tips`;
-      }
-
-      if (emptyStateEl) {
-        emptyStateEl.style.display = visibleCount === 0 ? 'block' : 'none';
-      }
-
+      visibleLimit = BATCH_SIZE;
+      renderBatch();
       updateURL();
     }
 
-    // Bind Search Input
+    function debouncedApplyFilters() {
+      if (filterTimeout) clearTimeout(filterTimeout);
+      filterTimeout = window.setTimeout(() => {
+        if (rafId) cancelAnimationFrame(rafId);
+        rafId = requestAnimationFrame(() => {
+          applyFilters();
+        });
+      }, 120);
+    }
+
+    // Progressive Infinite Scroll Observer
+    let sentinelObserver: IntersectionObserver | null = null;
+    if (sentinelEl) {
+      sentinelObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && visibleLimit < matchedItems.length) {
+            visibleLimit += BATCH_SIZE;
+            renderBatch();
+          }
+        });
+      }, { rootMargin: '400px' });
+      sentinelObserver.observe(sentinelEl);
+    }
+
+    // Bind Search Input with Debounce
     searchInput?.addEventListener('input', () => {
       filters.query = searchInput.value;
-      applyFilters();
+      debouncedApplyFilters();
     });
 
     clearBtn?.addEventListener('click', () => {
@@ -267,6 +402,10 @@ try {
       filters.tier = 'all';
       filters.scope = 'all';
       filters.cost = 'all';
+      filters.audience = 'all';
+      filters.time = 'all';
+      filters.willpower = 'all';
+      filters.status = 'all';
 
       if (searchInput) searchInput.value = '';
 
@@ -397,7 +536,11 @@ try {
   }
 
   .filter-chip {
-    padding: 0.35rem 0.85rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.4rem 0.85rem;
+    min-height: 44px;
     border-radius: 999px;
     background: rgba(0, 0, 0, 0.2);
     border: 1px solid var(--color-glass-border);
@@ -497,5 +640,35 @@ try {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+  }
+
+  .explore-tip-item {
+    content-visibility: auto;
+    contain-intrinsic-size: 1px 360px;
+  }
+
+  .filter-chip.chip-disputed.active {
+    background: #FF6B6B;
+    color: #FFFFFF;
+    border-color: #04110F;
+  }
+
+  .scroll-sentinel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1rem;
+  }
+
+  .sentinel-badge {
+    display: inline-block;
+    padding: 8px 18px;
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--color-jade);
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: var(--radius-capsule);
+    border: 1px solid rgba(70, 217, 160, 0.25);
   }
 </style>

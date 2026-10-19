@@ -148,6 +148,7 @@ try {
   }
 
   .map-bead {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -160,6 +161,17 @@ try {
     cursor: pointer;
     text-decoration: none;
     transition: transform var(--dur-fast) var(--spring-overshoot), background var(--dur-fast), box-shadow var(--dur-fast);
+  }
+
+  /* 44x44px minimum touch target hit area for mobile fingertips */
+  .map-bead::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 44px;
+    min-height: 44px;
   }
 
   .map-bead:hover {

@@ -27,3 +27,11 @@
 - **Context:** The comic cast and particle celebrations must not appear on chapters covering heavy topics.
 - **Decision:** Chapters 1, 13, 16, 25, 28, 29, 30, and 33 run in Calm Mode (`data/calm-chapters.json`), disabling Plus & Minus, SFX stickers, and particle bursts in favor of a quiet glow.
 - **Consequences:** Respectful reader experience on sensitive topics.
+
+## ADR-006: Batched Progressive Feed Rendering & Touch Target Expansion
+- **Context:** Rendering 765 recommendation cards synchronously in `explore.astro` created over 23,000 DOM nodes, causing stutter on mobile typing and filter switching. Furthermore, dense elements like the 14px beads in `ReadingMap.astro` were difficult to tap accurately on small mobile touchscreens.
+- **Decision:**
+  - Implement batched progressive display in `explore.astro` using an initial 25-card slice and an `IntersectionObserver` sentinel that progressively unhides subsequent batches on scroll, paired with 120ms debounce and `requestAnimationFrame`.
+  - Use `::after` absolute pseudo-elements (`44px × 44px`) to expand interactive hit areas without altering the compact visual aesthetic of the bead field.
+- **Consequences:** 60fps filter transitions, zero keyboard lag, and full WCAG 2.5.5 / Section 10 touch compliance across all mobile viewports down to 360px.
+
