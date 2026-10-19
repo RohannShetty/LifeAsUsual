@@ -1,4 +1,9 @@
 ---
+import { ClientRouter } from 'astro:transitions';
+import BottomNav from '../components/BottomNav.astro';
+import LeftRail from '../components/LeftRail.astro';
+import SettingsSheet from '../components/SettingsSheet.astro';
+
 interface Props {
   title?: string;
   description?: string;
@@ -8,10 +13,12 @@ const {
   title = "How To Live Better", 
   description = "Spend the least money, time and effort to get back the most lifespan, money and personal freedom." 
 } = Astro.props;
+
+const currentPath = Astro.url.pathname;
 ---
 
 <!doctype html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="dark" data-comic-effects="on">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
@@ -20,6 +27,9 @@ const {
     <title>{title}</title>
     <meta name="description" content={description} />
     
+    <!-- View Transitions -->
+    <ClientRouter />
+
     <!-- Self-hosted font declarations -->
     <link rel="stylesheet" href="/src/styles/fonts.css" />
     <link rel="stylesheet" href="/src/styles/tokens.css" />
@@ -27,7 +37,21 @@ const {
     <link rel="stylesheet" href="/src/styles/comic.css" />
   </head>
   <body class="theme-root">
-    <slot />
+    <!-- Desktop Left Rail -->
+    <LeftRail currentPath={currentPath} />
+
+    <!-- Main Content Column -->
+    <div class="app-layout-shell">
+      <main class="reading-column">
+        <slot />
+      </main>
+    </div>
+
+    <!-- Mobile Floating Bottom Nav -->
+    <BottomNav currentPath={currentPath} />
+
+    <!-- Reading Settings Sheet -->
+    <SettingsSheet />
   </body>
 </html>
 
@@ -38,6 +62,11 @@ const {
     padding: 0;
   }
 
+  html {
+    font-size: 16px;
+    -webkit-text-size-adjust: 100%;
+  }
+
   body {
     background-color: var(--theme-bg);
     color: var(--theme-text);
@@ -46,5 +75,75 @@ const {
     line-height: var(--text-body-lh);
     min-height: 100dvh;
     -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  .app-layout-shell {
+    min-height: 100dvh;
+    display: flex;
+    justify-content: center;
+    padding-bottom: calc(5.5rem + env(safe-area-inset-bottom, 0px));
+  }
+
+  @media (min-width: 1024px) {
+    .app-layout-shell {
+      margin-left: 240px; /* Offset for LeftRail */
+      padding-bottom: 3rem;
+    }
+  }
+
+  .reading-column {
+    width: 100%;
+    max-width: 760px;
+    padding: 1.5rem 1rem;
+  }
+
+  @media (min-width: 640px) {
+    .reading-column {
+      padding: 2.5rem 1.5rem;
+    }
+  }
+
+  /* View Transitions Comic Panel Wipe */
+  ::view-transition-old(root) {
+    animation: 350ms var(--ease-out) both panel-wipe-out;
+  }
+
+  ::view-transition-new(root) {
+    animation: 350ms var(--ease-out) both panel-wipe-in;
+  }
+
+  @keyframes panel-wipe-out {
+    from {
+      opacity: 1;
+      transform: translateX(0) scale(1);
+    }
+    to {
+      opacity: 0;
+      transform: translateX(-40px) scale(0.98);
+    }
+  }
+
+  @keyframes panel-wipe-in {
+    from {
+      opacity: 0;
+      transform: translateX(40px) scale(0.98);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0) scale(1);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    ::view-transition-old(root),
+    ::view-transition-new(root) {
+      animation: 150ms ease-out both fade;
+    }
+
+    @keyframes fade {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
   }
 </style>

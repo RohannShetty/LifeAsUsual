@@ -1,0 +1,436 @@
+---
+import type { EnglishTip } from '../../scripts/ingest-parveen';
+
+interface Props {
+  tip: EnglishTip;
+}
+
+const { tip } = Astro.props;
+
+// Evidence ring styling
+const evidenceGrade = tip.evidenceGrade; // A, B, C
+const evidenceLabel = `Evidence Grade ${evidenceGrade}`;
+
+// Anchor ID format: #c-t e.g. #1-1
+const anchorId = `${tip.chapter}-${tip.tip}`;
+
+// Extract sources count
+const sourcesList = tip.sources ? tip.sources.split(';').map(s => s.trim()).filter(Boolean) : [];
+const sourcesCount = sourcesList.length;
+---
+
+<article 
+  class="fake-glass tip-card" 
+  id={anchorId}
+  data-tip-id={tip.id}
+  data-chapter={tip.chapter}
+  data-tip-num={tip.tip}
+>
+  <!-- Card Header: Title with Linkable ID -->
+  <header class="tip-header">
+    <div class="tip-title-row">
+      <a href={`#${anchorId}`} class="tip-anchor-link" aria-label={`Permanent link to Tip ${tip.chapter}.${tip.tip}`}>
+        <span class="tip-id-badge">{tip.chapter}.{tip.tip}</span>
+      </a>
+      <h3 class="tip-title">{tip.title}</h3>
+    </div>
+
+    <!-- Sticker Chips -->
+    <div class="tip-chips-row">
+      <span class="comic-sticker sticker-benefit" title="Return on Investment">
+        {tip.valueTier} ROI
+      </span>
+
+      <span class="comic-sticker sticker-neutral evidence-chip" title={evidenceLabel}>
+        <svg class="evidence-ring" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true">
+          <circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="2" fill="none" />
+          {evidenceGrade === 'A' && <circle cx="8" cy="8" r="4" fill="currentColor" />}
+          {evidenceGrade === 'B' && <path d="M 8 2 A 6 6 0 0 1 8 14 Z" fill="currentColor" />}
+        </svg>
+        <span>Grade {evidenceGrade}</span>
+      </span>
+
+      <span class="comic-sticker sticker-neutral">{tip.tags.scope}</span>
+      <span class="comic-sticker sticker-cost">{tip.tags.money}</span>
+      <span class="comic-sticker sticker-cost">{tip.tags.time}</span>
+      <span class="comic-sticker sticker-cost">{tip.tags.willpower} Willpower</span>
+
+      {tip.tags.audience && tip.tags.audience.map(aud => (
+        <span class="comic-sticker sticker-neutral">{aud}</span>
+      ))}
+
+      {tip.disputed && (
+        <span class="comic-sticker sticker-disputed">Disputed</span>
+      )}
+
+      {tip.stillVerifying && (
+        <span class="comic-sticker" style="background:#E2E8F0; color:#1E293B;">Still Verifying</span>
+      )}
+    </div>
+  </header>
+
+  <!-- In Plain Words (Visual Lead) -->
+  <section class="lead-section">
+    <p class="in-plain-words">{tip.inPlainWords}</p>
+  </section>
+
+  <!-- Cost & Benefit -->
+  <div class="metrics-grid">
+    <div class="metric-block cost-block">
+      <span class="metric-label">Cost</span>
+      <p class="metric-text">{tip.cost}</p>
+    </div>
+    <div class="metric-block benefit-block">
+      <span class="metric-label">Benefit</span>
+      <p class="metric-text">{tip.benefit}</p>
+    </div>
+  </div>
+
+  <!-- Caveats (Always Visible) -->
+  <section class="caveats-section">
+    <span class="caveats-label">Caveats & Context</span>
+    <p class="caveats-text">{tip.caveats}</p>
+  </section>
+
+  <!-- Sources (Collapsed Drawer, 0fr to 1fr) -->
+  {sourcesCount > 0 && (
+    <section class="sources-section">
+      <button 
+        type="button" 
+        class="sources-toggle-btn" 
+        aria-expanded="false" 
+        data-target={`sources-${anchorId}`}
+      >
+        <span class="toggle-text">Sources & Citations ({sourcesCount})</span>
+        <svg class="toggle-icon" viewBox="0 0 20 20" width="16" height="16" fill="currentColor">
+          <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+        </svg>
+      </button>
+
+      <div class="sources-drawer" id={`sources-${anchorId}`}>
+        <div class="sources-drawer-inner">
+          <ul class="sources-list">
+            {sourcesList.map(src => (
+              <li class="source-item">
+                <span class="source-bullet">•</span>
+                <span class="source-content" set:html={src.replace(/(https?:\/\/[^\s>]+)/g, '<a href="$1" target="_blank" rel="noopener noreferrer" class="citation-link">$1</a>')} />
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- Footer Actions -->
+  <footer class="tip-footer">
+    <button type="button" class="action-btn mark-read-btn" data-tip-id={tip.id}>
+      <svg class="action-icon check-icon" viewBox="0 0 20 20" width="16" height="16" fill="currentColor">
+        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+      </svg>
+      <span class="btn-text">Mark Read</span>
+    </button>
+
+    <button type="button" class="action-btn pick-btn" data-tip-id={tip.id} aria-label="Save to My Picks">
+      <svg class="action-icon bookmark-icon" viewBox="0 0 20 20" width="16" height="16" fill="currentColor">
+        <path d="M5 4a2 2 0 012-2h6a2 2 0 012 2v14l-5-2.5L5 18V4z" />
+      </svg>
+      <span class="btn-text">Save</span>
+    </button>
+
+    <button type="button" class="action-btn copy-link-btn" data-anchor={anchorId} aria-label="Copy Link">
+      <svg class="action-icon link-icon" viewBox="0 0 20 20" width="16" height="16" fill="currentColor">
+        <path fill-rule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z" clip-rule="evenodd" />
+      </svg>
+      <span class="btn-text">Copy</span>
+    </button>
+  </footer>
+</article>
+
+<style>
+  .tip-card {
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    transition: transform var(--dur-fast) var(--ease-out);
+    content-visibility: auto;
+    contain-intrinsic-size: 1px 400px;
+  }
+
+  .tip-header {
+    margin-bottom: 1.25rem;
+  }
+
+  .tip-title-row {
+    display: flex;
+    align-items: baseline;
+    gap: 0.65rem;
+    margin-bottom: 0.85rem;
+  }
+
+  .tip-anchor-link {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .tip-id-badge {
+    font-family: var(--font-sans);
+    font-weight: 800;
+    font-size: 0.95rem;
+    background: var(--color-ink);
+    color: var(--color-mist);
+    padding: 2px 7px;
+    border-radius: 6px;
+    letter-spacing: -0.02em;
+  }
+
+  [data-theme="light"] .tip-id-badge {
+    background: #04110F;
+    color: #FFFFFF;
+  }
+
+  .tip-title {
+    font-family: var(--font-sans);
+    font-weight: 700;
+    font-size: 1.28rem;
+    line-height: 1.35;
+    letter-spacing: -0.015em;
+    color: var(--theme-text);
+  }
+
+  .tip-chips-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  .evidence-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .evidence-ring {
+    color: var(--color-ink);
+  }
+
+  .lead-section {
+    margin-bottom: 1.25rem;
+    padding-bottom: 1.15rem;
+    border-bottom: 1px solid rgba(232, 241, 239, 0.12);
+  }
+
+  [data-theme="light"] .lead-section {
+    border-bottom-color: rgba(4, 17, 15, 0.1);
+  }
+
+  .in-plain-words {
+    font-family: var(--font-serif);
+    font-size: 1.12rem;
+    font-weight: 500;
+    line-height: 1.68;
+    color: var(--theme-text);
+  }
+
+  .metrics-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+  }
+
+  @media (min-width: 640px) {
+    .metrics-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .metric-block {
+    background: rgba(0, 0, 0, 0.16);
+    border-radius: 12px;
+    padding: 0.85rem 1rem;
+  }
+
+  [data-theme="light"] .metric-block {
+    background: rgba(0, 0, 0, 0.03);
+  }
+
+  .metric-label {
+    display: block;
+    font-family: var(--font-sans);
+    font-size: 0.76rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.3rem;
+  }
+
+  .cost-block .metric-label {
+    color: var(--color-amber);
+  }
+
+  .benefit-block .metric-label {
+    color: var(--color-jade);
+  }
+
+  .metric-text {
+    font-size: 0.92rem;
+    line-height: 1.55;
+    color: var(--theme-text);
+  }
+
+  .caveats-section {
+    margin-bottom: 1.25rem;
+    background: rgba(143, 179, 217, 0.08);
+    border-left: 3px solid var(--color-steel);
+    padding: 0.75rem 1rem;
+    border-radius: 0 10px 10px 0;
+  }
+
+  .caveats-label {
+    display: block;
+    font-family: var(--font-sans);
+    font-size: 0.76rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--color-steel);
+    margin-bottom: 0.35rem;
+  }
+
+  .caveats-text {
+    font-size: 0.92rem;
+    line-height: 1.6;
+    color: var(--theme-text);
+  }
+
+  /* Sources Drawer Animation (grid-rows 0fr to 1fr) */
+  .sources-section {
+    margin-bottom: 1.25rem;
+  }
+
+  .sources-toggle-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0.6rem 0.85rem;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: var(--theme-text-muted);
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: background var(--dur-fast), color var(--dur-fast);
+  }
+
+  .sources-toggle-btn:hover {
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--theme-text);
+  }
+
+  .toggle-icon {
+    transition: transform var(--dur-base) var(--ease-out);
+  }
+
+  .sources-toggle-btn[aria-expanded="true"] .toggle-icon {
+    transform: rotate(180deg);
+  }
+
+  .sources-drawer {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows var(--dur-settle) var(--ease-out);
+  }
+
+  .sources-toggle-btn[aria-expanded="true"] + .sources-drawer {
+    grid-template-rows: 1fr;
+  }
+
+  .sources-drawer-inner {
+    overflow: hidden;
+  }
+
+  .sources-list {
+    list-style: none;
+    padding: 0.75rem 0.5rem 0.25rem;
+  }
+
+  .source-item {
+    display: flex;
+    gap: 0.5rem;
+    font-size: 0.82rem;
+    line-height: 1.5;
+    color: var(--theme-text-muted);
+    margin-bottom: 0.5rem;
+  }
+
+  .source-bullet {
+    color: var(--color-steel);
+  }
+
+  :global(.citation-link) {
+    color: var(--color-steel);
+    text-decoration: underline;
+    word-break: break-all;
+  }
+
+  /* Tip Card Footer Actions */
+  .tip-footer {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(232, 241, 239, 0.08);
+  }
+
+  .action-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 14px;
+    min-height: 44px; /* Touch target >= 44px */
+    border-radius: var(--radius-capsule);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--theme-text);
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform var(--dur-fast) var(--spring-overshoot), background var(--dur-fast);
+  }
+
+  .action-btn:hover {
+    background: rgba(255, 255, 255, 0.12);
+  }
+
+  .action-btn:active {
+    transform: scale(0.96);
+  }
+
+  .mark-read-btn.is-read {
+    background: var(--color-jade);
+    color: var(--color-ink);
+    border-color: var(--color-ink);
+  }
+
+  .pick-btn.is-picked {
+    background: var(--color-amber);
+    color: var(--color-ink);
+    border-color: var(--color-ink);
+  }
+</style>
+
+<script>
+  // Handle Sources Drawer Expansion on click
+  document.addEventListener('click', (e) => {
+    const target = e.target as HTMLElement;
+    const btn = target.closest('.sources-toggle-btn');
+    if (btn) {
+      const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!isExpanded));
+    }
+  });
+</script>

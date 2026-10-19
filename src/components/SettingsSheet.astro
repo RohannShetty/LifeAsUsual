@@ -1,0 +1,383 @@
+---
+---
+
+<div id="settings-backdrop" class="settings-backdrop" aria-hidden="true"></div>
+
+<aside 
+  id="settings-sheet" 
+  class="liquid-glass settings-sheet" 
+  role="dialog" 
+  aria-modal="true" 
+  aria-labelledby="settings-title"
+  aria-hidden="true"
+>
+  <header class="sheet-header">
+    <div class="sheet-title-row">
+      <h2 id="settings-title" class="sheet-title">Reading Settings</h2>
+      <button type="button" id="close-settings-btn" class="close-btn" aria-label="Close Settings">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"/>
+          <line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <div class="sheet-body">
+    <!-- Theme Selection -->
+    <div class="setting-group">
+      <label class="setting-label">Theme</label>
+      <div class="toggle-group" id="theme-toggles">
+        <button type="button" class="toggle-pill is-selected" data-theme="dark">Dark</button>
+        <button type="button" class="toggle-pill" data-theme="light">Light</button>
+        <button type="button" class="toggle-pill" data-theme="auto">System</button>
+      </div>
+    </div>
+
+    <!-- Font Family Selection -->
+    <div class="setting-group">
+      <label class="setting-label">Typography</label>
+      <div class="toggle-group" id="font-toggles">
+        <button type="button" class="toggle-pill is-selected" data-font="serif">Literata Serif</button>
+        <button type="button" class="toggle-pill" data-font="sans">Bricolage Sans</button>
+      </div>
+    </div>
+
+    <!-- Text Size Selection -->
+    <div class="setting-group">
+      <label class="setting-label">Text Size</label>
+      <div class="toggle-group" id="size-toggles">
+        <button type="button" class="toggle-pill" data-size="16px">Small</button>
+        <button type="button" class="toggle-pill is-selected" data-size="17.5px">Standard</button>
+        <button type="button" class="toggle-pill" data-size="19.5px">Large</button>
+      </div>
+    </div>
+
+    <!-- Comic Effects Master Switch (Section 7) -->
+    <div class="setting-row">
+      <div>
+        <label for="comic-toggle" class="setting-label">Comic Effects</label>
+        <p class="setting-desc">Plus & Minus characters, dialogue bubbles, and action stickers</p>
+      </div>
+      <input type="checkbox" id="comic-toggle" class="switch-input" checked />
+    </div>
+
+    <!-- Reduce Transparency Switch -->
+    <div class="setting-row">
+      <div>
+        <label for="transparency-toggle" class="setting-label">Reduce Transparency</label>
+        <p class="setting-desc">Replaces blur filters with high-contrast opaque surfaces</p>
+      </div>
+      <input type="checkbox" id="transparency-toggle" class="switch-input" />
+    </div>
+  </div>
+</aside>
+
+<style>
+  .settings-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    opacity: 0;
+    pointer-events: none;
+    z-index: 150;
+    transition: opacity var(--dur-base) var(--ease-out);
+  }
+
+  .settings-backdrop.is-open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .settings-sheet {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-width: 520px;
+    margin: 0 auto;
+    border-radius: var(--radius-outer) var(--radius-outer) 0 0;
+    padding: 1.5rem 1.25rem calc(1.5rem + env(safe-area-inset-bottom, 0px));
+    transform: translateY(105%);
+    transition: transform var(--dur-settle) var(--spring-overshoot);
+    z-index: 200;
+  }
+
+  .settings-sheet.is-open {
+    transform: translateY(0);
+  }
+
+  .sheet-header {
+    margin-bottom: 1.5rem;
+  }
+
+  .sheet-title-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .sheet-title {
+    font-family: var(--font-comic);
+    font-size: 1.35rem;
+    color: var(--color-jade);
+    letter-spacing: -0.01em;
+  }
+
+  .close-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    color: var(--theme-text);
+    cursor: pointer;
+    transition: background var(--dur-fast);
+  }
+
+  .close-btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+  }
+
+  .sheet-body {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .setting-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .setting-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .setting-label {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--theme-text);
+  }
+
+  .setting-desc {
+    font-size: 0.8rem;
+    line-height: 1.35;
+    color: var(--theme-text-muted);
+  }
+
+  .toggle-group {
+    display: flex;
+    gap: 0.5rem;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 4px;
+    border-radius: var(--radius-capsule);
+  }
+
+  .toggle-pill {
+    flex: 1;
+    padding: 7px 10px;
+    min-height: 38px;
+    background: transparent;
+    border: none;
+    border-radius: var(--radius-capsule);
+    color: var(--theme-text-muted);
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background var(--dur-fast), color var(--dur-fast), transform var(--dur-fast);
+  }
+
+  .toggle-pill:active {
+    transform: scale(0.96);
+  }
+
+  .toggle-pill.is-selected {
+    background: var(--color-jade);
+    color: var(--color-ink);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  }
+
+  /* Switch Input */
+  .switch-input {
+    width: 44px;
+    height: 24px;
+    appearance: none;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 9999px;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    transition: background var(--dur-fast);
+  }
+
+  .switch-input::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    top: 2px;
+    left: 2px;
+    background: #FFFFFF;
+    transition: transform var(--dur-fast) var(--spring-overshoot);
+  }
+
+  .switch-input:checked {
+    background: var(--color-jade);
+  }
+
+  .switch-input:checked::before {
+    transform: translateX(20px);
+  }
+</style>
+
+<script>
+  // Reading Settings Controller
+  const sheet = document.getElementById('settings-sheet');
+  const backdrop = document.getElementById('settings-backdrop');
+  const closeBtn = document.getElementById('close-settings-btn');
+  const openBtns = [
+    document.getElementById('open-settings-btn'),
+    document.getElementById('desktop-settings-btn')
+  ].filter(Boolean);
+
+  function openSheet() {
+    sheet?.classList.add('is-open');
+    backdrop?.classList.add('is-open');
+    sheet?.setAttribute('aria-hidden', 'false');
+    backdrop?.setAttribute('aria-hidden', 'false');
+  }
+
+  function closeSheet() {
+    sheet?.classList.remove('is-open');
+    backdrop?.classList.remove('is-open');
+    sheet?.setAttribute('aria-hidden', 'true');
+    backdrop?.setAttribute('aria-hidden', 'true');
+  }
+
+  openBtns.forEach(btn => btn?.addEventListener('click', openSheet));
+  closeBtn?.addEventListener('click', closeSheet);
+  backdrop?.addEventListener('click', closeSheet);
+
+  // Settings State in localStorage
+  interface Settings {
+    theme: string;
+    font: string;
+    textSize: string;
+    comicEffects: boolean;
+    reduceTransparency: boolean;
+  }
+
+  const STORAGE_KEY = 'htlb_settings_v1';
+
+  function loadSettings(): Settings {
+    try {
+      const saved = localStorage.getItem(STORAGE_KEY);
+      if (saved) return JSON.parse(saved);
+    } catch {}
+    return {
+      theme: 'dark',
+      font: 'serif',
+      textSize: '17.5px',
+      comicEffects: true,
+      reduceTransparency: false,
+    };
+  }
+
+  function applySettings(s: Settings) {
+    const root = document.documentElement;
+
+    // Apply Theme
+    if (s.theme === 'auto') {
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      root.setAttribute('data-theme', prefersDark ? 'dark' : 'light');
+    } else {
+      root.setAttribute('data-theme', s.theme);
+    }
+
+    // Apply Font
+    root.style.setProperty('--font-serif', s.font === 'sans' ? 'var(--font-sans)' : '"Literata", Georgia, serif');
+
+    // Apply Text Size
+    root.style.setProperty('--text-body-size', s.textSize);
+
+    // Apply Comic Effects
+    root.setAttribute('data-comic-effects', s.comicEffects ? 'on' : 'off');
+
+    // Apply Transparency
+    root.setAttribute('data-reduce-transparency', s.reduceTransparency ? 'true' : 'false');
+
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(s));
+    } catch {}
+  }
+
+  // Initialize
+  const currentSettings = loadSettings();
+  applySettings(currentSettings);
+
+  // Theme Toggles
+  document.querySelectorAll('#theme-toggles .toggle-pill').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      document.querySelectorAll('#theme-toggles .toggle-pill').forEach(b => b.classList.remove('is-selected'));
+      const target = e.currentTarget as HTMLElement;
+      target.classList.add('is-selected');
+      currentSettings.theme = target.dataset.theme || 'dark';
+      applySettings(currentSettings);
+    });
+  });
+
+  // Font Toggles
+  document.querySelectorAll('#font-toggles .toggle-pill').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      document.querySelectorAll('#font-toggles .toggle-pill').forEach(b => b.classList.remove('is-selected'));
+      const target = e.currentTarget as HTMLElement;
+      target.classList.add('is-selected');
+      currentSettings.font = target.dataset.font || 'serif';
+      applySettings(currentSettings);
+    });
+  });
+
+  // Size Toggles
+  document.querySelectorAll('#size-toggles .toggle-pill').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      document.querySelectorAll('#size-toggles .toggle-pill').forEach(b => b.classList.remove('is-selected'));
+      const target = e.currentTarget as HTMLElement;
+      target.classList.add('is-selected');
+      currentSettings.textSize = target.dataset.size || '17.5px';
+      applySettings(currentSettings);
+    });
+  });
+
+  // Comic Switch
+  const comicToggle = document.getElementById('comic-toggle') as HTMLInputElement | null;
+  if (comicToggle) {
+    comicToggle.checked = currentSettings.comicEffects;
+    comicToggle.addEventListener('change', () => {
+      currentSettings.comicEffects = comicToggle.checked;
+      applySettings(currentSettings);
+    });
+  }
+
+  // Transparency Switch
+  const transToggle = document.getElementById('transparency-toggle') as HTMLInputElement | null;
+  if (transToggle) {
+    transToggle.checked = currentSettings.reduceTransparency;
+    transToggle.addEventListener('change', () => {
+      currentSettings.reduceTransparency = transToggle.checked;
+      applySettings(currentSettings);
+    });
+  }
+</script>
