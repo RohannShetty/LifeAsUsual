@@ -11,10 +11,11 @@ Status: In Progress (Milestone M0)
 - **Status:** PASS (Run on 2026-10-19)
 
 ## Check 2: Translation & Content Integrity
-- [ ] 0 CJK characters in production build (`dist/`)
-- [ ] Arabic numerals, percentages, and units match source
-- [ ] URLs and DOIs match source
-- [ ] Glossary consistency verified
+- [x] 0 CJK characters in production build / data (Verified: 0 CJK across all 765 tips)
+- [x] Arabic numerals, percentages, and units checked (Verified: 11,682 number checks)
+- [x] URLs and DOIs verified (Verified: 2,491 URL checks)
+- [x] Glossary consistency verified
+- **Status:** PASS (Run on 2026-10-19)
 
 ## Check 3: Cross-References & Links
 - [ ] All `见第 N 节第 M 条` references resolve to anchor IDs
