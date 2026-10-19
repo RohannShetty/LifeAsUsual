@@ -10,10 +10,10 @@
 
 ## 2. Phase 2: Reading Engine & Progress System (Milestone M3.2)
 
-- [ ] 2.1 Implement `src/scripts/read-tracker.ts` client-side island using a shared `IntersectionObserver` to detect when a tip card is 50% visible for max(1.5s, min(6s, 40% of reading time at 230wpm)). Verify read state fires on sustained visibility and ignores fast flick scrolling. *(Tools/Skills: IntersectionObserver API, client-side TypeScript)*
-- [ ] 2.2 Implement `src/scripts/storage-ledger.ts` managing versioned `localStorage` storage for read tip IDs, picks, per-day counts, streaks, with JSON export, JSON import, and reset actions. Verify data round-trip via export/import. *(Tools/Skills: Robust error handling, Blob file download)*
-- [ ] 2.3 Implement `src/components/ReadingMap.astro` rendering 765 inline SVG glass beads grouped by chapter that light up when read and navigate to tip anchors on click. Verify SVG responsiveness and text table accessibility fallback. *(Tools/Skills: SVG generation, accessibility WCAG tables)*
-- [ ] 2.4 Implement `src/components/ProgressRing.astro` SVG circular progress ring displaying "N of 765 tips read". Verify SVG stroke-dashoffset animation. *(Tools/Skills: Pure SVG/CSS animations, zero external chart libraries)*
+- [x] 2.1 Implement `src/scripts/read-tracker.ts` client-side island using a shared `IntersectionObserver` to detect when a tip card is 50% visible for max(1.5s, min(6s, 40% of reading time at 230wpm)). Verify read state fires on sustained visibility and ignores fast flick scrolling. *(Tools/Skills: IntersectionObserver API, client-side TypeScript)*
+- [x] 2.2 Implement `src/scripts/storage-ledger.ts` managing versioned `localStorage` storage for read tip IDs, picks, per-day counts, streaks, with JSON export, JSON import, and reset actions. Verify data round-trip via export/import. *(Tools/Skills: Robust error handling, Blob file download)*
+- [x] 2.3 Implement `src/components/ReadingMap.astro` rendering 765 inline SVG glass beads grouped by chapter that light up when read and navigate to tip anchors on click. Verify SVG responsiveness and text table accessibility fallback. *(Tools/Skills: SVG generation, accessibility WCAG tables)*
+- [x] 2.4 Implement `src/components/ProgressRing.astro` SVG circular progress ring displaying "N of 765 tips read". Verify SVG stroke-dashoffset animation. *(Tools/Skills: Pure SVG/CSS animations, zero external chart libraries)*
 
 ## 3. Phase 3: Chapter Reader & Core Application Routes (Milestone M3.3)
 

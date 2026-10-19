@@ -1,0 +1,140 @@
+---
+interface Props {
+  size?: number;
+  strokeWidth?: number;
+}
+
+const { size = 120, strokeWidth = 10 } = Astro.props;
+
+const radius = (size - strokeWidth) / 2;
+const circumference = 2 * Math.PI * radius;
+---
+
+<div class="progress-ring-card" style={`--ring-size: ${size}px;`}>
+  <div class="ring-wrapper">
+    <svg 
+      class="progress-ring-svg" 
+      width={size} 
+      height={size} 
+      viewBox={`0 0 ${size} ${size}`}
+      aria-hidden="true"
+    >
+      <!-- Background Track -->
+      <circle
+        class="ring-track"
+        cx={size / 2}
+        cy={size / 2}
+        r={radius}
+        stroke-width={strokeWidth}
+      />
+      <!-- Animated Progress Bar -->
+      <circle
+        class="ring-bar"
+        id="progress-ring-circle"
+        cx={size / 2}
+        cy={size / 2}
+        r={radius}
+        stroke-width={strokeWidth}
+        stroke-dasharray={circumference}
+        stroke-dashoffset={circumference}
+        style={`--circumference: ${circumference};`}
+      />
+    </svg>
+
+    <div class="ring-content">
+      <span class="ring-percent" id="ring-percent-text">0%</span>
+      <span class="ring-label" id="ring-count-text">0 / 765</span>
+    </div>
+  </div>
+</div>
+
+<style>
+  .progress-ring-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ring-wrapper {
+    position: relative;
+    width: var(--ring-size);
+    height: var(--ring-size);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .progress-ring-svg {
+    transform: rotate(-90deg);
+  }
+
+  .ring-track {
+    fill: none;
+    stroke: rgba(255, 255, 255, 0.1);
+  }
+
+  [data-theme="light"] .ring-track {
+    stroke: rgba(4, 17, 15, 0.1);
+  }
+
+  .ring-bar {
+    fill: none;
+    stroke: var(--color-jade);
+    stroke-linecap: round;
+    transition: stroke-dashoffset var(--dur-settle) var(--ease-out);
+  }
+
+  .ring-content {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+  }
+
+  .ring-percent {
+    font-family: var(--font-sans);
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: var(--theme-text);
+    line-height: 1.1;
+  }
+
+  .ring-label {
+    font-family: var(--font-sans);
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--theme-text-muted);
+  }
+</style>
+
+<script>
+  import { subscribeLedger } from '../scripts/storage-ledger';
+
+  function initRingSync() {
+    const ring = document.getElementById('progress-ring-circle');
+    const percentEl = document.getElementById('ring-percent-text');
+    const countEl = document.getElementById('ring-count-text');
+
+    if (!ring) return;
+
+    const circumference = parseFloat(ring.getAttribute('stroke-dasharray') || '300');
+
+    subscribeLedger((state) => {
+      const readCount = state.readTipIds.length;
+      const total = 765;
+      const percent = Math.min(100, Math.round((readCount / total) * 100));
+
+      const offset = circumference - (percent / 100) * circumference;
+      ring.style.strokeDashoffset = String(offset);
+
+      if (percentEl) percentEl.textContent = `${percent}%`;
+      if (countEl) countEl.textContent = `${readCount} / ${total}`;
+    });
+  }
+
+  if (typeof window !== 'undefined') {
+    document.addEventListener('astro:page-load', initRingSync);
+  }
+</script>

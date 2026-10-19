@@ -1,0 +1,239 @@
+---
+import fs from 'node:fs';
+import path from 'node:path';
+import type { EnglishChapter } from '../../scripts/ingest-parveen';
+
+// Load all chapters at build time
+const enAllPath = path.resolve('data/en/all-chapters.json');
+let chapters: EnglishChapter[] = [];
+try {
+  chapters = JSON.parse(fs.readFileSync(enAllPath, 'utf-8'));
+} catch (e) {
+  console.warn('Could not load data/en/all-chapters.json:', e);
+}
+---
+
+<div class="reading-map-card liquid-glass">
+  <header class="map-header">
+    <div class="map-title-row">
+      <h3 class="map-title">Reading Map</h3>
+      <span class="comic-sticker sticker-benefit map-stat-chip" id="map-read-counter">
+        0 / 765 Beads
+      </span>
+    </div>
+    <p class="map-desc">
+      765 glass beads representing every tip in the book. Beads light up as you read. Tap any bead to jump straight to that tip.
+    </p>
+  </header>
+
+  <!-- Visual Bead Map (765 Glass Beads grouped by Chapter) -->
+  <div class="beads-container" aria-hidden="true">
+    {chapters.map(ch => (
+      <div class="chapter-cluster" data-chapter={ch.chapter}>
+        <div class="cluster-header">
+          <span class="cluster-num">Ch {ch.chapter}</span>
+          <span class="cluster-count">{ch.tips.length}</span>
+        </div>
+        <div class="cluster-beads">
+          {ch.tips.map(tip => (
+            <a 
+              href={`/chapters/${String(ch.chapter).padStart(2, '0')}-${ch.slug}/#${tip.chapter}-${tip.tip}`} 
+              class="map-bead" 
+              data-tip-id={tip.id}
+              title={`Tip ${tip.chapter}.${tip.tip}: ${tip.title}`}
+              aria-label={`Tip ${tip.chapter}.${tip.tip}: ${tip.title}`}
+            >
+              <span class="bead-dot"></span>
+            </a>
+          ))}
+        </div>
+      </div>
+    ))}
+  </div>
+
+  <!-- Accessible Table Alternative (Section 6 Requirement) -->
+  <details class="sr-only-details">
+    <summary>Accessible text summary of reading map</summary>
+    <table class="accessibility-table">
+      <caption>Reading progress by chapter</caption>
+      <thead>
+        <tr>
+          <th scope="col">Chapter</th>
+          <th scope="col">Total Tips</th>
+          <th scope="col">Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        {chapters.map(ch => (
+          <tr>
+            <td>{ch.chapter}. {ch.title}</td>
+            <td>{ch.tips.length}</td>
+            <td id={`sr-ch-${ch.chapter}-status`}>Pending</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </details>
+</div>
+
+<style>
+  .reading-map-card {
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .map-header {
+    margin-bottom: 1.5rem;
+  }
+
+  .map-title-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+  }
+
+  .map-title {
+    font-family: var(--font-comic);
+    font-size: 1.35rem;
+    color: var(--color-jade);
+  }
+
+  .map-desc {
+    font-size: 0.88rem;
+    line-height: 1.5;
+    color: var(--theme-text-muted);
+  }
+
+  .beads-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-height: 520px;
+    overflow-y: auto;
+    padding-right: 0.5rem;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-jade) transparent;
+  }
+
+  .chapter-cluster {
+    background: rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 0.75rem 0.85rem;
+  }
+
+  [data-theme="light"] .chapter-cluster {
+    background: rgba(0, 0, 0, 0.03);
+    border-color: rgba(4, 17, 15, 0.06);
+  }
+
+  .cluster-header {
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--theme-text-muted);
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .cluster-beads {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .map-bead {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform var(--dur-fast) var(--spring-overshoot), background var(--dur-fast), box-shadow var(--dur-fast);
+  }
+
+  .map-bead:hover {
+    transform: scale(1.35);
+    background: rgba(255, 255, 255, 0.35);
+  }
+
+  .map-bead.is-read {
+    background: var(--color-jade);
+    border-color: var(--color-ink);
+    box-shadow: 
+      0 0 8px rgba(70, 217, 160, 0.6),
+      inset 0 1px 1px rgba(255, 255, 255, 0.8);
+  }
+
+  [data-theme="light"] .map-bead {
+    background: rgba(4, 17, 15, 0.1);
+    border-color: rgba(4, 17, 15, 0.2);
+  }
+
+  [data-theme="light"] .map-bead.is-read {
+    background: var(--color-jade);
+    border-color: var(--color-ink);
+  }
+
+  /* Accessible Screen Reader Table */
+  .sr-only-details {
+    margin-top: 1rem;
+    font-size: 0.82rem;
+    color: var(--theme-text-muted);
+  }
+
+  .accessibility-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 0.5rem;
+  }
+
+  .accessibility-table th, 
+  .accessibility-table td {
+    padding: 4px 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: left;
+  }
+</style>
+
+<script>
+  import { subscribeLedger } from '../scripts/storage-ledger';
+
+  function initMapSync() {
+    const counter = document.getElementById('map-read-counter');
+    const beads = document.querySelectorAll('.map-bead');
+
+    subscribeLedger((state) => {
+      const readSet = new Set(state.readTipIds);
+      let count = 0;
+
+      beads.forEach((b) => {
+        const bead = b as HTMLElement;
+        const tipId = bead.dataset.tipId;
+        if (tipId && readSet.has(tipId)) {
+          bead.classList.add('is-read');
+          count++;
+        } else {
+          bead.classList.remove('is-read');
+        }
+      });
+
+      if (counter) {
+        counter.textContent = `${count} / 765 Beads`;
+      }
+    });
+  }
+
+  if (typeof window !== 'undefined') {
+    document.addEventListener('astro:page-load', initMapSync);
+  }
+</script>
