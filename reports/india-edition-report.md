@@ -78,8 +78,12 @@ titles that name a place and titles that do not; that is a consequence of the ga
 - Tier A human review is outstanding for the legal, medical and financial chapters.
 - A source pack exists for every chapter; official portals that returned 403 or DNS failures are
   recorded in the per-chapter packs.
-- The final merge to master and the Pages deployment are the publishing step and are not performed
-  until verification and the full suite pass.
+- The merge to master is prepared: `master` was fast-forwarded to the verified tip (68564c4) and
+  `npm run verify:india -- --final` is green on it. The push is rejected by GitHub: the local
+  `gh` OAuth token carries the scopes `gist`, `read:org` and `repo` but not `workflow`, and the
+  push adds `.github/workflows/india-verify.yml`. Pushing workflow files requires the `workflow`
+  scope. Fix with `gh auth refresh -h github.com -s workflow`, then `git push origin master`.
+  The Pages deploy workflow (`deploy.yml`) is unchanged by this edition.
 
 ## 6. Rollback
 
