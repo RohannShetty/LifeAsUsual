@@ -3,7 +3,7 @@
 ## 1. Verification infrastructure
 
 - [x] 1.1 Add scripts/verify-india.ts to validate manifest-declared chapters: 34/34 chapters and 765/765 tips in final mode, required fields, unique IDs, banned terms, official source domains, review status and matching verification reports. Verify with npm run verify:india on the current one-chapter state and with a deliberately broken fixture that must exit non-zero.
-- [ ] 1.2 Add scripts/scan-dist-terms.mjs to scan built HTML for China, Chinese, mainland, RMB, yuan, hukou, yibao, dibao and CNY. Verify the current Chapter 19 page reports 0 hits and an injected fixture term fails.
+- [x] 1.2 Add scripts/scan-dist-terms.mjs to scan built HTML for China, Chinese, mainland, RMB, yuan, hukou, yibao, dibao and CNY. Verify the current Chapter 19 page reports 0 hits and an injected fixture term fails.
 - [x] 1.3 Add data/en-in/manifest.json with chapter status, verifier, verifiedAt, sourceCount, humanReview, openIssues and bannedTerms. Verify the India page and worklist read their completed/queued lists from it.
 - [x] 1.4 Add reports/source-packs/_template.md and reports/verification/_template.md with claim, source, section, access date, verdict and open-issue fields. Verify the Chapter 19 source pack and verification report use the templates.
 - [x] 1.5 Add tests/india-rewrite.spec.ts covering banned terms, draft/checked badge, chapter notice, no horizontal overflow and reading-state persistence. Verify with npx playwright test tests/india-rewrite.spec.ts across 360, 390, 768 and 1440.

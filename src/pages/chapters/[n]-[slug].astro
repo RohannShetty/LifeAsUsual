@@ -7,6 +7,7 @@ import Character from '../../cast/Character.astro';
 import Bubble from '../../cast/Bubble.astro';
 import IndiaNotice from '../../components/IndiaNotice.astro';
 import calmChapters from '../../../data/calm-chapters.json';
+import manifest from '../../../data/en-in/manifest.json';
 import type { EnglishChapter } from '../../../scripts/ingest-parveen';
 import { resolvePath } from '../../utils/paths';
 
@@ -43,6 +44,11 @@ const isCalm = calmChapters.includes(chapter.chapter);
 const isIndiaRewrite = chapter.edition === 'india';
 const rewriteStatus = (chapter as { rewriteStatus?: string }).rewriteStatus ?? 'draft';
 const isCheckedChapter = rewriteStatus === 'checked' || rewriteStatus === 'reviewed';
+// Tier A chapters (legal, medical, financial) cannot be reviewed without a named
+// human reviewer, so a checked Tier A chapter stays a checked draft in the UI.
+const manifestEntry = (manifest as { chapters: Record<string, { tier?: string; humanReview?: string }> }).chapters[String(chapter.chapter)];
+const pendingHumanReview =
+  isIndiaRewrite && isCheckedChapter && manifestEntry?.tier === 'A' && manifestEntry?.humanReview !== 'signed-off';
 ---
 
 <BaseLayout 
@@ -76,8 +82,10 @@ const isCheckedChapter = rewriteStatus === 'checked' || rewriteStatus === 'revie
     {isIndiaRewrite ? (
       <aside class="rewrite-notice" id="india-rewrite-notice" data-rewrite-status={rewriteStatus}>
         <span class="rewrite-badge">IN</span>
-        {isCheckedChapter ? (
-          <p><strong>India rewrite.</strong> This chapter has been rewritten for Indian law and practice and checked against official Indian sources. Legal, medical and financial chapters stay pending named human review. <a href={resolvePath('/india/')}>Coverage and sources →</a></p>
+        {pendingHumanReview ? (
+          <p><strong>India rewrite.</strong> This chapter has been rewritten for Indian law and practice and checked against official Indian sources. It covers legal, medical or financial claims, so it stays a checked draft until a named human reviewer signs off. <a href={resolvePath('/india/')}>Coverage and sources →</a></p>
+        ) : isCheckedChapter ? (
+          <p><strong>India rewrite.</strong> This chapter has been rewritten for Indian law and practice and checked against official Indian sources. <a href={resolvePath('/india/')}>Coverage and sources →</a></p>
         ) : (
           <p><strong>India rewrite.</strong> This chapter has been rewritten for Indian law and practice. It is a draft pending independent verification. <a href={resolvePath('/india/')}>Coverage and sources →</a></p>
         )}
@@ -92,7 +100,7 @@ const isCheckedChapter = rewriteStatus === 'checked' || rewriteStatus === 'revie
       <h1 class="chapter-main-title">{chapter.title}</h1>
       <p class="chapter-meta-line">
         {isIndiaRewrite
-          ? chapter.tips.length + ' tips rewritten for India; ' + (isCheckedChapter ? 'checked against official Indian sources.' : 'drafts pending independent verification.')
+          ? chapter.tips.length + ' tips rewritten for India; ' + (pendingHumanReview ? 'checked against official Indian sources; human review pending.' : isCheckedChapter ? 'checked against official Indian sources.' : 'drafts pending independent verification.')
           : chapter.tips.length + ' verified tips in this chapter. Each tip is an option, not an assignment.'}
       </p>
     </header>
@@ -100,7 +108,7 @@ const isCheckedChapter = rewriteStatus === 'checked' || rewriteStatus === 'revie
     <!-- Tips List -->
     <section class="tips-stream">
       {chapter.tips.map(tip => (
-        <TipCard tip={tip} />
+        <TipCard tip={tip} pendingHumanReview={pendingHumanReview} />
       ))}
     </section>
 

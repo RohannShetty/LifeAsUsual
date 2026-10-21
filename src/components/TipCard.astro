@@ -5,9 +5,13 @@ import indiaGuidance from '../../data/india-chapter-guidance.json';
 
 interface Props {
   tip: EnglishTip;
+  // A checked Tier A chapter (legal, medical or financial) remains a checked
+  // draft until a named human reviewer signs off, so it keeps a draft badge.
+  pendingHumanReview?: boolean;
 }
 
 const { tip } = Astro.props;
+const pendingHumanReview = Astro.props.pendingHumanReview === true;
 
 // Evidence ring styling
 const evidenceGrade = tip.evidenceGrade; // A, B, C
@@ -116,6 +120,12 @@ if (isIndiaTip) {
         {tip.reviewStatus === 'draft' && (
           <span class="editorial-badge badge-draft" title="Rewritten for India; pending independent verification">
             Draft rewrite
+          </span>
+        )}
+
+        {tip.reviewStatus === 'independently-checked' && pendingHumanReview && (
+          <span class="editorial-badge badge-draft" title="Checked against official Indian sources; awaiting named human review">
+            Draft: human review pending
           </span>
         )}
 

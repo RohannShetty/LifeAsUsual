@@ -751,7 +751,7 @@ export const guidesData: GuideItem[] = [
     slug: 'should-you-stop-for-a-stranger-in-trouble',
     title: 'Encountering a Stranger in Trouble: Walk Away or Stop and Help?',
     subtitle: 'A cost-benefit breakdown across legal liability, bystander risks, and emergency procedures',
-    summary: 'An objective analysis of the three courses of action when encountering an injured stranger or sudden collapse in public. Details Civil Code Article 184 protections and defensive evidence protocols.',
+    summary: 'An objective analysis of the three courses of action when encountering an injured stranger or sudden collapse in public. Details the section 134A Good Samaritan protection under the Motor Vehicles Act, 1988, and defensive evidence protocols.',
     readingTime: '5 min read',
     sourceFile: 'guide.md',
     sections: [
@@ -760,8 +760,8 @@ export const guidesData: GuideItem[] = [
         table: {
           headers: ['Dimension', '1. Walk Away', '2. Stop But Do Not Touch', '3. Stop and Provide Direct Care'],
           rows: [
-            ['Legality', 'Fully legal under PRC law (no statutory duty for ordinary citizens to rescue strangers)', 'Fully legal', 'Fully legal'],
-            ['Time Outlay', '0 minutes', 'A few minutes (making 120 / 110 call)', 'Hours (accompanying ambulance to emergency department)'],
+            ['Legality', 'Fully legal under Indian law (section 134A of the Motor Vehicles Act, 1988 protects a Good Samaritan; no statute compels an ordinary citizen to rescue a stranger)', 'Fully legal', 'Fully legal'],
+            ['Time Outlay', '0 minutes', 'A few minutes (making an 112 call)', 'Hours (accompanying ambulance to emergency department)'],
             ['Extortion / Dispute Risk', 'Absolute lowest', 'Low (phone number is logged with dispatch)', 'Highest (immediate physical proximity before cameras verified)'],
             ['Benefit to Stranger', '0 benefit', 'Substantial (ambulance dispatched earlier)', 'Maximum possible rescue impact']
           ]
@@ -782,7 +782,7 @@ export const guidesData: GuideItem[] = [
             tipRef: { chapter: 13, tip: 2, label: 'Document scene before assisting' }
           },
           {
-            text: 'Loudly recruit adjacent bystanders: "Let us call 120 together and look after this person together" to eliminate single-witness vulnerability.',
+            text: 'Loudly recruit adjacent bystanders: "Let us call 112 together and look after this person together" to eliminate single-witness vulnerability.',
             tipRef: { chapter: 13, tip: 2, label: 'Recruit co-witnesses loudly' }
           },
           {

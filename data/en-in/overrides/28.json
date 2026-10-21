@@ -1,0 +1,58 @@
+{
+  "tips": {
+    "28-2": {
+      "title": "Before any injection, thread lift or surgery, check two things: the clinic's registration and the doctor's registration",
+      "inPlainWords": "Anything that breaks the skin or puts a drug or a device into the body is a medical procedure. In India the clinic must be registered as a clinical establishment with the district registering authority where the state has adopted the Clinical Establishments (Registration and Regulation) Act, 2010, or under that state's own clinical establishments law. The person doing it must be a doctor registered with the National Medical Commission or a state medical council, and a dentist registered with the Dental Council of India for a dental procedure. A salon, a studio or a hotel room is not a clinical establishment.",
+      "benefit": "The 2010 Act, and the state laws built on the same model, require a clinical establishment to register, to meet minimum standards, and give the district authority power to inspect and to close an unregistered one. The National Medical Commission Act, 2019 and the state medical councils register a qualified doctor, and practising without registration is an offence. The drug or device used must itself be approved and licensed under the Drugs and Cosmetics Act, 1940. An injection given in a salon is therefore both a clinical-establishment offence and, very often, a drugs offence.",
+      "cost": "Checking a registration is free. A legitimate procedure costs what the clinic charges, and the cheap version is cheap for a reason.",
+      "caveats": "Ask to see the registration certificate and the doctor's registration number, and check the number with the state medical council. Do not accept a practitioner whose only qualification is a short course. Keep the bill and the batch number of the product used.",
+      "sources": "Clinical Establishments (Registration and Regulation) Act, 2010. <https://www.indiacode.nic.in/>; Ministry of Health and Family Welfare. <https://www.mohfw.gov.in/>; Central Drugs Standard Control Organisation. <https://cdsco.gov.in/>"
+    },
+    "28-6": {
+      "title": "Weight-loss drugs are prescription-only: a seller who ships without a prescription breaks the drug rules and the record-keeping rules",
+      "inPlainWords": "A prescription drug may be sold only against the prescription of a registered medical practitioner, and the pharmacy must keep that prescription on record for two years, or three years for a Schedule H1 drug, which also needs its own register. An online seller must have a licensed pharmacy behind it, a registered pharmacist and a real prescription. A site that sells without one and posts the strip is not a shortcut, it is an unlicensed sale. Check the retail licence and the pharmacist's registration before you pay.",
+      "benefit": "The Drugs and Cosmetics Act, 1940 and the Drugs and Cosmetics Rules, 1945 restrict the sale of a prescription drug to a licensed pharmacy against a prescription and require the prescription to be retained. A Schedule H1 drug needs a separate register with the patient's and the prescriber's details and a three-year retention. Selling without a licence is an offence, and a drug imported without registration is an unapproved drug. A pharmacist who dispenses without a prescription risks the licence.",
+      "cost": "A legitimate prescription costs a consultation. A grey-market seller is cheap until the product turns out to be counterfeit.",
+      "caveats": "Do not buy a weight-loss injection or pill from a social-media seller. Check the batch, the expiry and the licence number on the pack. Report an illegal sale to the state drug controller.",
+      "sources": "Central Drugs Standard Control Organisation. <https://cdsco.gov.in/>; Ministry of Health and Family Welfare. <https://www.mohfw.gov.in/>; Drugs and Cosmetics Act, 1940. <https://www.indiacode.nic.in/>"
+    },
+    "28-9": {
+      "title": "Clear aligners are a supervised dental treatment: buy the treatment from a registered dentist, not the tray from a website",
+      "inPlainWords": "A clear aligner moves teeth, and moving teeth is a dental treatment. In India the appliance is a medical device, and the treatment has to be planned and monitored by a dentist registered with the Dental Council of India or a state dental council, with in-person review and usually x-rays or scans. A website that mails trays after a selfie is selling you a device without a diagnosis. The risks are root damage, a bite that does not settle and a result that cannot be corrected. Ask who the treating dentist is and where the reviews happen.",
+      "benefit": "The Medical Devices Rules, 2017 regulate the manufacture, import and sale of a medical device, and a custom-made appliance is made to a dentist's prescription. The Dentists Act, 1948 restricts the practice of dentistry to a registered dentist. A direct-to-consumer tray skips the diagnosis, the planning and the follow-up on which the treatment depends, and it is the follow-up that catches a tooth that is moving the wrong way.",
+      "cost": "A supervised treatment costs more than a mail-order tray. Correcting a bad result costs more still.",
+      "caveats": "A severe case, such as an impacted tooth, gum disease or a jaw discrepancy, is not an aligner case at all. Wear the retainer afterwards. Keep the treatment plan and the records.",
+      "sources": "Central Drugs Standard Control Organisation, medical devices. <https://cdsco.gov.in/>; Ministry of Health and Family Welfare. <https://www.mohfw.gov.in/>; Dentists Act, 1948. <https://www.indiacode.nic.in/>"
+    },
+    "28-10": {
+      "title": "Check the cream before you put it on your face: a cosmetic needs a licence, and a mercury or steroid cream is not a cosmetic",
+      "inPlainWords": "A skin-lightening cream sold in India is a cosmetic, and a cosmetic must be manufactured or imported under a licence and be free of a prohibited ingredient: mercury and its compounds are not permitted, and a corticosteroid in a cosmetic is not permitted either. A cream that promises a dramatic change, comes in an unlabelled jar from a salon, or is sold by an influencer with no label is the one to refuse. Check the label for the manufacturer or importer, the licence number and the ingredient list.",
+      "benefit": "The Drugs and Cosmetics Act, 1940 and the Cosmetics Rules, 2020 license the manufacture and import of a cosmetic and set the labelling and ingredient rules, and mercury compounds are prohibited. A corticosteroid in a fairness cream is a prescription drug sold as a cosmetic, and long use thins the skin and can cause a rebound. CDSCO and the state drug controllers inspect and seize an illegal cosmetic, so a report to the state drug controller is the practical step.",
+      "cost": "A licensed product costs what it costs. The illegal one is cheap, and the dermatitis is not.",
+      "caveats": "Do not use a cream from a salon jar, or a treatment mixed at a parlour. Patch-test first. If the skin thins, streaks or burns, stop and see a dermatologist.",
+      "sources": "Central Drugs Standard Control Organisation, cosmetics. <https://cdsco.gov.in/>; Ministry of Health and Family Welfare. <https://www.mohfw.gov.in/>; Drugs and Cosmetics Act, 1940. <https://www.indiacode.nic.in/>"
+    },
+    "28-8": {
+      "caveats": "The reported prevalence varies widely — from 2.21% up to 56.67% — because different studies use distinct questionnaires and populations. Thus we can only conclude that this condition is fairly common and warrants screening; the 15.04% figure should not be taken as an exact statistic. This is why it is graded B. Importantly, most people seeking cosmetic treatments do not have psychological issues; only a small subset — those whose preoccupation is persistent, interferes with work or social life, and leads to repeated surgical attempts — are at risk. Warning signs include spending excessive time each day inspecting or concealing a body part, avoiding social interactions or photos, and constantly fixating on new areas after previous corrections.",
+      "sources": "Ribeiro RVE (2017). Prevalence of Body Dysmorphic Disorder in Plastic Surgery and Dermatology Patients: A Systematic Review with Meta-Analysis. Aesthetic Plast Surg. <https://doi.org/10.1007/s00266-017-0869-0>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>",
+      "cost": "A single visit to a psychiatrist or clinical psychologist is affordable at a government hospital and costlier in private practice. The real challenge is making that appointment before scheduling any surgery."
+    },
+    "28-7": {
+      "cost": "Regular doctor visits and blood tests are required. Over a year the monitoring adds up and takes several half‑days of your time.",
+      "sources": "Getahun D et al. (2018). Cross-sex Hormones and Acute Cardiovascular Events in Transgender Persons: A Cohort Study. Ann Intern Med. <https://doi.org/10.7326/M17-2785>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>"
+    },
+    "28-1": {
+      "sources": "Arcelus J et al. (2011). Mortality rates in patients with anorexia nervosa and other eating disorders. A meta-analysis of 36 studies. Arch Gen Psychiatry. <https://doi.org/10.1001/archgenpsychiatry.2011.74>; Patton GC et al. (1999). Onset of adolescent eating disorders: population based cohort study over 3 years. BMJ. <https://doi.org/10.1136/bmj.318.7186.765>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>"
+    },
+    "28-3": {
+      "sources": "Beleznay K et al. (2019). Update on Avoiding and Treating Blindness From Fillers: A Recent Review of the World Literature. Aesthet Surg J. <https://doi.org/10.1093/asj/sjz053>; Central Drugs Standard Control Organisation. <https://cdsco.gov.in/>"
+    },
+    "28-5": {
+      "sources": "Horwitz H et al. (2019). Health consequences of androgenic anabolic steroid use. J Intern Med. <https://doi.org/10.1111/joim.12850>; Central Drugs Standard Control Organisation. <https://cdsco.gov.in/>"
+    },
+    "28-4": {
+      "caveats": "SCOUT enrolled high‑risk individuals already suffering from heart disease or diabetes; it does not prove that healthy young people would experience the same effects. Because it’s impossible to identify who is truly low‑risk, regulators opted to withdraw the drug entirely. Another common illicit additive is phenolphthalein, originally a laxative whose chronic overuse can disturb electrolyte balance and provoke arrhythmias. How to tell a legitimate product from a fraudulent one: genuine weight‑loss medicines are prescription drugs whose approval numbers can be verified at pharmacies or hospitals. In India, weight‑loss products sit between two regimes: medicines are cleared by the Central Drugs Standard Control Organisation, while foods and supplements fall under the Food Safety and Standards Authority of India; a licensed pharmacist can confirm whether a product is a licensed medicine. Products marketed as “coffee,” “candies,” “plums,” or “meal replacements” that promise rapid weight loss should, by definition, have no therapeutic effect; any such effect indicates illegal adulteration.",
+      "sources": "James WPT et al. (2010). Effect of sibutramine on cardiovascular outcomes in overweight and obese subjects. NEJM. <https://doi.org/10.1056/NEJMoa1003114>; Food Safety and Standards Authority of India. <https://www.fssai.gov.in/>; Central Drugs Standard Control Organisation. <https://cdsco.gov.in/>"
+    }
+  }
+}

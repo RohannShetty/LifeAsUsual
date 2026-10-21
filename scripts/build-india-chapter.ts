@@ -1,10 +1,11 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-type Patch = [string, string];
+type Patch = [string, string] | [string, string, string];
 type FieldValue = string | Patch[] | undefined;
 
 interface TipOverride {
+  tags?: Record<string, string | string[]>;
   title?: FieldValue;
   cost?: FieldValue;
   inPlainWords?: FieldValue;
@@ -272,6 +273,7 @@ const tips = sourceChapter.tips.map((tip: any) => {
       next[field] = autoAdapt(tip.id, field, original);
     }
   }
+  if (override && override.tags) next.tags = { ...(next.tags ?? {}), ...override.tags };
   if (!override && risk === 'high') manualNeeded.push(tip.id);
   if (!override && risk !== 'high') autoAdapted.push(tip.id);
   next.reviewStatus = 'draft';

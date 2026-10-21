@@ -7,6 +7,213 @@
       "cost": "Emergency treatment at a government hospital is free or low cost. A private hospital bill is recoverable only through a claim.",
       "caveats": "A rescue does not create an automatic state-funded payout. Preserve the police report, the medical records and the witness details. A claim has a limitation period.",
       "sources": "Motor Vehicles Act, 1988 (section 134A). <https://www.indiacode.nic.in/>; Bharatiya Nagarik Suraksha Sanhita, 2023. <https://www.indiacode.nic.in/>; National Legal Services Authority. <https://nalsa.gov.in/>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>"
+    },
+    "13-2": {
+      "cost": "No money is required. Kneeling down to ask a few questions and making a phone call takes only a few minutes. The hard part is resisting the urge to reach out and help. For strangers, there is an extra cost to consider: calling 112 leaves your number on the emergency-service record, which may result in follow-up calls or inquiries. If family members later target you, legal battles can last months, and even if you ultimately win, you will still have to pay your own legal fees.",
+      "caveats": "This grade is assigned because the guidelines describe proper procedures but provide no quantitative data on how many lives they actually save. Section 134A of the Motor Vehicles Act, 1988 protects a Good Samaritan who helps a road-accident victim from civil and criminal liability, but it does not cover moving an injured person unnecessarily, so waiting for 112 remains the safer choice. After dialing 112, stay on the line and follow the dispatcher's instructions. This advice is primarily intended for one's own elderly relatives and acquaintances. For strangers on the street, walking away is legal: Indian law creates no general duty to rescue a stranger. That said, once you stop, you must weigh all associated costs: time spent, leaving your contact details, contact potential from family members, possible legal action, workplace repercussions, and even online backlash. For fall prevention, refer to Section 1, Item 13 (balance and leg-strength training); delayed symptoms following head trauma are covered in Section 10; financial recourse after injury sustained while rescuing others is addressed in Section 39; and evidence collection and reporting in cases of online harassment are outlined in Section 8, Item 16.",
+      "sources": "Motor Vehicles Act, 1988 (section 134A, protection for Good Samaritans). <https://www.indiacode.nic.in/>; Ministry of Road Transport and Highways. <https://morth.nic.in/>; Ministry of Health and Family Welfare, National Programme for Health Care of the Elderly. <https://mohfw.gov.in/>; World Health Organization, Falls. <https://www.who.int/news-room/fact-sheets/detail/falls>"
+    },
+    "13-3": {
+      "caveats": [
+        [
+          "Calling 120 instead of driving is essential because ambulances transport patients directly to stroke centers where staff can be alerted in advance.",
+          "Calling 112 instead of driving is essential because the ambulance can take the patient straight to a hospital with a CT scanner and a stroke team, and staff can be alerted in advance. In India, 112 is the ERSS number that reaches police, fire and ambulance; 108 is the state ambulance service in most states."
+        ]
+      ]
+    },
+    "13-4": {
+      "title": "Sudden dizziness, double vision, loss of vision in one eye, or inability to touch one's nose — all warrant calling 112 for stroke suspicion"
+    },
+    "13-8": {
+      "inPlainWords": [
+        [
+          "When calling 120, state clearly",
+          "When calling 112, state clearly"
+        ]
+      ]
+    },
+    "13-22": {
+      "inPlainWords": [
+        [
+          "while calling 120",
+          "while calling 112"
+        ]
+      ],
+      "benefit": [
+        [
+          "The Yunnan Provincial",
+          "critical for effective cooling. ",
+          ""
+        ]
+      ],
+      "sources": "US National Weather Service, Heat Related Illnesses. <https://www.weather.gov/safety/heat-illness>; Eifling KP et al. (2024). Wilderness Medical Society Clinical Practice Guidelines for the Prevention and Treatment of Heat Illness: 2024 Update. Wilderness & Environmental Medicine 35(1_suppl):112S-127S. <https://doi.org/10.1177/10806032241227924>; Wilderness Medical Society, guideline summary. <https://wms.org/magazine/magazine/1540/Heat-Illness-CPG/default.aspx>; National Disaster Management Authority, heat wave guidance. <https://ndma.gov.in/>; Ministry of Health and Family Welfare, National Programme on Climate Change and Human Health. <https://mohfw.gov.in/>"
+    },
+    "13-25": {
+      "title": [
+        [
+          "call 110/120",
+          "call 112"
+        ]
+      ],
+      "sources": "World Health Organization, Drowning. <https://www.who.int/news-room/fact-sheets/detail/drowning>; National Disaster Management Authority. <https://ndma.gov.in/>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>"
+    },
+    "13-37": {
+      "title": "If you come across a group fight, walk away — do not try to break it up, do not stand and watch, and do not pick anything up from the ground. If you want the police involved, retreat to a safe distance and call 112.",
+      "cost": "No money is required. The hard part is resisting the urge to step in and the temptation to watch from the sidelines. After you call, the police may ask you to give a statement later; at most, this takes half a day.",
+      "inPlainWords": "If you step in, you stop being a bystander: under the Bharatiya Nyaya Sanhita, 2023 you can end up as one of the people accused of rioting or of causing hurt, and meaning to calm things down is not a defence. Watching is not worth it either — the more onlookers there are, the messier the scene gets, and the more likely you are to be hurt. The right move is to walk away. If you do want the police involved, step back to a safe spot and dial 112, stating the location, how many people are involved, whether anyone is carrying knives or sticks, and whether anyone is on the ground.",
+      "benefit": "Serious fights are investigated as rioting, unlawful assembly, hurt and, where someone dies, culpable homicide under the Bharatiya Nyaya Sanhita, 2023. Under the Bharatiya Nagarik Suraksha Sanhita, 2023 the police must record information about a cognizable offence (section 173), and a First Information Report can be lodged at any police station, including one outside the area where the fight happened, so you do not have to find the right jurisdiction first. A caller who gives the location, the number of people and the weapons has given the police what they need; you do not have to stay at the scene.",
+      "caveats": "This is graded B because the consequences are set out in statutes, but the advice to walk away rather than intervene is derived from them rather than stated as a rule. Saying \"I was only trying to mediate\" is not a defence; what matters is whether you took part and whom you hit. If an attacker is already down or has fled, chasing them to hit them is no longer private defence. The law does allow reasonable force in private defence of yourself or another person under the Bharatiya Nyaya Sanhita, 2023, but a bare-handed intervention usually just adds another casualty. Calling 112, recording from a distance and staying out of the fight are more effective. There is no statutory duty on a passer-by to step in. If you are later asked to give a statement, tell the truth; fabricating an account, or helping someone hide, is itself an offence. The benefit of calling 112 mainly helps the person on the ground, and overall this entry offers one of the lowest net benefits in the book. If you yourself get caught in a fight, see Section 8, Item 10; if a stranger demands money, see Item 36 of this section; for costs after helping an injured person, see Item 39.",
+      "sources": "Bharatiya Nyaya Sanhita, 2023. <https://www.indiacode.nic.in/>; Bharatiya Nagarik Suraksha Sanhita, 2023 (section 173, information in cognizable cases). <https://www.indiacode.nic.in/>; National Legal Services Authority. <https://nalsa.gov.in/>; Ministry of Home Affairs. <https://www.mha.gov.in/>"
+    },
+    "13-44": {
+      "benefit": [
+        [
+          "A popular-science article from the Capital Institute of Pediatrics",
+          "Mouth-to-mouth-nose for breaths under 1 year.",
+          "If you are alone with a phone but no speakerphone, the IFRC guidance is to give 1 minute of CPR before calling. Compression depth is about 4 cm for infants, and breaths are given mouth to mouth and nose."
+        ]
+      ],
+      "caveats": [
+        [
+          "Older Chinese courses taught two-finger compression",
+          "Older courses taught two-finger compression"
+        ]
+      ],
+      "sources": "Joyner BL et al. (2025). Part 6: Pediatric Basic Life Support: 2025 American Heart Association and American Academy of Pediatrics Guidelines for Cardiopulmonary Resuscitation and Emergency Cardiovascular Care. Circulation 152(suppl 2):S424-S447. <https://doi.org/10.1161/CIR.0000000000001370>; Naim MY et al. (2017). Association of Bystander Cardiopulmonary Resuscitation With Overall and Neurologically Favorable Survival After Pediatric Out-of-Hospital Cardiac Arrest in the United States. JAMA Pediatrics 171(2):133-141. <https://doi.org/10.1001/jamapediatrics.2016.3643>; International Federation of Red Cross and Red Crescent Societies (2025). International First Aid, Resuscitation and Education Guidelines 2025, pp. 186-188. <https://www.ifrc.org/>; European Resuscitation Council (2025). ERC Guidelines 2025 for the lay public. <https://www.erc.edu/>; National Disaster Management Authority. <https://ndma.gov.in/>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>"
+    },
+    "13-6": {
+      "sources": "Zhou L, Wu S, Wang Y, Bao X, Peng T, Luo W, Ortega-Usobiaga J (2022). Clinical presentation of acute primary angle closure during the COVID-19 epidemic lockdown. Frontiers in Medicine, 9, 1078237. <https://doi.org/10.3389/fmed.2022.1078237>; Sung MS, Kim HJ, Park SW (2023). Predictors of long-term visual field outcome after an episode of acute primary angle closure. Clinical & Experimental Ophthalmology, 51(4), 291-299. <https://doi.org/10.1111/ceo.14206>; Wang J, Wang J, Ng TK, Huang C (2025). Asymmetric intraocular pressure changes in dominant and contralateral eyes: the dark room prone provocative test. Seminars in Ophthalmology, 40(4), 325-331. <https://doi.org/10.1080/08820538.2024.2443972>; Ministry of Health and Family Welfare, National Programme for Control of Blindness and Visual Impairment. <https://mohfw.gov.in/>"
+    },
+    "13-16": {
+      "sources": "Centers for Disease Control and Prevention, Seizure First Aid: \"Don't hold the person down or stop their movements\" \"Don't put anything in their mouth. This can hurt their teeth or jaw\" \"Don't offer water or food until they are fully alert\" \"Time the seizure to track if it lasts more than 5 minutes. If it does, seek immediate medical attention and call the emergency services.\" <https://www.cdc.gov/epilepsy/first-aid-for-seizures/index.html>; National Health Portal, Ministry of Health and Family Welfare. <https://www.nhp.gov.in/>; in India the single emergency number is 112 (ERSS). <https://112.gov.in/>"
+    },
+    "13-24": {
+      "sources": "US FEMA Ready.gov, Home Fires. <https://www.ready.gov/home-fires>; National Disaster Management Authority, fire safety. <https://ndma.gov.in/>; Ministry of Home Affairs, Fire Services, Civil Defence and Home Guards. <https://www.mha.gov.in/>"
+    },
+    "13-27": {
+      "title": "If you are lost or stranded in a desert, on a high plateau or in any other remote area, stay put next to your vehicle. First transmit your location, then shield yourself from the sun, retain body heat, conserve water and avoid wandering off.",
+      "cost": "Before venturing into such areas, tell someone your planned route, destination, return date, vehicle type and registration number. You will need at least 4 litres of water per person per day. A satellite communicator or a personal locator beacon costs thousands of rupees, and rental runs to a few hundred rupees per use. The real challenge is remembering to stay put and not wander away.",
+      "benefit": [
+        [
+          "The Chongqing Emergency Management Bureau adds",
+          "attract attention.",
+          "Three fires arranged in a triangle are a long-standing distress convention, and a mirror or a bright tin flashed at an aircraft is one of the easiest signals to use."
+        ],
+        [
+          "Meanwhile, China",
+          "renting a satellite phone if necessary.",
+          ""
+        ]
+      ],
+      "caveats": [
+        [
+          "The commonly cited",
+          "three-short-three-long-three-short pattern.",
+          "The three-fire triangle is a convention rather than a documented standard, but it costs nothing to prepare."
+        ]
+      ],
+      "sources": "US National Park Service, Mojave National Preserve Safety. <https://www.nps.gov/moja/planyourvisit/safety.htm>; US National Park Service, Death Valley Safety. <https://www.nps.gov/deva/planyourvisit/safety.htm>; National Disaster Management Authority. <https://ndma.gov.in/>; Ministry of Tourism, adventure tourism guidelines. <https://tourism.gov.in/>; Ministry of Home Affairs. <https://www.mha.gov.in/>"
+    },
+    "13-38": {
+      "cost": "At a government ART centre or a designated hospital under the National AIDS Control Programme, a 28-day course of PEP is normally free. At a private hospital it can cost several thousand rupees. You will need to go that same night. The hardest part is admitting you might be infected and leaving right away.",
+      "benefit": "India's National AIDS Control Organisation (NACO) defines this as post-exposure prophylaxis, PEP: a 28-day course of antiretroviral drugs started as soon as possible after exposure, ideally within 2 hours and no later than 72 hours. Beyond 72 hours PEP is not advised. PEP is prescribed by a doctor at a government ART centre or a designated hospital. This strict timeline means that acting immediately versus waiting a night can produce completely different outcomes.",
+      "caveats": "PEP is stocked at government ART centres and many district hospitals, not at every emergency room, so call ahead first; the ART centre list is published on naco.gov.in, and turning up at the wrong queue can cost you the night. Situations considered \"exposures\" include unprotected sex, a broken condom, a needle-stick injury or blood contact with mucous membranes; only a doctor can decide whether PEP is appropriate. The full 28-day regimen must be completed; missing doses markedly reduces its effectiveness. Follow-up testing is required at 4-6 weeks and at 3 months as directed by your physician. This is a remedial measure, not a substitute for regular prevention; for everyday safeguards and testing, see items 30 and 31 in Chapter 1 (consistent condom use and testing after high-risk encounters).",
+      "sources": "National AIDS Control Organisation. <https://naco.gov.in/>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>; World Health Organization, HIV. <https://www.who.int/health-topics/hiv-aids>"
+    },
+    "13-42": {
+      "benefit": "Indian practice follows the same sequence. The Bharatiya Nagarik Suraksha Sanhita, 2023 requires the police to record information about a cognizable offence, and a zero FIR can be lodged at any police station, including one outside the area where the assault happened. Every hospital, public or private, must give a survivor of sexual violence free first-aid and medical treatment and must inform the police; the forensic examination is done at a government hospital, and a One Stop Centre (Sakhi Centre) run under the Ministry of Women and Child Development can provide a counsellor and accompany you. Preserving evidence is the priority: keep body fluids, hair, skin cells and communication records, and do not shower, wash clothes, tidy the room or throw anything away before the examination. In cases involving acquaintances, preserve call logs and messages, and document any threats or attempts at bribery. WHO notes that emergency contraception may be used when a woman has been sexually assaulted without effective contraceptive protection, recommending its use within five days for maximum effectiveness; the pills work best when taken early, ideally within 72 hours. PEP for HIV should be taken within two hours if possible, and no later than 72 hours.",
+      "sources": "Ministry of Women and Child Development, One Stop Centres. <https://wcd.gov.in/>; National Legal Services Authority. <https://nalsa.gov.in/>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>; World Health Organization, Emergency Contraception. <https://www.who.int/news-room/fact-sheets/detail/emergency-contraception>; National AIDS Control Organisation. <https://naco.gov.in/>"
+    },
+    "13-46": {
+      "benefit": [
+        [
+          "Emergency department clinical data published by Shaanxi Provincial Health Commission",
+          "if breathing ceases.",
+          "In stuporous or comatose stages marked by cyanosis, cold extremities, hypothermia and shallow breathing, call 112 immediately, keep the person on their side, cover them with warm blankets, and start CPR if breathing stops."
+        ],
+        [
+          "Beijing Municipal Health Commission advises",
+          "avoid unmonitored asphyxiation.\"",
+          "The same rule holds everywhere: never let an intoxicated person sleep alone, because nobody will notice if their breathing stops."
+        ]
+      ],
+      "caveats": "Graded B because the advice rests on official health authority emergency guidance and clinical consensus; India has no statute that places a legal duty on a bystander. Benefit is categorized as High because asphyxiation and respiratory arrest occur almost exclusively when victims are left unmonitored. Never attempt manual throat-tickling emesis on lethargic or unresponsive individuals. Beyond family members, these duties apply heavily to dining companions and colleagues: in India a claim against a drinking companion would have to be brought as a civil negligence suit, so the practical duty is social rather than statutory, but failing to get someone home safely is what turns a bad night into a death. Always escort drunk companions directly into the custody of family or remain until sobriety returns. If you discover an unknown intoxicated person collapsed outdoors, call 112 without attempting forceful repositioning unless necessary (see Chapter 13, Rule 2). Alcohol impairs thermoregulation; manage hypothermia as outlined in Chapter 13, Rule 28. Alcohol interactions with cephalosporin or metronidazole antibiotics causing disulfiram-like reactions are detailed in Chapter 34, Rule 11. Never take hot baths or enter saunas after drinking (see Chapter 22, Rule 11).",
+      "sources": "NHS, Alcohol Poisoning. <https://www.nhs.uk/conditions/alcohol-poisoning/>; Kanny D et al. (2015). Vital signs: alcohol poisoning deaths, United States, 2010-2012. MMWR 63(53):1238-1242. <https://pubmed.ncbi.nlm.nih.gov/25577989/>; National Health Portal, Ministry of Health and Family Welfare. <https://www.nhp.gov.in/>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>"
+    },
+    "13-19": {
+      "sources": "U.S. Centers for Disease Control and Prevention. Carbon monoxide poisoning: \"More than 400 Americans die from unintentional CO poisoning not linked to fires\" \"More than 100,000 visit an emergency department\" \"More than 14,000 are hospitalized\", common symptoms \"headache, dizziness, weakness, upset stomach, vomiting, chest pain, and confusion\". <https://www.cdc.gov/carbon-monoxide/about/index.html>; U.S. Consumer Product Safety Commission, Carbon Monoxide Information Center. <https://www.cpsc.gov/Safety-Education/Safety-Education-Centers/Carbon-Monoxide-Information-Center>; National Health Portal, Ministry of Health and Family Welfare. <https://www.nhp.gov.in/>; National Disaster Management Authority. <https://ndma.gov.in/>"
+    },
+    "13-21": {
+      "sources": "Ministry of Health and Family Welfare, chemical safety and poison information. <https://mohfw.gov.in/>; National Disaster Management Authority, chemical emergencies. <https://ndma.gov.in/>; World Health Organization, chemical incidents. <https://www.who.int/health-topics/chemical-incidents>; International Labour Organization, International Chemical Safety Cards. <https://www.ilo.org/dyn/icsc/showcard.home>"
+    },
+    "13-29": {
+      "sources": "World Health Organization, Animal bites. <https://www.who.int/news-room/fact-sheets/detail/animal-bites>; World Health Organization, Snakebite envenoming. <https://www.who.int/news-room/fact-sheets/detail/snakebite-envenoming>; Ministry of Health and Family Welfare, National Snakebite Management Protocol. <https://mohfw.gov.in/>; Indian Council of Medical Research. <https://www.icmr.gov.in/>"
+    },
+    "13-43": {
+      "sources": "Joyner BL et al. (2025). Part 6: Pediatric Basic Life Support: 2025 American Heart Association and American Academy of Pediatrics Guidelines for Cardiopulmonary Resuscitation and Emergency Cardiovascular Care. Circulation 152(suppl 2):S424-S447. <https://doi.org/10.1161/CIR.0000000000001370>; International Federation of Red Cross and Red Crescent Societies (2025). International First Aid, Resuscitation and Education Guidelines 2025, pp. 238-240. <https://www.ifrc.org/>; National Disaster Management Authority. <https://ndma.gov.in/>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>"
+    },
+    "13-45": {
+      "sources": "Litovitz T, et al. (2010). Emerging battery-ingestion hazard: clinical implications. Pediatrics, 125(6), 1168-1177. <https://doi.org/10.1542/peds.2009-3037>; Litovitz T, Whitaker N, Clark L (2010). Preventing battery ingestions: an analysis of 8648 cases. Pediatrics, 125(6), 1178-1183. <https://doi.org/10.1542/peds.2009-3038>; National Capital Poison Center (2024). National Battery Ingestion Hotline Guideline. <https://www.poison.org/battery/guideline>; Nugud AA, et al. (2023). Pediatric Magnet Ingestion, Diagnosis, Management, and Prevention: ESPGHAN Position Paper. Journal of Pediatric Gastroenterology and Nutrition, 76(4), 523-532. <https://doi.org/10.1097/MPG.0000000000003702>; Anfang RR, et al. (2019). pH-neutralizing esophageal irrigations as a novel mitigation strategy for button battery injury. Laryngoscope, 129(1), 49-57. <https://doi.org/10.1002/lary.27312>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>"
+    },
+    "13-5": {
+      "sources": "Mac Grory B, Schrag M, Biousse V, et al. (2021). Management of Central Retinal Artery Occlusion: A Scientific Statement From the American Heart Association. Stroke, 52(6), e282-e294. <https://doi.org/10.1161/STR.0000000000000366>; Rothwell PM, Giles MF, Chandratheva A, et al. (2007). Effect of urgent treatment of transient ischaemic attack and minor stroke on early recurrent stroke (EXPRESS study): a prospective population-based sequential comparison. Lancet, 370(9596), 1432-1442. <https://doi.org/10.1016/S0140-6736(07)61448-2>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>"
+    },
+    "13-9": {
+      "sources": "Perry JJ, Stiell IG, Sivilotti MLA, et al. (2013). Clinical decision rules to rule out subarachnoid hemorrhage for acute headache. JAMA, 310(12), 1248-1255. <https://doi.org/10.1001/jama.2013.278018>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>"
+    },
+    "13-10": {
+      "sources": "Dziho A et al. (2025). Global prevalence and incidence of chronic subdural hematoma: A systematic review. Brain and Spine, 5, 105893. <https://doi.org/10.1016/j.bas.2025.105893>; Mathon B, Shotar E (2026). Diagnostic and therapeutic management of chronic subdural hematoma in elderly patients. Gériatrie et Psychologie Neuropsychiatrie du Vieillissement, 24(1), 30-41. <https://doi.org/10.1684/pnv.2026.1274>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>"
+    },
+    "13-11": {
+      "sources": "Goldhaber SZ, Visani L, De Rosa M (1999). Acute pulmonary embolism: clinical outcomes in the International Cooperative Pulmonary Embolism Registry (ICOPER). Lancet, 353(9162), 1386-1389. <https://doi.org/10.1016/S0140-6736(98)07534-5>; WHO (2007). Study results released on travel and blood clots. <https://www.who.int/news/item/29-06-2007-study-results-released-on-travel-and-blood-clots>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>"
+    },
+    "13-13": {
+      "sources": "WHO. Rabies Live reports. <https://www.who.int/en/news-room/fact-sheets/detail/rabies>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>"
+    },
+    "13-14": {
+      "sources": "Griffin BR, Frear CC, Babl F, Oakley E, Kimble RM (2020). Cool Running Water First Aid Decreases Skin Grafting Requirements in Pediatric Burns: A Cohort Study of Two Thousand Four Hundred Ninety-five Children. Annals of Emergency Medicine, 75(1), 75-85. <https://doi.org/10.1016/j.annemergmed.2019.06.028>; Griffin B, Cabilan CJ, Ayoub B, et al. (2022). The effect of 20 minutes of cool running water first aid within three hours of thermal burn injury on patient outcomes: A systematic review and meta-analysis. Australasian Emergency Care, 25(4), 367-376. <https://doi.org/10.1016/j.auec.2022.05.004>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>"
+    },
+    "13-17": {
+      "sources": "American Diabetes Association (2025). Standards of Care for Diabetes 2025·Chapter 6 Blood Glucose Goals and Hypoglycemia. Diabetes Care: Grading\"Level 1: Glucose <70 mg/dL (<3.9 mmol/L) and ≥54 mg/dL (≥3.0 mmol/L)\"\"Level 2: Glucose <54 mg/dL (<3.0 mmol/L)\"\"Level 3: A severe event characterized by altered mental and/or physical status requiring assistance for treatment of hypoglycemia, irrespective of glucose level\"; Treatment\"For most individuals, 15 g carbohydrates should be ingested\"\"Fifteen minutes after initial treatment, repeat the treatment if hypoglycemia persists\". <https://doi.org/10.2337/dc25-S006>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>"
+    },
+    "13-18": {
+      "sources": "US CDC. What to Do to Protect Yourself From Electrical Hazards (First aid section). <https://www.cdc.gov/natural-disasters/response/what-to-do-protect-yourself-from-electrical-hazards.html>; Spies C, Trohman RG (2006). Narrative review: Electrocution and life-threatening electrical injuries. Annals of Internal Medicine 145(7):531-537. <https://doi.org/10.7326/0003-4819-145-7-200610030-00011>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>"
+    },
+    "13-23": {
+      "sources": "US CDC/NIOSH. Heat-Related Illnesses. <https://www.cdc.gov/niosh/heat-stress/about/illnesses.html>; National Disaster Management Authority. <https://ndma.gov.in/>"
+    },
+    "13-26": {
+      "sources": "US National Library of Medicine, MedlinePlus. Choking – adult or child over 1 year. <https://medlineplus.gov/ency/article/000047.htm>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>"
+    },
+    "13-28": {
+      "sources": "US National Weather Service. During Extreme Cold. <https://www.weather.gov/safety/cold-during>; Dow J et al. (2019). Wilderness Medical Society Clinical Practice Guidelines for the Out-of-Hospital Evaluation and Treatment of Accidental Hypothermia: 2019 Update. Wilderness & Environmental Medicine. <https://doi.org/10.1016/j.wem.2019.10.002>; National Disaster Management Authority. <https://ndma.gov.in/>"
+    },
+    "13-30": {
+      "sources": "Armenian HK, Noji EK, Oganesian AP (1992). A case-control study of injuries arising from the earthquake in Armenia, 1988. Bulletin of the World Health Organization, 70(2), 251-257. Mahue-Giangreco M, Mack W, Seligson H, Bourque LB (2001). Risk factors associated with moderate and serious injuries attributable to the 1994 Northridge Earthquake. Annals of Epidemiology, 11(5), 347-357. <https://doi.org/10.1016/s1047-2797(01)00220-4>; National Disaster Management Authority. <https://ndma.gov.in/>"
+    },
+    "13-31": {
+      "sources": "US National Park Service. Staying Safe Around Bears. <https://www.nps.gov/subjects/bears/safety.htm>; Ministry of Environment, Forest and Climate Change. <https://moef.gov.in/>"
+    },
+    "13-32": {
+      "sources": "National Weather Service. Outdoor lightning safety: \"There is no safe place outside when thunderstorms are in the area\" \"Avoid open fields, the top of a hill or a ridge top. Stay away from tall, isolated trees or other tall objects\" \"Stay away from water, wet items, such as ropes, and metal objects, such as fences and poles\"; \"If you are in a group, spread out to avoid the current traveling between group members\"; Resume activity \"Wait 30 minutes until after the last rumble of thunder\". <https://www.weather.gov/safety/lightning-outdoors>; National Disaster Management Authority. <https://ndma.gov.in/>"
+    },
+    "13-33": {
+      "sources": "U.S. Centers for Disease Control and Prevention. Yellow Book High Altitude Travel and Altitude Sickness: \"Any unacclimatized traveler proceeding to a sleeping altitude of ≥2,450 m (≥8,000 ft)—and sometimes lower—is at risk for altitude illness\"; Ascent rate \"500 m (1,650 ft) per night in sleeping altitude once above 3,000 m (9,800 ft)\" 1000 meters plus acclimatization day; Acetazolamide prophylaxis \"125 mg twice a day; 250 mg twice a day if >100 kg body weight\"; \"If symptoms become worse despite rest or treatment at the same elevation\" must be withdrawn. <https://www.cdc.gov/yellow-book/hcp/environmental-hazards-risks/high-altitude-travel-and-altitude-illness.html>; Wilderness & Environmental Medicine (2024). Clinical Practice Guidelines for the Prevention, Diagnosis, and Treatment of Acute Mountain Sickness (2024 Update). Wilderness & Environmental Medicine. <https://doi.org/10.1016/j.wem.2023.05.013>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>"
+    },
+    "13-34": {
+      "sources": "U.S. Centers for Disease Control and Prevention. After a tick bite: \"Grasp the tick as close to the skin's surface as possible using clean fine-tipped tweezers\" \"Pull tick away from the skin with steady, even pressure\" \"Do not use petroleum jelly, heat, nail polish, or other substances to try and make the tick detach from the skin. This may agitate the tick and force infected fluid from the tick into the skin\". <https://www.cdc.gov/ticks/after-a-tick-bite/index.html>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>"
+    },
+    "13-35": {
+      "sources": "Centers for Disease Control and Prevention. Yellow Book Travelers' Water Disinfection: \"All organisms that may cause illness from drinking water are killed within seconds at boiling temperature\" \"CDC recommends that travelers boil water for a full minute to account for user variability in identifying boiling points and to add a margin of safety\" \"Although the boiling point for water decreases with increasing elevation, at common travel elevations the temperature needed to achieve boiling is still well above the temperature required to inactivate enteric pathogens\". <https://www.cdc.gov/yellow-book/hcp/preparing-international-travelers/water-disinfection-for-travelers.html>; National Disaster Management Authority. <https://ndma.gov.in/>"
+    },
+    "13-41": {
+      "sources": "International Federation of Red Cross and Red Crescent Societies (2025). International First Aid, Resuscitation and Education Guidelines 2025, pp. 301–302. <https://www.ifrc.org/sites/default/files/2026-03/IFRC%20International%20First%20Aid,%20Resuscitation%20and%20Education%20Guidelines%202025.pdf>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>"
+    },
+    "13-47": {
+      "sources": "MedlinePlus (2024). Traumatic Amputation First Aid Protocol. <https://medlineplus.gov/ency/article/000006.htm>; American Academy of Orthopaedic Surgeons (AAOS). Fingertip Injuries and Amputations Guidelines. <https://orthoinfo.aaos.org/en/diseases--conditions/fingertip-injuries-and-amputations>; Treger D, et al. (2026). Return-to-Work After Attempted Digit Replantation: A Systematic Review of 31 Studies. HAND. <https://doi.org/10.1177/15589447241279445>; Stone N, et al. (2021). Comparing digital replantation versus revision amputation patient reported outcomes: A systematic review and meta-analysis. Microsurgery. <https://doi.org/10.1002/micr.30738>; Yu F, et al. (2026). Risk factors associated with postoperative necrosis after digital replantation: a systematic review and meta-analysis. Frontiers in Surgery. <https://doi.org/10.3389/fsurg.2026.1795247>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>"
+    },
+    "13-48": {
+      "sources": "NHS (2025). Knocked-out Tooth Protocol. <https://www.nhs.uk/conditions/knocked-out-tooth/>; International Association of Dental Traumatology (IADT). Save a Tooth Guidelines and Poster. <https://iadt-dentaltrauma.org/guidelines-and-resources/save-a-tooth-poster/>; Gul A, et al. (2024). Risk of ankylosis of avulsed teeth immediately replanted or stored under favorable storage conditions before replantation: A long-term clinical study. Dental Traumatology. <https://doi.org/10.1111/edt.12898>; Lauridsen E, et al. (2020). Risk of ankylosis of 400 avulsed and replanted human teeth in relation to length of dry storage: A re-evaluation of a long-term clinical study. Dental Traumatology. <https://doi.org/10.1111/edt.12520>; Andreasen JO, et al. (1995). Replantation of 400 avulsed permanent incisors. 1. Diagnosis of healing complications. Endodontics & Dental Traumatology. <https://doi.org/10.1111/j.1600-9657.1995.tb00461.x>; Andreasen JO, et al. (1995). Replantation of 400 avulsed permanent incisors. 4. Factors related to periodontal ligament healing. Endodontics & Dental Traumatology. <https://doi.org/10.1111/j.1600-9657.1995.tb00464.x>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>"
     }
   }
 }
