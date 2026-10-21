@@ -45,8 +45,12 @@ const speakerColor = speaker === 'Plus' ? 'var(--color-jade)' : 'var(--color-amb
       // Tap to dismiss
       const closeBtn = bubble.querySelector('.bubble-close-btn');
       const dismiss = () => {
-        bubble.classList.add('is-dismissing');
-        setTimeout(() => bubble.remove(), 250);
+        // If the bubble is the note attached to a character, remove the whole
+        // note row so a lonely avatar is not left behind.
+        const host = bubble.closest('[data-cast-note]');
+        const target = host || bubble;
+        target.classList.add('is-dismissing');
+        setTimeout(() => target.remove(), 250);
       };
 
       if (closeBtn) {

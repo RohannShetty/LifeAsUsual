@@ -1,0 +1,507 @@
+---
+import { resolvePath } from '../utils/paths';
+
+interface CountPair {
+  vh: number;
+  all: number;
+}
+
+interface Props {
+  counts: Record<string, CountPair>;
+  exploreHref?: string;
+}
+
+const { counts, exploreHref = resolvePath('/explore/') } = Astro.props;
+---
+
+<section class="finder" id="find-your-step" aria-labelledby="finder-title" data-finder>
+  <header class="finder-head">
+    <p class="section-kicker">Guided finder · 3 questions</p>
+    <h2 class="finder-title" id="finder-title">Find your next step</h2>
+    <p class="finder-lead">Answer three short questions. We will point you to a small, filtered set instead of all 765 tips.</p>
+  </header>
+
+  <div class="finder-card liquid-glass">
+    <div class="finder-top">
+      <span class="finder-step-label" data-finder-label>Question 1 of 3</span>
+      <div class="finder-track" aria-hidden="true">
+        <span class="finder-bar" data-finder-bar></span>
+      </div>
+    </div>
+
+    <form class="finder-form" data-finder-form>
+      <fieldset class="finder-step is-active" data-step="1">
+        <legend>What do you want back?</legend>
+        <p class="finder-hint">Pick the payoff that matters most this month.</p>
+        <div class="finder-options">
+          <button type="button" class="finder-option" data-key="scope" data-value="Lifespan">
+            <span class="opt-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1.1L12 21l7.8-7.5 1.1-1.1a5.5 5.5 0 0 0-.1-7.8Z"/></svg>
+            </span>
+            <span class="opt-copy"><strong>Lifespan</strong><small>Safety, sleep, food, movement</small></span>
+            <span class="opt-arrow" aria-hidden="true">›</span>
+          </button>
+          <button type="button" class="finder-option" data-key="scope" data-value="Money">
+            <span class="opt-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M15 8.5c-.6-.8-1.6-1.3-3-1.3-1.7 0-3 .9-3 2.2 0 3.2 6 1.7 6 4.9 0 1.4-1.3 2.2-3 2.2-1.4 0-2.4-.5-3-1.4"/><path d="M12 5.5v13"/></svg>
+            </span>
+            <span class="opt-copy"><strong>Money</strong><small>Bills, rent, wages, scams</small></span>
+            <span class="opt-arrow" aria-hidden="true">›</span>
+          </button>
+          <button type="button" class="finder-option" data-key="scope" data-value="Time and energy">
+            <span class="opt-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z"/></svg>
+            </span>
+            <span class="opt-copy"><strong>Time &amp; energy</strong><small>Focus, rest, less friction</small></span>
+            <span class="opt-arrow" aria-hidden="true">›</span>
+          </button>
+          <button type="button" class="finder-option" data-key="scope" data-value="Personal freedom">
+            <span class="opt-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 4c-6 0-10 3-12 8l-3 8 8-3c5-2 8-6 8-12Z"/><path d="M4 20 15 9"/></svg>
+            </span>
+            <span class="opt-copy"><strong>Personal freedom</strong><small>Rights, boundaries, options</small></span>
+            <span class="opt-arrow" aria-hidden="true">›</span>
+          </button>
+        </div>
+      </fieldset>
+
+      <fieldset class="finder-step" data-step="2">
+        <legend>How much time do you have?</legend>
+        <p class="finder-hint">A quick win is allowed. This is a menu, not a chore.</p>
+        <div class="finder-options">
+          <button type="button" class="finder-option" data-key="time" data-value="Quick">
+            <span class="opt-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5"/><path d="M9 2h6"/></svg>
+            </span>
+            <span class="opt-copy"><strong>Quick</strong><small>Under an hour, often minutes</small></span>
+            <span class="opt-arrow" aria-hidden="true">›</span>
+          </button>
+          <button type="button" class="finder-option" data-key="time" data-value="A few hours">
+            <span class="opt-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 11h18"/></svg>
+            </span>
+            <span class="opt-copy"><strong>A few hours</strong><small>One focused afternoon</small></span>
+            <span class="opt-arrow" aria-hidden="true">›</span>
+          </button>
+          <button type="button" class="finder-option" data-key="time" data-value="Takes time every day">
+            <span class="opt-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 2 21 6 17 10"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><path d="M7 22 3 18 7 14"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>
+            </span>
+            <span class="opt-copy"><strong>Every day</strong><small>A small repeated habit</small></span>
+            <span class="opt-arrow" aria-hidden="true">›</span>
+          </button>
+        </div>
+      </fieldset>
+
+      <fieldset class="finder-step" data-step="3">
+        <legend>How much effort can you give?</legend>
+        <p class="finder-hint">Be honest. Lower effort is often the smarter first step.</p>
+        <div class="finder-options">
+          <button type="button" class="finder-option" data-key="willpower" data-value="None needed">
+            <span class="opt-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 13 4 4L19 7"/></svg>
+            </span>
+            <span class="opt-copy"><strong>Almost none</strong><small>Set it once and forget it</small></span>
+            <span class="opt-arrow" aria-hidden="true">›</span>
+          </button>
+          <button type="button" class="finder-option" data-key="willpower" data-value="Some">
+            <span class="opt-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v18M5 8l7-5 7 5"/></svg>
+            </span>
+            <span class="opt-copy"><strong>Some effort</strong><small>A little discipline for a while</small></span>
+            <span class="opt-arrow" aria-hidden="true">›</span>
+          </button>
+          <button type="button" class="finder-option" data-key="willpower" data-value="A lot">
+            <span class="opt-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 21h8M12 17v4M7 4h10v4a5 5 0 0 1-10 0V4Z"/><path d="M7 5H4v2a3 3 0 0 0 3 3M17 5h3v2a3 3 0 0 1-3 3"/></svg>
+            </span>
+            <span class="opt-copy"><strong>A real push</strong><small>A project, not a nudge</small></span>
+            <span class="opt-arrow" aria-hidden="true">›</span>
+          </button>
+        </div>
+      </fieldset>
+
+      <div class="finder-actions">
+        <button type="button" class="finder-back" data-finder-back hidden>← Back</button>
+        <button type="button" class="finder-skip" data-finder-skip>Skip this question</button>
+      </div>
+    </form>
+
+    <div class="finder-result" data-finder-result hidden aria-live="polite">
+      <p class="section-kicker">Your short list</p>
+      <p class="result-count"><strong data-result-count>0</strong> <span data-result-label>tips match</span></p>
+      <p class="result-desc">High-value tips that fit your answers. You can still change the filters on the Explore page.</p>
+      <a class="ui-btn ui-btn-primary result-link" data-result-link data-base={exploreHref} href={exploreHref}>See my tips →</a>
+      <button type="button" class="finder-restart" data-finder-restart>Start over</button>
+    </div>
+  </div>
+
+  <script type="application/json" id="finder-counts" set:html={JSON.stringify(counts)}></script>
+</section>
+
+<style>
+  .finder { margin: 2.25rem 0; }
+
+  .finder-head { margin-bottom: 0.9rem; }
+
+  .finder-title {
+    font-family: var(--font-sans);
+    font-size: clamp(1.5rem, 5vw, 1.9rem);
+    font-weight: 800;
+    line-height: 1.12;
+    letter-spacing: -0.03em;
+    color: var(--theme-text);
+    margin: 0.2rem 0 0.35rem;
+  }
+
+  .finder-lead {
+    max-width: 54ch;
+    font-family: var(--font-serif);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: var(--theme-text-muted);
+  }
+
+  .finder-card {
+    padding: 1rem;
+    border-radius: 20px;
+  }
+
+  .finder-top {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    margin-bottom: 0.9rem;
+  }
+
+  .finder-step-label {
+    flex: 0 0 auto;
+    font-family: var(--font-sans);
+    font-size: 0.66rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--color-jade-text);
+  }
+
+  .finder-track {
+    flex: 1;
+    height: 3px;
+    border-radius: 999px;
+    background: var(--theme-soft);
+    overflow: hidden;
+  }
+
+  .finder-bar {
+    display: block;
+    height: 100%;
+    width: 33%;
+    border-radius: inherit;
+    background: var(--color-jade);
+    transition: width var(--dur-base) var(--ease-out);
+  }
+
+  .finder-step {
+    display: none;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    min-width: 0;
+  }
+
+  .finder-step.is-active { display: block; }
+
+  .finder-step legend {
+    padding: 0;
+    font-family: var(--font-sans);
+    font-size: 1.05rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: var(--theme-text);
+  }
+
+  .finder-hint {
+    margin: 0.2rem 0 0.75rem;
+    font-family: var(--font-sans);
+    font-size: 0.76rem;
+    line-height: 1.4;
+    color: var(--theme-text-muted);
+  }
+
+  .finder-options {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+  }
+
+  .finder-option {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    width: 100%;
+    min-height: 54px;
+    padding: 0.55rem 0.65rem;
+    border: 1px solid var(--theme-hairline);
+    border-radius: 12px;
+    background: var(--theme-card);
+    color: var(--theme-text);
+    text-align: left;
+    cursor: pointer;
+    transition: border-color var(--dur-fast), background var(--dur-fast), transform var(--dur-fast);
+  }
+
+  .finder-option:hover {
+    border-color: color-mix(in srgb, var(--color-jade) 50%, transparent);
+  }
+
+  .finder-option:active { transform: scale(0.985); }
+
+  .finder-option.is-selected {
+    border-color: var(--color-jade);
+    background: color-mix(in srgb, var(--color-jade) 10%, var(--theme-card));
+  }
+
+  .opt-icon {
+    flex: 0 0 34px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
+    background: color-mix(in srgb, var(--color-jade) 12%, transparent);
+    color: var(--color-jade-text);
+  }
+
+  .opt-copy {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    min-width: 0;
+  }
+
+  .opt-copy strong {
+    font-family: var(--font-sans);
+    font-size: 0.88rem;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+  }
+
+  .opt-copy small {
+    font-family: var(--font-sans);
+    font-size: 0.71rem;
+    line-height: 1.3;
+    color: var(--theme-text-muted);
+  }
+
+  .opt-arrow {
+    flex: 0 0 auto;
+    font-size: 1.2rem;
+    color: var(--theme-text-muted);
+  }
+
+  .finder-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    margin-top: 0.8rem;
+  }
+
+  .finder-back,
+  .finder-skip {
+    min-height: 40px;
+    padding: 0.3rem 0.2rem;
+    border: 0;
+    background: transparent;
+    font-family: var(--font-sans);
+    font-size: 0.76rem;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  .finder-back { color: var(--color-jade-text); }
+  .finder-skip { color: var(--theme-text-muted); margin-left: auto; }
+  .finder-skip:hover, .finder-back:hover { color: var(--theme-text); }
+
+  .finder-result { text-align: left; }
+
+  .result-count {
+    margin: 0.25rem 0 0.15rem;
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--theme-text-muted);
+  }
+
+  .result-count strong {
+    font-size: 2.1rem;
+    line-height: 1;
+    letter-spacing: -0.04em;
+    color: var(--color-jade-text);
+    margin-right: 0.2rem;
+  }
+
+  .result-desc {
+    max-width: 46ch;
+    margin-bottom: 0.85rem;
+    font-family: var(--font-sans);
+    font-size: 0.78rem;
+    line-height: 1.45;
+    color: var(--theme-text-muted);
+  }
+
+  .result-link { width: 100%; }
+
+  .finder-restart {
+    display: block;
+    margin: 0.65rem auto 0;
+    min-height: 40px;
+    padding: 0.25rem 0.5rem;
+    border: 0;
+    background: transparent;
+    color: var(--theme-text-muted);
+    font-family: var(--font-sans);
+    font-size: 0.74rem;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  @media (min-width: 560px) {
+    .finder-card { padding: 1.25rem; }
+    .finder-options { display: grid; grid-template-columns: 1fr 1fr; }
+    .finder-option { min-height: 64px; }
+  }
+</style>
+
+<script>
+  interface FinderState {
+    scope: string;
+    time: string;
+    willpower: string;
+  }
+
+  function initFinder() {
+    const root = document.querySelector<HTMLElement>('[data-finder]');
+    if (!root || root.dataset.bound === 'true') return;
+    root.dataset.bound = 'true';
+
+    const form = root.querySelector<HTMLFormElement>('[data-finder-form]');
+    const steps = Array.from(root.querySelectorAll<HTMLElement>('.finder-step'));
+    const label = root.querySelector<HTMLElement>('[data-finder-label]');
+    const bar = root.querySelector<HTMLElement>('[data-finder-bar]');
+    const backBtn = root.querySelector<HTMLButtonElement>('[data-finder-back]');
+    const skipBtn = root.querySelector<HTMLButtonElement>('[data-finder-skip]');
+    const result = root.querySelector<HTMLElement>('[data-finder-result]');
+    const resultCount = root.querySelector<HTMLElement>('[data-result-count]');
+    const resultLabel = root.querySelector<HTMLElement>('[data-result-label]');
+    const resultLink = root.querySelector<HTMLAnchorElement>('[data-result-link]');
+    const restartBtn = root.querySelector<HTMLButtonElement>('[data-finder-restart]');
+    const countsEl = document.getElementById('finder-counts');
+    if (!form || !steps.length || !countsEl) return;
+
+    let counts: Record<string, { vh: number; all: number }> = {};
+    try {
+      counts = JSON.parse(countsEl.textContent || '{}');
+    } catch (e) {}
+
+    const keys: Array<keyof FinderState> = ['scope', 'time', 'willpower'];
+    const state: FinderState = { scope: '', time: '', willpower: '' };
+    let step = 0;
+
+    function render() {
+      steps.forEach((el, index) => el.classList.toggle('is-active', index === step));
+      if (label) label.textContent = 'Question ' + (step + 1) + ' of 3';
+      if (bar) bar.style.width = ((step + 1) / 3) * 100 + '%';
+      if (backBtn) backBtn.hidden = step === 0;
+    }
+
+    function showResult() {
+      const key = [state.scope || 'all', state.time || 'all', state.willpower || 'all'].join('|');
+      const pair = counts[key] || { vh: 0, all: 0 };
+      const useVh = pair.vh > 0;
+      const total = useVh ? pair.vh : pair.all;
+
+      if (form) form.hidden = true;
+      if (result) result.hidden = false;
+      if (resultCount) resultCount.textContent = String(total);
+      if (resultLabel) resultLabel.textContent = total === 1 ? 'tip matches' : 'tips match';
+
+      const params = new URLSearchParams();
+      if (state.scope) params.set('scope', state.scope);
+      if (state.time) params.set('time', state.time);
+      if (state.willpower) params.set('willpower', state.willpower);
+      if (useVh) params.set('tier', 'Very high');
+      if (resultLink) {
+        const base = resultLink.getAttribute('data-base') || '/explore/';
+        const query = params.toString();
+        resultLink.href = base + (query ? '?' + query : '');
+      }
+    }
+
+    function advance() {
+      if (step < 2) {
+        step += 1;
+        render();
+      } else {
+        showResult();
+      }
+    }
+
+    root.querySelectorAll<HTMLButtonElement>('.finder-option').forEach((option) => {
+      option.addEventListener('click', () => {
+        const key = option.dataset.key as keyof FinderState;
+        const value = option.dataset.value || '';
+        if (!key) return;
+        state[key] = value;
+
+        root.querySelectorAll<HTMLButtonElement>('.finder-option[data-key="' + key + '"]').forEach((el) => {
+          const selected = el === option;
+          el.classList.toggle('is-selected', selected);
+          el.setAttribute('aria-pressed', selected ? 'true' : 'false');
+        });
+
+        window.setTimeout(advance, 160);
+      });
+    });
+
+    backBtn?.addEventListener('click', () => {
+      if (step > 0) {
+        step -= 1;
+        render();
+      }
+    });
+
+    skipBtn?.addEventListener('click', () => {
+      const key = keys[step];
+      state[key] = '';
+      root.querySelectorAll<HTMLButtonElement>('.finder-option[data-key="' + key + '"]').forEach((el) => {
+        el.classList.remove('is-selected');
+        el.setAttribute('aria-pressed', 'false');
+      });
+      advance();
+    });
+
+    restartBtn?.addEventListener('click', () => {
+      state.scope = '';
+      state.time = '';
+      state.willpower = '';
+      step = 0;
+      root.querySelectorAll<HTMLButtonElement>('.finder-option').forEach((el) => {
+        el.classList.remove('is-selected');
+        el.setAttribute('aria-pressed', 'false');
+      });
+      if (result) result.hidden = true;
+      if (form) form.hidden = false;
+      render();
+    });
+
+    render();
+  }
+
+  initFinder();
+  document.addEventListener('astro:page-load', initFinder);
+</script>

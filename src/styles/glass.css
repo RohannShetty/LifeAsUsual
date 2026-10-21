@@ -43,20 +43,20 @@
 
 /* Fake Glass for Repetitive Tip Cards (Performance & 7:1 Contrast Guarantee) */
 .fake-glass {
-  background: #0D262D;
-  border: 1px solid rgba(70, 217, 160, 0.12);
+  background: color-mix(in srgb, var(--theme-surface) 86%, var(--theme-bg));
+  border: 1px solid color-mix(in srgb, var(--color-jade) 14%, var(--theme-hairline));
   border-top: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: var(--radius-card);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.22);
-  color: var(--color-mist);
+  color: var(--theme-text);
 }
 
 [data-theme="light"] .fake-glass {
-  background: #FFFFFF;
+  background: var(--theme-card-strong);
   border: 1px solid rgba(4, 17, 15, 0.08);
   border-top: 1px solid rgba(255, 255, 255, 0.9);
   box-shadow: 0 4px 16px rgba(4, 17, 15, 0.06);
-  color: #04110F;
+  color: var(--theme-text);
 }
 
 /* Accessibility & Fallbacks */

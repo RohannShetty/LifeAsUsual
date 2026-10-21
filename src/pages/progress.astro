@@ -18,45 +18,35 @@ import Bubble from '../cast/Bubble.astro';
         765 beads across 34 chapters. Beads glow jade as you read tips. All progress is kept strictly on your device.
       </p>
 
-      <div class="cast-progress-row" aria-hidden="true">
-        <div class="cast-item">
-          <Character character="plus" mood="cheering" size={56} />
-          <Bubble speaker="Plus" text="Streak alive! Good to see you back." tailDirection="bottom-left" />
-        </div>
-        <div class="cast-item">
-          <Character character="minus" mood="smug" size={56} />
-          <Bubble speaker="Minus" text="Steady consistency wins." tailDirection="bottom-right" />
-        </div>
+      <div class="cast-progress-row" data-cast-note aria-hidden="true">
+        <Character character="plus" mood="cheering" size={42} />
+        <Bubble speaker="Plus" text="Steady consistency wins." tailDirection="left" autoDismissSeconds={12} />
       </div>
     </header>
 
     <!-- Top Summary Ring & Stats -->
     <section class="overview-section liquid-glass">
       <div class="ring-column">
-        <ProgressRing size={160} strokeWidth={12} />
+        <ProgressRing size={118} strokeWidth={10} />
       </div>
       <div class="stats-column">
         <div class="stat-cell">
           <span class="stat-val" id="stat-read-count">0</span>
-          <span class="stat-desc">Tips Read / 765</span>
+          <span class="stat-desc">Tips read</span>
         </div>
         <div class="stat-cell">
           <span class="stat-val" id="stat-picks-count">0</span>
-          <span class="stat-desc">Bookmarked Picks</span>
+          <span class="stat-desc">Saved picks</span>
         </div>
         <div class="stat-cell">
           <span class="stat-val" id="stat-streak-days">1</span>
-          <span class="stat-desc">Day Active Streak</span>
+          <span class="stat-desc">Day streak</span>
         </div>
       </div>
     </section>
 
     <!-- 765 Beads SVG Map -->
-    <section class="map-section liquid-glass">
-      <div class="section-title-row">
-        <h2 class="section-title">The 765-Tip Bead Field</h2>
-        <span class="map-hint">Tap any bead to jump to that tip</span>
-      </div>
+    <section class="map-section">
       <ReadingMap />
     </section>
 
@@ -64,7 +54,7 @@ import Bubble from '../cast/Bubble.astro';
     <section class="storage-section liquid-glass">
       <h2 class="section-title">Data Backup & Privacy Controls</h2>
       <p class="storage-desc">
-        Your reading state is stored exclusively in your browser's <code>localStorage</code>. No telemetry, no external accounts, no cloud sync.
+        Your place, read marks, picks and streak are stored only in this browser's <code>localStorage</code>. No cookies, no telemetry, no account, no cloud sync.
       </p>
 
       <div class="storage-actions-grid">
@@ -168,42 +158,49 @@ import Bubble from '../cast/Bubble.astro';
   }
 
   .progress-header {
-    margin-bottom: 2.5rem;
+    margin-bottom: 1.25rem;
   }
 
   .page-title {
-    font-family: var(--font-display);
-    font-size: clamp(2rem, 5vw, 2.75rem);
-    letter-spacing: -0.02em;
-    margin: 0.75rem 0 0.5rem;
+    font-family: var(--font-sans);
+    font-weight: 800;
+    font-size: clamp(1.9rem, 6.5vw, 2.5rem);
+    line-height: 1.06;
+    letter-spacing: -0.04em;
+    margin: 0.65rem 0 0.4rem;
     color: var(--theme-text);
   }
 
   .page-lead {
-    font-size: 1.125rem;
-    line-height: 1.6;
-    color: var(--color-ink-muted);
+    max-width: 56ch;
+    font-family: var(--font-serif);
+    font-size: 0.95rem;
+    line-height: 1.55;
+    color: var(--theme-text-muted);
   }
 
   .cast-progress-row {
     display: flex;
-    gap: 1.5rem;
-    margin-top: 1.75rem;
-    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.55rem;
+    margin-top: 0.9rem;
+    max-width: 360px;
   }
 
-  .cast-item {
-    display: flex;
-    align-items: flex-end;
-    gap: 0.5rem;
+  .cast-progress-row :global(.bubble-content) {
+    padding: 0.5rem 0.7rem 0.55rem;
+    box-shadow: 2px 2px 0 var(--color-ink);
   }
+
+  .cast-progress-row :global(.bubble-header) { margin-bottom: 0.12rem; }
+  .cast-progress-row :global(.bubble-text) { font-size: 0.8rem; }
 
   .overview-section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2rem;
-    padding: 2rem;
+    gap: 1rem;
+    padding: 1.1rem;
     background: var(--color-glass-fill);
     border: 1px solid var(--color-glass-border);
     border-radius: var(--radius-card);
@@ -214,26 +211,30 @@ import Bubble from '../cast/Bubble.astro';
   @media (min-width: 640px) {
     .overview-section {
       flex-direction: row;
-      justify-content: space-around;
+      justify-content: flex-start;
+      gap: 1.5rem;
+      padding: 1.25rem 1.5rem;
     }
+    .stats-column { width: auto; flex: 1; }
   }
 
   .stats-column {
-    display: flex;
-    gap: 2rem;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    width: 100%;
   }
 
   .stat-cell {
     text-align: center;
-    min-width: 110px;
+    min-width: 0;
   }
 
   .stat-val {
     display: block;
-    font-family: var(--font-display);
-    font-size: 2.25rem;
+    font-family: var(--font-sans);
+    font-weight: 800;
+    font-size: 1.55rem;
     line-height: 1;
     color: var(--color-jade-text);
     margin-bottom: 0.35rem;

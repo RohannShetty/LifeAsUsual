@@ -3,13 +3,13 @@ import fs from 'node:fs';
 import path from 'node:path';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ProgressRing from '../components/ProgressRing.astro';
-import ReadingMap from '../components/ReadingMap.astro';
+import QuestionFlow from '../components/QuestionFlow.astro';
 import Character from '../cast/Character.astro';
 import Bubble from '../cast/Bubble.astro';
 import type { EnglishChapter, EnglishTip } from '../../scripts/ingest-parveen';
+import calmChapters from '../../data/calm-chapters.json';
 import { resolvePath } from '../utils/paths';
 
-// Load all chapters and extract 122 Very High tips
 const enAllPath = path.resolve('data/en/all-chapters.json');
 let chapters: EnglishChapter[] = [];
 try {
@@ -18,480 +18,425 @@ try {
   console.warn('Could not load chapters for home page:', e);
 }
 
-const veryHighTips: EnglishTip[] = [];
-for (const ch of chapters) {
-  for (const t of ch.tips) {
-    if (t.valueTier === 'Very high') {
-      veryHighTips.push(t);
-    }
-  }
-}
+const allTips: EnglishTip[] = chapters.flatMap((chapter) => chapter.tips);
+const veryHighTips = allTips.filter((tip) => tip.valueTier === 'Very high');
 
-// Deterministic Daily Quick Win based on day of year
 const now = new Date();
 const startOfYear = new Date(now.getFullYear(), 0, 0);
 const diff = now.getTime() - startOfYear.getTime();
 const oneDay = 1000 * 60 * 60 * 24;
 const dayOfYear = Math.floor(diff / oneDay);
 
-const dailyTip = veryHighTips.length > 0 
-  ? veryHighTips[dayOfYear % veryHighTips.length] 
+// India edition: prefer a daily tip that does not depend on Chinese legal or
+// insurance procedures, and never pick a sensitive (calm) chapter for the hero.
+const chinaHeavyChapters = new Set([8, 9, 11, 12, 19, 21, 24, 25, 26, 31, 32]);
+const chinaTerms = /\b(China|Chinese|RMB|yuan|yibao|hukou|dibao)\b/i;
+const dailyPool = veryHighTips.filter((tip) => {
+  if (chinaHeavyChapters.has(tip.chapter)) return false;
+  if (calmChapters.includes(tip.chapter)) return false;
+  const fullText = [tip.title, tip.inPlainWords, tip.cost, tip.benefit, tip.caveats, tip.sources].join(' ');
+  return !chinaTerms.test(fullText);
+});
+const dailySource = dailyPool.length > 0 ? dailyPool : veryHighTips;
+const dailyTip = dailySource.length > 0
+  ? dailySource[dayOfYear % dailySource.length]
   : null;
-const dailyChapter = dailyTip ? chapters.find(c => c.chapter === dailyTip.chapter) : null;
+const dailyChapter = dailyTip ? chapters.find((chapter) => chapter.chapter === dailyTip.chapter) : null;
 const dailyChapterSlug = dailyChapter ? dailyChapter.slug : 'slug';
-const chapterSlugMap = Object.fromEntries(chapters.map(c => [c.chapter, c.slug]));
+const chapterSlugMap = Object.fromEntries(chapters.map((chapter) => [chapter.chapter, chapter.slug]));
+
+const dailyHref = dailyTip
+  ? resolvePath('/chapters/' + String(dailyTip.chapter).padStart(2, '0') + '-' + dailyChapterSlug + '/#' + dailyTip.id)
+  : resolvePath('/chapters/');
+
+const scopeOptions = ['Lifespan', 'Money', 'Time and energy', 'Personal freedom'];
+const timeOptions = ['Quick', 'A few hours', 'Takes time every day'];
+const willpowerOptions = ['None needed', 'Some', 'A lot'];
+const finderCounts: Record<string, { vh: number; all: number }> = {};
+
+for (const scope of ['all', ...scopeOptions]) {
+  for (const time of ['all', ...timeOptions]) {
+    for (const willpower of ['all', ...willpowerOptions]) {
+      const matches = allTips.filter((tip) =>
+        (scope === 'all' || tip.tags.scope === scope) &&
+        (time === 'all' || tip.tags.time === time) &&
+        (willpower === 'all' || tip.tags.willpower === willpower)
+      );
+      finderCounts[scope + '|' + time + '|' + willpower] = {
+        vh: matches.filter((tip) => tip.valueTier === 'Very high').length,
+        all: matches.length
+      };
+    }
+  }
+}
 ---
 
-<BaseLayout 
-  title="How To Live Better — Evidence-Based Life Guide"
-  description="Spend the least money, time and effort to get back the most lifespan, money and personal freedom. 765 verified tips."
+<BaseLayout
+  title="How To Live Better — Evidence-Based Life Guide for India"
+  description="765 evidence-graded tips on health, money, work and freedom, with an India edition policy crosswalk. Spend less, get back more."
 >
-  <!-- Comic Header Splash -->
-  <header class="home-header">
-    <div class="comic-badge-row">
-      <span class="comic-sticker sticker-benefit">Verified Life Decisions</span>
-      <span class="comic-sticker sticker-neutral">765 Tips</span>
+  <header class="home-hero">
+    <div class="hero-meta">
+      <a class="india-pill" href={resolvePath('/india/')}>
+        <span class="india-dot" aria-hidden="true"></span>
+        India edition
+      </a>
+      <span class="hero-count">765 tips · 34 chapters</span>
     </div>
 
-    <h1 class="home-headline">
-      How To Live Better
-    </h1>
-    <p class="home-tagline">
-      Spend the least money, time and effort to get back the most lifespan, money and personal freedom.
-    </p>
-    <p class="home-subtagline">
-      This is a menu, not a to-do list. Picking one or two tips counts.
-    </p>
+    <h1 class="home-headline">How To Live Better</h1>
+    <p class="home-tagline">Spend the least money, time and effort to get back the most lifespan, money and personal freedom.</p>
+    <p class="home-subtagline">A menu, not a to-do list. One or two tips count.</p>
 
-    <!-- Plus & Minus Cast Welcome -->
-    <div class="cast-welcome-row" aria-hidden="true">
-      <div class="cast-member">
-        <Character character="plus" mood="happy" size={56} />
-        <Bubble speaker="Plus" text="Welcome! Ready to find a quick win today?" tailDirection="bottom-left" />
-      </div>
-      <div class="cast-member">
-        <Character character="minus" mood="smug" size={56} />
-        <Bubble speaker="Minus" text="Cost first, payoffs later." tailDirection="bottom-right" />
-      </div>
+    <div class="cast-welcome-row" data-cast-note aria-hidden="true">
+      <Character character="plus" mood="happy" size={42} />
+      <Bubble speaker="Plus" text="One quick win is enough. Start there." tailDirection="left" autoDismissSeconds={12} />
     </div>
   </header>
 
-  <!-- Daily Quick Win Hero Panel (Comic Splash Framing) -->
   {dailyTip && (
-    <section class="daily-win-panel liquid-glass comic-border-thick">
-      <div class="panel-eyebrow">
-        <span class="daily-badge">Daily Quick Win</span>
-        <span class="comic-sticker sticker-benefit">ROI: Very High</span>
-        <span class="comic-sticker sticker-neutral">Grade {dailyTip.evidenceGrade}</span>
+    <section class="daily-win-panel liquid-glass">
+      <div class="daily-topline">
+        <span class="daily-badge">Today's quick win</span>
+        <span class="daily-tier">{dailyTip.valueTier} ROI</span>
+        <span class="daily-grade">Grade {dailyTip.evidenceGrade}</span>
       </div>
 
-      <div class="daily-title-row">
-        <a 
-          href={resolvePath(`/chapters/${String(dailyTip.chapter).padStart(2, '0')}-${dailyChapterSlug}/#${dailyTip.chapter}-${dailyTip.tip}`)}
-          class="daily-title-link"
-        >
-          <span class="daily-tip-num">{dailyTip.chapter}.{dailyTip.tip}</span>
-          <h2 class="daily-tip-title">{dailyTip.title}</h2>
-        </a>
-      </div>
+      <a href={dailyHref} class="daily-title-link">
+        <span class="daily-tip-num">{dailyTip.chapter}.{dailyTip.tip}</span>
+        <h2 class="daily-tip-title">{dailyTip.title}</h2>
+      </a>
 
-      <div class="daily-lead-box">
-        <p class="daily-lead-text">{dailyTip.inPlainWords}</p>
-      </div>
+      <p class="daily-lead-text">{dailyTip.inPlainWords}</p>
 
       <div class="daily-cost-row">
-        <span class="cost-tag">Cost: {dailyTip.tags.money}</span>
-        <span class="cost-tag">Time: {dailyTip.tags.time}</span>
-        <span class="cost-tag">Willpower: {dailyTip.tags.willpower}</span>
+        <span class="cost-tag">Cost · {dailyTip.tags.money}</span>
+        <span class="cost-tag">Time · {dailyTip.tags.time}</span>
+        <span class="cost-tag">Effort · {dailyTip.tags.willpower}</span>
       </div>
 
-      <div class="daily-footer-row">
-        <a 
-          href={resolvePath(`/chapters/${String(dailyTip.chapter).padStart(2, '0')}-${dailyChapterSlug}/#${dailyTip.chapter}-${dailyTip.tip}`)}
-          class="read-tip-cta"
-        >
-          <span>Read Full Tip & Evidence →</span>
-        </a>
-      </div>
+      <a href={dailyHref} class="ui-btn ui-btn-primary daily-cta">Read the full tip and evidence <span aria-hidden="true">→</span></a>
     </section>
   )}
 
-  <!-- Quick Progress & Continue Reading Bar -->
   <section class="overview-section liquid-glass">
-    <div class="overview-grid">
-      <div class="overview-ring-col">
-        <ProgressRing size={110} strokeWidth={9} />
-      </div>
-
-      <div class="overview-cta-col">
-        <h3 class="overview-heading">Reading Progress</h3>
-        <p class="overview-desc" id="resume-text">
-          Pick up where you left off or explore by your priorities.
-        </p>
-        <div class="overview-actions">
-          <a 
-            href={resolvePath('/chapters/01-do-not-die-early/')} 
-            class="action-btn-primary" 
-            id="continue-reading-btn"
-            data-slug-map={JSON.stringify(chapterSlugMap)}
-          >
-            Continue Reading →
-          </a>
-          <a href={resolvePath('/chapters/')} class="action-btn-secondary">
-            Browse Chapters
-          </a>
-        </div>
+    <div class="overview-ring-col">
+      <ProgressRing size={74} strokeWidth={7} />
+    </div>
+    <div class="overview-cta-col">
+      <p class="overview-kicker">Your reading</p>
+      <p class="overview-desc" id="resume-text">Pick up where you left off, or start with one idea.</p>
+      <div class="overview-actions">
+        <a
+          href={resolvePath('/chapters/01-do-not-die-early/')}
+          class="ui-btn ui-btn-primary"
+          id="continue-reading-btn"
+          data-slug-map={JSON.stringify(chapterSlugMap)}
+        >
+          Continue reading
+        </a>
+        <a href={resolvePath('/chapters/')} class="ui-btn ui-btn-secondary">Browse chapters</a>
       </div>
     </div>
   </section>
 
-  <!-- 4 Payoff Shortcuts (Lifespan, Money, Time, Freedom) -->
-  <section class="shortcuts-section">
-    <h3 class="section-title">What do you want back?</h3>
-    <div class="shortcuts-grid">
-      <a href={resolvePath('/explore/?scope=Lifespan')} class="shortcut-card liquid-glass">
-        <span class="shortcut-icon">❤️</span>
-        <div class="shortcut-text">
-          <strong class="shortcut-label">Lifespan</strong>
-          <span class="shortcut-desc">274 tips on longevity & safety</span>
-        </div>
-      </a>
+  <QuestionFlow counts={finderCounts} />
 
-      <a href={resolvePath('/explore/?scope=Money')} class="shortcut-card liquid-glass">
-        <span class="shortcut-icon">💰</span>
-        <div class="shortcut-text">
-          <strong class="shortcut-label">Money</strong>
-          <span class="shortcut-desc">290 tips on scams, rent & wages</span>
-        </div>
-      </a>
-
-      <a href={resolvePath('/explore/?scope=Time')} class="shortcut-card liquid-glass">
-        <span class="shortcut-icon">⚡</span>
-        <div class="shortcut-text">
-          <strong class="shortcut-label">Time & Energy</strong>
-          <span class="shortcut-desc">77 tips on focus & sleep</span>
-        </div>
-      </a>
-
-      <a href={resolvePath('/explore/?scope=Freedom')} class="shortcut-card liquid-glass">
-        <span class="shortcut-icon">🕊️</span>
-        <div class="shortcut-text">
-          <strong class="shortcut-label">Personal Freedom</strong>
-          <span class="shortcut-desc">124 tips on legal boundaries</span>
-        </div>
-      </a>
+  <section class="map-teaser liquid-glass">
+    <div>
+      <p class="overview-kicker">Reading map</p>
+      <h2 class="map-teaser-title">765 beads. One for every tip.</h2>
+      <p class="map-teaser-desc">Beads light up as you read. Your progress stays on this device.</p>
     </div>
-  </section>
-
-  <!-- Reading Map Overview -->
-  <section class="map-section">
-    <ReadingMap />
+    <a class="ui-btn ui-btn-secondary map-teaser-link" href={resolvePath('/progress/')}>Open the map <span aria-hidden="true">→</span></a>
   </section>
 </BaseLayout>
 
 <style>
-  /* Header Splash */
-  .home-header {
-    margin-bottom: 2.25rem;
+  .home-hero { margin-bottom: 1.4rem; }
+
+  .hero-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.8rem;
   }
 
-  .comic-badge-row {
-    display: flex;
-    gap: 8px;
-    margin-bottom: 0.85rem;
+  .india-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 9px;
+    border: 1px solid color-mix(in srgb, var(--color-jade) 36%, transparent);
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--color-jade) 10%, var(--theme-card));
+    color: var(--color-jade-text);
+    font-family: var(--font-sans);
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+  }
+
+  .india-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--color-jade);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-jade) 18%, transparent);
+  }
+
+  .hero-count {
+    font-family: var(--font-sans);
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--theme-text-muted);
   }
 
   .home-headline {
-    font-family: var(--font-comic);
-    font-size: clamp(2rem, 7vw, 2.85rem);
-    line-height: 1.1;
+    font-family: var(--font-sans);
+    font-weight: 800;
+    font-size: clamp(2.15rem, 8vw, 3rem);
+    line-height: 1.02;
+    letter-spacing: -0.045em;
     color: var(--theme-text);
-    margin-bottom: 0.65rem;
-    letter-spacing: -0.02em;
-    overflow-wrap: break-word;
+    margin-bottom: 0.55rem;
   }
 
   .home-tagline {
-    font-size: 1.15rem;
+    max-width: 34ch;
+    font-family: var(--font-serif);
+    font-size: 1.02rem;
     font-weight: 500;
-    color: var(--color-jade-text);
     line-height: 1.5;
-    margin-bottom: 0.4rem;
+    color: var(--color-jade-text);
+    margin-bottom: 0.35rem;
   }
 
   .home-subtagline {
-    font-size: 0.95rem;
+    font-family: var(--font-sans);
+    font-size: 0.82rem;
+    line-height: 1.4;
     color: var(--theme-text-muted);
   }
 
   .cast-welcome-row {
     display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    margin: 1.75rem 0 1rem;
-    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.55rem;
+    margin: 1rem 0 0.25rem;
+    max-width: 360px;
   }
 
-  .cast-member {
-    display: flex;
-    align-items: flex-end;
-    gap: 0.5rem;
+  .cast-welcome-row :global(.comic-bubble-wrapper) {
+    max-width: 270px;
   }
 
-  /* Daily Win Panel */
+  .cast-welcome-row :global(.bubble-content) {
+    padding: 0.5rem 0.7rem 0.55rem;
+    box-shadow: 2px 2px 0 var(--color-ink);
+  }
+
+  .cast-welcome-row :global(.bubble-header) { margin-bottom: 0.15rem; }
+  .cast-welcome-row :global(.bubble-text) { font-size: 0.8rem; }
+
+  /* Daily quick win */
   .daily-win-panel {
-    padding: 1.75rem 1.5rem;
-    margin-bottom: 2.5rem;
-    position: relative;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 18px;
+    border-top: 2px solid var(--color-jade);
     overflow: hidden;
   }
 
-  .panel-eyebrow {
+  .daily-topline {
     display: flex;
     align-items: center;
-    gap: 8px;
-    margin-bottom: 1rem;
+    gap: 0.4rem;
     flex-wrap: wrap;
+    margin-bottom: 0.55rem;
   }
 
   .daily-badge {
     font-family: var(--font-sans);
-    font-size: 0.78rem;
+    font-size: 0.62rem;
     font-weight: 800;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
     color: var(--color-amber-text);
+    margin-right: 0.15rem;
   }
 
-  .daily-title-row {
-    margin-bottom: 1rem;
+  .daily-tier,
+  .daily-grade {
+    display: inline-flex;
+    align-items: center;
+    padding: 2px 7px;
+    border-radius: 999px;
+    font-family: var(--font-sans);
+    font-size: 0.64rem;
+    font-weight: 800;
+    line-height: 1.5;
+  }
+
+  .daily-tier {
+    background: color-mix(in srgb, var(--color-jade) 14%, transparent);
+    color: var(--color-jade-text);
+    border: 1px solid color-mix(in srgb, var(--color-jade) 26%, transparent);
+  }
+
+  .daily-grade {
+    background: var(--theme-soft);
+    color: var(--theme-text-muted);
+    border: 1px solid var(--theme-hairline);
   }
 
   .daily-title-link {
     display: flex;
-    align-items: baseline;
-    gap: 8px;
+    align-items: flex-start;
+    gap: 0.55rem;
     text-decoration: none;
     color: var(--theme-text);
+    margin-bottom: 0.55rem;
   }
 
   .daily-tip-num {
-    font-family: var(--font-sans);
-    font-weight: 800;
-    font-size: 1rem;
+    flex: 0 0 auto;
+    margin-top: 2px;
+    padding: 2px 6px;
+    border-radius: 5px;
     background: var(--color-ink);
     color: var(--color-mist);
-    padding: 2px 7px;
-    border-radius: 6px;
-    flex-shrink: 0;
+    font-family: var(--font-sans);
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
   }
+
+  :global([data-theme="light"]) .daily-tip-num { color: #fff; }
 
   .daily-tip-title {
     font-family: var(--font-sans);
-    font-size: 1.35rem;
-    font-weight: 700;
-    line-height: 1.3;
-  }
-
-  .daily-lead-box {
-    background: rgba(0, 0, 0, 0.16);
-    padding: 1rem 1.15rem;
-    border-radius: 12px;
-    margin-bottom: 1rem;
-  }
-
-  [data-theme="light"] .daily-lead-box {
-    background: rgba(0, 0, 0, 0.04);
+    font-size: 1.14rem;
+    font-weight: 800;
+    line-height: 1.28;
+    letter-spacing: -0.02em;
   }
 
   .daily-lead-text {
     font-family: var(--font-serif);
-    font-size: 1.05rem;
-    line-height: 1.65;
+    font-size: 0.93rem;
+    line-height: 1.58;
     color: var(--theme-text);
+    margin-bottom: 0.65rem;
   }
 
   .daily-cost-row {
     display: flex;
-    gap: 0.75rem;
-    margin-bottom: 1.25rem;
     flex-wrap: wrap;
+    gap: 0.3rem;
+    margin-bottom: 0.8rem;
   }
 
   .cost-tag {
+    display: inline-flex;
+    padding: 3px 7px;
+    border-radius: 6px;
+    background: var(--theme-soft);
+    border: 1px solid var(--theme-hairline);
     font-family: var(--font-sans);
-    font-size: 0.8rem;
-    font-weight: 600;
+    font-size: 0.66rem;
+    font-weight: 650;
     color: var(--theme-text-muted);
   }
 
-  .daily-footer-row {
-    display: flex;
-    justify-content: flex-end;
-  }
+  .daily-cta { width: 100%; }
 
-  .read-tip-cta {
-    display: inline-flex;
-    align-items: center;
-    min-height: 44px;
-    padding: 8px 14px;
-    font-family: var(--font-sans);
-    font-size: 0.9rem;
-    font-weight: 700;
-    color: var(--color-jade-text);
-    text-decoration: none;
-    border-radius: var(--radius-capsule);
-    transition: background var(--dur-fast);
-  }
-
-  .read-tip-cta:hover {
-    background: rgba(30, 215, 96, 0.1);
-  }
-
-  /* Overview & Ring Section */
+  /* Compact progress */
   .overview-section {
-    padding: 1.5rem;
-    margin-bottom: 2.5rem;
-  }
-
-  .overview-grid {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    gap: 1.5rem;
+    gap: 1rem;
+    padding: 0.9rem 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 18px;
   }
 
-  @media (min-width: 640px) {
-    .overview-grid {
-      flex-direction: row;
-      gap: 2rem;
-    }
-  }
+  .overview-ring-col { flex: 0 0 auto; }
 
-  .overview-cta-col {
-    flex: 1;
-  }
+  .overview-ring-col :global(.ring-percent) { font-size: 1rem; }
+  .overview-ring-col :global(.ring-label) { font-size: 0.58rem; }
 
-  .overview-heading {
+  .overview-cta-col { flex: 1; min-width: 0; }
+
+  .overview-kicker {
     font-family: var(--font-sans);
-    font-size: 1.2rem;
-    font-weight: 700;
-    margin-bottom: 0.35rem;
+    font-size: 0.6rem;
+    font-weight: 800;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--color-jade-text);
+    margin-bottom: 0.15rem;
   }
 
   .overview-desc {
-    font-size: 0.9rem;
+    font-family: var(--font-sans);
+    font-size: 0.76rem;
+    line-height: 1.4;
     color: var(--theme-text-muted);
-    margin-bottom: 1rem;
-    line-height: 1.45;
+    margin-bottom: 0.55rem;
   }
 
   .overview-actions {
     display: flex;
-    gap: 0.75rem;
+    gap: 0.4rem;
     flex-wrap: wrap;
   }
 
-  .action-btn-primary {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 44px;
-    padding: 10px 20px;
-    background: var(--color-jade);
-    color: var(--color-ink);
-    border-radius: var(--radius-capsule);
-    font-family: var(--font-sans);
-    font-weight: 700;
-    font-size: 0.9rem;
-    text-decoration: none;
-    transition: transform var(--dur-fast) var(--ease-out), background var(--dur-fast);
+  .overview-actions .ui-btn {
+    min-height: 40px;
+    padding: 0.45rem 0.8rem;
+    font-size: 0.76rem;
   }
 
-  .action-btn-primary:active {
-    transform: scale(0.97);
-  }
-
-  .action-btn-secondary {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 44px;
-    padding: 10px 20px;
-    background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    color: var(--theme-text);
-    border-radius: var(--radius-capsule);
-    font-family: var(--font-sans);
-    font-weight: 600;
-    font-size: 0.9rem;
-    text-decoration: none;
-    transition: background var(--dur-fast);
-  }
-
-  .action-btn-secondary:hover {
-    background: rgba(255, 255, 255, 0.14);
-  }
-
-  /* Shortcuts */
-  .shortcuts-section {
-    margin-bottom: 2.5rem;
-  }
-
-  .section-title {
-    font-family: var(--font-sans);
-    font-size: 1.15rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    color: var(--theme-text);
-  }
-
-  .shortcuts-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 0.85rem;
-  }
-
-  @media (min-width: 640px) {
-    .shortcuts-grid {
-      grid-template-columns: 1fr 1fr;
-    }
-  }
-
-  .shortcut-card {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    min-height: 56px;
-    padding: 1rem 1.15rem;
-    text-decoration: none;
-    color: var(--theme-text);
-    transition: transform var(--dur-fast) var(--ease-out), border-color var(--dur-fast);
-  }
-
-  .shortcut-card:hover {
-    transform: translateY(-2px);
-    border-color: var(--color-jade);
-  }
-
-  .shortcut-icon {
-    font-size: 1.5rem;
-  }
-
-  .shortcut-text {
+  /* Map invitation */
+  .map-teaser {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
+    gap: 0.7rem;
+    padding: 0.95rem 1rem;
+    margin-top: 0.5rem;
+    border-radius: 18px;
   }
 
-  .shortcut-label {
+  .map-teaser-title {
     font-family: var(--font-sans);
-    font-size: 0.98rem;
-    font-weight: 700;
+    font-size: 1.02rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: var(--theme-text);
+    margin: 0.1rem 0 0.2rem;
   }
 
-  .shortcut-desc {
-    font-size: 0.8rem;
+  .map-teaser-desc {
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    line-height: 1.45;
     color: var(--theme-text-muted);
+    max-width: 46ch;
+  }
+
+  .map-teaser-link { align-self: stretch; }
+
+  @media (min-width: 640px) {
+    .daily-win-panel { padding: 1.25rem 1.3rem; }
+    .daily-tip-title { font-size: 1.28rem; }
+    .daily-cta { width: auto; align-self: flex-start; }
+    .overview-section { padding: 1rem 1.2rem; }
+    .map-teaser { flex-direction: row; align-items: center; justify-content: space-between; }
+    .map-teaser-link { align-self: auto; }
   }
 </style>
 
@@ -511,12 +456,11 @@ const chapterSlugMap = Object.fromEntries(chapters.map(c => [c.chapter, c.slug])
         if (slugMap[state.lastPosition.chapter]) {
           slug = slugMap[state.lastPosition.chapter];
         }
-      } catch (e) {
-        // Fallback
-      }
+      } catch (e) {}
+
       const chNum = String(state.lastPosition.chapter).padStart(2, '0');
-      resumeBtn.href = resolvePath(`/chapters/${chNum}-${slug}/#${state.lastPosition.chapter}-${state.lastPosition.tip}`);
-      resumeText.textContent = `You last read Tip ${state.lastPosition.chapter}.${state.lastPosition.tip}. Pick right back up!`;
+      resumeBtn.href = resolvePath('/chapters/' + chNum + '-' + slug + '/#' + state.lastPosition.chapter + '-' + state.lastPosition.tip);
+      resumeText.textContent = 'You last read Tip ' + state.lastPosition.chapter + '.' + state.lastPosition.tip + '. Pick right back up.';
     }
   }
 

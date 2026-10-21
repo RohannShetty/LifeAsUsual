@@ -5,6 +5,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import TipCard from '../../components/TipCard.astro';
 import Character from '../../cast/Character.astro';
 import Bubble from '../../cast/Bubble.astro';
+import IndiaNotice from '../../components/IndiaNotice.astro';
 import calmChapters from '../../../data/calm-chapters.json';
 import type { EnglishChapter } from '../../../scripts/ingest-parveen';
 import { resolvePath } from '../../utils/paths';
@@ -69,15 +70,7 @@ const isCalm = calmChapters.includes(chapter.chapter);
   </aside>
 
   <article class="chapter-content">
-    <!-- Dismissible Mainland China Legal Disclaimer (Section 3) -->
-    <div class="china-disclaimer-banner" id="china-disclaimer">
-      <div class="disclaimer-text">
-        <strong>Notice:</strong> Written for mainland China. Laws, insurance, medical systems, and procedures elsewhere may differ.
-      </div>
-      <button type="button" class="dismiss-banner-btn" id="dismiss-disclaimer-btn" aria-label="Dismiss disclaimer">
-        ✕
-      </button>
-    </div>
+    <IndiaNotice id="india-disclaimer" />
 
     <!-- Chapter Hero -->
     <header class="chapter-hero">
@@ -212,13 +205,13 @@ const isCalm = calmChapters.includes(chapter.chapter);
     gap: 6px;
     padding: 6px 14px;
     min-height: 44px;
-    background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: var(--theme-soft);
+    border: 1px solid var(--theme-hairline);
     border-radius: var(--radius-capsule);
     color: var(--theme-text);
     font-family: var(--font-sans);
     font-size: 0.82rem;
-    font-weight: 600;
+    font-weight: 700;
     cursor: pointer;
     white-space: nowrap;
   }
@@ -239,50 +232,14 @@ const isCalm = calmChapters.includes(chapter.chapter);
     transition: width 150ms linear;
   }
 
-  /* Disclaimer Banner */
-  .china-disclaimer-banner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 0.75rem;
-    background: rgba(245, 184, 90, 0.08);
-    border: 1px solid rgba(245, 184, 90, 0.25);
-    color: var(--theme-text);
-    padding: 0.75rem 1rem;
-    border-radius: 10px;
-    margin-bottom: 2rem;
-    font-size: 0.84rem;
-    line-height: 1.45;
-  }
-
-  .dismiss-banner-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 44px;
-    height: 44px;
-    background: transparent;
-    border: none;
-    color: var(--theme-text-muted);
-    font-size: 1.1rem;
-    cursor: pointer;
-    padding: 0;
-    border-radius: 50%;
-    flex-shrink: 0;
-  }
-
-  .dismiss-banner-btn:hover {
-    color: var(--theme-text);
-  }
-
   .close-btn {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 44px;
     height: 44px;
-    background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: var(--theme-soft);
+    border: 1px solid var(--theme-hairline);
     border-radius: 50%;
     color: var(--theme-text);
     cursor: pointer;
@@ -296,21 +253,26 @@ const isCalm = calmChapters.includes(chapter.chapter);
 
   /* Chapter Hero */
   .chapter-hero {
-    margin-bottom: 2.5rem;
+    margin-bottom: 1.5rem;
   }
 
   .chapter-main-title {
-    font-family: var(--font-comic);
-    font-size: clamp(1.65rem, 5.5vw, 2.3rem);
-    line-height: 1.2;
+    font-family: var(--font-sans);
+    font-weight: 800;
+    font-size: clamp(1.7rem, 6vw, 2.25rem);
+    line-height: 1.08;
+    letter-spacing: -0.035em;
     color: var(--theme-text);
-    margin: 0.75rem 0 0.5rem;
+    margin: 0.7rem 0 0.45rem;
     overflow-wrap: break-word;
   }
 
   .chapter-meta-line {
-    font-size: 0.95rem;
+    font-family: var(--font-sans);
+    font-size: 0.82rem;
+    line-height: 1.45;
     color: var(--theme-text-muted);
+    max-width: 52ch;
   }
 
   /* Chapter Celebration */
@@ -531,17 +493,6 @@ const isCalm = calmChapters.includes(chapter.chapter);
 
       lastScrollY = currentScrollY;
     }, { passive: true });
-
-    // Disclaimer dismiss
-    const banner = document.getElementById('china-disclaimer');
-    const dismissBtn = document.getElementById('dismiss-disclaimer-btn');
-    if (sessionStorage.getItem('htlb_dismiss_disclaimer') === 'true') {
-      banner?.remove();
-    }
-    dismissBtn?.addEventListener('click', () => {
-      banner?.remove();
-      sessionStorage.setItem('htlb_dismiss_disclaimer', 'true');
-    });
 
     // TOC drawer
     const tocSheet = document.getElementById('toc-sheet');

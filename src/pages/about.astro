@@ -12,7 +12,7 @@ import { resolvePath } from '../utils/paths';
       <span class="comic-sticker sticker-scope">Attribution & Legal</span>
       <h1 class="page-title">About This Project</h1>
       <p class="page-lead">
-        A fast, mobile-first English translation of <em>How To Live Better</em>, built with an Apple-style glass interface and playful comic-layer illustrations.
+        A fast, mobile-first English translation of <em>How To Live Better</em>, with an India edition reader's bridge for policy differences.
       </p>
     </header>
 
@@ -35,15 +35,21 @@ import { resolvePath } from '../utils/paths';
 
     <!-- Geographic & Disclaimers -->
     <section class="info-card liquid-glass">
-      <h2 class="card-heading">Mainland China Notice & Professional Deference</h2>
+      <h2 class="card-heading">India Edition & Professional Deference</h2>
       <div class="callout-box">
-        <strong>Geographic Context:</strong> Written for mainland China. Laws, public health guidelines, health insurance policies, and administrative procedures elsewhere may differ significantly.
+        <strong>Source context:</strong> Written for mainland China. Laws, public health guidelines, health insurance policies, and administrative procedures in India differ significantly.
       </div>
       <p style="margin-top: 1rem;">
-        <strong>Crucial Caveat:</strong> The contents of this project are for informational and educational purposes only. Content may be outdated, incomplete, or wrong. Science and legislation evolve continuously.
+        <strong>What the India edition does:</strong> it maps the Chinese institutions, hotlines and procedures in the text to Indian starting points, and says where no equivalent exists. It does not rewrite the author's advice, convert the prices, or delete chapters.
       </p>
       <p style="margin-top: 0.75rem;">
-        <strong>Readers should always defer to local authorities, qualified medical doctors, and licensed legal counsel</strong> before acting upon any medical, financial, or legal advice presented herein.
+        <a href={resolvePath('/india/')} class="link"><strong>Open the India policy crosswalk and helpline map →</strong></a>
+      </p>
+      <p style="margin-top: 1rem;">
+        <strong>Crucial caveat:</strong> the content is for information and education only. It may be outdated, incomplete, or wrong. Science and legislation evolve.
+      </p>
+      <p style="margin-top: 0.75rem;">
+        <strong>Readers should always defer to local authorities, qualified medical doctors, and licensed legal counsel</strong> before acting on any medical, financial, or legal advice here.
       </p>
     </section>
 
@@ -51,16 +57,16 @@ import { resolvePath } from '../utils/paths';
     <section class="info-card liquid-glass">
       <h2 class="card-heading">Zero-Tracking Privacy Promise</h2>
       <ul class="clean-list">
-        <li><strong>No Analytics or Cookies:</strong> Zero telemetry, Google Analytics, trackers, or marketing beacons.</li>
-        <li><strong>No Third-Party Network Requests:</strong> All web fonts and assets are 100% self-hosted.</li>
-        <li><strong>Local Storage Only:</strong> Your reading progress, streaks, bookmarks, and settings remain exclusively in your browser's <code>localStorage</code>. Nothing is sent to any server.</li>
+        <li><strong>No Analytics or Cookies:</strong> Zero telemetry, Google Analytics, trackers, cookie banners or marketing beacons.</li>
+        <li><strong>No Third-Party Network Requests:</strong> All web fonts and assets are self-hosted. The India guide links out only when you choose to open an official source.</li>
+        <li><strong>Reading memory in <code>localStorage</code>:</strong> Your place, read marks, saved tips and settings stay in this browser. Nothing is sent to a server. Clearing site data erases them.</li>
       </ul>
     </section>
 
     <!-- The Guide Totals -->
     <section class="info-card liquid-glass">
       <h2 class="card-heading">Dataset Totals & Coverage</h2>
-      <p>The English edition maintains strict numerical and categorical fidelity with the Chinese source:</p>
+      <p>The English edition keeps strict numerical and categorical fidelity with the Chinese source. The India edition adds a policy crosswalk, not new tip counts:</p>
       <div class="stats-grid">
         <div class="stat-box">
           <span class="stat-number">765</span>

@@ -1,5 +1,7 @@
 ---
 import type { EnglishTip } from '../../scripts/ingest-parveen';
+import { resolvePath } from '../utils/paths';
+import indiaGuidance from '../../data/india-chapter-guidance.json';
 
 interface Props {
   tip: EnglishTip;
@@ -20,6 +22,36 @@ const sourcesCount = sourcesList.length;
 
 // ROI tier class mapping
 const roiClass = tip.valueTier === 'Very high' ? 'roi-very-high' : tip.valueTier === 'High' ? 'roi-high' : 'roi-average';
+
+const chapterGuidance = (indiaGuidance as Record<string, { anchor: string; note: string }>)[String(tip.chapter)];
+
+// Flag tips that describe a mainland-China rule, institution or hotline. The
+// badge opens the crosswalk; it does not change the author's text.
+const chinaSpecific = /\b(dibao|hukou|yibao|shebao|gongjijin|gongshang|laodong|caili|WeChat|Alipay|12308|12315|12321|12377|12389|12309|96110|12356|12355|12348|12333|three[- ]tier|Grade-3)\b/i.test(
+  [tip.title, tip.inPlainWords, tip.cost, tip.benefit, tip.caveats].join(' ')
+);
+
+// India edition: replace the most actionable China-only hotline in the card
+// with a clearly-labelled Indian equivalent. The author's text stays untouched.
+const hotlineText = [tip.inPlainWords, tip.cost, tip.caveats].join(' ');
+let indiaNote = '';
+if (/\b(call|dial|phone|ring|contact)\s+120\b/i.test(hotlineText)) {
+  indiaNote = 'In India, call 112 for emergency services, or 108 for an ambulance where available.';
+} else if (/\b(call|dial|phone|ring|contact)\s+110\b/i.test(hotlineText)) {
+  indiaNote = 'In India, call 112 or 100 for the police.';
+} else if (/\b(call|dial|phone|ring|contact)\s+119\b/i.test(hotlineText)) {
+  indiaNote = 'In India, call 112 or 101 for the fire service.';
+} else if (/\b12308\b/.test(hotlineText)) {
+  indiaNote = 'In India, use the MEA MADAD portal and the nearest Indian embassy or consulate.';
+} else if (/\b12315\b/.test(hotlineText)) {
+  indiaNote = 'In India, call the National Consumer Helpline on 1915.';
+} else if (/\b(12356|12355)\b/.test(hotlineText)) {
+  indiaNote = 'In India, call Tele-MANAS on 14416 for mental-health support.';
+} else if (/\b12348\b/.test(hotlineText)) {
+  indiaNote = 'In India, call NALSA legal aid on 15100.';
+} else if (/\b96110\b/.test(hotlineText)) {
+  indiaNote = 'In India, call 1930 and file at cybercrime.gov.in.';
+}
 ---
 
 <article 
@@ -63,6 +95,12 @@ const roiClass = tip.valueTier === 'Very high' ? 'roi-very-high' : tip.valueTier
             Verifying
           </span>
         )}
+
+        {chinaSpecific && (
+          <a class="editorial-badge badge-china" href={resolvePath('/india/')} title="This tip describes a mainland-China rule, institution or hotline. Open the India crosswalk.">
+            China-specific
+          </a>
+        )}
       </div>
     </div>
 
@@ -71,18 +109,12 @@ const roiClass = tip.valueTier === 'Very high' ? 'roi-very-high' : tip.valueTier
 
     <!-- Disciplined Editorial Metadata Row -->
     <div class="tip-meta-bar">
-      <span class="meta-item"><span class="meta-label">Scope:</span> {tip.tags.scope}</span>
-      <span class="meta-sep" aria-hidden="true">·</span>
-      <span class="meta-item"><span class="meta-label">Cost:</span> {tip.tags.money}</span>
-      <span class="meta-sep" aria-hidden="true">·</span>
-      <span class="meta-item"><span class="meta-label">Time:</span> {tip.tags.time}</span>
-      <span class="meta-sep" aria-hidden="true">·</span>
-      <span class="meta-item"><span class="meta-label">Effort:</span> {tip.tags.willpower}</span>
+      <span class="meta-chip"><span class="meta-label">Scope</span>{tip.tags.scope}</span>
+      <span class="meta-chip"><span class="meta-label">Cost</span>{tip.tags.money}</span>
+      <span class="meta-chip"><span class="meta-label">Time</span>{tip.tags.time}</span>
+      <span class="meta-chip"><span class="meta-label">Effort</span>{tip.tags.willpower}</span>
       {tip.tags.audience && tip.tags.audience.map(aud => (
-        <>
-          <span class="meta-sep" aria-hidden="true">·</span>
-          <span class="meta-item meta-audience">{aud}</span>
-        </>
+        <span class="meta-chip meta-audience">{aud}</span>
       ))}
     </div>
   </header>
@@ -90,6 +122,13 @@ const roiClass = tip.valueTier === 'Very high' ? 'roi-very-high' : tip.valueTier
   <!-- In Plain Words (Core Visual Lead) -->
   <section class="lead-section">
     <p class="in-plain-words">{tip.inPlainWords}</p>
+    {indiaNote && (
+      <p class="india-tip-note">
+        <span class="india-tip-badge">India</span>
+        {indiaNote}
+        <a href={resolvePath('/india/#helplines')}>All helplines</a>
+      </p>
+    )}
   </section>
 
   <!-- Cost & Benefit Analysis -->
@@ -109,6 +148,20 @@ const roiClass = tip.valueTier === 'Very high' ? 'roi-very-high' : tip.valueTier
     <span class="caveats-label">Caveats & Context</span>
     <p class="caveats-text">{tip.caveats}</p>
   </section>
+
+  <!-- India application (one chapter-level note shared by every tip in the chapter) -->
+  {chapterGuidance && (
+    <details class="india-application">
+      <summary>
+        <span class="india-app-badge">IN</span>
+        <span>India application</span>
+      </summary>
+      <div class="india-app-body">
+        <p>{chapterGuidance.note}</p>
+        <a href={resolvePath('/india/#' + chapterGuidance.anchor)}>Open the India crosswalk →</a>
+      </div>
+    </details>
+  )}
 
   <!-- Sources (Smooth Accessible Collapsible) -->
   {sourcesCount > 0 && (
@@ -167,8 +220,8 @@ const roiClass = tip.valueTier === 'Very high' ? 'roi-very-high' : tip.valueTier
 
 <style>
   .tip-card {
-    padding: 1.5rem 1.35rem;
-    margin-bottom: 2rem;
+    padding: 1.15rem 1rem;
+    margin-bottom: 1.4rem;
     transition: transform var(--dur-fast) var(--ease-out), box-shadow var(--dur-fast) var(--ease-out);
     position: relative;
     border-radius: var(--radius-card);
@@ -176,7 +229,7 @@ const roiClass = tip.valueTier === 'Very high' ? 'roi-very-high' : tip.valueTier
 
   @media (min-width: 640px) {
     .tip-card {
-      padding: 1.75rem 1.65rem;
+      padding: 1.6rem 1.5rem;
     }
   }
 
@@ -222,7 +275,7 @@ const roiClass = tip.valueTier === 'Very high' ? 'roi-very-high' : tip.valueTier
     color: var(--color-jade-text);
   }
 
-  [data-theme="light"] .tip-id-badge {
+  :global([data-theme="light"]) .tip-id-badge {
     background: #04110F;
     color: #FFFFFF;
     border-color: transparent;
@@ -283,38 +336,50 @@ const roiClass = tip.valueTier === 'Very high' ? 'roi-very-high' : tip.valueTier
     border-color: rgba(255, 107, 107, 0.35);
   }
 
+  .badge-china {
+    background: color-mix(in srgb, var(--color-amber) 10%, transparent);
+    color: var(--color-amber-text);
+    border: 1px dashed color-mix(in srgb, var(--color-amber) 55%, transparent);
+    text-decoration: none;
+  }
+
+  .badge-china:hover {
+    border-style: solid;
+    border-color: var(--color-amber);
+  }
+
   .badge-verifying {
     background: rgba(226, 232, 240, 0.1);
     color: #CBD5E1;
     border-color: rgba(226, 232, 240, 0.2);
   }
 
-  [data-theme="light"] .badge-disputed {
+  :global([data-theme="light"]) .badge-disputed {
     color: #9B1C1C;
   }
 
-  [data-theme="light"] .badge-verifying {
+  :global([data-theme="light"]) .badge-verifying {
     color: #334155;
   }
 
-  [data-theme="light"] .grade-badge {
+  :global([data-theme="light"]) .grade-badge {
     background: rgba(4, 17, 15, 0.05);
     border-color: rgba(4, 17, 15, 0.1);
   }
 
-  [data-theme="light"] .roi-very-high {
+  :global([data-theme="light"]) .roi-very-high {
     background: rgba(70, 217, 160, 0.2);
     color: #0E7048;
     border-color: rgba(70, 217, 160, 0.4);
   }
 
-  [data-theme="light"] .roi-high {
+  :global([data-theme="light"]) .roi-high {
     background: rgba(245, 184, 90, 0.2);
     color: #925400;
     border-color: rgba(245, 184, 90, 0.4);
   }
 
-  [data-theme="light"] .roi-average {
+  :global([data-theme="light"]) .roi-average {
     background: rgba(143, 179, 217, 0.2);
     color: #26547C;
     border-color: rgba(143, 179, 217, 0.4);
@@ -323,9 +388,9 @@ const roiClass = tip.valueTier === 'Very high' ? 'roi-very-high' : tip.valueTier
   /* Tip Headline */
   .tip-title {
     font-family: var(--font-sans);
-    font-weight: 700;
-    font-size: 1.25rem;
-    line-height: 1.35;
+    font-weight: 800;
+    font-size: 1.16rem;
+    line-height: 1.3;
     letter-spacing: -0.015em;
     color: var(--theme-text);
     margin-bottom: 0.65rem;
@@ -333,7 +398,7 @@ const roiClass = tip.valueTier === 'Very high' ? 'roi-very-high' : tip.valueTier
 
   @media (min-width: 640px) {
     .tip-title {
-      font-size: 1.35rem;
+      font-size: 1.32rem;
     }
   }
 
@@ -341,32 +406,35 @@ const roiClass = tip.valueTier === 'Very high' ? 'roi-very-high' : tip.valueTier
   .tip-meta-bar {
     display: flex;
     align-items: center;
-    gap: 0.45rem;
+    gap: 0.3rem;
     flex-wrap: wrap;
     font-family: var(--font-sans);
-    font-size: 0.8rem;
-    color: var(--theme-text-muted);
+    font-size: 0.69rem;
+    line-height: 1.35;
+    color: var(--theme-text);
   }
 
-  .meta-item {
+  .meta-chip {
     display: inline-flex;
     align-items: baseline;
-    gap: 3px;
+    gap: 4px;
+    padding: 2px 6px;
+    border-radius: 6px;
+    background: var(--theme-soft);
+    border: 1px solid var(--theme-hairline);
   }
 
   .meta-label {
-    font-weight: 600;
+    font-size: 0.56rem;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
     color: var(--theme-text-muted);
-    opacity: 0.85;
-  }
-
-  .meta-sep {
-    opacity: 0.4;
   }
 
   .meta-audience {
-    font-style: italic;
-    opacity: 0.85;
+    color: var(--color-steel-text);
+    font-weight: 700;
   }
 
   /* Visual Lead: In Plain Words */
@@ -376,17 +444,50 @@ const roiClass = tip.valueTier === 'Very high' ? 'roi-very-high' : tip.valueTier
     border-bottom: 1px solid rgba(232, 241, 239, 0.1);
   }
 
-  [data-theme="light"] .lead-section {
+  :global([data-theme="light"]) .lead-section {
     border-bottom-color: rgba(4, 17, 15, 0.08);
   }
 
   .in-plain-words {
     font-family: var(--font-serif);
-    font-size: 1.08rem;
+    font-size: 1rem;
     font-weight: 500;
-    line-height: 1.68;
+    line-height: 1.65;
     color: var(--theme-text);
     max-width: var(--text-measure, 65ch);
+  }
+
+  .india-tip-note {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 0.65rem;
+    padding: 0.45rem 0.55rem;
+    border-radius: 8px;
+    border: 1px solid color-mix(in srgb, var(--color-amber) 30%, transparent);
+    background: color-mix(in srgb, var(--color-amber) 8%, transparent);
+    font-family: var(--font-sans);
+    font-size: 0.7rem;
+    line-height: 1.4;
+    color: var(--theme-text-muted);
+  }
+
+  .india-tip-badge {
+    flex: 0 0 auto;
+    padding: 1px 4px;
+    border-radius: 3px;
+    background: var(--color-amber);
+    color: var(--color-ink);
+    font-size: 0.56rem;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+  }
+
+  .india-tip-note a {
+    color: var(--color-amber-text);
+    font-weight: 700;
+    text-underline-offset: 2px;
   }
 
   /* Metrics Grid (Cost & Benefit) */
@@ -404,13 +505,13 @@ const roiClass = tip.valueTier === 'Very high' ? 'roi-very-high' : tip.valueTier
   }
 
   .metric-block {
-    background: rgba(0, 0, 0, 0.16);
-    border: 1px solid rgba(255, 255, 255, 0.06);
+    background: var(--theme-soft);
+    border: 1px solid var(--theme-hairline);
     border-radius: 12px;
-    padding: 0.85rem 1rem;
+    padding: 0.75rem 0.85rem;
   }
 
-  [data-theme="light"] .metric-block {
+  :global([data-theme="light"]) .metric-block {
     background: rgba(0, 0, 0, 0.03);
     border-color: rgba(4, 17, 15, 0.06);
   }
@@ -448,7 +549,7 @@ const roiClass = tip.valueTier === 'Very high' ? 'roi-very-high' : tip.valueTier
     border-radius: 12px;
   }
 
-  [data-theme="light"] .caveats-section {
+  :global([data-theme="light"]) .caveats-section {
     background: rgba(38, 84, 124, 0.05);
     border-color: rgba(38, 84, 124, 0.18);
   }
@@ -464,7 +565,7 @@ const roiClass = tip.valueTier === 'Very high' ? 'roi-very-high' : tip.valueTier
     margin-bottom: 0.35rem;
   }
 
-  [data-theme="light"] .caveats-label {
+  :global([data-theme="light"]) .caveats-label {
     color: #26547C;
   }
 
@@ -473,6 +574,72 @@ const roiClass = tip.valueTier === 'Very high' ? 'roi-very-high' : tip.valueTier
     line-height: 1.6;
     color: var(--theme-text);
   }
+
+  /* India application */
+  .india-application {
+    margin-bottom: 1rem;
+    border-top: 1px solid var(--theme-hairline);
+  }
+
+  .india-application summary {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    min-height: 44px;
+    padding: 0.35rem 0.1rem;
+    list-style: none;
+    cursor: pointer;
+    font-family: var(--font-sans);
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.02em;
+    color: var(--color-jade-text);
+  }
+
+  .india-application summary::-webkit-details-marker { display: none; }
+
+  .india-application summary::after {
+    content: "+";
+    margin-left: auto;
+    color: var(--theme-text-muted);
+    font-size: 1rem;
+  }
+
+  .india-application[open] summary::after { content: "−"; }
+
+  .india-app-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1px 4px;
+    border-radius: 3px;
+    background: var(--color-jade);
+    color: var(--color-ink);
+    font-size: 0.55rem;
+    font-weight: 800;
+  }
+
+  .india-app-body {
+    padding: 0 0.1rem 0.55rem;
+  }
+
+  .india-app-body p {
+    font-family: var(--font-sans);
+    font-size: 0.73rem;
+    line-height: 1.5;
+    color: var(--theme-text-muted);
+    margin-bottom: 0.3rem;
+  }
+
+  .india-app-body a {
+    font-family: var(--font-sans);
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--color-jade-text);
+    text-decoration: none;
+  }
+
+  .india-app-body a:hover { text-decoration: underline; text-underline-offset: 2px; }
 
   /* Sources Drawer Animation */
   .sources-section {
@@ -496,7 +663,7 @@ const roiClass = tip.valueTier === 'Very high' ? 'roi-very-high' : tip.valueTier
     transition: background var(--dur-fast), color var(--dur-fast), border-color var(--dur-fast);
   }
 
-  [data-theme="light"] .sources-toggle-btn {
+  :global([data-theme="light"]) .sources-toggle-btn {
     background: rgba(4, 17, 15, 0.03);
     border-color: rgba(4, 17, 15, 0.08);
   }
@@ -560,35 +727,36 @@ const roiClass = tip.valueTier === 'Very high' ? 'roi-very-high' : tip.valueTier
   .tip-footer {
     display: flex;
     align-items: center;
-    gap: 0.65rem;
+    gap: 0.4rem;
     padding-top: 1rem;
     border-top: 1px solid rgba(232, 241, 239, 0.08);
     flex-wrap: wrap;
   }
 
-  [data-theme="light"] .tip-footer {
+  :global([data-theme="light"]) .tip-footer {
     border-top-color: rgba(4, 17, 15, 0.08);
   }
 
   .action-btn {
+    flex: 1 1 0;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 6px;
-    padding: 8px 16px;
+    gap: 5px;
+    padding: 7px 9px;
     min-height: 44px; /* Touch target >= 44px */
     border-radius: var(--radius-capsule);
-    border: 1px solid rgba(255, 255, 255, 0.14);
-    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--theme-hairline);
+    background: var(--theme-card);
     color: var(--theme-text);
     font-family: var(--font-sans);
-    font-size: 0.85rem;
-    font-weight: 600;
+    font-size: 0.76rem;
+    font-weight: 700;
     cursor: pointer;
     transition: transform var(--dur-fast) var(--ease-out), background var(--dur-fast), border-color var(--dur-fast);
   }
 
-  [data-theme="light"] .action-btn {
+  :global([data-theme="light"]) .action-btn {
     border-color: rgba(4, 17, 15, 0.12);
     background: rgba(4, 17, 15, 0.04);
   }

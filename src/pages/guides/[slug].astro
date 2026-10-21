@@ -3,6 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import guides from '../../../data/en/guides.json';
 import allChapters from '../../../data/en/all-chapters.json';
 import { resolvePath } from '../../utils/paths';
+import IndiaNotice from '../../components/IndiaNotice.astro';
 
 export async function getStaticPaths() {
   return guides.map((guide) => ({
@@ -36,11 +37,7 @@ function getTipLink(chapter: number, tip: number) {
       <span class="reading-pill">{guide.readingTime}</span>
     </nav>
 
-    <!-- Mainland China Context Banner -->
-    <aside class="geo-banner liquid-glass" id="guide-geo-notice">
-      <span>Written for mainland China. Laws, insurance policies, and procedures elsewhere may differ.</span>
-      <button type="button" class="dismiss-btn" onclick="document.getElementById('guide-geo-notice').style.display='none'">✕</button>
-    </aside>
+    <IndiaNotice id="india-disclaimer" />
 
     <header class="guide-header">
       <span class="comic-sticker sticker-benefit">Field Guide</span>
@@ -150,28 +147,6 @@ function getTipLink(chapter: number, tip: number) {
     padding: 0.2rem 0.6rem;
     border-radius: 999px;
     border: 1px solid var(--color-glass-border);
-  }
-
-  .geo-banner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.625rem 1rem;
-    margin-bottom: 1.5rem;
-    font-size: 0.85rem;
-    color: var(--theme-text);
-    background: color-mix(in srgb, var(--color-amber) 15%, transparent);
-    border: 1px solid color-mix(in srgb, var(--color-amber) 35%, transparent);
-    border-radius: var(--radius-sm);
-  }
-
-  .dismiss-btn {
-    background: none;
-    border: none;
-    color: var(--color-ink-muted);
-    font-size: 1rem;
-    cursor: pointer;
-    padding: 0 0.5rem;
   }
 
   .guide-header {

@@ -79,8 +79,8 @@ try {
 
 <style>
   .reading-map-card {
-    padding: 1.5rem;
-    margin-bottom: 2rem;
+    padding: 1rem;
+    margin-bottom: 0;
   }
 
   .map-header {
@@ -91,18 +91,23 @@ try {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 0.5rem;
+    gap: 0.6rem;
+    margin-bottom: 0.4rem;
+    flex-wrap: wrap;
   }
 
   .map-title {
-    font-family: var(--font-comic);
-    font-size: 1.35rem;
-    color: var(--color-jade-text);
+    font-family: var(--font-sans);
+    font-size: 1.1rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: var(--theme-text);
   }
 
   .map-desc {
-    font-size: 0.88rem;
-    line-height: 1.5;
+    font-family: var(--font-sans);
+    font-size: 0.78rem;
+    line-height: 1.45;
     color: var(--theme-text-muted);
   }
 
@@ -124,7 +129,7 @@ try {
     padding: 0.75rem 0.85rem;
   }
 
-  [data-theme="light"] .chapter-cluster {
+  :global([data-theme="light"]) .chapter-cluster {
     background: rgba(0, 0, 0, 0.03);
     border-color: rgba(4, 17, 15, 0.06);
   }
@@ -187,12 +192,12 @@ try {
       inset 0 1px 1px rgba(255, 255, 255, 0.8);
   }
 
-  [data-theme="light"] .map-bead {
+  :global([data-theme="light"]) .map-bead {
     background: rgba(4, 17, 15, 0.1);
     border-color: rgba(4, 17, 15, 0.2);
   }
 
-  [data-theme="light"] .map-bead.is-read {
+  :global([data-theme="light"]) .map-bead.is-read {
     background: var(--color-jade);
     border-color: var(--color-ink);
   }

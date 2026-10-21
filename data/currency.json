@@ -1,0 +1,9 @@
+{
+  "base": "CNY",
+  "quote": "INR",
+  "rate": 14.21,
+  "asOf": "2026-10-21",
+  "source": "ExchangeRate-API reference rate (CNY to INR)",
+  "sourceUrl": "https://open.er-api.com/v6/latest/CNY",
+  "note": "Indicative only. Not a transaction rate, and not a purchasing-power comparison. The original RMB figure is kept beside every conversion."
+}

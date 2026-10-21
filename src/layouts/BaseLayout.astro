@@ -9,6 +9,7 @@ import '../styles/fonts.css';
 import '../styles/tokens.css';
 import '../styles/glass.css';
 import '../styles/comic.css';
+import '../styles/ui.css';
 
 interface Props {
   title?: string;
@@ -24,7 +25,7 @@ const currentPath = Astro.url.pathname;
 ---
 
 <!doctype html>
-<html lang="en" data-theme="dark" data-comic-effects="on">
+<html lang="en" data-theme="dark" data-palette="midnight" data-comic-effects="on" data-show-inr="true">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
@@ -32,7 +33,33 @@ const currentPath = Astro.url.pathname;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
     <meta name="description" content={description} />
-    
+    <meta name="theme-color" content="#08171C" id="theme-color-meta" />
+
+    <!-- Apply saved theme before first paint (no flash) -->
+    <script is:inline>
+      (function () {
+        try {
+          var raw = localStorage.getItem('htlb_settings_v1');
+          var saved = raw ? JSON.parse(raw) : {};
+          var mode = saved.theme || 'dark';
+          if (mode === 'auto') {
+            mode = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+          }
+          var palette = saved.palette || (mode === 'light' ? 'pearl' : 'midnight');
+          var lightPalettes = ['pearl', 'ivory'];
+          var isLightPalette = lightPalettes.indexOf(palette) !== -1;
+          if ((mode === 'light') !== isLightPalette) {
+            palette = mode === 'light' ? 'pearl' : 'midnight';
+          }
+          document.documentElement.setAttribute('data-theme', mode);
+          document.documentElement.setAttribute('data-palette', palette);
+          document.documentElement.setAttribute('data-show-inr', saved.inrReference === false ? 'false' : 'true');
+          var meta = document.getElementById('theme-color-meta');
+          if (meta) meta.setAttribute('content', mode === 'light' ? '#F2F6F4' : '#08171C');
+        } catch (e) {}
+      })();
+    </script>
+
     <!-- View Transitions -->
     <ClientRouter />
 
@@ -73,6 +100,7 @@ const currentPath = Astro.url.pathname;
     <!-- Client-side reading tracker island -->
     <script>
       import '../scripts/read-tracker';
+      import '../scripts/inr';
     </script>
   </body>
 </html>

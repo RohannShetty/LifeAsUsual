@@ -1,20 +1,25 @@
 ---
+import { resolvePath } from '../utils/paths';
+import currency from '../../data/currency.json';
 ---
 
 <div id="settings-backdrop" class="settings-backdrop" aria-hidden="true"></div>
 
-<aside 
-  id="settings-sheet" 
-  class="liquid-glass settings-sheet" 
-  role="dialog" 
-  aria-modal="true" 
+<aside
+  id="settings-sheet"
+  class="liquid-glass settings-sheet"
+  role="dialog"
+  aria-modal="true"
   aria-labelledby="settings-title"
   aria-hidden="true"
 >
   <header class="sheet-header">
     <div class="sheet-title-row">
-      <h2 id="settings-title" class="sheet-title">Reading Settings</h2>
-      <button type="button" id="close-settings-btn" class="close-btn" aria-label="Close Settings">
+      <div>
+        <p class="sheet-kicker">Make it yours</p>
+        <h2 id="settings-title" class="sheet-title">Reading Settings</h2>
+      </div>
+      <button type="button" id="close-settings-btn" class="close-btn" aria-label="Close settings">
         <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
           <line x1="18" y1="6" x2="6" y2="18"/>
           <line x1="6" y1="6" x2="18" y2="18"/>
@@ -24,52 +29,93 @@
   </header>
 
   <div class="sheet-body">
-    <!-- Theme Selection -->
     <div class="setting-group">
-      <label class="setting-label">Theme</label>
-      <div class="toggle-group" id="theme-toggles">
-        <button type="button" class="toggle-pill is-selected" data-theme="dark">Dark</button>
-        <button type="button" class="toggle-pill" data-theme="light">Light</button>
-        <button type="button" class="toggle-pill" data-theme="auto">System</button>
+      <span class="setting-label" id="theme-label">Appearance</span>
+      <div class="toggle-group" id="theme-toggles" role="group" aria-labelledby="theme-label">
+        <button type="button" class="toggle-pill is-selected" data-theme="dark" aria-pressed="true">Dark</button>
+        <button type="button" class="toggle-pill" data-theme="light" aria-pressed="false">Light</button>
+        <button type="button" class="toggle-pill" data-theme="auto" aria-pressed="false">System</button>
       </div>
     </div>
 
-    <!-- Font Family Selection -->
     <div class="setting-group">
-      <label class="setting-label">Typography</label>
-      <div class="toggle-group" id="font-toggles">
-        <button type="button" class="toggle-pill is-selected" data-font="serif">Literata Serif</button>
-        <button type="button" class="toggle-pill" data-font="sans">Bricolage Sans</button>
+      <div class="setting-label-row">
+        <span class="setting-label" id="palette-label">Palette</span>
+        <span class="setting-hint">2 dark · 2 light</span>
+      </div>
+      <div class="palette-grid" id="palette-toggles" role="group" aria-labelledby="palette-label">
+        <button type="button" class="palette-btn is-selected" data-palette="midnight" data-mode="dark" aria-pressed="true">
+          <span class="palette-swatch" style="--sw-bg:#08171C;--sw-a:#46D9A0;--sw-b:#F5B85A" aria-hidden="true"></span>
+          <span class="palette-name">Midnight</span>
+        </button>
+        <button type="button" class="palette-btn" data-palette="monsoon" data-mode="dark" aria-pressed="false">
+          <span class="palette-swatch" style="--sw-bg:#12100E;--sw-a:#7BD6AE;--sw-b:#EFB26A" aria-hidden="true"></span>
+          <span class="palette-name">Monsoon</span>
+        </button>
+        <button type="button" class="palette-btn" data-palette="pearl" data-mode="light" aria-pressed="false">
+          <span class="palette-swatch" style="--sw-bg:#F2F6F4;--sw-a:#0B6B47;--sw-b:#7A4E00" aria-hidden="true"></span>
+          <span class="palette-name">Pearl</span>
+        </button>
+        <button type="button" class="palette-btn" data-palette="ivory" data-mode="light" aria-pressed="false">
+          <span class="palette-swatch" style="--sw-bg:#FAF4EA;--sw-a:#1E6B50;--sw-b:#8A5200" aria-hidden="true"></span>
+          <span class="palette-name">Ivory</span>
+        </button>
       </div>
     </div>
 
-    <!-- Text Size Selection -->
     <div class="setting-group">
-      <label class="setting-label">Text Size</label>
-      <div class="toggle-group" id="size-toggles">
-        <button type="button" class="toggle-pill" data-size="16px">Small</button>
-        <button type="button" class="toggle-pill is-selected" data-size="17.5px">Standard</button>
-        <button type="button" class="toggle-pill" data-size="19.5px">Large</button>
+      <span class="setting-label" id="font-label">Typography</span>
+      <div class="toggle-group" id="font-toggles" role="group" aria-labelledby="font-label">
+        <button type="button" class="toggle-pill is-selected" data-font="serif" aria-pressed="true">Literata</button>
+        <button type="button" class="toggle-pill" data-font="sans" aria-pressed="false">Bricolage</button>
       </div>
     </div>
 
-    <!-- Comic Effects Master Switch (Section 7) -->
+    <div class="setting-group">
+      <span class="setting-label" id="size-label">Text size</span>
+      <div class="toggle-group" id="size-toggles" role="group" aria-labelledby="size-label">
+        <button type="button" class="toggle-pill" data-size="16px" aria-pressed="false">Small</button>
+        <button type="button" class="toggle-pill is-selected" data-size="17.5px" aria-pressed="true">Standard</button>
+        <button type="button" class="toggle-pill" data-size="19.5px" aria-pressed="false">Large</button>
+      </div>
+    </div>
+
     <div class="setting-row">
       <div>
-        <label for="comic-toggle" class="setting-label">Comic Effects</label>
-        <p class="setting-desc">Plus & Minus characters, dialogue bubbles, and action stickers</p>
+        <label for="comic-toggle" class="setting-label">Comic effects</label>
+        <p class="setting-desc">Plus &amp; Minus, speech bubbles, and action stickers</p>
       </div>
       <input type="checkbox" id="comic-toggle" class="switch-input" checked />
     </div>
 
-    <!-- Reduce Transparency Switch -->
     <div class="setting-row">
       <div>
-        <label for="transparency-toggle" class="setting-label">Reduce Transparency</label>
-        <p class="setting-desc">Replaces blur filters with high-contrast opaque surfaces</p>
+        <label for="transparency-toggle" class="setting-label">Reduce transparency</label>
+        <p class="setting-desc">High-contrast opaque surfaces instead of blur</p>
       </div>
       <input type="checkbox" id="transparency-toggle" class="switch-input" />
     </div>
+
+    <div class="setting-row">
+      <div>
+        <label for="inr-toggle" class="setting-label">Show INR reference</label>
+        <p class="setting-desc">Approximate ₹ beside RMB amounts · ¥1 = ₹{currency.rate.toFixed(2)} ({currency.asOf})</p>
+      </div>
+      <input type="checkbox" id="inr-toggle" class="switch-input" checked />
+    </div>
+
+    <div class="memory-note">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <rect x="4" y="10" width="16" height="10" rx="2"/>
+        <path d="M8 10V7a4 4 0 0 1 8 0v3"/>
+      </svg>
+      <p><strong>Reading memory is on.</strong> Your place, read marks and saved tips stay in this browser. No cookies, no account.</p>
+    </div>
+
+    <a class="india-link" href={resolvePath('/india/')}>
+      <span>India edition: policy crosswalk &amp; helplines</span>
+      <span aria-hidden="true">→</span>
+    </a>
   </div>
 </aside>
 
@@ -77,7 +123,7 @@
   .settings-backdrop {
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0.45);
+    background: rgba(0, 0, 0, 0.5);
     opacity: 0;
     pointer-events: none;
     z-index: 150;
@@ -95,33 +141,44 @@
     left: 0;
     right: 0;
     max-width: 520px;
+    max-height: min(88dvh, 760px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
     margin: 0 auto;
     border-radius: var(--radius-outer) var(--radius-outer) 0 0;
-    padding: 1.5rem 1.25rem calc(1.5rem + env(safe-area-inset-bottom, 0px));
+    padding: 1.1rem 1.1rem calc(1.1rem + env(safe-area-inset-bottom, 0px));
     transform: translateY(105%);
     transition: transform var(--dur-settle) var(--spring-overshoot);
     z-index: 200;
   }
 
-  .settings-sheet.is-open {
-    transform: translateY(0);
-  }
+  .settings-sheet.is-open { transform: translateY(0); }
 
-  .sheet-header {
-    margin-bottom: 1.5rem;
-  }
+  .sheet-header { margin-bottom: 1.1rem; }
 
   .sheet-title-row {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .sheet-kicker {
+    font-family: var(--font-sans);
+    font-size: 0.64rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-jade-text);
+    margin-bottom: 0.2rem;
   }
 
   .sheet-title {
-    font-family: var(--font-comic);
+    font-family: var(--font-sans);
     font-size: 1.35rem;
-    color: var(--color-jade-text);
-    letter-spacing: -0.01em;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: var(--theme-text);
   }
 
   .close-btn {
@@ -130,56 +187,58 @@
     justify-content: center;
     width: 44px;
     height: 44px;
-    background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: var(--theme-soft);
+    border: 1px solid var(--theme-hairline);
     border-radius: 50%;
     color: var(--theme-text);
     cursor: pointer;
-    transition: background var(--dur-fast);
-  }
-
-  .close-btn:hover {
-    background: rgba(255, 255, 255, 0.15);
   }
 
   .sheet-body {
     display: flex;
     flex-direction: column;
-    gap: 1.25rem;
+    gap: 1.05rem;
   }
 
   .setting-group {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 0.45rem;
   }
 
-  .setting-row {
+  .setting-label-row {
     display: flex;
-    align-items: center;
+    align-items: baseline;
     justify-content: space-between;
     gap: 1rem;
-    padding-top: 0.75rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
   }
 
   .setting-label {
     font-family: var(--font-sans);
-    font-size: 0.95rem;
-    font-weight: 700;
+    font-size: 0.86rem;
+    font-weight: 800;
+    letter-spacing: -0.01em;
     color: var(--theme-text);
   }
 
-  .setting-desc {
-    font-size: 0.8rem;
-    line-height: 1.35;
+  .setting-hint {
+    font-family: var(--font-sans);
+    font-size: 0.68rem;
     color: var(--theme-text-muted);
+  }
+
+  .setting-desc {
+    font-family: var(--font-sans);
+    font-size: 0.74rem;
+    line-height: 1.4;
+    color: var(--theme-text-muted);
+    margin-top: 0.15rem;
   }
 
   .toggle-group {
     display: flex;
-    gap: 0.5rem;
-    background: rgba(0, 0, 0, 0.2);
+    gap: 4px;
+    background: var(--theme-soft);
     padding: 4px;
     border-radius: var(--radius-capsule);
   }
@@ -189,30 +248,97 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 7px 10px;
-    min-height: 44px;
+    padding: 6px 8px;
+    min-height: 42px;
     background: transparent;
     border: none;
     border-radius: var(--radius-capsule);
     color: var(--theme-text-muted);
     font-family: var(--font-sans);
-    font-size: 0.85rem;
-    font-weight: 600;
+    font-size: 0.8rem;
+    font-weight: 700;
     cursor: pointer;
     transition: background var(--dur-fast), color var(--dur-fast), transform var(--dur-fast);
   }
 
-  .toggle-pill:active {
-    transform: scale(0.96);
-  }
+  .toggle-pill:active { transform: scale(0.96); }
 
   .toggle-pill.is-selected {
     background: var(--color-jade);
     color: var(--color-ink);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
   }
 
-  /* Switch Input */
+  .palette-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+  }
+
+  .palette-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    min-height: 48px;
+    padding: 0.45rem 0.55rem;
+    border: 1px solid var(--theme-hairline);
+    border-radius: 12px;
+    background: var(--theme-card);
+    color: var(--theme-text);
+    font-family: var(--font-sans);
+    font-size: 0.78rem;
+    font-weight: 700;
+    cursor: pointer;
+    text-align: left;
+    transition: border-color var(--dur-fast), background var(--dur-fast);
+  }
+
+  .palette-btn.is-selected {
+    border-color: var(--color-jade);
+    box-shadow: inset 0 0 0 1px var(--color-jade);
+  }
+
+  .palette-swatch {
+    flex: 0 0 auto;
+    position: relative;
+    width: 34px;
+    height: 26px;
+    border-radius: 7px;
+    background: var(--sw-bg);
+    border: 1px solid rgba(128, 128, 128, 0.35);
+    overflow: hidden;
+  }
+
+  .palette-swatch::before,
+  .palette-swatch::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+  }
+
+  .palette-swatch::before {
+    background: var(--sw-a);
+    left: 5px;
+    bottom: 4px;
+  }
+
+  .palette-swatch::after {
+    background: var(--sw-b);
+    right: 5px;
+    top: 4px;
+  }
+
+  .setting-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-top: 0.85rem;
+    border-top: 1px solid var(--theme-hairline);
+  }
+
   .switch-input {
     width: 44px;
     height: 44px;
@@ -223,6 +349,7 @@
     position: relative;
     cursor: pointer;
     margin: 0;
+    flex: 0 0 auto;
   }
 
   .switch-input::before {
@@ -233,7 +360,7 @@
     width: 44px;
     height: 24px;
     border-radius: 9999px;
-    background: rgba(255, 255, 255, 0.2);
+    background: var(--theme-hairline);
     transition: background var(--dur-fast);
   }
 
@@ -245,26 +372,69 @@
     border-radius: 50%;
     top: 12px;
     left: 2px;
-    background: #FFFFFF;
+    background: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
     transition: transform var(--dur-fast) var(--spring-overshoot);
   }
 
-  .switch-input:checked::before {
-    background: var(--color-jade);
+  .switch-input:checked::before { background: var(--color-jade); }
+  .switch-input:checked::after { transform: translateX(20px); }
+
+  .memory-note {
+    display: flex;
+    gap: 0.55rem;
+    align-items: flex-start;
+    padding: 0.7rem 0.75rem;
+    border-radius: 12px;
+    background: color-mix(in srgb, var(--color-jade) 8%, var(--theme-card));
+    border: 1px solid color-mix(in srgb, var(--color-jade) 22%, transparent);
+    color: var(--color-jade-text);
   }
 
-  .switch-input:checked::after {
-    transform: translateX(20px);
+  .memory-note p {
+    font-family: var(--font-sans);
+    font-size: 0.73rem;
+    line-height: 1.45;
+    color: var(--theme-text-muted);
   }
 
-  .switch-input:focus-visible {
-    outline: 2px solid var(--color-jade);
-    outline-offset: 2px;
+  .memory-note strong { color: var(--theme-text); }
+
+  .india-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 44px;
+    padding: 0.35rem 0.15rem 0;
+    color: var(--color-jade-text);
+    font-family: var(--font-sans);
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .india-link:hover { color: var(--color-amber-text); }
+
+  @media (max-width: 380px) {
+    .settings-sheet { padding-inline: 0.9rem; }
+    .palette-btn { font-size: 0.74rem; }
   }
 </style>
 
 <script>
-  // Reading Settings Controller
+  interface Settings {
+    theme: string;
+    palette: string;
+    font: string;
+    textSize: string;
+    comicEffects: boolean;
+    reduceTransparency: boolean;
+    inrReference: boolean;
+  }
+
+  const STORAGE_KEY = 'htlb_settings_v1';
+  const LIGHT_PALETTES = ['pearl', 'ivory'];
+
   const sheet = document.getElementById('settings-sheet');
   const backdrop = document.getElementById('settings-backdrop');
   const closeBtn = document.getElementById('close-settings-btn');
@@ -273,11 +443,122 @@
     document.getElementById('desktop-settings-btn')
   ].filter(Boolean);
 
+  function isLightPalette(palette: string): boolean {
+    return LIGHT_PALETTES.indexOf(palette) !== -1;
+  }
+
+  function resolvedMode(mode: string): 'dark' | 'light' {
+    if (mode === 'auto') {
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    return mode === 'light' ? 'light' : 'dark';
+  }
+
+  function loadSettings(): Settings {
+    try {
+      const saved = localStorage.getItem(STORAGE_KEY);
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        return {
+          theme: parsed.theme || 'dark',
+          palette: parsed.palette || (parsed.theme === 'light' ? 'pearl' : 'midnight'),
+          font: parsed.font || 'serif',
+          textSize: parsed.textSize || '17.5px',
+          comicEffects: parsed.comicEffects !== false,
+          reduceTransparency: parsed.reduceTransparency === true,
+          inrReference: parsed.inrReference !== false,
+        };
+      }
+    } catch (e) {}
+    return {
+      theme: 'dark',
+      palette: 'midnight',
+      font: 'serif',
+      textSize: '17.5px',
+      comicEffects: true,
+      reduceTransparency: false,
+      inrReference: true,
+    };
+  }
+
+  const currentSettings = loadSettings();
+
+  function applySettings(s: Settings) {
+    const root = document.documentElement;
+    const mode = resolvedMode(s.theme);
+
+    let palette = s.palette;
+    if ((mode === 'light') !== isLightPalette(palette)) {
+      palette = mode === 'light' ? 'pearl' : 'midnight';
+      s.palette = palette;
+    }
+
+    root.setAttribute('data-theme', mode);
+    root.setAttribute('data-palette', palette);
+    root.style.setProperty('--font-serif', s.font === 'sans' ? 'var(--font-sans)' : '"Literata", Georgia, serif');
+    root.style.setProperty('--text-body-size', s.textSize);
+    root.setAttribute('data-comic-effects', s.comicEffects ? 'on' : 'off');
+    root.setAttribute('data-reduce-transparency', s.reduceTransparency ? 'true' : 'false');
+    root.setAttribute('data-show-inr', s.inrReference ? 'true' : 'false');
+
+    const meta = document.getElementById('theme-color-meta');
+    if (meta) {
+      meta.setAttribute('content', mode === 'light'
+        ? (palette === 'ivory' ? '#FAF4EA' : '#F2F6F4')
+        : (palette === 'monsoon' ? '#12100E' : '#08171C'));
+    }
+
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(s));
+    } catch (e) {}
+
+    window.dispatchEvent(new CustomEvent('htlb:inr-change'));
+  }
+
+  function syncUi(s: Settings) {
+    document.querySelectorAll<HTMLButtonElement>('#theme-toggles .toggle-pill').forEach((btn) => {
+      const selected = btn.dataset.theme === s.theme;
+      btn.classList.toggle('is-selected', selected);
+      btn.setAttribute('aria-pressed', selected ? 'true' : 'false');
+    });
+
+    document.querySelectorAll<HTMLButtonElement>('#palette-toggles .palette-btn').forEach((btn) => {
+      const selected = btn.dataset.palette === s.palette;
+      btn.classList.toggle('is-selected', selected);
+      btn.setAttribute('aria-pressed', selected ? 'true' : 'false');
+    });
+
+    document.querySelectorAll<HTMLButtonElement>('#font-toggles .toggle-pill').forEach((btn) => {
+      const selected = btn.dataset.font === s.font;
+      btn.classList.toggle('is-selected', selected);
+      btn.setAttribute('aria-pressed', selected ? 'true' : 'false');
+    });
+
+    document.querySelectorAll<HTMLButtonElement>('#size-toggles .toggle-pill').forEach((btn) => {
+      const selected = btn.dataset.size === s.textSize;
+      btn.classList.toggle('is-selected', selected);
+      btn.setAttribute('aria-pressed', selected ? 'true' : 'false');
+    });
+
+    const comicToggle = document.getElementById('comic-toggle') as HTMLInputElement | null;
+    if (comicToggle) comicToggle.checked = s.comicEffects;
+
+    const transToggle = document.getElementById('transparency-toggle') as HTMLInputElement | null;
+    if (transToggle) transToggle.checked = s.reduceTransparency;
+
+    const inrToggle = document.getElementById('inr-toggle') as HTMLInputElement | null;
+    if (inrToggle) inrToggle.checked = s.inrReference;
+  }
+
   function openSheet() {
+    applySettings(currentSettings);
+    syncUi(currentSettings);
     sheet?.classList.add('is-open');
     backdrop?.classList.add('is-open');
     sheet?.setAttribute('aria-hidden', 'false');
     backdrop?.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    closeBtn?.focus({ preventScroll: true });
   }
 
   function closeSheet() {
@@ -285,119 +566,87 @@
     backdrop?.classList.remove('is-open');
     sheet?.setAttribute('aria-hidden', 'true');
     backdrop?.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
   }
 
   openBtns.forEach(btn => btn?.addEventListener('click', openSheet));
   closeBtn?.addEventListener('click', closeSheet);
   backdrop?.addEventListener('click', closeSheet);
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && sheet?.classList.contains('is-open')) closeSheet();
+  });
 
-  // Settings State in localStorage
-  interface Settings {
-    theme: string;
-    font: string;
-    textSize: string;
-    comicEffects: boolean;
-    reduceTransparency: boolean;
-  }
-
-  const STORAGE_KEY = 'htlb_settings_v1';
-
-  function loadSettings(): Settings {
-    try {
-      const saved = localStorage.getItem(STORAGE_KEY);
-      if (saved) return JSON.parse(saved);
-    } catch {}
-    return {
-      theme: 'dark',
-      font: 'serif',
-      textSize: '17.5px',
-      comicEffects: true,
-      reduceTransparency: false,
-    };
-  }
-
-  function applySettings(s: Settings) {
-    const root = document.documentElement;
-
-    // Apply Theme
-    if (s.theme === 'auto') {
-      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      root.setAttribute('data-theme', prefersDark ? 'dark' : 'light');
-    } else {
-      root.setAttribute('data-theme', s.theme);
-    }
-
-    // Apply Font
-    root.style.setProperty('--font-serif', s.font === 'sans' ? 'var(--font-sans)' : '"Literata", Georgia, serif');
-
-    // Apply Text Size
-    root.style.setProperty('--text-body-size', s.textSize);
-
-    // Apply Comic Effects
-    root.setAttribute('data-comic-effects', s.comicEffects ? 'on' : 'off');
-
-    // Apply Transparency
-    root.setAttribute('data-reduce-transparency', s.reduceTransparency ? 'true' : 'false');
-
-    try {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(s));
-    } catch {}
-  }
-
-  // Initialize
-  const currentSettings = loadSettings();
-  applySettings(currentSettings);
-
-  // Theme Toggles
-  document.querySelectorAll('#theme-toggles .toggle-pill').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      document.querySelectorAll('#theme-toggles .toggle-pill').forEach(b => b.classList.remove('is-selected'));
-      const target = e.currentTarget as HTMLElement;
-      target.classList.add('is-selected');
-      currentSettings.theme = target.dataset.theme || 'dark';
+  document.querySelectorAll<HTMLButtonElement>('#theme-toggles .toggle-pill').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      currentSettings.theme = btn.dataset.theme || 'dark';
+      const mode = resolvedMode(currentSettings.theme);
+      if ((mode === 'light') !== isLightPalette(currentSettings.palette)) {
+        currentSettings.palette = mode === 'light' ? 'pearl' : 'midnight';
+      }
       applySettings(currentSettings);
+      syncUi(currentSettings);
     });
   });
 
-  // Font Toggles
-  document.querySelectorAll('#font-toggles .toggle-pill').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      document.querySelectorAll('#font-toggles .toggle-pill').forEach(b => b.classList.remove('is-selected'));
-      const target = e.currentTarget as HTMLElement;
-      target.classList.add('is-selected');
-      currentSettings.font = target.dataset.font || 'serif';
+  document.querySelectorAll<HTMLButtonElement>('#palette-toggles .palette-btn').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      currentSettings.palette = btn.dataset.palette || 'midnight';
+      currentSettings.theme = btn.dataset.mode === 'light' ? 'light' : 'dark';
       applySettings(currentSettings);
+      syncUi(currentSettings);
     });
   });
 
-  // Size Toggles
-  document.querySelectorAll('#size-toggles .toggle-pill').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      document.querySelectorAll('#size-toggles .toggle-pill').forEach(b => b.classList.remove('is-selected'));
-      const target = e.currentTarget as HTMLElement;
-      target.classList.add('is-selected');
-      currentSettings.textSize = target.dataset.size || '17.5px';
+  document.querySelectorAll<HTMLButtonElement>('#font-toggles .toggle-pill').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      currentSettings.font = btn.dataset.font || 'serif';
       applySettings(currentSettings);
+      syncUi(currentSettings);
     });
   });
 
-  // Comic Switch
+  document.querySelectorAll<HTMLButtonElement>('#size-toggles .toggle-pill').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      currentSettings.textSize = btn.dataset.size || '17.5px';
+      applySettings(currentSettings);
+      syncUi(currentSettings);
+    });
+  });
+
   const comicToggle = document.getElementById('comic-toggle') as HTMLInputElement | null;
-  if (comicToggle) {
-    comicToggle.checked = currentSettings.comicEffects;
-    comicToggle.addEventListener('change', () => {
-      currentSettings.comicEffects = comicToggle.checked;
-      applySettings(currentSettings);
-    });
-  }
+  comicToggle?.addEventListener('change', () => {
+    currentSettings.comicEffects = comicToggle.checked;
+    applySettings(currentSettings);
+  });
 
-  // Transparency Switch
   const transToggle = document.getElementById('transparency-toggle') as HTMLInputElement | null;
-  if (transToggle) {
-    transToggle.checked = currentSettings.reduceTransparency;
-    transToggle.addEventListener('change', () => {
-      currentSettings.reduceTransparency = transToggle.checked;
+  transToggle?.addEventListener('change', () => {
+    currentSettings.reduceTransparency = transToggle.checked;
+    applySettings(currentSettings);
+  });
+
+  const inrToggle = document.getElementById('inr-toggle') as HTMLInputElement | null;
+  inrToggle?.addEventListener('change', () => {
+    currentSettings.inrReference = inrToggle.checked;
+    applySettings(currentSettings);
+    syncUi(currentSettings);
+  });
+
+  // Re-apply after a View Transition so the new page and the fixed sheet stay in sync.
+  document.addEventListener('astro:page-load', () => {
+    applySettings(currentSettings);
+    syncUi(currentSettings);
+    closeSheet();
+    document.body.style.overflow = '';
+  });
+
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+    if (currentSettings.theme === 'auto') {
       applySettings(currentSettings);
-    });
-  }
+      syncUi(currentSettings);
+    }
+  });
+
+  applySettings(currentSettings);
+  syncUi(currentSettings);
 </script>

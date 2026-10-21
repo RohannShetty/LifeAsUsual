@@ -1,0 +1,382 @@
+{
+  "lastReviewed": "20 October 2026",
+  "intro": "The book behind this site was written for mainland China. This page is a reader's bridge, not a rewrite: it maps the Chinese institutions, hotlines and procedures you will meet in the text to Indian starting points, and says clearly where no equivalent exists.",
+  "changed": [
+    "Site framing now says 'India edition' and points every chapter and guide to this crosswalk.",
+    "The old mainland-China-only notice has been replaced with a shorter, honest source note.",
+    "Indian helplines are listed next to the Chinese numbers that appear in the book.",
+    "A dated INR reference is shown beside RMB figures, with a toggle in Reading Settings.",
+    "Every tip carries a short India application note; China-specific rules are flagged.",
+    "A sourced policy crosswalk covers health cover, pensions, work injury, food support, dowry, legal aid and credentials.",
+    "The About page now explains the India edition, privacy and what was deliberately left unchanged."
+  ],
+  "currency": {
+    "title": "RMB figures, with an Indian reference",
+    "body": "The book's costs are mainland-China figures from the source edition. This edition keeps each RMB figure and adds an approximate INR reference beside it, clearly marked with ≈. It is not a purchasing-power comparison: housing, healthcare, transport, food and wages differ sharply between the two countries. Use the author's cost bands — Free, Small cost, Real money — for decisions, and treat the INR badge as a rough orientation only.",
+    "note": "The original RMB figure is always retained. The INR reference is indicative, dated, and not financial advice."
+  },
+  "helplines": [
+    {
+      "china": "120",
+      "india": "112 or 108",
+      "label": "Medical emergency",
+      "note": "112 is the all-in-one emergency number. 108 is the ambulance service in most states."
+    },
+    {
+      "china": "110",
+      "india": "112 or 100",
+      "label": "Police",
+      "note": "112 reaches police, fire and ambulance; 100 is the police helpline."
+    },
+    {
+      "china": "119",
+      "india": "112 or 101",
+      "label": "Fire",
+      "note": "101 is the fire helpline in most states."
+    },
+    {
+      "china": "12308",
+      "india": "MEA MADAD + Indian mission",
+      "label": "Consular help abroad",
+      "note": "Use the MADAD portal and the nearest Indian embassy or consulate. Save both before travelling."
+    },
+    {
+      "china": "12356 / 12355",
+      "india": "14416",
+      "label": "Mental-health support",
+      "note": "Tele-MANAS is free, multilingual and 24/7. For immediate danger, call 112."
+    },
+    {
+      "china": "12348",
+      "india": "15100",
+      "label": "Free legal aid",
+      "note": "NALSA and state legal services authorities decide eligibility; women, children, SC/ST members and many low-income applicants qualify."
+    },
+    {
+      "china": "12315",
+      "india": "1915",
+      "label": "Consumer complaint",
+      "note": "The National Consumer Helpline; you can also file on the consumeraffairs.nic.in portal."
+    },
+    {
+      "china": "96110",
+      "india": "1930",
+      "label": "Cyber fraud",
+      "note": "Call 1930 quickly so the bank can try to stop the transfer; also file at cybercrime.gov.in."
+    },
+    {
+      "china": "12333",
+      "india": "EPFO / ESIC",
+      "label": "Social-security help",
+      "note": "There is no single equivalent. Use the EPFO and ESIC helplines or your employer's HR portal."
+    },
+    {
+      "china": "12345",
+      "india": "State CM helpline / CPGRAMS",
+      "label": "Government grievance",
+      "note": "Most states run a 1900-series or 4-digit CM helpline; CPGRAMS covers central government departments."
+    }
+  ],
+  "groups": [
+    {
+      "id": "health",
+      "title": "Health and family",
+      "items": [
+        {
+          "china": "yibao (basic medical insurance)",
+          "india": "Ayushman Bharat PM-JAY, ESIC, CGHS or a state scheme",
+          "note": "PM-JAY gives eligible families ₹5 lakh a year for secondary and tertiary hospital care. ESIC covers insured workers and their families. All citizens aged 70+ are eligible for the PM-JAY senior-citizen card, irrespective of income.",
+          "source": "National Health Authority — PM-JAY",
+          "url": "https://nha.gov.in/PM-JAY"
+        },
+        {
+          "china": "san jia (Grade-3 Class-A) hospital",
+          "india": "AIIMS, NABH-accredited hospitals, medical-college hospitals",
+          "note": "India has no exact tier equivalent. For serious care, ask whether the hospital is NABH-accredited or a government medical-college hospital, and check your scheme's empanelled list.",
+          "source": "National Accreditation Board for Hospitals",
+          "url": "https://nabh.co/"
+        },
+        {
+          "china": "shengyu baoxian (maternity insurance) and statutory maternity leave",
+          "india": "Maternity Benefit Act, 1961; ESIC maternity benefit",
+          "note": "Covered establishments must give 26 weeks of paid maternity leave for the first two children, and 12 weeks thereafter. The Act applies to establishments with 10 or more employees; ESIC provides cash and medical benefits to insured workers.",
+          "source": "Maternity Benefit (Amendment) Act, 2017",
+          "url": "https://www.labour.gov.in/static/uploads/2025/06/f6e3b5e4550cf4ff84f333c3e114fbc2.pdf"
+        },
+        {
+          "china": "childhood vaccination schedule",
+          "india": "Universal Immunization Programme (UIP)",
+          "note": "Vaccines in the UIP are free at government facilities. Private schedules exist and may include additional vaccines; ask a paediatrician which apply.",
+          "source": "National Health Mission — Immunization",
+          "url": "https://nhm.gov.in/index1.php?lang=1&level=2&sublinkid=824&lid=220"
+        },
+        {
+          "china": "community health centre / health record",
+          "india": "Ayushman Arogya Mandir, PHC/CHC, ASHA and ANM workers",
+          "note": "For pregnancy and child health, register at the nearest government health centre or with the local ASHA/ANM. State portals and the Reproductive and Child Health register handle records.",
+          "source": "National Health Mission",
+          "url": "https://nhm.gov.in/"
+        }
+      ]
+    },
+    {
+      "id": "work",
+      "title": "Work and money",
+      "items": [
+        {
+          "china": "shebao (social insurance)",
+          "india": "EPFO (EPF, EPS, EDLI) and ESIC",
+          "note": "EPFO runs provident fund, pension and insurance schemes for covered establishments. ESIC covers medical care and cash benefits for insured workers. India's four labour codes are replacing older statutes; the Code on Social Security, 2020 commenced on 21 November 2025.",
+          "source": "EPFO and ESIC",
+          "url": "https://www.epfo.gov.in/"
+        },
+        {
+          "china": "gongjijin (Housing Provident Fund)",
+          "india": "EPF is retirement savings; PMAY is the housing scheme",
+          "note": "There is no direct equivalent. EPF is a retirement corpus, not a housing fund. For housing, look at Pradhan Mantri Awas Yojana (PMAY) eligibility and state housing boards.",
+          "source": "Pradhan Mantri Awas Yojana",
+          "url": "https://pmaymis.gov.in/"
+        },
+        {
+          "china": "gongshang (work injury) insurance",
+          "india": "ESIC; Employee's Compensation Act, 1923",
+          "note": "Report the injury to the employer immediately and keep records. ESIC provides medical and cash benefits to insured workers; the Employee's Compensation Act makes employers liable in covered cases.",
+          "source": "Employees' Compensation Act, 1923",
+          "url": "https://www.indiacode.nic.in/handle/123456789/19236"
+        },
+        {
+          "china": "laodong zhongcai (labour arbitration)",
+          "india": "Labour Court, Industrial Tribunal, conciliation officer",
+          "note": "The route depends on the dispute and state rules. Start with the labour commissioner or a conciliation officer; a lawyer or a trade union can help you choose the forum.",
+          "source": "Code on Industrial Relations, 2020",
+          "url": "https://www.labour.gov.in/static/uploads/2025/07/e6e2df267f39a63f0061041ab0a07db4.pdf"
+        },
+        {
+          "china": "employment contract / probation",
+          "india": "Written employment contract; labour codes; state Shops and Establishments rules",
+          "note": "Get the salary, notice period, probation, working hours and termination terms in writing. State Shops and Establishments Acts set many day-to-day conditions for shops, offices and restaurants.",
+          "source": "Ministry of Labour and Employment — labour codes",
+          "url": "https://www.labour.gov.in/static/uploads/2025/07/e6e2df267f39a63f0061041ab0a07db4.pdf"
+        },
+        {
+          "china": "business licence",
+          "india": "GST registration, Udyam, FSSAI, Shops and Establishments, municipal trade licence",
+          "note": "There is no single licence. Which registrations you need depends on turnover, activity, employees and state. Start with GST, Udyam and your municipal trade licence, then add food, drug or sector licences if they apply.",
+          "source": "GST portal",
+          "url": "https://www.gst.gov.in/"
+        }
+      ]
+    },
+    {
+      "id": "law",
+      "title": "Law and daily life",
+      "items": [
+        {
+          "china": "hukou (household registration)",
+          "india": "No direct equivalent; domicile certificate, Aadhaar, state residence",
+          "note": "India does not have a single household-registration system. A domicile certificate, voter roll, ration card and Aadhaar are used for different purposes, and state entitlements vary. Do not assume a Chinese hukou rule maps one-to-one.",
+          "source": "UIDAI — Aadhaar",
+          "url": "https://uidai.gov.in/"
+        },
+        {
+          "china": "paichusuo (local police station)",
+          "india": "Local police station; 112 or 100",
+          "note": "For a lost document, a theft or a complaint, go to the police station with jurisdiction over where it happened. Ask for a written acknowledgement or FIR copy.",
+          "source": "Emergency Response Support System",
+          "url": "https://112.gov.in/"
+        },
+        {
+          "china": "dibao (minimum living allowance)",
+          "india": "National Food Security Act, NSAP pensions, state welfare schemes",
+          "note": "India uses several schemes rather than one means-tested allowance: subsidised grain under NFSA, National Social Assistance Programme pensions, and state-level income support. Eligibility and amounts vary by state.",
+          "source": "National Food Security Act",
+          "url": "https://nfsa.gov.in/"
+        },
+        {
+          "china": "caili (bride price)",
+          "india": "Dowry; prohibited by the Dowry Prohibition Act, 1961",
+          "note": "Giving, taking or demanding dowry is an offence. The Act provides for imprisonment and a fine, and states appoint Dowry Prohibition Officers. Do not treat a demand for dowry as a normal wedding cost.",
+          "source": "Dowry Prohibition Act, 1961",
+          "url": "https://wcd.nic.in/act/dowry-prohibition-act-1961"
+        },
+        {
+          "china": "legal aid",
+          "india": "NALSA and State/District Legal Services Authorities; 15100",
+          "note": "Free legal aid is available to women, children, SC/ST members, industrial workmen, persons with disabilities and low-income applicants, among others. Call 15100 or visit the district legal services authority.",
+          "source": "National Legal Services Authority",
+          "url": "https://nalsa.gov.in/legal-aid/"
+        }
+      ]
+    },
+    {
+      "id": "study",
+      "title": "Study and abroad",
+      "items": [
+        {
+          "china": "xuexinwang (degree verification)",
+          "india": "UGC, AICTE, NAAC and DigiLocker",
+          "note": "Check that the institution and programme are recognised by UGC/AICTE and, where relevant, accredited by NAAC. DigiLocker can hold verified academic documents.",
+          "source": "University Grants Commission",
+          "url": "https://www.ugc.gov.in/"
+        },
+        {
+          "china": "liufu certification (overseas credential recognition)",
+          "india": "MEA apostille, AIU equivalence, WES for some destinations",
+          "note": "For a foreign degree, get an apostille from MEA, then an equivalence from the Association of Indian Universities if an employer or university asks for it. Some countries also ask for WES.",
+          "source": "Association of Indian Universities",
+          "url": "https://www.aiu.ac.in/"
+        },
+        {
+          "china": "gaokao / vocational school routes",
+          "india": "CBSE/state boards, ITI, polytechnic, NSQF and Skill India",
+          "note": "The routes differ: Class 12 board results, ITI trades, polytechnic diplomas and NSQF-aligned short courses. Check recognition before paying for a private certification.",
+          "source": "Skill India",
+          "url": "https://www.skillindia.gov.in/"
+        },
+        {
+          "china": "passport / visa",
+          "india": "Passport Seva; MEA visa services",
+          "note": "Apply through Passport Seva. Visa rules depend on the destination; check the destination embassy's current requirements rather than relying on an agency's summary.",
+          "source": "Passport Seva",
+          "url": "https://www.passportindia.gov.in/"
+        }
+      ]
+    }
+  ],
+  "chapters": [
+    {
+      "chapter": 8,
+      "title": "Law and Property Safety",
+      "why": "Property, police and contract procedures are Chinese. Use the crosswalk before relying on a step."
+    },
+    {
+      "chapter": 9,
+      "title": "Everyday Legal Red Lines",
+      "why": "Statutes and penalties are Chinese. The principles may transfer; the legal citations do not."
+    },
+    {
+      "chapter": 11,
+      "title": "Red Lines for Developers and Techies",
+      "why": "Telecom, data and platform rules are Chinese. India's IT Act, DPDP Act and sector rules differ."
+    },
+    {
+      "chapter": 12,
+      "title": "Starting Your Own Business",
+      "why": "Licences and registrations are Chinese. Start from GST, Udyam and your municipal trade licence."
+    },
+    {
+      "chapter": 19,
+      "title": "Employment and Work Injury",
+      "why": "Severance, probation and work-injury rules are Chinese. Use ESIC, EPFO and the labour codes."
+    },
+    {
+      "chapter": 21,
+      "title": "Travel and Abroad Safety",
+      "why": "Consular hotlines and exit rules are Chinese. Use MEA MADAD and the Indian mission."
+    },
+    {
+      "chapter": 23,
+      "title": "Which Skills to Learn",
+      "why": "Vocational credentials and subsidies are Chinese. Check NSQF, ITI and Skill India instead."
+    },
+    {
+      "chapter": 24,
+      "title": "Navigating Healthcare and Doctors",
+      "why": "Insurance and hospital tiers are Chinese. Start from PM-JAY, ESIC, CGHS or a state scheme."
+    },
+    {
+      "chapter": 25,
+      "title": "After Someone Dies",
+      "why": "Estate, notarisation and funeral procedures are Chinese. State and municipal rules apply in India."
+    },
+    {
+      "chapter": 26,
+      "title": "Building a Website or Platform",
+      "why": "Licensing and content rules are Chinese. India's IT Rules, DPDP Act and consumer law apply."
+    },
+    {
+      "chapter": 31,
+      "title": "Paths After Eighteen",
+      "why": "Education, registration and conscription rules are Chinese. Indian routes differ by board and state."
+    },
+    {
+      "chapter": 32,
+      "title": "Studying Abroad",
+      "why": "Credential and exit procedures are Chinese. Use MEA apostille and AIU equivalence."
+    }
+  ],
+  "sources": [
+    {
+      "label": "Ayushman Bharat PM-JAY — National Health Authority",
+      "url": "https://nha.gov.in/PM-JAY"
+    },
+    {
+      "label": "PM-JAY senior citizens (70+) FAQ",
+      "url": "https://nha.gov.in/img/resources/English_FAQs_related_to_the_benefits_for_senior_citizens.pdf"
+    },
+    {
+      "label": "Employees' State Insurance Corporation",
+      "url": "https://esic.gov.in/"
+    },
+    {
+      "label": "Employees' Provident Fund Organisation",
+      "url": "https://www.epfo.gov.in/"
+    },
+    {
+      "label": "Code on Social Security commencement notification (21 Nov 2025)",
+      "url": "https://esic.gov.in/attachments/actfile/MINISTRY_OF_LABOUR_AND_EMPLOYMENT_NOTIFICATION_1787043012.pdf"
+    },
+    {
+      "label": "Ministry of Labour and Employment — four labour codes",
+      "url": "https://www.labour.gov.in/static/uploads/2025/07/e6e2df267f39a63f0061041ab0a07db4.pdf"
+    },
+    {
+      "label": "National Food Security Act, 2013",
+      "url": "https://nfsa.gov.in/"
+    },
+    {
+      "label": "National Social Assistance Programme",
+      "url": "https://nsap.nic.in/"
+    },
+    {
+      "label": "Dowry Prohibition Act, 1961",
+      "url": "https://wcd.nic.in/act/dowry-prohibition-act-1961"
+    },
+    {
+      "label": "Maternity Benefit (Amendment) Act, 2017",
+      "url": "https://www.labour.gov.in/static/uploads/2025/06/f6e3b5e4550cf4ff84f333c3e114fbc2.pdf"
+    },
+    {
+      "label": "Employees' Compensation Act, 1923",
+      "url": "https://www.indiacode.nic.in/handle/123456789/19236"
+    },
+    {
+      "label": "National Legal Services Authority — legal aid",
+      "url": "https://nalsa.gov.in/legal-aid/"
+    },
+    {
+      "label": "Emergency Response Support System — 112",
+      "url": "https://112.gov.in/"
+    },
+    {
+      "label": "National Cyber Crime Reporting Portal",
+      "url": "https://cybercrime.gov.in/"
+    },
+    {
+      "label": "Tele-MANAS",
+      "url": "https://telemanas.mohfw.gov.in/"
+    },
+    {
+      "label": "Pradhan Mantri Awas Yojana",
+      "url": "https://pmaymis.gov.in/"
+    },
+    {
+      "label": "MEA MADAD",
+      "url": "https://madad.gov.in/"
+    },
+    {
+      "label": "Association of Indian Universities",
+      "url": "https://www.aiu.ac.in/"
+    }
+  ]
+}

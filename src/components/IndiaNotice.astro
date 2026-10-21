@@ -1,0 +1,47 @@
+---
+import { resolvePath } from '../utils/paths';
+
+interface Props {
+  id?: string;
+  class?: string;
+}
+
+const { id = 'india-disclaimer', class: className = '' } = Astro.props;
+---
+
+<aside class:list={['india-notice', className]} id={id} data-india-notice aria-label="India edition source note">
+  <span class="notice-badge" aria-hidden="true">IN</span>
+  <p>
+    <strong>India edition.</strong> The book was written for mainland China.
+    <a href={resolvePath('/india/')}>Check Indian equivalents</a> before acting on local rules.
+  </p>
+  <button type="button" class="notice-dismiss" data-notice-dismiss aria-label="Dismiss this note">✕</button>
+</aside>
+
+<script>
+  function initIndiaNotice() {
+    let dismissed = false;
+    try {
+      dismissed = sessionStorage.getItem('htlb_india_notice_dismissed') === '1';
+    } catch (e) {}
+
+    document.querySelectorAll<HTMLElement>('[data-india-notice]').forEach((notice) => {
+      if (dismissed) {
+        notice.hidden = true;
+        return;
+      }
+      const btn = notice.querySelector<HTMLButtonElement>('[data-notice-dismiss]');
+      if (!btn || btn.dataset.bound === 'true') return;
+      btn.dataset.bound = 'true';
+      btn.addEventListener('click', () => {
+        notice.hidden = true;
+        try {
+          sessionStorage.setItem('htlb_india_notice_dismissed', '1');
+        } catch (e) {}
+      });
+    });
+  }
+
+  initIndiaNotice();
+  document.addEventListener('astro:page-load', initIndiaNotice);
+</script>

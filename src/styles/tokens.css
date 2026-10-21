@@ -73,3 +73,92 @@
   --color-glass-border: rgba(4, 17, 15, 0.08);
   --shadow-glass: 0 12px 30px rgba(4, 17, 15, 0.08);
 }
+
+/* ------------------------------------------------------------------
+   Theme palettes (India edition)
+   Two dark and two light palettes share one semantic token contract.
+   Default: Midnight Jade (dark) / Pearl (light).
+   ------------------------------------------------------------------ */
+
+:root {
+  color-scheme: dark;
+  --theme-card: rgba(255, 255, 255, 0.055);
+  --theme-card-strong: rgba(255, 255, 255, 0.09);
+  --theme-hairline: rgba(255, 255, 255, 0.1);
+  --theme-soft: rgba(0, 0, 0, 0.16);
+  --theme-shadow-soft: 0 8px 24px rgba(0, 0, 0, 0.18);
+  --theme-glow: rgba(70, 217, 160, 0.18);
+}
+
+/* Dark palette 2: Monsoon Ink — warm charcoal, same semantic accents. */
+[data-theme="dark"][data-palette="monsoon"] {
+  color-scheme: dark;
+  --theme-bg: #12100e;
+  --theme-surface: #211c17;
+  --theme-text: #f4ede2;
+  --theme-text-muted: rgba(244, 237, 226, 0.71);
+  --theme-ink: #0a0806;
+
+  --color-jade-text: #7bd6ae;
+  --color-amber-text: #efb26a;
+  --color-steel-text: #a9b9c9;
+
+  --color-glass-fill: rgba(255, 255, 255, 0.075);
+  --color-glass-border: rgba(255, 255, 255, 0.17);
+  --shadow-glass: 0 14px 42px rgba(0, 0, 0, 0.34);
+  --theme-card: rgba(255, 255, 255, 0.05);
+  --theme-card-strong: rgba(255, 255, 255, 0.085);
+  --theme-hairline: rgba(244, 237, 226, 0.12);
+  --theme-soft: rgba(0, 0, 0, 0.18);
+  --theme-glow: rgba(123, 214, 174, 0.16);
+}
+
+/* Light palette 1: Pearl (existing light theme, slightly cleaner). */
+[data-theme="light"] {
+  color-scheme: light;
+  --theme-bg: #f2f6f4;
+  --theme-surface: #e4ecea;
+  --theme-text: #04110f;
+  --theme-text-muted: rgba(4, 17, 15, 0.68);
+  --theme-ink: #04110f;
+
+  --color-jade-text: #0b6b47;
+  --color-amber-text: #7a4e00;
+  --color-steel-text: #2c5878;
+
+  --color-glass-fill: rgba(255, 255, 255, 0.58);
+  --color-glass-border: rgba(4, 17, 15, 0.08);
+  --shadow-glass: 0 12px 30px rgba(4, 17, 15, 0.08);
+
+  --theme-card: rgba(255, 255, 255, 0.55);
+  --theme-card-strong: rgba(255, 255, 255, 0.78);
+  --theme-hairline: rgba(4, 17, 15, 0.08);
+  --theme-soft: rgba(4, 17, 15, 0.04);
+  --theme-shadow-soft: 0 8px 22px rgba(4, 17, 15, 0.06);
+  --theme-glow: rgba(11, 107, 71, 0.12);
+}
+
+/* Light palette 2: Ivory Clove — warm paper, forest and clove accents. */
+[data-theme="light"][data-palette="ivory"] {
+  color-scheme: light;
+  --theme-bg: #faf4ea;
+  --theme-surface: #f0e6d6;
+  --theme-text: #201a13;
+  --theme-text-muted: rgba(32, 26, 19, 0.68);
+  --theme-ink: #201a13;
+
+  --color-jade-text: #1e6b50;
+  --color-amber-text: #8a5200;
+  --color-steel-text: #39566a;
+
+  --color-glass-fill: rgba(255, 255, 255, 0.6);
+  --color-glass-border: rgba(32, 26, 19, 0.1);
+  --shadow-glass: 0 12px 30px rgba(65, 47, 26, 0.1);
+
+  --theme-card: rgba(255, 255, 255, 0.62);
+  --theme-card-strong: rgba(255, 255, 255, 0.84);
+  --theme-hairline: rgba(32, 26, 19, 0.1);
+  --theme-soft: rgba(65, 47, 26, 0.05);
+  --theme-shadow-soft: 0 8px 22px rgba(65, 47, 26, 0.08);
+  --theme-glow: rgba(30, 107, 80, 0.14);
+}

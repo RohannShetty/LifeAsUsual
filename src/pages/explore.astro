@@ -6,13 +6,14 @@ import TipCard from '../components/TipCard.astro';
 import Character from '../cast/Character.astro';
 import Bubble from '../cast/Bubble.astro';
 import type { EnglishChapter, EnglishTip } from '../../scripts/ingest-parveen';
+import { resolvePath } from '../utils/paths';
 
 const enAllPath = path.resolve('data/en/all-chapters.json');
 let allTips: EnglishTip[] = [];
 try {
   const chapters: EnglishChapter[] = JSON.parse(fs.readFileSync(enAllPath, 'utf-8'));
-  for (const ch of chapters) {
-    allTips.push(...ch.tips);
+  for (const chapter of chapters) {
+    allTips.push(...chapter.tips);
   }
 } catch (e) {
   console.warn('Could not load tips for explore:', e);
@@ -20,151 +21,71 @@ try {
 ---
 
 <BaseLayout
-  title="Explore & Filter Recommendations - How To Live Better"
-  description="Filter and search all 765 evidence-backed recommendations by evidence grade, ROI value tier, scope, and cost."
+  title="Explore 765 Tips - How To Live Better"
+  description="Search and filter 765 evidence-graded tips by payoff, evidence grade, cost, time, effort, audience and verification status."
 >
   <div class="explore-container">
     <header class="explore-header">
-      <span class="comic-sticker sticker-benefit">Evidence Explorer</span>
-      <h1 class="page-title">Search & Filter 765 Tips</h1>
-      <p class="page-lead">
-        Find exact recommendations by keyword, evidence rigor, return-on-investment tier, or life domain.
-      </p>
+      <div class="explore-topline">
+        <span class="section-kicker">Explore</span>
+        <a class="finder-link" href={resolvePath('/#find-your-step')}>Not sure? Answer 3 questions →</a>
+      </div>
+      <h1 class="page-title">Find the tip you need.</h1>
+      <p class="page-lead">Search all 765 tips, or narrow by what you can afford in money, time and effort.</p>
     </header>
 
-    <!-- Search Input & Filter Controls Bar -->
-    <section class="filter-controls-card liquid-glass">
-      <!-- Search Input -->
+    <section class="explore-controls liquid-glass" aria-label="Search and quick filters">
       <div class="search-input-wrapper">
-        <span class="search-icon" aria-hidden="true">🔍</span>
-        <input 
-          type="search" 
-          id="explore-search" 
+        <span class="search-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        </span>
+        <input
+          type="search"
+          id="explore-search"
           class="explore-search-input"
-          placeholder="Search by keywords, drugs, habits, laws, numbers..."
+          placeholder="Search sleep, salt, rent, insurance…"
           aria-label="Search tips"
           autocomplete="off"
         />
         <button type="button" id="clear-search-btn" class="clear-btn" aria-label="Clear search">✕</button>
       </div>
 
-      <!-- Filter Rows -->
-      <div class="filter-groups">
-        <!-- Evidence Grade -->
-        <div class="filter-group">
-          <span class="filter-label">Evidence:</span>
-          <div class="filter-chips" data-filter="evidence">
-            <button type="button" class="filter-chip active" data-value="all">All</button>
-            <button type="button" class="filter-chip chip-a" data-value="A">Grade A (495)</button>
-            <button type="button" class="filter-chip chip-b" data-value="B">Grade B (218)</button>
-            <button type="button" class="filter-chip chip-c" data-value="C">Grade C (52)</button>
-          </div>
-        </div>
+      <div class="quick-row">
+        <button type="button" class="filter-trigger" id="open-filter-sheet" aria-haspopup="dialog" aria-controls="filter-sheet">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 6h16M7 12h10M10 18h4"/></svg>
+          <span>Filters</span>
+          <span class="filter-count" id="active-filter-count" hidden>0</span>
+        </button>
 
-        <!-- ROI Value Tier -->
-        <div class="filter-group">
-          <span class="filter-label">ROI Tier:</span>
-          <div class="filter-chips" data-filter="tier">
-            <button type="button" class="filter-chip active" data-value="all">All</button>
-            <button type="button" class="filter-chip" data-value="Very high">Very High (122)</button>
-            <button type="button" class="filter-chip" data-value="High">High (344)</button>
-            <button type="button" class="filter-chip" data-value="Average">Average (299)</button>
-          </div>
-        </div>
-
-        <!-- Scope / Domain -->
-        <div class="filter-group">
-          <span class="filter-label">Scope:</span>
-          <div class="filter-chips" data-filter="scope">
-            <button type="button" class="filter-chip active" data-value="all">All</button>
-            <button type="button" class="filter-chip" data-value="Lifespan">Lifespan</button>
-            <button type="button" class="filter-chip" data-value="Money">Money</button>
-            <button type="button" class="filter-chip" data-value="Time and energy">Time & Energy</button>
-            <button type="button" class="filter-chip" data-value="Personal freedom">Freedom</button>
-          </div>
-        </div>
-
-        <!-- Money Cost -->
-        <div class="filter-group">
-          <span class="filter-label">Cost:</span>
-          <div class="filter-chips" data-filter="cost">
-            <button type="button" class="filter-chip active" data-value="all">All</button>
-            <button type="button" class="filter-chip" data-value="Free">Free</button>
-            <button type="button" class="filter-chip" data-value="Small cost">Small cost</button>
-            <button type="button" class="filter-chip" data-value="Real money">Real money</button>
-          </div>
-        </div>
-
-        <!-- Target Audience -->
-        <div class="filter-group">
-          <span class="filter-label">Audience:</span>
-          <div class="filter-chips" data-filter="audience">
-            <button type="button" class="filter-chip active" data-value="all">All</button>
-            <button type="button" class="filter-chip" data-value="Pregnant or planning">Pregnant / Planning</button>
-            <button type="button" class="filter-chip" data-value="Child under 3">Child &lt; 3</button>
-            <button type="button" class="filter-chip" data-value="Child 3 to 18">Child 3–18</button>
-            <button type="button" class="filter-chip" data-value="Older relatives at home">Elderly at home</button>
-            <button type="button" class="filter-chip" data-value="Age 35+">Age 35+</button>
-            <button type="button" class="filter-chip" data-value="Age 60+">Age 60+</button>
-            <button type="button" class="filter-chip" data-value="Women">Women</button>
-          </div>
-        </div>
-
-        <!-- Time Commitment -->
-        <div class="filter-group">
-          <span class="filter-label">Time:</span>
-          <div class="filter-chips" data-filter="time">
-            <button type="button" class="filter-chip active" data-value="all">All</button>
-            <button type="button" class="filter-chip" data-value="Quick">Quick</button>
-            <button type="button" class="filter-chip" data-value="A few hours">A few hours</button>
-            <button type="button" class="filter-chip" data-value="Takes time every day">Takes time daily</button>
-          </div>
-        </div>
-
-        <!-- Willpower Required -->
-        <div class="filter-group">
-          <span class="filter-label">Willpower:</span>
-          <div class="filter-chips" data-filter="willpower">
-            <button type="button" class="filter-chip active" data-value="all">All</button>
-            <button type="button" class="filter-chip" data-value="None needed">None needed</button>
-            <button type="button" class="filter-chip" data-value="Some">Some</button>
-            <button type="button" class="filter-chip" data-value="A lot">A lot</button>
-          </div>
-        </div>
-
-        <!-- Editorial Verification Status -->
-        <div class="filter-group">
-          <span class="filter-label">Status:</span>
-          <div class="filter-chips" data-filter="status">
-            <button type="button" class="filter-chip active" data-value="all">All</button>
-            <button type="button" class="filter-chip chip-disputed" data-value="disputed">Disputed (88)</button>
-            <button type="button" class="filter-chip" data-value="verifying">Still Verifying (3)</button>
-          </div>
+        <div class="quick-chips" role="group" aria-label="Quick filters">
+          <button type="button" class="quick-chip is-active" data-quick="all">All</button>
+          <button type="button" class="quick-chip" data-quick="best">Best ROI</button>
+          <button type="button" class="quick-chip" data-quick="free">Free</button>
+          <button type="button" class="quick-chip" data-quick="quick">Quick</button>
         </div>
       </div>
 
-      <!-- Filter Stats & Reset Row -->
-      <div class="filter-summary-row">
-        <span class="results-count" id="results-count">Showing 765 of 765 tips</span>
-        <button type="button" id="reset-filters-btn" class="reset-link">Reset Filters</button>
-      </div>
+      <p class="active-summary" id="active-summary" hidden></p>
     </section>
 
-    <!-- Empty State -->
-    <div id="explore-empty-state" class="liquid-glass empty-box" style="display: none;">
-      <div class="empty-cast-row">
-        <Character character="minus" mood="surprised" size={64} />
-        <Bubble speaker="Minus" text="No picks saved yet. Tap any bookmark icon!" tailDirection="left" />
-      </div>
-      <h2 class="empty-title">No Recommendations Match</h2>
-      <p class="empty-desc">Try clearing filters or searching for broader terms like "sleep", "salt", "insurance", or "tax".</p>
-      <button type="button" id="empty-reset-btn" class="action-btn-primary">Clear All Filters</button>
+    <div class="results-head">
+      <span class="results-count" id="results-count">Showing 765 of 765 tips</span>
+      <button type="button" id="reset-filters-btn" class="reset-link">Reset</button>
     </div>
 
-    <!-- Tips Feed -->
+    <div id="explore-empty-state" class="empty-box liquid-glass" hidden>
+      <div class="empty-cast-row">
+        <Character character="minus" mood="surprised" size={54} />
+        <Bubble speaker="Minus" text="Nothing matches. Loosen one filter." tailDirection="left" autoDismissSeconds={0} />
+      </div>
+      <h2 class="empty-title">No tips match those filters</h2>
+      <p class="empty-desc">Try a broader term, or clear one or two filters. “Sleep”, “salt”, “rent” and “insurance” are good starting searches.</p>
+      <button type="button" id="empty-reset-btn" class="ui-btn ui-btn-primary">Clear all filters</button>
+    </div>
+
     <main id="explore-results-feed" class="tips-stream">
       {allTips.map((tip) => (
-        <div 
+        <div
           class="explore-tip-item"
           data-id={tip.id}
           data-evidence={tip.evidenceGrade}
@@ -174,8 +95,8 @@ try {
           data-time={tip.tags.time}
           data-willpower={tip.tags.willpower}
           data-audience={(tip.tags.audience || []).join(',')}
-          data-disputed={tip.disputed ? "true" : "false"}
-          data-verifying={tip.stillVerifying ? "true" : "false"}
+          data-disputed={tip.disputed ? 'true' : 'false'}
+          data-verifying={tip.stillVerifying ? 'true' : 'false'}
           data-title={tip.title.toLowerCase()}
           data-plain={tip.inPlainWords.toLowerCase()}
           data-benefit={tip.benefit.toLowerCase()}
@@ -183,16 +104,128 @@ try {
           <TipCard tip={tip} />
         </div>
       ))}
-      <!-- Scroll Sentinel for Progressive Batch Loading -->
-      <div id="explore-scroll-sentinel" class="scroll-sentinel" style="display: none;">
-        <span class="sentinel-badge">Loading more recommendations...</span>
+      <div id="explore-scroll-sentinel" class="scroll-sentinel" hidden>
+        <span class="sentinel-badge">Loading more tips…</span>
       </div>
     </main>
   </div>
+
+  <div class="filter-backdrop" id="filter-backdrop" aria-hidden="true"></div>
+
+  <aside
+    id="filter-sheet"
+    class="filter-sheet liquid-glass"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="filter-title"
+    aria-hidden="true"
+  >
+    <header class="filter-sheet-head">
+      <div>
+        <p class="section-kicker">Narrow it down</p>
+        <h2 id="filter-title" class="filter-title">Filters</h2>
+      </div>
+      <button type="button" class="filter-close" id="close-filter-sheet" aria-label="Close filters">✕</button>
+    </header>
+
+    <div class="filter-sheet-body">
+      <div class="filter-group">
+        <span class="filter-label">Evidence grade</span>
+        <div class="filter-chips" data-filter="evidence">
+          <button type="button" class="filter-chip active" data-value="all">All</button>
+          <button type="button" class="filter-chip chip-a" data-value="A">Grade A · 495</button>
+          <button type="button" class="filter-chip chip-b" data-value="B">Grade B · 218</button>
+          <button type="button" class="filter-chip chip-c" data-value="C">Grade C · 52</button>
+        </div>
+      </div>
+
+      <div class="filter-group">
+        <span class="filter-label">Payoff tier</span>
+        <div class="filter-chips" data-filter="tier">
+          <button type="button" class="filter-chip active" data-value="all">All</button>
+          <button type="button" class="filter-chip" data-value="Very high">Very high · 122</button>
+          <button type="button" class="filter-chip" data-value="High">High · 344</button>
+          <button type="button" class="filter-chip" data-value="Average">Average · 299</button>
+        </div>
+      </div>
+
+      <div class="filter-group">
+        <span class="filter-label">What you get back</span>
+        <div class="filter-chips" data-filter="scope">
+          <button type="button" class="filter-chip active" data-value="all">All</button>
+          <button type="button" class="filter-chip" data-value="Lifespan">Lifespan</button>
+          <button type="button" class="filter-chip" data-value="Money">Money</button>
+          <button type="button" class="filter-chip" data-value="Time and energy">Time &amp; energy</button>
+          <button type="button" class="filter-chip" data-value="Personal freedom">Freedom</button>
+        </div>
+      </div>
+
+      <div class="filter-group">
+        <span class="filter-label">Money cost</span>
+        <div class="filter-chips" data-filter="cost">
+          <button type="button" class="filter-chip active" data-value="all">All</button>
+          <button type="button" class="filter-chip" data-value="Free">Free</button>
+          <button type="button" class="filter-chip" data-value="Small cost">Small cost</button>
+          <button type="button" class="filter-chip" data-value="Real money">Real money</button>
+        </div>
+      </div>
+
+      <div class="filter-group">
+        <span class="filter-label">Time needed</span>
+        <div class="filter-chips" data-filter="time">
+          <button type="button" class="filter-chip active" data-value="all">All</button>
+          <button type="button" class="filter-chip" data-value="Quick">Quick</button>
+          <button type="button" class="filter-chip" data-value="A few hours">A few hours</button>
+          <button type="button" class="filter-chip" data-value="Takes time every day">Daily</button>
+        </div>
+      </div>
+
+      <div class="filter-group">
+        <span class="filter-label">Willpower</span>
+        <div class="filter-chips" data-filter="willpower">
+          <button type="button" class="filter-chip active" data-value="all">All</button>
+          <button type="button" class="filter-chip" data-value="None needed">None</button>
+          <button type="button" class="filter-chip" data-value="Some">Some</button>
+          <button type="button" class="filter-chip" data-value="A lot">A lot</button>
+        </div>
+      </div>
+
+      <div class="filter-group">
+        <span class="filter-label">Who it is for</span>
+        <div class="filter-chips" data-filter="audience">
+          <button type="button" class="filter-chip active" data-value="all">All</button>
+          <button type="button" class="filter-chip" data-value="Pregnant or planning">Pregnant / planning</button>
+          <button type="button" class="filter-chip" data-value="Child under 3">Child under 3</button>
+          <button type="button" class="filter-chip" data-value="Child 3 to 18">Child 3–18</button>
+          <button type="button" class="filter-chip" data-value="Older relatives at home">Older relatives</button>
+          <button type="button" class="filter-chip" data-value="Age 35+">Age 35+</button>
+          <button type="button" class="filter-chip" data-value="Age 60+">Age 60+</button>
+          <button type="button" class="filter-chip" data-value="Women">Women</button>
+        </div>
+      </div>
+
+      <div class="filter-group">
+        <span class="filter-label">Editorial status</span>
+        <div class="filter-chips" data-filter="status">
+          <button type="button" class="filter-chip active" data-value="all">All</button>
+          <button type="button" class="filter-chip chip-disputed" data-value="disputed">Disputed · 88</button>
+          <button type="button" class="filter-chip" data-value="verifying">Still verifying · 3</button>
+        </div>
+      </div>
+    </div>
+
+    <footer class="filter-sheet-foot">
+      <button type="button" id="filter-clear" class="filter-clear">Clear all</button>
+      <button type="button" id="filter-apply" class="ui-btn ui-btn-primary filter-apply">Show 765 tips</button>
+    </footer>
+  </aside>
 </BaseLayout>
 
 <script>
   function initExplore() {
+    document.body.classList.remove('filters-open');
+    document.body.style.overflow = '';
+
     const searchInput = document.getElementById('explore-search') as HTMLInputElement | null;
     const clearBtn = document.getElementById('clear-search-btn');
     const resetBtn = document.getElementById('reset-filters-btn');
@@ -204,13 +237,21 @@ try {
 
     if (!tipItems.length) return;
 
+    const sheet = document.getElementById('filter-sheet');
+    const backdrop = document.getElementById('filter-backdrop');
+    const openSheetBtn = document.getElementById('open-filter-sheet');
+    const closeSheetBtn = document.getElementById('close-filter-sheet');
+    const clearSheetBtn = document.getElementById('filter-clear');
+    const applySheetBtn = document.getElementById('filter-apply');
+    const activeCountEl = document.getElementById('active-filter-count');
+    const activeSummaryEl = document.getElementById('active-summary');
+
     const BATCH_SIZE = 25;
     let visibleLimit = BATCH_SIZE;
     let matchedItems: HTMLElement[] = [];
     let filterTimeout: number | null = null;
     let rafId: number | null = null;
 
-    // Active filters state
     const filters = {
       query: '',
       evidence: 'all',
@@ -223,7 +264,6 @@ try {
       status: 'all',
     };
 
-    // Parse URL search params
     const params = new URLSearchParams(window.location.search);
     if (params.get('q')) filters.query = params.get('q') || '';
     if (params.get('evidence')) filters.evidence = params.get('evidence') || 'all';
@@ -235,21 +275,7 @@ try {
     if (params.get('willpower')) filters.willpower = params.get('willpower') || 'all';
     if (params.get('status')) filters.status = params.get('status') || 'all';
 
-    // Reflect URL into UI
     if (searchInput) searchInput.value = filters.query;
-
-    document.querySelectorAll<HTMLElement>('.filter-chips').forEach((group) => {
-      const type = group.dataset.filter as keyof typeof filters;
-      if (!type) return;
-      const targetVal = filters[type];
-      group.querySelectorAll<HTMLButtonElement>('.filter-chip').forEach((chip) => {
-        if (chip.dataset.value === targetVal) {
-          chip.classList.add('active');
-        } else {
-          chip.classList.remove('active');
-        }
-      });
-    });
 
     function updateURL() {
       const p = new URLSearchParams();
@@ -263,33 +289,91 @@ try {
       if (filters.willpower !== 'all') p.set('willpower', filters.willpower);
       if (filters.status !== 'all') p.set('status', filters.status);
 
-      const newUrl = p.toString() ? `${window.location.pathname}?${p.toString()}` : window.location.pathname;
+      const newUrl = p.toString() ? window.location.pathname + '?' + p.toString() : window.location.pathname;
       window.history.replaceState({}, '', newUrl);
     }
 
-    function renderBatch() {
-      tipItems.forEach((item) => {
-        item.style.display = 'none';
+    function activeFilters(): Array<{ key: string; value: string; label: string }> {
+      const out: Array<{ key: string; value: string; label: string }> = [];
+      const labels: Record<string, Record<string, string>> = {
+        evidence: { A: 'Grade A', B: 'Grade B', C: 'Grade C' },
+        tier: { 'Very high': 'Very high', High: 'High', Average: 'Average' },
+        scope: { Lifespan: 'Lifespan', Money: 'Money', 'Time and energy': 'Time & energy', 'Personal freedom': 'Freedom' },
+        cost: { Free: 'Free', 'Small cost': 'Small cost', 'Real money': 'Real money' },
+        time: { Quick: 'Quick', 'A few hours': 'A few hours', 'Takes time every day': 'Daily' },
+        willpower: { 'None needed': 'No willpower', Some: 'Some effort', 'A lot': 'A lot of effort' },
+        audience: {},
+        status: { disputed: 'Disputed', verifying: 'Verifying' },
+      };
+      (['evidence', 'tier', 'scope', 'cost', 'time', 'willpower', 'audience', 'status'] as const).forEach((key) => {
+        const value = filters[key];
+        if (value !== 'all') {
+          const label = labels[key]?.[value] || value;
+          out.push({ key, value, label });
+        }
       });
+      return out;
+    }
+
+    function syncUi() {
+      document.querySelectorAll<HTMLElement>('.filter-chips').forEach((group) => {
+        const type = group.dataset.filter as keyof typeof filters;
+        if (!type) return;
+        group.querySelectorAll<HTMLButtonElement>('.filter-chip').forEach((chip) => {
+          const selected = chip.dataset.value === filters[type];
+          chip.classList.toggle('active', selected);
+          chip.setAttribute('aria-pressed', selected ? 'true' : 'false');
+        });
+      });
+
+      const active = activeFilters();
+      if (activeCountEl) {
+        activeCountEl.textContent = String(active.length);
+        activeCountEl.hidden = active.length === 0;
+      }
+
+      if (activeSummaryEl) {
+        activeSummaryEl.hidden = active.length === 0;
+        activeSummaryEl.textContent = active.length ? active.map((item) => item.label).join(' · ') : '';
+      }
+
+      document.querySelectorAll<HTMLButtonElement>('.quick-chip').forEach((chip) => {
+        const q = chip.dataset.quick;
+        let selected = false;
+        if (q === 'all') selected = filters.tier === 'all' && filters.cost === 'all' && filters.time === 'all' && filters.willpower === 'all';
+        if (q === 'best') selected = filters.tier === 'Very high';
+        if (q === 'free') selected = filters.cost === 'Free';
+        if (q === 'quick') selected = filters.time === 'Quick';
+        chip.classList.toggle('is-active', selected);
+        chip.setAttribute('aria-pressed', selected ? 'true' : 'false');
+      });
+
+      if (applySheetBtn) {
+        applySheetBtn.textContent = 'Show ' + matchedItems.length + (matchedItems.length === 1 ? ' tip' : ' tips');
+      }
+    }
+
+    function renderBatch() {
+      tipItems.forEach((item) => { item.style.display = 'none'; });
 
       for (let i = 0; i < Math.min(visibleLimit, matchedItems.length); i++) {
         matchedItems[i].style.display = '';
       }
 
       if (resultsCountEl) {
-        resultsCountEl.textContent = `Showing ${matchedItems.length} of ${tipItems.length} tips`;
+        resultsCountEl.textContent = 'Showing ' + matchedItems.length + ' of ' + tipItems.length + ' tips';
       }
 
       if (emptyStateEl) {
-        emptyStateEl.style.display = matchedItems.length === 0 ? 'block' : 'none';
+        emptyStateEl.hidden = matchedItems.length !== 0;
       }
 
       if (sentinelEl) {
         const remaining = matchedItems.length - Math.min(visibleLimit, matchedItems.length);
-        sentinelEl.style.display = remaining > 0 ? 'flex' : 'none';
+        sentinelEl.hidden = remaining <= 0;
         const badge = sentinelEl.querySelector('.sentinel-badge');
         if (badge) {
-          badge.textContent = `Loaded ${Math.min(visibleLimit, matchedItems.length)} of ${matchedItems.length} tips. Scroll for more...`;
+          badge.textContent = 'Loaded ' + Math.min(visibleLimit, matchedItems.length) + ' of ' + matchedItems.length + ' tips. Scroll for more…';
         }
       }
     }
@@ -323,11 +407,8 @@ try {
         const matchesAudience = filters.audience === 'all' || audienceList.includes(filters.audience);
 
         let matchesStatus = true;
-        if (filters.status === 'disputed') {
-          matchesStatus = isDisputed;
-        } else if (filters.status === 'verifying') {
-          matchesStatus = isVerifying;
-        }
+        if (filters.status === 'disputed') matchesStatus = isDisputed;
+        else if (filters.status === 'verifying') matchesStatus = isVerifying;
 
         const matchesQuery = !q || title.includes(q) || plain.includes(q) || benefit.includes(q);
 
@@ -338,6 +419,7 @@ try {
 
       visibleLimit = BATCH_SIZE;
       renderBatch();
+      syncUi();
       updateURL();
     }
 
@@ -345,13 +427,10 @@ try {
       if (filterTimeout) clearTimeout(filterTimeout);
       filterTimeout = window.setTimeout(() => {
         if (rafId) cancelAnimationFrame(rafId);
-        rafId = requestAnimationFrame(() => {
-          applyFilters();
-        });
+        rafId = requestAnimationFrame(() => applyFilters());
       }, 120);
     }
 
-    // Progressive Infinite Scroll Observer
     let sentinelObserver: IntersectionObserver | null = null;
     if (sentinelEl) {
       sentinelObserver = new IntersectionObserver((entries) => {
@@ -365,36 +444,24 @@ try {
       sentinelObserver.observe(sentinelEl);
     }
 
-    // Bind Search Input with Debounce
-    searchInput?.addEventListener('input', () => {
-      filters.query = searchInput.value;
-      debouncedApplyFilters();
-    });
+    function openSheet() {
+      sheet?.classList.add('is-open');
+      backdrop?.classList.add('is-open');
+      sheet?.setAttribute('aria-hidden', 'false');
+      backdrop?.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('filters-open');
+      document.body.style.overflow = 'hidden';
+      closeSheetBtn?.focus({ preventScroll: true });
+    }
 
-    clearBtn?.addEventListener('click', () => {
-      if (searchInput) {
-        searchInput.value = '';
-        filters.query = '';
-        applyFilters();
-      }
-    });
-
-    // Bind Filter Chips
-    document.querySelectorAll<HTMLElement>('.filter-chips').forEach((group) => {
-      const type = group.dataset.filter as keyof typeof filters;
-      if (!type) return;
-
-      group.addEventListener('click', (e) => {
-        const target = (e.target as HTMLElement).closest<HTMLButtonElement>('.filter-chip');
-        if (!target) return;
-
-        group.querySelectorAll('.filter-chip').forEach((c) => c.classList.remove('active'));
-        target.classList.add('active');
-
-        filters[type] = target.dataset.value || 'all';
-        applyFilters();
-      });
-    });
+    function closeSheet() {
+      sheet?.classList.remove('is-open');
+      backdrop?.classList.remove('is-open');
+      sheet?.setAttribute('aria-hidden', 'true');
+      backdrop?.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('filters-open');
+      document.body.style.overflow = '';
+    }
 
     function resetAll() {
       filters.query = '';
@@ -406,23 +473,79 @@ try {
       filters.time = 'all';
       filters.willpower = 'all';
       filters.status = 'all';
-
       if (searchInput) searchInput.value = '';
-
-      document.querySelectorAll<HTMLElement>('.filter-chips').forEach((group) => {
-        group.querySelectorAll('.filter-chip').forEach((c, idx) => {
-          if (idx === 0) c.classList.add('active');
-          else c.classList.remove('active');
-        });
-      });
-
       applyFilters();
     }
+
+    searchInput?.addEventListener('input', () => {
+      filters.query = searchInput.value;
+      debouncedApplyFilters();
+    });
+
+    clearBtn?.addEventListener('click', () => {
+      if (searchInput) {
+        searchInput.value = '';
+        filters.query = '';
+        applyFilters();
+        searchInput.focus();
+      }
+    });
+
+    document.querySelectorAll<HTMLElement>('.filter-chips').forEach((group) => {
+      const type = group.dataset.filter as keyof typeof filters;
+      if (!type) return;
+
+      group.addEventListener('click', (event) => {
+        const target = (event.target as HTMLElement).closest<HTMLButtonElement>('.filter-chip');
+        if (!target) return;
+        filters[type] = target.dataset.value || 'all';
+        applyFilters();
+      });
+    });
+
+    document.querySelectorAll<HTMLButtonElement>('.quick-chip').forEach((chip) => {
+      chip.addEventListener('click', () => {
+        const q = chip.dataset.quick;
+        if (q === 'all') {
+          filters.tier = 'all';
+          filters.cost = 'all';
+          filters.time = 'all';
+          filters.willpower = 'all';
+          filters.status = 'all';
+        }
+        if (q === 'best') filters.tier = filters.tier === 'Very high' ? 'all' : 'Very high';
+        if (q === 'free') filters.cost = filters.cost === 'Free' ? 'all' : 'Free';
+        if (q === 'quick') filters.time = filters.time === 'Quick' ? 'all' : 'Quick';
+        applyFilters();
+      });
+    });
+
+    openSheetBtn?.addEventListener('click', openSheet);
+    closeSheetBtn?.addEventListener('click', closeSheet);
+    backdrop?.addEventListener('click', closeSheet);
+    applySheetBtn?.addEventListener('click', () => {
+      closeSheet();
+      document.getElementById('explore-results-feed')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+    clearSheetBtn?.addEventListener('click', () => {
+      filters.evidence = 'all';
+      filters.tier = 'all';
+      filters.scope = 'all';
+      filters.cost = 'all';
+      filters.audience = 'all';
+      filters.time = 'all';
+      filters.willpower = 'all';
+      filters.status = 'all';
+      applyFilters();
+    });
 
     resetBtn?.addEventListener('click', resetAll);
     emptyResetBtn?.addEventListener('click', resetAll);
 
-    // Initial Filter Run
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && sheet?.classList.contains('is-open')) closeSheet();
+    });
+
     applyFilters();
   }
 
@@ -434,240 +557,403 @@ try {
   .explore-container {
     max-width: 860px;
     margin: 0 auto;
-    padding: 1rem 0 4rem;
+    padding: 0.25rem 0 4rem;
   }
 
-  .explore-header {
-    margin-bottom: 2rem;
+  .explore-header { margin-bottom: 1.1rem; }
+
+  .explore-topline {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.45rem;
   }
+
+  .finder-link {
+    font-family: var(--font-sans);
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--color-jade-text);
+    text-decoration: none;
+  }
+
+  .finder-link:hover { text-decoration: underline; text-underline-offset: 2px; }
 
   .page-title {
-    font-family: var(--font-display);
-    font-size: clamp(2rem, 5vw, 2.75rem);
-    letter-spacing: -0.02em;
-    margin: 0.75rem 0 0.5rem;
+    font-family: var(--font-sans);
+    font-size: clamp(1.85rem, 6vw, 2.5rem);
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -0.04em;
     color: var(--theme-text);
+    margin: 0 0 0.4rem;
   }
 
   .page-lead {
-    font-size: 1.125rem;
-    line-height: 1.6;
-    color: var(--color-ink-muted);
+    max-width: 56ch;
+    font-family: var(--font-serif);
+    font-size: 0.95rem;
+    line-height: 1.55;
+    color: var(--theme-text-muted);
   }
 
-  .filter-controls-card {
-    padding: 1.5rem;
-    background: var(--color-glass-fill);
-    border: 1px solid var(--color-glass-border);
-    border-radius: var(--radius-card);
-    margin-bottom: 2.5rem;
-    box-shadow: var(--shadow-glass);
+  .explore-controls {
+    padding: 0.8rem;
+    border-radius: 18px;
+    margin-bottom: 0.7rem;
   }
 
   .search-input-wrapper {
     position: relative;
     display: flex;
     align-items: center;
-    margin-bottom: 1.5rem;
   }
 
   .search-icon {
     position: absolute;
-    left: 1rem;
-    font-size: 1.1rem;
+    left: 0.85rem;
+    display: flex;
+    color: var(--theme-text-muted);
     pointer-events: none;
-    opacity: 0.6;
   }
 
   .explore-search-input {
     width: 100%;
-    padding: 0.85rem 2.75rem 0.85rem 3rem;
+    min-height: 46px;
+    padding: 0.65rem 2.6rem 0.65rem 2.5rem;
     border-radius: 999px;
-    background: rgba(0, 0, 0, 0.25);
-    border: 1px solid var(--color-glass-border);
+    background: var(--theme-soft);
+    border: 1px solid var(--theme-hairline);
     color: var(--theme-text);
-    font-size: 1rem;
-    transition: border-color var(--duration-fast);
+    font-family: var(--font-sans);
+    font-size: 0.86rem;
   }
 
-  .explore-search-input:focus {
-    border-color: var(--color-jade);
-  }
+  .explore-search-input::placeholder { color: var(--theme-text-muted); }
+  .explore-search-input:focus { border-color: var(--color-jade); outline: none; }
 
   .clear-btn {
     position: absolute;
-    right: 1rem;
-    background: none;
-    border: none;
-    color: var(--color-ink-muted);
-    font-size: 1rem;
-    cursor: pointer;
-    padding: 0.25rem;
-  }
-
-  .filter-groups {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .filter-group {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    flex-wrap: wrap;
-  }
-
-  .filter-label {
-    font-size: 0.825rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: var(--color-ink-muted);
-    min-width: 75px;
-  }
-
-  .filter-chips {
-    display: flex;
-    gap: 0.5rem;
-    flex-wrap: wrap;
-  }
-
-  .filter-chip {
+    right: 0.45rem;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 0.4rem 0.85rem;
-    min-height: 44px;
-    border-radius: 999px;
-    background: rgba(0, 0, 0, 0.2);
-    border: 1px solid var(--color-glass-border);
-    color: var(--color-ink-muted);
-    font-size: 0.825rem;
-    font-weight: 600;
+    width: 36px;
+    height: 36px;
+    border: 0;
+    border-radius: 50%;
+    background: transparent;
+    color: var(--theme-text-muted);
     cursor: pointer;
-    transition: all var(--duration-fast);
   }
 
-  .filter-chip:hover {
-    border-color: var(--color-jade);
-    color: var(--theme-text);
-  }
+  .clear-btn:hover { background: var(--theme-soft); color: var(--theme-text); }
 
-  .filter-chip.active {
-    background: var(--color-jade);
-    color: #04110F;
-    border-color: #04110F;
-    font-weight: 700;
-  }
-
-  .filter-chip.chip-a.active {
-    background: var(--color-jade);
-    color: #04110F;
-  }
-
-  .filter-chip.chip-b.active {
-    background: var(--color-amber);
-    color: #04110F;
-  }
-
-  .filter-summary-row {
+  .quick-row {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding-top: 1rem;
-    border-top: 1px solid var(--color-glass-border);
+    gap: 0.45rem;
+    margin-top: 0.6rem;
+    min-width: 0;
+  }
+
+  .filter-trigger {
+    flex: 0 0 auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    min-height: 38px;
+    padding: 0.35rem 0.7rem;
+    border: 1px solid var(--theme-hairline);
+    border-radius: 999px;
+    background: var(--theme-card);
+    color: var(--theme-text);
+    font-family: var(--font-sans);
+    font-size: 0.74rem;
+    font-weight: 800;
+    cursor: pointer;
+  }
+
+  .filter-trigger:hover { border-color: var(--color-jade); }
+
+  .filter-count {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 18px;
+    height: 18px;
+    padding: 0 4px;
+    border-radius: 999px;
+    background: var(--color-jade);
+    color: var(--color-ink);
+    font-size: 0.62rem;
+    font-weight: 800;
+  }
+
+  .quick-chips {
+    display: flex;
+    gap: 0.3rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+    padding-bottom: 1px;
+  }
+
+  .quick-chips::-webkit-scrollbar { display: none; }
+
+  .quick-chip {
+    flex: 0 0 auto;
+    min-height: 38px;
+    padding: 0.35rem 0.65rem;
+    border: 1px solid var(--theme-hairline);
+    border-radius: 999px;
+    background: transparent;
+    color: var(--theme-text-muted);
+    font-family: var(--font-sans);
+    font-size: 0.72rem;
+    font-weight: 700;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+
+  .quick-chip.is-active {
+    background: color-mix(in srgb, var(--color-jade) 14%, var(--theme-card));
+    border-color: color-mix(in srgb, var(--color-jade) 40%, transparent);
+    color: var(--color-jade-text);
+  }
+
+  .active-summary {
+    margin-top: 0.45rem;
+    font-family: var(--font-sans);
+    font-size: 0.69rem;
+    line-height: 1.35;
+    color: var(--theme-text-muted);
+  }
+
+  .results-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.15rem 0.15rem 0.7rem;
   }
 
   .results-count {
-    font-size: 0.875rem;
+    font-family: var(--font-sans);
+    font-size: 0.73rem;
     font-weight: 700;
-    color: var(--theme-text);
+    color: var(--theme-text-muted);
   }
 
   .reset-link {
-    background: none;
-    border: none;
-    color: var(--color-amber-text);
-    font-size: 0.85rem;
-    font-weight: 600;
-    cursor: pointer;
-    text-decoration: underline;
-  }
-
-  .empty-box {
-    text-align: center;
-    padding: 3rem 1.5rem;
-    margin-bottom: 2rem;
-  }
-
-  .empty-cast-row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1.25rem;
-    margin-bottom: 1.25rem;
-  }
-
-  .empty-title {
-    font-family: var(--font-display);
-    font-size: 1.35rem;
-    color: var(--theme-text);
-    margin-bottom: 0.5rem;
-  }
-
-  .empty-desc {
-    color: var(--color-ink-muted);
-    font-size: 0.95rem;
-    max-width: 440px;
-    margin: 0 auto 1.5rem;
-  }
-
-  .action-btn-primary {
-    background: var(--color-jade);
-    color: #04110F;
-    padding: 0.75rem 1.5rem;
-    border-radius: 999px;
+    border: 0;
+    background: transparent;
+    color: var(--color-jade-text);
+    font-family: var(--font-sans);
+    font-size: 0.72rem;
     font-weight: 700;
-    border: 2px solid #04110F;
-    box-shadow: 2px 2px 0 #04110F;
     cursor: pointer;
+    padding: 0.3rem;
   }
 
-  .tips-stream {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-  }
+  .tips-stream { display: flex; flex-direction: column; gap: 1rem; }
 
-  .explore-tip-item {
-    content-visibility: auto;
-    contain-intrinsic-size: 1px 360px;
-  }
-
-  .filter-chip.chip-disputed.active {
-    background: #FF6B6B;
-    color: #FFFFFF;
-    border-color: #04110F;
-  }
+  .tips-stream :global(.tip-card) { margin-bottom: 0; }
 
   .scroll-sentinel {
     display: flex;
     justify-content: center;
-    align-items: center;
-    padding: 2rem 1rem;
+    padding: 0.75rem 0 1.5rem;
   }
 
   .sentinel-badge {
-    display: inline-block;
-    padding: 8px 18px;
     font-family: var(--font-sans);
-    font-size: 0.85rem;
+    font-size: 0.7rem;
+    color: var(--theme-text-muted);
+  }
+
+  .empty-box {
+    padding: 1.1rem;
+    margin-bottom: 1rem;
+    border-radius: 18px;
+  }
+
+  .empty-cast-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.7rem;
+  }
+
+  .empty-title {
+    font-family: var(--font-sans);
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: var(--theme-text);
+    margin-bottom: 0.25rem;
+  }
+
+  .empty-desc {
+    font-family: var(--font-sans);
+    font-size: 0.8rem;
+    line-height: 1.5;
+    color: var(--theme-text-muted);
+    margin-bottom: 0.8rem;
+    max-width: 48ch;
+  }
+
+  /* Filter sheet */
+  .filter-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    opacity: 0;
+    pointer-events: none;
+    z-index: 240;
+    transition: opacity var(--dur-base) var(--ease-out);
+  }
+
+  .filter-backdrop.is-open { opacity: 1; pointer-events: auto; }
+
+  .filter-sheet {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 250;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 560px;
+    max-height: 90dvh;
+    margin: 0 auto;
+    padding: 0;
+    border-radius: 22px 22px 0 0;
+    transform: translateY(105%);
+    transition: transform var(--dur-settle) var(--spring-overshoot);
+  }
+
+  .filter-sheet.is-open { transform: translateY(0); }
+
+  .filter-sheet-head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 1rem 0.6rem;
+    border-bottom: 1px solid var(--theme-hairline);
+    flex: 0 0 auto;
+  }
+
+  .filter-title {
+    font-family: var(--font-sans);
+    font-size: 1.25rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: var(--theme-text);
+  }
+
+  .filter-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--theme-hairline);
+    border-radius: 50%;
+    background: var(--theme-soft);
+    color: var(--theme-text);
+    cursor: pointer;
+  }
+
+  .filter-sheet-body {
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    padding: 0.8rem 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+  }
+
+  .filter-group { display: flex; flex-direction: column; gap: 0.35rem; }
+
+  .filter-label {
+    font-family: var(--font-sans);
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: var(--theme-text-muted);
+  }
+
+  .filter-chips { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+
+  .filter-chip {
+    min-height: 36px;
+    padding: 0.3rem 0.65rem;
+    border: 1px solid var(--theme-hairline);
+    border-radius: 999px;
+    background: transparent;
+    color: var(--theme-text-muted);
+    font-family: var(--font-sans);
+    font-size: 0.72rem;
+    font-weight: 650;
+    cursor: pointer;
+    transition: border-color var(--dur-fast), background var(--dur-fast), color var(--dur-fast);
+  }
+
+  .filter-chip:hover { border-color: color-mix(in srgb, var(--color-jade) 45%, transparent); }
+
+  .filter-chip.active {
+    background: var(--color-jade);
+    border-color: var(--color-jade);
+    color: var(--color-ink);
+  }
+
+  .filter-chip.active[data-value="all"] {
+    background: var(--theme-card-strong);
+    border-color: var(--theme-hairline);
+    color: var(--theme-text);
+  }
+
+  .filter-chip.chip-disputed.active { background: #ff8787; border-color: #ff8787; color: #2b0808; }
+
+  .filter-sheet-foot {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.7rem 1rem calc(0.8rem + env(safe-area-inset-bottom, 0px));
+    border-top: 1px solid var(--theme-hairline);
+    background: color-mix(in srgb, var(--theme-bg) 82%, transparent);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    flex: 0 0 auto;
+  }
+
+  .filter-clear {
+    min-height: 44px;
+    padding: 0.3rem 0.5rem;
+    border: 0;
+    background: transparent;
+    color: var(--theme-text-muted);
+    font-family: var(--font-sans);
+    font-size: 0.76rem;
     font-weight: 700;
-    color: var(--color-jade-text);
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: var(--radius-capsule);
-    border: 1px solid rgba(70, 217, 160, 0.25);
+    cursor: pointer;
+  }
+
+  .filter-apply { flex: 1; }
+
+  @media (min-width: 640px) {
+    .explore-controls { padding: 0.95rem; }
+    .filter-sheet { border-radius: 22px; bottom: 1.5rem; }
+    .tips-stream { gap: 1.25rem; }
+  }
+
+  @media (max-width: 380px) {
+    .explore-controls { padding: 0.65rem; }
+    .quick-row { flex-wrap: wrap; }
+    .quick-chips { width: 100%; }
   }
 </style>

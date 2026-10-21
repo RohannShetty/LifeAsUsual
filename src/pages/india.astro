@@ -1,0 +1,564 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import india from '../../data/india-context.json';
+import currency from '../../data/currency.json';
+import { resolvePath } from '../utils/paths';
+
+const chapterSlug: Record<number, string> = {
+  8: '08-law-and-property-safety',
+  9: '09-everyday-legal-red-lines',
+  11: '11-red-lines-for-developers',
+  12: '12-starting-a-business',
+  19: '19-employment-and-work-injury',
+  21: '21-travel-and-abroad-safety',
+  23: '23-which-skills-to-learn',
+  24: '24-navigating-healthcare',
+  25: '25-after-someone-dies',
+  26: '26-building-a-website-or-platform',
+  31: '31-paths-after-eighteen',
+  32: '32-studying-abroad'
+};
+
+---
+
+<BaseLayout
+  title="India Edition — Policy Crosswalk and Helplines - How To Live Better"
+  description="How the China-written advice maps to Indian health cover, pensions, work injury, food support, dowry law, legal aid and emergency numbers."
+>
+  <article class="india-page">
+    <header class="india-hero">
+      <span class="comic-sticker sticker-benefit">India edition</span>
+      <h1 class="india-title">Start with the Indian version of the rule.</h1>
+      <p class="india-lead">{india.intro}</p>
+      <div class="india-meta">
+        <span>Reviewed {india.lastReviewed}</span>
+        <span aria-hidden="true">·</span>
+        <span>{india.sources.length} official sources</span>
+        <span aria-hidden="true">·</span>
+        <span>Source text unchanged</span>
+      </div>
+    </header>
+
+    <nav class="india-jump" aria-label="India edition sections">
+      <a href="#what-changed">What changed</a>
+      <a href="#helplines">Helplines</a>
+      <a href="#crosswalk">Policy map</a>
+      <a href="#chapters">Chapters</a>
+      <a href="#sources">Sources</a>
+    </nav>
+
+    <section class="india-section" id="what-changed">
+      <p class="section-kicker">Reader's bridge</p>
+      <h2 class="india-h2">What this edition changes</h2>
+      <ul class="change-list">
+        {india.changed.map((item) => (
+          <li>{item}</li>
+        ))}
+      </ul>
+    </section>
+
+    <section class="currency-card" id="currency">
+      <p class="section-kicker">Money, honestly</p>
+      <h2 class="india-h2">{india.currency.title}</h2>
+      <p>{india.currency.body}</p>
+      <p class="currency-rate">
+        Reference rate: ¥1 ≈ ₹{currency.rate.toFixed(2)} ({currency.asOf}).
+        <a href={currency.sourceUrl} target="_blank" rel="noopener noreferrer">{currency.source}</a>.
+      </p>
+      <p class="currency-note">{india.currency.note}</p>
+    </section>
+
+    <section class="india-section" id="helplines">
+      <p class="section-kicker">In an emergency</p>
+      <h2 class="india-h2">Chinese number → Indian number</h2>
+      <p class="india-body">The book quotes mainland-China hotlines. Save the Indian numbers before you need them.</p>
+      <div class="help-grid">
+        {india.helplines.map((row) => (
+          <div class="help-row">
+            <div class="help-numbers">
+              <span class="help-cn">CN {row.china}</span>
+              <span class="help-arrow" aria-hidden="true">→</span>
+              <span class="help-in">IN {row.india}</span>
+            </div>
+            <p class="help-label">{row.label}</p>
+            <p class="help-note">{row.note}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section class="india-section" id="crosswalk">
+      <p class="section-kicker">Policy map</p>
+      <h2 class="india-h2">Where a Chinese institution has an Indian counterpart</h2>
+      <p class="india-body">Use this before acting on a chapter with Chinese procedures. Where no equivalent exists, the card says so.</p>
+
+      {india.groups.map((group, groupIndex) => (
+        <section class="policy-group" id={group.id}>
+          <div class="policy-group-head">
+            <span class="policy-group-index">{String(groupIndex + 1).padStart(2, '0')}</span>
+            <h3>{group.title}</h3>
+          </div>
+          <div class="policy-grid">
+            {group.items.map((item) => (
+              <article class="policy-card">
+                <h4>{item.china}</h4>
+                <div class="policy-india">
+                  <span class="policy-in-label">India</span>
+                  <p>{item.india}</p>
+                </div>
+                <p class="policy-note">{item.note}</p>
+                <a class="policy-source" href={item.url} target="_blank" rel="noopener noreferrer">{item.source} ↗</a>
+              </article>
+            ))}
+          </div>
+        </section>
+      ))}
+    </section>
+
+    <section class="india-section" id="chapters">
+      <p class="section-kicker">Read with care</p>
+      <h2 class="india-h2">Chapters that lean most on Chinese procedures</h2>
+      <p class="india-body">The advice may still be useful. The legal steps and institutions are the parts to translate first.</p>
+      <div class="chapter-list">
+        {india.chapters.map((row) => (
+          <a class="chapter-row" href={resolvePath('/chapters/' + (chapterSlug[row.chapter] || '') + '/')}>
+            <span class="chapter-num">Ch {row.chapter}</span>
+            <span class="chapter-copy">
+              <strong>{row.title}</strong>
+              <small>{row.why}</small>
+            </span>
+            <span class="chapter-arrow" aria-hidden="true">→</span>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <section class="india-section" id="sources">
+      <p class="section-kicker">Checked against</p>
+      <h2 class="india-h2">Official sources</h2>
+      <ul class="source-list">
+        {india.sources.map((source) => (
+          <li>
+            <a href={source.url} target="_blank" rel="noopener noreferrer">{source.label} ↗</a>
+          </li>
+        ))}
+      </ul>
+      <p class="source-note">Links point to Government of India portals, statutes or scheme pages. Rules change; check the current page before acting.</p>
+    </section>
+
+    <aside class="india-disclaimer">
+      <strong>This is orientation, not advice.</strong>
+      <p>The book's text is reproduced faithfully from the English edition. This page does not rewrite the author's advice, convert prices or replace a doctor, lawyer or official. For a decision that matters, use the current official portal and a qualified local professional.</p>
+    </aside>
+  </article>
+</BaseLayout>
+
+<style>
+  .india-page {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 0.25rem 0 4rem;
+  }
+
+  .india-hero { margin-bottom: 1.25rem; }
+
+  .india-title {
+    font-family: var(--font-sans);
+    font-size: clamp(2rem, 7vw, 3rem);
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -0.04em;
+    color: var(--theme-text);
+    margin: 0.7rem 0 0.65rem;
+    max-width: 18ch;
+  }
+
+  .india-lead {
+    max-width: 62ch;
+    font-family: var(--font-serif);
+    font-size: 1.02rem;
+    line-height: 1.6;
+    color: var(--theme-text-muted);
+  }
+
+  .india-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 0.85rem;
+    font-family: var(--font-sans);
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--theme-text-muted);
+  }
+
+  .india-jump {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    display: flex;
+    gap: 0.4rem;
+    margin: 1rem -1rem 1.5rem;
+    padding: 0.55rem 1rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+    background: color-mix(in srgb, var(--theme-bg) 88%, transparent);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-top: 1px solid var(--theme-hairline);
+    border-bottom: 1px solid var(--theme-hairline);
+  }
+
+  .india-jump::-webkit-scrollbar { display: none; }
+
+  .india-jump a {
+    flex: 0 0 auto;
+    display: inline-flex;
+    align-items: center;
+    min-height: 36px;
+    padding: 0.35rem 0.75rem;
+    border: 1px solid var(--theme-hairline);
+    border-radius: 999px;
+    background: var(--theme-card);
+    color: var(--theme-text);
+    font-family: var(--font-sans);
+    font-size: 0.74rem;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .india-jump a:hover { border-color: var(--color-jade); }
+
+  .india-section { margin: 2rem 0; }
+
+  .india-h2 {
+    font-family: var(--font-sans);
+    font-size: clamp(1.25rem, 4.4vw, 1.6rem);
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -0.025em;
+    color: var(--theme-text);
+    margin: 0.25rem 0 0.6rem;
+  }
+
+  .india-body {
+    max-width: 64ch;
+    font-family: var(--font-serif);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--theme-text-muted);
+    margin-bottom: 1rem;
+  }
+
+  .change-list {
+    display: grid;
+    gap: 0.45rem;
+    list-style: none;
+    padding: 0;
+  }
+
+  .change-list li {
+    position: relative;
+    padding-left: 1.35rem;
+    font-family: var(--font-sans);
+    font-size: 0.84rem;
+    line-height: 1.5;
+    color: var(--theme-text);
+  }
+
+  .change-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--color-jade-text);
+    font-weight: 800;
+  }
+
+  .currency-card {
+    margin: 2rem 0;
+    padding: 1rem 1.05rem;
+    border-radius: 16px;
+    border: 1px solid color-mix(in srgb, var(--color-amber) 36%, transparent);
+    background: color-mix(in srgb, var(--color-amber) 9%, var(--theme-card));
+  }
+
+  .currency-card p {
+    font-family: var(--font-serif);
+    font-size: 0.92rem;
+    line-height: 1.6;
+    color: var(--theme-text);
+  }
+
+  .currency-rate {
+    margin-top: 0.55rem;
+    font-family: var(--font-sans);
+    font-size: 0.72rem;
+    line-height: 1.45;
+    color: var(--theme-text);
+  }
+
+  .currency-rate a {
+    color: var(--color-amber-text);
+    font-weight: 700;
+    text-underline-offset: 2px;
+  }
+
+  .currency-note {
+    margin-top: 0.6rem;
+    font-family: var(--font-sans) !important;
+    font-size: 0.72rem !important;
+    color: var(--theme-text-muted) !important;
+  }
+
+  .help-grid {
+    display: grid;
+    gap: 0.5rem;
+  }
+
+  @media (min-width: 640px) {
+    .help-grid { grid-template-columns: 1fr 1fr; }
+  }
+
+  .help-row {
+    padding: 0.7rem 0.75rem;
+    border: 1px solid var(--theme-hairline);
+    border-radius: 12px;
+    background: var(--theme-card);
+  }
+
+  .help-numbers {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    font-family: var(--font-sans);
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+  }
+
+  .help-cn { color: var(--theme-text-muted); }
+  .help-arrow { color: var(--color-amber-text); }
+  .help-in { color: var(--color-jade-text); }
+
+  .help-label {
+    margin-top: 0.2rem;
+    font-family: var(--font-sans);
+    font-size: 0.74rem;
+    font-weight: 700;
+    color: var(--theme-text);
+  }
+
+  .help-note {
+    margin-top: 0.15rem;
+    font-family: var(--font-sans);
+    font-size: 0.7rem;
+    line-height: 1.4;
+    color: var(--theme-text-muted);
+  }
+
+  .policy-group { margin-top: 1.5rem; }
+
+  .policy-group-head {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    padding-bottom: 0.45rem;
+    border-bottom: 1px solid var(--theme-hairline);
+    margin-bottom: 0.7rem;
+  }
+
+  .policy-group-index {
+    font-family: var(--font-sans);
+    font-size: 0.65rem;
+    font-weight: 800;
+    color: var(--color-jade-text);
+  }
+
+  .policy-group-head h3 {
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    color: var(--theme-text);
+  }
+
+  .policy-grid { display: grid; gap: 0.6rem; }
+
+  @media (min-width: 720px) {
+    .policy-grid { grid-template-columns: 1fr 1fr; }
+  }
+
+  .policy-card {
+    display: flex;
+    flex-direction: column;
+    padding: 0.85rem 0.9rem;
+    border: 1px solid var(--theme-hairline);
+    border-radius: 14px;
+    background: var(--theme-card);
+  }
+
+  .policy-card h4 {
+    font-family: var(--font-sans);
+    font-size: 0.82rem;
+    font-weight: 800;
+    line-height: 1.35;
+    color: var(--theme-text-muted);
+    margin-bottom: 0.4rem;
+  }
+
+  .policy-india {
+    display: flex;
+    gap: 0.4rem;
+    align-items: flex-start;
+    margin-bottom: 0.4rem;
+  }
+
+  .policy-in-label {
+    flex: 0 0 auto;
+    margin-top: 2px;
+    padding: 1px 5px;
+    border-radius: 4px;
+    background: color-mix(in srgb, var(--color-jade) 18%, transparent);
+    color: var(--color-jade-text);
+    font-family: var(--font-sans);
+    font-size: 0.58rem;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  .policy-india p {
+    font-family: var(--font-sans);
+    font-size: 0.86rem;
+    font-weight: 700;
+    line-height: 1.4;
+    color: var(--theme-text);
+  }
+
+  .policy-note {
+    font-family: var(--font-sans);
+    font-size: 0.73rem;
+    line-height: 1.5;
+    color: var(--theme-text-muted);
+    margin-bottom: 0.5rem;
+  }
+
+  .policy-source {
+    margin-top: auto;
+    font-family: var(--font-sans);
+    font-size: 0.68rem;
+    font-weight: 700;
+    color: var(--color-jade-text);
+    text-decoration: none;
+  }
+
+  .policy-source:hover { text-decoration: underline; text-underline-offset: 2px; }
+
+  .chapter-list {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--theme-hairline);
+    border-radius: 14px;
+    overflow: hidden;
+    background: var(--theme-card);
+  }
+
+  .chapter-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.65rem;
+    padding: 0.7rem 0.8rem;
+    text-decoration: none;
+    color: var(--theme-text);
+    border-bottom: 1px solid var(--theme-hairline);
+  }
+
+  .chapter-row:last-child { border-bottom: 0; }
+  .chapter-row:hover { background: var(--theme-soft); }
+
+  .chapter-num {
+    flex: 0 0 auto;
+    padding: 2px 6px;
+    border-radius: 5px;
+    background: var(--theme-soft);
+    color: var(--color-jade-text);
+    font-family: var(--font-sans);
+    font-size: 0.62rem;
+    font-weight: 800;
+  }
+
+  .chapter-copy { flex: 1; display: flex; flex-direction: column; gap: 1px; }
+
+  .chapter-copy strong {
+    font-family: var(--font-sans);
+    font-size: 0.82rem;
+    font-weight: 800;
+  }
+
+  .chapter-copy small {
+    font-family: var(--font-sans);
+    font-size: 0.7rem;
+    line-height: 1.4;
+    color: var(--theme-text-muted);
+  }
+
+  .chapter-arrow { color: var(--color-jade-text); font-size: 0.9rem; }
+
+  .source-list {
+    display: grid;
+    gap: 0.35rem;
+    list-style: none;
+    padding: 0;
+  }
+
+  @media (min-width: 640px) {
+    .source-list { grid-template-columns: 1fr 1fr; }
+  }
+
+  .source-list a {
+    display: inline-block;
+    padding: 0.2rem 0;
+    font-family: var(--font-sans);
+    font-size: 0.73rem;
+    line-height: 1.4;
+    color: var(--color-jade-text);
+    text-decoration: none;
+  }
+
+  .source-list a:hover { text-decoration: underline; text-underline-offset: 2px; }
+
+  .source-note {
+    margin-top: 0.7rem;
+    font-family: var(--font-sans);
+    font-size: 0.7rem;
+    line-height: 1.45;
+    color: var(--theme-text-muted);
+  }
+
+  .india-disclaimer {
+    margin-top: 2rem;
+    padding: 0.9rem 1rem;
+    border-radius: 14px;
+    border: 1px solid var(--theme-hairline);
+    background: var(--theme-soft);
+  }
+
+  .india-disclaimer strong {
+    font-family: var(--font-sans);
+    font-size: 0.8rem;
+    color: var(--theme-text);
+  }
+
+  .india-disclaimer p {
+    margin-top: 0.25rem;
+    font-family: var(--font-sans);
+    font-size: 0.73rem;
+    line-height: 1.5;
+    color: var(--theme-text-muted);
+  }
+
+  @media (max-width: 480px) {
+    .india-jump { margin-inline: -1rem; }
+  }
+</style>

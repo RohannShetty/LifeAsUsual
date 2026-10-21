@@ -1,0 +1,213 @@
+/* Shared interface layer for the India edition.
+   Keeps new surfaces on the same semantic tokens as the four palettes. */
+
+:root {
+  --tap-min: 44px;
+  --page-gutter: clamp(1rem, 4vw, 1.5rem);
+  --content-max: 760px;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+body {
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--color-jade);
+  color: var(--color-ink);
+}
+
+a, button, input, select, textarea {
+  touch-action: manipulation;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-jade);
+  outline-offset: 3px;
+}
+
+/* Compact contextual banner used on chapters, guides and the About page. */
+.india-notice {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  padding: 0.6rem 0.7rem 0.6rem 0.75rem;
+  margin: 0 0 1.15rem;
+  border: 1px solid color-mix(in srgb, var(--color-amber) 34%, transparent);
+  background: color-mix(in srgb, var(--color-amber) 11%, var(--theme-card));
+  border-radius: 12px;
+  color: var(--theme-text);
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  line-height: 1.45;
+}
+
+.india-notice .notice-badge {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 30px;
+  height: 20px;
+  padding: 0 5px;
+  margin-top: 1px;
+  border-radius: 4px;
+  background: var(--color-amber);
+  color: var(--color-ink);
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+.india-notice p {
+  flex: 1;
+  margin: 0;
+}
+
+.india-notice strong { font-weight: 800; }
+
+.india-notice a {
+  color: var(--color-amber-text);
+  font-weight: 700;
+  text-underline-offset: 2px;
+}
+
+.india-notice .notice-dismiss {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  margin: -4px -4px -4px 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--theme-text-muted);
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.india-notice .notice-dismiss:hover {
+  background: var(--theme-soft);
+  color: var(--theme-text);
+}
+
+/* Section furniture */
+.section-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--color-jade-text);
+}
+
+.section-title-lg {
+  font-family: var(--font-sans);
+  font-size: clamp(1.35rem, 4.4vw, 1.7rem);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--theme-text);
+}
+
+/* Buttons */
+.ui-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  min-height: var(--tap-min);
+  padding: 0.62rem 1.05rem;
+  border-radius: var(--radius-capsule);
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-decoration: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: transform var(--dur-fast) var(--ease-out), background var(--dur-fast), border-color var(--dur-fast);
+}
+
+.ui-btn:active { transform: scale(0.97); }
+
+.ui-btn-primary {
+  background: var(--color-jade);
+  border-color: var(--color-ink);
+  color: var(--color-ink);
+  box-shadow: 0 4px 14px var(--theme-glow);
+}
+
+.ui-btn-primary:hover { background: color-mix(in srgb, var(--color-jade) 86%, white); }
+
+.ui-btn-secondary {
+  background: var(--theme-card);
+  border-color: var(--theme-hairline);
+  color: var(--theme-text);
+}
+
+.ui-btn-secondary:hover {
+  border-color: color-mix(in srgb, var(--color-jade) 45%, transparent);
+}
+
+.ui-btn-ghost {
+  background: transparent;
+  color: var(--color-jade-text);
+  padding-inline: 0.4rem;
+}
+
+/* Utility */
+.mobile-only { display: inline-flex; }
+.desktop-only { display: none; }
+@media (min-width: 1024px) {
+  .mobile-only { display: none; }
+  .desktop-only { display: inline-flex; }
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Anchored tips should not hide below the sticky chapter header. */
+.tip-card { scroll-margin-top: 92px; }
+
+/* Warm-paper glass adjustment for the Ivory palette. */
+[data-theme="light"][data-palette="ivory"] .liquid-glass {
+  background: color-mix(in srgb, #fffaf1 62%, transparent);
+  border-color: rgba(32, 26, 19, 0.1);
+  box-shadow: 0 12px 30px rgba(65, 47, 26, 0.1), inset 0 1px 1px rgba(255, 255, 255, 0.85);
+}
+
+/* India edition: indicative INR reference beside the author's RMB figure. */
+.inr-ref {
+  display: inline;
+  white-space: nowrap;
+  margin-left: 2px;
+  padding: 0 3px;
+  border-radius: 4px;
+  background: color-mix(in srgb, var(--color-jade) 12%, transparent);
+  color: var(--color-jade-text);
+  font-family: var(--font-sans);
+  font-size: 0.78em;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+[data-show-inr="false"] .inr-ref { display: none; }

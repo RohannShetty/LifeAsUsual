@@ -3,6 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Character from '../cast/Character.astro';
 import Bubble from '../cast/Bubble.astro';
 import { resolvePath } from '../utils/paths';
+import IndiaNotice from '../components/IndiaNotice.astro';
 ---
 
 <BaseLayout 
@@ -11,7 +12,7 @@ import { resolvePath } from '../utils/paths';
 >
   <article class="prose-container">
     <header class="page-header">
-      <div class="start-cast-welcome" aria-hidden="true">
+      <div class="start-cast-welcome" data-cast-note aria-hidden="true">
         <Character character="plus" mood="happy" size={56} />
         <Bubble speaker="Plus" text="Take your time. Even one pick counts." tailDirection="bottom-left" />
       </div>
@@ -20,6 +21,7 @@ import { resolvePath } from '../utils/paths';
       <p class="page-lead">
         This book is a menu of options, not an onerous task list. Adopting even one or two tips provides immediate, compounding benefits.
       </p>
+      <IndiaNotice id="india-disclaimer" />
     </header>
 
     <section class="info-card liquid-glass">
@@ -59,7 +61,8 @@ import { resolvePath } from '../utils/paths';
     </section>
 
     <div class="cta-row">
-      <a href={resolvePath('/chapters/')} class="action-btn-primary">Explore All Chapters →</a>
+      <a href={resolvePath('/chapters/')} class="action-btn-primary">Explore all chapters →</a>
+      <a href={resolvePath('/india/')} class="action-btn-secondary">India policy crosswalk</a>
     </div>
   </article>
 </BaseLayout>
@@ -77,16 +80,27 @@ import { resolvePath } from '../utils/paths';
   .start-cast-welcome {
     display: flex;
     align-items: center;
-    gap: 1.25rem;
-    margin-bottom: 1.25rem;
-    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-bottom: 1rem;
+    max-width: 360px;
   }
 
+  .start-cast-welcome :global(.bubble-content) {
+    padding: 0.5rem 0.7rem 0.55rem;
+    box-shadow: 2px 2px 0 var(--color-ink);
+  }
+
+  .start-cast-welcome :global(.bubble-header) { margin-bottom: 0.12rem; }
+  .start-cast-welcome :global(.bubble-text) { font-size: 0.8rem; }
+
   .page-title {
-    font-family: var(--font-comic);
-    font-size: 2.4rem;
+    font-family: var(--font-sans);
+    font-weight: 800;
+    font-size: clamp(1.9rem, 7vw, 2.5rem);
+    line-height: 1.06;
+    letter-spacing: -0.04em;
     color: var(--theme-text);
-    margin: 0.75rem 0 0.5rem;
+    margin: 0.7rem 0 0.5rem;
   }
 
   .page-lead {
@@ -120,19 +134,32 @@ import { resolvePath } from '../utils/paths';
   .grade-c { color: var(--color-steel-text); }
 
   .cta-row {
-    margin-top: 2rem;
+    margin-top: 1.5rem;
     display: flex;
-    justify-content: center;
+    gap: 0.6rem;
+    flex-wrap: wrap;
   }
 
-  .action-btn-primary {
+  .action-btn-primary,
+  .action-btn-secondary {
     display: inline-flex;
-    padding: 10px 24px;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 10px 20px;
     background: var(--color-jade);
     color: var(--color-ink);
     border-radius: var(--radius-capsule);
     font-family: var(--font-sans);
+    font-size: 0.86rem;
     font-weight: 700;
     text-decoration: none;
+    border-radius: var(--radius-capsule);
+  }
+
+  .action-btn-secondary {
+    background: var(--theme-card);
+    border: 1px solid var(--theme-hairline);
+    color: var(--theme-text);
   }
 </style>

@@ -6,6 +6,42 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ---
 
+## [2.3.0] - 2026-10-21
+
+India edition: an India policy crosswalk, a dated INR reference, a per-tip India application layer, and a mobile-first redesign of the reading experience.
+
+### Added
+- **India edition page** (`/india/`): 20 policy mappings, 10 China-to-India helpline mappings, 12 China-heavy chapters and 18 official Indian sources.
+- **Dated INR reference**: every RMB amount can show an indicative `≈ ₹` badge at ¥1 ≈ ₹14.21 (21 October 2026), with a Reading Settings toggle and a clear non-transaction-rate disclaimer.
+- **Per-tip India application**: all 765 tips carry a collapsed 34-chapter India note; tips naming a Chinese rule or hotline get a `China-specific` badge.
+- **India hotline notes**: 120/110/119/12308/12315/12348/12356/96110 are mapped to Indian equivalents inside the relevant cards.
+- **Rewrite worklist**: `reports/india-rewrite-worklist.csv` classifies 129 high-risk claims, 451 context-only tips and 185 universal tips.
+- **Guided finder**: a three-question flow that links to a pre-filtered Explore result.
+- **Four theme palettes**: Midnight Jade and Monsoon Ink (dark), Pearl and Ivory Clove (light).
+- **India notice component** and a new favicon.
+
+### Changed
+- **Mobile home**: compact hero, one cast note, daily tip above the fold, compact progress strip, finder and map teaser; page height roughly halved.
+- **Explore**: nine filter rows collapsed into a filter sheet with quick chips, active-filter count and a live result footer.
+- **Chapter and tip cards**: tighter reading column, chip-based metadata, slimmer source notice and an auto-hiding bottom nav.
+- **Navigation**: four tabs plus a settings gear; desktop rail gains an India Edition entry.
+- **Settings**: palette grid, INR toggle and a cookie-free reading-memory note.
+
+### Fixed
+- **Light-theme scoped selectors**: Astro had scoped `[data-theme="light"]` ancestors to the component, so light ring tracks and light card borders never applied. Global ancestors restore the intended light theme.
+- **Cast orphans**: dismissing a speech bubble now removes the whole note row.
+- **India chapter links**: removed a doubled chapter-number prefix.
+- **Favicon**: added `public/favicon.svg`; all internal links now resolve.
+
+### Verified
+- `npm run build`: 52 pages.
+- `npm run verify`: 34/34 chapters, 765/765 tips, 0 CJK.
+- `npm run check`: 0 errors.
+- 0 broken internal links across 52 pages.
+- Chrome/OpenCLI: all four palettes, INR toggle, guide finder, filters, read-state persistence and nav auto-hide.
+
+---
+
 ## [2.2.1] - 2026-10-20
 
 Accessibility and design-system repair following a full technical audit of the 2.2.0 redesign.
