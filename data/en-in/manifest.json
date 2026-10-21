@@ -1,0 +1,454 @@
+{
+  "edition": "india",
+  "generatedAt": "2026-10-21",
+  "totalChapters": 34,
+  "totalTips": 765,
+  "chapters": {
+    "1": {
+      "status": "draft",
+      "tier": "A",
+      "tips": 48,
+      "verifier": null,
+      "verifiedAt": null,
+      "sourceCount": 0,
+      "humanReview": "pending",
+      "openIssues": [
+        "Independent verification pending"
+      ],
+      "bannedTerms": 0
+    },
+    "2": {
+      "status": "draft",
+      "tier": "B",
+      "tips": 47,
+      "verifier": null,
+      "verifiedAt": null,
+      "sourceCount": 0,
+      "humanReview": "pending",
+      "openIssues": [
+        "Independent verification pending"
+      ],
+      "bannedTerms": 0
+    },
+    "3": {
+      "status": "draft",
+      "tier": "B",
+      "tips": 27,
+      "verifier": null,
+      "verifiedAt": null,
+      "sourceCount": 0,
+      "humanReview": "pending",
+      "openIssues": [
+        "Independent verification pending"
+      ],
+      "bannedTerms": 0
+    },
+    "4": {
+      "status": "draft",
+      "tier": "B",
+      "tips": 18,
+      "verifier": null,
+      "verifiedAt": null,
+      "sourceCount": 0,
+      "humanReview": "pending",
+      "openIssues": [
+        "Independent verification pending"
+      ],
+      "bannedTerms": 0
+    },
+    "5": {
+      "status": "draft",
+      "tier": "A",
+      "tips": 50,
+      "verifier": null,
+      "verifiedAt": null,
+      "sourceCount": 0,
+      "humanReview": "pending",
+      "openIssues": [
+        "Independent verification pending"
+      ],
+      "bannedTerms": 0
+    },
+    "6": {
+      "status": "draft",
+      "tier": "B",
+      "tips": 35,
+      "verifier": null,
+      "verifiedAt": null,
+      "sourceCount": 0,
+      "humanReview": "pending",
+      "openIssues": [
+        "Independent verification pending"
+      ],
+      "bannedTerms": 0
+    },
+    "7": {
+      "status": "draft",
+      "tier": "A",
+      "tips": 23,
+      "verifier": null,
+      "verifiedAt": null,
+      "sourceCount": 44,
+      "humanReview": "pending",
+      "openIssues": [
+        "Independent verification pending",
+        "Some official portals returned 403 or DNS failure on 21 Oct 2026",
+        "HCES 2022-23 percentages, NAPS cap and PED cap need a confirming fetch",
+        "Tip 7-14 relies on non-Indian evidence and is flagged"
+      ],
+      "bannedTerms": 0
+    },
+    "8": {
+      "status": "draft",
+      "tier": "A",
+      "tips": 46,
+      "verifier": null,
+      "verifiedAt": null,
+      "sourceCount": 0,
+      "humanReview": "pending",
+      "openIssues": [
+        "Independent verification pending"
+      ],
+      "bannedTerms": 0
+    },
+    "9": {
+      "status": "draft",
+      "tier": "A",
+      "tips": 29,
+      "verifier": null,
+      "verifiedAt": null,
+      "sourceCount": 0,
+      "humanReview": "pending",
+      "openIssues": [
+        "Independent verification pending"
+      ],
+      "bannedTerms": 0
+    },
+    "10": {
+      "status": "draft",
+      "tier": "B",
+      "tips": 23,
+      "verifier": null,
+      "verifiedAt": null,
+      "sourceCount": 0,
+      "humanReview": "pending",
+      "openIssues": [
+        "Independent verification pending"
+      ],
+      "bannedTerms": 0
+    },
+    "11": {
+      "status": "draft",
+      "tier": "B",
+      "tips": 21,
+      "verifier": null,
+      "verifiedAt": null,
+      "sourceCount": 0,
+      "humanReview": "pending",
+      "openIssues": [
+        "Independent verification pending"
+      ],
+      "bannedTerms": 0
+    },
+    "12": {
+      "status": "draft",
+      "tier": "A",
+      "tips": 28,
+      "verifier": null,
+      "verifiedAt": null,
+      "sourceCount": 0,
+      "humanReview": "pending",
+      "openIssues": [
+        "Independent verification pending"
+      ],
+      "bannedTerms": 0
+    },
+    "13": {
+      "status": "draft",
+      "tier": "A",
+      "tips": 48,
+      "verifier": null,
+      "verifiedAt": null,
+      "sourceCount": 0,
+      "humanReview": "pending",
+      "openIssues": [
+        "Independent verification pending"
+      ],
+      "bannedTerms": 0
+    },
+    "14": {
+      "status": "draft",
+      "tier": "A",
+      "tips": 12,
+      "verifier": null,
+      "verifiedAt": null,
+      "sourceCount": 0,
+      "humanReview": "pending",
+      "openIssues": [
+        "Independent verification pending"
+      ],
+      "bannedTerms": 0
+    },
+    "15": {
+      "status": "draft",
+      "tier": "A",
+      "tips": 18,
+      "verifier": null,
+      "verifiedAt": null,
+      "sourceCount": 0,
+      "humanReview": "pending",
+      "openIssues": [
+        "Independent verification pending"
+      ],
+      "bannedTerms": 0
+    },
+    "16": {
+      "status": "draft",
+      "tier": "A",
+      "tips": 14,
+      "verifier": null,
+      "verifiedAt": null,
+      "sourceCount": 0,
+      "humanReview": "pending",
+      "openIssues": [
+        "Independent verification pending"
+      ],
+      "bannedTerms": 0
+    },
+    "17": {
+      "status": "draft",
+      "tier": "A",
+      "tips": 13,
+      "verifier": null,
+      "verifiedAt": null,
+      "sourceCount": 0,
+      "humanReview": "pending",
+      "openIssues": [
+        "Independent verification pending"
+      ],
+      "bannedTerms": 0
+    },
+    "18": {
+      "status": "draft",
+      "tier": "B",
+      "tips": 7,
+      "verifier": null,
+      "verifiedAt": null,
+      "sourceCount": 0,
+      "humanReview": "pending",
+      "openIssues": [
+        "Independent verification pending"
+      ],
+      "bannedTerms": 0
+    },
+    "19": {
+      "status": "draft",
+      "tier": "A",
+      "tips": 24,
+      "verifier": null,
+      "verifiedAt": null,
+      "sourceCount": 56,
+      "humanReview": "pending",
+      "openIssues": [
+        "Re-verification pending after statutory fix",
+        "Tier A legal review pending"
+      ],
+      "bannedTerms": 0
+    },
+    "20": {
+      "status": "draft",
+      "tier": "B",
+      "tips": 17,
+      "verifier": null,
+      "verifiedAt": null,
+      "sourceCount": 0,
+      "humanReview": "pending",
+      "openIssues": [
+        "Independent verification pending"
+      ],
+      "bannedTerms": 0
+    },
+    "21": {
+      "status": "draft",
+      "tier": "B",
+      "tips": 13,
+      "verifier": null,
+      "verifiedAt": null,
+      "sourceCount": 0,
+      "humanReview": "pending",
+      "openIssues": [
+        "Independent verification pending"
+      ],
+      "bannedTerms": 0
+    },
+    "22": {
+      "status": "draft",
+      "tier": "B",
+      "tips": 12,
+      "verifier": null,
+      "verifiedAt": null,
+      "sourceCount": 0,
+      "humanReview": "pending",
+      "openIssues": [
+        "Independent verification pending"
+      ],
+      "bannedTerms": 0
+    },
+    "23": {
+      "status": "draft",
+      "tier": "A",
+      "tips": 25,
+      "verifier": null,
+      "verifiedAt": null,
+      "sourceCount": 0,
+      "humanReview": "pending",
+      "openIssues": [
+        "Independent verification pending"
+      ],
+      "bannedTerms": 0
+    },
+    "24": {
+      "status": "draft",
+      "tier": "A",
+      "tips": 15,
+      "verifier": null,
+      "verifiedAt": null,
+      "sourceCount": 0,
+      "humanReview": "pending",
+      "openIssues": [
+        "Independent verification pending"
+      ],
+      "bannedTerms": 0
+    },
+    "25": {
+      "status": "draft",
+      "tier": "A",
+      "tips": 12,
+      "verifier": null,
+      "verifiedAt": null,
+      "sourceCount": 0,
+      "humanReview": "pending",
+      "openIssues": [
+        "Independent verification pending"
+      ],
+      "bannedTerms": 0
+    },
+    "26": {
+      "status": "draft",
+      "tier": "B",
+      "tips": 13,
+      "verifier": null,
+      "verifiedAt": null,
+      "sourceCount": 0,
+      "humanReview": "pending",
+      "openIssues": [
+        "Independent verification pending"
+      ],
+      "bannedTerms": 0
+    },
+    "27": {
+      "status": "draft",
+      "tier": "A",
+      "tips": 20,
+      "verifier": null,
+      "verifiedAt": null,
+      "sourceCount": 0,
+      "humanReview": "pending",
+      "openIssues": [
+        "Independent verification pending"
+      ],
+      "bannedTerms": 0
+    },
+    "28": {
+      "status": "draft",
+      "tier": "B",
+      "tips": 10,
+      "verifier": null,
+      "verifiedAt": null,
+      "sourceCount": 0,
+      "humanReview": "pending",
+      "openIssues": [
+        "Independent verification pending"
+      ],
+      "bannedTerms": 0
+    },
+    "29": {
+      "status": "draft",
+      "tier": "A",
+      "tips": 14,
+      "verifier": null,
+      "verifiedAt": null,
+      "sourceCount": 0,
+      "humanReview": "pending",
+      "openIssues": [
+        "Independent verification pending"
+      ],
+      "bannedTerms": 0
+    },
+    "30": {
+      "status": "draft",
+      "tier": "B",
+      "tips": 21,
+      "verifier": null,
+      "verifiedAt": null,
+      "sourceCount": 0,
+      "humanReview": "pending",
+      "openIssues": [
+        "Independent verification pending"
+      ],
+      "bannedTerms": 0
+    },
+    "31": {
+      "status": "draft",
+      "tier": "A",
+      "tips": 17,
+      "verifier": null,
+      "verifiedAt": null,
+      "sourceCount": 0,
+      "humanReview": "pending",
+      "openIssues": [
+        "Independent verification pending"
+      ],
+      "bannedTerms": 0
+    },
+    "32": {
+      "status": "draft",
+      "tier": "B",
+      "tips": 12,
+      "verifier": null,
+      "verifiedAt": null,
+      "sourceCount": 0,
+      "humanReview": "pending",
+      "openIssues": [
+        "Independent verification pending"
+      ],
+      "bannedTerms": 0
+    },
+    "33": {
+      "status": "draft",
+      "tier": "A",
+      "tips": 21,
+      "verifier": null,
+      "verifiedAt": null,
+      "sourceCount": 0,
+      "humanReview": "pending",
+      "openIssues": [
+        "Independent verification pending"
+      ],
+      "bannedTerms": 0
+    },
+    "34": {
+      "status": "draft",
+      "tier": "B",
+      "tips": 12,
+      "verifier": null,
+      "verifiedAt": null,
+      "sourceCount": 0,
+      "humanReview": "pending",
+      "openIssues": [
+        "Independent verification pending"
+      ],
+      "bannedTerms": 0
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "tips": {
+    "18-1": {
+      "title": "Start with the schemes the child is actually entitled to — India has no universal child benefit",
+      "inPlainWords": "India does not pay a universal per-child cash benefit. The support is a patchwork: PM-JAY health cover for an eligible household, ICDS anganwadi services, PM POSHAN meals at school, the state maternity benefit, and some state child-benefit schemes. Check the eligibility and the local office. A private 'benefit agent' is not needed.",
+      "benefit": "Ayushman Bharat PM-JAY covers hospitalisation for eligible households. The Integrated Child Development Services provides supplementary nutrition and pre-school at an anganwadi. PM POSHAN provides a school meal. The Pradhan Mantri Matru Vandana Yojana provides a maternity benefit for an eligible woman. State governments run additional schemes, so the district social welfare office is the place to ask.",
+      "cost": "The central schemes are free. A state scheme may have an income limit.",
+      "caveats": "Eligibility is based on the SECC and state lists, not on a self-declaration. A scheme can change with the state government. Do not pay an agent to 'apply' for a free scheme.",
+      "sources": "National Health Authority, PM-JAY. <https://nha.gov.in/>; Ministry of Women and Child Development, ICDS. <https://wcd.gov.in/>; Ministry of Education, PM POSHAN. <https://www.education.gov.in/>; Ministry of Rural Development. <https://rural.nic.in/>"
+    },
+    "18-5": {
+      "caveats": "Break the cost into three periods: ages 0–3 (delivery, immunisation, childcare), the school years (fees, books, transport, PM POSHAN covers a midday meal at a government school), and after 18 (college or training, where a scholarship or an education loan may apply). Add the cost of health cover; PM-JAY covers an eligible household. A private school and a government school differ by an order of magnitude, so compare the actual fee structure, not an average."
+    }
+  }
+}

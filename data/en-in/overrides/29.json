@@ -1,0 +1,167 @@
+{
+  "title": "After a Major Blow",
+  "tips": {
+    "29-1": {
+      "title": "After a loved one passes, don’t stay alone for the first few days. Those with heart disease, high blood pressure, or diabetes should keep taking their medication. If you feel pressure or pain in the chest, call 112 right away.",
+      "inPlainWords": [
+        [
+          "call 120 immediately",
+          "call 112 immediately"
+        ]
+      ],
+      "sources": [
+        [
+          "Mostofsky E, et al. (2012)",
+          "Ministry of Home Affairs, Emergency Response Support System (112). <https://www.mha.gov.in/>; Mostofsky E, et al. (2012)"
+        ]
+      ]
+    },
+    "29-3": {
+      "title": "After losing a job, set a regular sleep schedule, keep health cover active, and plan job searches methodically — don’t just stay at home all day.",
+      "inPlainWords": [
+        [
+          "Registering as unemployed and claiming benefits also ensures that employee medical insurance stays active (see Section 7).",
+          "Registering with the state employment exchange and keeping ESIC or your state health cover active protects you while you look for work (see Section 7)."
+        ]
+      ],
+      "caveats": [
+        [
+          "how to apply, and how to maintain social insurance coverage are provided in Section 7",
+          "how to apply, and how to keep ESIC or state health cover active are provided in Section 7"
+        ]
+      ],
+      "sources": [
+        [
+          "Roelfs DJ, et al. (2011)",
+          "Ministry of Labour and Employment. <https://labour.gov.in/>; Roelfs DJ, et al. (2011)"
+        ]
+      ]
+    },
+    "29-4": {
+      "cost": [
+        [
+          "Calling 12356 is free of charge.",
+          "Calling Tele-MANAS on 14416 is free of charge."
+        ]
+      ],
+      "sources": [
+        [
+          "Erlangsen A, et al. (2017)",
+          "Tele-MANAS, Ministry of Health and Family Welfare. <https://telemanas.mohfw.gov.in/>; Erlangsen A, et al. (2017)"
+        ]
+      ]
+    },
+    "29-5": {},
+    "29-6": {
+      "inPlainWords": [
+        [
+          "inform the residents’ committee that you live alone so they can add you to their outreach list",
+          "tell your residents’ welfare association or ward office that you live alone so they can add you to a check-in list"
+        ]
+      ],
+      "benefit": "A total of 44,573 outpatients with a history or risk of atherosclerotic thrombosis were enrolled in the international REACH study between December 2003 and December 2004; they were followed for four years. Of these, 8,594 participants (19%) lived alone. Over the four‑year period, the overall mortality rate for solo dwellers was 14.1%, compared with 11.1% for those living with others; cardiovascular deaths occurred in 8.6% versus 6.8% respectively. Both figures yielded log‑rank P‑values below 0.01, indicating the difference is unlikely to be coincidental. The magnitude of this effect varied by age: among people aged 45–65, solo living raised mortality from 5.7% to 7.7%; after adjusting for other factors, the hazard ratio was 1.24 (95% CI 1.01–1.51). For ages 66–80 the HR was 1.12 (1.01–1.26). In contrast, for those over 80 the rate fell to 24.6% versus 28.4%, giving an HR of 0.92 (0.79–1.06). India has no single statutory visiting scheme for people who live alone. In practice, register with your ward office, residents’ welfare association, or the local ASHA and ANM workers, and ask what home visits or check-in calls exist. Elderline (14567) is the national helpline for older people under the Maintenance and Welfare of Parents and Senior Citizens Act, 2007; it can advise on local support and escalate a welfare concern.",
+      "cost": [
+        [
+          "tell a neighbor or a member of the residents’ committee",
+          "tell a neighbour or your ward office"
+        ]
+      ],
+      "caveats": [
+        [
+          "Second, approach the residents’ committee",
+          "available locally.",
+          "Second, ask your ward office or residents’ welfare association to add you to any check-in list, and ask the local ASHA worker what home visits or free safety devices are available."
+        ],
+        [
+          "calling the 12356 helpline",
+          "calling Tele-MANAS on 14416"
+        ]
+      ],
+      "sources": "Udell JA, et al. (2012). Living alone and cardiovascular risk in outpatients at risk of or with atherothrombosis. Archives of Internal Medicine. <https://doi.org/10.1001/archinternmed.2011.1636>; Elderline, Ministry of Social Justice and Empowerment. <https://elderline.gov.in/>; Ministry of Social Justice and Empowerment. <https://socialjustice.gov.in/>"
+    },
+    "29-10": {
+      "title": "Don’t drop health cover or turn to alcohol after separating or divorcing",
+      "inPlainWords": [
+        [
+          "maintaining yibao and regular health check‑ups",
+          "keeping health cover (ESIC, PM-JAY or a state scheme) and regular health check‑ups"
+        ]
+      ],
+      "cost": [
+        [
+          "Simply keep your yibao active and quit drinking.",
+          "Simply keep your health cover active and quit drinking."
+        ]
+      ],
+      "caveats": [
+        [
+          "Issues related to property, debts, and betrothal gifts at the time of divorce are covered in Sections 8 and 10",
+          "Property, maintenance and dowry-related issues at the time of divorce are covered in Sections 8 and 10"
+        ]
+      ],
+      "sources": [
+        [
+          "Sbarra DA, et al. (2011)",
+          "Ministry of Women and Child Development. <https://wcd.gov.in/>; Sbarra DA, et al. (2011)"
+        ]
+      ]
+    },
+    "29-11": {
+      "title": "Call Tele-MANAS on 14416 for mental-health support; for children, call Childline on 1098; for medical care, book a psychiatry or clinical psychology appointment",
+      "inPlainWords": "If you need someone to talk to, dial 14416 — Tele-MANAS is the national tele-mental-health helpline, and the call is free. Children and teenagers can call Childline on 1098. If you need professional medical care, book an appointment at a psychiatry, psychology, or clinical psychology department in a government hospital or medical college. ASHA workers and community health workers can also help you find the district mental-health team.",
+      "benefit": "Tele-MANAS is the national tele-mental-health programme of the Ministry of Health and Family Welfare, launched in October 2022. It runs a toll-free national helpline on 14416 and state cells that answer calls and refer people to district services. The District Mental Health Programme places mental-health services in district hospitals, but staffing and hours vary by state. Childline (1098) is the national helpline for children in difficulty. Private counselling is not a substitute for diagnosis and prescribing by a qualified psychiatrist.",
+      "cost": "No cost involved. 14416 and 1098 are free to call. A government hospital psychiatry outpatient visit is charged at the standard outpatient rate or is free under a state scheme.",
+      "caveats": "Coverage and opening hours vary by state, so keep trying or use the nearest government hospital if the line is busy. A psychologist can offer talking therapy; only a qualified psychiatrist can diagnose and prescribe medicine. Check that any private practitioner is registered with the state medical council or the Rehabilitation Council of India, and treat hourly-fee “healing” or “spiritual counselling” services outside that framework with caution.",
+      "sources": "Tele-MANAS, Ministry of Health and Family Welfare. <https://telemanas.mohfw.gov.in/>; Ministry of Health and Family Welfare, District Mental Health Programme. <https://mohfw.gov.in/>; Childline India, Ministry of Women and Child Development. <https://wcd.gov.in/>"
+    },
+    "29-12": {
+      "benefit": [
+        [
+          "tens of thousands of yuan up to the value of a house",
+          "tens of thousands of rupees up to the value of a house"
+        ],
+        [
+          "Official documents also list “family tragedy, job loss, or dropping out of school” as risk factors for psychological distress that communities should monitor — meaning this period is already recognized as one where outside support is needed.",
+          "India’s National Mental Health Policy and the District Mental Health Programme recognise bereavement, job loss and family crisis as reasons to seek support, but there is no single statutory three-month rule."
+        ]
+      ],
+      "caveats": [
+        [
+          "call 12356",
+          "call 14416"
+        ],
+        [
+          "withdrawing your housing provident fund balance, claiming social insurance benefits, and receiving compensation for a work‑related death",
+          "withdrawing your EPF balance, claiming ESIC or insurance benefits, and receiving compensation for a work‑related death"
+        ]
+      ],
+      "sources": [
+        [
+          "National Health Commission of China (NHC) and other 25 departments (2026). Implementation plan for improving the social psychological service system and crisis intervention mechanism (National Health Medical Administration [2026] No. 8). <https://www.gov.cn/zhengce/zhengceku/202604/content_7065035.htm>",
+          "Ministry of Health and Family Welfare, National Mental Health Programme. <https://mohfw.gov.in/>; Tele-MANAS. <https://telemanas.mohfw.gov.in/>"
+        ]
+      ]
+    },
+    "29-13": {
+      "title": "Don’t treat death as a way to settle debts: insurance, work-injury cover and your estate do not work that way",
+      "inPlainWords": "A life-insurance policy can refuse or reduce a death benefit if the insured dies by suicide within the exclusion period written into the policy, and the policy may return only its surrender value. A death by suicide is not accepted as an employment injury under ESIC, so dependants’ benefit is not paid on that basis. Debts are settled from the estate before heirs receive anything. Family members also carry the health risks described in item 4.",
+      "benefit": "In India, life insurance is governed by the Insurance Act, 1938 and IRDAI regulations. Section 45 of the Act bars an insurer from calling a policy in question after three years on the ground of misstatement or suppression of fact, but a suicide exclusion in the policy wording can still apply during the stated initial period, so read the policy. Under ESIC, an employment injury means an accident arising out of and in the course of employment; self-harm is not an employment injury, so dependants’ benefit is not payable on that basis. On death, the executor or legal heirs settle the deceased’s debts from the estate; an heir is liable only to the extent of the assets inherited and may refuse the inheritance. Exact rights depend on the will, nominations and the personal law that applies.",
+      "caveats": "This entry covers money only. Other entries in this section and Section 1 aim to prevent such situations. The suicide exclusion period and the three-year limit in section 45 are separate rules; do not confuse them. Health risks for family members are described in item 4. For help with suicidal thoughts, see Sections 1.25 and 1.32; for life after a suicide attempt, see Section 1.33. The work-injury benefits are described in Section 19.15, and the estate procedures in Section 25.9.",
+      "sources": "Insurance Act, 1938 (section 45). <https://www.indiacode.nic.in/>; Insurance Regulatory and Development Authority of India. <https://irdai.gov.in/>; Employees’ State Insurance Corporation. <https://esic.gov.in/>; Code on Social Security, 2020. <https://labour.gov.in/labour-codes>; Indian Succession Act, 1925. <https://www.indiacode.nic.in/>"
+    },
+    "29-14": {
+      "benefit": [
+        [
+          "According to the National Health Commission Specifications for the Diagnosis and Treatment of Psychiatric Disorders (2020 Edition), approximately 8% of individuals exposed to psychological trauma develop PTSD.",
+          "International estimates put the lifetime prevalence of PTSD at about 3.9% of the general population, and about 8% of people exposed to a traumatic event develop PTSD. The ICD-11 and DSM-5 criteria share the same core clusters described here."
+        ]
+      ],
+      "sources": [
+        [
+          "National Health Commission General Office (2020). Notice on Issuing Specifications for the Diagnosis and Treatment of Psychiatric Disorders (2020 Edition), Chapter 8 Trauma and Stressor-Related Disorders. <https://www.nhc.gov.cn/yzygj/c100068/202012/b4305ace9e14440792eb76d29602c88a.shtml>",
+          "World Health Organization, post-traumatic stress disorder fact sheet. <https://www.who.int/news-room/fact-sheets/detail/post-traumatic-stress-disorder>"
+        ]
+      ]
+    }
+  }
+}

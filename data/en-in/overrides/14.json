@@ -1,0 +1,20 @@
+{
+  "tips": {
+    "14-5": {
+      "title": "If your card is used fraudulently, report and freeze it first; your liability depends on how fast you report",
+      "inPlainWords": "The RBI's 2017 circular on unauthorised electronic transactions limits your liability if you report at once: zero liability where the fraud is due to a third party and you report within three working days. The bank must credit the amount within 10 working days. Report to the bank and on 1930, and keep the acknowledgement.",
+      "benefit": "The RBI circular sets a zero-liability rule for a third-party breach reported within three working days, and limited liability for a delay. The bank must resolve the complaint within 90 days. The IT Act and the BNS cover the fraud. A chargeback is separate from the bank's liability. A bank cannot make you pay for its own security failure.",
+      "cost": "No cost. Report on the bank's hotline and in writing, then on 1930.",
+      "caveats": "A delay can shift part of the liability to you. Do not share the OTP or PIN, even with a caller who claims to be from the bank. Keep the card blocked until the investigation ends.",
+      "sources": "Reserve Bank of India, customer protection circular on unauthorised electronic transactions. <https://www.rbi.org.in/>; National Cyber Crime Reporting Portal. <https://cybercrime.gov.in/>; Information Technology Act, 2000. <https://www.indiacode.nic.in/>"
+    },
+    "14-11": {
+      "title": "Audit the SIM cards and bank accounts linked to your identity once a year",
+      "inPlainWords": "India limits the number of SIM cards a person may hold. Use the Sanchar Saathi or TAFCOP portal to see the mobile connections in your name and report an unknown one. Check your credit report for a loan or card you did not apply for, and close an unused account. An unknown SIM can be used for OTP fraud.",
+      "benefit": "The Department of Telecommunications' TAFCOP lets you check the mobile connections issued against your ID and report the unauthorised ones. The RBI's KYC rules require the bank to verify the customer. A credit bureau report shows a loan or card in your name. The Aadhaar Act restricts the use of Aadhaar. The BNS and the IT Act cover identity theft.",
+      "cost": "No cost. The TAFCOP check is free, and the annual credit report is free.",
+      "caveats": "A family member may have used your ID for a SIM; ask before reporting. A closed account can still show for a month. Do not share an OTP with anyone who offers to 'check' your SIM.",
+      "sources": "Department of Telecommunications, Sanchar Saathi. <https://sancharsaathi.gov.in/>; Reserve Bank of India, KYC. <https://www.rbi.org.in/>; TransUnion CIBIL. <https://www.cibil.com/>; Aadhaar Act, 2016. <https://www.indiacode.nic.in/>"
+    }
+  }
+}

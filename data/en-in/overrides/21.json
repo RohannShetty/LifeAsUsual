@@ -1,0 +1,31 @@
+{
+  "tips": {
+    "21-1": {
+      "benefit": "The Ministry of External Affairs publishes travel advisories for each country on its website and through the Indian mission. Check the advisory before you book, register on the MADAD portal for an Indian national abroad, and keep the mission's address and phone number. The advisory can change during a conflict or a natural disaster, so check again close to departure. A 'do not travel' advisory is a warning, not a suggestion."
+    },
+    "21-2": {
+      "title": "Save the MEA MADAD portal and the Indian mission's consular number before you travel, and write down the address",
+      "inPlainWords": "The Ministry of External Affairs runs the MADAD portal for Indians abroad, and each Indian embassy or consulate publishes a consular emergency number. Save the number, the address and the email before you leave, and give a copy to a family member at home. A consulate can help with a lost passport, an arrest or a medical emergency; it cannot pay your bills or get you out of jail.",
+      "benefit": "The MEA's MADAD portal registers a grievance and routes it to the mission. The consular officer can issue an emergency certificate, contact the local police or hospital, and inform your family. The Indian Community Welfare Fund can help with a limited emergency. Registering your travel and keeping a copy of the passport and visa helps the mission find you.",
+      "cost": "No cost to register. A replacement passport or an emergency certificate has a fee.",
+      "caveats": "A consulate cannot override the local law or pay a fine. Keep a digital and a paper copy of the passport. In a conflict, follow the mission's evacuation instructions.",
+      "sources": "Ministry of External Affairs, MADAD. <https://www.mea.gov.in/>; Consular, Passport and Visa Division. <https://www.mea.gov.in/>; Indian missions abroad. <https://www.mea.gov.in/indian-missions-abroad.htm>"
+    },
+    "21-6": {
+      "title": "Check the foreign-exchange cash limit before you travel: India's LRS and the RBI rules cap what you can carry",
+      "inPlainWords": "Under the RBI's Liberalised Remittance Scheme, a resident can remit up to USD 250,000 a financial year for permitted purposes. Cash and travellers' cheques are subject to separate limits, and a very large cash amount must be declared at customs. Do not carry a friend's money or split a transfer to avoid the limit. Use a bank or an authorised dealer.",
+      "benefit": "The RBI's LRS sets the annual remittance limit, and the Foreign Exchange Management Act, 1999 governs the rules. A traveller must declare currency above the customs threshold. A bank or an authorised money changer gives a receipt. Splitting a transfer to stay under the limit can be a violation. The Customs Act, 1962 applies to cash at the border.",
+      "cost": "A bank charges a margin and a fee; a money changer's rate is usually worse. A declaration is free.",
+      "caveats": "The LRS limit and the cash limit change; check the RBI and the customs rules before you travel. A 'hawala' transfer is illegal and leaves no legal recourse.",
+      "sources": "Reserve Bank of India, Liberalised Remittance Scheme. <https://www.rbi.org.in/>; Foreign Exchange Management Act, 1999. <https://www.indiacode.nic.in/>; Central Board of Indirect Taxes and Customs. <https://www.cbic.gov.in/>"
+    },
+    "21-8": {
+      "title": "Before driving abroad, check whether the country accepts an Indian licence or needs an International Driving Permit",
+      "inPlainWords": "An Indian driving licence is not accepted everywhere. Many countries accept it for a short visit, but some require an International Driving Permit issued by an Indian automobile association, or a local licence after a residence period. Check the destination's transport authority before you rent a car. An IDP is a translation, not a substitute for a valid Indian licence.",
+      "benefit": "The Motor Vehicles Act, 1988 and the Central Motor Vehicles Rules govern the Indian licence. An IDP is issued under the 1949 Geneva Convention by an authorised automobile association. The destination's rules decide whether an IDP, a local test or a conversion is required. A rental company may ask for the IDP and the passport. Driving without the correct licence can void the insurance.",
+      "cost": "An IDP fee is modest. A local test or a conversion costs more.",
+      "caveats": "A 'universal licence' sold online is not an IDP. The rules differ for a tourist, a student and a resident. Check the embassy and the rental company.",
+      "sources": "Ministry of Road Transport and Highways. <https://morth.nic.in/>; Motor Vehicles Act, 1988. <https://www.indiacode.nic.in/>; Ministry of External Affairs. <https://www.mea.gov.in/>"
+    }
+  }
+}

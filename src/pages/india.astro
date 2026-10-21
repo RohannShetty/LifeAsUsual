@@ -2,21 +2,27 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import india from '../../data/india-context.json';
 import currency from '../../data/currency.json';
+import manifest from '../../data/en-in/manifest.json';
+import allChapters from '../../data/en/all-chapters.json';
 import { resolvePath } from '../utils/paths';
 
-const chapterSlug: Record<number, string> = {
-  8: '08-law-and-property-safety',
-  9: '09-everyday-legal-red-lines',
-  11: '11-red-lines-for-developers',
-  12: '12-starting-a-business',
-  21: '21-travel-and-abroad-safety',
-  23: '23-which-skills-to-learn',
-  24: '24-navigating-healthcare',
-  25: '25-after-someone-dies',
-  26: '26-building-a-website-or-platform',
-  31: '31-paths-after-eighteen',
-  32: '32-studying-abroad'
-};
+const sourceByChapter = new Map(
+  (allChapters as Array<{ chapter: number; slug: string; title: string }>).map((chapter) => [chapter.chapter, chapter])
+);
+
+const manifestRows = Object.entries(manifest.chapters).map(([number, meta]) => ({
+  chapter: Number(number),
+  ...meta
+}));
+
+const draftRows = manifestRows.filter((row) => row.status === 'draft');
+const queuedRows = manifestRows
+  .filter((row) => row.status === 'queued')
+  .map((row) => ({
+    ...row,
+    title: sourceByChapter.get(row.chapter)?.title || 'Chapter ' + row.chapter,
+    slug: sourceByChapter.get(row.chapter)?.slug || ''
+  }));
 
 ---
 
@@ -34,16 +40,18 @@ const chapterSlug: Record<number, string> = {
         <span aria-hidden="true">·</span>
         <span>{india.sources.length} official sources</span>
         <span aria-hidden="true">·</span>
-        <span>Chapter 19 rewritten</span>
+        <span>{draftRows.length} draft</span>
         <span aria-hidden="true">·</span>
-        <span>Draft for legal review</span>
+        <span>{queuedRows.length} queued</span>
+        <span aria-hidden="true">·</span>
+        <span>{queuedRows.length === 0 ? 'Independent verification in progress' : 'Draft for review'}</span>
       </div>
     </header>
 
     <nav class="india-jump" aria-label="India edition sections">
       <a href="#what-changed">Rewrite status</a>
       <a href="#helplines">Helplines</a>
-      <a href="#chapters">Queued chapters</a>
+      <a href="#chapters">Chapters</a>
       <a href="#sources">Sources</a>
     </nav>
 
@@ -86,16 +94,20 @@ const chapterSlug: Record<number, string> = {
     </section>
 
     <section class="india-section" id="chapters">
-      <p class="section-kicker">Still queued</p>
-      <h2 class="india-h2">Chapters still on the source text</h2>
-      <p class="india-body">These chapters have not been rewritten yet. Their tips say so, and the India application note points to the Indian starting point.</p>
+      <p class="section-kicker">{queuedRows.length === 0 ? 'Coverage' : 'Still queued'}</p>
+      <h2 class="india-h2">{queuedRows.length === 0 ? 'All 34 chapters have an India rewrite' : 'Chapters still on the source text'}</h2>
+      {queuedRows.length === 0 ? (
+        <p class="india-body">Every chapter now has an India file. Each is a draft until its independent verification report passes; legal, medical and financial chapters also stay pending a named human reviewer.</p>
+      ) : (
+        <p class="india-body">{queuedRows.length} chapters have not been rewritten yet. Their tips say so, and the India application note points to the Indian starting point.</p>
+      )}
       <div class="chapter-list">
-        {india.chapters.map((row) => (
-          <a class="chapter-row" href={resolvePath('/chapters/' + (chapterSlug[row.chapter] || '') + '/')}>
+        {queuedRows.map((row) => (
+          <a class="chapter-row" href={resolvePath('/chapters/' + row.slug + '/')}>
             <span class="chapter-num">Ch {row.chapter}</span>
             <span class="chapter-copy">
               <strong>{row.title}</strong>
-              <small>{row.why}</small>
+              <small>Still source text; queued for an India rewrite.</small>
             </span>
             <span class="chapter-arrow" aria-hidden="true">→</span>
           </a>
@@ -117,8 +129,8 @@ const chapterSlug: Record<number, string> = {
     </section>
 
     <aside class="india-disclaimer">
-      <strong>This is a work in progress, not legal advice.</strong>
-      <p>Chapter 19 is a draft rewrite for Indian law and is awaiting legal review. The remaining chapters are still source text. For a decision that matters, use the current official portal and a qualified Indian professional.</p>
+      <strong>This is a draft edition, not legal or medical advice.</strong>
+      <p>All 34 chapters have been rewritten for India, but each is a draft until independent verification is complete. Legal, medical and financial chapters also await a named human reviewer. For a decision that matters, use the current official portal and a qualified Indian professional.</p>
     </aside>
   </article>
 </BaseLayout>

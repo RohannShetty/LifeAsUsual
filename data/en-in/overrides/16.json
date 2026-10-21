@@ -1,0 +1,20 @@
+{
+  "tips": {
+    "16-2": {
+      "title": "India has no national outpatient chronic-disease certificate; use ESIC, CGHS, PM-JAY or your state scheme",
+      "inPlainWords": "India does not run a national outpatient certification that unlocks reimbursement across states. The cover depends on the scheme: ESIC for insured workers, CGHS for central government staff, PM-JAY for eligible households, and a state health scheme. For a chronic disease, ask the scheme's empanelled hospital what is covered, and keep the prescriptions and bills. eSanjeevani offers a free online consultation in many states.",
+      "benefit": "PM-JAY covers hospitalisation for eligible households and has a list of packages; some states add outpatient cover. ESIC provides sickness and medical benefit to insured persons and dependants. CGHS covers central government employees and pensioners at wellness centres and empanelled hospitals. eSanjeevani, run by the Ministry of Health and Family Welfare, provides teleconsultation. A referral is usually needed for a specialist or a higher facility.",
+      "cost": "PM-JAY is free for eligible households; ESIC and CGHS are contribution or subscription based. A private policy is separate.",
+      "caveats": "A 'chronic disease card' sold by an agent is not a government scheme. The package list and the empanelled hospital change. A pre-authorisation may be needed for a planned admission.",
+      "sources": "National Health Authority, PM-JAY. <https://nha.gov.in/>; Employees' State Insurance Corporation. <https://esic.gov.in/>; Central Government Health Scheme. <https://cghs.gov.in/>; eSanjeevani. <https://esanjeevani.mohfw.gov.in/>"
+    },
+    "16-6": {
+      "title": "Before you register with a family doctor, ask what the clinic covers and whether it is free under a scheme",
+      "inPlainWords": "India does not have a single family-doctor registration scheme. The nearest public route is the Ayushman Arogya Mandir (health and wellness centre), where an ANM or a community health officer provides primary care, and the ASHA worker links the household to the system. A private family physician is paid per visit or by an annual retainer. Ask which services are free, which are charged, and where you are referred.",
+      "benefit": "The National Health Mission runs Ayushman Arogya Mandirs (formerly health and wellness centres) with a defined package of primary-care services, including screening for hypertension and diabetes. PM-JAY covers hospitalisation for eligible households, and eSanjeevani provides teleconsultation. A private clinic's annual retainer is a contract; read what it excludes. The Clinical Establishments Act and the state rules apply to a private clinic.",
+      "cost": "A public health and wellness centre is free. A private retainer or a per-visit fee varies.",
+      "caveats": "A 'family doctor' plan may exclude specialist care and diagnostics. Check the doctor's registration with the state medical council. A public centre may not have a doctor every day.",
+      "sources": "Ministry of Health and Family Welfare, National Health Mission. <https://nhm.gov.in/>; National Health Authority. <https://nha.gov.in/>; National Medical Commission. <https://www.nmc.org.in/>"
+    }
+  }
+}

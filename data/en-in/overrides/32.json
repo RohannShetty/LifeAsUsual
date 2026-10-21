@@ -1,0 +1,20 @@
+{
+  "tips": {
+    "32-1": {
+      "title": "Check that the foreign school or programme is recognised before you pay tuition",
+      "inPlainWords": "India has no single 'approved school' list for every country. Check the institution's recognition with its national regulator, the Indian embassy or consulate, and the UGC or the AIU if you want the degree recognised in India. A scholarship or a visa may depend on the institution's recognition. Do not pay an agent for a 'guaranteed' admission or a 'recognised' degree.",
+      "benefit": "The UGC and the Association of Indian Universities publish the recognition and equivalence rules for a foreign degree. The destination's education ministry or regulator lists the accredited institutions. The Indian mission can confirm whether a college is genuine. A student visa usually requires an admission letter from a recognised institution. A fake university can leave you with a degree that no employer or university accepts.",
+      "cost": "No cost to check the regulator's list. A credential evaluation may have a fee.",
+      "caveats": "A 'pathway' college that is not accredited may not lead to a degree. Check the course, the campus and the recognition separately. Do not pay the full tuition before the admission letter is verified.",
+      "sources": "University Grants Commission. <https://www.ugc.gov.in/>; Association of Indian Universities. <https://www.aiu.ac.in/>; Ministry of External Affairs. <https://www.mea.gov.in/>; Ministry of Education. <https://www.education.gov.in/>"
+    },
+    "32-9": {
+      "title": "Allow time for degree equivalence and document attestation before you return to India",
+      "inPlainWords": "A foreign degree may need an equivalence certificate from the Association of Indian Universities for a government job or a higher degree, and the documents may need an apostille or a consular attestation. Start before you leave: collect the transcript, the degree certificate and the marksheets, and check the AIU's current rules. A private agent cannot make an unrecognised degree recognised.",
+      "benefit": "The Association of Indian Universities issues an equivalence certificate for a foreign degree, and the Ministry of External Affairs attests documents for use abroad or in India. The Hague Apostille Convention applies to some countries. A government employer or a university may ask for the equivalence and the attestation. The process takes weeks, so plan ahead.",
+      "cost": "The AIU fee is modest; an agent's fee is avoidable. Attestation has a fee.",
+      "caveats": "A degree from an unrecognised institution may not get equivalence. Check the AIU list and the course duration. Keep the original documents; a photocopy is not enough.",
+      "sources": "Association of Indian Universities. <https://www.aiu.ac.in/>; Ministry of External Affairs, attestation. <https://www.mea.gov.in/>; University Grants Commission. <https://www.ugc.gov.in/>"
+    }
+  }
+}

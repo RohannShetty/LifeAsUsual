@@ -1,0 +1,28 @@
+{
+  "tips": {
+    "31-6": {
+      "title": "After discharge, check the pension, gratuity, ESM card and re-employment routes before the money runs out",
+      "inPlainWords": "A person leaving the armed forces should check the pension or the one-time gratuity, the Ex-Servicemen Contributory Health Scheme, the ESM identity card and the re-employment and resettlement courses. The entitlement depends on the years of service and the rank. Visit the nearest Zila Sainik Board or the Directorate of Ex-Servicemen Welfare, and keep the discharge book and the PPO.",
+      "benefit": "The pension and gratuity rules for the armed forces are set by the Ministry of Defence. The Ex-Servicemen Contributory Health Scheme covers the veteran and the family at empanelled hospitals. The Zila Sainik Board provides the ESM card and the resettlement help. The Directorate General of Resettlement runs courses and job fairs. A short-service commission has a different entitlement from a pensionable commission.",
+      "cost": "ECHS is a contributory scheme. A resettlement course is free or subsidised.",
+      "caveats": "A pension is not automatic if the record is incomplete. Apply for the PPO and the ECHS card early. A private job offer should be checked before you accept it.",
+      "sources": "Ministry of Defence. <https://www.mod.gov.in/>; Directorate of Ex-Servicemen Welfare. <https://desw.gov.in/>; Ex-Servicemen Contributory Health Scheme. <https://echs.gov.in/>; Kendriya Sainik Board. <https://ksb.gov.in/>"
+    },
+    "31-11": {
+      "title": "Without an employer, you must arrange your own pension and health cover: NPS, PPF and a health policy",
+      "inPlainWords": "A self-employed person has no employer contribution. The main routes are the National Pension System, the Public Provident Fund and a health insurance policy. The NPS gives a tax deduction and a retirement corpus; the PPF is a safe long-term saving; a health policy covers hospital costs. Start early; a late start means a larger contribution for the same pension.",
+      "benefit": "The PFRDA regulates the NPS, and the PPF is a government small-saving scheme. A health policy is regulated by the IRDAI, and the premium depends on age and cover. The Ayushman Bharat PM-JAY covers an eligible household. The EPF is available only through a covered employer. The Income-tax Act gives a deduction for the NPS and the PPF within the limits.",
+      "cost": "A monthly contribution and a health premium. The NPS charges a fund-management fee.",
+      "caveats": "A health policy has a waiting period for a pre-existing condition. The NPS tier-I is locked until 60. Do not rely on a single product.",
+      "sources": "Pension Fund Regulatory and Development Authority. <https://www.pfrda.org.in/>; National Pension System. <https://www.npscra.nsdl.co.in/>; National Savings Institute, PPF. <https://www.nsiindia.gov.in/>; Insurance Regulatory and Development Authority of India. <https://irdai.gov.in/>"
+    },
+    "31-14": {
+      "title": "Before working abroad, check that the recruiter is registered under the Emigration Act and use the eMigrate portal",
+      "inPlainWords": "Only a registered recruiting agent can recruit an Indian worker for a job abroad, and the agent must use the eMigrate system. An unregistered agent who charges a fee and sends you on a tourist visa is breaking the law and putting you at risk. Check the agent's registration on the eMigrate portal and the emigration clearance for your category before you pay.",
+      "benefit": "The Emigration Act, 1983 regulates the recruitment of Indian workers for employment abroad. The eMigrate portal lists the registered recruiting agents and processes the emigration clearance. A worker on a tourist visa cannot legally take a job. The Indian mission can help if the employer confiscates the passport or fails to pay, but prevention is better.",
+      "cost": "A registered agent's fee is regulated. Do not pay a large 'placement' fee in cash.",
+      "caveats": "A job offer with no written contract and no employer details is a red flag. Keep the passport; no employer has the right to hold it. Register with the mission after you arrive.",
+      "sources": "Ministry of External Affairs, eMigrate. <https://www.emigrate.gov.in/>; Emigration Act, 1983. <https://www.indiacode.nic.in/>; Ministry of External Affairs. <https://www.mea.gov.in/>"
+    }
+  }
+}

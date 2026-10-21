@@ -23,11 +23,20 @@ const sourcesCount = sourcesList.length;
 // ROI tier class mapping
 const roiClass = tip.valueTier === 'Very high' ? 'roi-very-high' : tip.valueTier === 'High' ? 'roi-high' : 'roi-average';
 
-const chapterGuidance = (indiaGuidance as Record<string, { anchor: string; note: string }>)[String(tip.chapter)];
+// A rewritten India tip carries an India review status. Bridge UI (source
+// badge, India note, chapter application) belongs only to source text.
+const isIndiaTip =
+  tip.reviewStatus === 'draft' ||
+  tip.reviewStatus === 'independently-checked' ||
+  tip.reviewStatus === 'reviewed';
+
+const chapterGuidance = isIndiaTip
+  ? null
+  : (indiaGuidance as Record<string, { anchor: string; note: string }>)[String(tip.chapter)];
 
 // Flag tips that describe a source-edition rule, institution or hotline. The
 // badge opens the crosswalk; it does not change the author's text.
-const sourceSpecific = /\b(dibao|hukou|yibao|shebao|gongjijin|gongshang|laodong|caili|WeChat|Alipay|12308|12315|12321|12377|12389|12309|96110|12356|12355|12348|12333|three[- ]tier|Grade-3)\b/i.test(
+const sourceSpecific = !isIndiaTip && /\b(dibao|hukou|yibao|shebao|gongjijin|gongshang|laodong|caili|WeChat|Alipay|12308|12315|12321|12377|12389|12309|96110|12356|12355|12348|12333|three[- ]tier|Grade-3)\b/i.test(
   [tip.title, tip.inPlainWords, tip.cost, tip.benefit, tip.caveats].join(' ')
 );
 
@@ -35,7 +44,9 @@ const sourceSpecific = /\b(dibao|hukou|yibao|shebao|gongjijin|gongshang|laodong|
 // with a clearly-labelled Indian equivalent. The author's text stays untouched.
 const hotlineText = [tip.inPlainWords, tip.cost, tip.caveats].join(' ');
 let indiaNote = '';
-if (/\b(call|dial|phone|ring|contact)\s+120\b/i.test(hotlineText)) {
+if (isIndiaTip) {
+  indiaNote = '';
+} else if (/\b(call|dial|phone|ring|contact)\s+120\b/i.test(hotlineText)) {
   indiaNote = 'In India, call 112 for emergency services, or 108 for an ambulance where available.';
 } else if (/\b(call|dial|phone|ring|contact)\s+110\b/i.test(hotlineText)) {
   indiaNote = 'In India, call 112 or 100 for the police.';
@@ -103,8 +114,14 @@ if (/\b(call|dial|phone|ring|contact)\s+120\b/i.test(hotlineText)) {
         )}
 
         {tip.reviewStatus === 'draft' && (
-          <span class="editorial-badge badge-draft" title="Rewritten for India; pending legal review">
+          <span class="editorial-badge badge-draft" title="Rewritten for India; pending independent verification">
             Draft rewrite
+          </span>
+        )}
+
+        {(tip.reviewStatus === 'independently-checked' || tip.reviewStatus === 'reviewed') && (
+          <span class="editorial-badge badge-checked" title="Rewritten for India and checked against official Indian sources">
+            {tip.reviewStatus === 'reviewed' ? 'Reviewed' : 'Checked'}
           </span>
         )}
       </div>
@@ -346,6 +363,12 @@ if (/\b(call|dial|phone|ring|contact)\s+120\b/i.test(hotlineText)) {
     background: color-mix(in srgb, var(--color-steel) 14%, transparent);
     color: var(--color-steel-text);
     border: 1px solid color-mix(in srgb, var(--color-steel) 35%, transparent);
+  }
+
+  .badge-checked {
+    background: color-mix(in srgb, var(--color-jade) 16%, transparent);
+    color: var(--color-jade-text);
+    border: 1px solid color-mix(in srgb, var(--color-jade) 45%, transparent);
   }
 
   .badge-source {

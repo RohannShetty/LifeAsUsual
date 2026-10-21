@@ -1,0 +1,36 @@
+{
+  "tips": {
+    "24-8": {
+      "title": "Emergency care cannot be refused for want of money or ID — the hospital must stabilise first",
+      "inPlainWords": "In India, a hospital cannot refuse emergency treatment because the patient cannot pay or has no identity document. The Supreme Court's judgment in Pt. Parmanand Katara v Union of India (1989) requires every hospital to provide immediate emergency care, and the Clinical Establishments Act, 2010 and the Charter of Patients' Rights support it. The hospital can recover the cost later, but it must stabilise the patient first.",
+      "benefit": "The Supreme Court held that every doctor and hospital has a professional obligation to provide emergency care, and that the patient's inability to pay cannot be a reason to refuse. The Clinical Establishments (Registration and Regulation) Act, 2010 applies in the states that adopted it. The Charter of Patients' Rights, 2019 lists the right to emergency treatment. A government hospital is funded for emergency care; a private hospital must stabilise and then transfer or bill.",
+      "cost": "Emergency stabilisation is provided first; the bill can follow. A government hospital is free or low cost. A private hospital's bill can be recovered later.",
+      "caveats": "A hospital may transfer a stabilised patient to a facility with the needed specialty. Keep the triage record and the time of arrival. A refusal can be a complaint to the state health department and the consumer commission.",
+      "sources": "Supreme Court of India, Pt. Parmanand Katara v Union of India (1989). <https://www.sci.gov.in/>; Clinical Establishments (Registration and Regulation) Act, 2010. <https://www.indiacode.nic.in/>; Ministry of Health and Family Welfare, Charter of Patients' Rights. <https://mohfw.gov.in/>"
+    },
+    "24-10": {
+      "title": "After treatment, get a disability certificate and a UDID from the district medical board if an impairment remains",
+      "inPlainWords": "If an injury or illness leaves a lasting impairment, apply for a disability certificate from the district medical board under the Rights of Persons with Disabilities Act, 2016. The certificate is linked to a Unique Disability ID (UDID). It is the basis for a reservation, a concession, a scholarship and some social-security benefits. A private doctor's letter is not the statutory certificate.",
+      "benefit": "The RPwD Act, 2016 lists the recognised disabilities and provides for an assessment by a medical board. The UDID portal issues a card that can be used across states. The certificate supports a reservation in education and employment, a transport concession, and some state allowances. A reassessment is possible if the condition changes. The Act also prohibits discrimination.",
+      "cost": "The assessment is free or has a small fee at a government hospital.",
+      "caveats": "The certificate is not a guarantee of a job; the reservation rules apply to identified posts. A temporary impairment may get a temporary certificate. Keep the medical records for the assessment.",
+      "sources": "Rights of Persons with Disabilities Act, 2016. <https://www.indiacode.nic.in/>; Department of Empowerment of Persons with Disabilities, UDID. <https://www.swavlambancard.gov.in/>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>"
+    },
+    "24-13": {
+      "title": "If a medicine is out of stock, ask for a generic or a Jan Aushadhi alternative — not a 'negotiated' price",
+      "inPlainWords": "India has no national insurance-negotiated drug price for every medicine. If a hospital pharmacy is out of stock, ask the doctor for a prescription you can fill at a Jan Aushadhi Kendra, a generic pharmacy or another chemist. Ask for the generic name, not only the brand. A Jan Aushadhi store sells quality generic medicines at a lower price.",
+      "benefit": "The Pradhan Mantri Bhartiya Janaushadhi Pariyojana runs Jan Aushadhi Kendras with generic medicines at a lower price. The National Pharmaceutical Pricing Authority caps the price of scheduled formulations under the Drugs (Prices Control) Order, 2013. A doctor can prescribe by the generic name, and a pharmacist must dispense the prescribed medicine. A government hospital's pharmacy is usually cheaper than a private one.",
+      "cost": "A generic or Jan Aushadhi medicine is usually cheaper than the branded version.",
+      "caveats": "A generic must be from a licensed manufacturer; check the batch and the expiry. Do not buy from an unlicensed online seller. A substitution by the pharmacist needs the doctor's consent where the law requires it.",
+      "sources": "Pharmaceuticals & Medical Devices Bureau of India, Jan Aushadhi. <https://janaushadhi.gov.in/>; National Pharmaceutical Pricing Authority. <https://www.nppaindia.nic.in/>; Central Drugs Standard Control Organisation. <https://cdsco.gov.in/>"
+    },
+    "24-14": {
+      "title": "For a stable chronic disease, a teleconsultation can renew a prescription — use a registered doctor and a recognised platform",
+      "inPlainWords": "The Telemedicine Practice Guidelines, 2020 allow a registered medical practitioner to consult and prescribe online, with limits. A first consultation for a serious condition, or a drug on the restricted list, needs an in-person visit. Use eSanjeevani, a hospital's official tele-OPD, or a platform that shows the doctor's registration number. Keep the prescription and the payment record.",
+      "benefit": "The guidelines set out what a doctor may prescribe in a first teleconsultation and what needs an in-person examination. eSanjeevani, run by the Ministry of Health and Family Welfare, provides free teleconsultation at many public facilities. A prescription must carry the doctor's registration number and the date. A platform must follow the IT Rules and the data-protection law.",
+      "cost": "eSanjeevani is free. A private platform charges a consultation fee.",
+      "caveats": "A teleconsultation is not suitable for chest pain, a severe injury or a new neurological symptom; go to an emergency department. A 'prescription' from an unregistered seller is not valid. Do not share an OTP with a platform.",
+      "sources": "Ministry of Health and Family Welfare, Telemedicine Practice Guidelines 2020. <https://mohfw.gov.in/>; eSanjeevani. <https://esanjeevani.mohfw.gov.in/>; National Medical Commission. <https://www.nmc.org.in/>"
+    }
+  }
+}

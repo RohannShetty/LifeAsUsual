@@ -1,0 +1,52 @@
+{
+  "tips": {
+    "25-1": {
+      "title": "When someone dies at home, establish whether the death is natural or unnatural before you move anything",
+      "inPlainWords": "If the death is expected and a doctor has been treating the person, call the doctor and the family. If the death is sudden, unexplained, accidental, suicidal or violent, call 112 and do not move the body or the objects around it. The police will register a case and arrange a post-mortem. An unnatural death needs a magistrate's inquest, and the death certificate follows the medical cause.",
+      "benefit": "The Bharatiya Nagarik Suraksha Sanhita, 2023 requires the police to investigate an unnatural death and to report it to the magistrate. A post-mortem is required in a case of unnatural death. The Registration of Births and Deaths Act, 1969 requires the death to be registered with the local registrar. A medical certificate of cause of death is issued by the doctor who treated the person or by the hospital.",
+      "cost": "The police and the post-mortem at a government hospital are free. A private ambulance and funeral cost money.",
+      "caveats": "Do not cremate or bury before the death is registered and, in an unnatural case, before the police clearance. Keep the doctor's certificate and the FIR. A death in a hospital is certified by the hospital.",
+      "sources": "Bharatiya Nagarik Suraksha Sanhita, 2023. <https://www.indiacode.nic.in/>; Registration of Births and Deaths Act, 1969. <https://www.indiacode.nic.in/>; Ministry of Home Affairs. <https://www.mha.gov.in/>"
+    },
+    "25-2": {
+      "title": "The death certificate is the key document: the doctor certifies the cause and the municipal registrar registers it",
+      "inPlainWords": "A death must be registered with the local municipal registrar under the Registration of Births and Deaths Act, 1969. A hospital issues a medical certificate of cause of death; for a death at home, the doctor who treated the person or the medical officer certifies it. The registrar issues the death certificate, usually within 21 days. You need it for the cremation, the insurance claim, the pension and the succession.",
+      "benefit": "The 1969 Act requires registration within 21 days; a late registration needs the registrar's permission and a fee. The certificate is issued in Form 4 or Form 5. A hospital death is reported by the hospital; a home death is reported by the family. The certificate is the basis for the EPF, ESIC, insurance and bank claims. A corrected certificate can be issued if there is an error.",
+      "cost": "The registration fee is small; a late fee applies after 21 days.",
+      "caveats": "A death certificate is not a succession certificate. Keep several copies. If the cause of death is unnatural, the police and the post-mortem report come first.",
+      "sources": "Registration of Births and Deaths Act, 1969. <https://www.indiacode.nic.in/>; Ministry of Home Affairs, civil registration. <https://crsorgi.gov.in/>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>"
+    },
+    "25-5": {
+      "title": "After a death, register it and settle the accounts — India has no household-register cancellation step",
+      "inPlainWords": "India does not have a household-register cancellation. The steps are: register the death, obtain the death certificate, inform the bank, the insurer, the EPFO and the pension office, and settle the estate. Surrender or transfer the ration card, the gas connection and the vehicle registration where needed. Keep the death certificate and the legal-heir documents for every claim.",
+      "benefit": "The Registration of Births and Deaths Act, 1969 and the municipal rules govern the death certificate. The EPF Scheme, 1952 and the ESIC scheme provide for a nominee or a legal heir. The Insurance Act, 1938 and the policy terms govern a life-insurance claim. A bank account with a nomination can be released to the nominee; without one, a succession certificate or a will may be needed.",
+      "cost": "The death certificate is cheap. A succession certificate involves court fees and a lawyer.",
+      "caveats": "A nomination is not a will, and it can be challenged by another heir. Do not withdraw the balance before the bank's process is complete. Keep the funeral receipt and the death certificate.",
+      "sources": "Registration of Births and Deaths Act, 1969. <https://www.indiacode.nic.in/>; Employees' Provident Fund Organisation. <https://www.epfo.gov.in/>; Insurance Regulatory and Development Authority of India. <https://irdai.gov.in/>; Indian Succession Act, 1925. <https://www.indiacode.nic.in/>"
+    },
+    "25-9": {
+      "title": "Collect the scattered funds: EPF, ESIC, pension, insurance, bank balances and any work-related benefit",
+      "inPlainWords": "After a death, the money is spread across accounts: the EPF and EPS pension, ESIC dependants' benefit, a life-insurance policy, bank balances and a pension. Each has its own form and nominee rule. Start with the death certificate and the legal-heir documents, and ask each institution for its claim form. Do not pay an agent a percentage to 'trace' the money.",
+      "benefit": "The EPFO pays the provident-fund balance and the EPS pension to the nominee or the family. ESIC pays dependants' benefit where the death is an employment injury. A life insurer pays the nominee under the policy. A bank releases a nominated deposit to the nominee, and an un-nominated deposit needs a succession certificate or a will. The Insurance Act and the EPF Scheme set the procedure.",
+      "cost": "The forms are free. A succession certificate involves court fees.",
+      "caveats": "A nominee holds the money for the legal heirs; it is not a substitute for a will. The employer may also owe a gratuity or leave encashment. Keep the acknowledgement for every claim.",
+      "sources": "Employees' Provident Fund Organisation. <https://www.epfo.gov.in/>; Employees' State Insurance Corporation. <https://esic.gov.in/>; Insurance Regulatory and Development Authority of India. <https://irdai.gov.in/>; Reserve Bank of India, nominations. <https://www.rbi.org.in/>"
+    },
+    "25-11": {
+      "title": "Heirs pay the deceased's debts only out of the estate they inherit, not from their own money",
+      "inPlainWords": "Under Indian succession law, an heir is liable for the deceased's debts only to the extent of the estate received. If the debts exceed the assets, the heir can refuse the inheritance or let the estate be administered by the court. A secured creditor can enforce the mortgage against the property. A formal renunciation or a probate may be needed.",
+      "benefit": "The Indian Succession Act, 1925 and the personal laws govern inheritance; the Code of Civil Procedure, 1908 governs the execution of a decree against the estate. A creditor can sue the legal representative, but recovery is limited to the estate's value. The Insolvency and Bankruptcy Code, 2016 provides a route where the estate is insolvent. A will can name an executor.",
+      "cost": "A probate or a succession certificate costs money; a lawyer is advisable for a large estate.",
+      "caveats": "Do not sign a personal guarantee for the deceased's debt. A joint loan may make the surviving borrower liable. A secured asset can be repossessed even if the heir refuses the inheritance.",
+      "sources": "Indian Succession Act, 1925. <https://www.indiacode.nic.in/>; Code of Civil Procedure, 1908. <https://www.indiacode.nic.in/>; Insolvency and Bankruptcy Board of India. <https://ibbi.gov.in/>"
+    },
+    "25-12": {
+      "title": "Not every inheritance needs probate; a nominated bank deposit can be released on the bank's form",
+      "inPlainWords": "Probate is not mandatory for every estate. A bank deposit with a valid nomination can be released to the nominee on the bank's claim form with the death certificate. Without a nomination, the bank may ask for a succession certificate, a probate or an indemnity, depending on the amount. A will still needs probate if it deals with immovable property in some jurisdictions.",
+      "benefit": "The RBI's customer-service rules and the bank's nomination scheme allow a nominee to receive a deposit. The Indian Succession Act, 1925 requires probate for a will in some cases, and the state rules vary. A succession certificate is issued by a civil court for debts and securities. A small estate may be settled with an affidavit and an indemnity, subject to the bank's policy.",
+      "cost": "A nomination claim is free. A succession certificate or probate involves court fees and a lawyer.",
+      "caveats": "A nominee is a trustee for the legal heirs, not necessarily the owner. A joint account with a survivorship clause passes to the survivor. Do not withdraw before the bank completes its process.",
+      "sources": "Reserve Bank of India, customer service. <https://www.rbi.org.in/>; Indian Succession Act, 1925. <https://www.indiacode.nic.in/>; Code of Civil Procedure, 1908. <https://www.indiacode.nic.in/>"
+    }
+  }
+}

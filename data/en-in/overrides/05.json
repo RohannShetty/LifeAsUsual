@@ -1,0 +1,151 @@
+{
+  "title": "Do Not Waste Money",
+  "tips": {
+    "5-1": {
+      "title": "Turn off automatic renewals and renew only what you still use",
+      "inPlainWords": "You save exactly the subscriptions you no longer use but are still paying for. Spend 20 minutes reviewing the auto-pay and mandate lists in Google Play, the App Store, your UPI app and your card statements. In India, an e-mandate for a recurring card or UPI payment must be registered with a pre-debit notification, and you can cancel it through your bank or the app.",
+      "benefit": "The saving is the total of the subscriptions you no longer need; there is no single figure. The RBI's e-mandate rules require a pre-debit notification before a recurring card or UPI payment, and the bank or app must let you cancel the mandate. A merchant cannot force a renewal after cancellation. A annual plan is often cheaper than a monthly one for a service you actually use.",
+      "cost": "No cost. Review Google Play subscriptions, Apple subscriptions, UPI Autopay, and your card's standing instructions. Cancel through the same channel that holds the mandate.",
+      "caveats": "Turning off auto-renew can lose a promotional price. Keep the annual plan for a service you use weekly; cancel the rest. Check the card statement for a merchant you do not recognise.",
+      "sources": "Reserve Bank of India, e-mandate framework. <https://www.rbi.org.in/>; National Payments Corporation of India, UPI Autopay. <https://www.npci.org.in/>; Consumer Protection Act, 2019. <https://consumeraffairs.nic.in/>"
+    },
+    "5-3": {
+      "title": "Your EPF is not only for buying a home: it can also pay rent, a housing loan, medical bills and some life events",
+      "inPlainWords": "The Employees' Provident Fund is not limited to a home purchase. EPFO rules allow a member to withdraw or advance funds for buying or building a house, repaying a housing loan, paying rent in some cases, treatment of a serious illness, marriage or education, and a few other purposes. The amount and the conditions depend on the purpose and the number of years of service. Apply through the EPFO member portal, not an agent.",
+      "benefit": "The EPF Scheme, 1952 and the EPFO's circulars set the withdrawal and advance categories. A member can take an advance for a house purchase or construction, for repayment of a housing loan, for rent in specified cases, for illness, for marriage or education, and for a few other needs. The account earns interest declared annually by the EPFO. On death, the nominee or legal heir can withdraw the balance. An early withdrawal reduces the retirement corpus.",
+      "cost": "No fee on the EPFO portal. A bank or employer may ask for documents. An agent who charges a commission is not necessary.",
+      "caveats": "The purpose and the eligible amount change with the EPFO circulars. A withdrawal for a non-eligible purpose can be rejected and may attract tax. Check the passbook and the UAN before applying.",
+      "sources": "Employees' Provident Fund Organisation, member portal. <https://www.epfo.gov.in/>; Employees' Provident Funds and Miscellaneous Provisions Act, 1952. <https://labour.gov.in/>; Income-tax Department, EPF taxation. <https://www.incometax.gov.in/>"
+    },
+    "5-6": {
+      "title": "Walk away from 'guaranteed returns' and 'sure profit' offers",
+      "inPlainWords": "No legitimate investment in India guarantees a return or protects the principal. SEBI and the RBI require risk disclosures, and a scheme that promises a fixed high return is either unauthorised or a fraud. If the offer is urgent, secret or paid to a personal account, it is a scam. Check the entity on the SEBI and RBI registries before you send money.",
+      "benefit": "SEBI's investor charter and the RBI's rules prohibit misleading claims and unauthorised deposit-taking. A collective investment scheme needs SEBI registration, and a deposit-taking entity needs RBI authorisation. The BNS, 2023 punishes cheating, and the Banning of Unregulated Deposit Schemes Act, 2019 punishes unregulated deposit schemes. A promise of a high fixed return is a warning sign, not a feature.",
+      "cost": "No cost to check. Search the SEBI and RBI websites, and ask for the scheme's registration number in writing.",
+      "caveats": "Past returns do not guarantee future returns. A 'fixed return' insurance plan is not a bank deposit. A friend or relative who sells the scheme may be a victim too.",
+      "sources": "Securities and Exchange Board of India, investor education. <https://www.sebi.gov.in/>; Reserve Bank of India, unauthorised entities. <https://www.rbi.org.in/>; Banning of Unregulated Deposit Schemes Act, 2019. <https://www.indiacode.nic.in/>"
+    },
+    "5-9": {
+      "title": "A child's large in-app purchase can be reversed: a minor's contract is void, and the guardian can ask for a refund",
+      "inPlainWords": "In India, a person under 18 is a minor, and an agreement with a minor is void under section 11 of the Indian Contract Act, 1872. A large in-app purchase or gift made by a child without the guardian's consent can be challenged, and the platform or the app store can be asked to reverse it. The practical route is the platform's refund process, then the consumer commission if it refuses.",
+      "benefit": "Section 11 of the Indian Contract Act, 1872 makes an agreement by a minor void, and the guardian can seek restitution of the money. The Consumer Protection Act, 2019 covers a deficient service and an unfair trade practice, and the Consumer Protection (E-Commerce) Rules, 2020 require a grievance officer. The RBI's card and UPI chargeback rules may help if the payment was unauthorised. The platform's own parental-control and refund policy is the first step.",
+      "cost": "No cost to file a platform complaint. A consumer complaint has a small fee. A lawyer's fee if the amount is large and the platform refuses.",
+      "caveats": "Proving the child made the purchase is the hard part; keep the device logs, the timestamps and the child's statement. A parent who knowingly allowed the purchase may not get a refund. Set a spending limit and do not share the payment PIN.",
+      "sources": "Indian Contract Act, 1872 (section 11). <https://www.indiacode.nic.in/>; Consumer Protection Act, 2019. <https://consumeraffairs.nic.in/>; Reserve Bank of India, chargebacks. <https://www.rbi.org.in/>"
+    },
+    "5-10": {
+      "title": "Teach the child one rule: anyone who asks for a parent's phone, OTP or UPI PIN is a scammer",
+      "inPlainWords": "The scams change, but the last step is always the same: the child is asked to use a parent's phone, read out an OTP or approve a UPI request. Teach the child that no teacher, police officer, game moderator or 'customer care' agent needs the parent's phone or OTP. Add: 'If something goes wrong, tell me at once; I will not shout at you.' A child who is afraid to speak up loses more money.",
+      "benefit": "The RBI and the cyber crime police state that no bank, police officer or government agency asks for an OTP, PIN or password. The BNS, 2023 and the IT Act, 2000 punish cheating and identity theft. The 1930 helpline and cybercrime.gov.in can freeze a fraudulent transfer if it is reported quickly. A family code word and a spending limit on the child's own account reduce the risk.",
+      "cost": "No cost. Set a UPI limit, enable parental controls and keep the payment PIN to yourself.",
+      "caveats": "A caller can spoof a number and use a fake logo. A video call is not proof. Do not scold the child before you have reported the fraud; the report matters more.",
+      "sources": "National Cyber Crime Reporting Portal. <https://cybercrime.gov.in/>; Reserve Bank of India, awareness. <https://www.rbi.org.in/>; Information Technology Act, 2000. <https://www.indiacode.nic.in/>"
+    },
+    "5-13": {
+      "title": "India has no 'family sharing' of an individual medical account; use PM-JAY, ESIC or a state scheme for the household",
+      "inPlainWords": "India does not have the individual medical-savings account that some countries allow a family to share. The Indian route is a household scheme: Ayushman Bharat PM-JAY for eligible families, ESIC for covered employees, CGHS for central government staff, and a state health scheme. Check who is covered and what the empanelment is. Do not pay a private agent to 'link' a family.",
+      "benefit": "PM-JAY provides hospital cover for eligible households through empanelled hospitals, with the cover shared by the family. ESIC covers insured workers and their dependants for specified treatment. CGHS covers central government employees and pensioners. State schemes vary. The National Health Authority runs PM-JAY, and the eligibility is based on the SECC and state lists. A household should check the Ayushman card and the empanelled hospital list before an emergency.",
+      "cost": "PM-JAY is free for eligible households. ESIC and CGHS are contribution or subscription based. A private insurance policy is separate.",
+      "caveats": "Coverage is for listed procedures and empanelled hospitals; not every cost is covered. A 'family card' sold by an agent is not a government scheme. Check the NHA and state health department websites.",
+      "sources": "National Health Authority, Ayushman Bharat PM-JAY. <https://nha.gov.in/>; Employees' State Insurance Corporation. <https://esic.gov.in/>; Central Government Health Scheme. <https://cghs.gov.in/>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>"
+    },
+    "5-20": {
+      "title": "Use the tax deduction for a pension contribution — NPS gives an extra ₹50,000 under section 80CCD(1B)",
+      "inPlainWords": "An individual taxpayer can claim a deduction of up to ₹50,000 a year for a contribution to the National Pension System under section 80CCD(1B) of the Income-tax Act, 1961, over and above the ₹1.5 lakh limit under section 80C. The NPS account is portable, and the corpus is taxed at maturity according to the NPS rules. The deduction is for a long-term retirement saving, not a short-term tax trick.",
+      "benefit": "Section 80CCD(1B) allows an additional deduction of up to ₹50,000 for an NPS contribution by an individual. The employer's contribution to NPS is deductible under section 80CCD(2) within the limits. The NPS offers a choice of active and auto allocation across equity, corporate debt, government securities and alternative assets, and the exit rules depend on the age and the corpus. The Public Provident Fund and the EPF are separate retirement vehicles with their own tax treatment.",
+      "cost": "The NPS has a low fund-management fee, and the contribution is the money you invest. A tier-I account has a lock-in until 60, with limited partial withdrawal.",
+      "caveats": "The deduction limit and the tax treatment can change with the Finance Act. An NPS tier-II account does not get the same tax treatment. Compare the NPS with the EPF and the PPF before you commit.",
+      "sources": "Income-tax Department, deductions. <https://www.incometax.gov.in/>; Pension Fund Regulatory and Development Authority. <https://www.pfrda.org.in/>; National Pension System. <https://www.npscra.nsdl.co.in/>"
+    },
+    "5-31": {
+      "title": "If food is unsafe, you can claim compensation — the FSS Act and the consumer law apply",
+      "inPlainWords": "If you buy food that is unsafe, adulterated or mislabelled, you can complain to the FSSAI or the local food safety officer, and claim a refund and compensation under the Consumer Protection Act, 2019. The FSS Act, 2006 also provides for penalties and compensation. Keep the bill, the packaging and the sample. India does not have a single 'ten times the price' rule for every case; the compensation depends on the loss and the forum.",
+      "benefit": "The Food Safety and Standards Act, 2006 allows a consumer to complain to the food safety officer and the adjudicating officer, and provides for compensation for injury. The Consumer Protection Act, 2019 allows a complaint before the district, state or national commission, and the court can award compensation for a defect. The FSSAI can test the sample and prosecute the manufacturer. A hospital record and the bill are the evidence.",
+      "cost": "A consumer complaint has a small fee; the FSSAI complaint is free. A lab test may cost money; the FSSAI can arrange one.",
+      "caveats": "A 'best before' date is not a guarantee of safety after opening. A claim for a large amount needs medical evidence. Do not throw away the packaging or the remaining food before you complain.",
+      "sources": "Food Safety and Standards Authority of India. <https://www.fssai.gov.in/>; Consumer Protection Act, 2019. <https://consumeraffairs.nic.in/>; National Consumer Helpline. <https://consumerhelpline.gov.in/>"
+    },
+    "5-36": {
+      "title": "Packaged food carries a legal label; loose food carries less information, so ask",
+      "inPlainWords": "A packaged food product must carry the FSSAI licence number, the ingredient list, the net quantity, the nutritional information, the date marking and the veg or non-veg mark. A loose product sold from a bin is not required to carry the full label, so you cannot compare it in the same way. If you care about additives and allergens, buy a packaged product with a readable label or ask the seller for the source.",
+      "benefit": "The FSSAI Labelling and Display Regulations, 2020 require the mandatory declarations on a packaged food label, and the Legal Metrology (Packaged Commodities) Rules, 2011 add the MRP and quantity. A loose product must still be safe and not misbranded, but the full nutritional panel is not required. The FSSAI can act on a mislabelled or unsafe product. A packaged product with a damaged or missing label is a risk.",
+      "cost": "No cost. Read the label and compare the per-100 g values, not the front-of-pack claim.",
+      "caveats": "A 'no added sugar' claim does not mean no sugar. A 'natural' claim is not a nutritional claim. A loose product with no date is a freshness risk.",
+      "sources": "Food Safety and Standards Authority of India, labelling. <https://www.fssai.gov.in/>; Department of Consumer Affairs, Legal Metrology. <https://consumeraffairs.nic.in/>; Food Safety and Standards Act, 2006. <https://www.indiacode.nic.in/>"
+    },
+    "5-39": {
+      "title": "Insure only the losses your savings cannot absorb; use an emergency fund for the small ones",
+      "inPlainWords": "Insurance is for a loss that would wreck your finances, not for every small expense. Buy health cover, term life cover if someone depends on your income, and motor third-party cover because the law requires it. Pay small repairs, a broken phone or a routine dental bill from an emergency fund. A policy with a low deductible and a high premium can cost more than the risk it covers.",
+      "benefit": "A health insurance policy and a term life policy transfer a catastrophic risk to the insurer. The IRDAI regulates the products and the claim process, and a policyholder has a grievance route. The Motor Vehicles Act, 1988 requires at least third-party cover. An emergency fund of three to six months of expenses in a liquid account covers the small shocks and reduces the temptation to borrow.",
+      "cost": "A premium is a real cost; compare the cover, the waiting period and the exclusions, not only the price. An emergency fund earns a modest interest.",
+      "caveats": "A policy excludes pre-existing conditions for a waiting period. A low premium can mean a high deductible or a narrow network. Do not cancel a health policy to save a small premium.",
+      "sources": "Insurance Regulatory and Development Authority of India. <https://irdai.gov.in/>; Policyholders' education. <https://policyholder.gov.in/>; Motor Vehicles Act, 1988. <https://www.indiacode.nic.in/>; Reserve Bank of India, financial literacy. <https://www.rbi.org.in/>"
+    },
+    "5-46": {
+      "title": "Self-employed? Build a pension with NPS, PPF or EPF — there is no single 'minimum bracket' trick",
+      "inPlainWords": "A self-employed person has no employer pension. The main routes are the National Pension System, the Public Provident Fund and, for a covered establishment, the EPF. The NPS gives a tax deduction under section 80CCD(1B), the PPF is a safe long-term saving, and the EPF is available only through an eligible employer. Start early and contribute regularly; a last-minute contribution buys less pension.",
+      "benefit": "The NPS, the PPF and the EPF have different contribution, lock-in, return and tax rules. The PFRDA regulates the NPS, and the PPF is a government-backed small-saving scheme. A self-employed person can open an NPS tier-I account and choose the allocation; the PPF has a 15-year term that can be extended. The EPF requires an establishment covered by the EPF Act. The right mix depends on age, risk and liquidity.",
+      "cost": "The NPS charges a fund-management fee; the PPF has a low interest rate but no market risk. The contribution is the main cost.",
+      "caveats": "The tax rules and the contribution limits change. An NPS annuity is taxable in part. Do not put all your retirement money in one product. Check the PFRDA and the PPF rules.",
+      "sources": "Pension Fund Regulatory and Development Authority. <https://www.pfrda.org.in/>; National Pension System. <https://www.npscra.nsdl.co.in/>; National Savings Institute, PPF. <https://www.nsiindia.gov.in/>; Employees' Provident Fund Organisation. <https://www.epfo.gov.in/>"
+    },
+    "5-47": {
+      "title": "Inspect a new vehicle before delivery and keep the invoice, warranty and RTO papers",
+      "inPlainWords": "Before you take delivery, inspect the paint, the tyres, the odometer, the lights and the spare wheel, and check that the VIN matches the invoice. Keep the invoice, the warranty booklet, the insurance and the registration papers. A defect in the first months is a warranty claim; a major defect can be a consumer complaint. Do not accept a vehicle with a repaired panel or a mismatched VIN.",
+      "benefit": "The Consumer Protection Act, 2019 covers a manufacturing defect and a deficient service. The Motor Vehicles Act, 1988 and the Central Motor Vehicles Rules require a valid registration and insurance. The warranty is a contract term, and a refusal to honour it can be a consumer complaint. A pre-delivery inspection (PDI) report signed by the dealer is evidence. The RTO registration and the VIN should match.",
+      "cost": "No cost to inspect. A professional PDI costs a small fee and can reveal a repaired vehicle.",
+      "caveats": "A 'zero kilometre' claim can be false; check the odometer and the manufacturing date. Do not sign the delivery note before the inspection. A used car needs a different check.",
+      "sources": "Consumer Protection Act, 2019. <https://consumeraffairs.nic.in/>; Ministry of Road Transport and Highways. <https://morth.nic.in/>; National Consumer Helpline. <https://consumerhelpline.gov.in/>"
+    },
+    "5-49": {
+      "title": "At a car dealership, refuse unauthorised 'financial service' fees and check every line of the invoice",
+      "inPlainWords": "A car dealer may charge for the vehicle, GST, registration, insurance and an optional accessory, but it cannot add an undisclosed 'financial service' fee or force you to buy insurance or a loan from it. Ask for a written break-up before you pay, and compare the loan terms with your bank. A forced add-on can be an unfair trade practice under the Consumer Protection Act, 2019.",
+      "benefit": "The Consumer Protection Act, 2019 prohibits an unfair trade practice and a restrictive trade practice. The RBI's fair-practice rules apply to a loan, and the IRDAI rules apply to insurance; a lender or insurer cannot be forced on you. The Motor Vehicles Act, 1988 requires the registration and the third-party insurance. A written quotation and the invoice are the evidence. A dealer cannot retain the registration certificate for an add-on.",
+      "cost": "No cost to ask. A loan from your bank may be cheaper than the dealer's offer.",
+      "caveats": "A genuine service fee should be disclosed and agreed. A 'discount' can hide a higher interest rate. Do not sign a blank delivery note or a loan form.",
+      "sources": "Consumer Protection Act, 2019. <https://consumeraffairs.nic.in/>; Reserve Bank of India, fair practices. <https://www.rbi.org.in/>; Insurance Regulatory and Development Authority of India. <https://irdai.gov.in/>; Ministry of Road Transport and Highways. <https://morth.nic.in/>"
+    },
+    "5-4": {
+      "sources": "Telecom Regulatory Authority of India. <https://trai.gov.in/>; Department of Telecommunications. <https://dot.gov.in/>; Consumer Protection Act, 2019. <https://consumeraffairs.nic.in/>"
+    },
+    "5-7": {
+      "sources": "Reserve Bank of India, credit cards and loans. <https://www.rbi.org.in/>; Consumer Protection Act, 2019. <https://consumeraffairs.nic.in/>"
+    },
+    "5-22": {
+      "sources": "Consumer Protection Act, 2019. <https://consumeraffairs.nic.in/>; Reserve Bank of India. <https://www.rbi.org.in/>; Insolvency and Bankruptcy Board of India. <https://ibbi.gov.in/>"
+    },
+    "5-23": {
+      "sources": "Consumer Protection Act, 2019. <https://consumeraffairs.nic.in/>; Consumer Protection (E-Commerce) Rules, 2020. <https://consumeraffairs.nic.in/>"
+    },
+    "5-25": {
+      "sources": "Insurance Regulatory and Development Authority of India. <https://irdai.gov.in/>; Policyholders' education. <https://policyholder.gov.in/>"
+    },
+    "5-27": {
+      "sources": "Reserve Bank of India, financial literacy. <https://www.rbi.org.in/>; Securities and Exchange Board of India, investor education. <https://www.sebi.gov.in/>"
+    },
+    "5-28": {
+      "sources": "Reserve Bank of India, home loans. <https://www.rbi.org.in/>; National Housing Bank. <https://nhb.org.in/>"
+    },
+    "5-29": {
+      "sources": "Consumer Protection Act, 2019. <https://consumeraffairs.nic.in/>; Consumer Protection (E-Commerce) Rules, 2020. <https://consumeraffairs.nic.in/>"
+    },
+    "5-30": {
+      "sources": "Consumer Protection Act, 2019. <https://consumeraffairs.nic.in/>; Consumer Protection (E-Commerce) Rules, 2020. <https://consumeraffairs.nic.in/>"
+    },
+    "5-33": {
+      "sources": "Consumer Protection Act, 2019. <https://consumeraffairs.nic.in/>; Bureau of Indian Standards. <https://www.bis.gov.in/>"
+    },
+    "5-35": {
+      "sources": "Consumer Protection Act, 2019. <https://consumeraffairs.nic.in/>; Central Consumer Protection Authority. <https://ccpa.gov.in/>"
+    },
+    "5-40": {
+      "sources": "Insurance Regulatory and Development Authority of India. <https://irdai.gov.in/>; Policyholders' education. <https://policyholder.gov.in/>"
+    },
+    "5-42": {
+      "sources": "Reserve Bank of India. <https://www.rbi.org.in/>; Insurance Regulatory and Development Authority of India. <https://irdai.gov.in/>"
+    },
+    "5-44": {
+      "sources": "Insurance Act, 1938. <https://www.indiacode.nic.in/>; Insurance Regulatory and Development Authority of India. <https://irdai.gov.in/>"
+    }
+  }
+}

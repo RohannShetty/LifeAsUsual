@@ -1,0 +1,28 @@
+{
+  "tips": {
+    "17-5": {
+      "title": "Avoid 'investment-based' senior-care schemes that demand a large upfront payment",
+      "inPlainWords": "A scheme that asks an older person to pay a large deposit for lifetime care, a membership card or a 'guaranteed' return is a credit and fraud risk. India has no regulator for a prepaid senior-care deposit. The safe routes are a registered senior-living facility with a written contract, the Senior Citizens' Savings Scheme, and the Maintenance and Welfare of Parents and Senior Citizens Act, 2007. Do not sign over property for a promise of care.",
+      "benefit": "The Maintenance and Welfare of Parents and Senior Citizens Act, 2007 allows a senior citizen to claim maintenance from a child or a relative and provides for a tribunal. The Senior Citizens' Savings Scheme is a government small-saving product. A senior-living facility should be a registered entity with a written agreement, a clear refund clause and a complaint route. The RBI and SEBI have warned against unauthorised deposit and investment schemes.",
+      "cost": "A legitimate facility charges a monthly fee and a refundable deposit; a 'guaranteed return' scheme is a red flag.",
+      "caveats": "A 'lifetime care' promise is only as good as the company. A transfer of property for care should be a registered deed with a life interest. Take a lawyer and a family member to the signing.",
+      "sources": "Maintenance and Welfare of Parents and Senior Citizens Act, 2007. <https://www.indiacode.nic.in/>; Ministry of Social Justice and Empowerment. <https://socialjustice.gov.in/>; Reserve Bank of India, unauthorised schemes. <https://www.rbi.org.in/>; Securities and Exchange Board of India. <https://www.sebi.gov.in/>"
+    },
+    "17-7": {
+      "title": "For a bedridden or severely disabled elder at home, ask the scheme and the district for home-based care",
+      "inPlainWords": "India has no single 'home care' benefit, but there are routes: PM-JAY for eligible households, ESIC for insured workers, the state health department's palliative-care and home-care programmes, and the district disability office for an assessment and a certificate. Ayushman Arogya Mandir and ASHA workers can visit. Ask the district health officer what home-based palliative care exists.",
+      "benefit": "PM-JAY covers hospitalisation and some packages; the state health department may run home-based palliative care through medical colleges and NGOs. The Rights of Persons with Disabilities Act, 2016 provides for a disability certificate, an assessment and some concessions. ESIC provides medical benefit to insured persons and dependants. The National Programme for Health Care of the Elderly provides geriatric services at some district hospitals.",
+      "cost": "PM-JAY is free for eligible households. A private home-nursing service is paid.",
+      "caveats": "A disability certificate is issued after an assessment by a medical board; it is not automatic. A home-care NGO should be verified. Keep the treatment records.",
+      "sources": "National Health Authority, PM-JAY. <https://nha.gov.in/>; Department of Empowerment of Persons with Disabilities. <https://depwd.gov.in/>; Ministry of Health and Family Welfare, elderly care. <https://mohfw.gov.in/>; Employees' State Insurance Corporation. <https://esic.gov.in/>"
+    },
+    "17-9": {
+      "title": "If cataract is affecting walking safely, get an eye assessment; surgery is free in a government hospital",
+      "inPlainWords": "A cataract that makes walking or reading unsafe should be assessed by an ophthalmologist. The National Programme for Control of Blindness and Visual Impairment provides free cataract surgery at government hospitals and through camp-based programmes in many districts. If both eyes are affected, the surgeon usually operates on one eye first. Do not wait until the cataract is 'ripe'.",
+      "benefit": "The National Programme for Control of Blindness and Visual Impairment funds cataract surgery and screening at district hospitals and vision centres. A government hospital provides a free intraocular lens; a private hospital charges. The surgery is usually day-care, and the first eye is operated before the second. An untreated cataract can lead to falls and a loss of independence.",
+      "cost": "Free at a government hospital under the programme; about ₹15,000–₹40,000 per eye in a private hospital, depending on the lens.",
+      "caveats": "The waiting period varies by district. A 'free' camp should be a government or a registered NGO camp. Bring the Aadhaar or another ID for the hospital record.",
+      "sources": "National Programme for Control of Blindness and Visual Impairment. <https://npcbvi.gov.in/>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>; All India Institute of Medical Sciences, ophthalmology. <https://www.aiims.edu/>"
+    }
+  }
+}

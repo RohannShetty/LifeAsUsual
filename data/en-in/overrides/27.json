@@ -1,0 +1,36 @@
+{
+  "tips": {
+    "27-11": {
+      "title": "Check your maternity cover before pregnancy: ESIC, PM-JAY or a state scheme may pay for the delivery",
+      "inPlainWords": "India has no single maternity insurance for everyone. An insured worker under ESIC gets maternity benefit and medical care; an eligible household under PM-JAY gets hospital cover; some states run a maternity scheme. A private policy may have a waiting period. Check the cover, the empanelled hospital and the documents before you conceive, not during labour.",
+      "benefit": "The ESIC maternity benefit includes a cash benefit for the insured woman and medical treatment. PM-JAY covers maternity and newborn care for eligible households at empanelled hospitals. The Pradhan Mantri Matru Vandana Yojana gives a cash benefit to an eligible woman for the first living child. A private health policy may cover maternity after a waiting period. The National Health Mission runs free delivery services at public facilities.",
+      "cost": "ESIC and PM-JAY are contribution or eligibility based; a public facility is free. A private policy's premium and waiting period apply.",
+      "caveats": "A policy bought after conception may exclude the pregnancy. A cashless claim needs pre-authorisation. Keep the antenatal records and the scheme card.",
+      "sources": "Employees' State Insurance Corporation. <https://esic.gov.in/>; National Health Authority, PM-JAY. <https://nha.gov.in/>; Ministry of Women and Child Development, PMMVY. <https://wcd.gov.in/>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>"
+    },
+    "27-12": {
+      "title": "Get the birth registered and the certificate early; the hospital gives the birth report and the registrar issues the certificate",
+      "inPlainWords": "The hospital reports the birth to the local registrar under the Registration of Births and Deaths Act, 1969, and the family can apply for the birth certificate. Register within 21 days to avoid a late fee. Decide the baby's name before the registration if the state requires it. The birth certificate is needed for the Aadhaar, the school admission and the passport.",
+      "benefit": "The 1969 Act requires the birth to be registered within 21 days; a late registration needs the registrar's permission and a fee. The hospital issues a birth report, and the municipal registrar issues the certificate. A name can be added later in some states. The certificate is the basis for the Aadhaar enrolment and the school record.",
+      "cost": "The registration fee is small; a late fee applies after 21 days.",
+      "caveats": "Check the spelling of the name and the parents' details before you leave the registrar. A correction needs an affidavit and a fee. Do not pay an agent to 'fast-track' a birth certificate.",
+      "sources": "Registration of Births and Deaths Act, 1969. <https://www.indiacode.nic.in/>; Ministry of Home Affairs, civil registration. <https://crsorgi.gov.in/>; Unique Identification Authority of India. <https://uidai.gov.in/>"
+    },
+    "27-14": {
+      "title": "Add the newborn to your health cover early: PM-JAY or ESIC can cover the baby without waiting for Aadhaar",
+      "inPlainWords": "A newborn can be covered under PM-JAY or ESIC as a dependant, usually without an Aadhaar of their own. The mother's card and the birth certificate are enough for the initial enrolment; the Aadhaar can be added later. Do not wait for the birth registration to be complete before you ask the scheme office. A delay can leave the baby uninsured for the first weeks.",
+      "benefit": "PM-JAY covers the newborn as part of the eligible household, and the scheme's guidelines allow enrolment with the mother's card and the birth record. ESIC covers the insured person's dependants, including a newborn. The National Health Mission's public facilities provide newborn care. The Aadhaar is not mandatory for a newborn's emergency treatment.",
+      "cost": "PM-JAY is free for an eligible household. ESIC is contribution based.",
+      "caveats": "The enrolment process differs by state. A private policy may have a waiting period for a newborn. Keep the birth certificate and the mother's card.",
+      "sources": "National Health Authority, PM-JAY. <https://nha.gov.in/>; Employees' State Insurance Corporation. <https://esic.gov.in/>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>"
+    },
+    "27-15": {
+      "title": "Register the birth with the municipal registrar within 21 days — not at a police station",
+      "inPlainWords": "A birth is registered with the local municipal registrar under the Registration of Births and Deaths Act, 1969, not with the police. The hospital usually reports the birth; the family applies for the certificate. If the birth is at home, the family must report it to the registrar. Register within 21 days to avoid a late fee and a longer process.",
+      "benefit": "The 1969 Act requires registration within 21 days. The hospital's birth report and the parents' identity proof are the main documents. A late registration needs the registrar's permission and a fee. The certificate is required for the Aadhaar, the school admission and the passport. A police station has no role in a normal birth registration.",
+      "cost": "The fee is small; a late fee applies after 21 days.",
+      "caveats": "A home birth needs a witness and a medical certificate where available. Check the name spelling. A correction needs an affidavit.",
+      "sources": "Registration of Births and Deaths Act, 1969. <https://www.indiacode.nic.in/>; Ministry of Home Affairs, civil registration. <https://crsorgi.gov.in/>; Unique Identification Authority of India. <https://uidai.gov.in/>"
+    }
+  }
+}

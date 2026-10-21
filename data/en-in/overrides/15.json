@@ -1,0 +1,28 @@
+{
+  "tips": {
+    "15-7": {
+      "title": "For a second-hand home, route the payment through a bank and do not hand cash to the agent",
+      "inPlainWords": "India does not require an escrow for a resale flat, but a large cash payment to an agent is how buyers lose money. Pay by bank transfer to the seller's account, make the payment against the registered sale deed, and keep the bank record. For a new project, the RERA Act, 2016 requires the developer to keep 70% of the project receipts in a separate escrow account.",
+      "benefit": "The Real Estate (Regulation and Development) Act, 2016 requires a developer to deposit 70% of the amounts realised from buyers in a separate project account, and the state RERA authority can act on a violation. A resale transaction is governed by the Transfer of Property Act, 1882 and the Registration Act, 1908; the sale deed must be registered. A bank transfer and a receipt are evidence of payment. A cash payment without a receipt is hard to prove.",
+      "cost": "Stamp duty and registration fees are the main cost. A lawyer's title check is worth the fee.",
+      "caveats": "An agent's 'token' is not a legal title. Do not pay before the title search and the encumbrance certificate. A power of attorney sale needs a registered power of attorney.",
+      "sources": "Real Estate (Regulation and Development) Act, 2016. <https://www.indiacode.nic.in/>; Transfer of Property Act, 1882. <https://www.indiacode.nic.in/>; Registration Act, 1908. <https://www.indiacode.nic.in/>; Reserve Bank of India. <https://www.rbi.org.in/>"
+    },
+    "15-9": {
+      "title": "India has no household-register bar on rural housing, but land-purchase rules depend on the state",
+      "inPlainWords": "India has no household-registration system that stops an urban resident from renting a rural house. Buying agricultural land, however, is restricted in many states: a non-agriculturist may need permission, and some states bar outsiders altogether. A long lease or a rent agreement is the safer route. Check the state land-revenue law before you pay.",
+      "benefit": "Land is a state subject. Many states restrict the purchase of agricultural land by a non-agriculturist, and some require the buyer to be a resident. The Registration Act, 1908 requires a sale deed for immovable property to be registered, and the state stamp duty applies. A lease for more than a year should be registered. A village house on non-agricultural land may be bought, but the title and the land-use classification must be checked.",
+      "cost": "A lawyer and a revenue-record check cost money; a bad purchase costs more.",
+      "caveats": "A 'farmhouse' on agricultural land may not be a lawful residential plot. A power-of-attorney transfer is not a substitute for a registered sale deed. Check the encumbrance certificate and the mutation record.",
+      "sources": "Registration Act, 1908. <https://www.indiacode.nic.in/>; Transfer of Property Act, 1882. <https://www.indiacode.nic.in/>; Ministry of Rural Development. <https://rural.nic.in/>"
+    },
+    "15-16": {
+      "title": "For a first home, compare a bank home loan, an EPF housing advance and a PMAY subsidy before you sign",
+      "inPlainWords": "India has no single 'provident fund plus commercial' mortgage product. The routes are a bank or housing-finance company loan, an EPF advance for a house purchase or construction, and the Pradhan Mantri Awas Yojana credit-linked subsidy for an eligible first-time buyer. Compare the interest rate, the processing fee, the LTV and the prepayment terms. Do not sign a blank loan agreement.",
+      "benefit": "The EPF Scheme, 1952 allows a member to take an advance for a house purchase or construction, subject to the service and cost conditions. The PMAY credit-linked subsidy is available through participating lenders for an eligible beneficiary, with income and carpet-area limits. A bank loan is governed by the RBI's fair-practice code. The loan agreement must state the rate, the fees and the prepayment terms. The title and the encumbrance certificate are required.",
+      "cost": "Processing fees, stamp duty and registration are separate from the interest. A PMAY subsidy is credited to the loan account.",
+      "caveats": "A 'teaser' rate can reset higher. A prepayment penalty may apply on a fixed-rate loan. The EPF advance reduces the retirement corpus. Check the PMAY eligibility before you pay a booking amount.",
+      "sources": "Reserve Bank of India, home loans. <https://www.rbi.org.in/>; National Housing Bank. <https://nhb.org.in/>; Employees' Provident Fund Organisation. <https://www.epfo.gov.in/>; Ministry of Housing and Urban Affairs, PMAY. <https://pmaymis.gov.in/>"
+    }
+  }
+}

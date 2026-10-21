@@ -44,7 +44,7 @@ export const guidesData: GuideItem[] = [
             tipRef: { chapter: 19, tip: 7, label: 'Severance in agreement' }
           },
           {
-            text: 'Turn on audio recording directly when entering severance meetings. Under mainland Chinese law, you do not need the other party\'s consent to record conversations in which you personally participate.',
+            text: 'Turn on audio recording when entering a severance meeting. In India you may record a conversation you are part of, and a genuine recording can be used as evidence; do not record a conversation you are not part of.',
             tipRef: { chapter: 8, tip: 41, label: 'Audio recording in negotiations' }
           },
           {
@@ -219,7 +219,7 @@ export const guidesData: GuideItem[] = [
             tipRef: { chapter: 16, tip: 9, label: 'Sustained urate-lowering therapy' }
           },
           {
-            text: 'Han Chinese patients should consult their doctor regarding HLA-B*5801 genetic testing prior to initiating allopurinol to avoid severe cutaneous reactions.',
+            text: 'People of Southeast Asian ancestry, and anyone with kidney disease, should ask their doctor about HLA-B*5801 testing before starting allopurinol to reduce the risk of a severe skin reaction.',
             tipRef: { chapter: 16, tip: 9, label: 'HLA-B*5801 screening before allopurinol' }
           },
           {
@@ -315,7 +315,7 @@ export const guidesData: GuideItem[] = [
   {
     slug: 'checklist-before-and-after-childbirth',
     title: 'Administrative Tasks Before and After Childbirth',
-    subtitle: 'A chronological guide to records, insurance claims, hukou registration, and vaccines',
+    subtitle: 'A chronological guide to records, birth registration, insurance claims, and vaccines',
     summary: 'A complete administrative timeline spanning prenatal hospital establishment, birth certification, newborn medical insurance, and mandatory childhood immunizations.',
     readingTime: '5 min read',
     sourceFile: 'guide.md',
@@ -362,8 +362,8 @@ export const guidesData: GuideItem[] = [
         heading: 'First Month After Birth',
         items: [
           {
-            text: 'Register the infant\'s household registration (Hukou registration) at the local police station (local police station) using the birth certificate and parents\' household register.',
-            tipRef: { chapter: 20, tip: 3, label: 'Household registration (Hukou)' }
+            text: 'Register the infant\'s birth with the local municipal registrar, using the birth certificate and the parents\' identity and address proof.',
+            tipRef: { chapter: 20, tip: 3, label: 'Birth registration' }
           },
           {
             text: 'Enroll the infant in Urban and Rural Resident Basic Medical Insurance (Resident Basic Medical Insurance) within 90 days of birth to enable retroactive reimbursement of birth-related hospital expenses.',
@@ -482,7 +482,7 @@ export const guidesData: GuideItem[] = [
             tipRef: { chapter: 13, tip: 12, label: 'Small-denomination physical cash reserve' }
           },
           {
-            text: 'Keep waterproof sealed pouches containing physical copies of national ID cards, household registration registers (Hukou), property deeds, and medical cards.',
+            text: 'Keep waterproof sealed pouches containing physical copies of identity cards, birth and marriage certificates, property deeds, and medical cards.',
             tipRef: { chapter: 13, tip: 13, label: 'Waterproof document archive' }
           }
         ]
@@ -535,7 +535,7 @@ export const guidesData: GuideItem[] = [
         heading: 'Legal Red Lines & Restrictive Covenants',
         items: [
           {
-            text: 'Scrutinize non-compete agreements. In mainland China, non-competes legally apply only to senior executives, senior technical personnel, and those bound by confidentiality obligations.',
+            text: 'Scrutinize non-compete agreements. In India, a clause that restrains you from working after your employment ends is generally void under section 27 of the Indian Contract Act, 1872; confidentiality and non-solicitation clauses can still be enforced.',
             tipRef: { chapter: 11, tip: 12, label: 'Statutory non-compete scope' }
           },
           {
@@ -694,7 +694,7 @@ export const guidesData: GuideItem[] = [
     slug: 'licenses-for-building-a-platform',
     title: 'What Licenses and Permits Are Needed to Run an Online Platform',
     subtitle: 'From basic ICP filing to EDI commercial permits, public security records, and multi-tier cybersecurity protection',
-    summary: 'A structured regulatory guide for developers, founders, and engineers operating internet services in mainland China. Distinguishes non-commercial filing from mandatory commercial licenses.',
+    summary: 'A structured regulatory guide for developers, founders and engineers operating internet services in India. Covers intermediary duties, data protection, payments and sector licences.',
     readingTime: '6 min read',
     sourceFile: 'guide.md',
     sections: [
@@ -702,11 +702,11 @@ export const guidesData: GuideItem[] = [
         heading: 'Core Regulatory Requirements for Every Website',
         items: [
           {
-            text: 'Non-commercial ICP Filing (ICP Filing): Mandated for any website or API hosted on mainland Chinese servers. Requires registered domain name and verifiable corporate or personal identity.',
+            text: 'Intermediary duties: India does not require an ICP filing. A platform that hosts user content should publish terms of use, appoint a grievance officer, and follow the IT Rules, 2021 to keep its safe harbour under section 79 of the IT Act, 2000.',
             tipRef: { chapter: 26, tip: 1, label: 'Basic ICP filing requirement' }
           },
           {
-            text: 'Public Security Filing (Public Security Filing): Must be completed within 30 days of site launch via the National Public Security Bureau platform.',
+            text: 'Data protection: If you process personal data, the Digital Personal Data Protection Act, 2023 requires a lawful basis, a notice and reasonable security safeguards. A significant data fiduciary has additional duties.',
             tipRef: { chapter: 26, tip: 2, label: '30-day public security filing' }
           },
           {
@@ -768,10 +768,10 @@ export const guidesData: GuideItem[] = [
         }
       },
       {
-        heading: 'Legal Protections: Civil Code Article 184',
+        heading: 'Legal Protections: Motor Vehicles Act section 134A',
         prose: [
-          'Under Article 184 of the Civil Code of the People\'s Republic of China (the "Good Samaritan clause"): "A person who voluntarily undertakes emergency rescue and causes harm to the recipient shall not bear civil liability."',
-          'While Article 184 shields the rescuer from eventual liability in court, it does not prevent the rescuer from being questioned, summoned, or entangled in preliminary investigations before video footage is examined.'
+          'Under section 134A of the Motor Vehicles Act, 1988, a Good Samaritan who helps a road-accident victim in good faith shall not be liable for any civil or criminal action for any injury or harm caused while rendering emergency care.',
+          'The protection reduces the legal risk of helping, but it does not remove the need to report the accident and to give a truthful account to the police.'
         ]
       },
       {

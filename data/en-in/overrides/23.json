@@ -1,0 +1,27 @@
+{
+  "tips": {
+    "23-9": {
+      "title": "Use a government training subsidy first; do not pay a commercial course before you check what is free",
+      "inPlainWords": "India runs free or subsidised skill training through the Pradhan Mantri Kaushal Vikas Yojana, the National Skill Development Corporation and state skill missions. A commercial course may be good, but check the government option and the placement record first. A 'guaranteed job' course is a red flag. Ask for the fee, the duration, the certification and the placement data in writing.",
+      "benefit": "PMKVY funds short-term skill training and certification through empanelled training partners. The NSDC and the state skill development missions run sector-specific courses. The National Skill Development Corporation's portal lists the courses and the training partners. A government course may be free for an eligible candidate. A private course can add value, but the fee and the placement claim should be verified.",
+      "cost": "PMKVY is free for an eligible candidate. A private course varies; compare the total fee, not the monthly instalment.",
+      "caveats": "A training partner's '100% placement' claim should be backed by names and salaries. A loan for a course is a debt; read the terms. Check the NSDC and the state mission before you sign.",
+      "sources": "Ministry of Skill Development and Entrepreneurship. <https://www.msde.gov.in/>; Pradhan Mantri Kaushal Vikas Yojana. <https://www.pmkvyofficial.org/>; National Skill Development Corporation. <https://www.nsdcindia.org/>"
+    },
+    "23-22": {
+      "inPlainWords": "Do not hire an agent to handle a degree evaluation, a credential assessment or an application, and never buy a ghostwritten paper or a fake certificate. A forged document can lead to rejection, a ban and a criminal case under the BNS, 2023. Use the official body: the university, the Association of Indian Universities, the UGC or the embassy. Keep every original.",
+      "benefit": "The BNS, 2023 punishes forgery, cheating and using a forged document. A university can cancel an admission or a degree obtained on a false document. The UGC and the AICTE publish the recognised institutions and the rules. An official transcript and a verified certificate are the only reliable route. An agent cannot create a recognised degree.",
+      "cost": "An official evaluation fee is modest. A fake document costs far more.",
+      "caveats": "A 'backdoor' admission is a fraud. Do not share your login or your documents with an agent you do not know. A verification can take weeks; plan ahead.",
+      "sources": "University Grants Commission. <https://www.ugc.gov.in/>; Association of Indian Universities. <https://www.aiu.ac.in/>; Bharatiya Nyaya Sanhita, 2023. <https://www.indiacode.nic.in/>"
+    },
+    "23-25": {
+      "title": "Before a PhD, check whether the job you want actually requires one — and what it pays in India",
+      "inPlainWords": "A PhD is a research apprenticeship, not a guaranteed job. In India, a permanent academic post usually needs a PhD plus the UGC-NET or a state eligibility test, and the number of posts is small. Outside academia, a PhD helps in research and development, policy and some data roles, but it can delay earnings. Talk to people in the job you want before you enrol.",
+      "benefit": "The UGC regulations set the minimum qualification for an assistant professor, and the UGC-NET or a state test is usually required. A PhD takes four to six years, and a fellowship (JRF/SRF) is modest. The academic job market is competitive; a PhD in a field with an industry demand has a wider route. A master's plus experience may be enough for many roles.",
+      "cost": "The opportunity cost is the salary you forgo for four to six years. A fellowship may cover the fees and a basic stipend.",
+      "caveats": "A PhD from an unrecognised institution may not count. A guide's reputation and the department's placement record matter. Do not enrol only to postpone a job decision.",
+      "sources": "University Grants Commission. <https://www.ugc.gov.in/>; National Testing Agency, UGC-NET. <https://ugcnet.nta.ac.in/>; Ministry of Education. <https://www.education.gov.in/>"
+    }
+  }
+}

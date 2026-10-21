@@ -3,8 +3,8 @@
   "type": "module",
   "version": "1.0.0",
   "scripts": {
-    "precheck": "tsx scripts/build-india-data.ts",
-    "predev": "tsx scripts/build-india-data.ts",
+    "precheck": "tsx scripts/build-india-data.ts && tsx scripts/verify-india.ts",
+    "predev": "tsx scripts/build-india-data.ts && tsx scripts/verify-india.ts",
     "dev": "astro dev",
     "build": "astro build && pagefind --site dist",
     "preview": "astro preview",
@@ -14,8 +14,12 @@
     "verify": "tsx scripts/verify.ts",
     "check": "astro check",
     "pagefind": "pagefind --site dist",
-    "prebuild": "tsx scripts/build-india-data.ts",
-    "india:data": "tsx scripts/build-india-data.ts"
+    "prebuild": "tsx scripts/build-india-data.ts && tsx scripts/verify-india.ts",
+    "india:data": "tsx scripts/build-india-data.ts",
+    "india:worklist": "tsx scripts/build-india-worklist.ts",
+    "verify:india": "tsx scripts/verify-india.ts",
+    "scan:terms": "node scripts/scan-dist-terms.mjs",
+    "test:india": "playwright test tests/india-rewrite.spec.ts"
   },
   "dependencies": {
     "astro": "^5.0.0",

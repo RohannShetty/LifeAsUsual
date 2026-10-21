@@ -1,0 +1,46 @@
+{
+  "tips": {
+    "1-11": {
+      "cost": "A set of window guards or child-safety locks costs about ₹500–₹1,500 to buy and install, and the job takes about ten minutes."
+    },
+    "1-14": {
+      "cost": "The hepatitis B test costs about ₹500–₹1,500 per person. For an adult without antibodies, the three-dose vaccine course costs about ₹1,500–₹4,000 in total and is completed over six months."
+    },
+    "1-15": {
+      "cost": "A clinic visit and wound cleaning cost about ₹300–₹800. If a tetanus vaccine or immunoglobulin is needed, add about ₹1,000–₹5,000 depending on the product and the hospital."
+    },
+    "1-25": {
+      "title": "Call Tele-MANAS on 14416 if you are depressed or having suicidal thoughts; do not keep sleeping pills or pesticides at home",
+      "benefit": [
+        [
+          " Starting May 1, 2025, the 12356 helpline will be available nationwide in China, operating at least 18 hours each day.",
+          ""
+        ]
+      ],
+      "sources": "Zalsman G et al. (2016). Suicide prevention strategies revisited: 10-year systematic review. Lancet Psychiatry. <https://doi.org/10.1016/S2215-0366(16)30030-X>; Tele-MANAS, Ministry of Health and Family Welfare. <https://telemanas.mohfw.gov.in/>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>"
+    },
+    "1-27": {
+      "cost": "A routine urine test costs about ₹200–₹500, and an ultrasound of the urinary tract about ₹800–₹2,000. If the doctor advises a cystoscopy, it costs roughly ₹8,000–₹15,000 in a private hospital and less in a government hospital."
+    },
+    "1-31": {
+      "title": "If you have engaged in high-risk behaviour, get tested for HIV — government testing is free and confidential"
+    },
+    "1-37": {
+      "title": "When gambling leads to borrowing and persistent low mood, call Tele-MANAS on 14416, then hand your cards and payment passwords to a family member",
+      "benefit": [
+        [
+          " Starting May 1, 2025, China launched a nationwide mental health hotline at 12356, available at least 18 hours per day.",
+          ""
+        ]
+      ],
+      "sources": "Karlsson A, Håkansson A. (2018). Gambling disorder, increased mortality, suicidality, and associated comorbidity: A longitudinal nationwide register study. Journal of Behavioral Addictions, 7(4), 1091–1099. <https://doi.org/10.1556/2006.7.2018.112>; Karlsson A, Håkansson A. (2023). Corrigendum. Journal of Behavioral Addictions, 12(1), 302. <https://doi.org/10.1556/2006.2023.10000>; Tele-MANAS, Ministry of Health and Family Welfare. <https://telemanas.mohfw.gov.in/>"
+    },
+    "1-6": {
+      "inPlainWords": "Do not push an electric scooter or e-bike into a stairwell or lift, and do not charge it inside your home. A lithium-ion battery can catch fire within seconds and fill a stairwell with toxic smoke, cutting off your only escape route. Charge at a designated outdoor point, use the charger supplied with the vehicle, and never leave a battery charging overnight.",
+      "benefit": "The National Building Code and the state fire-safety rules require common areas and escape routes to stay clear. The BIS standard for lithium-ion batteries and chargers is a safety baseline; a cheap unbranded battery may not meet it. A charging fire in a lobby or stairwell is especially dangerous because smoke rises and the exit is blocked. Many apartment associations now ban indoor charging in their bye-laws.",
+      "cost": "No direct cost. The inconvenience is walking to the designated charging point. A BIS-certified charger and battery cost more than an unbranded one.",
+      "caveats": "Do not buy a modified battery or a generic charger. Do not charge a damaged battery. If a battery swells, heats up or smells, stop using it and take it to a service centre.",
+      "sources": "Bureau of Indian Standards, lithium-ion battery standards. <https://www.bis.gov.in/>; National Disaster Management Authority, fire safety. <https://ndma.gov.in/>; Ministry of Housing and Urban Affairs. <https://mohua.gov.in/>"
+    }
+  }
+}

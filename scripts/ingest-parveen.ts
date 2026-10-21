@@ -27,7 +27,7 @@ const EnglishTipSchema = z.object({
   evidenceGrade: z.enum(['A', 'B', 'C']),
   sources: z.string(),
   caveats: z.string(),
-  reviewStatus: z.enum(['source', 'draft']).optional(),
+  reviewStatus: z.enum(['source', 'draft', 'independently-checked', 'reviewed']).optional(),
 });
 
 export type EnglishTip = z.infer<typeof EnglishTipSchema>;
@@ -38,7 +38,7 @@ const EnglishChapterSchema = z.object({
   title: z.string(),
   intro: z.string(),
   edition: z.enum(['source', 'india']).optional(),
-  rewriteStatus: z.enum(['draft', 'reviewed']).optional(),
+  rewriteStatus: z.enum(['draft', 'checked', 'reviewed']).optional(),
   tips: z.array(EnglishTipSchema),
 });
 

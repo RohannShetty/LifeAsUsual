@@ -1,0 +1,20 @@
+{
+  "tips": {
+    "11-6": {
+      "title": "When you leave a job, hand back access and never delete data, leave a backdoor or change passwords",
+      "inPlainWords": "Your employer owns the systems and the data. Deleting a database, leaving a backdoor, changing an admin password or copying client data can be an offence under the IT Act, 2000 and the BNS, 2023, and a breach of your contract. Return the laptop, the tokens and the credentials, and keep only your own employment records.",
+      "benefit": "The IT Act, 2000 punishes unauthorised access, data damage and identity misuse. The BNS, 2023 covers mischief and criminal breach of trust. The employer can sue for loss and obtain an injunction. A former employee who keeps a backdoor can be prosecuted even without a profit motive. A written handover protects both sides.",
+      "cost": "No cost. Ask for a written handover checklist and keep a copy.",
+      "caveats": "Keep your own payslips and appointment letter; do not copy client data or source code. A non-disclosure agreement can survive resignation. If you find a security flaw, report it instead of testing it further.",
+      "sources": "Information Technology Act, 2000. <https://www.indiacode.nic.in/>; Bharatiya Nyaya Sanhita, 2023. <https://www.indiacode.nic.in/>; Ministry of Electronics and Information Technology. <https://www.meity.gov.in/>; CERT-In. <https://www.cert-in.org.in/>"
+    },
+    "11-8": {
+      "title": "Do not run your own programs on someone else's server or camera, and do not mine crypto on a company machine",
+      "inPlainWords": "Using a computer, server or camera you do not own without permission is unauthorised access under the IT Act, 2000. Installing a miner or a bot on a company machine can be data damage, theft of electricity and a breach of contract. Even a 'harmless' scan of a system you were not asked to test can be an offence.",
+      "benefit": "Section 66 of the IT Act, 2000 punishes unauthorised access and data damage, and section 43 allows civil damages. The BNS, 2023 covers mischief and theft of electricity. The employer can dismiss you and sue for the loss. A security researcher should work within a written scope and a safe-harbour policy.",
+      "cost": "No cost. Ask for written permission and a scope before any test. Do not install software on a machine you do not own.",
+      "caveats": "A public bug-bounty programme is a permission, but only within its scope. A 'read-only' scan can still be unauthorised access. Keep the permission in writing.",
+      "sources": "Information Technology Act, 2000. <https://www.indiacode.nic.in/>; CERT-In. <https://www.cert-in.org.in/>; Bharatiya Nyaya Sanhita, 2023. <https://www.indiacode.nic.in/>"
+    }
+  }
+}

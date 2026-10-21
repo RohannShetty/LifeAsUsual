@@ -41,6 +41,8 @@ interface Props {
 const { chapter, prevChapter, nextChapter } = Astro.props;
 const isCalm = calmChapters.includes(chapter.chapter);
 const isIndiaRewrite = chapter.edition === 'india';
+const rewriteStatus = (chapter as { rewriteStatus?: string }).rewriteStatus ?? 'draft';
+const isCheckedChapter = rewriteStatus === 'checked' || rewriteStatus === 'reviewed';
 ---
 
 <BaseLayout 
@@ -72,9 +74,13 @@ const isIndiaRewrite = chapter.edition === 'india';
 
   <article class="chapter-content">
     {isIndiaRewrite ? (
-      <aside class="rewrite-notice" id="india-rewrite-notice">
+      <aside class="rewrite-notice" id="india-rewrite-notice" data-rewrite-status={rewriteStatus}>
         <span class="rewrite-badge">IN</span>
-        <p><strong>India rewrite.</strong> This chapter has been rewritten for Indian law and practice. It is a draft pending legal review. <a href={resolvePath('/india/')}>Coverage and sources →</a></p>
+        {isCheckedChapter ? (
+          <p><strong>India rewrite.</strong> This chapter has been rewritten for Indian law and practice and checked against official Indian sources. Legal, medical and financial chapters stay pending named human review. <a href={resolvePath('/india/')}>Coverage and sources →</a></p>
+        ) : (
+          <p><strong>India rewrite.</strong> This chapter has been rewritten for Indian law and practice. It is a draft pending independent verification. <a href={resolvePath('/india/')}>Coverage and sources →</a></p>
+        )}
       </aside>
     ) : (
       <IndiaNotice id="india-disclaimer" />
@@ -86,7 +92,7 @@ const isIndiaRewrite = chapter.edition === 'india';
       <h1 class="chapter-main-title">{chapter.title}</h1>
       <p class="chapter-meta-line">
         {isIndiaRewrite
-          ? chapter.tips.length + ' tips rewritten for India; drafts pending legal review.'
+          ? chapter.tips.length + ' tips rewritten for India; ' + (isCheckedChapter ? 'checked against official Indian sources.' : 'drafts pending independent verification.')
           : chapter.tips.length + ' verified tips in this chapter. Each tip is an option, not an assignment.'}
       </p>
     </header>
