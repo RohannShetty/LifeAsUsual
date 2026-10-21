@@ -2,6 +2,8 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 const BANNED = /\b(China|Chinese|mainland|RMB|yuan|hukou|yibao|dibao|CNY)\b/i;
+const CJK = /[\u3000-\u303f\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff\uff00-\uffef]/;
+const FOREIGN_TERMS = /\b(NMPA|NHSA|SAMR|MOHRSS|CSCSE|CBIRC|NFRA|MIIT|SFDA|CNCA|AQSIQ|QDII|PRC|HuiFa|Yibaofa|Guobanfa|Caijin)\b|\b(State Council|Supreme People|procuratorate|hukou|yibao|dibao|guokao|zikao|chengkao|jubensha|Renminbi|WeChat|Alipay)\b/i;
 const args = process.argv.slice(2);
 const finalMode = args.includes('--final');
 
@@ -46,7 +48,7 @@ if (!files.length) {
 const hits = [];
 for (const file of files) {
   const text = fs.readFileSync(file, 'utf-8');
-  const match = text.match(BANNED);
+  const match = text.match(BANNED) || text.match(CJK) || text.match(FOREIGN_TERMS);
   if (match) hits.push(file + ' -> ' + match[0]);
 }
 

@@ -54,7 +54,14 @@ interface Chapter {
 }
 
 const BANNED = /\b(China|Chinese|mainland|RMB|yuan|hukou|yibao|dibao|CNY)\b/i;
-const BANNED_TERMS = ['China', 'Chinese', 'mainland', 'RMB', 'yuan', 'hukou', 'yibao', 'dibao', 'CNY'];
+
+// Any CJK character in a shipped India page is a hard failure.
+const CJK = /[\u3000-\u303f\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff\uff00-\uffef]/;
+
+// Chinese institutions, statutes and programmes that must never supply the
+// legal substance of an India tip. Word-boundary matching keeps ordinary
+// English words safe.
+const FOREIGN_TERMS = /\b(NMPA|NHSA|SAMR|MOHRSS|CSCSE|CBIRC|NFRA|MIIT|SFDA|CNCA|AQSIQ|QDII|PRC|HuiFa|Yibaofa|Guobanfa|Caijin)\b|\b(State Council|Supreme People|procuratorate|hukou|yibao|dibao|guokao|zikao|chengkao|jubensha|Renminbi|WeChat|Alipay)\b/i;
 
 // Official Indian hosts, plus WHO for international medical evidence. A host is
 // accepted when it is a suffix of the parsed URL hostname, so "notgov.in" and
@@ -197,6 +204,14 @@ for (const [key, meta] of Object.entries(manifest.chapters)) {
   if (fileTerm) {
     errors.push('Chapter ' + key + ' file contains banned term "' + fileTerm[0] + '"');
   }
+  const fileCjk = raw.match(CJK);
+  if (fileCjk) {
+    errors.push('Chapter ' + key + ' file contains CJK character');
+  }
+  const fileForeign = raw.match(FOREIGN_TERMS);
+  if (fileForeign) {
+    errors.push('Chapter ' + key + ' file contains foreign-jurisdiction term "' + fileForeign[0] + '"');
+  }
   for (const field of ['title', 'intro'] as const) {
     if (typeof chapter[field] === 'string' && BANNED.test(chapter[field] as string)) {
       errors.push('Chapter ' + key + ' ' + field + ' contains a banned term');
@@ -244,6 +259,13 @@ for (const [key, meta] of Object.entries(manifest.chapters)) {
     if (BANNED.test(JSON.stringify(tip))) {
       const hit = JSON.stringify(tip).match(BANNED);
       errors.push('Tip ' + tip.id + ' contains banned term "' + (hit ? hit[0] : '?') + '"');
+    }
+    if (CJK.test(JSON.stringify(tip))) {
+      errors.push('Tip ' + tip.id + ' contains a CJK character');
+    }
+    if (FOREIGN_TERMS.test(JSON.stringify(tip))) {
+      const hit = JSON.stringify(tip).match(FOREIGN_TERMS);
+      errors.push('Tip ' + tip.id + ' contains foreign-jurisdiction term "' + (hit ? hit[0] : '?') + '"');
     }
     if (typeof tip.sources !== 'string' || !/https?:\/\//i.test(tip.sources)) {
       errors.push('Tip ' + tip.id + ' has no source URL');
