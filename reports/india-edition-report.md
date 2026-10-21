@@ -44,6 +44,7 @@ Chapters 7 and 19 were written in an earlier pass; the remaining 32 were rewritt
 | Built-site term scan | `node scripts/scan-dist-terms.mjs --final` | PASS, 0 hits in 52 pages |
 | Playwright (4 viewports) | `npx playwright test` | 184 passed |
 | Internal links | `npm run check:links` | PASS, 2,234 links |
+| Production build under the Pages base | `BASE=/LifeAsUsual/ node scripts/check-links.mjs` | PASS, 2,234 links, 52 pages |
 
 ## 4. Verification status
 
@@ -84,6 +85,11 @@ titles that name a place and titles that do not; that is a consequence of the ga
   push adds `.github/workflows/india-verify.yml`. Pushing workflow files requires the `workflow`
   scope. Fix with `gh auth refresh -h github.com -s workflow`, then `git push origin master`.
   The Pages deploy workflow (`deploy.yml`) is unchanged by this edition.
+- The deployed artifact itself was validated locally: built with
+  `SITE=https://rohannshetty.github.io BASE=/LifeAsUsual/`, the term scan is clean and
+  `BASE=/LifeAsUsual/ node scripts/check-links.mjs` resolves all 2,234 links; chapters 1 and 19
+  were rendered from that build at 390x844 and 1440x900 with the checked badge and the Tier A
+  pending-review badge visible. Only the push and the live Pages run remain.
 
 ## 6. Rollback
 
