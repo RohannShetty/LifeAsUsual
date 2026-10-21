@@ -17,7 +17,7 @@ const manifestRows = Object.entries(manifest.chapters).map(([number, meta]) => (
 
 const draftRows = manifestRows.filter((row) => row.status === 'draft');
 const checkedRows = manifestRows.filter((row) => row.status === 'checked' || row.status === 'reviewed');
-const pendingHumanRows = checkedRows.filter((row) => row.humanReview !== 'signed-off');
+const pendingHumanRows = checkedRows.filter((row) => row.tier === 'A' && row.humanReview !== 'signed-off');
 const queuedRows = manifestRows
   .filter((row) => row.status === 'queued')
   .map((row) => ({
@@ -48,7 +48,7 @@ const queuedRows = manifestRows
         <span aria-hidden="true">·</span>
         <span>{queuedRows.length} queued</span>
         <span aria-hidden="true">·</span>
-        <span>{queuedRows.length > 0 ? 'Draft for review' : pendingHumanRows.length > 0 ? pendingHumanRows.length + ' Tier A chapters pending human review' : 'Verification complete'}</span>
+        <span>{queuedRows.length > 0 ? 'Draft for review' : pendingHumanRows.length > 0 ? pendingHumanRows.length + ' Tier A chapters await human review' : 'Verification complete'}</span>
       </div>
     </header>
 
