@@ -11,7 +11,7 @@ import type { EnglishChapter } from '../../../scripts/ingest-parveen';
 import { resolvePath } from '../../utils/paths';
 
 export async function getStaticPaths() {
-  const enAllPath = path.resolve('data/en/all-chapters.json');
+  const enAllPath = path.resolve('data/en-in/all-chapters.json');
   const chapters: EnglishChapter[] = JSON.parse(fs.readFileSync(enAllPath, 'utf-8'));
 
   return chapters.map((ch, index) => {
@@ -40,11 +40,12 @@ interface Props {
 
 const { chapter, prevChapter, nextChapter } = Astro.props;
 const isCalm = calmChapters.includes(chapter.chapter);
+const isIndiaRewrite = chapter.edition === 'india';
 ---
 
 <BaseLayout 
   title={`Chapter ${chapter.chapter}: ${chapter.title} - How To Live Better`}
-  description={`Read Chapter ${chapter.chapter}: ${chapter.title}. ${chapter.tips.length} verified life recommendations.`}
+  description={`Read Chapter ${chapter.chapter}: ${chapter.title}. ${chapter.tips.length} ${isIndiaRewrite ? 'India-rewritten draft' : 'verified'} life recommendations.`}
 >
   <div data-calm-chapter={isCalm ? "true" : "false"} class="chapter-page-root">
   <!-- Slim Sticky Chapter Header -->
@@ -70,14 +71,23 @@ const isCalm = calmChapters.includes(chapter.chapter);
   </aside>
 
   <article class="chapter-content">
-    <IndiaNotice id="india-disclaimer" />
+    {isIndiaRewrite ? (
+      <aside class="rewrite-notice" id="india-rewrite-notice">
+        <span class="rewrite-badge">IN</span>
+        <p><strong>India rewrite.</strong> This chapter has been rewritten for Indian law and practice. It is a draft pending legal review. <a href={resolvePath('/india/')}>Coverage and sources →</a></p>
+      </aside>
+    ) : (
+      <IndiaNotice id="india-disclaimer" />
+    )}
 
     <!-- Chapter Hero -->
     <header class="chapter-hero">
       <span class="comic-sticker sticker-benefit">Chapter {chapter.chapter} of 34</span>
       <h1 class="chapter-main-title">{chapter.title}</h1>
       <p class="chapter-meta-line">
-        {chapter.tips.length} verified tips in this chapter. Each tip is an option, not an assignment.
+        {isIndiaRewrite
+          ? chapter.tips.length + ' tips rewritten for India; drafts pending legal review.'
+          : chapter.tips.length + ' verified tips in this chapter. Each tip is an option, not an assignment.'}
       </p>
     </header>
 
@@ -250,6 +260,42 @@ const isCalm = calmChapters.includes(chapter.chapter);
   .close-btn:hover {
     background: rgba(255, 255, 255, 0.15);
   }
+
+  /* India rewrite notice */
+  .rewrite-notice {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.65rem;
+    padding: 0.6rem 0.7rem;
+    margin-bottom: 1.15rem;
+    border: 1px solid color-mix(in srgb, var(--color-jade) 34%, transparent);
+    background: color-mix(in srgb, var(--color-jade) 9%, var(--theme-card));
+    border-radius: 12px;
+    color: var(--theme-text);
+    font-family: var(--font-sans);
+    font-size: 0.78rem;
+    line-height: 1.45;
+  }
+
+  .rewrite-badge {
+    flex: 0 0 auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 30px;
+    height: 20px;
+    padding: 0 5px;
+    margin-top: 1px;
+    border-radius: 4px;
+    background: var(--color-jade);
+    color: var(--color-ink);
+    font-size: 0.62rem;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+  }
+
+  .rewrite-notice p { flex: 1; margin: 0; }
+  .rewrite-notice a { color: var(--color-jade-text); font-weight: 700; }
 
   /* Chapter Hero */
   .chapter-hero {

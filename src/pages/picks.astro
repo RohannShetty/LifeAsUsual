@@ -8,7 +8,7 @@ import Bubble from '../cast/Bubble.astro';
 import type { EnglishChapter, EnglishTip } from '../../scripts/ingest-parveen';
 import { resolvePath } from '../utils/paths';
 
-const enAllPath = path.resolve('data/en/all-chapters.json');
+const enAllPath = path.resolve('data/en-in/all-chapters.json');
 let allTips: EnglishTip[] = [];
 try {
   const chapters: EnglishChapter[] = JSON.parse(fs.readFileSync(enAllPath, 'utf-8'));

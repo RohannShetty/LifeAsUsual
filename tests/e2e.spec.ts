@@ -117,8 +117,8 @@ test.describe('How To Live Better - Comprehensive E2E Tests', () => {
     expect(pageText).toContain('How To Live Better by eternity4719');
     expect(pageText).toContain('Creative Commons Attribution 4.0 International');
     expect(pageText).toContain('Translated into English and reformatted for the web');
-    expect(pageText).toContain('Written for mainland China');
-    expect(pageText).toContain('India policy crosswalk');
+    expect(pageText).toContain('India Rewrite Status');
+    expect(pageText).toContain('Chapter 19');
   });
 
   test('7. Theme palettes switch both modes and survive reload', async ({ page }) => {
@@ -173,7 +173,7 @@ test.describe('How To Live Better - Comprehensive E2E Tests', () => {
   test('11. Every tip has an India application note', async ({ page }) => {
     await page.goto('/chapters/18-is-having-kids-worth-it/');
     await expect(page.locator('.india-application')).toHaveCount(7);
-    await expect(page.locator('.badge-china').first()).toBeVisible();
+    await expect(page.locator('.badge-source').first()).toBeVisible();
 
     const first = page.locator('.india-application').first();
     await first.locator('summary').click();

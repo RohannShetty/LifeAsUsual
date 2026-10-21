@@ -3,6 +3,8 @@
   "type": "module",
   "version": "1.0.0",
   "scripts": {
+    "precheck": "tsx scripts/build-india-data.ts",
+    "predev": "tsx scripts/build-india-data.ts",
     "dev": "astro dev",
     "build": "astro build && pagefind --site dist",
     "preview": "astro preview",
@@ -11,7 +13,9 @@
     "ingest": "tsx scripts/ingest-parveen.ts",
     "verify": "tsx scripts/verify.ts",
     "check": "astro check",
-    "pagefind": "pagefind --site dist"
+    "pagefind": "pagefind --site dist",
+    "prebuild": "tsx scripts/build-india-data.ts",
+    "india:data": "tsx scripts/build-india-data.ts"
   },
   "dependencies": {
     "astro": "^5.0.0",

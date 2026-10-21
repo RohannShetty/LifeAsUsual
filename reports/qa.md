@@ -2,10 +2,10 @@
 
 > **Update, 21 October 2026:** This report predates the India edition UI work.
 > Parse/translation checks still pass (34 chapters, 765 tips, 0 CJK in `dist/`).
-> The Playwright suite was updated but not re-run in the India-edition session, where
-> verification was done in Chrome through OpenCLI. See `reports/india-edition-report.md`.
+> The Playwright suite was updated but not re-run in the rewrite session, where
+> verification was done in Chrome through OpenCLI. See `reports/india-edition-report.md`; Chapter 19 is now rewritten for India.
 
-**Status:** ALL 9 CHECKS PASSED (Milestone M4 Complete; pre-India-edition)
+**Status:** ALL 9 CHECKS PASSED (Milestone M4 Complete; pre-rewrite)
 **Date of Audit:** 2026-10-19  
 **Platform:** Astro v5 Static Output, Vanilla TypeScript, Apple-Style Liquid Glass + Comic Layer (v2)
 

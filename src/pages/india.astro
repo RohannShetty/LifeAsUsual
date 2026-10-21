@@ -9,7 +9,6 @@ const chapterSlug: Record<number, string> = {
   9: '09-everyday-legal-red-lines',
   11: '11-red-lines-for-developers',
   12: '12-starting-a-business',
-  19: '19-employment-and-work-injury',
   21: '21-travel-and-abroad-safety',
   23: '23-which-skills-to-learn',
   24: '24-navigating-healthcare',
@@ -22,34 +21,35 @@ const chapterSlug: Record<number, string> = {
 ---
 
 <BaseLayout
-  title="India Edition — Policy Crosswalk and Helplines - How To Live Better"
-  description="How the China-written advice maps to Indian health cover, pensions, work injury, food support, dowry law, legal aid and emergency numbers."
+  title="India Edition — Rewrite Status and Helplines - How To Live Better"
+  description="What is rewritten for India, what is still queued, Indian helplines and the official sources used."
 >
   <article class="india-page">
     <header class="india-hero">
       <span class="comic-sticker sticker-benefit">India edition</span>
-      <h1 class="india-title">Start with the Indian version of the rule.</h1>
+      <h1 class="india-title">The India rewrite, chapter by chapter.</h1>
       <p class="india-lead">{india.intro}</p>
       <div class="india-meta">
         <span>Reviewed {india.lastReviewed}</span>
         <span aria-hidden="true">·</span>
         <span>{india.sources.length} official sources</span>
         <span aria-hidden="true">·</span>
-        <span>Source text unchanged</span>
+        <span>Chapter 19 rewritten</span>
+        <span aria-hidden="true">·</span>
+        <span>Draft for legal review</span>
       </div>
     </header>
 
     <nav class="india-jump" aria-label="India edition sections">
-      <a href="#what-changed">What changed</a>
+      <a href="#what-changed">Rewrite status</a>
       <a href="#helplines">Helplines</a>
-      <a href="#crosswalk">Policy map</a>
-      <a href="#chapters">Chapters</a>
+      <a href="#chapters">Queued chapters</a>
       <a href="#sources">Sources</a>
     </nav>
 
     <section class="india-section" id="what-changed">
-      <p class="section-kicker">Reader's bridge</p>
-      <h2 class="india-h2">What this edition changes</h2>
+      <p class="section-kicker">Rewrite status</p>
+      <h2 class="india-h2">What is rewritten</h2>
       <ul class="change-list">
         {india.changed.map((item) => (
           <li>{item}</li>
@@ -62,7 +62,7 @@ const chapterSlug: Record<number, string> = {
       <h2 class="india-h2">{india.currency.title}</h2>
       <p>{india.currency.body}</p>
       <p class="currency-rate">
-        Reference rate: ¥1 ≈ ₹{currency.rate.toFixed(2)} ({currency.asOf}).
+        Reference rate: ₹{currency.rate.toFixed(2)} per source unit ({currency.asOf}).
         <a href={currency.sourceUrl} target="_blank" rel="noopener noreferrer">{currency.source}</a>.
       </p>
       <p class="currency-note">{india.currency.note}</p>
@@ -70,14 +70,12 @@ const chapterSlug: Record<number, string> = {
 
     <section class="india-section" id="helplines">
       <p class="section-kicker">In an emergency</p>
-      <h2 class="india-h2">Chinese number → Indian number</h2>
-      <p class="india-body">The book quotes mainland-China hotlines. Save the Indian numbers before you need them.</p>
+      <h2 class="india-h2">Indian helplines</h2>
+      <p class="india-body">Save these before you need them. The rewritten chapter uses the Indian numbers.</p>
       <div class="help-grid">
         {india.helplines.map((row) => (
           <div class="help-row">
             <div class="help-numbers">
-              <span class="help-cn">CN {row.china}</span>
-              <span class="help-arrow" aria-hidden="true">→</span>
               <span class="help-in">IN {row.india}</span>
             </div>
             <p class="help-label">{row.label}</p>
@@ -87,38 +85,10 @@ const chapterSlug: Record<number, string> = {
       </div>
     </section>
 
-    <section class="india-section" id="crosswalk">
-      <p class="section-kicker">Policy map</p>
-      <h2 class="india-h2">Where a Chinese institution has an Indian counterpart</h2>
-      <p class="india-body">Use this before acting on a chapter with Chinese procedures. Where no equivalent exists, the card says so.</p>
-
-      {india.groups.map((group, groupIndex) => (
-        <section class="policy-group" id={group.id}>
-          <div class="policy-group-head">
-            <span class="policy-group-index">{String(groupIndex + 1).padStart(2, '0')}</span>
-            <h3>{group.title}</h3>
-          </div>
-          <div class="policy-grid">
-            {group.items.map((item) => (
-              <article class="policy-card">
-                <h4>{item.china}</h4>
-                <div class="policy-india">
-                  <span class="policy-in-label">India</span>
-                  <p>{item.india}</p>
-                </div>
-                <p class="policy-note">{item.note}</p>
-                <a class="policy-source" href={item.url} target="_blank" rel="noopener noreferrer">{item.source} ↗</a>
-              </article>
-            ))}
-          </div>
-        </section>
-      ))}
-    </section>
-
     <section class="india-section" id="chapters">
-      <p class="section-kicker">Read with care</p>
-      <h2 class="india-h2">Chapters that lean most on Chinese procedures</h2>
-      <p class="india-body">The advice may still be useful. The legal steps and institutions are the parts to translate first.</p>
+      <p class="section-kicker">Still queued</p>
+      <h2 class="india-h2">Chapters still on the source text</h2>
+      <p class="india-body">These chapters have not been rewritten yet. Their tips say so, and the India application note points to the Indian starting point.</p>
       <div class="chapter-list">
         {india.chapters.map((row) => (
           <a class="chapter-row" href={resolvePath('/chapters/' + (chapterSlug[row.chapter] || '') + '/')}>
@@ -147,8 +117,8 @@ const chapterSlug: Record<number, string> = {
     </section>
 
     <aside class="india-disclaimer">
-      <strong>This is orientation, not advice.</strong>
-      <p>The book's text is reproduced faithfully from the English edition. This page does not rewrite the author's advice, convert prices or replace a doctor, lawyer or official. For a decision that matters, use the current official portal and a qualified local professional.</p>
+      <strong>This is a work in progress, not legal advice.</strong>
+      <p>Chapter 19 is a draft rewrite for Indian law and is awaiting legal review. The remaining chapters are still source text. For a decision that matters, use the current official portal and a qualified Indian professional.</p>
     </aside>
   </article>
 </BaseLayout>

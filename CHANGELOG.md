@@ -6,6 +6,28 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ---
 
+## [2.4.0] - 2026-10-21
+
+Chapter 19 is now an India rewrite. The bridge framing and policy crosswalk are gone; the site tracks what is rewritten and what is still queued.
+
+### Added
+- **Chapter 19 India rewrite**: 24 employment and work-injury tips rewritten against Indian statutes and schemes (Factories Act, Industrial Disputes Act, labour codes, ESIC, EPFO, Gratuity Act, Employees Compensation Act, POSH, Contract Labour Act and Income Tax Act).
+- **Build-time India data**: `data/en-in/chapters/` rewrites are merged into `data/en-in/all-chapters.json` by `scripts/build-india-data.ts` before every build.
+- **Draft rewrite badge** and **Source-specific badge** for tips that still depend on source-edition rules.
+- **Rewrite-status page**: Chapter 19 done, 33 chapters queued, Indian helplines and official sources.
+
+### Changed
+- Removed the "bridge, not a rewrite" copy, the old source notice, the policy crosswalk and the "China-specific" label.
+- Chapter 19 now says "India rewrite" and "drafts pending legal review"; queued chapters say they are still source text.
+- The former crosswalk page is now a rewrite-status page.
+
+### Verified
+- `npm run build`: 52 pages.
+- Chapter 19 page: 0 China/Chinese/mainland/RMB/yuan/hukou/yibao/dibao terms; 24 Draft rewrite badges.
+- `npm run check`: 0 errors.
+- `npm run verify`: 34/34 chapters, 765/765 tips.
+
+---
 ## [2.3.0] - 2026-10-21
 
 India edition: an India policy crosswalk, a dated INR reference, a per-tip India application layer, and a mobile-first redesign of the reading experience.

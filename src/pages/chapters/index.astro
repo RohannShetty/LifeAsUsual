@@ -5,7 +5,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import type { EnglishChapter } from '../../../scripts/ingest-parveen';
 import { resolvePath } from '../../utils/paths';
 
-const enAllPath = path.resolve('data/en/all-chapters.json');
+const enAllPath = path.resolve('data/en-in/all-chapters.json');
 let chapters: EnglishChapter[] = [];
 try {
   chapters = JSON.parse(fs.readFileSync(enAllPath, 'utf-8'));
@@ -30,7 +30,7 @@ try {
     </p>
     <a class="india-note" href={resolvePath('/india/')}>
       <span class="india-note-badge">IN</span>
-      <span>Read with the India policy crosswalk — Chinese rules, Indian equivalents →</span>
+      <span>India rewrite status — Chapter 19 done, remaining chapters queued →</span>
     </a>
   </header>
 

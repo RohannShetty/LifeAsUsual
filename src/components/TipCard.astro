@@ -25,13 +25,13 @@ const roiClass = tip.valueTier === 'Very high' ? 'roi-very-high' : tip.valueTier
 
 const chapterGuidance = (indiaGuidance as Record<string, { anchor: string; note: string }>)[String(tip.chapter)];
 
-// Flag tips that describe a mainland-China rule, institution or hotline. The
+// Flag tips that describe a source-edition rule, institution or hotline. The
 // badge opens the crosswalk; it does not change the author's text.
-const chinaSpecific = /\b(dibao|hukou|yibao|shebao|gongjijin|gongshang|laodong|caili|WeChat|Alipay|12308|12315|12321|12377|12389|12309|96110|12356|12355|12348|12333|three[- ]tier|Grade-3)\b/i.test(
+const sourceSpecific = /\b(dibao|hukou|yibao|shebao|gongjijin|gongshang|laodong|caili|WeChat|Alipay|12308|12315|12321|12377|12389|12309|96110|12356|12355|12348|12333|three[- ]tier|Grade-3)\b/i.test(
   [tip.title, tip.inPlainWords, tip.cost, tip.benefit, tip.caveats].join(' ')
 );
 
-// India edition: replace the most actionable China-only hotline in the card
+// India edition: add the most actionable Indian hotline equivalent in the card
 // with a clearly-labelled Indian equivalent. The author's text stays untouched.
 const hotlineText = [tip.inPlainWords, tip.cost, tip.caveats].join(' ');
 let indiaNote = '';
@@ -96,10 +96,16 @@ if (/\b(call|dial|phone|ring|contact)\s+120\b/i.test(hotlineText)) {
           </span>
         )}
 
-        {chinaSpecific && (
-          <a class="editorial-badge badge-china" href={resolvePath('/india/')} title="This tip describes a mainland-China rule, institution or hotline. Open the India crosswalk.">
-            China-specific
+        {sourceSpecific && (
+          <a class="editorial-badge badge-source" href={resolvePath('/india/')} title="This tip describes a rule or institution from the source edition. Open the India rewrite status.">
+            Source-specific
           </a>
+        )}
+
+        {tip.reviewStatus === 'draft' && (
+          <span class="editorial-badge badge-draft" title="Rewritten for India; pending legal review">
+            Draft rewrite
+          </span>
         )}
       </div>
     </div>
@@ -158,7 +164,7 @@ if (/\b(call|dial|phone|ring|contact)\s+120\b/i.test(hotlineText)) {
       </summary>
       <div class="india-app-body">
         <p>{chapterGuidance.note}</p>
-        <a href={resolvePath('/india/#' + chapterGuidance.anchor)}>Open the India crosswalk →</a>
+        <a href={resolvePath('/india/#' + chapterGuidance.anchor)}>Open the India rewrite status →</a>
       </div>
     </details>
   )}
@@ -336,14 +342,20 @@ if (/\b(call|dial|phone|ring|contact)\s+120\b/i.test(hotlineText)) {
     border-color: rgba(255, 107, 107, 0.35);
   }
 
-  .badge-china {
+  .badge-draft {
+    background: color-mix(in srgb, var(--color-steel) 14%, transparent);
+    color: var(--color-steel-text);
+    border: 1px solid color-mix(in srgb, var(--color-steel) 35%, transparent);
+  }
+
+  .badge-source {
     background: color-mix(in srgb, var(--color-amber) 10%, transparent);
     color: var(--color-amber-text);
     border: 1px dashed color-mix(in srgb, var(--color-amber) 55%, transparent);
     text-decoration: none;
   }
 
-  .badge-china:hover {
+  .badge-source:hover {
     border-style: solid;
     border-color: var(--color-amber);
   }

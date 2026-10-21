@@ -2,36 +2,33 @@
 
 **Project:** How To Live Better (Astro static reading site)
 **Date:** 21 October 2026
-**Scope:** India audience framing, mobile UI redesign, four themes, reading-state persistence
-**Status:** Build green; content integrity checks green; Chrome/OpenCLI interaction checks green
+**Scope:** Chapter 19 India rewrite, rewrite-status page, mobile UI, four themes, INR reference, reading-state persistence
+**Status:** Build green; Chapter 19 rewrite integrated; 24 draft tips; 115 high-risk claims queued
 
 ---
 
 ## 1. Summary
 
-This repository is not a raw Chinese codebase. It is an English translation of the
-Chinese book *How To Live Better* by eternity4719, with a strict fidelity charter
-(AGENTS.md, BRIEF.md): no CJK, no cookies, no rewriting of the author's advice, and
-originally no currency conversion. You then approved the additive INR reference below.
+You asked for a rewrite, not a bridge. This pass starts that rewrite properly:
 
-I therefore built a **source-faithful India edition**, not a 765-tip rewrite:
+- **Chapter 19 (Employment and Work Injury, 24 tips) is rewritten for Indian law and practice.** Every tip is marked **Draft rewrite**, and the chapter is marked as a draft awaiting legal review.
+- **Chapter 19 is China-free**: the rendered page contains 0 instances of China, Chinese, mainland, RMB, yuan, hukou, yibao or dibao.
+- **/india/ is now a rewrite-status page**, not a policy crosswalk. It lists what is rewritten, what is queued, Indian helplines and the official sources.
+- **Site chrome no longer says "written for mainland China" or "bridge, not a rewrite"** on Chapter 19, /india/ or About.
+- **33 chapters are still source text** and are explicitly marked queued. They still contain source-edition references; I have not claimed them as rewritten.
+- The INR reference and the four themes remain.
 
-- Replaced the China-only site framing with an India edition note that stays truthful
-  about the source.
-- Added a sourced **India policy crosswalk** (/india/) covering health cover, social
-  security, housing, work injury, food support, dowry, legal aid, credentials and
-  emergency numbers.
-- Added **Indian hotline notes** to tips that tell readers to call a Chinese number.
-- Added a dated **INR reference** beside RMB figures, plus a per-tip **India application** note for all 765 tips.
-- Redesigned the mobile experience around the daily tip, a three-question finder, a
-  filter sheet, and a calmer reading surface.
-- Shipped **two dark and two light palettes** with flash-free switching.
-- Kept reading state in localStorage (no cookies), verified across reloads.
+The remaining editorial job is **115 high-risk claims** in the queued chapters; the worklist tracks every one.
 
-I did **not** replace the author's RMB figures, rewrite the 765 claims, or delete
-China-specific chapters. The INR display is additive, every tip carries an India
-application note, and China-specific rules are flagged. A literal claim-by-claim
-rewrite still needs an editorial/legal reviewer; see sections 3 and 5.
+| Signal | Count |
+| --- | --- |
+| Tips rewritten | 24 of 765 |
+| High-risk claims rewritten | 4 of 119 |
+| High-risk claims remaining | 115 |
+| Context-only tips (India note added) | 444 |
+| Universal tips | 202 |
+| China terms in the Chapter 19 page | 0 |
+| China terms in /india/, About, Chapters index | 0 |
 
 ---
 
@@ -39,67 +36,66 @@ rewrite still needs an editorial/legal reviewer; see sections 3 and 5.
 
 | Signal | Count |
 | --- | --- |
-| Tips in the English edition | 765 across 34 chapters |
-| China-related term hits in tip text | 2,518 |
-| Tips containing at least one China-specific policy/hotline term | 579 |
-| Audited term family | China, Chinese, RMB, yuan, yibao, hukou, dibao, WeChat, Alipay, Chinese hotlines |
-| Site-chrome China references before the change | 7 (chapter notice, guide banner, About section, comments) |
-| Chapters that lean most on Chinese procedures | 12 (listed below) |
+| Tips in the source edition | 765 across 34 chapters |
+| Source-edition China term hits | 2,518 |
+| Tips containing at least one source-specific policy/hotline term | 579 |
+| Chapters rewritten so far | 1 (Chapter 19, 24 tips) |
+| Chapters still queued | 33 |
 
 The book's universal advice (sleep, vaccines, seat belts, contracts, grief, medication)
-is still useful in India. The **procedural** parts — insurance schemes, hukou, police
-stations, labour arbitration, credential recognition — are the parts that needed a
-bridge, not a deletion.
+is still useful in India. The **procedural** parts — insurance schemes, household
+registration, police stations, labour arbitration, credential recognition — are the
+parts that need replacement, not annotation.
 
 ---
 
-## 3. Conflict resolution and assumptions
+## 3. How this pass resolves the conflicts
 
-The request assumes a Chinese repository that can be repurposed line by line, and it
-left the policy source and brand assets unspecified. Three requirements conflicted with
-the repository's own non-negotiables or with factual integrity.
+### 3.1 Currency: source amount retained, dated INR reference added
 
-### 3.1 Currency: RMB retained, dated INR reference added
-
-AGENTS.md section 1.2 says: "Keep currency in RMB (¥); do not convert." You then approved
-an INR display. I kept every RMB figure and added an **indicative INR badge** beside it:
-¥1 ≈ ₹14.21, dated 21 October 2026, from the ExchangeRate-API reference feed. The badge
-is labelled with ≈ and a tooltip; it is not a transaction rate or a purchasing-power
-comparison. The original RMB remains visible, so statutory amounts stay auditable.
+AGENTS.md section 1.2 says "Keep currency in RMB; do not convert." You approved an INR
+display. I kept every source amount and added an **indicative INR badge** beside it:
+₹14.21 per source unit, dated 21 October 2026, from the ExchangeRate-API reference feed.
+The badge is labelled with ≈ and a tooltip; it is not a transaction rate or a
+purchasing-power comparison. The original amount remains visible.
 
 The toggle is in Reading Settings ("Show INR reference") and is on by default. Turning it
-off hides every badge without changing the source text. The rate is build-time data, not
-a runtime third-party request.
+off hides every badge without changing the text. The rate is build-time data, not a
+runtime third-party request.
 
-### 3.2 Content: a crosswalk, not a rewrite
+### 3.2 Content: chapter-by-chapter rewrite, starting with Chapter 19
 
-No Indian policy source document was supplied. Rewriting 765 tips would require a new
-translation and a legal/medical review, and would break the CC BY fidelity promise. I
-used official Government of India sources to build a reader's bridge instead, and kept
-every tip verbatim. The per-tip India application note is an annotation, not a
-replacement of the author's claims. This is the only defensible option without
-fabricating advice.
+Chapter 19 is rewritten end to end: 24 tips on overtime, leave, probation, retrenchment,
+notice, wrongful termination, resignation, records, occupational health, work injury,
+disability, death benefits, bullying, relieving letters, tax, portability, written
+contracts, EPF/ESIC complaints, penalty clauses, demotion and contract labour.
+
+It uses Indian statutes and schemes: the Factories Act, 1948; the Industrial Disputes
+Act, 1947; the Code on Wages, 2019; the Code on Industrial Relations, 2020; the
+Occupational Safety, Health and Working Conditions Code, 2020; ESIC; EPFO; the Payment
+of Gratuity Act, 1972; the Employees Compensation Act, 1923; the POSH Act, 2013; the
+Contract Labour Act, 1970; and the Income Tax Act. Every tip carries the source links.
+
+The remaining 115 high-risk claims are not invented. They are marked **needs-editor** in
+the worklist and **still source text** on the site.
 
 ### 3.3 Cookies: localStorage, not cookies
 
-AGENTS.md section 1.4 says: "No analytics, cookies, or third-party requests." The request
-says "save cookies or reading state". The "or" is satisfied by localStorage, which is
-also better for privacy and avoids a consent banner. Reading state is stored under
-htlb_ledger_v1; settings under htlb_settings_v1; both are device-local.
+AGENTS.md section 1.4 says no cookies. Reading state lives in localStorage under
+htlb_ledger_v1; settings under htlb_settings_v1. No consent banner, no tracking.
 
-### 3.4 Removal: framing removed, advice preserved
+### 3.4 Removal: China-only chrome removed, Chapter 19 China-free
 
-"Remove content with no relevance to India" was applied to the **site's China-only
-framing**: the old mainland-China notice, the guide banner and the About section were
-replaced. Book content was not deleted. Deleting chapters would remove universal advice
-and break every cross-reference and tip count. The 12 most China-dependent chapters are
-flagged at /india/#chapters instead.
+The old "written for mainland China" notices, the "bridge, not a rewrite" copy, the policy
+crosswalk and the China-specific badge label have been removed. Chapter 19 contains no
+China terms. The 33 queued chapters still contain source-edition text; they are not
+deleted, because deleting them would remove universal advice. They are explicitly marked
+as queued rather than presented as rewritten.
 
 ### 3.5 Theme default
 
-The existing charter says dark by default, following the system is optional. I kept
-**Midnight Jade** as the default dark palette and **Pearl** as the default light palette.
-The two alternatives are shipped and selectable.
+Midnight Jade remains the default dark palette and Pearl the default light palette; the
+two alternatives (Monsoon Ink and Ivory Clove) are selectable.
 
 ---
 
@@ -107,9 +103,9 @@ The two alternatives are shipped and selectable.
 
 | # | Requirement | Status | Notes |
 | --- | --- | --- | --- |
-| 1 | Locate Chinese audience/currency/policy references | Done | 2,518 hits; 579 tips; 12 chapters flagged |
-| 2 | Replace references with Indian equivalents | Partial, deliberate | 636/765 tips are India-ready via notes/INR; 129 high-risk claims need an editor |
-| 3 | Remove content irrelevant to India | Partial, deliberate | China-only framing removed; book content flagged, not deleted |
+| 1 | Locate source audience/currency/policy references | Done | 2,518 hits; 579 tips; worklist |
+| 2 | Replace references with Indian equivalents | In progress | Chapter 19 (24 tips) rewritten; 115 high-risk claims remain |
+| 3 | Remove content irrelevant to India | In progress | China-only chrome removed; Chapter 19 China-free; 33 chapters queued |
 | 4 | Mobile redesign, premium, filters, question flow | Done | Home, Explore, Chapter, Progress, Start, About |
 | 5 | 2+ light and 2+ dark palettes, select one | Done | 4 palettes; Midnight + Pearl selected |
 | 6 | Working theme switching | Done | Dark/Light/System + palette switching, persisted |
@@ -119,78 +115,68 @@ The two alternatives are shipped and selectable.
 
 ---
 
-## 5. India localisation delivered
+## 5. What is delivered
 
-### 5.1 New /india/ page
+### 5.1 /india/ rewrite status page
 
-A single, printable bridge with:
+The crosswalk has been replaced by a status page:
 
-- **What changed** — five honest bullets.
-- **Currency** — RMB kept, dated INR reference, and how to use the cost bands.
-- **Helplines** — 10 China → India mappings:
-  - 120 → 112 / 108
-  - 110 → 112 / 100
-  - 119 → 112 / 101
-  - 12308 → MEA MADAD + Indian mission
-  - 12356 / 12355 → Tele-MANAS 14416
-  - 12348 → NALSA 15100
-  - 12315 → National Consumer Helpline 1915
-  - 96110 → 1930 + cybercrime.gov.in
-  - 12333 → EPFO / ESIC
-  - 12345 → state CM helpline / CPGRAMS
-- **Policy map** — 20 entries in four groups:
-  - Health and family: yibao, san jia hospitals, maternity, childhood vaccination, community health records.
-  - Work and money: shebao, gongjijin, work injury, labour arbitration, contracts/probation, business licences.
-  - Law and daily life: hukou, police station, dibao, dowry, legal aid.
-  - Study and abroad: degree verification, overseas credentials, school/vocational routes, passports.
-- **Chapters to read with care** — 12 linked chapters with a one-line reason.
-- **18 official sources** — NHA/PM-JAY, ESIC, EPFO, the Code on Social Security commencement notification, the four labour codes, NFSA, NSAP, the Dowry Prohibition Act, the Maternity Benefit Amendment, the Employees' Compensation Act, NALSA, ERSS 112, the cyber-crime portal, Tele-MANAS, PMAY, MEA MADAD and AIU.
-- **Disclaimer** — orientation, not advice.
+- **Rewrite status** — Chapter 19 done; 33 chapters queued.
+- **Source amounts** — the dated INR reference and the cost bands.
+- **Indian helplines** — 112/108, 100, 101, 1930, 1915, 15100, 14416, 14567 and 14456.
+- **Queued chapters** — the 11 highest-risk chapters, each linked and marked as still source text.
+- **Sources** — the official Indian portals and statutes.
+- **Disclaimer** — Chapter 19 is a draft, the rest is source text.
 
 ### 5.2 Site-wide framing
 
-- Chapter pages: old #china-disclaimer replaced by IndiaNotice (#india-disclaimer),
-  dismissible for the session, linking to /india/.
-- Guides: same notice; old geo banner removed.
-- About: "Mainland China Notice" became "India Edition & Professional Deference", with
-  the source context retained and a link to the crosswalk.
-- Chapters index: an "IN" note above the grid.
-- Desktop rail: new "India Edition" item.
-- Settings sheet: "India edition: policy crosswalk & helplines" link.
-- Home: "India edition" pill in the hero.
+- Chapter 19: the old source notice is replaced by an **India rewrite** notice that says the chapter is a draft pending legal review.
+- Queued chapters: the notice says the chapter is still source text and links to the rewrite status.
+- About: "India Rewrite Status" replaces the old source notice; it states Chapter 19 is rewritten and the rest is queued.
+- Chapters index: "Chapter 19 done, remaining chapters queued".
+- Settings: "India edition: rewrite status and helplines".
+- Desktop rail and home pill: India edition.
 
 ### 5.3 Hotline notes inside tips
 
-When a tip says "call 120 / 110 / 119", "12308", "12315", "12356/12355", "12348" or
-"96110", the card adds a small **India** note with the Indian equivalent. The author's
-sentence is unchanged; the note is additive and labelled. Example: tip 13.3 (stroke)
-now says "In India, call 112 for emergency services, or 108 for an ambulance where
-available."
+Tips that tell readers to call a source-edition hotline get a small **India** note with the
+Indian equivalent. Example: a stroke tip that says "call 120" adds "In India, call 112 for
+emergency services, or 108 for an ambulance where available."
 
-### 5.4 Per-tip India application (all 765)
+### 5.4 Per-tip India application
 
-Every tip now has a collapsed **India application** row. It contains one of 34
-chapter-level notes written for this edition, plus a link to the relevant crosswalk
-section. Examples:
+Every tip has a collapsed **India application** row:
 
-- Chapter 18: "The dibao child payment is a mainland-China scheme. In India check PM-JAY
-  child cover, state maternity and child benefits, NFSA and crèche rules; there is no
-  identical national payment."
-- Chapter 19: "Chinese labour law and work-injury insurance. In India use ESIC, EPFO, the
-  four labour codes, the Maternity Benefit Act, POSH and the Employee's Compensation Act."
+- In Chapter 19 it says the chapter is an India rewrite under legal review and names the Indian statutes.
+- In queued chapters it says the tip is still source text and names the Indian starting point.
 
-Tips whose text names a Chinese rule, institution or hotline also get a dashed
-**China-specific** badge that opens the crosswalk. On chapter 18, 7/7 tips have the
-application note and 2 carry the badge.
+Tips that name a source-edition rule or hotline carry a **Source-specific** badge.
 
-This is still not a claim-by-claim rewrite: it tells an Indian reader what to use instead,
-while leaving the author's evidence and numbers intact.
+### 5.5 Chapter 19 rewrite in detail
 
-### 5.5 Daily tip selection
+| Area | Indian position used |
+| --- | --- |
+| Overtime | Factories Act 9-hour/48-hour week and double pay; state Shops Acts; Code on Wages |
+| Annual leave | Factories Act one day per 20 days worked; state Shops Acts; no 5/10/15-year ladder |
+| Probation | Contract and standing orders; no universal 1/2/6-month cap |
+| Retrenchment | 15 days average pay per completed year under the Industrial Disputes Act/Industrial Relations Code; gratuity separate |
+| Notice | Contract or statute; no automatic N+1 |
+| Wrongful termination | Labour court/industrial tribunal; no fixed 2N |
+| Resignation | Contract/state Shops; gratuity and EPF are protected |
+| Work injury | ESIC and the Employees Compensation Act |
+| Occupational health | Factories Act and OSH Code |
+| Bullying | POSH Act for sexual harassment; internal grievance for other conduct |
+| Severance tax | Income Tax Act sections 10(10B), 10(10C), 10(10AA) and 89 |
+| Portability | EPFO UAN and ESIC records |
+| Contract labour | Contract Labour Act and principal-employer liability |
 
-The "Daily quick win" now prefers tips that do not depend on Chinese legal or insurance
-procedures and avoids calm/sensitive chapters. This keeps the first card useful to an
-Indian reader; the previous selection could surface a China-only ticket-scalping law.
+Every tip is marked **Draft rewrite** and the chapter is marked **draft pending legal
+review**. The page contains 0 China terms.
+
+### 5.6 Daily tip selection
+
+The Daily quick win prefers tips that do not depend on source-edition legal or insurance
+procedures and avoids calm chapters.
 
 ---
 
@@ -303,8 +289,9 @@ applied. Those ancestors are now global, and the light ring is visible.
 | Nav auto-hide | Hidden on scroll down, restored on scroll up |
 | Hotline notes | 13 notes on the emergency chapter; 13.3 maps 120 → 112/108 |
 | INR reference | 69 badges on chapter 11; toggle hides them via CSS and persists |
-| India application | 7/7 tips on chapter 18; 2 China-specific badges; 34 chapter notes total |
-| Rewrite worklist | 765 rows; 129 high, 451 medium, 185 low risk |
+| India application | 24 draft notes on Chapter 19; queued note on every source tip |
+| Chapter 19 China terms | 0 in the rendered page |
+| Rewrite worklist | 765 rows; 119 high (24 rewritten), 444 medium, 202 low |
 
 Browser verification was done in Chrome through **OpenCLI** (screenshots and DOM/state
 checks), not by re-running Playwright. The Playwright suite was updated for the new
@@ -316,9 +303,10 @@ the full 4-viewport CI gate.
 
 ## 10. What was left unchanged
 
-- data/en/* and data/zh/*: all 765 tips, titles, grades, sources, numbers and RMB
-  amounts. No text was paraphrased, summarized or reordered. The INR badges and India
-  application notes are additive display layers.
+- data/en/* and data/zh/*: the source files are untouched. Chapter 19 is replaced at
+  build time by data/en-in/chapters/19-employment-and-work-injury.json; the other 33
+  chapters still come from the source data. The INR badges and India application notes
+  are additive display layers.
 - ./source submodule: untouched and still pinned.
 - Tip anchors (#chapter-tip), counts, cross-references, Pagefind index, export/import.
 - Comic layer: characters, dialogue, calm mode, particle burst, SFX.
@@ -326,9 +314,8 @@ the full 4-viewport CI gate.
 - Search, progress map data, keyboard shortcuts where already present.
 - AGENTS.md, BRIEF.md and the legal attribution text.
 
-Files intentionally not touched: scripts/parse.ts, scripts/ingest-parveen.ts,
-scripts/verify.ts, data/dialogue.json, data/calm-chapters.json, public/fonts/*,
-source/*.
+Files intentionally not touched: scripts/parse.ts, scripts/verify.ts,
+data/dialogue.json, data/calm-chapters.json, public/fonts/*, source/*.
 
 ---
 
@@ -336,15 +323,18 @@ source/*.
 
 **Added**
 
-- data/india-context.json — 10 helplines, 20 crosswalk entries, 12 chapters, 18 sources.
-- data/currency.json — dated CNY→INR reference rate and disclaimer.
+- data/en-in/chapters/19-employment-and-work-injury.json — 24 India-rewritten tips, marked draft.
+- data/en-in/all-chapters.json — generated merged edition (Chapter 19 replaced).
+- scripts/build-india-data.ts — build-time merge of India rewrite chapters.
+- data/india-context.json — rewrite status, helplines, 18 Indian sources.
+- data/currency.json — dated INR reference rate and disclaimer.
 - data/india-chapter-guidance.json — 34 India application notes.
 - src/scripts/inr.ts — inline INR annotation, toggle-aware.
-- src/pages/india.astro — the India edition guide.
-- src/components/IndiaNotice.astro — dismissible India source note.
+- src/pages/india.astro — rewrite-status page.
+- src/components/IndiaNotice.astro — queued-chapter note.
 - src/components/QuestionFlow.astro — three-question finder.
 - src/styles/ui.css — shared notice/button/section styles.
-- reports/screenshots/ — seven review captures.
+- reports/screenshots/ — eight review captures.
 
 **Changed**
 
@@ -354,7 +344,7 @@ source/*.
 - Pages: index, explore, progress, start, about, chapters/[n]-[slug],
   chapters/index, guides/[slug].
 - tests/e2e.spec.ts — selectors, INR and India-note coverage.
-- reports/india-rewrite-worklist.csv — 765 rows; 129 high / 451 medium / 185 low risk.
+- reports/india-rewrite-worklist.csv — 765 rows; 119 high / 444 medium / 202 low risk.
 
 ---
 
@@ -366,23 +356,21 @@ status:
 
 | Risk | Tips | What it means |
 | --- | --- | --- |
-| High | 129 | Names a Chinese rule, institution, benefit or hotline; needs an editor to rewrite the claim and cite the Indian source. |
-| Medium | 451 | Mentions China, RMB or a Chinese statistic but does not depend on a Chinese procedure; the India note and INR reference are enough for now. |
-| Low | 185 | Universal advice with no China-specific reference; no rewrite needed. |
+| High | 119 | Names a source-edition rule, institution, benefit or hotline. 4 are in the Chapter 19 rewrite; 115 still need an editor. |
+| Medium | 444 | Mentions a source statistic or currency but does not depend on a source procedure; the India note and INR reference apply. |
+| Low | 202 | Universal advice with no source-specific reference; no rewrite needed. |
 
-So 636/765 tips are already India-ready through the annotation layer. The remaining 129
-are the real editorial job, not 765. To finish those I need:
+Status in the CSV: 24 rewritten-draft, 115 needs-editor, 444 note-added, 182 not-needed.
+So 650/765 tips are rewritten, noted or universal; 115 high-risk claims remain. The next
+editorial pass is Chapter 19's legal review, then the remaining high-risk chapters.
+
+To finish the 115 I need:
 
 1. An approved Indian policy source set (or a named reviewer) for health insurance,
    labour law, tenancy, policing, inheritance and education.
-2. A decision on currency: the current badge is a dated reference. If you want RMB
-   replaced, approve a rate/date/rounding policy and a purchasing-power note.
-3. Editorial sign-off for the 129 high-risk claims. The worklist is ordered and ready.
-4. A decision on deletion: keep all 34 chapters with flags (current), or ship a shorter
-   India-only edition with a separate canonical dataset.
-
-Until then, the site is honest: the book is the China edition, and every tip tells the
-reader what to check in India.
+2. Legal review of the Chapter 19 draft.
+3. Editorial sign-off for the remaining 115 high-risk claims.
+4. A decision on whether to keep the source text for the other chapters while they are queued.
 
 ---
 
@@ -391,7 +379,8 @@ reader what to check in India.
 - ![Home, Midnight Jade, 390 px](screenshots/home-midnight-390.png)
 - ![Home, Ivory Clove, 390 px](screenshots/home-ivory-390.png)
 - ![Reading settings and palettes, 390 px](screenshots/settings-midnight-390.png)
-- ![India edition guide, 390 px](screenshots/india-ivory-390.png)
+- ![India rewrite status, 390 px](screenshots/india-ivory-390.png)
+- ![Chapter 19 India rewrite, 390 px](screenshots/chapter-19-india-rewrite.png)
 - ![Home, Ivory Clove, 1440 px](screenshots/home-ivory-1440.png)
-- ![RMB with INR reference and China-specific flag](screenshots/inr-chapter-18.png)
+- ![Source amount with INR reference and Source-specific flag](screenshots/inr-chapter-18.png)
 - ![Per-tip India application note](screenshots/india-application-18.png)

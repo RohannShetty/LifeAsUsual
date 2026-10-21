@@ -5,12 +5,12 @@ import type { EnglishChapter } from '../../scripts/ingest-parveen';
 import { resolvePath } from '../utils/paths';
 
 // Load all chapters at build time
-const enAllPath = path.resolve('data/en/all-chapters.json');
+const enAllPath = path.resolve('data/en-in/all-chapters.json');
 let chapters: EnglishChapter[] = [];
 try {
   chapters = JSON.parse(fs.readFileSync(enAllPath, 'utf-8'));
 } catch (e) {
-  console.warn('Could not load data/en/all-chapters.json:', e);
+  console.warn('Could not load data/en-in/all-chapters.json:', e);
 }
 ---
 

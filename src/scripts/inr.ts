@@ -1,7 +1,7 @@
 import currency from '../../data/currency.json';
 
 const RATE = currency.rate;
-const RATE_LABEL = '¥1 ≈ ₹' + RATE.toFixed(2) + ' (' + currency.asOf + ')';
+const RATE_LABEL = '₹' + RATE.toFixed(2) + ' per source unit (' + currency.asOf + ')';
 const AMOUNT = /(?:¥\s?([\d,]+(?:\.\d+)?))|(?:([\d,]+(?:\.\d+)?)\s*(?:yuan|RMB)\b)/gi;
 const TARGETS = '.in-plain-words, .metric-text, .caveats-text, .daily-lead-text, .guide-body, .india-body';
 

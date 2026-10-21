@@ -10,7 +10,7 @@ import type { EnglishChapter, EnglishTip } from '../../scripts/ingest-parveen';
 import calmChapters from '../../data/calm-chapters.json';
 import { resolvePath } from '../utils/paths';
 
-const enAllPath = path.resolve('data/en/all-chapters.json');
+const enAllPath = path.resolve('data/en-in/all-chapters.json');
 let chapters: EnglishChapter[] = [];
 try {
   chapters = JSON.parse(fs.readFileSync(enAllPath, 'utf-8'));
@@ -27,15 +27,15 @@ const diff = now.getTime() - startOfYear.getTime();
 const oneDay = 1000 * 60 * 60 * 24;
 const dayOfYear = Math.floor(diff / oneDay);
 
-// India edition: prefer a daily tip that does not depend on Chinese legal or
+// India edition: prefer a daily tip that does not depend on source-edition legal or
 // insurance procedures, and never pick a sensitive (calm) chapter for the hero.
 const chinaHeavyChapters = new Set([8, 9, 11, 12, 19, 21, 24, 25, 26, 31, 32]);
-const chinaTerms = /\b(China|Chinese|RMB|yuan|yibao|hukou|dibao)\b/i;
+const sourceTerms = /\b(China|Chinese|RMB|yuan|yibao|hukou|dibao)\b/i;
 const dailyPool = veryHighTips.filter((tip) => {
   if (chinaHeavyChapters.has(tip.chapter)) return false;
   if (calmChapters.includes(tip.chapter)) return false;
   const fullText = [tip.title, tip.inPlainWords, tip.cost, tip.benefit, tip.caveats, tip.sources].join(' ');
-  return !chinaTerms.test(fullText);
+  return !sourceTerms.test(fullText);
 });
 const dailySource = dailyPool.length > 0 ? dailyPool : veryHighTips;
 const dailyTip = dailySource.length > 0

@@ -99,7 +99,7 @@ import currency from '../../data/currency.json';
     <div class="setting-row">
       <div>
         <label for="inr-toggle" class="setting-label">Show INR reference</label>
-        <p class="setting-desc">Approximate ₹ beside RMB amounts · ¥1 = ₹{currency.rate.toFixed(2)} ({currency.asOf})</p>
+        <p class="setting-desc">Approximate ₹ beside source amounts · ₹{currency.rate.toFixed(2)} per unit ({currency.asOf})</p>
       </div>
       <input type="checkbox" id="inr-toggle" class="switch-input" checked />
     </div>
@@ -113,7 +113,7 @@ import currency from '../../data/currency.json';
     </div>
 
     <a class="india-link" href={resolvePath('/india/')}>
-      <span>India edition: policy crosswalk &amp; helplines</span>
+      <span>India edition: rewrite status &amp; helplines</span>
       <span aria-hidden="true">→</span>
     </a>
   </div>
