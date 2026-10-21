@@ -1,64 +1,76 @@
 # Verification: Chapter 31 - Paths After Eighteen
 
-Verifier: Independent verifier (AI), delegated verification pass
+Verifier: independent verifier, subagent of session-cbb8c456-d1d0-47f5-b30f-11f4d6163239
 Date: 2026-10-21
 Access date: 2026-10-21
 Chapter file: data/en-in/chapters/31-paths-after-eighteen.json
-Manifest status: status "draft"; verifier null; verifiedAt null; bannedTerms 0 (data/en-in/manifest.json, generated 2026-10-21)
+Manifest status: draft
+Pass type: targeted re-verification of the two corrections that blocked the previous round (not a fresh full audit)
+
+## Scope of this pass
+
+The previous full audit ended in FAIL on two items: (h) 31-15 cited "section 6(1A)" for deemed residence - the numbering of the repealed Income-tax Act 1961 - fused the visiting-citizen 120-day rule with the deemed-resident rule, and said "financial year" where the 2025 Act says "tax year"; (i) 31-2 said women have been admitted to the National Defence Academy "since 2021", when the Supreme Court order was August 2021 but the first women cadets joined in 2022. A fixer has since edited the shipped JSON. This pass confirms both corrections in the built file, re-reads the provisions they rest on, and checks the file for surviving traces of the old wording. The other fifteen tips were not re-audited; their previous findings are carried forward as notes.
 
 ## Method
 
-I read the chapter JSON and reports/source-packs/chapter-31.md. This chapter is the worst case in the set: fourteen of seventeen tips describe Chinese pathways (conscription registration by 31 October, two-year service, Military Service Law art. 57, tuition caps converted to rupees, veterans' placement, the Western Plan 10% quota, the Special Post teacher programme, firefighter and civilian military posts, self-study and adult entrance exams, the per-order occupational-injury pilot, state-funded teacher training with a six-year service bond, SAFE Huifa [2007] No. 1, Caijin [2023] No. 75 and the 2027 national civil-service examination), and most of them list mod.gov.in and mea.gov.in as sources, which do not contain any of it. mod.gov.in returned HTTP 403. The three Indian tips (31-6, 31-11, 31-14) were checked against desw.gov.in, pfrda.org.in, epfo.gov.in and emigrate.gov.in, all reachable.
+I read the corrections in the shipped file, data/en-in/chapters/31-paths-after-eighteen.json (17 tips, manifest status draft), not in any override copy, and searched the file for "6(1A)", "since 2021" and "financial year": no match survives.
 
-## Claim checks
+Evidence read this session:
 
-| Tip | Claim | Source checked | Section | Accessed | Pass? | Note |
-| --- | --- | --- | --- | --- | --- | --- |
-| 31-1 | Twelve pathways with age and education criteria listed in official documents; minimum age 16 | mod.gov.in; mea.gov.in | - | 2026-10-21 | no | BLOCKING. The twelve-pathway structure is the Chinese conscription/education ladder; neither cited ministry publishes it. |
-| 31-2 | Men must complete military service registration by 31 October; active duty lasts two years | Chinese Military Service Law | - | 2026-10-21 | no | BLOCKING. India has no compulsory military service registration. The 31 October deadline and two-year term are Chinese. |
-| 31-3 | Refusing service after enlistment bars foreign travel, further education, civil service and state enterprises for two years | Chinese Military Service Law art. 57 | - | 2026-10-21 | no | BLOCKING. These penalties are Chinese; no Indian equivalent exists. |
-| 31-4 | Student soldiers get up to 2,84,200 rupees a year tuition, a two-year extension of student status and a postgraduate admissions programme | Chinese student-aid measures | - | 2026-10-21 | no | BLOCKING. The rupee figure is a converted Chinese tuition cap; the entitlement is Chinese. |
-| 31-5 | Only six scenarios allow government job placement after discharge; the self-employed must register within 30 days | Chinese veterans' placement regulations (gov.cn) | Arts 25, 31, 32, 35, 51, 75 | 2026-10-21 | no | BLOCKING. Chinese demobilisation rules. India's ESM route is 31-6, which is separate and correct. |
-| 31-6 | After discharge check pension or one-time gratuity, ECHS, the ESM card and re-employment routes | desw.gov.in; ECHS; Zila Sainik Board | - | 2026-10-21 | yes | Correct Indian pathway: ECHS, ESM identity card and Rajya/Zila Sainik Boards are real; desw.gov.in reachable. mod.gov.in 403. |
-| 31-7 | Two years in a grassroots programme qualifies for a 10% special recruitment quota each year | Western Plan project office (China) | - | 2026-10-21 | no | BLOCKING. The "Western Plan" and its 10% quota are Chinese; India has no such quota. |
-| 31-8 | Special Post Programme teachers who complete three years and pass evaluation are added to the official teaching staff | Chinese Special Post Programme | - | 2026-10-21 | no | BLOCKING. Chinese programme; the sources are Indian ministry home pages that do not mention it. |
-| 31-9 | Firefighter and civilian military posts are additional public-recruitment routes with lower entry requirements | Chinese recruitment rules (flk.npc.gov.cn) | Arts 9, 18, 19, 20 | 2026-10-21 | no | BLOCKING. Chinese civilian-military post rules; no Indian equivalent recorded. |
-| 31-10 | Self-study exams have no age or prior-education limit; adult entrance exams and open universities are alternatives | mod.gov.in; mea.gov.in | - | 2026-10-21 | no | BLOCKING. These are Chinese continuing-education routes (zikao, chengkao, open universities). India's NIOS, IGNOU and state open universities are not mentioned. |
-| 31-11 | Without an employer, arrange NPS, PPF and a health policy yourself | PFRDA; NPS; National Savings Institute | - | 2026-10-21 | yes | Correct Indian pathway. pfrda.org.in reachable; npscra.nsdl.co.in did not resolve. |
-| 31-12 | Platforms pay occupational-injury premiums per order for delivery riders, ride-hailing drivers and freight carriers, at no cost to the worker | mod.gov.in; mea.gov.in | - | 2026-10-21 | no | BLOCKING. This is the Chinese platform-worker injury pilot. In India, gig workers are covered (partially) by the SS Code 2020 and state welfare boards; the per-order premium model is not Indian law, and the cited ministries do not publish it. |
-| 31-13 | Government-funded teacher training and targeted medical-student programmes in exchange for a six-year service commitment | mod.gov.in; mea.gov.in | - | 2026-10-21 | no | BLOCKING. Chinese state-funded normal-university and rural medical programmes; no Indian scheme is described. |
-| 31-14 | Only a registered recruiting agent may recruit for a job abroad, and must use eMigrate | Emigration Act 1983; eMigrate | - | 2026-10-21 | yes | Correct: recruiting agents need a licence under the Emigration Act and eMigrate is the official channel. emigrate.gov.in served a minimal page; indiacode 403. |
-| 31-15 | Remote work for a foreign employer counts as domestic income; file your own return; report receipts as "employee compensation" | SAFE Huifa [2007] No. 1 | Arts 2, 10 | 2026-10-21 | no | BLOCKING. The cited instrument is a Chinese foreign-exchange rule. For India the test is tax residency and s.9 of the Income Tax Act, and foreign remittances come under FEMA/LRS; none is cited. |
-| 31-16 | Startup guarantee loans up to 42,63,000 rupees per person with half the interest covered by government | Caijin [2023] No. 75 | - | 2026-10-21 | no | BLOCKING. Chinese inclusive-finance fund; the rupee figure is a conversion. India's CGTMSE, MUDRA and Stand-Up India are not mentioned. |
-| 31-17 | National civil-service exams define "fresh graduate" by where the file and registration sit; keep them at school or a talent centre | National Civil Service Bureau (2026), 2027 announcement | - | 2026-10-21 | no | BLOCKING. The "personnel file" and "fresh graduate" definition are Chinese civil-service rules; the pack's own citation is trs.gov.cn/beijing.gov.cn. UPSC's eligibility rules are different and not cited. |
+- Income-tax Act, 2025, section 6 - a practitioner's section-by-section note that quotes the sub-sections, https://cajatinkarda.in/articles/nri-property-tax-part-1 (HTTP 200). It sets out s.6(2)(a) (182 days), s.6(2)(b) (60 days plus 365 in the four preceding tax years), s.6(3) (citizen leaving India for employment abroad or as crew of an Indian ship), the 120-day variation for a citizen or person of Indian origin above the fifteen-lakh threshold, and s.6(7) (deemed resident).
+- A conference presentation whose summary line reads "Section 6(7) of ITA 2025 corresponds with section 6(1A) of ITA 1961" (odishataxadvocates.in PDF; the PDF body is not fetchable, the indexed summary is what confirms the mapping).
+- National Defence Academy, women's entry: en.wikipedia.org (raw wikitext, HTTP 200) - "The Supreme Court of India passed an order in August 2021 that allowed female candidates to appear for all upcoming NDA entrance examination", and the 148th course passed out on 30 May 2025 with 17 female cadets, "the first time for female cadets graduating from the National Defence Academy"; theprint.in, https://theprint.in/defence/first-batch-of-19-women-cadets-join-nda-set-to-begin-training-this-week/1074554/ (HTTP 200), whose embedded publication date is 2022-08-08, headline "First batch of 19 women cadets join NDA, set to begin training this week".
+
+I then ran `npx tsx scripts/check-chapter.ts 31`: exit 0, "chapter 31 (31-paths-after-eighteen.json): 17 tips / PASS: no banned term, CJK character or foreign-jurisdiction term."
+
+## Corrections checked
+
+| Item | Correction previously required | What the built JSON now says | How verified | Result |
+| --- | --- | --- | --- | --- |
+| (h) 31-15 | Cite s.6(7) of the Income-tax Act 2025, not s.6(1A) of the 1961 Act; separate the 120-day visiting-citizen rule from the deemed-resident rule; say "tax year" | Plain words, line 377: "Under the residence test in the Income-tax Act, 2025, which replaced the 1961 Act on 1 April 2026 and renumbered its sections, you are resident if you are in India for 182 days or more in the tax year, or for 60 days in the year and 365 days in the four preceding years (the 60-day test does not apply to a citizen who leaves India for employment abroad or as a member of the crew of an Indian ship), and a citizen who is not liable to tax in any other country and whose income other than foreign sources is above fifteen lakh rupees is deemed resident under section 6(7); a visiting citizen or person of Indian origin above that threshold uses 120 days instead of 60." | Fetch: s.6(7) is the deemed-resident provision ("An Indian citizen who is not liable to tax in any other country ... AND whose Indian income exceeds 15 lakh (excluding foreign-sourced income) shall be deemed Resident"), and the mapping to the old s.6(1A) is confirmed; s.6(2)(a) and 6(2)(b) give the 182-day and 60-plus-365 tests, s.6(3) the employment/crew carve-out, and the 120-day figure is the separate citizen/PIO variation | fixed |
+| (i) 31-2 | Say women have been admitted to the NDA since 2022, with the Supreme Court order of August 2021 opening the examination | Plain words, line 52: "Women have been admitted to the National Defence Academy since 2022 (the Supreme Court's August 2021 order opened the examination to them)." | Fetch: ThePrint's report of the first batch of 19 women cadets joining the NDA is dated 2022-08-08; Wikipedia records the August 2021 order and the first female graduation on 30 May 2025 (148th course) | fixed |
+
+## The section 6 point in detail
+
+The corrected sentence now keeps three things apart that the previous text ran together. First, ordinary residence: 182 days in the tax year, or 60 days in the year plus 365 in the four preceding years. Second, the carve-out: that 60-day limb is not applied to a citizen who leaves India for employment abroad or as crew of an Indian ship. Third, deemed residence: a citizen who is not liable to tax in any other country and whose income other than foreign sources exceeds fifteen lakh rupees is deemed resident under section 6(7). The visiting citizen or person of Indian origin rule is then stated as its own variation - 120 days instead of 60 - which is where it belongs, because it changes the day count for a class of visitor rather than creating a deemed resident. The citation is now to the 2025 Act's own numbering, and "tax year" is the 2025 Act's term.
+
+Two limits of this verification should be stated. The section text was read through a practitioner note that quotes it, because incometax.gov.in returns HTTP 200 on its front page but exposes no fetchable statute text and its document references returned 403 in the previous round; the official gazette text of the 2025 Act was not read in this session. And the 120-day variation is described, not cited by sub-section, in the chapter - so there is no risk of the chapter carrying a wrong sub-section number for it, but the description itself was checked only against the secondary sources above.
+
+## The NDA date in detail
+
+"Since 2022" is the correct formulation. The Supreme Court's order opening the NDA examination to women candidates was passed in August 2021, which is what the parenthetical says; the first cohort of 19 women cadets joined the academy in 2022, which is what the main clause says. The two facts are consistent, and the sentence no longer implies that women were cadets in 2021. The academy's first female graduates passed out on 30 May 2025 after the three-year course, which corroborates a 2022 entry.
+
+## Confirmed by text only
+
+- The rest of 31-15 is unchanged: the worldwide-income consequence, the absence of an Indian withholding obligation on a foreign employer, advance tax by instalment, the foreign inward remittance certificate and the FEMA current-account treatment. None of those depends on the corrected sub-section.
+- 31-15's caveat still says "Grade A on the statutory tests ..." and the tip's evidenceGrade is A.
+- 31-2's caveat still opens "Grade A because the absence of conscription is a matter of statute and practice ..." and the tip's grade is A; every caveat in the chapter that states a grade matches its own badge (checked across all 17 tips).
+- 31-2's sources field was not changed and still lists UPSC, the three service recruitment portals, the Coast Guard and the Ministry of Defence; that is adequate for a statement about entry routes.
+
+## Access failures
+
+- pib.gov.in returns HTTP 403 (Akamai "Access Denied") - including the NDA women's-recruitment release (PRID=1941369) attempted this pass, so the NDA facts rest on ThePrint and Wikipedia rather than a government release.
+- indiacode.nic.in returns HTTP 403 on every handle and bitstream, so the Army Act 1950, Navy Act 1957 and Air Force Act 1950 are checked for name, year and effect only, not quoted.
+- labour.gov.in returns HTTP 403.
+- incometax.gov.in: front page HTTP 200, no fetchable statute text; the section-document references returned 403 in the previous round ("Reference#18.95f43717").
+- incometaxindia.gov.in/w/section-6-253 returned 403 in the previous round; morth.nic.in fails with a fetch TypeError; bprd.mha.gov.in returns "unsupported content type application/pdf", so no PDF can be read through the fetch tool.
+
+## Notes carried forward (non-blocking)
+
+- 31-15, caveat (JSON line 381): the sentence "the deemed-residency rule for an Indian citizen not liable to tax in any other country whose income above fifteen lakh rupees is deemed resident in section 6(7)" is grammatically tangled. The citation and the substance are right, so this is an editorial note, not a blocking item; a rewrite along the lines of "the deemed-resident rule in section 6(7), for a citizen not liable to tax elsewhere whose income other than foreign sources is above fifteen lakh rupees" would read cleanly.
+- 31-1, 31-9: the NDA and CDS age bands, the unmarried condition and the Coast Guard's direct Navik entry were checked against recruitment notifications in the previous audit and are unchanged.
+- 31-4: Seva Nidhi, the four-year term and the NSP, Vidya Lakshmi and PM Vidyalaxmi routes are correct; the paramilitary and state-police reservation is stated without a percentage, which is the honest formulation, because the PIB releases that would fix the share are unreadable (403).
+- 31-12: the Code on Social Security 2020 gig-worker definition, the Social Security Fund and the 1-2 per cent of turnover capped at 5 per cent of gig-worker payments were confirmed in the previous audit; the Code, not a repealed Act, is cited.
+- 31-8, 31-13: education.gov.in returns 403, so the NCTE and TET route and the "no national six-year MBBS bond" claim rest on the statutory framework and prospectus practice rather than a ministry page.
+- 31-16, 31-17: MUDRA, CGTMSE, Stand-Up India and PMEGP exist as described, and the negative claims (no fresh-graduate quota in central recruitment; NCC and sports marks in some state police recruitment only) hold.
 
 ## Banned-term check
 
-- JSON: 0 banned terms by the literal list, but 20 China-specific vocabulary hits ("civil affairs bureau", "county-level", "prefecture", "fresh graduate", "provincial") and 30 rupee signs, several converting Chinese tuition, loan and premium figures. This chapter would be unusable in India even though the banned-word grep is clean.
-- Rendered page: not rebuilt in this pass; JSON is the content source.
+- JSON: 0 banned terms
+- `npx tsx scripts/check-chapter.ts 31`: exit 0, "chapter 31 (31-paths-after-eighteen.json): 17 tips / PASS: no banned term, CJK character or foreign-jurisdiction term."
 
-## Safety and editorial check
+## New blocking items
 
-- No unsupported high-risk claim: FAIL - a reader following 31-2, 31-3, 31-4 or 31-16 would act on Chinese obligations and entitlements that do not exist in India. 31-15 is a tax claim and is wrong for India.
-- No invented scheme, number or hotline: converted rupee amounts (2,84,200 tuition; 42,63,000 loan; per-order premium) and Chinese schemes presented as Indian options.
-- No direct equivalent recorded where needed: no UPSC/SSC, NIOS/IGNOU, CGTMSE/MUDRA, FEMA or SS Code gig-worker route recorded.
-- Caveats retained: 31-6, 31-11 and 31-14 are correctly hedged and India-specific.
+None. Both corrected sentences are accurate, the old numbering and date do not survive anywhere in the file, and the edits introduced no new error.
 
-## Blocking issues
-
-- 31-1 - twelve-pathway ladder with age 16 is Chinese; not in mod.gov.in or mea.gov.in.
-- 31-2 - 31 October registration and two-year service are Chinese conscription rules.
-- 31-3 - two-year penalties for refusing service are Chinese.
-- 31-4 - rupee tuition cap and student-soldier benefits are Chinese and converted.
-- 31-5 - six job-placement scenarios are Chinese veterans' rules.
-- 31-7 - Western Plan 10% quota is Chinese.
-- 31-8 - Special Post Programme teacher conversion is Chinese.
-- 31-9 - firefighter and civilian military posts are Chinese recruitment routes.
-- 31-10 - self-study, adult entrance and open-university routes are Chinese.
-- 31-12 - per-order platform injury premium is the Chinese pilot; Indian position is the SS Code and state welfare boards.
-- 31-13 - six-year service-bond teacher and medical programmes are Chinese.
-- 31-15 - SAFE Huifa [2007] No. 1 is a Chinese FX rule; Indian tax-residency test is not stated.
-- 31-16 - Caijin [2023] No. 75 startup loan with converted rupee cap is Chinese.
-- 31-17 - "fresh graduate" and personnel-file rules are Chinese civil-service rules.
-
-Verdict: FAIL
+Verdict: PASS

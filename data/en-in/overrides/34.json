@@ -1,12 +1,29 @@
 {
   "tips": {
     "34-1": {
+      "id": "34-1",
+      "chapter": 34,
+      "tip": 1,
       "title": "Before taking two cold or pain relievers at once, compare the ingredient lists: only one of them should contain paracetamol",
-      "inPlainWords": "Paracetamol, also called acetaminophen, is in most multi-symptom cold and flu products, in many headache and dental pain tablets, and in some prescription painkillers. Two such products taken together are one double dose, and a paracetamol overdose destroys the liver: in the U.S. study below, 27 per cent of the patients with paracetamol-related acute liver failure died before a transplant could be found. Read the panel that says 'each tablet contains' or 'each 5 ml contains' on every pack, and add up the paracetamol. An Indian adult pack usually caps the day at 4,000 mg, with a lower limit for anyone with liver disease, heavy alcohol use or a very low body weight, and the line printed on your own pack governs.",
-      "benefit": "Over six years, 22 U.S. hospitals tracked 662 cases of acute liver failure. Of these, 275 (42 per cent) were caused by paracetamol; the median amount taken was 24 grams. Among those 275 patients, 131 (48 per cent) took the drug unintentionally, and in 38 per cent of those cases they were also taking two or more other paracetamol-containing products. In the end 27 per cent died before a transplant was possible and 8 per cent received one. U.S. rules require an over-the-counter pack to name three risks in the liver warning: exceeding the daily limit, using another paracetamol product at the same time, and drinking more than three alcoholic drinks a day while taking it. The Indian labelling rules in the Drugs and Cosmetics Rules, 1945 require every active ingredient and its quantity to be printed on the pack, so the number you need is on the box.",
+      "tags": {
+        "money": "Free",
+        "time": "Quick",
+        "willpower": "None needed",
+        "benefit": "Large",
+        "scope": "Lifespan",
+        "audience": []
+      },
+      "costScore": 0,
+      "valueTier": "Very high",
+      "disputed": false,
+      "stillVerifying": false,
       "cost": "No cost at all. It takes a minute or two to read the ingredient panel on each pack you already own.",
+      "inPlainWords": "Paracetamol, also called acetaminophen, is in most multi-symptom cold and flu products, in many headache and dental pain tablets, and in some prescription painkillers. Two such products taken together are one double dose, and a paracetamol overdose destroys the liver: in the U.S. study below, 27 per cent of the patients with paracetamol-related acute liver failure died before a transplant could be found. Read the panel that says 'each tablet contains' or 'each 5 ml contains' on every pack, and add up the paracetamol. Indian adult packs generally print a maximum of 4,000 mg a day, with a lower limit for anyone with liver disease, heavy alcohol use or a very low body weight, and the line printed on your own pack governs.",
+      "benefit": "Over six years, 22 U.S. hospitals tracked 662 cases of acute liver failure. Of these, 275 (42 per cent) were caused by paracetamol; the median amount taken was 24 grams. Among those 275 patients, 131 (48 per cent) took the drug unintentionally, and in 38 per cent of those cases they were also taking two or more other paracetamol-containing products. In the end 27 per cent died before a transplant was possible and 8 per cent received one. U.S. rules require an over-the-counter pack to name three risks in the liver warning: exceeding the daily limit, using another paracetamol product at the same time, and drinking more than three alcoholic drinks a day while taking it. The Indian labelling rules in the Drugs and Cosmetics Rules, 1945 require every active ingredient and its quantity to be printed on the pack, so the number you need is on the box.",
+      "evidenceGrade": "B",
+      "sources": "Larson AM, Polson J, Fontana RJ, et al.; Acute Liver Failure Study Group (2005). Acetaminophen-induced acute liver failure: results of a United States multicenter, prospective study. Hepatology, 42(6):1364-1372. <https://doi.org/10.1002/hep.20948>; 21 CFR 201.326, over-the-counter internal analgesic, antipyretic and antirheumatic drug products for over-the-counter human use. <https://www.ecfr.gov/current/title-21/chapter-I/subchapter-C/part-201/subpart-G/section-201.326>; Central Drugs Standard Control Organisation. <https://cdsco.gov.in/opencms/opencms/en/Home/>",
       "caveats": "Do not add a paracetamol-containing cold medicine to a paracetamol tablet, and check combination painkillers sold for dental, back or period pain, plus prescription products such as tramadol with paracetamol, which count too. Do not drink heavily while taking it. Brand names hide the ingredient, so look for 'paracetamol' or 'acetaminophen' in the panel, not at the front of the box. If you think you have taken too much, go to a hospital now even if you feel well, because the antidote works best within the first eight hours and an overdose can feel like nothing at all. The evidence grade is B because the U.S. figures come from a registry without a control group.",
-      "sources": "Larson AM, Polson J, Fontana RJ, et al.; Acute Liver Failure Study Group (2005). Acetaminophen-induced acute liver failure: results of a United States multicenter, prospective study. Hepatology, 42(6):1364-1372. <https://doi.org/10.1002/hep.20948>; 21 CFR 201.326, over-the-counter internal analgesic, antipyretic and antirheumatic drug products for over-the-counter human use. <https://www.ecfr.gov/current/title-21/chapter-I/subchapter-C/part-201/subpart-G/section-201.326>; Central Drugs Standard Control Organisation. <https://cdsco.gov.in/opencms/opencms/en/Home/>"
+      "reviewStatus": "draft"
     },
     "34-2": {
       "title": "Never give a child aspirin for a fever, and treat nimesulide or metamizole as an adult's drug, not a child's",
@@ -25,12 +42,29 @@
       "sources": "Smith SM, Schroeder K, Fahey T (2014). Over-the-counter (OTC) medications for acute cough in children and adults in community settings. Cochrane Database of Systematic Reviews, (11):CD001831. <https://doi.org/10.1002/14651858.CD001831.pub5>; Central Drugs Standard Control Organisation. <https://cdsco.gov.in/opencms/opencms/en/Home/>"
     },
     "34-6": {
+      "id": "34-6",
+      "chapter": 34,
+      "tip": 6,
       "title": "In India omeprazole needs a prescription: take it for a short course under a doctor, and act on the red flags",
-      "inPlainWords": "Omeprazole and the other proton-pump inhibitors are Schedule H drugs in India, so a pharmacy may sell them only against a prescription from a registered medical practitioner, and the over-the-counter pack sold in some countries does not exist here. Used for a short course for heartburn that a doctor has assessed, it is safe for most people, but it is a treatment for a diagnosis rather than a permanent habit. Trouble swallowing, pain on swallowing, vomiting blood, black tarry stools, unexplained weight loss or anaemia are red flags: go to a doctor or an emergency department instead of taking an acid blocker, because the drug can mask a bleeding ulcer or a stomach cancer while it makes you feel better.",
-      "benefit": "Omeprazole shuts down the acid pump in the stomach lining, which is why it works for reflux and for an ulcer, and why it also removes the warning signal of a cancer that is bleeding slowly. If the symptoms come back within a few weeks of stopping, the answer is an investigation, often an endoscopy or a test for H. pylori, not another course bought on your own. Omeprazole also reduces the effect of clopidogrel, so anyone with a stent or a recent heart attack must tell the cardiologist, who may switch to pantoprazole. Long courses are linked to low magnesium and vitamin B12, a higher risk of C. difficile infection and a slightly higher fracture risk, which is why a repeat prescription should be reviewed once a year.",
+      "tags": {
+        "money": "Free",
+        "time": "Quick",
+        "willpower": "None needed",
+        "benefit": "Medium",
+        "scope": "Lifespan",
+        "audience": []
+      },
+      "costScore": 0,
+      "valueTier": "High",
+      "disputed": false,
+      "stillVerifying": false,
       "cost": "A consultation plus a generic omeprazole course costs little. The expensive part is ignoring a red flag for six months while the acid blocker keeps the symptom quiet.",
-      "caveats": "The dose and the length of the course belong to the doctor: do not borrow a friend's strip or finish an old one. Over 55, with new or changing symptoms, the doctor will usually investigate before treating. Do not stop a long-standing prescribed PPI abruptly without asking, because the acid can rebound for a week or two. Antacids and alginates are the over-the-counter options for mild reflux, and they work for minutes rather than days. Tell the pharmacist about any other medicine you take, especially a blood thinner.",
-      "sources": "Central Drugs Standard Control Organisation, Schedule H and the Drugs and Cosmetics Rules, 1945. <https://cdsco.gov.in/opencms/resources/UploadCDSCOWeb/2022/drug_rules/Drugs%20Rules1945n.pdf>; Central Drugs Standard Control Organisation. <https://cdsco.gov.in/opencms/opencms/en/Home/>; Indian Pharmacopoeia Commission, pharmacovigilance. <https://ipc.nic.in/>"
+      "inPlainWords": "Omeprazole, esomeprazole, pantoprazole and rabeprazole are Schedule H drugs in India, so a pharmacy may sell them only against a prescription from a registered medical practitioner, and the over-the-counter pack sold in some countries does not exist here. Used for a short course for heartburn that a doctor has assessed, it is safe for most people, but it is a treatment for a diagnosis rather than a permanent habit. Trouble swallowing, pain on swallowing, vomiting blood, black tarry stools, unexplained weight loss or anaemia are red flags: go to a doctor or an emergency department instead of taking an acid blocker, because the drug can mask a bleeding ulcer or a stomach cancer while it makes you feel better.",
+      "benefit": "Omeprazole shuts down the acid pump in the stomach lining, which is why it works for reflux and for an ulcer, and why it also removes the warning signal of a cancer that is bleeding slowly. If the symptoms come back within a few weeks of stopping, the answer is an investigation, often an endoscopy or a test for H. pylori, not another course bought on your own. Omeprazole also reduces the effect of clopidogrel, so anyone with a stent or a recent heart attack must tell the cardiologist, who may switch to pantoprazole. Long courses are linked to low magnesium and vitamin B12, a higher risk of C. difficile infection and a slightly higher fracture risk, which is why a repeat prescription should be reviewed once a year.",
+      "evidenceGrade": "B",
+      "sources": "Central Drugs Standard Control Organisation, Schedule H and the Drugs and Cosmetics Rules, 1945. <https://cdsco.gov.in/opencms/resources/UploadCDSCOWeb/2022/drug_rules/Drugs%20Rules1945n.pdf>; Central Drugs Standard Control Organisation. <https://cdsco.gov.in/opencms/opencms/en/Home/>; Indian Pharmacopoeia Commission, pharmacovigilance. <https://ipc.nic.in/>",
+      "caveats": "The dose and the length of the course belong to the doctor: do not borrow a friend's strip or finish an old one. Over 55, with new or changing symptoms, the doctor will usually investigate before treating. Do not stop a long-standing prescribed PPI abruptly without asking, because the acid can rebound for a week or two. Antacids and alginates are the over-the-counter options for mild reflux, and they work for minutes rather than days. Tell the pharmacist about any other medicine you take, especially a blood thinner. In India omeprazole, rabeprazole and esomeprazole are Schedule H drugs, and rule 65(9) of the Drugs and Cosmetics Rules, 1945 allows a Schedule H drug to be sold only on the prescription of a registered medical practitioner.",
+      "reviewStatus": "draft"
     },
     "34-7": {
       "title": "Do not ask for an antibiotic for a cold, and do not accept one without a prescription",
@@ -41,12 +75,29 @@
       "sources": "Kenealy T, Arroll B (2025). Antibiotics for the common cold and acute purulent rhinitis. Cochrane Database of Systematic Reviews, 11:CD000247. <https://doi.org/10.1002/14651858.CD000247.pub4>; Central Drugs Standard Control Organisation, Schedule H and H1. <https://cdsco.gov.in/opencms/resources/UploadCDSCOWeb/2022/drug_rules/Drugs%20Rules1945n.pdf>"
     },
     "34-10": {
+      "id": "34-10",
+      "chapter": 34,
+      "tip": 10,
       "title": "Clear out expired and unused medicines once a year, and take them to a pharmacy or hospital collection point, not the kitchen bin",
-      "inPlainWords": "Nearly half of the unsupervised medicine ingestions in young children involve prescription tablets, and about three in ten of those prescriptions belong to a grandparent, so the cabinet itself is the risk. Household medicines in India are not covered by the Bio-Medical Waste Management Rules, 2016, which bind hospitals and clinics, so there is no national kerbside collection: the practical route is a pharmacy or hospital that runs a take-back or a biomedical-waste collection point, and where none exists, whatever your municipal body says about household hazardous waste. Never flush them down the toilet or the drain, and never burn them.",
-      "benefit": "U.S. emergency-department surveillance estimated that children under six took medicines without adult supervision about 640,000 times between 2004 and 2013, with about 59,000 visits in 2013 alone. From 2010 to 2013 the commonest form was an oral prescription tablet, 45.9 per cent of cases, and among prescriptions opioids (13.8 per cent) and benzodiazepines (12.7 per cent) led. A 2017 survey of five U.S. poison centres found that 30.7 per cent of prescription ingestions involved a grandparent's medicine, and that 51.5 per cent of the drugs had been taken out of their original packaging first. The U.S. Food and Drug Administration names take-back programmes as the best route, which is the same conclusion the Indian pharmacy route reaches.",
+      "tags": {
+        "money": "Free",
+        "time": "Quick",
+        "willpower": "None needed",
+        "benefit": "Small",
+        "scope": "Lifespan",
+        "audience": []
+      },
+      "costScore": 0,
+      "valueTier": "Average",
+      "disputed": false,
+      "stillVerifying": false,
       "cost": "No cost. Sort the cabinet once a year, which takes about ten minutes.",
+      "inPlainWords": "Nearly half of the unsupervised medicine ingestions in young children involve prescription tablets, and a grandparent’s medicine is often the source, so the cabinet itself is the risk. Household medicines in India are not covered by the Bio-Medical Waste Management Rules, 2016, which bind hospitals and clinics, so there is no national kerbside collection: the practical route is a pharmacy or hospital that runs a take-back or a biomedical-waste collection point, and where none exists, whatever your municipal body says about household hazardous waste. Never flush them down the toilet or the drain, and never burn them.",
+      "benefit": "U.S. emergency-department surveillance estimated that children under six took medicines without adult supervision about 640,000 times between 2004 and 2013, with about 59,000 visits in 2013 alone. From 2010 to 2013 the commonest form was an oral prescription tablet, 45.9 per cent of cases, and among prescriptions opioids (13.8 per cent) and benzodiazepines (12.7 per cent) led. A 2017 survey of five U.S. poison centres found that 30.7 per cent of prescription ingestions involved a grandparent's medicine, and that 51.5 per cent of the drugs had been taken out of their original packaging first. The U.S. Food and Drug Administration names take-back programmes as the best route, which is the same conclusion the Indian pharmacy route reaches.",
+      "evidenceGrade": "B",
+      "sources": "Lovegrove MC, Weidle NJ, Budnitz DS (2015). Trends in emergency department visits for unsupervised pediatric medication exposures, 2004-2013. Pediatrics, 136(4):e821-e829. <https://doi.org/10.1542/peds.2015-2092>; Agarwal M, Lovegrove MC, Geller RJ, et al. (2020). Circumstances involved in unsupervised solid dose medication exposures among young children. Journal of Pediatrics, 219:188-195.e6. <https://doi.org/10.1016/j.jpeds.2019.12.027>; U.S. Food and Drug Administration, where and how to dispose of unused medicines. <https://www.fda.gov/consumers/consumer-updates/where-and-how-dispose-unused-medicines>; Central Pollution Control Board, Bio-Medical Waste Management Rules, 2016. <https://cpcb.nic.in/>",
       "caveats": "Do not tip loose tablets into a bag with food waste, because a child or a stray animal can still reach them, and keep them in the original box until you hand them over so the collection point can read the label. Antibiotics should never be kept for next time, and neither should a half-used course of anything. Tablets decanted into a weekly organiser lose their label, so dispose of those rather than storing them. Local rules differ, so ask at the pharmacy counter first. The evidence grade is B because the U.S. figures are registry counts and no study measures how much a clean-out reduces ingestions.",
-      "sources": "Lovegrove MC, Weidle NJ, Budnitz DS (2015). Trends in emergency department visits for unsupervised pediatric medication exposures, 2004-2013. Pediatrics, 136(4):e821-e829. <https://doi.org/10.1542/peds.2015-2092>; Agarwal M, Lovegrove MC, Geller RJ, et al. (2020). Circumstances involved in unsupervised solid dose medication exposures among young children. Journal of Pediatrics, 219:188-195.e6. <https://doi.org/10.1016/j.jpeds.2019.12.027>; U.S. Food and Drug Administration, where and how to dispose of unused medicines. <https://www.fda.gov/consumers/consumer-updates/where-and-how-dispose-unused-medicines>; Central Pollution Control Board, Bio-Medical Waste Management Rules, 2016. <https://cpcb.nic.in/>"
+      "reviewStatus": "draft"
     },
     "34-11": {
       "title": "No alcohol with metronidazole or a cephalosporin, and for several days after: the reaction is real and can be severe",
@@ -57,12 +108,54 @@
       "sources": "Metronidazole capsules, prescribing information, contraindications and interaction with alcohol. DailyMed, U.S. National Library of Medicine. <https://dailymed.nlm.nih.gov/dailymed/>; Indian Pharmacopoeia Commission, pharmacovigilance programme of India. <https://ipc.nic.in/>; Central Drugs Standard Control Organisation. <https://cdsco.gov.in/opencms/opencms/en/Home/>"
     },
     "34-12": {
+      "id": "34-12",
+      "chapter": 34,
+      "tip": 12,
       "title": "Do not drive, work at heights or run machinery on a cold medicine containing chlorpheniramine or diphenhydramine",
-      "inPlainWords": "The older antihistamines, chlorpheniramine and diphenhydramine, are in a large share of multi-symptom cold and allergy products, and they cause real drowsiness and slow reaction time, not just a feeling of tiredness. The warning on the label is not a formality: in the driving-simulator trial below, drivers on diphenhydramine did worse than drivers at a blood alcohol level of 0.10 per cent, and their own rating of how sleepy they felt did not predict it. Indian labels for these products carry the standard warning not to drive or operate machinery while taking them, and the Drugs and Cosmetics Rules, 1945 require that warning to be printed.",
-      "benefit": "The trial gave 40 drivers with allergic rhinitis four treatments in random order: diphenhydramine 50 mg, fexofenadine 60 mg, enough alcohol to reach a blood alcohol level of 0.10 per cent, and a placebo. Diphenhydramine produced the worst speed tracking and vehicle control, significantly worse than both alcohol and fexofenadine. When a vehicle pulled out unexpectedly, the drivers on alcohol or diphenhydramine reacted late, while fexofenadine was indistinguishable from placebo. The drivers' own ratings of drowsiness did not match their measured impairment. The newer antihistamines, loratadine, cetirizine and fexofenadine, cause far less sedation, so a pharmacist can usually swap the product rather than the plan.",
+      "tags": {
+        "money": "Free",
+        "time": "Quick",
+        "willpower": "Some",
+        "benefit": "Small",
+        "scope": "Lifespan",
+        "audience": []
+      },
+      "costScore": 1,
+      "valueTier": "Average",
+      "disputed": false,
+      "stillVerifying": false,
       "cost": "Free. Read the active ingredients before you buy, and take the bus or ask for a non-sedating alternative for the days you must drive.",
+      "inPlainWords": "The older antihistamines, chlorpheniramine and diphenhydramine, are in a large share of multi-symptom cold and allergy products, and they cause real drowsiness and slow reaction time, not just a feeling of tiredness. The warning on the label is not a formality: in the driving-simulator trial below, drivers on diphenhydramine did worse than drivers at a blood alcohol level of 0.10 per cent, and their own rating of how sleepy they felt did not predict it. Many Indian packs carry a warning not to drive or operate machinery while taking them, though the Drugs and Cosmetics Rules, 1945 do not themselves mandate that sentence: rule 97 requires the Schedule H and Schedule H1 caution boxes, not a driving warning. The drowsiness is real whether or not the label spells it out.",
+      "benefit": "The trial gave 40 drivers with allergic rhinitis four treatments in random order: diphenhydramine 50 mg, fexofenadine 60 mg, enough alcohol to reach a blood alcohol level of 0.10 per cent, and a placebo. Diphenhydramine produced the worst speed tracking and vehicle control, significantly worse than both alcohol and fexofenadine. When a vehicle pulled out unexpectedly, the drivers on alcohol or diphenhydramine reacted late, while fexofenadine was indistinguishable from placebo. The drivers' own ratings of drowsiness did not match their measured impairment. The newer antihistamines, loratadine, cetirizine and fexofenadine, cause far less sedation, so a pharmacist can usually swap the product rather than the plan.",
+      "evidenceGrade": "B",
+      "sources": "Weiler JM, Bloomfield JR, Woodworth GG, et al. (2000). Effects of fexofenadine, diphenhydramine, and alcohol on driving performance: a randomized, placebo-controlled trial in the Iowa driving simulator. Annals of Internal Medicine, 132(5):354-363. <https://doi.org/10.7326/0003-4819-132-5-200003070-00004>; Central Drugs Standard Control Organisation. <https://cdsco.gov.in/opencms/opencms/en/Home/>; Ministry of Road Transport and Highways. <https://morth.gov.in/>",
       "caveats": "Chlorpheniramine is often combined with paracetamol, so the same tablet can be a double-dose risk as well. Alcohol, some cough syrups and sleeping tablets add to the impairment, so the combination is worse than either alone. A driver impaired by a medicine can be prosecuted for rash or negligent driving, and section 185 of the Motor Vehicles Act, 1988 covers driving under the influence. Cetirizine still makes a minority of people sleepy, so test it on a day you are not driving. The evidence grade is B: the trial is small, but it is controlled and the result is consistent with the labelling.",
-      "sources": "Weiler JM, Bloomfield JR, Woodworth GG, et al. (2000). Effects of fexofenadine, diphenhydramine, and alcohol on driving performance: a randomized, placebo-controlled trial in the Iowa driving simulator. Annals of Internal Medicine, 132(5):354-363. <https://doi.org/10.7326/0003-4819-132-5-200003070-00004>; Central Drugs Standard Control Organisation. <https://cdsco.gov.in/opencms/opencms/en/Home/>; Ministry of Road Transport and Highways. <https://morth.gov.in/>"
+      "reviewStatus": "draft"
+    },
+    "34-8": {
+      "id": "34-8",
+      "chapter": 34,
+      "tip": 8,
+      "title": "For diarrhea, start by drinking oral rehydration solution; do not give anti-diarrheal drugs to children under 5",
+      "tags": {
+        "money": "Small cost",
+        "time": "Quick",
+        "willpower": "None needed",
+        "benefit": "Medium",
+        "scope": "Lifespan",
+        "audience": []
+      },
+      "costScore": 1,
+      "valueTier": "Average",
+      "disputed": false,
+      "stillVerifying": false,
+      "cost": "An oral rehydration sachet costs very little at any Indian pharmacy, so it is worth keeping one at home.",
+      "inPlainWords": "The most important thing during diarrhea is rehydration, not stopping the diarrhea itself. Mix the solution exactly as directed on the package and drink it — never substitute it with sugary juices or soft drinks, as the excess sugar can actually worsen dehydration. Never give anti-diarrheal medications such as loperamide to kids under 5 years old; in severe cases these drugs can cause life-threatening intestinal blockages.",
+      "benefit": "WHO’s guidelines on diarrhea treatment state clearly that anti-diarrheal and anti-vomiting drugs provide no real benefit for children with acute or prolonged diarrhea. They do not prevent dehydration or improve nutritional status, and some carry serious, even fatal side effects — so they must never be given to children under 5. Drugs like loperamide that slow intestinal motility can lead to severe paralytic intestinal obstruction, which is potentially fatal and can prolong the underlying infection. The same guidelines also warn that drinks high in sugar draw water into the intestines, causing hypernatremic dehydration; this applies to soft drinks and most commercially sold fruit juices. WHO recommends a low-osmolarity formula with a total osmotic pressure of 245 mOsm/L; compared to older formulations, this reduces unplanned intravenous fluid administration by 33%. A Cochrane review of 8 trials reached similar conclusions (OR 0.59, 95% CI 0.45–0.79), showing roughly a 40% reduction in complications when this solution is used.",
+      "evidenceGrade": "A",
+      "sources": "World Health Organization (2005). The treatment of diarrhoea: a manual for physicians and other senior health workers, 4th revision. <https://iris.who.int/handle/10665/43209>; Hahn S, Kim S, Garner P (2002). Reduced osmolarity oral rehydration solution for treating dehydration caused by acute diarrhoea in children. Cochrane Database of Systematic Reviews, (1):CD002847. <https://doi.org/10.1002/14651858.CD002847>",
+      "caveats": "When purchasing oral rehydration solution, always check the package label for its osmotic pressure and choose the low-osmolarity version. The WHO guidelines also note that blood in a child’s stool almost always indicates bacterial dysentery, which requires medical treatment with antibiotics — rehydration alone is not sufficient. The “moderate” benefit rating here reflects the fact that the available data compares two different rehydration solutions rather than the effect of drinking any solution versus none.",
+      "reviewStatus": "draft"
     }
   }
 }

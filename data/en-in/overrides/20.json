@@ -12,7 +12,8 @@
     },
     "20-4": {
       "benefit": "The World Health Organization recommends initiating breastfeeding within the first hour after birth. It also advises exclusive breastfeeding for the first 6 months — meaning no other foods or liquids, not even water — followed by the gradual introduction of safe, adequate solid foods while continuing breastfeeding until at least age 2. India's Infant and Young Child Feeding guidelines, issued under the National Health Mission, make the same recommendations — start breastfeeding within an hour of birth, breastfeed exclusively for six months, then add complementary foods while breastfeeding continues to age 2 — and add that the first foods must be nutrient-dense and include an animal-source food such as egg, fish, meat or dairy where the family eats it.",
-      "caveats": "If breast milk is insufficient or not an option, formula is a perfectly acceptable substitute — there is no need for guilt. The difference between breastfeeding and formula feeding is far smaller than the impact of ensuring safe sleeping practices. As for frequency of solid food intake: infants aged 6–8 months should consume solids 1–2 times daily, while those aged 9–12 months should have 2–3 servings per day. Alongside the meals, add a little oil or ghee so that the food is energy-dense, and include an animal-source food — egg, fish, meat or dairy — where the family eats it: iron and zinc are the nutrients most often short after six months. The food should be thick enough to stay on a spoon, not a thin broth. For infants with severe eczema or egg allergies, the question of whether to avoid peanuts is addressed in Section 12 of this chapter — the answer is: there is no need to avoid peanuts."
+      "caveats": "If breast milk is insufficient or not an option, formula is a perfectly acceptable substitute — there is no need for guilt. The difference between breastfeeding and formula feeding is far smaller than the impact of ensuring safe sleeping practices. As for frequency of solid food intake, India's Mother and Child Protection guidance is the local standard: infants aged 6–8 months should eat 2–3 times a day plus 1–2 snacks, and those aged 9–12 months should have 3–4 meals a day plus 1–2 snacks between meals. Alongside the meals, add a little oil or ghee so that the food is energy-dense, and include an animal-source food — egg, fish, meat or dairy — where the family eats it: iron and zinc are the nutrients most often short after six months. The food should be thick enough to stay on a spoon, not a thin broth. For infants with severe eczema or egg allergies, the question of whether to avoid peanuts is addressed in Section 12 of this chapter — the answer is: there is no need to avoid peanuts.",
+      "sources": "World Health Organization. Breastfeeding. <https://www.who.int/health-topics/breastfeeding>; Ministry of Health and Family Welfare, National Health Mission. Mother and Child Protection (MCP) Guide Book. <https://nhm.gov.in/>"
     },
     "20-10": {
       "title": "When choosing diapers, focus on fit, how often you change them, and whether the brand has been flagged — no Indian regulator publishes a best-brand list",
@@ -31,12 +32,63 @@
       "sources": "Centers for Disease Control and Prevention (2003). Neurologic impairment in children associated with maternal dietary deficiency of cobalamin—Georgia, 2001. MMWR, 52(4), 61-64. <https://www.cdc.gov/mmwr/preview/mmwrhtml/mm5204a1.htm>; Fewtrell M, Bronsky J, Campoy C, et al. (2017). Complementary Feeding: A Position Paper by the European Society for Paediatric Gastroenterology, Hepatology, and Nutrition (ESPGHAN) Committee on Nutrition. Journal of Pediatric Gastroenterology and Nutrition, 64(1), 119-132. <https://doi.org/10.1097/MPG.0000000000001454>; Melina V, Craig W, Levin S (2016). Position of the Academy of Nutrition and Dietetics: Vegetarian Diets. Journal of the Academy of Nutrition and Dietetics, 116(12), 1970-1980. <https://doi.org/10.1016/j.jand.2016.09.025>"
     },
     "20-16": {
+      "id": "20-16",
+      "chapter": 20,
+      "tip": 16,
+      "title": "Supplement 400 IU of vitamin D daily from birth, especially for breastfed infants; full-term infants generally do not need routine calcium supplements during the first 6 months",
+      "tags": {
+        "money": "Small cost",
+        "time": "Quick",
+        "willpower": "Some",
+        "benefit": "Medium",
+        "scope": "Lifespan",
+        "audience": [
+          "Child under 3",
+          "Pregnant or planning"
+        ]
+      },
+      "costScore": 2,
+      "valueTier": "Average",
+      "disputed": false,
+      "stillVerifying": false,
       "cost": "Vitamin D drops are inexpensive and a bottle lasts months, at one drop a day. The real difficulty is remembering it every day until at least one year of age.",
+      "inPlainWords": "Breast milk contains very little vitamin D, and infants should not receive unprotected direct sunlight, making daily supplementation essential. In a trial in rural Turkey, 3.8% of unsupplemented infants developed rickets within 12 months, whereas zero infants in the supplemented group did. Follow the dosage recommended by your pediatrician. Full-term infants generally do not require supplemental calcium for the first 6 months.",
       "benefit": "A 2020 Cochrane systematic review confirmed that human breast milk has low vitamin D concentrations, leaving exclusively breastfed infants vulnerable to deficiency. The American Academy of Pediatrics (AAP) and public health authorities advise keeping infants out of direct sun exposure, necessitating oral supplementation for all infants. The routine dose for a breastfed infant is 400 IU a day, which the Indian Academy of Pediatrics and the American Academy of Pediatrics both recommend, with a higher dose only under a paediatrician's direction. A healthy full-term infant does not need calcium supplementation in the first six months. A 2016 Global Consensus on Prevention and Management of Nutritional Rickets representing 11 international endocrine societies established a strong recommendation that 400 IU (10 mcg) daily prevents nutritional rickets from birth to 12 months regardless of feeding mode. In a trial conducted in northeastern rural Turkey, rickets developed in 3.8% of unsupplemented infants over 12 months compared to 0% in those receiving 400 IU daily. Globally, no radiologically confirmed cases of rickets have been reported in infants adhering to 400 IU/day.",
-      "sources": "Munns CF, Shaw N, Kiely M, et al. (2016). Global Consensus Recommendations on Prevention and Management of Nutritional Rickets. Journal of Clinical Endocrinology & Metabolism, 101(2), 394-415. <https://doi.org/10.1210/jc.2015-2175>; Beser E, Cakmakci T (1994). Factors affecting the morbidity of vitamin D deficiency rickets and primary protection. East African Medical Journal, 71(6), 358-362. <https://europepmc.org/article/MED/7835254>; Tan ML, Abrams SA, Osborn DA (2020). Vitamin D supplementation for term breastfed infants to prevent vitamin D deficiency and improve bone health. Cochrane Database of Systematic Reviews, 12, CD013046. <https://doi.org/10.1002/14651858.CD013046.pub2>; American Academy of Pediatrics (2022). Where We Stand: Vitamin D & Iron Supplements for Babies. HealthyChildren.org. <https://www.healthychildren.org/English/ages-stages/baby/feeding-nutrition/Pages/Vitamin-Iron-Supplements.aspx>; Gallo S, Comeau K, Vanstone C, et al. (2013). Effect of different dosages of oral vitamin D supplementation on vitamin D status in healthy, breastfed infants: a randomized trial. JAMA, 309(17), 1785-1792. <https://doi.org/10.1001/jama.2013.3404>"
+      "evidenceGrade": "B",
+      "sources": "Munns CF, Shaw N, Kiely M, et al. (2016). Global Consensus Recommendations on Prevention and Management of Nutritional Rickets. Journal of Clinical Endocrinology & Metabolism, 101(2), 394-415. <https://doi.org/10.1210/jc.2015-2175>; Beser E, Cakmakci T (1994). Factors affecting the morbidity of vitamin D deficiency rickets and primary protection. East African Medical Journal, 71(6), 358-362. <https://europepmc.org/article/MED/7835254>; Tan ML, Abrams SA, Osborn DA (2020). Vitamin D supplementation for term breastfed infants to prevent vitamin D deficiency and improve bone health. Cochrane Database of Systematic Reviews, 12, CD013046. <https://doi.org/10.1002/14651858.CD013046.pub2>; American Academy of Pediatrics (2022). Where We Stand: Vitamin D & Iron Supplements for Babies. HealthyChildren.org. <https://www.healthychildren.org/English/ages-stages/baby/feeding-nutrition/Pages/Vitamin-Iron-Supplements.aspx>; Gallo S, Comeau K, Vanstone C, et al. (2013). Effect of different dosages of oral vitamin D supplementation on vitamin D status in healthy, breastfed infants: a randomized trial. JAMA, 309(17), 1785-1792. <https://doi.org/10.1001/jama.2013.3404>; Indian Academy of Pediatrics. <https://iapindia.org/>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>; World Health Organization. <https://www.who.int/>",
+      "caveats": "Graded B because rickets incidence figures derive from observational comparative trials rather than double-blind placebo RCTs. The 2020 Cochrane review found 400 IU daily reduced vitamin D deficiency by 43% (RR 0.57), though individual trials lacked statistical power for fracture endpoints. Formula feeding guidelines differ slightly: the AAP notes that infants consuming at least 27 to 32 ounces (approx. 800–1000 mL) per day of vitamin D-fortified formula obtain sufficient vitamin D without additional drops. Avoid excessive dosing: in a Canadian randomized trial, an arm receiving 1,600 IU daily was terminated early due to hypercalcemia risk; doses between 400 and 1,200 IU showed no linear growth differences. Non-deficient adults should not take high-dose vitamin D solely for longevity (see Chapter 6, Rule 3).",
+      "reviewStatus": "independently-checked"
     },
     "20-12": {
       "caveats": "Peanuts must be given only as thinned peanut butter or powdered form mixed into food — never as whole nuts. The same applies to the food itself: whole peanuts, other nuts, jelly and similar foods can be inhaled into the airway and cause choking, so for an infant they must be given only as thinned peanut butter or as a powder mixed into food. For choking first aid, see Section 13, Item 26. This guidance applies only to high‑risk children with severe eczema or egg allergy. A medical assessment is mandatory before introduction; in the LEAP trial, children with a skin‑test reaction greater than 4 mm were excluded. Another study of 1,162 breastfed infants found no significant difference in overall food allergy rates between early‑introduction and standard groups, though a subset showed a clear benefit: 5.6% versus 7.1% (P=0.32) and 2.4% versus 7.3% respectively. Evidence for typical infants is far weaker."
+    },
+    "20-1": {
+      "id": "20-1",
+      "chapter": 20,
+      "tip": 1,
+      "title": "Keep infants sleeping on their backs on a firm surface; share a room but not a bed; and do not place any soft items in the crib or bed.",
+      "tags": {
+        "money": "Free",
+        "time": "Quick",
+        "willpower": "A lot",
+        "benefit": "Large",
+        "scope": "Lifespan",
+        "audience": [
+          "Child under 3",
+          "Pregnant or planning"
+        ]
+      },
+      "costScore": 2,
+      "valueTier": "High",
+      "disputed": false,
+      "stillVerifying": false,
+      "cost": "This costs nothing upfront. However, you’ll need to replace the mattress with a firm one, which may cost a few thousand rupees. The real challenge is resisting pressure from older relatives to deviate from this rule.",
+      "inPlainWords": "Always place babies on their backs to sleep on a hard, flat surface. Parents and infants should share a room, but not the same bed. Never put pillows, blankets, bed rails, stuffed animals, or special shaped pillows in the sleeping area. Inclined cribs or baby chairs are only meant for sitting — they must never be used as a sleeping surface. In the United States alone, roughly 3,500 infants die each year from sleep-related causes.",
+      "benefit": "Each year, nearly 3,500 infants in the U.S. lose their lives to sleep-related issues, including sudden infant death syndrome, deaths of unknown cause, and accidental suffocation in bedding. The American Academy of Pediatrics recommends a safe sleep environment consisting of: infants sleeping on their backs; using a solid, non-inclined sleeping surface; sharing a room without sharing a bed; and avoiding soft bedding and overheating. Additional protective measures include breastfeeding, keeping infants away from nicotine and alcohol, ensuring all vaccinations are up to date, and offering a pacifier during sleep.",
+      "evidenceGrade": "A",
+      "sources": "Moon RY, Carlin RF, Hand I, Task Force on Sudden Infant Death Syndrome and the Committee on Fetus and Newborn (2022). Sleep-Related Infant Deaths: Updated 2022 Recommendations for Reducing Infant Deaths in the Sleep Environment. Pediatrics, 150(1), e2022057990. <https://doi.org/10.1542/peds.2022-057990>",
+      "caveats": "“Do not place any soft items in the bed” means absolutely no pillows, blankets, bed rails, stuffed toys, or shaped pillows — even nursing pillows that appear perfectly safe are prohibited. Inclined cribs and baby chairs must never be used as sleeping areas. This requirement represents the biggest departure from common practice in this section, and it often requires the strongest resistance to family pressure.",
+      "reviewStatus": "draft"
     }
   }
 }

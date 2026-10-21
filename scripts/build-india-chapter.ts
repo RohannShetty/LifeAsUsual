@@ -325,6 +325,19 @@ if (PROTECTED.has(chapterNumber) && fs.existsSync(outPath) && !process.argv.incl
   console.error('Refusing to overwrite protected chapter ' + chapterNumber + ' (pass --force to rebuild).');
   process.exit(1);
 }
+// The source edition numbers cross-references as "Chapter N, Rule M" (条 rendered
+// as "Rule"); this edition uses "Item". Normalise once here so a rebuild never
+// reintroduces the old wording.
+const CROSS_REF = /Chapter (\d+), Rules? (\d+)/g;
+const CROSS_REF_LOCAL = /\bRules? (\d+) of this (chapter|section)\b/g;
+for (const tip of tips) {
+  const entry = tip as unknown as Record<string, unknown>;
+  for (const [field, value] of Object.entries(entry)) {
+    if (typeof value !== 'string') continue;
+    entry[field] = value.replace(CROSS_REF, 'Chapter $1, Item $2').replace(CROSS_REF_LOCAL, 'Item $1 of this $2');
+  }
+}
+
 fs.mkdirSync(path.dirname(outPath), { recursive: true });
 fs.writeFileSync(outPath, JSON.stringify(chapter, null, 2));
 

@@ -4,7 +4,7 @@
   "title": "Travel and Abroad Safety",
   "intro": "Chapter 21: Travel and Abroad Safety",
   "edition": "india",
-  "rewriteStatus": "draft",
+  "rewriteStatus": "checked",
   "tips": [
     {
       "id": "21-1",
@@ -29,7 +29,7 @@
       "evidenceGrade": "A",
       "sources": "Ministry of External Affairs, travel advisories. <https://www.mea.gov.in/>; MADAD portal. <https://www.madad.gov.in/>; Insurance Regulatory and Development Authority of India. <https://irdai.gov.in/>",
       "caveats": "Advisories are revised at irregular intervals, so this book does not reproduce any of them — read the current page yourself and look at the date at the top; an advisory that has not been touched for years is common. If a country is in open conflict the mission may be unable to help, evacuation may not be possible, and a travel policy may exclude a risk that was already known when you bought it (item 4). A cheap ticket to a country under a do-not-travel warning is not a bargain.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "21-2",
@@ -54,7 +54,7 @@
       "evidenceGrade": "A",
       "sources": "Ministry of External Affairs, MADAD. <https://www.mea.gov.in/>; Consular, Passport and Visa Division. <https://www.mea.gov.in/>; Indian missions abroad. <https://www.mea.gov.in/indian-missions-abroad.htm>",
       "caveats": "A consulate cannot override the local law or pay a fine. Keep a digital and a paper copy of the passport. In a conflict, follow the mission's evacuation instructions.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "21-3",
@@ -79,7 +79,7 @@
       "evidenceGrade": "A",
       "sources": "Ministry of External Affairs. <https://www.mea.gov.in/>; Insurance Regulatory and Development Authority of India. <https://irdai.gov.in/>",
       "caveats": "Consulates cannot pay fines or medical bills on your behalf, nor buy plane tickets or overturn court rulings. What they can provide is information on local lawyers, interpreters, medical providers, and funeral services, plus help contacting family and finding relief resources. Knowing these limits is valuable: it reminds you to prepare sufficient funds and insurance before traveling — don’t rely on the assumption that the state will handle everything if trouble arises.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "21-4",
@@ -104,7 +104,7 @@
       "evidenceGrade": "C",
       "sources": "U.S. Centers for Disease Control and Prevention. Travelers' Health: Travel Insurance: \"Medical evacuation insurance covers emergency transportation from a remote area to a high-quality hospital, which could otherwise cost more than $100,000.\". <https://wwwnc.cdc.gov/travel/page/insurance>; The rest is the author's experience and there is no direct literature; Ministry of External Affairs. <https://www.mea.gov.in/>; Insurance Regulatory and Development Authority of India. <https://irdai.gov.in/>",
       "caveats": "The figure of $100,000 represents a minimum estimate rather than a full cost range. No official or industry‑wide statistics on typical evacuation costs are currently available, so this book does not list a broader range. Before purchasing a policy, verify three points: first, whether your destination country is covered; second, whether high‑risk activities such as scuba diving, skiing, or motorcycle riding are excluded; and third, whether claims are paid directly to hospitals or require you to pay upfront and then seek reimbursement. This advice applies even when traveling to visa‑free countries.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "21-5",
@@ -129,7 +129,7 @@
       "evidenceGrade": "A",
       "sources": "Ministry of External Affairs, eMigrate. <https://www.mea.gov.in/>; Emigration Act, 1983. <https://www.indiacode.nic.in/>; eMigrate portal. <https://emigrate.gov.in/>; MADAD portal. <https://www.madad.gov.in/>",
       "caveats": "Do not hand your passport to an agent, and do not fly on a tourist visa to take up a job — that alone makes the employment illegal. A genuine employer pays for the work visa. If a relative has already gone and has stopped answering, contact the Indian mission and file a grievance on MADAD (item 2); a police complaint in the district where the agent operates is the second step, with the receipt, the contract and the agent's details.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "21-6",
@@ -154,7 +154,7 @@
       "evidenceGrade": "A",
       "sources": "Reserve Bank of India, Liberalised Remittance Scheme. <https://www.rbi.org.in/>; Foreign Exchange Management Act, 1999. <https://www.indiacode.nic.in/>; Central Board of Indirect Taxes and Customs. <https://www.cbic.gov.in/>",
       "caveats": "The LRS limit and the cash limit change; check the RBI and the customs rules before you travel. A 'hawala' transfer is illegal and leaves no legal recourse.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "21-7",
@@ -179,7 +179,7 @@
       "evidenceGrade": "C",
       "sources": "Ministry of External Affairs. <https://www.mea.gov.in/>; Insurance Regulatory and Development Authority of India. <https://irdai.gov.in/>",
       "caveats": "Store the photos in two separate locations — for instance, upload one set to cloud storage and send another to a trusted family member. Also print a hard copy and keep it apart from the original documents. Photograph your bank cards and prescriptions as well. Since phones and passports are frequently lost together, relying only on phone storage is insufficient. Cloud services often require SMS verification, which becomes impossible if your phone is lost; test access from another device before travel to ensure you can retrieve the files. Photos of official documents are sensitive information; encrypted storage is safer, but if you forget the password, no one can access them, so the copy sent to family members remains essential.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "21-8",
@@ -204,7 +204,7 @@
       "evidenceGrade": "A",
       "sources": "Ministry of Road Transport and Highways. <https://morth.nic.in/>; Motor Vehicles Act, 1988. <https://www.indiacode.nic.in/>; Ministry of External Affairs. <https://www.mea.gov.in/>",
       "caveats": "A 'universal licence' sold online is not an IDP. The rules differ for a tourist, a student and a resident. Check the embassy and the rental company.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "21-9",
@@ -229,7 +229,7 @@
       "evidenceGrade": "A",
       "sources": "Emigration Act, 1983. <https://www.indiacode.nic.in/>; Ministry of External Affairs, eMigrate. <https://www.mea.gov.in/>; Consumer Protection Act, 2019. <https://www.indiacode.nic.in/>; National Consumer Helpline. <https://consumerhelpline.gov.in/>",
       "caveats": "Ask what exactly the fee buys, and what happens to it if the visa is refused; most agents keep it unless the contract says otherwise. Never sign a blank form, and never let an agent submit a document you have not read. Keep the original of every certificate — an agent who wants to hold your degree certificate or passport for weeks is a risk. If an agency takes the money and disappears, a consumer complaint and a police complaint are the two routes, and the second needs the receipts.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "21-10",
@@ -254,7 +254,7 @@
       "evidenceGrade": "A",
       "sources": "Bharatiya Nyaya Sanhita, 2023. <https://www.indiacode.nic.in/>; Passports Act, 1967. <https://www.indiacode.nic.in/>; Ministry of External Affairs, passport and visa services. <https://www.mea.gov.in/>",
       "caveats": "The same rule as carrying a parcel for a stranger: once you sign, you own the contents. A government servant or a member of the armed forces may also face service rules for helping a relative emigrate, so check the conduct rules before signing anything. If a friend asks for a letter as a favour, ask to see the visa form and the person's passport first — a request that dodges those two questions is the answer.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "21-11",
@@ -279,7 +279,7 @@
       "evidenceGrade": "C",
       "sources": "Ministry of External Affairs. <https://www.mea.gov.in/>; Insurance Regulatory and Development Authority of India. <https://irdai.gov.in/>",
       "caveats": "Include just four key details: flight number, accommodation address, companions’ full names and phone numbers, and the agreed contact frequency. If traveling to areas with poor signal or high crime rates, also specify exactly how long one should wait without contact before alerting local authorities. This measure costs virtually nothing, yet it serves as the essential prerequisite for activating all subsequent assistance procedures.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "21-12",
@@ -303,8 +303,8 @@
       "benefit": "International regulations on personal pharmaceutical imports vary drastically. For instance, Japan's Ministry of Health, Labour and Welfare (MHLW) and Narcotics Control Department mandate that travelers carrying medications containing controlled substances (such as psychotropics or narcotics) for personal medical use must submit an advance application and obtain an official import certificate at least 14 days prior to travel. Medications containing over 10% ephedrine/pseudoephedrine or over 1% codeine face strict limits. Japanese law limits personal imports of standard prescription drugs to a maximum of 1 month's supply (and other non-prescription drugs to 2 months' supply) without prior special administrative authorization. Singapore's Health Sciences Authority (HSA) restricts travelers to a maximum of 3 months' supply of non-controlled medications, requiring advance HSA approval for controlled substances, warning that exceeding limits results in confiscation and legal enforcement.",
       "evidenceGrade": "A",
       "sources": "Japan Ministry of Health, Labour and Welfare, Narcotics Control Department. Application Guidance: Carrying controlled substances for personal medical use. <https://www.ncd.mhlw.go.jp/en/application2.html>; Japan MHLW Narcotics Control Department (2024). Controlled Substances List (Dec 12, 2024 edition). <https://www.ncd.mhlw.go.jp/dl_data/keitai/cotrolled_substances_list20241212%20.pdf>; Japan Ministry of Health, Labour and Welfare. Information for those who are bringing medicines for personal use into Japan. <https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/iyakuhin/kojinyunyu/topics/tp010401-1_00001.html>; Health Sciences Authority, Singapore. Bringing in personal medications. <https://www.hsa.gov.sg/travelling-with-medication-and-medical-devices/personal-medications/>",
-      "caveats": "Regulatory rules evolve and vary by destination. Before departing, check the official health or border agency website of your transit and destination countries, or the consular travel advisories issued by your embassy. Cross-check active pharmaceutical ingredients against the local prohibited list rather than commercial brand names. Always keep medicines in original pharmacy packaging with patient name matching the passport. Never carry prescription medication on behalf of acquaintances or strangers (see Chapter 8, Rule 29). Take high-resolution photos of prescriptions and packaging to store in cloud storage (Chapter 21, Rule 7).",
-      "reviewStatus": "draft"
+      "caveats": "Regulatory rules evolve and vary by destination. Before departing, check the official health or border agency website of your transit and destination countries, or the consular travel advisories issued by your embassy. Cross-check active pharmaceutical ingredients against the local prohibited list rather than commercial brand names. Always keep medicines in original pharmacy packaging with patient name matching the passport. Never carry prescription medication on behalf of acquaintances or strangers (see Chapter 8, Item 29). Take high-resolution photos of prescriptions and packaging to store in cloud storage (Chapter 21, Item 7).",
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "21-13",
@@ -329,7 +329,7 @@
       "evidenceGrade": "A",
       "sources": "Plant Quarantine (Regulation of Import into India) Order, 2003. <https://ppqs.gov.in/>; Central Board of Indirect Taxes and Customs. <https://www.cbic.gov.in/>; Directorate General of Foreign Trade. <https://dgft.gov.in/>; Customs Act, 1962. <https://www.indiacode.nic.in/>; Department of Animal Husbandry and Dairying. <https://dahd.gov.in/>",
       "caveats": "Do not pack food as a gift for a relative and assume it will pass: the rule looks at the item, not the intention. A sealed, commercially manufactured, shelf-stable product is treated differently from fresh produce, so declare it and let the officer decide. Keep the receipts for anything valuable. The same logic applies in the other direction — the destination country's rules apply when you land, not the Indian rules when you leave.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     }
   ]
 }

@@ -4,7 +4,7 @@
   "title": "Are Dating and Marriage Worth It",
   "intro": "Chapter 10: Are Dating and Marriage Worth It",
   "edition": "india",
-  "rewriteStatus": "draft",
+  "rewriteStatus": "checked",
   "tips": [
     {
       "id": "10-1",
@@ -29,7 +29,7 @@
       "evidenceGrade": "A",
       "sources": "Joel S, Eastwick PW, Finkel EJ (2017). Is romantic desire predictable? Machine learning applied to initial romantic attraction. Psychological Science, 28(10), 1478-1489. <https://doi.org/10.1177/0956797617714580>; Eastwick PW, Finkel EJ (2008). Sex differences in mate preferences revisited: do people know what they initially desire in a romantic partner? Journal of Personality and Social Psychology, 94(2), 245-264. <https://doi.org/10.1037/0022-3514.94.2.245>",
       "caveats": "Both studies clearly state that compatibility cannot be predicted before meeting someone — they do not claim that all efforts to predict it are futile. Since true compatibility can only be determined by face-to-face interaction, it makes far more sense to invest time in meeting multiple people individually rather than placing all hopes on just one.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "10-2",
@@ -54,7 +54,7 @@
       "evidenceGrade": "A",
       "sources": "Bharatiya Nyaya Sanhita, 2023. <https://www.indiacode.nic.in/>; Information Technology Act, 2000. <https://www.indiacode.nic.in/>; Protection of Women from Domestic Violence Act, 2005. <https://www.indiacode.nic.in/>; National Commission for Women. <https://ncw.nic.in/>",
       "caveats": "No research shows that persistence wins someone over, and the law does not reward it. A police record can affect a background check, a government job and a professional licence. A false complaint is itself actionable, so keep your own messages and dates. If a refusal is ambiguous, ask once, in writing, and accept the answer.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "10-3",
@@ -79,7 +79,7 @@
       "evidenceGrade": "B",
       "sources": "Hall JA, Xing C, Brooks S (2015). Accurately detecting flirting: error management theory, the traditional sexual script, and flirting base rate. Communication Research, 42(7), 939-958. <https://doi.org/10.1177/0093650214534972>; Perilloux C, Kurzban R (2015). Do men overperceive women's sexual interest? Psychological Science, 26(1), 70-77. <https://doi.org/10.1177/0956797614555727> (Disputing Party)",
       "caveats": "This topic remains debated. Some research suggests the issue isn’t that men overestimate women’s sexual intentions, but that women tend to underreport their own intentions on surveys. There is still no consensus on which group judges more accurately. Nevertheless, both viewpoints agree on one point: relying on subtle cues such as facial expressions or tone to infer someone’s thoughts yields poor results. Observable behaviors — such as who initiates contact, plans future meetings, and follows up without prompting — are far more reliable indicators.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "10-4",
@@ -104,7 +104,7 @@
       "evidenceGrade": "A",
       "sources": "Joel S, Eastwick PW, Allison CJ, et al. (2020). Machine learning uncovers the most robust self-report predictors of relationship quality across 43 longitudinal couples studies. Proceedings of the National Academy of Sciences, 117(32), 19061-19071. <https://doi.org/10.1073/pnas.1917036117>",
       "caveats": "This same research also found that no set of self-reported questionnaire items can reliably forecast whether a relationship will improve or worsen during the study period. Therefore, while gauging your own feelings about the relationship is far more accurate than cross-checking your partner against a checklist of ideal traits, it still cannot predict the relationship’s future trajectory. For a deeper look at how relationship quality ties to physical health, see Section 17 of this chapter, which frames relationship health as a component of overall well-being.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "10-5",
@@ -129,7 +129,7 @@
       "evidenceGrade": "B",
       "sources": "Aron A, Melinat E, Aron EN, Vallone RD, Bator RJ (1997). The experimental generation of interpersonal closeness: a procedure and some preliminary findings. Personality and Social Psychology Bulletin, 23(4), 363-377. <https://doi.org/10.1177/0146167297234003>",
       "caveats": "Only one experiment has been conducted so far, with college students as participants. It measures short-term closeness only, not whether a lasting relationship can form. The core mechanism at work here is that closeness grows when two people take turns sharing genuine personal details at progressively deeper levels — rather than relying on scripts, tricks or one-sided efforts. The key takeaway for practical use is to “share something honest about yourself, then ask a similarly personal question back”, and make sure both parties get a turn to do so.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "10-6",
@@ -154,7 +154,7 @@
       "evidenceGrade": "B",
       "sources": "Stafford L, Merolla AJ, Castle JD (2006). When long-distance dating partners become geographically close. Journal of Social and Personal Relationships, 23(6), 901-919. <https://doi.org/10.1177/0265407506070472>; Stafford L, Merolla AJ (2007). Idealization, reunions, and stability in long-distance dating relationships. Journal of Social and Personal Relationships, 24(1), 37-54. <https://doi.org/10.1177/0265407507072578>; Dargie E et al. (2015). Journal of Sex & Marital Therapy, 41(2), 181-202. <https://doi.org/10.1080/0092623X.2013.864367> (Remarks on the off-site study)",
       "caveats": "These findings are based on romantic relationships among American university students, excluding married couples, and date back to an earlier era; thus, absolute percentages should not be applied directly to current populations. Another study surveyed 717 long-distance couples and 425 local couples, finding only minimal differences in overall relationship quality between the two groups. Ultimately, relationship success depends on the individuals involved and the nature of their bond itself, rather than physical distance. The key takeaway is this: do not assume that long-distance relationships are destined to fail. Instead, couples should prepare for the initial months after reuniting, when personal independence diminishes, mutual understanding increases, and conflicts or jealousy are more likely to arise.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "10-7",
@@ -179,7 +179,7 @@
       "evidenceGrade": "A",
       "sources": "Registrar General of India, Civil Registration System. <https://crsorgi.gov.in/>; Hindu Marriage Act, 1955. <https://www.indiacode.nic.in/>; Special Marriage Act, 1954. <https://www.indiacode.nic.in/>; Ministry of Statistics and Programme Implementation. <https://www.mospi.gov.in/>",
       "caveats": "Under-registration and differences between states make a national comparison misleading, and a high ratio can simply reflect many marriages in the past or few marriages this year. Do not use a ratio to predict your own marriage, and do not accept a percentage from a screenshot without the year and the definition.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "10-8",
@@ -204,7 +204,7 @@
       "evidenceGrade": "A",
       "sources": "Manzoli L, et al. (2007). Marital status and mortality in the elderly: a systematic review and meta-analysis. Soc Sci Med 64:77–94. <https://doi.org/10.1016/j.socscimed.2006.08.031>; Roelfs DJ, et al. (2011). The rising relative risk of mortality for singles: meta-analysis and meta-regression. Am J Epidemiol 174(4):379–389. <https://doi.org/10.1093/aje/kwr111>; Wang Y, et al. (2020). Sex differences in the association between marital status and the risk of cardiovascular, cancer, and all-cause mortality: a systematic review and meta-analysis of 7,881,040 individuals. Glob Health Res Policy 5:4. <https://doi.org/10.1186/s41256-020-00133-8>",
       "caveats": "The controversy stems from the fact that married individuals tend to be healthier, wealthier, and more socially engaged — factors that independently contribute to longer life. All three meta-analyses relied on observational data collected from existing populations; no controlled experiments or randomized groups were used. The authors themselves acknowledged potential publication bias and methodological limitations. Roelfs also noted that studies employing more rigorous methods tended to report smaller differences between marital groups.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "10-9",
@@ -229,7 +229,7 @@
       "evidenceGrade": "A",
       "sources": "Ministry of Statistics and Programme Implementation, Time Use Survey. <https://www.mospi.gov.in/>; Hindu Marriage Act, 1955. <https://www.indiacode.nic.in/>; Protection of Women from Domestic Violence Act, 2005. <https://www.indiacode.nic.in/>",
       "caveats": "A national average says nothing about your household, and a couple may choose any division they like. What matters is that the arrangement is stated, reviewed when circumstances change, and not assumed. If one partner stops paid work to care for children or parents, record that decision and keep the money arrangements in both names where possible: joint accounts, nominations and property documents.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "10-10",
@@ -254,7 +254,7 @@
       "evidenceGrade": "A",
       "sources": "Hindu Succession Act, 1956. <https://www.indiacode.nic.in/>; Hindu Marriage Act, 1955. <https://www.indiacode.nic.in/>; Indian Succession Act, 1925. <https://www.indiacode.nic.in/>; Special Marriage Act, 1954. <https://www.indiacode.nic.in/>",
       "caveats": "Goa, whose family law comes from the Portuguese era, is the main exception and recognises a form of joint property. A gift from a relative, including a spouse, is generally not taxed as the recipient's income under section 92(3) of the Income-tax Act, 2025, which is the Act in force from 1 April 2026, but a transfer of immovable property needs a registered deed and stamp duty. Keep the title, the payment trail and the loan documents in both names where you want both to own. Do not assume a clause waiving maintenance will be enforced.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "10-11",
@@ -279,7 +279,7 @@
       "evidenceGrade": "A",
       "sources": "Transfer of Property Act, 1882. <https://www.indiacode.nic.in/>; Registration Act, 1908. <https://www.indiacode.nic.in/>; Income-tax Act, 2025. <https://www.incometax.gov.in/>; Protection of Women from Domestic Violence Act, 2005. <https://www.indiacode.nic.in/>",
       "caveats": "A document created after the marriage has failed is viewed with suspicion, so date it and keep the bank trail from the parents' account. If the house is in the son's name alone, the wife may still have a right of residence in the shared household under the Protection of Women from Domestic Violence Act, 2005. If both spouses pay and both names are on the deed, a private note between parent and child cannot undo the title. Take advice before registering anything.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "10-12",
@@ -304,7 +304,7 @@
       "evidenceGrade": "A",
       "sources": "Indian Contract Act, 1872. <https://www.indiacode.nic.in/>; Transfer of Property Act, 1882. <https://www.indiacode.nic.in/>; Reserve Bank of India. <https://www.rbi.org.in/>",
       "caveats": "A joint account, a joint home loan or a co-signed guarantee is the usual way a spouse's debt becomes yours. Check your credit report with each bureau to see which loans name you, and ask the lender for the guarantee document if you are shown as a surety. If a recovery agent threatens you, complain to the lender's grievance officer and to the RBI under its Integrated Ombudsman Scheme. A loan taken for a business you never benefited from is still yours if you signed.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "10-13",
@@ -329,7 +329,7 @@
       "evidenceGrade": "A",
       "sources": "Hindu Marriage Act, 1955. <https://www.indiacode.nic.in/>; Special Marriage Act, 1954. <https://www.indiacode.nic.in/>; Prohibition of Child Marriage Act, 2006. <https://www.indiacode.nic.in/>",
       "caveats": "A marriage registration is not the same as a marriage; the ceremony and the applicable law come first. A notice under the Special Marriage Act is public, so a person in a hurry may prefer a different route. Keep the certificate safe; it is needed for a passport and a visa.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "10-14",
@@ -354,7 +354,7 @@
       "evidenceGrade": "B",
       "sources": "Hindu Marriage Act, 1955. <https://www.indiacode.nic.in/>; Special Marriage Act, 1954. <https://www.indiacode.nic.in/>; HIV and AIDS (Prevention and Control) Act, 2017. <https://www.indiacode.nic.in/>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>",
       "caveats": "Doctors and laboratories owe confidentiality, and a result shared with a fiancé is a disclosure the person chooses unless a law requires it. There is no Indian statute that gives a one-year window to annul a marriage for a concealed illness, so do not expect that remedy. If you learn of a serious condition, get medical advice on treatment and transmission and decide together; a court case is slower, costlier and less certain than a conversation.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "10-15",
@@ -379,7 +379,7 @@
       "evidenceGrade": "A",
       "sources": "Hindu Marriage Act, 1955. <https://www.indiacode.nic.in/>; Special Marriage Act, 1954. <https://www.indiacode.nic.in/>; Divorce Act, 1869. <https://www.indiacode.nic.in/>; Dissolution of Muslim Marriages Act, 1939. <https://www.indiacode.nic.in/>; National Legal Services Authority. <https://nalsa.gov.in/>",
       "caveats": "Irretrievable breakdown is not a statutory ground in India, although the Supreme Court has dissolved marriages under Article 142 in rare cases. A separation agreement, a waiver of maintenance or a custody clause is not automatically binding if it defeats the child's welfare or a statutory right. Keep the marriage certificate, the separation date and the financial records; they decide which route is open and how long it takes.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "10-16",
@@ -404,7 +404,7 @@
       "evidenceGrade": "C",
       "sources": "author’s experience, method suggestions; see the previous items in this section for the data part; Ministry of Women and Child Development. <https://wcd.gov.in/>; National Legal Services Authority. <https://nalsa.gov.in/>",
       "caveats": "You may also treat the elders’ share of benefits as a major factor in your calculations; how you weigh it is entirely up to you. A fill‑in worksheet is available at [docs/is-marriage-financially-worth-it.md](../docs/is-marriage-financially-worth-it.md).",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "10-17",
@@ -429,7 +429,7 @@
       "evidenceGrade": "B",
       "sources": "Robles TF, Slatcher RB, Trombello JM, McGinn MM (2014). Marital quality and health: a meta-analytic review. Psychological Bulletin. <https://doi.org/10.1037/a0031859>; Kiecolt-Glaser JK et al. (2005). Hostile marital interactions, proinflammatory cytokine production, and wound healing. Archives of General Psychiatry. <https://doi.org/10.1001/archpsyc.62.12.1377>",
       "caveats": "The B rating reflects that most included studies were observational and lacked controlled groups, making it hard to determine whether poor relationships cause health problems or vice versa. Even after adjusting for age and income, some associations persisted. The original study also notes potential publication bias. Gender differences were not evident in studies that compared men and women. No meta‑analysis directly compares mortality rates between couples in bad marriages and those who remain unmarried; thus the claim that “bad marriages are worse for health than staying single” remains a hypothesis. The wound‑healing experiments involved only 42 couples. The advice “focus on the issue, not the person — avoid insults and sarcasm” is derived from observed hostile behaviors in those studies; no research has directly tested this approach. If arguments persist despite these efforts, couples may consider couple therapy (see Section 20). Physical violence, chronic insults, or threats go beyond communication issues and constitute domestic abuse (see Section 8, Item 43). For guidance on whether to leave a relationship and the associated costs, see Section 15 on exit costs.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "10-18",
@@ -454,7 +454,7 @@
       "evidenceGrade": "A",
       "sources": "Indian Succession Act, 1925. <https://www.indiacode.nic.in/>; Powers of Attorney Act, 1882. <https://www.indiacode.nic.in/>; Mental Healthcare Act, 2017. <https://www.indiacode.nic.in/>; Employees' Provident Fund Organisation. <https://www.epfo.gov.in/>",
       "caveats": "There is no 'voluntary guardianship agreement' in Indian law; the nearest instruments are the will, the power of attorney, the Mental Healthcare Act advance directive and the nomination. Hospitals differ in what they accept at the desk, so ask your regular hospital what it needs and keep a signed letter with the partner's phone number. For organ donation, the Transplantation of Human Organs and Tissues Act, 1994 defines 'near relative' narrowly, so a partner may need the authorisation committee. Review the will after any change in assets or family.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "10-19",
@@ -479,7 +479,7 @@
       "evidenceGrade": "A",
       "sources": "Hindu Marriage Act, 1955. <https://www.indiacode.nic.in/>; Special Marriage Act, 1954. <https://www.indiacode.nic.in/>; Bharatiya Nyaya Sanhita, 2023. <https://www.indiacode.nic.in/>; National Legal Services Authority. <https://nalsa.gov.in/>",
       "caveats": "Compensation for emotional distress is not a standard remedy in an Indian divorce; a court may order costs, maintenance and a share of joint property, and may treat the deception as cruelty. A child born of the marriage is legitimate whatever happens to the marriage. If both spouses have partners of their own, those partners get nothing from the marriage, so their property and care arrangements need separate documents.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "10-20",
@@ -504,7 +504,7 @@
       "evidenceGrade": "A",
       "sources": "Roddy MK, Walsh LM, Rothman K, Hatch SG, Doss BD (2020). Meta-analysis of couple therapy: effects across outcomes, designs, timeframes, and other moderators. Journal of Consulting and Clinical Psychology, 88(7), 583-596. <https://doi.org/10.1037/ccp0000514>; Lebow JL, Chambers AL, Christensen A, Johnson SM (2012). Research on the treatment of couple distress. Journal of Marital and Family Therapy, 38(1), 145-168. Christensen A, Atkins DC, Baucom B, Yi J (2010). Marital status and satisfaction five years following a Randomized clinical trial comparing traditional versus integrative behavioral couple therapy. Journal of Consulting and Clinical Psychology, 78(2), 225-235. <https://doi.org/10.1037/a0018132>; Rathgeber M, Bürkner PC, Schiller EM, Holling H (2019). The efficacy of emotionally focused couples therapy and behavioral couples therapy: a meta-analysis. Journal of Marital and Family Therapy, 45(3), 447-463. <https://doi.org/10.1111/jmft.12336> (Disputant); Shadish WR, Baldwin SA (2003). Meta-analysis of MFT interventions. Journal of Marital and Family Therapy, 29(4), 547-570. <https://doi.org/10.1111/j.1752-0606.2003.tb01694.x> (disputing party); Karakurt G, Whiting K, van Esch C, Bolen SD, Calabrese JR (2016). Couples therapy for intimate partner violence: a systematic review and meta-analysis. Journal of Marital and Family Therapy, 42(4), 567-583. <https://doi.org/10.1111/jmft.12178>",
       "caveats": "The main controversy concerns how long these benefits actually last. Another meta-analysis limited to randomized trials found g = 0.60 right after therapy and g = 0.44 after six months; by twelve months only one behavioral therapy approach retained any measurable effect, with g = 0.06 — essentially negligible. A broader review of 20 meta-analyses concluded that clinically meaningful improvement occurs in 40% to 50% of participants. The figures “70% improvement” and “40–50% clinically meaningful improvement” refer to different criteria and should not be directly compared. The five‑year trial lacked a control group of couples receiving no treatment, so it is unclear whether divorce rates rose or fell. You can inquire at psychiatric or psychology departments of hospitals about available couples therapy programs. If seeking outside a hospital, verify the practitioner’s credentials and training. Couples experiencing domestic violence should not begin therapy together. A 2016 meta‑analysis noted that its conclusions apply only to mild‑to‑moderate conflicts where both partners occasionally engage in physical altercations; it does not cover situations dominated by controlling or severely harmful behavior. There is also concern that returning home after therapy might increase the risk of retaliation. If you have been physically abused, see Section 8, Item 43. For advice on how to talk during arguments, see Section 17; for guidance on whether to end the relationship, see Section 15. The primary beneficiaries of therapy are both you and your spouse.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "10-21",
@@ -529,7 +529,7 @@
       "evidenceGrade": "A",
       "sources": "Hindu Marriage Act, 1955. <https://www.indiacode.nic.in/>; Special Marriage Act, 1954. <https://www.indiacode.nic.in/>; Hindu Succession Act, 1956. <https://www.indiacode.nic.in/>; Indian Succession Act, 1925. <https://www.indiacode.nic.in/>",
       "caveats": "An unregistered partner is not automatically excluded from inheritance, but every claim becomes a proof problem. Children of a void or voidable marriage are legitimate under section 16 of the Hindu Marriage Act, 1955. A live-in partner is not a spouse: the Protection of Women from Domestic Violence Act, 2005 can protect a relationship in the nature of marriage, but it does not create inheritance rights. Register while both of you can sign.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "10-22",
@@ -554,7 +554,7 @@
       "evidenceGrade": "A",
       "sources": "Hindu Marriage Act, 1955. <https://www.indiacode.nic.in/>; Transfer of Property Act, 1882. <https://www.indiacode.nic.in/>; Protection of Women from Domestic Violence Act, 2005. <https://www.indiacode.nic.in/>; National Cyber Crime Reporting Portal. <https://cybercrime.gov.in/>",
       "caveats": "A gift to a third party is not automatically recoverable by the other spouse, because the money may never have been the other spouse's property. If the account is joint, the bank's records decide who withdrew what. Collect the statements yourself; a court will not go fishing for you. Do not confront the recipient directly, and do not sign a settlement before you have the numbers.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "10-23",
@@ -582,7 +582,7 @@
       "evidenceGrade": "A",
       "sources": "Hindu Minority and Guardianship Act, 1956. <https://www.indiacode.nic.in/>; Guardians and Wards Act, 1890. <https://www.indiacode.nic.in/>; Hindu Marriage Act, 1955. <https://www.indiacode.nic.in/>; National Legal Services Authority. <https://nalsa.gov.in/>",
       "caveats": "A clause that one parent pays nothing is not the end of the matter: a court can order support later if the child's needs require it, and a waiver of the child's rights is not binding. Visitation is enforced through the court, never by taking the child. The 20 to 30 percent of income figure that circulates online is not a statutory rule in India. Keep receipts for school fees, medical bills and travel, and record every missed visit.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     }
   ]
 }

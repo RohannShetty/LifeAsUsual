@@ -25,12 +25,29 @@
       "sources": "Reserve Bank of India, regulation of payment aggregators and payment gateways. <https://www.rbi.org.in/>; Payment and Settlement Systems Act, 2007. <https://www.indiacode.nic.in/>"
     },
     "26-2": {
+      "id": "26-2",
+      "chapter": 26,
+      "tip": 2,
       "title": "India has no licence for a paid website: the permission attaches to what the site does, not to whether it charges",
-      "inPlainWords": "There is no value-added telecommunications licence in India, and no general licence for a website that charges its users. What you need depends on the activity: a GST registration if you sell, an authorised payment partner if you collect money, a marketplace that follows the e-commerce rules, and the ordinary company and municipal registrations. A free site needs the same domain and hosting as a paid one, but no content licence. Some activities do carry their own permission: news, film, gaming, lending, insurance and health claims each have a regulator.",
-      "benefit": "The Information Technology Act, 2000 and the Intermediary Guidelines Rules, 2021 regulate platforms as intermediaries, and the safe harbour depends on due diligence rather than on a licence fee. Business registration runs through the GST portal and the Ministry of Corporate Affairs, and a shop needs a municipal trade licence. Telecom licensing by the Department of Telecommunications covers telecom and internet service providers, not a website. Sector regulators license the activity: the Reserve Bank for lending and payments, SEBI for securities, IRDAI for insurance.",
+      "tags": {
+        "money": "Real money",
+        "time": "Takes time every day",
+        "willpower": "None needed",
+        "benefit": "Large",
+        "scope": "Personal freedom",
+        "audience": []
+      },
+      "costScore": 4,
+      "valueTier": "Average",
+      "disputed": false,
+      "stillVerifying": false,
       "cost": "Domain and hosting are the real cost. GST registration is free, and a company registration and a trade licence carry fees.",
+      "inPlainWords": "Running a website needs no licence in India, and there is no general licence for a site that charges its users. Telecom and internet service providers are licensed separately under the Unified Licence regime, including the virtual-network-operator variant (UL-VNO), but that licensing stops at the network and does not reach what you publish on it. What you need depends on the activity: a GST registration if you sell, an authorised payment partner if you collect money, a marketplace that follows the e-commerce rules, and the ordinary company and municipal registrations. A free site needs the same domain and hosting as a paid one, but no content licence. Some activities do carry their own permission: news, film, gaming, lending, insurance and health claims each have a regulator.",
+      "benefit": "The Information Technology Act, 2000 and the Intermediary Guidelines Rules, 2021 regulate platforms as intermediaries, and the safe harbour depends on due diligence rather than on a licence fee. Business registration runs through the GST portal and the Ministry of Corporate Affairs, and a shop needs a municipal trade licence. Telecom licensing by the Department of Telecommunications covers telecom and internet service providers, not a website. Sector regulators license the activity: the Reserve Bank for lending and payments, SEBI for securities, IRDAI for insurance.",
+      "evidenceGrade": "A",
+      "sources": "Ministry of Electronics and Information Technology. <https://www.meity.gov.in/>; Reserve Bank of India. <https://www.rbi.org.in/>; Goods and Services Tax portal. <https://www.gst.gov.in/>",
       "caveats": "A licence offered to a small site by an agency is usually unnecessary. Ask a professional about the specific activity. Do not assume that charging money is what triggers regulation.",
-      "sources": "Ministry of Electronics and Information Technology. <https://www.meity.gov.in/>; Reserve Bank of India. <https://www.rbi.org.in/>; Goods and Services Tax portal. <https://www.gst.gov.in/>"
+      "reviewStatus": "draft"
     },
     "26-3": {
       "title": "Live streaming needs no cultural licence in India, but it does need the rights, a grievance officer and care with the content",

@@ -9,12 +9,32 @@
       "sources": "Employees' State Insurance Corporation. <https://esic.gov.in/>; National Health Authority, PM-JAY. <https://nha.gov.in/>; Ministry of Women and Child Development, PMMVY. <https://wcd.gov.in/>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>"
     },
     "27-12": {
+      "id": "27-12",
+      "chapter": 27,
+      "tip": 12,
       "title": "Get the birth registered and the certificate early; the hospital gives the birth report and the registrar issues the certificate",
-      "inPlainWords": "The hospital reports the birth to the local registrar under the Registration of Births and Deaths Act, 1969, and the family can apply for the birth certificate. Register within 21 days to avoid a late fee. Decide the baby's name before the registration if the state requires it. The birth certificate is needed for the Aadhaar, the school admission and the passport.",
-      "benefit": "The 1969 Act requires the birth to be registered within 21 days; a late registration needs the registrar's permission and a fee. The hospital issues a birth report, and the municipal registrar issues the certificate. A name can be added later in some states. The certificate is the basis for the Aadhaar enrolment and the school record.",
+      "tags": {
+        "money": "Free",
+        "time": "Quick",
+        "willpower": "None needed",
+        "benefit": "Medium",
+        "scope": "Time and energy",
+        "audience": [
+          "Pregnant or planning",
+          "Child under 3"
+        ]
+      },
+      "costScore": 0,
+      "valueTier": "High",
+      "disputed": false,
+      "stillVerifying": false,
       "cost": "The registration fee is small; a late fee applies after 21 days.",
+      "inPlainWords": "The hospital reports the birth to the local registrar under the Registration of Births and Deaths Act, 1969, and the family can apply for the birth certificate. Register within 21 days to avoid a late fee. Decide the baby's name before the registration if the state requires it. The birth certificate is needed for the Aadhaar, the school admission and the passport.",
+      "benefit": "The Registration of Births and Deaths Act, 1969 requires every birth to be registered, and the model rules made under it (rule 5(3)) set the 21-day window that most States follow. A later registration needs the registrar's permission and the late fee the Act sets (₹2 if registered within 30 days, ₹5 after that). The hospital issues a birth report, and the municipal registrar issues the certificate. A name can be added later in some states. The certificate is the basis for the Aadhaar enrolment and the school record.",
+      "evidenceGrade": "A",
+      "sources": "Registration of Births and Deaths Act, 1969. <https://www.indiacode.nic.in/>; Ministry of Home Affairs, civil registration. <https://crsorgi.gov.in/>; Unique Identification Authority of India. <https://uidai.gov.in/>",
       "caveats": "Check the spelling of the name and the parents' details before you leave the registrar. A correction needs an affidavit and a fee. Do not pay an agent to 'fast-track' a birth certificate.",
-      "sources": "Registration of Births and Deaths Act, 1969. <https://www.indiacode.nic.in/>; Ministry of Home Affairs, civil registration. <https://crsorgi.gov.in/>; Unique Identification Authority of India. <https://uidai.gov.in/>"
+      "reviewStatus": "draft"
     },
     "27-14": {
       "title": "Add the newborn to your health cover early: PM-JAY or ESIC can cover the baby without waiting for Aadhaar",
@@ -25,12 +45,32 @@
       "sources": "National Health Authority, PM-JAY. <https://nha.gov.in/>; Employees' State Insurance Corporation. <https://esic.gov.in/>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>"
     },
     "27-15": {
+      "id": "27-15",
+      "chapter": 27,
+      "tip": 15,
       "title": "Register the birth with the municipal registrar within 21 days — not at a police station",
-      "inPlainWords": "A birth is registered with the local municipal registrar under the Registration of Births and Deaths Act, 1969, not with the police. The hospital usually reports the birth; the family applies for the certificate. If the birth is at home, the family must report it to the registrar. Register within 21 days to avoid a late fee and a longer process.",
-      "benefit": "The 1969 Act requires registration within 21 days. The hospital's birth report and the parents' identity proof are the main documents. A late registration needs the registrar's permission and a fee. The certificate is required for the Aadhaar, the school admission and the passport. A police station has no role in a normal birth registration.",
+      "tags": {
+        "money": "Free",
+        "time": "Quick",
+        "willpower": "None needed",
+        "benefit": "Small",
+        "scope": "Personal freedom",
+        "audience": [
+          "Pregnant or planning",
+          "Child under 3"
+        ]
+      },
+      "costScore": 0,
+      "valueTier": "Average",
+      "disputed": false,
+      "stillVerifying": false,
       "cost": "The fee is small; a late fee applies after 21 days.",
+      "inPlainWords": "A birth is registered with the local municipal registrar under the Registration of Births and Deaths Act, 1969, not with the police. The hospital usually reports the birth; the family applies for the certificate. If the birth is at home, the family must report it to the registrar. Register within 21 days to avoid a late fee and a longer process.",
+      "benefit": "The Registration of Births and Deaths Act, 1969 requires every birth to be registered, and the model rules made under it (rule 5(3)) set the 21-day window that most States follow. A later registration needs the registrar's permission and the late fee the Act sets (₹2 if registered within 30 days, ₹5 after that). The certificate is required for the Aadhaar, the school admission and the passport. A police station has no role in a normal birth registration.",
+      "evidenceGrade": "A",
+      "sources": "Registration of Births and Deaths Act, 1969. <https://www.indiacode.nic.in/>; Ministry of Home Affairs, civil registration. <https://crsorgi.gov.in/>; Unique Identification Authority of India. <https://uidai.gov.in/>",
       "caveats": "A home birth needs a witness and a medical certificate where available. Check the name spelling. A correction needs an affidavit.",
-      "sources": "Registration of Births and Deaths Act, 1969. <https://www.indiacode.nic.in/>; Ministry of Home Affairs, civil registration. <https://crsorgi.gov.in/>; Unique Identification Authority of India. <https://uidai.gov.in/>"
+      "reviewStatus": "draft"
     },
     "27-2": {
       "title": "Register the pregnancy early: get the MCP card, book the antenatal visits, and ask about PMSMA, JSY and PM-JAY",
@@ -57,12 +97,31 @@
       "sources": "Ministry of Health and Family Welfare. <https://www.mohfw.gov.in/>; National Health Mission. <https://nhm.gov.in/>; Ministry of Home Affairs, Emergency Response Support System. <https://www.mha.gov.in/>"
     },
     "27-9": {
+      "id": "27-9",
+      "chapter": 27,
+      "tip": 9,
       "title": "Ask for labour analgesia: an epidural is given on request, and it does not make a caesarean more likely",
+      "tags": {
+        "money": "Small cost",
+        "time": "Quick",
+        "willpower": "Some",
+        "benefit": "Medium",
+        "scope": "Time and energy",
+        "audience": [
+          "Pregnant or planning"
+        ]
+      },
+      "costScore": 2,
+      "valueTier": "Average",
+      "disputed": false,
+      "stillVerifying": false,
+      "cost": "The hospital sets the fee, usually separate from the delivery package. A public hospital may charge little or nothing, or may not offer it at all.",
       "inPlainWords": "An epidural is the most effective pain relief in labour, and it does not increase the chance of a caesarean section; the claim that it causes lasting back pain is not supported by the evidence. In India it is offered at many private hospitals and at some government medical colleges, but not everywhere, because an anaesthetist has to be available. Ask at an antenatal visit rather than in the middle of a contraction, and put it in your birth plan. There is no national price: the hospital sets the charge and often bills it separately.",
       "benefit": "An epidural blocks the pain of labour while the mother stays awake and can push. The evidence does not show that it raises the caesarean rate, although it can lengthen the second stage a little. Availability depends on the anaesthetist and the hospital, so asking early is the practical step. If the hospital does not offer it, ask what else it can give.",
-      "cost": "The hospital sets the fee, usually separate from the delivery package. A public hospital may charge little or nothing, or may not offer it at all.",
+      "evidenceGrade": "A",
+      "sources": "Anim-Somuah M, Smyth RM, Cyna AM, Cuthbert A (2018). Epidural versus non-epidural or no analgesia for pain management in labour. Cochrane Database of Systematic Reviews, 5, CD000331. <https://doi.org/10.1002/14651858.CD000331.pub4>; Ministry of Health and Family Welfare, maternal health. <https://www.mohfw.gov.in/>; National Health Mission. <https://nhm.gov.in/>",
       "caveats": "An epidural is not suitable for every woman: a clotting problem, an infection at the site or a low platelet count may rule it out. It is placed by an anaesthetist with monitoring. Do not accept a bare refusal without asking the reason.",
-      "sources": "Ministry of Health and Family Welfare, maternal health. <https://www.mohfw.gov.in/>; National Health Mission. <https://nhm.gov.in/>"
+      "reviewStatus": "draft"
     },
     "27-13": {
       "title": "Do not skip newborn screening: India has no universal national programme, so ask what your hospital actually offers",
@@ -101,7 +160,31 @@
       "sources": "NHS. Sex and contraception after birth. <https://www.nhs.uk/baby/support-and-services/sex-and-contraception-after-birth/>; NHS. Natural family planning. <https://www.nhs.uk/contraception/methods-of-contraception/natural-family-planning/>; Conde-Agudelo A, Rosas-Bermúdez A, Kafury-Goeta AC (2006). Birth spacing and risk of adverse perinatal outcomes: a meta-analysis. JAMA, 295(15), 1809. <https://doi.org/10.1001/jama.295.15.1809>; Schummers L, Hutcheon JA, Hernandez-Diaz S, et al. (2018). Association of Short Interpregnancy Interval With Pregnancy Outcomes According to Maternal Age. JAMA Internal Medicine, 178(12), 1661. <https://doi.org/10.1001/jamainternmed.2018.4696>; World Health Organization (2007). Report of a WHO Technical Consultation on Birth Spacing (WHO/RHR/07.1). <https://www.who.int/publications/i/item/WHO-RHR-07.1>; Ball SJ, Pereira G, Jacoby P, de Klerk N, Stanley FJ (2014). Re-evaluation of link between interpregnancy interval and adverse birth outcomes. BMJ, 349, g4333. <https://doi.org/10.1136/bmj.g4333>; National Health Mission, Ministry of Health and Family Welfare. <https://nhm.gov.in/>"
     },
     "27-4": {
-      "sources": "Centers for Disease Control and Prevention. Smoking During Pregnancy. <https://www.cdc.gov/tobacco/campaign/tips/diseases/pregnancy.html>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>"
+      "id": "27-4",
+      "chapter": 27,
+      "tip": 4,
+      "title": "No smoking or drinking at all throughout pregnancy — and no one else in the house should smoke either",
+      "tags": {
+        "money": "Free",
+        "time": "Quick",
+        "willpower": "A lot",
+        "benefit": "Large",
+        "scope": "Lifespan",
+        "audience": [
+          "Pregnant or planning"
+        ]
+      },
+      "costScore": 2,
+      "valueTier": "High",
+      "disputed": false,
+      "stillVerifying": false,
+      "cost": "There’s no cost at all; in fact, it saves money on cigarettes and alcohol. The real challenge is getting everyone living in the same house to quit alongside the pregnant woman.",
+      "inPlainWords": "Smoking during pregnancy raises the chances of premature birth, a baby being born underweight, and cleft lip or palate. It also doubles the risk of abnormal bleeding during pregnancy and childbirth, and increases the risk of sudden infant death syndrome. Secondhand smoke from anyone smoking indoors counts just the same. It is never too late to quit, no matter when you start.",
+      "benefit": "According to the U.S. Centers for Disease Control and Prevention, smoking during pregnancy can mean a baby is born at full term but still underweight, and makes premature birth more likely. It roughly doubles the risk of abnormal bleeding during pregnancy and childbirth, raises the risk of birth defects such as cleft lip and palate, and damages the developing lungs and brain of the fetus, with effects that last into childhood. Babies born to mothers who smoke during pregnancy, and infants exposed to smoke after birth, face a higher risk of sudden infant death syndrome. The CDC’s guidance is that quitting before pregnancy is best, that quitting during pregnancy still helps, and that it is never too late to quit.",
+      "evidenceGrade": "A",
+      "sources": "Centers for Disease Control and Prevention. Smoking During Pregnancy. <https://www.cdc.gov/tobacco/campaign/tips/diseases/pregnancy.html>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>",
+      "caveats": "Secondhand smoke from anyone smoking indoors is just as harmful to the fetus as direct smoking. Therefore, this rule applies to the whole household, not just the pregnant woman. The same principle holds true for alcohol: there is no known safe level of alcohol consumption during pregnancy, so the safest approach is to avoid it entirely. The impact of smoking and drinking on the health of adults themselves is covered in Section 2.",
+      "reviewStatus": "draft"
     },
     "27-7": {
       "sources": "Centers for Disease Control and Prevention. Hear Her — Urgent Maternal Warning Signs. <https://www.cdc.gov/hearher/maternal-warning-signs/index.html>; World Health Organization. Maternal mortality fact sheet. <https://www.who.int/news-room/fact-sheets/detail/maternal-mortality>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>"

@@ -1,9 +1,12 @@
 # QA Acceptance Report: How To Live Better
 
-> **Update, 21 October 2026:** This report predates the India edition UI work.
-> Parse/translation checks still pass (34 chapters, 765 tips, 0 CJK in `dist/`).
-> The Playwright suite was updated but not re-run in the rewrite session, where
-> verification was done in Chrome through OpenCLI. See `reports/india-edition-report.md`; Chapter 19 is now rewritten for India.
+> **Update, 21 October 2026 (India edition):** This report predates the India rewrite. The checks below
+> still hold for the base edition and were re-run after the rewrite: parse and translation pass (34
+> chapters, 765 tips, 0 CJK in `dist/`), the built-site term scan reports 0 banned terms across 52
+> pages, and the internal link checker resolves all 2,234 links. The Playwright India suite was re-run
+> across 360, 390, 768 and 1440 px. The India-specific gates and the chapter status model are documented
+> in `reports/india-edition-report.md`; all 34 chapters are rewritten for India and independently
+> verified, with Tier A human review still outstanding.
 
 **Status:** ALL 9 CHECKS PASSED (Milestone M4 Complete; pre-rewrite)
 **Date of Audit:** 2026-10-19  

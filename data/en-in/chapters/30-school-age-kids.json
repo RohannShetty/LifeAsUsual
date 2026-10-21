@@ -4,7 +4,7 @@
   "title": "School-Age Kids",
   "intro": "Chapter 30: School-Age Kids",
   "edition": "india",
-  "rewriteStatus": "draft",
+  "rewriteStatus": "checked",
   "tips": [
     {
       "id": "30-1",
@@ -31,7 +31,7 @@
       "evidenceGrade": "A",
       "sources": "Mellick LB, et al. (2019). A Systematic Review of Testicle Survival Time After a Torsion Event. Pediatric Emergency Care. <https://doi.org/10.1097/PEC.0000000000001287>",
       "caveats": "Tell your son in advance: if he suddenly feels severe pain, he should speak up right away — no need to feel embarrassed. Testicular torsion is most common in adolescent boys; many hesitate to ask for help because they’re shy. Other conditions that also worsen hour by hour include acute appendicitis (which can perforate if delayed), diabetic ketoacidosis, and meningitis. For these, the exact time‑based impact on outcomes isn’t detailed in this section. Their common warning sign is sudden onset and steadily worsening pain unlike anything experienced before. How to recognize emergencies and call for transport are covered in Section 13.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "30-2",
@@ -58,7 +58,7 @@
       "evidenceGrade": "A",
       "sources": "Weinstein SL, et al. (2013). Effects of bracing in adolescents with idiopathic scoliosis. New England Journal of Medicine. <https://doi.org/10.1056/NEJMoa1307337>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>; Ministry of Education. <https://www.education.gov.in/>",
       "caveats": "Scoliosis is a good example because it has randomized trials, a clear treatment window, and it turns up in school screening. Strabismus, amblyopia, dental caries and some elective cardiac surgery behave the same way: later treatment gives a worse result or costs more. Missing some school is not a reason to delay treatment, but a long absence has to be arranged with the school in advance, because India has no national rule that keeps a child's seat open for a year (item 11). Ask the orthopaedic surgeon when the brace must start and how often it will be reviewed, and get that in writing for the school.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "30-3",
@@ -84,8 +84,8 @@
       "benefit": "The conclusion rests on 34 studies of 284,375 children and adolescents. Peer bullying is linked to suicidal thoughts with an OR of 2.23 (95% CI 2.10-2.37), and nine further studies with 70,102 participants link it to suicide attempts with an OR of 2.55 (1.95-3.34). The association held across sex, age and study quality, and cyberbullying was linked more strongly to suicidal thoughts than physical bullying. On the Indian side, section 17 of the RTE Act, 2009 prohibits physical punishment and mental harassment and makes a breach a disciplinary matter; a school run without a grievance mechanism can be taken up with the district education officer; and the State Commission for Protection of Child Rights, set up under the Commissions for Protection of Child Rights Act, 2005, can take up a school that ignores a written complaint. Assault, criminal intimidation and mischief are offences under the Bharatiya Nyaya Sanhita, 2023 and an FIR can be filed at any police station.",
       "evidenceGrade": "A",
       "sources": "van Geel M, Vedder P, Tanilon J (2014). Relationship between peer victimization, cyberbullying, and suicide in children and adolescents: a meta-analysis. JAMA Pediatrics, 168(5), 435-442. <https://doi.org/10.1001/jamapediatrics.2013.4143>; Right of Children to Free and Compulsory Education Act, 2009. <https://www.education.gov.in/>; Bharatiya Nyaya Sanhita, 2023. <https://www.indiacode.nic.in/>; National Commission for Protection of Child Rights. <https://ncpcr.gov.in/>",
-      "caveats": "Unexplained injuries, a sudden refusal to go to school or repeated loss of belongings deserve a written complaint with dates. This evidence is observational, so it shows a strong association rather than proof that bullying alone causes suicide. Distinguish bullying from ordinary rough play, and ask the school which committee handles it and on what timeline. Keep copies of every letter. Grade B because the association is strong but the studies are observational.",
-      "reviewStatus": "draft"
+      "caveats": "Unexplained injuries, a sudden refusal to go to school or repeated loss of belongings deserve a written complaint with dates. This evidence is observational, so it shows a strong association rather than proof that bullying alone causes suicide. Distinguish bullying from ordinary rough play, and ask the school which committee handles it and on what timeline. Keep copies of every letter.",
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "30-4",
@@ -111,8 +111,8 @@
       "benefit": "First-grade children in the 12 schools were randomized to the intervention or the control group (952 and 951 children, mean age 6.6 years). The intervention added a 40-minute outdoor class each day and encouraged parents to take the child outdoors after school. Over three years the rate of new myopia was 30.4% in the intervention group (259 of 853 eligible) against 39.5% in the control group (287 of 726), a difference of -9.1 percentage points (95% CI -14.1 to -4.1, P<0.001). The mean increase in refractive error was -1.42 D in the intervention group against -1.59 D in the control group, a difference of 0.17 D (P=0.04), so progression was slightly slower. There was no significant difference in axial length (P=0.07). Daylight is not the only intervention with trial evidence: atropine eye drops and defocus spectacle lenses have randomized trials behind them too, but they need a doctor, and daylight is the cheapest.",
       "evidenceGrade": "A",
       "sources": "He M, Xiang F, Zeng Y, et al. (2015). Effect of time spent outdoors at school on the development of myopia among children: a randomized clinical trial. JAMA, 314(11), 1142-1148. <https://doi.org/10.1001/jama.2015.10803>; World Health Organization. <https://www.who.int/>",
-      "caveats": "The trial ran three years in children who started at age 6, and a 9.1-point difference means some children are protected, not that any child is guaranteed protection. The intervention was school time plus encouragement at home, so a family that manages an hour outdoors has captured much of it. Reading distance, the 20-20-20 break and screen limits are sensible but rest on weaker evidence than daylight (items 5 and 9). Grade B because the trial is strong but the effect is partial and measured over three years only.",
-      "reviewStatus": "draft"
+      "caveats": "The trial ran three years in children who started at age 6, and a 9.1-point difference means some children are protected, not that any child is guaranteed protection. The intervention was school time plus encouragement at home, so a family that manages an hour outdoors has captured much of it. Reading distance, the 20-20-20 break and screen limits are sensible but rest on weaker evidence than daylight (items 5 and 9).",
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "30-5",
@@ -140,7 +140,7 @@
       "evidenceGrade": "B",
       "sources": "Foreman J, Salim AT, Praveen A, et al. (2021). Association between digital smart device use and myopia: a systematic review and meta-analysis. The Lancet Digital Health, 3(12), e806-e818. <https://doi.org/10.1016/S2589-7500(21)00135-7>; Madigan S, McArthur BA, Anhorn C, Eirich R, Christakis DA (2020). Associations between screen use and child language skills: a systematic review and meta-analysis. JAMA Pediatrics, 174(7), 665-675. <https://doi.org/10.1001/jamapediatrics.2020.0327>; World Health Organization (2019). Guidelines on physical activity, sedentary behaviour and sleep for children under 5 years of age. <https://www.who.int/>",
       "caveats": "Grade B because the guidance is policy plus observational evidence, not a trial of screen limits. Reading on a screen and video-calling a grandparent are not the same as an hour of short videos. If a preschool child is squinting, rubbing the eyes or holding a book very close, get an eye examination at a district hospital rather than adjusting the screen (item 12). The under-five WHO figure does not answer the question for a 10-year-old, and this book will not invent one.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "30-6",
@@ -167,7 +167,7 @@
       "evidenceGrade": "A",
       "sources": "Haarman AEG, Enthoven CA, Tideman JWL, Tedja MS, Verhoeven VJM, Klaver CCW (2020). The complications of myopia: a review and meta-analysis. Investigative Ophthalmology & Visual Science, 61(4), 49. <https://doi.org/10.1167/iovs.61.4.49>",
       "caveats": "All studies included in this analysis were observational studies, and the reported odds ratios are unusually large. For instance, the confidence interval for high myopia and myopic macular degeneration spans from 230 to 3104, indicating considerable variation among individual studies; thus these figures should be viewed as rough estimates rather than precise values. Most of these complications tend to appear only in middle or old age, so this is not a situation where immediate harm occurs; rather, it represents a long-term risk that accumulates over decades. Myopia itself is not a disability, and the vast majority of people achieve normal vision after wearing corrective lenses. The purpose of this item is to shift the common perception that “once you have myopia, glasses are all you need” to recognizing that it is worthwhile to delay and control its progression. Information on follow-up examinations after diagnosis can be found in item 12 (pupil dilation and refraction testing). Be wary of products claiming to cure myopia; refer to item 9 (myopia cannot be cured) for further details.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "30-7",
@@ -194,7 +194,7 @@
       "evidenceGrade": "B",
       "sources": "National Health Mission, Rashtriya Bal Swasthya Karyakram. <https://nhm.gov.in/>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>; Ministry of Education. <https://www.education.gov.in/>",
       "caveats": "Screening is not a diagnosis: a flagged vision or hearing result needs a proper examination (item 12). The programme covers anganwadi and government-school children, and private-school children may only be reached if a State has extended it, so confirm locally. Keep the card and the referral slip, because the district hospital will ask for them. Grade B because the pathway is administrative and the evidence for annual screening itself is not from randomized trials.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "30-8",
@@ -221,7 +221,7 @@
       "evidenceGrade": "B",
       "sources": "Ministry of Health and Family Welfare, National Mental Health Programme. <https://mohfw.gov.in/>; Tele-MANAS. <https://telemanas.mohfw.gov.in/>; Mental Healthcare Act, 2017. <https://www.indiacode.nic.in/>",
       "caveats": "A screening result should stay confidential. A positive screen needs a clinical assessment, not a label. If there is a risk of suicide, do not leave the teenager alone; call 14416 or 112.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "30-9",
@@ -248,7 +248,7 @@
       "evidenceGrade": "B",
       "sources": "Consumer Protection Act, 2019. <https://consumeraffairs.nic.in/>; Central Consumer Protection Authority. <https://consumeraffairs.nic.in/>; Advertising Standards Council of India. <https://www.ascionline.in/>; Central Drugs Standard Control Organisation. <https://cdsco.gov.in/>",
       "caveats": "Grade B because the basis is a regulatory position and the absence of evidence, not a trial of a particular product. Preventable and controllable but not reversible is the accurate summary. Blue-light-blocking lenses are covered in chapter 6. If a child's prescription is climbing quickly, see an ophthalmologist rather than buying a device.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "30-10",
@@ -275,7 +275,7 @@
       "evidenceGrade": "B",
       "sources": "Right of Children to Free and Compulsory Education Act, 2009. <https://www.education.gov.in/>; Ministry of Education. <https://www.education.gov.in/>; World Health Organization. <https://www.who.int/>",
       "caveats": "Grade B because the rules vary by State, board and school, and this book will not quote a national number that does not exist. Publishing marks and ranks is common in Indian schools and is not by itself illegal, though a school should follow its own stated policy. If a child is persistently short of sleep, the usual cause is bedtime and commute, not a rule to enforce. The WHO figure is a recommendation, not Indian law.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "30-11",
@@ -302,7 +302,7 @@
       "evidenceGrade": "B",
       "sources": "Right of Children to Free and Compulsory Education Act, 2009. <https://www.education.gov.in/>; Ministry of Education. <https://www.education.gov.in/>",
       "caveats": "Ask three questions in writing before the break: what document the school needs, whether the child's name stays on the rolls, and whether the child returns to the same class or is placed by age. A long absence for medical treatment should be documented with hospital papers. If the school refuses to take the child back, section 4 is the provision to quote and the district education officer is the route. Grade B because the clinical advice is standard but the administrative answer differs by State and board.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "30-12",
@@ -329,7 +329,7 @@
       "evidenceGrade": "B",
       "sources": "Ministry of Health and Family Welfare, National Programme for Control of Blindness and Visual Impairment. <https://mohfw.gov.in/>; National Health Mission, Rashtriya Bal Swasthya Karyakram. <https://nhm.gov.in/>; World Health Organization. <https://www.who.int/>",
       "caveats": "Grade B because the practice is standard but no Indian document fixes intervals, and this book will not invent one. The drops cause light sensitivity and blurred near vision for some hours, so a child should not cycle home alone afterwards. A prescription from an optical shop without a doctor's examination is not a diagnosis for a child. Bring the screening card to the appointment.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "30-13",
@@ -356,7 +356,7 @@
       "evidenceGrade": "A",
       "sources": "Ahovuo-Saloranta A, et al. (2017). Pit and fissure sealants for preventing dental decay in permanent teeth. Cochrane Database of Systematic Reviews. <https://doi.org/10.1002/14651858.CD001830.pub5>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>; Ministry of Education. <https://www.education.gov.in/>",
       "caveats": "The first permanent molars, which are never replaced, appear around age 6, and the second molars near age 12. A sealant goes on as soon as the molar erupts and before decay starts; once a cavity has formed the sealant cannot be used and a filling is needed. No Indian national document with coverage criteria or age limits could be identified, so those details are omitted. Dental caries remains one of the findings that school screening is meant to catch (item 7).",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "30-14",
@@ -383,7 +383,7 @@
       "evidenceGrade": "B",
       "sources": "Stevens MW, Dorstyn D, Delfabbro PH, King DL (2021). Global prevalence of gaming disorder: a systematic review and meta-analysis. Australian and New Zealand Journal of Psychiatry, 55(6), 553-568. <https://doi.org/10.1177/0004867420962851>; Vuorre M, Johannes N, Magnusson K, Przybylski AK (2022). Time spent playing video games is unlikely to impact well-being. Royal Society Open Science, 9(7), 220411. <https://doi.org/10.1098/rsos.220411>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>",
       "caveats": "Grade B because prevalence depends on the questionnaire and the wellbeing study ran six weeks. The main harm of heavy gaming is displacement of sleep and outdoor activity (items 4 and 10). If school performance, sleep and family relationships all deteriorate despite changes, see a child psychiatrist or paediatric psychologist. Do not use a residential detox centre (item 18).",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "30-15",
@@ -410,7 +410,7 @@
       "evidenceGrade": "B",
       "sources": "Supreme Court of India, Navtej Singh Johar v Union of India (2018). <https://www.sci.gov.in/>; Mental Healthcare Act, 2017. <https://www.indiacode.nic.in/>; Tele-MANAS. <https://telemanas.mohfw.gov.in/>; Indian Psychiatric Society. <https://indianpsychiatricsociety.org/>",
       "caveats": "A minor may still face bullying at school and a hostile relative. Do not out the child to others without consent. If the child is in danger at home, contact Childline on 1098 or the police.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "30-16",
@@ -438,7 +438,7 @@
       "evidenceGrade": "A",
       "sources": "Gershoff ET, Grogan-Kaylor A. (2016). Spanking and child outcomes: Old controversies and new meta-analyses. Journal of Family Psychology, 30(4), 453-469. <https://doi.org/10.1037/fam0000191>; Heilmann A, Mehay A, Watt RG, et al. (2021). Physical punishment and child outcomes: a narrative review of prospective studies. Lancet, 398(10297), 355-364. <https://doi.org/10.1016/S0140-6736(21)00582-1>; Wang MT, Kenny S. (2014). Longitudinal links between fathers' and mothers' harsh verbal discipline and adolescents' conduct problems and depressive symptoms. Child Development, 85(3), 908-923. <https://doi.org/10.1111/cdev.12143>; Ferguson CJ. (2013). Spanking, corporal punishment and negative long-term outcomes: a meta-analytic review of longitudinal studies. Clinical Psychology Review, 33(1), 196-208. <https://doi.org/10.1016/j.cpr.2012.11.002>; Larzelere RE, Kuhn BR. (2005). Comparing child outcomes of physical punishment and alternative disciplinary tactics: a meta-analysis. Clinical Child and Family Psychology Review, 8(1), 1-37. <https://doi.org/10.1007/s10567-005-2340-z>; Right of Children to Free and Compulsory Education Act, 2009. <https://www.education.gov.in/>; Juvenile Justice (Care and Protection of Children) Act, 2015. <https://www.wcd.nic.in/>; Bharatiya Nyaya Sanhita, 2023. <https://www.indiacode.nic.in/>",
       "caveats": "Controversial. These studies are almost all observational, not randomized trials, so causation is unclear. In the spanking meta-analysis, 72% of studies were cross-sectional or relied on recall. A meta-analysis of longitudinal studies found that after adjusting for prior child behaviour, links to externalizing problems fell to 0.07 and internalizing to 0.10; those authors judged the effects small. Another meta-analysis found 'conditional' spanking outperformed 10 of 13 alternative discipline methods for reducing defiance and antisocial behaviour, but severe or predominant spanking did worse than the alternatives. Critics and supporters agree that heavy, frequent hitting and verbal abuse are worse. What to switch to is covered in item 17 of this chapter, and the legal position is settled even where the research is not: a parent who injures a child can be prosecuted for hurt under the Bharatiya Nyaya Sanhita, 2023, and a child in danger can be brought before the Child Welfare Committee under the Juvenile Justice Act, 2015. If someone in the household is being beaten, chapter 6 and the Protection of Women from Domestic Violence Act, 2005 are the route for an adult woman. Anyone may report chronic abuse of a child by calling 112 or 1098; do not force your way into another family's house.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "30-17",
@@ -466,7 +466,7 @@
       "evidenceGrade": "A",
       "sources": "Furlong M, McGilloway S, Bywater T, Hutchings J, Smith SM, Donnelly M. (2012). Behavioral and cognitive-behavioural group-based parenting programs for early-onset conduct problems in children aged 3 to 12 years. Cochrane Database of Systematic Reviews, (2), CD008225. <https://doi.org/10.1002/14651858.CD008225.pub2>; Backhaus S, Leijten P, Jochim J, Melendez-Torres GJ, Gardner F. (2023). Effects over time of parenting interventions to reduce physical and emotional violence against children: a systematic review and meta-analysis. eClinicalMedicine, 60, 102003. <https://doi.org/10.1016/j.eclinm.2023.102003>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>; Ministry of Education. <https://www.education.gov.in/>",
       "caveats": "Grade A from Cochrane and pooled randomized trials. The courses that worked shared features: an instructor teaches concrete skills (play, praise, rewards, discipline), parents practise and get homework. Programmes that only handed out material or only held a discussion were excluded, so the evidence does not cover a one-off lecture. Content of local programmes varies and may not match this model, so look for a multi-week course with practice. Names often include Triple P, Incredible Years and Parent-Child Interaction Therapy. This book does not endorse a provider or a paid product. The reduction in hitting fades after one to two years, so keep practising after the course ends. If the child already has severe emotional problems, see a child psychiatrist (item 8).",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "30-18",
@@ -493,7 +493,7 @@
       "evidenceGrade": "C",
       "sources": "Juvenile Justice (Care and Protection of Children) Act, 2015. <https://www.wcd.nic.in/>; Protection of Children from Sexual Offences Act, 2012. <https://www.wcd.nic.in/>; Mental Healthcare Act, 2017. <https://www.indiacode.nic.in/>; National Commission for Protection of Child Rights. <https://ncpcr.gov.in/>; Childline 1098, Ministry of Women and Child Development. <https://www.wcd.nic.in/>",
       "caveats": "Grade C because the record here is court cases and investigations, not a count of harm across institutions. If a child is already inside such a place, get them out; if they report restraint, beating or sexual abuse, call 112 and 1098, and preserve clothing and medical records. The behavioural alternative is a structured parenting course (item 17) and a child psychiatrist for a genuine disorder. Screen addiction is not a diagnosis in the ICD or the DSM; gaming disorder is, and it is treated as an outpatient problem.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "30-19",
@@ -520,7 +520,7 @@
       "evidenceGrade": "B",
       "sources": "Walsh K, Zwi K, Woolfenden S, Shlonsky A (2015). School-based education programmes for the prevention of child sexual abuse. Cochrane Database of Systematic Reviews, (4), CD004380. <https://doi.org/10.1002/14651858.CD004380.pub3>; UNESCO, UNAIDS, UNFPA, UNICEF, UN Women, WHO (2018). International technical guidance on sexuality education: an evidence-informed approach (revised edition). <https://www.unfpa.org/sites/default/files/pub-pdf/ITGSE.pdf>; Protection of Children from Sexual Offences Act, 2012. <https://www.wcd.nic.in/>; National Commission for Protection of Child Rights. <https://ncpcr.gov.in/>",
       "caveats": "Graded B because the trials measure proxy milestones, protective skills in simulations and questionnaire knowledge, rather than lifetime victimisation. Home rules: teach the anatomical words, say that anyone who asks a child to keep a secret from a parent is breaking a safety rule, and promise the child will not be in trouble for telling. If a child discloses abuse, say it is not their fault, do not bathe them or change their clothes before a forensic examination, and call 112 and 1098; a police complaint can be made at any station whatever the relationship of the person named. Grade C claims about prevalence are not used here for that reason.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "30-20",
@@ -547,7 +547,7 @@
       "evidenceGrade": "B",
       "sources": "Motor Vehicles Act, 1988. <https://morth.nic.in/>; Bharatiya Nyaya Sanhita, 2023. <https://www.indiacode.nic.in/>; Zmora O, Peleg K, Klein Y (2019). Pediatric electric bicycle injuries and comparison to other pediatric traffic injuries. Traffic Injury Prevention. <https://doi.org/10.1080/15389588.2019.1608361>",
       "caveats": "The age limits are national, while enforcement and helmet rules vary by State. A low-power electric scooter is treated differently from a motorcycle, but the family rule should be the same: no road riding without a licence and a helmet. Never let a child use an adult's phone or account to unlock a shared vehicle. Once a child is old enough, a helmet that fits is not optional (item 21 and chapter 22).",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "30-21",
@@ -573,8 +573,8 @@
       "benefit": "A clinical study tracking 69 adolescent athletes (mean age 15) with sports-related concussions demonstrated that athletes removed from play immediately took an average of 22.0 days to recover, whereas athletes who continued playing while symptomatic averaged 44.4 days to recovery (P=0.003). Those continuing to play had 8.8 times higher odds of protracted recovery exceeding 21 days (OR 8.80). The 6th International Conference on Concussion in Sport (Amsterdam 2022 Consensus Statement) establishes that when athletes exhibit loss of consciousness, seizure, balance instability, confusion, or behavioral alterations, they must be removed from play immediately and barred from returning on the same day. U.S. CDC HEADS UP guidelines mandate the \"When in Doubt, Sit Them Out\" rule, emphasizing that only qualified healthcare professionals can diagnose or clear concussions. The CDC details immediate emergency \"red flag\" indications: seizures, inability to recognize familiar people or places, repeated nausea and vomiting, progressive confusion or agitation, loss of consciousness, slurred speech, limb weakness/numbness, unequal pupil size, and intractable worsening headache.",
       "evidenceGrade": "B",
       "sources": "Elbin RJ, Sufrinko A, Schatz P, et al. (2016). Removal From Play After Concussion and Recovery Time. Pediatrics, 138(3), e20160910. <https://doi.org/10.1542/peds.2016-0910>; Patricios JS, Schneider KJ, Dvorak J, et al. (2023). Consensus statement on concussion in sport: the 6th International Conference on Concussion in Sport—Amsterdam, October 2022. British Journal of Sports Medicine, 57(11), 695-711. <https://doi.org/10.1136/bjsports-2023-106898>; CDC (2025). Signs and Symptoms of Concussion. HEADS UP. <https://www.cdc.gov/heads-up/signs-symptoms/index.html>; CDC. How to Respond. HEADS UP. <https://www.cdc.gov/heads-up/response/index.html>",
-      "caveats": "Graded B because the comparison of immediate removal versus continued play is observational rather than a randomized trial. International consensus protocols recommend cognitive and physical rest (limiting screens) for the first 24–48 hours, followed by gradual symptom-titrated reintroduction of light activity. Contact sports and activities with fall risks require medical clearance. For helmet use in cycling and winter sports, see Chapter 22, Rule 12. For delayed subdural hematomas following head injury in the elderly, see Chapter 13, Rule 10.",
-      "reviewStatus": "draft"
+      "caveats": "Graded B because the comparison of immediate removal versus continued play is observational rather than a randomized trial. International consensus protocols recommend cognitive and physical rest (limiting screens) for the first 24–48 hours, followed by gradual symptom-titrated reintroduction of light activity. Contact sports and activities with fall risks require medical clearance. For helmet use in cycling and winter sports, see Chapter 22, Item 12. For delayed subdural hematomas following head injury in the elderly, see Chapter 13, Item 10.",
+      "reviewStatus": "independently-checked"
     }
   ]
 }

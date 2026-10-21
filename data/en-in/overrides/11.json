@@ -9,12 +9,29 @@
       "caveats": "There is no fixed countdown to an arrest decision as there is in some jurisdictions. What is fixed is the investigation clock: the charge sheet must come within 60 or 90 days, and bail is decided by a magistrate or court, not by the police. A lawyer is most useful before the first remand hearing, to check the grounds of arrest, oppose police custody and move for bail. Do not sign a statement in the police station; under the Bharatiya Sakshya Adhiniyam, 2023 a confession to a police officer is not admissible. Every other item in this chapter turns on the same question: whether the other side has grounds to complain and the money to pursue it."
     },
     "11-2": {
+      "id": "11-2",
+      "chapter": 11,
+      "tip": 2,
       "title": "Refuse to build or sell game cheats, including “AI assistants” that only read the screen",
+      "tags": {
+        "money": "Free",
+        "time": "Quick",
+        "willpower": "Some",
+        "benefit": "Large",
+        "scope": "Personal freedom",
+        "audience": []
+      },
+      "costScore": 1,
+      "valueTier": "High",
+      "disputed": false,
+      "stillVerifying": false,
       "cost": "There is no monetary cost. The trade-off is the income from cheat orders and “small tools”. The difficulty is that this money arrives quickly and it is never clear which game publisher will eventually complain.",
-      "inPlainWords": "India has no user-count or rupee threshold for this. Section 66 of the IT Act, 2000 punishes unauthorised access to a computer resource, or damage to it, with up to three years and a fine of up to five lakh rupees, and section 43 lets the owner sue for damages. A cheat that edits game memory, fakes a server response or lifts assets out of the client is the exposure. Separately, cracking the game's protection is an offence under section 65A of the Copyright Act, 1957, and selling copies is infringement under section 63.",
+      "inPlainWords": "India has no user-count or rupee threshold for this. Section 66 of the IT Act, 2000 punishes unauthorised access to a computer resource, or damage to it, with imprisonment up to three years, or a fine of up to five lakh rupees, or both, and section 43 lets the owner sue for damages. A cheat that edits game memory, fakes a server response or lifts assets out of the client is the exposure. Separately, cracking the game's protection is an offence under section 65A of the Copyright Act, 1957, and selling copies is infringement under section 63.",
       "benefit": "The IT Act does not require a minimum number of users or a minimum profit. What it requires is access without the owner's permission, or damage. Section 66 covers acts listed in section 43 done dishonestly or fraudulently, and section 43 covers unauthorised copying, downloading or extraction of data and disruption of a computer resource. A publisher can also sue for breach of its terms and for inducing players to breach theirs, and under the Copyright Act where a cheat copies or redistributes game code or art. If the tool steals player accounts it can attract section 66C (identity theft) and section 66D (cheating by personation) as well.",
+      "evidenceGrade": "A",
       "sources": "Information Technology Act, 2000. <https://www.indiacode.nic.in/>; Copyright Act, 1957. <https://www.indiacode.nic.in/>; Copyright Office. <https://copyright.gov.in/>; Ministry of Electronics and Information Technology. <https://www.meity.gov.in/>",
-      "caveats": "No reported Indian judgment decides whether a screen-reading assistant that never touches memory is an offence. The practical test is whether the tool talks to the game's servers or copies its code without authorisation; if it only watches the screen the IT Act case is weak, but the publisher can still enforce its terms and pursue copyright claims if assets are copied. Enforcement is driven by the publisher's complaint, not by the tool's author. “It is only a single-player game” does not help: the licence terms and the copyright in the assets apply either way."
+      "caveats": "No reported Indian judgment decides whether a screen-reading assistant that never touches memory is an offence. The practical test is whether the tool talks to the game's servers or copies its code without authorisation; if it only watches the screen the IT Act case is weak, but the publisher can still enforce its terms and pursue copyright claims if assets are copied. Enforcement is driven by the publisher's complaint, not by the tool's author. “It is only a single-player game” does not help: the licence terms and the copyright in the assets apply either way.",
+      "reviewStatus": "draft"
     },
     "11-3": {
       "title": "Do not write or sell scripts for ticket booking, flash sales, fake orders or coupon farming, even if they only “click a button faster”",
@@ -25,12 +42,29 @@
       "caveats": "Indian enforcement here is mostly platform-level: cancellations, blacklisting, frozen payouts and civil notices rather than reported criminal trials. That makes it easy to mistake for a technical game, which is the point of the tip. Do not build a “personal use” script and then share it; distribution is what turns a contract breach into a conspiracy or abetment case. A platform that suspects automation may also demand fresh KYC and hold the money while it investigates, which is a real cost even when no case is filed."
     },
     "11-4": {
+      "id": "11-4",
+      "chapter": 11,
+      "tip": 4,
       "title": "Crawl only pages that need no login, never defeat an access control, never touch personal data, and never sell what you collect",
+      "tags": {
+        "money": "Free",
+        "time": "Quick",
+        "willpower": "Some",
+        "benefit": "Large",
+        "scope": "Personal freedom",
+        "audience": []
+      },
+      "costScore": 1,
+      "valueTier": "High",
+      "disputed": false,
+      "stillVerifying": false,
       "cost": "No cost at all. A crawler is a program that fetches pages and extracts data. Before running one, read robots.txt and the site's API terms; robots.txt is the file in the site root that lists paths the owner does not want crawled. Anything behind a login, a token or a signature is out of scope. The real difficulty is self-discipline: the data is technically reachable, and that is exactly when the line gets crossed.",
       "inPlainWords": "In India there is no fixed number of records that turns scraping into a crime. The questions are whether you were authorised, whether you got past a protective measure, and whether you took personal data. Bypassing a login or a block is unauthorised access under section 43 of the IT Act, 2000, and section 66 makes it criminal. Personal data brings the DPDP Act, 2023: notice, consent, purpose limitation, security. Selling the data makes every one of those worse.",
-      "benefit": "Public, unauthenticated pages are the part of the web a crawler may read. Once you defeat a rate limit, a captcha, an IP block or a login you are in section 43 territory: the site owner can claim damages, and section 66 can make it an offence punishable with up to three years and a fine. Under the DPDP Act, 2023 the person who decides why and how personal data is processed is a Data Fiduciary and owes notice, consent, purpose limitation, accuracy, security safeguards and breach reporting; the Schedule allows penalties running to hundreds of crores of rupees for security failures, failure to report a breach, and breaches concerning children. Compilations and databases are also protected as literary works under section 2(o) of the Copyright Act, 1957, so lifting a substantial part of a curated database can infringe copyright.",
+      "benefit": "Public, unauthenticated pages are the part of the web a crawler may read. Once you defeat a rate limit, a captcha, an IP block or a login you are in section 43 territory: the site owner can claim damages, and section 66 can make it an offence punishable with imprisonment up to three years, or a fine up to five lakh rupees, or both. Under the DPDP Act, 2023 the person who decides why and how personal data is processed is a Data Fiduciary and owes notice, consent, purpose limitation, accuracy, security safeguards and breach reporting; the Schedule allows penalties running to hundreds of crores of rupees for security failures, failure to report a breach, and breaches concerning children. Compilations and databases are also protected as literary works under section 2(o) of the Copyright Act, 1957, so lifting a substantial part of a curated database can infringe copyright.",
+      "evidenceGrade": "A",
       "sources": "Information Technology Act, 2000. <https://www.indiacode.nic.in/>; Digital Personal Data Protection Act, 2023. <https://www.indiacode.nic.in/>; Copyright Office. <https://copyright.gov.in/>; Ministry of Electronics and Information Technology. <https://www.meity.gov.in/>",
-      "caveats": "Indian law has no general database right, and scraping facts that are truly public is not by itself unlawful; the liability comes from how you obtained the data and what you do with it. “Public” is not a permanent defence: a site can withdraw permission in its terms or with a technical measure, and continuing after that changes the analysis. If the crawl touches personal data, do not rely on “it was already public”; the DPDP Act still applies to the processing you do. Keep a record of the terms you relied on and the paths you crawled. If a dispute starts, that record is your defence."
+      "caveats": "Indian law has no general database right, and scraping facts that are truly public is not by itself unlawful; the liability comes from how you obtained the data and what you do with it. “Public” is not a permanent defence: a site can withdraw permission in its terms or with a technical measure, and continuing after that changes the analysis. If the crawl touches personal data, do not rely on “it was already public”; the DPDP Act still applies to the processing you do. Keep a record of the terms you relied on and the paths you crawled. If a dispute starts, that record is your defence.",
+      "reviewStatus": "draft"
     },
     "11-5": {
       "title": "Refuse development orders for gambling, fraud or adult-content apps, and do not run payment rails or “account recovery” for those clients",
@@ -65,12 +99,29 @@
       "sources": "Information Technology Act, 2000. <https://www.indiacode.nic.in/>; CERT-In. <https://www.cert-in.org.in/>; Bharatiya Nyaya Sanhita, 2023. <https://www.indiacode.nic.in/>; Electricity Act, 2003. <https://www.indiacode.nic.in/>"
     },
     "11-9": {
+      "id": "11-9",
+      "chapter": 11,
+      "tip": 9,
       "title": "Testing someone else's systems without written permission: “good intentions” and “reporting afterwards” are not a defence",
+      "tags": {
+        "money": "Free",
+        "time": "Quick",
+        "willpower": "Some",
+        "benefit": "Large",
+        "scope": "Personal freedom",
+        "audience": []
+      },
+      "costScore": 1,
+      "valueTier": "High",
+      "disputed": false,
+      "stillVerifying": false,
       "cost": "No cost at all. Before you join a vendor's bug bounty programme or a public beta test, get a document that states the permitted scope, the target systems and the testing window. Once a vulnerability is confirmed, stop testing. The real challenge is resisting the urge to “give it a quick try”.",
-      "inPlainWords": "In India the question is not how many accounts you took or how much money you made. It is whether you had permission and how far you went into the system. Section 43 of the IT Act, 2000 lets the owner sue for unauthorised access, and section 66 makes it an offence where the access is dishonest or fraudulent, with up to three years and a fine. There is no safe harbour for research: good intentions do not create authority.",
+      "inPlainWords": "In India the question is not how many accounts you took or how much money you made. It is whether you had permission and how far you went into the system. Section 43 of the IT Act, 2000 lets the owner sue for unauthorised access, and section 66 makes it an offence where the access is dishonest or fraudulent, with imprisonment up to three years, or a fine up to five lakh rupees, or both. There is no safe harbour for research: good intentions do not create authority.",
       "benefit": "Section 43 of the IT Act, 2000 covers access to, downloading from, copying from or extracting data out of a computer resource without the permission of the person in charge of it, and it gives the owner a claim for damages. Section 66 turns the same conduct into an offence when it is done dishonestly or fraudulently, punishable with imprisonment up to three years, or a fine up to five lakh rupees, or both. Section 66C covers identity theft and section 66D cheating by personation. If you were given credentials at work and used them outside the scope you were given, that is the clearest case against you: the authorisation was limited, and section 43 does not read it as permission to go further. Selling what you found can add criminal breach of trust under the BNS, 2023, and where personal data is involved, liability under the DPDP Act, 2023.",
+      "evidenceGrade": "A",
+      "sources": "Information Technology Act, 2000. <https://www.indiacode.nic.in/>; CERT-In. <https://www.cert-in.org.in/>; Ministry of Electronics and Information Technology. <https://www.meity.gov.in/>; National Cyber Crime Reporting Portal. <https://cybercrime.gov.in/>",
       "caveats": "India does not grade unauthorised access by counting credentials, machines or rupees, so the “nobody will notice one export” argument is weaker here, not stronger: there is no threshold to stay under. There is also no statutory safe harbour for security research. The only protection is a written authorisation that names the scope, the targets and the window; a bug bounty policy is such an authorisation only where it says so, and gratitude after the fact is not permission. Collect minimal evidence: a screenshot and a request identifier prove the finding without taking the data. If you have already gone further than you were authorised, stop, do not copy anything else, and take advice before you contact the vendor.",
-      "sources": "Information Technology Act, 2000. <https://www.indiacode.nic.in/>; CERT-In. <https://www.cert-in.org.in/>; Ministry of Electronics and Information Technology. <https://www.meity.gov.in/>; National Cyber Crime Reporting Portal. <https://cybercrime.gov.in/>"
+      "reviewStatus": "draft"
     },
     "11-10": {
       "title": "Report a vulnerability privately and give the vendor time to patch; do not publish exploit code, and do not hand unreported findings to anyone who will use them",
@@ -161,12 +212,29 @@
       "sources": "Copyright Act, 1957. <https://www.indiacode.nic.in/>; Copyright Office. <https://copyright.gov.in/>; Ministry of Electronics and Information Technology. <https://www.meity.gov.in/>"
     },
     "11-21": {
+      "id": "11-21",
+      "chapter": 11,
+      "tip": 21,
       "title": "Never launch or help with a DDoS attack, never sell or rent a “stress testing” booter, and never flood a rival's server over a game dispute",
+      "tags": {
+        "money": "Free",
+        "time": "Quick",
+        "willpower": "Some",
+        "benefit": "Large",
+        "scope": "Personal freedom",
+        "audience": []
+      },
+      "costScore": 1,
+      "valueTier": "High",
+      "disputed": false,
+      "stillVerifying": false,
       "cost": "Zero financial expense. A distributed denial-of-service attack overwhelms a target by pointing coordinated bot traffic at it. The cost is walking away from per-attack or subscription income, and keeping your temper in a game dispute or a business rivalry. Report the dispute to the platform or the police instead of buying an attack.",
-      "inPlainWords": "Knocking someone's site, server or game offline with a flood of traffic is unauthorised access and damage to a computer resource under the IT Act, 2000: section 43 gives the owner a civil claim, and section 66 makes it an offence with up to three years and a fine. Where the attack is meant to strike terror or to threaten the country's security or economic security, section 66F applies and carries the heaviest penalty in the Act. Paying someone to run the attack makes you a party to it.",
+      "inPlainWords": "Knocking someone's site, server or game offline with a flood of traffic is unauthorised access and damage to a computer resource under the IT Act, 2000: section 43 gives the owner a civil claim, and section 66 makes it an offence with imprisonment up to three years, or a fine up to five lakh rupees, or both. Where the attack is meant to strike terror or to threaten the country's security or economic security, section 66F applies and carries the heaviest penalty in the Act. Paying someone to run the attack makes you a party to it.",
       "benefit": "Section 43 of the IT Act, 2000 covers denial of access to a computer resource and disruption of it, and gives the person in charge a claim for damages. Section 66 makes the dishonest or fraudulent version an offence punishable with imprisonment up to three years, or a fine up to five lakh rupees, or both. Section 66F covers cyber terrorism, defined around acts intended to threaten the unity, integrity, sovereignty or security of India or to strike terror in people, and it carries imprisonment which may extend to life. Providing the tools is not a safe sideline: a person who supplies scripts, hosting or botnet access knowing what they are for can be charged as an abettor under the BNS, 2023, and selling a service that does not work is cheating. An attack on a rival business is also a civil wrong, and can be sued for damages.",
+      "evidenceGrade": "A",
+      "sources": "Information Technology Act, 2000. <https://www.indiacode.nic.in/>; CERT-In. <https://www.cert-in.org.in/>; National Cyber Crime Reporting Portal. <https://cybercrime.gov.in/>; Ministry of Electronics and Information Technology. <https://www.meity.gov.in/>",
       "caveats": "India does not have a separate DDoS offence, so cases are built from sections 43 and 66 and, where the facts are grave enough, section 66F. That matters in two ways: the sentence depends on the harm you caused rather than on a fixed threshold, and the first thing a target will do is preserve logs and file a complaint, which is why the traffic source is usually traceable. Stress testing is legitimate only on systems you own, or where you hold signed written authorisation that states the scope and the window. Booter customers are not anonymous: payments, chat logs and the booter's own records are what an investigation asks for.",
-      "sources": "Information Technology Act, 2000. <https://www.indiacode.nic.in/>; CERT-In. <https://www.cert-in.org.in/>; National Cyber Crime Reporting Portal. <https://cybercrime.gov.in/>; Ministry of Electronics and Information Technology. <https://www.meity.gov.in/>"
+      "reviewStatus": "draft"
     }
   }
 }

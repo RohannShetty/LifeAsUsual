@@ -39,6 +39,31 @@
       "cost": "AIU equivalence and MEA attestation both charge a fee, and both take weeks rather than days. An agent's 'guaranteed equivalence' or 'fast-track certification' fee buys nothing that you cannot do yourself.",
       "caveats": "Equivalence is decided case by case, on the syllabus, the duration, the mode of study and the institution's recognition in its own country, so a name that sounds familiar is not enough. A professional council's recognition is a separate question from AIU equivalence: clearing one does not give you the other. A degree awarded for a course delivered online, or by an institution that is not recognised where it operates, may get no equivalence at all, and no payment can change that. Anyone offering to certify a degree through an 'internal channel' is running a fraud.",
       "sources": "Association of Indian Universities, equivalence of degrees. <https://aiu.ac.in/frontpage/equivalence-of-degree/>; Association of Indian Universities, equivalence committee. <https://aiu.ac.in/governance/equivalence-commitee/>; Ministry of External Affairs. <https://www.mea.gov.in/>; University Grants Commission. <https://www.ugc.gov.in/>; National Medical Commission. <https://www.nmc.org.in/>; Bar Council of India. <https://www.bci.org.in/>; Institute of Chartered Accountants of India. <https://www.icai.org/>"
+    },
+    "32-3": {
+      "id": "32-3",
+      "chapter": 32,
+      "tip": 3,
+      "title": "The maximum allowed work hours are strict limits in the U.S., Canada, UK, and Australia — exceeding them violates visa terms.",
+      "tags": {
+        "money": "Free",
+        "time": "Quick",
+        "willpower": "Some",
+        "benefit": "Large",
+        "scope": "Personal freedom",
+        "audience": []
+      },
+      "costScore": 1,
+      "valueTier": "High",
+      "disputed": false,
+      "stillVerifying": false,
+      "cost": "There’s no cost involved. You simply need to track your weekly hours yourself. The difficulty lies in employers often claiming “no one checks extra hours,” but you must never believe this.",
+      "inPlainWords": "All four countries set clear caps on how many hours international students may work. Going over these limits breaches visa conditions, potentially leading to visa revocation, deportation, or extra scrutiny during future applications. The limits are: 20 hours per week in the U.S., 20 hours weekly for degree students and 10 hours for non-degree students in the UK, 24 hours per week in Canada, and 48 hours every two weeks in Australia. Hours worked at multiple jobs must be combined.",
+      "benefit": "F-1 students in the U.S. may work up to 20 hours per week on campus during term time, with the same 20-hour weekly cap applying to approved off-campus jobs; full-time work is allowed during holidays. This is stipulated under 8 CFR 214.2(f)(9) of U.S. federal immigration regulations. UK students pursuing degree-level courses may work 20 hours weekly during term time, while those on non-degree programs are limited to 10 hours per week; no work is permitted for part-time students at all. Self-employment is also prohibited, meaning you cannot work for yourself, nor may you serve as a professional athlete or performer. These rules are outlined in the UK immigration rules for students, specifically Student ST26.1 and ST26.5. Eligible full-time students in Canada may work up to 24 hours per week off campus, per paragraph 186(v) of the Immigration and Refugee Protection Regulations (IRPR). For Australian student visas, the limit is 48 hours every two weeks while classes are in session; this restriction does not apply to research-based master’s or PhD students, nor their dependents.",
+      "evidenceGrade": "A",
+      "sources": "8 CFR 214.2(f)(9). <https://www.ecfr.gov/current/title-8/chapter-I/subchapter-B/part-214/section-214.2>; UK Home Office. Immigration Rules Appendix Student (ST26.1, ST26.5). <https://www.gov.uk/guidance/immigration-rules/immigration-rules-appendix-student>; IRCC. Work off campus as an international student. <https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/work/work-off-campus.html>; Australian Government Department of Home Affairs. Student visa (subclass 500). <https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500>",
+      "caveats": "In the U.S., any off-campus work must first receive official approval; you cannot begin working while your I-765 work permit application is still pending. Older Canadian work permits may list a 20-hour weekly cap, but if you still meet all eligibility criteria, current regulations permit up to 24 hours per week. The UK’s self-employment ban is broadly interpreted: taking private contracts, running an online store, or working as a freelancer all count as prohibited self-employment.",
+      "reviewStatus": "independently-checked"
     }
   }
 }

@@ -7,6 +7,8 @@ const BANNED = /\b(China|Chinese|mainland|RMB|yuan|hukou|yibao|dibao|CNY)\b/i;
 interface ManifestChapter {
   status: 'queued' | 'draft' | 'checked' | 'reviewed';
   tips: number;
+  tier: 'A' | 'B';
+  humanReview: string;
 }
 
 interface SourceChapter {
@@ -51,9 +53,12 @@ test.describe('India rewrite chapters', () => {
       if (meta.status === 'draft') {
         await expect(page.locator('.badge-draft')).toHaveCount(expectedTips);
         await expect(page.locator('.badge-checked')).toHaveCount(0);
+        await expect(page.locator('.badge-human-review')).toHaveCount(0);
       } else {
         await expect(page.locator('.badge-checked')).toHaveCount(expectedTips);
         await expect(page.locator('.badge-draft')).toHaveCount(0);
+        const awaitingHuman = meta.tier === 'A' && meta.humanReview !== 'signed-off';
+        await expect(page.locator('.badge-human-review')).toHaveCount(awaitingHuman ? expectedTips : 0);
       }
 
       const text = await page.locator('body').innerText();

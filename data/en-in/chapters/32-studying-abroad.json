@@ -4,7 +4,7 @@
   "title": "Studying Abroad",
   "intro": "Chapter 32: Studying Abroad",
   "edition": "india",
-  "rewriteStatus": "draft",
+  "rewriteStatus": "checked",
   "tips": [
     {
       "id": "32-1",
@@ -29,7 +29,7 @@
       "evidenceGrade": "A",
       "sources": "University Grants Commission. <https://www.ugc.gov.in/>; Association of Indian Universities. <https://www.aiu.ac.in/>; Ministry of External Affairs. <https://www.mea.gov.in/>; Ministry of Education. <https://www.education.gov.in/>",
       "caveats": "A 'pathway' college that is not accredited may not lead to a degree. Check the course, the campus and the recognition separately. Do not pay the full tuition before the admission letter is verified.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "32-2",
@@ -54,7 +54,7 @@
       "evidenceGrade": "A",
       "sources": "U.S. District Court for the District of Massachusetts. Presidents' Alliance on Higher Education and Immigration v. U.S. Department of Homeland Security, No. 1:26-cv-13799-FDS (order of 14 September 2026). <https://www.courtlistener.com/docket/74661796/presidents-alliance-on-higher-education-and-immigration-v-united-states/>; 8 CFR 214.2(f), students and exchange visitors. <https://www.ecfr.gov/current/title-8/chapter-I/subchapter-B/part-214/section-214.2>; U.S. Citizenship and Immigration Services. <https://www.uscis.gov/>",
       "caveats": "This is a court stay, not a final decision, and the position can change at short notice. If the rule is revived, an extension would have to be filed before your authorised stay expires; there is no automatic renewal. The proposal also covered J visas, with different details, so check the rule for your own visa category. Students planning a multi-year programme, a transfer or a post-study work period should not assume the current position will last. Ask the international student office before you travel or change course.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "32-3",
@@ -75,11 +75,11 @@
       "stillVerifying": false,
       "cost": "There’s no cost involved. You simply need to track your weekly hours yourself. The difficulty lies in employers often claiming “no one checks extra hours,” but you must never believe this.",
       "inPlainWords": "All four countries set clear caps on how many hours international students may work. Going over these limits breaches visa conditions, potentially leading to visa revocation, deportation, or extra scrutiny during future applications. The limits are: 20 hours per week in the U.S., 20 hours weekly for degree students and 10 hours for non-degree students in the UK, 24 hours per week in Canada, and 48 hours every two weeks in Australia. Hours worked at multiple jobs must be combined.",
-      "benefit": "F-1 students in the U.S. may work up to 20 hours per week on campus during term time, with the same 20-hour weekly cap applying to approved off-campus jobs; full-time work is allowed during holidays. This is stipulated under 8 CFR 214.2(f)(9) of U.S. federal immigration regulations. UK students pursuing degree-level courses may work 20 hours weekly during term time, while those on non-degree programs are limited to 10 hours per week; no work is permitted for part-time students at all. Self-employment is also prohibited, meaning you cannot work for yourself, nor may you serve as a professional athlete or performer. These rules are outlined in the UK immigration rules for students, specifically Student ST26.1 and ST26.5. Eligible full-time students in Canada may work up to 24 hours per week off campus, per Article 186(v) of the Immigration and Refugee Protection Regulations (IRPR). For Australian student visas, the limit is 48 hours every two weeks while classes are in session; this restriction does not apply to research-based master’s or PhD students, nor their dependents.",
+      "benefit": "F-1 students in the U.S. may work up to 20 hours per week on campus during term time, with the same 20-hour weekly cap applying to approved off-campus jobs; full-time work is allowed during holidays. This is stipulated under 8 CFR 214.2(f)(9) of U.S. federal immigration regulations. UK students pursuing degree-level courses may work 20 hours weekly during term time, while those on non-degree programs are limited to 10 hours per week; no work is permitted for part-time students at all. Self-employment is also prohibited, meaning you cannot work for yourself, nor may you serve as a professional athlete or performer. These rules are outlined in the UK immigration rules for students, specifically Student ST26.1 and ST26.5. Eligible full-time students in Canada may work up to 24 hours per week off campus, per paragraph 186(v) of the Immigration and Refugee Protection Regulations (IRPR). For Australian student visas, the limit is 48 hours every two weeks while classes are in session; this restriction does not apply to research-based master’s or PhD students, nor their dependents.",
       "evidenceGrade": "A",
       "sources": "8 CFR 214.2(f)(9). <https://www.ecfr.gov/current/title-8/chapter-I/subchapter-B/part-214/section-214.2>; UK Home Office. Immigration Rules Appendix Student (ST26.1, ST26.5). <https://www.gov.uk/guidance/immigration-rules/immigration-rules-appendix-student>; IRCC. Work off campus as an international student. <https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/work/work-off-campus.html>; Australian Government Department of Home Affairs. Student visa (subclass 500). <https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500>",
       "caveats": "In the U.S., any off-campus work must first receive official approval; you cannot begin working while your I-765 work permit application is still pending. Older Canadian work permits may list a 20-hour weekly cap, but if you still meet all eligibility criteria, current regulations permit up to 24 hours per week. The UK’s self-employment ban is broadly interpreted: taking private contracts, running an online store, or working as a freelancer all count as prohibited self-employment.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "32-4",
@@ -104,7 +104,7 @@
       "evidenceGrade": "A",
       "sources": "IRCC. Work off campus as an international student. <https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/work/work-off-campus.html>; U.S. Department of Homeland Security, Study in the States. Working in the United States. <https://studyinthestates.dhs.gov/students/work/working-in-the-united-states>; UK Home Office. Immigration Rules Appendix Student (ST26.1). <https://www.gov.uk/guidance/immigration-rules/immigration-rules-appendix-student>",
       "caveats": "If you are feeling overwhelmed by coursework and considering reducing your course load, first verify exactly how many credits constitute full-time enrollment — falling below that threshold will disqualify you from work eligibility, often even before any work permit issues arise. Students who are expelled or whose programs are terminated typically lose their eligibility status on the same day; do not wait for an official notice from the school before taking action.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "32-5",
@@ -129,7 +129,7 @@
       "evidenceGrade": "A",
       "sources": "8 CFR 265.1. <https://www.ecfr.gov/current/title-8/chapter-I/subchapter-B/part-265/section-265.1>; USCIS. AR-11, Alien's Change of Address Card. <https://www.uscis.gov/ar-11>",
       "caveats": "Reporting to USCIS is separate from updating your school records. You must also update your SEVIS record through your educational institution, which maintains your student visa status. The other three countries also mandate reporting address changes to immigration authorities or schools, though both the deadlines and procedures differ by country. Always follow the instructions posted on your local immigration authority’s website.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "32-6",
@@ -154,7 +154,7 @@
       "evidenceGrade": "A",
       "sources": "Ministry of External Affairs, travel advisories. <https://www.mea.gov.in/travel-advisories.htm>; Ministry of External Affairs, Indian missions and posts abroad. <https://www.mea.gov.in/indian-mission-abroad.htm>; Ministry of External Affairs. <https://www.mea.gov.in/>",
       "caveats": "Advisories change without notice and this page cannot stay current, so read the MEA page itself. An advisory is not a ban: it does not decide your visa, and a university may still admit you. It can matter for insurance and for a scholarship, so keep a printout with your documents. The mission cannot get your agent's fee back or overrule a foreign court. Save the mission's address and emergency number in your phone before you fly.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "32-7",
@@ -179,7 +179,7 @@
       "evidenceGrade": "A",
       "sources": "Australian Government Department of Home Affairs. Student visa (subclass 500). <https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500>",
       "caveats": "If your school arranges the insurance for you, be sure to confirm the insurer’s name, the policy’s start and end dates, and the policy number — these details must be included in your visa application. Purchasing coverage for a shorter period than needed can cause issues when you apply to renew your visa; it’s better to buy coverage that extends well beyond your graduation date.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "32-8",
@@ -204,7 +204,7 @@
       "evidenceGrade": "A",
       "sources": "UK Government. Student visa. <https://www.gov.uk/student-visa>; UK Government. Pay for UK healthcare as part of your immigration application. <https://www.gov.uk/healthcare-immigration-application>",
       "caveats": "Both the fee amounts and exchange rates may change; always refer to the two pages listed under Sources for the most current figures. Generally, students aged 18 or older enrolled in degree programmes can stay for up to five years, while those on non‑degree courses are limited to two years. Use these timeframes to estimate the total healthcare surcharge you’ll need to pay.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "32-9",
@@ -229,7 +229,7 @@
       "evidenceGrade": "A",
       "sources": "Association of Indian Universities. <https://www.aiu.ac.in/>; Ministry of External Affairs, attestation. <https://www.mea.gov.in/>; University Grants Commission. <https://www.ugc.gov.in/>",
       "caveats": "A degree from an unrecognised institution may not get equivalence. Check the AIU list and the course duration. Keep the original documents; a photocopy is not enough.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "32-10",
@@ -254,7 +254,7 @@
       "evidenceGrade": "A",
       "sources": "Association of Indian Universities, equivalence of degrees. <https://aiu.ac.in/frontpage/equivalence-of-degree/>; Association of Indian Universities, equivalence committee. <https://aiu.ac.in/governance/equivalence-commitee/>; Ministry of External Affairs. <https://www.mea.gov.in/>; University Grants Commission. <https://www.ugc.gov.in/>; National Medical Commission. <https://www.nmc.org.in/>; Bar Council of India. <https://www.bci.org.in/>; Institute of Chartered Accountants of India. <https://www.icai.org/>",
       "caveats": "Equivalence is decided case by case, on the syllabus, the duration, the mode of study and the institution's recognition in its own country, so a name that sounds familiar is not enough. A professional council's recognition is a separate question from AIU equivalence: clearing one does not give you the other. A degree awarded for a course delivered online, or by an institution that is not recognised where it operates, may get no equivalence at all, and no payment can change that. Anyone offering to certify a degree through an 'internal channel' is running a fraud.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "32-11",
@@ -279,7 +279,7 @@
       "evidenceGrade": "A",
       "sources": "8 CFR 214.2(f)(10)(ii)(E), (f)(11)(i)(B). <https://www.ecfr.gov/current/title-8/chapter-I/subchapter-B/part-214/section-214.2>; U.S. ICE SEVP, SEVIS Help Hub. F-1 Optional Practical Training (OPT). <https://studyinthestates.dhs.gov/sevis-help-hub/student-records/fm-student-employment/f-1-optional-practical-training-opt>; USCIS. Optional Practical Training (OPT) for F-1 Students. <https://www.uscis.gov/working-in-the-united-states/students-and-exchange-visitors/optional-practical-training-opt-for-f-1-students>; DHS (2026). Optional Practical Training Fees (Proposed Rule, October 8, 2026). <https://www.federalregister.gov/documents/2026/10/08/2026-20660/optional-practical-training-fees>",
       "caveats": "Regulatory rules are actively evolving. Two developments require close monitoring: First, litigation surrounding DHS regulations has created uncertainties regarding application filing windows, making it safest to submit your Form I-765 before graduation rather than relying on grace periods. Second, DHS published a proposed rulemaking on October 8, 2026 considering user fees for OPT adjudications ($70,000 for initial OPT and $30,000 for subsequent filings under regulatory consideration); always verify effective rulemaking status before submitting applications.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "32-12",
@@ -303,8 +303,8 @@
       "benefit": "Immigration, Refugees and Citizenship Canada (IRCC) mandates that international study permit applicants submit an official Provincial Attestation Letter (PAL) or Territorial Attestation Letter (TAL) issued by the province or territory where the designated learning institution is located, confirming the applicant has been allocated a permit within the annual national cap. Applications submitted without a PAL/TAL are returned without processing. Primary and secondary school students (kindergarten to grade 12) are exempt. Effective January 1, 2026, students admitted to master's and doctoral degree programs at public universities are also exempt. Students bound for Quebec submit the Quebec Acceptance Certificate (CAQ). Non-paying exchange students and students renewing permits within the same institution/level are also exempt. PALs typically remain valid until the end of the calendar year of issuance (December 31). If an initial permit application is refused, reapplying requires requesting a newly issued PAL. Starting January 22, 2025, transferring between designated learning institutions also requires securing a new PAL.",
       "evidenceGrade": "A",
       "sources": "IRCC. Provincial attestation letter or territorial attestation letter (updated Sept 2, 2026). <https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/study-permit/get-documents/provincial-attestation-letter.html>; IRCC. Study permit: Get the right documents (updated Oct 6, 2026). <https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/study-permit/get-documents.html>",
-      "caveats": "Study permit cap allocations are reset annually. Always review the latest IRCC documentation guidelines prior to submission. Before paying non-refundable tuition deposits to obtain a PAL, clarify the institution's refund policies in the event of permit refusal. For off-campus work hour limits in Canada, see Chapter 32, Rule 3.",
-      "reviewStatus": "draft"
+      "caveats": "Study permit cap allocations are reset annually. Always review the latest IRCC documentation guidelines prior to submission. Before paying non-refundable tuition deposits to obtain a PAL, clarify the institution's refund policies in the event of permit refusal. For off-campus work hour limits in Canada, see Chapter 32, Item 3.",
+      "reviewStatus": "independently-checked"
     }
   ]
 }

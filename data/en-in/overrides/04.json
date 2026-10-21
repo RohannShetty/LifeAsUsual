@@ -8,7 +8,29 @@
       "inPlainWords": "People who pay to save time tend to report higher life satisfaction. For the same amount of money, spending it on time rather than goods brings greater immediate happiness."
     },
     "4-16": {
-      "benefit": "Americans aged 15 and older watch 2.6 hours of TV daily. Their total leisure time is 5.2 hours, so TV viewing consumes half of it. These figures are from 2025."
+      "id": "4-16",
+      "chapter": 4,
+      "tip": 16,
+      "title": "Avoiding TV and scrolling news: view information at set times instead",
+      "tags": {
+        "money": "Free",
+        "time": "Quick",
+        "willpower": "Some",
+        "benefit": "Large",
+        "scope": "Time and energy",
+        "audience": []
+      },
+      "costScore": 1,
+      "valueTier": "High",
+      "disputed": false,
+      "stillVerifying": false,
+      "cost": "No monetary cost. The real challenge is breaking the habit of turning on the TV at random times; you might also miss some breaking news.",
+      "inPlainWords": "Americans aged 15 and older watch 2.6 hours of TV per day, which accounts for half of all their leisure time. Switching to viewing information at scheduled times gives that half of your leisure time back.",
+      "benefit": "Americans aged 15 and older watch 2.6 hours of TV daily. Their total leisure time is 5.2 hours, so TV viewing consumes half of it. These figures are from 2025.",
+      "evidenceGrade": "C",
+      "sources": "U.S. Bureau of Labor Statistics (2026). American Time Use Survey — 2025 Results. <https://www.bls.gov/news.release/atus.nr0.htm>",
+      "caveats": "Only aggregate statistics are available. No studies have examined how the time saved by cutting back on TV and news viewing is actually used. The practice of viewing content at set times is based on the author’s personal experience.",
+      "reviewStatus": "draft"
     },
     "4-15": {
       "inPlainWords": "The figure that matters is already on your phone: screen time, broken down by app. No Indian regulator publishes an average daily short-video figure, so this entry does not quote one — but the arithmetic needs no survey. Cutting one hour a day frees 365 hours a year, which is nine 40-hour working weeks. Turning off notifications, setting a daily limit in the app, or deleting the app for a week are each a few minutes of work.",

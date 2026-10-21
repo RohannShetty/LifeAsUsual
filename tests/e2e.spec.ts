@@ -40,9 +40,11 @@ test.describe('How To Live Better - Comprehensive E2E Tests', () => {
     const celebration = page.locator('#chapter-celebration');
     await expect(celebration).toHaveCount(0);
 
-    // Confirm disclaimer banner exists
-    const disclaimer = page.locator('#india-disclaimer');
-    await expect(disclaimer).toBeVisible();
+    // Confirm the India rewrite notice is present and status-aware
+    const notice = page.locator('#india-rewrite-notice');
+    await expect(notice).toBeVisible();
+    await expect(notice).toHaveAttribute('data-rewrite-status', 'checked');
+    await expect(notice).toContainText('India');
 
     // Zero horizontal scroll on reader page
     const hasHorizontalOverflow = await page.evaluate(() => {
@@ -155,30 +157,26 @@ test.describe('How To Live Better - Comprehensive E2E Tests', () => {
     expect(href).toContain('time=Quick');
   });
 
-  test('10. INR reference renders, hides and persists', async ({ page }) => {
+  test('10. INR reference toggle stays controllable on rewritten chapters', async ({ page }) => {
+    // India-rewritten tips state prices in rupees directly, so the yuan-to-rupee badge
+    // generator finds nothing to annotate; the preference must still work and persist.
     await page.goto('/chapters/11-red-lines-for-developers/');
-    const badge = page.locator('.inr-ref').first();
-    await expect(badge).toBeVisible();
-    expect(await badge.textContent()).toContain('₹');
+    await expect(page.locator('.inr-ref')).toHaveCount(0);
 
     await page.locator('#open-settings-btn:visible, #desktop-settings-btn:visible').first().click();
     await page.locator('#inr-toggle').uncheck();
     await expect(page.locator('html')).toHaveAttribute('data-show-inr', 'false');
-    await expect(badge).toBeHidden();
 
     await page.locator('#inr-toggle').check();
-    await expect(badge).toBeVisible();
+    await expect(page.locator('html')).toHaveAttribute('data-show-inr', 'true');
   });
 
-  test('11. Every tip has an India application note', async ({ page }) => {
+  test('11. Rewritten tips hide the source-edition India notes and show the checked badge', async ({ page }) => {
     await page.goto('/chapters/18-is-having-kids-worth-it/');
-    await expect(page.locator('.india-application')).toHaveCount(7);
-    await expect(page.locator('.badge-source').first()).toBeVisible();
-
-    const first = page.locator('.india-application').first();
-    await first.locator('summary').click();
-    await expect(first).toHaveAttribute('open', '');
-    await expect(first).toContainText('dibao');
+    await expect(page.locator('.tip-card')).toHaveCount(7);
+    await expect(page.locator('.india-application')).toHaveCount(0);
+    await expect(page.locator('.badge-source')).toHaveCount(0);
+    await expect(page.locator('.badge-checked')).toHaveCount(7);
   });
 
   test('9. Marking a tip read persists in localStorage', async ({ page }) => {

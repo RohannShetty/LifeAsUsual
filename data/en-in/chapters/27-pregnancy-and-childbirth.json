@@ -4,7 +4,7 @@
   "title": "Pregnancy and Childbirth",
   "intro": "Chapter 27: Pregnancy and Childbirth",
   "edition": "india",
-  "rewriteStatus": "draft",
+  "rewriteStatus": "checked",
   "tips": [
     {
       "id": "27-1",
@@ -31,7 +31,7 @@
       "evidenceGrade": "A",
       "sources": "De-Regil LM, Peña-Rosas JP, Fernández-Gaxiola AC, Rayco-Solon P (2015). Effects and safety of periconceptional oral folate supplementation for preventing birth defects. Cochrane Database of Systematic Reviews, (12), CD007950. <https://doi.org/10.1002/14651858.CD007950.pub3>; National Health Mission, Ministry of Health and Family Welfare. <https://nhm.gov.in/>",
       "caveats": "The key point is to start taking folic acid *before* pregnancy. A fetus’s neural tube closes within 28 days of conception; by the time a pregnancy is detected, most of this window has already passed. Therefore, if you’re planning to conceive, begin supplementation three months in advance. The same review found no clear evidence that folic acid prevents cleft lip and palate, congenital heart disease, or miscarriage — so don’t expect it to address these issues.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "27-2",
@@ -58,7 +58,7 @@
       "evidenceGrade": "A",
       "sources": "National Health Mission, maternal health. <https://nhm.gov.in/>; Ministry of Health and Family Welfare. <https://www.mohfw.gov.in/>; National Health Authority, PM-JAY. <https://nha.gov.in/>",
       "caveats": "Carry the MCP card to every visit and keep it after the delivery. A private hospital may not accept a public-scheme card, so ask before you book. Do not skip a visit because you feel well.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "27-3",
@@ -85,7 +85,7 @@
       "evidenceGrade": "A",
       "sources": "National AIDS Control Organisation. <https://naco.gov.in/>; Ministry of Health and Family Welfare. <https://www.mohfw.gov.in/>; National Health Mission. <https://nhm.gov.in/>",
       "caveats": "Show a test done at a private laboratory to the antenatal clinic. A negative test early in pregnancy may need a repeat if there is a later risk. Do not delay the first visit in order to have the test.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "27-4",
@@ -108,11 +108,11 @@
       "stillVerifying": false,
       "cost": "There’s no cost at all; in fact, it saves money on cigarettes and alcohol. The real challenge is getting everyone living in the same house to quit alongside the pregnant woman.",
       "inPlainWords": "Smoking during pregnancy raises the chances of premature birth, a baby being born underweight, and cleft lip or palate. It also doubles the risk of abnormal bleeding during pregnancy and childbirth, and increases the risk of sudden infant death syndrome. Secondhand smoke from anyone smoking indoors counts just the same. It is never too late to quit, no matter when you start.",
-      "benefit": "According to the U.S. Centers for Disease Control and Prevention, smoking during pregnancy can result in babies being “born at full term but still underweight” and “more likely to be born prematurely.” It “doubles the risk of abnormal bleeding during pregnancy and childbirth,” raises the risk of birth defects such as cleft lip and palate, and “damages the developing lungs and brain of the fetus, with effects lasting into childhood.” Babies born to mothers who smoke during pregnancy, as well as infants exposed to smoke after birth, face a higher risk of sudden infant death syndrome. Official guidance states that “it is best to quit smoking before getting pregnant, but quitting while already pregnant still provides benefits,” and “it is never too late to quit.”",
+      "benefit": "According to the U.S. Centers for Disease Control and Prevention, smoking during pregnancy can mean a baby is born at full term but still underweight, and makes premature birth more likely. It roughly doubles the risk of abnormal bleeding during pregnancy and childbirth, raises the risk of birth defects such as cleft lip and palate, and damages the developing lungs and brain of the fetus, with effects that last into childhood. Babies born to mothers who smoke during pregnancy, and infants exposed to smoke after birth, face a higher risk of sudden infant death syndrome. The CDC’s guidance is that quitting before pregnancy is best, that quitting during pregnancy still helps, and that it is never too late to quit.",
       "evidenceGrade": "A",
       "sources": "Centers for Disease Control and Prevention. Smoking During Pregnancy. <https://www.cdc.gov/tobacco/campaign/tips/diseases/pregnancy.html>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>",
       "caveats": "Secondhand smoke from anyone smoking indoors is just as harmful to the fetus as direct smoking. Therefore, this rule applies to the whole household, not just the pregnant woman. The same principle holds true for alcohol: there is no known safe level of alcohol consumption during pregnancy, so the safest approach is to avoid it entirely. The impact of smoking and drinking on the health of adults themselves is covered in Section 2.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "27-5",
@@ -139,7 +139,7 @@
       "evidenceGrade": "A",
       "sources": "US Preventive Services Task Force (2021). Aspirin Use to Prevent Preeclampsia and Related Morbidity and Mortality: Preventive Medication. <https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/low-dose-aspirin-use-for-the-prevention-of-morbidity-and-mortality-from-preeclampsia-preventive-medication>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>",
       "caveats": "The groups considered high risk include women who had preeclampsia in a prior pregnancy, those carrying twins or multiples, women with chronic hypertension, women with type 1 or type 2 diabetes prior to pregnancy, women with kidney disease, and women with autoimmune diseases such as systemic lupus erythematosus or antiphospholipid syndrome. Women not in these groups should not take aspirin on their own. This medication requires a doctor’s prescription; be sure to share your full medical history during prenatal checkups so your doctor can make an appropriate assessment.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "27-6",
@@ -166,7 +166,7 @@
       "evidenceGrade": "A",
       "sources": "US Preventive Services Task Force (2021). Gestational Diabetes: Screening. <https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/gestational-diabetes-screening>; National Health Mission, Ministry of Health and Family Welfare. <https://nhm.gov.in/>",
       "caveats": "Most women diagnosed with gestational diabetes can control their blood sugar through diet and exercise alone; only a minority need insulin injections. Don’t skip this test out of fear of being told you need insulin. After giving birth, you must get another blood sugar test — women who’ve had gestational diabetes face a significantly higher risk of developing type 2 diabetes later on.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "27-7",
@@ -193,7 +193,7 @@
       "evidenceGrade": "A",
       "sources": "Centers for Disease Control and Prevention. Hear Her — Urgent Maternal Warning Signs. <https://www.cdc.gov/hearher/maternal-warning-signs/index.html>; World Health Organization. Maternal mortality fact sheet. <https://www.who.int/news-room/fact-sheets/detail/maternal-mortality>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>",
       "caveats": "This checklist serves to clearly distinguish between situations where you can wait a little longer and those that demand immediate medical attention. Headaches paired with blurred vision and upper abdominal pain are typical signs of preeclampsia, a form of pregnancy-related hypertension. Swelling and pain in one lower leg often indicates deep vein thrombosis (see Section 13). According to the World Health Organization, severe postpartum hemorrhage can be fatal to a healthy woman within just a few hours. If any of these symptoms appear, go to the hospital right away — do not delay by waiting at home overnight.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "27-8",
@@ -220,7 +220,7 @@
       "evidenceGrade": "B",
       "sources": "Ministry of Health and Family Welfare. <https://www.mohfw.gov.in/>; National Health Mission. <https://nhm.gov.in/>; Ministry of Home Affairs, Emergency Response Support System. <https://www.mha.gov.in/>",
       "caveats": "Do not take a bath or a shower after the waters break. Do not wait for contractions. If the cord is visible, do not push it back in: lie down and call.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "27-9",
@@ -245,9 +245,9 @@
       "inPlainWords": "An epidural is the most effective pain relief in labour, and it does not increase the chance of a caesarean section; the claim that it causes lasting back pain is not supported by the evidence. In India it is offered at many private hospitals and at some government medical colleges, but not everywhere, because an anaesthetist has to be available. Ask at an antenatal visit rather than in the middle of a contraction, and put it in your birth plan. There is no national price: the hospital sets the charge and often bills it separately.",
       "benefit": "An epidural blocks the pain of labour while the mother stays awake and can push. The evidence does not show that it raises the caesarean rate, although it can lengthen the second stage a little. Availability depends on the anaesthetist and the hospital, so asking early is the practical step. If the hospital does not offer it, ask what else it can give.",
       "evidenceGrade": "A",
-      "sources": "Ministry of Health and Family Welfare, maternal health. <https://www.mohfw.gov.in/>; National Health Mission. <https://nhm.gov.in/>",
+      "sources": "Anim-Somuah M, Smyth RM, Cyna AM, Cuthbert A (2018). Epidural versus non-epidural or no analgesia for pain management in labour. Cochrane Database of Systematic Reviews, 5, CD000331. <https://doi.org/10.1002/14651858.CD000331.pub4>; Ministry of Health and Family Welfare, maternal health. <https://www.mohfw.gov.in/>; National Health Mission. <https://nhm.gov.in/>",
       "caveats": "An epidural is not suitable for every woman: a clotting problem, an infection at the site or a low platelet count may rule it out. It is placed by an anaesthetist with monitoring. Do not accept a bare refusal without asking the reason.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "27-10",
@@ -274,7 +274,7 @@
       "evidenceGrade": "A",
       "sources": "World Health Organization (2015). WHO Statement on Caesarean Section Rates (WHO/RHR/15.02). <https://www.who.int/publications/i/item/WHO-RHR-15.02>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>",
       "caveats": "This guidance does not oppose C-sections. When medically warranted, they are life-saving procedures and should be performed without hesitation. What it discourages is undergoing a C-section when there is no medical need—such as to avoid labor pain, to pick an auspicious date, or to influence a child’s future age for school enrollment. The trade-offs are significant: C-sections are major abdominal surgeries with slower recovery times, and they increase risks of placenta previa, placenta accreta, and uterine rupture in subsequent pregnancies—factors that may affect a woman’s decision to have more children.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "27-11",
@@ -301,7 +301,7 @@
       "evidenceGrade": "A",
       "sources": "Employees' State Insurance Corporation. <https://esic.gov.in/>; National Health Authority, PM-JAY. <https://nha.gov.in/>; Ministry of Women and Child Development, PMMVY. <https://wcd.gov.in/>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>",
       "caveats": "A policy bought after conception may exclude the pregnancy. A cashless claim needs pre-authorisation. Keep the antenatal records and the scheme card.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "27-12",
@@ -325,11 +325,11 @@
       "stillVerifying": false,
       "cost": "The registration fee is small; a late fee applies after 21 days.",
       "inPlainWords": "The hospital reports the birth to the local registrar under the Registration of Births and Deaths Act, 1969, and the family can apply for the birth certificate. Register within 21 days to avoid a late fee. Decide the baby's name before the registration if the state requires it. The birth certificate is needed for the Aadhaar, the school admission and the passport.",
-      "benefit": "The 1969 Act requires the birth to be registered within 21 days; a late registration needs the registrar's permission and a fee. The hospital issues a birth report, and the municipal registrar issues the certificate. A name can be added later in some states. The certificate is the basis for the Aadhaar enrolment and the school record.",
+      "benefit": "The Registration of Births and Deaths Act, 1969 requires every birth to be registered, and the model rules made under it (rule 5(3)) set the 21-day window that most States follow. A later registration needs the registrar's permission and the late fee the Act sets (₹2 if registered within 30 days, ₹5 after that). The hospital issues a birth report, and the municipal registrar issues the certificate. A name can be added later in some states. The certificate is the basis for the Aadhaar enrolment and the school record.",
       "evidenceGrade": "A",
       "sources": "Registration of Births and Deaths Act, 1969. <https://www.indiacode.nic.in/>; Ministry of Home Affairs, civil registration. <https://crsorgi.gov.in/>; Unique Identification Authority of India. <https://uidai.gov.in/>",
       "caveats": "Check the spelling of the name and the parents' details before you leave the registrar. A correction needs an affidavit and a fee. Do not pay an agent to 'fast-track' a birth certificate.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "27-13",
@@ -357,7 +357,7 @@
       "evidenceGrade": "A",
       "sources": "Ministry of Health and Family Welfare, child health. <https://www.mohfw.gov.in/>; National Health Mission, Rashtriya Bal Swasthya Karyakram. <https://nhm.gov.in/>",
       "caveats": "Not done is not the same as normal. If the baby was not screened and there is poor feeding, jaundice or a delayed milestone, see a paediatrician. Keep the screening card with the immunisation record.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "27-14",
@@ -385,7 +385,7 @@
       "evidenceGrade": "A",
       "sources": "National Health Authority, PM-JAY. <https://nha.gov.in/>; Employees' State Insurance Corporation. <https://esic.gov.in/>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>",
       "caveats": "The enrolment process differs by state. A private policy may have a waiting period for a newborn. Keep the birth certificate and the mother's card.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "27-15",
@@ -409,11 +409,11 @@
       "stillVerifying": false,
       "cost": "The fee is small; a late fee applies after 21 days.",
       "inPlainWords": "A birth is registered with the local municipal registrar under the Registration of Births and Deaths Act, 1969, not with the police. The hospital usually reports the birth; the family applies for the certificate. If the birth is at home, the family must report it to the registrar. Register within 21 days to avoid a late fee and a longer process.",
-      "benefit": "The 1969 Act requires registration within 21 days. The hospital's birth report and the parents' identity proof are the main documents. A late registration needs the registrar's permission and a fee. The certificate is required for the Aadhaar, the school admission and the passport. A police station has no role in a normal birth registration.",
+      "benefit": "The Registration of Births and Deaths Act, 1969 requires every birth to be registered, and the model rules made under it (rule 5(3)) set the 21-day window that most States follow. A later registration needs the registrar's permission and the late fee the Act sets (₹2 if registered within 30 days, ₹5 after that). The certificate is required for the Aadhaar, the school admission and the passport. A police station has no role in a normal birth registration.",
       "evidenceGrade": "A",
       "sources": "Registration of Births and Deaths Act, 1969. <https://www.indiacode.nic.in/>; Ministry of Home Affairs, civil registration. <https://crsorgi.gov.in/>; Unique Identification Authority of India. <https://uidai.gov.in/>",
       "caveats": "A home birth needs a witness and a medical certificate where available. Check the name spelling. A correction needs an affidavit.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "27-16",
@@ -440,7 +440,7 @@
       "evidenceGrade": "A",
       "sources": "National Health Mission, Home Based Newborn Care. <https://nhm.gov.in/>; Ministry of Health and Family Welfare, Tele-MANAS. <https://www.mohfw.gov.in/>; National Health Authority. <https://nha.gov.in/>",
       "caveats": "Do not assume that feeling low is normal and will pass. Do not stop the iron tablets without asking. Take the MCP card and the discharge summary to the visit.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "27-17",
@@ -467,7 +467,7 @@
       "evidenceGrade": "B",
       "sources": "Centers for Disease Control and Prevention. Toxoplasmosis: Risk Factors. <https://www.cdc.gov/toxoplasmosis/risk-factors/index.html>; Centers for Disease Control and Prevention. Preventing Toxoplasmosis. <https://www.cdc.gov/toxoplasmosis/prevention/index.html>; NHS. Toxoplasmosis. <https://www.nhs.uk/conditions/toxoplasmosis/>; Cook AJ, Gilbert RE, Buffolano W, et al. (2000). Sources of toxoplasma infection in pregnant women: European multicentre case-control study. BMJ, 321(7254), 142-147. <https://doi.org/10.1136/bmj.321.7254.142>; Dunn D, Wallon M, Peyron F, Petersen E, Peckham C, Gilbert R (1999). Mother-to-child transmission of toxoplasmosis: risk estimates for clinical counselling. Lancet, 353(9167), 1829-1833. <https://doi.org/10.1016/s0140-6736(98)08220-8>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>",
       "caveats": "Cats shed oocysts only for a brief 1- to 3-week window following their initial infection; adult indoor cats previously exposed rarely shed again. An indoor cat fed commercial pet food has virtually zero risk of contracting or shedding the parasite. Conversely, households without pets frequently contract toxoplasmosis from raw or undercooked meat, unwashed raw vegetables, contaminated garden soil, or untreated water. Essential preventative behaviors: cook whole cuts of meat and ground meats to safe internal temperatures; wash cutting boards, knives, and hands thoroughly after handling raw meat; rinse all fruits and vegetables under running water; wear gloves when gardening or handling soil, followed by handwashing. The NHS also cautions against consuming dry-cured meats (e.g., salami, Parma ham) unless cooked, and avoiding unpasteurized goat milk. Consult your obstetrician regarding toxoplasma antibody screening (TORCH panel) during prenatal care. Benefit magnitude is categorized as Moderate based on preserving family companion animals while preventing severe fetal neurological injury. Primary beneficiaries are yourself and your child.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "27-18",
@@ -493,8 +493,8 @@
       "benefit": "The World Health Organization (WHO) 2022 influenza position paper highlights that pregnant women have an odds ratio of 6.8 (95% CI 6.0–7.7) for flu-related hospitalization compared to non-pregnant peers. A randomized controlled trial in Bangladesh enrolled 340 pregnant women assigned to inactivated influenza vaccine or pneumococcal control, followed through 24 weeks postpartum: vaccine efficacy against laboratory-confirmed influenza in infants was 63% (95% CI 5%–85%), while maternal febrile respiratory illness was reduced by 36% (95% CI 4%–57%). In double-blind placebo-controlled trials in South Africa, maternal vaccination reduced confirmed influenza by 50.4% in mothers and 48.8% in infants. A meta-analysis pooling four trials and three observational cohorts demonstrated that maternal vaccination reduced infant laboratory-confirmed influenza in the first 6 months of life by 48% (95% CI 33%–59%) and infant influenza hospitalizations by 72% (95% CI 39%–87%). A multi-country retrospective study across four nations (2010–2016) demonstrated a 40% reduction (95% CI 12%–59%) in maternal laboratory-confirmed influenza hospitalizations. In terms of safety, a systematic review of 40 studies found no excess risk of stillbirth (aOR 0.84, 95% CI 0.65–1.08) or congenital malformations (aOR 1.03, 95% CI 0.99–1.07), while preterm birth was reduced by 13% (aOR 0.87, 95% CI 0.78–0.96). A US Vaccine Safety Datalink study of three influenza seasons (2012–2015) found no association between vaccination in the preceding 28 days and spontaneous abortion (aOR 0.9, 95% CI 0.6–1.5).",
       "evidenceGrade": "A",
       "sources": "World Health Organization (2022). Vaccines against influenza: WHO position paper – May 2022. Weekly Epidemiological Record, 97(19), 185-208. <https://iris.who.int/server/api/core/bitstreams/420b8e49-9f16-461d-a5d8-263069778432/content>; Zaman K, Roy E, Arifeen SE, et al. (2008). Effectiveness of maternal influenza immunization in mothers and infants. New England Journal of Medicine, 359(15), 1555-1564. <https://doi.org/10.1056/NEJMoa0708630>; Madhi SA, Cutland CL, Kuwanda L, et al. (2014). Influenza vaccination of pregnant women and protection of their infants. New England Journal of Medicine, 371(10), 918-931. <https://doi.org/10.1056/NEJMoa1401480>; Nunes MC, Madhi SA (2018). Influenza vaccination during pregnancy for prevention of influenza confirmed illness in the infants: A systematic review and meta-analysis. Human Vaccines & Immunotherapeutics, 14(3), 758-766. <https://doi.org/10.1080/21645515.2017.1345385>; Jarvis JR, Dorey RB, Warricker FDM, Alwan NA, Jones CE (2020). The effectiveness of influenza vaccination in pregnancy in relation to child health outcomes: Systematic review and meta-analysis. Vaccine, 38(7), 1601-1613. <https://doi.org/10.1016/j.vaccine.2019.12.056>; Thompson MG, Kwong JC, Regan AK, et al. (2019). Influenza Vaccine Effectiveness in Preventing Influenza-associated Hospitalizations During Pregnancy. Clinical Infectious Diseases, 68(9), 1444-1453. <https://doi.org/10.1093/cid/ciy737>; Giles ML, Krishnaswamy S, Macartney K, Cheng A (2019). The safety of inactivated influenza vaccines in pregnancy for birth outcomes: a systematic review. Human Vaccines & Immunotherapeutics, 15(3), 687-699. <https://doi.org/10.1080/21645515.2018.1540807>; Donahue JG, Kieke BA, King JP, et al. (2019). Inactivated influenza vaccine and spontaneous abortion in the Vaccine Safety Datalink in 2012-13, 2013-14, and 2014-15. Vaccine, 37(44), 6673-6681. <https://doi.org/10.1016/j.vaccine.2019.09.035>; Donahue JG, Kieke BA, King JP, et al. (2017). Association of spontaneous abortion with receipt of inactivated influenza vaccine containing H1N1pdm09 in 2010-11 and 2011-12. Vaccine, 35(40), 5314-5322. <https://doi.org/10.1016/j.vaccine.2017.06.069>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>",
-      "caveats": "Controversy: A 2017 US study reported an association between first-trimester flu vaccination and spontaneous abortion within 28 days among women also vaccinated with pH1N1 in the prior season (aOR 2.0, 95% CI 1.1–3.6); however, the authors noted potential confounding, and subsequent larger investigations across three subsequent seasons failed to replicate this association. Live attenuated influenza vaccine (LAIV nasal spray) is strictly contraindicated in pregnancy; only injectable inactivated influenza vaccines should be administered. Because infants younger than 6 months cannot receive flu vaccination directly, maternal vaccination constitutes their primary antibody defense against winter influenza. For adult routine flu vaccination evidence, see Chapter 1, Rule 20.",
-      "reviewStatus": "draft"
+      "caveats": "Controversy: A 2017 US study reported an association between first-trimester flu vaccination and spontaneous abortion within 28 days among women also vaccinated with pH1N1 in the prior season (aOR 2.0, 95% CI 1.1–3.6); however, the authors noted potential confounding, and subsequent larger investigations across three subsequent seasons failed to replicate this association. Live attenuated influenza vaccine (LAIV nasal spray) is strictly contraindicated in pregnancy; only injectable inactivated influenza vaccines should be administered. Because infants younger than 6 months cannot receive flu vaccination directly, maternal vaccination constitutes their primary antibody defense against winter influenza. For adult routine flu vaccination evidence, see Chapter 1, Item 20.",
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "27-19",
@@ -521,7 +521,7 @@
       "evidenceGrade": "B",
       "sources": "Cronin RS, Li M, Thompson JMD, et al. (2019). An Individual Participant Data Meta-analysis of Maternal Going-to-Sleep Position, Interactions with Fetal Vulnerability, and the Risk of Late Stillbirth. EClinicalMedicine, 10, 49-57. <https://doi.org/10.1016/j.eclinm.2019.03.014>; Silver RM, Hunter S, Reddy UM, et al. (2019). Prospective Evaluation of Maternal Sleep Position Through 30 Weeks of Gestation and Adverse Pregnancy Outcomes. Obstetrics and Gynecology, 134(4), 667-676. <https://doi.org/10.1097/AOG.0000000000003458>; NHS. Stillbirth. <https://www.nhs.uk/conditions/stillbirth/>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>",
       "caveats": "Controversy: Findings rely on retrospective recall of going-to-sleep position by mothers after stillbirth occurred, introducing potential recall bias. A prospective US cohort of 8,706 nulliparous women evaluated sleep position up to 30 weeks of gestation and found no association between non-left or supine sleeping and composite adverse pregnancy outcomes (aOR 0.99, 95% CI 0.89–1.11); however, the prospective study did not capture sleep position during the third trimester beyond 30 weeks. Because side sleeping has zero cost and carries no clinical risk, major health agencies endorse side-sleeping as prudent precautionary care. High-income country late stillbirth rates range between 1.3 and 8.8 per 1,000 births.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "27-20",
@@ -547,8 +547,8 @@
       "benefit": "The UK NHS states pregnancy is possible 3 weeks after childbirth. A meta-analysis of 67 studies evaluating birth spacing found that interpregnancy intervals under 6 months (measured from prior birth to next conception) were associated with a 40% increased risk of preterm birth (OR 1.40, 95% CI 1.24–1.58), a 61% increase in low birth weight (OR 1.61, 95% CI 1.39–1.86), and a 26% increase in small-for-gestational-age infants (OR 1.26, 95% CI 1.18–1.33) compared to intervals of 18–23 months. A Canadian cohort study of 148,000 pregnancies comparing 6-month vs. 18-month intervals showed that among mothers aged 35 and older, maternal severe morbidity or mortality was 0.62% vs. 0.26% (adjusted risk ratio aRR 2.39, 95% CI 2.03–2.80); for infants of mothers aged 20–34, adverse perinatal outcomes were 2.0% vs. 1.4% (aRR 1.42, 95% CI 1.36–1.47). The World Health Organization recommends a minimum interpregnancy interval of 24 months (and at least 6 months following a miscarriage or induced abortion) to allow maternal physiological and micronutrient replenishment.",
       "evidenceGrade": "B",
       "sources": "NHS. Sex and contraception after birth. <https://www.nhs.uk/baby/support-and-services/sex-and-contraception-after-birth/>; NHS. Natural family planning. <https://www.nhs.uk/contraception/methods-of-contraception/natural-family-planning/>; Conde-Agudelo A, Rosas-Bermúdez A, Kafury-Goeta AC (2006). Birth spacing and risk of adverse perinatal outcomes: a meta-analysis. JAMA, 295(15), 1809. <https://doi.org/10.1001/jama.295.15.1809>; Schummers L, Hutcheon JA, Hernandez-Diaz S, et al. (2018). Association of Short Interpregnancy Interval With Pregnancy Outcomes According to Maternal Age. JAMA Internal Medicine, 178(12), 1661. <https://doi.org/10.1001/jamainternmed.2018.4696>; World Health Organization (2007). Report of a WHO Technical Consultation on Birth Spacing (WHO/RHR/07.1). <https://www.who.int/publications/i/item/WHO-RHR-07.1>; Ball SJ, Pereira G, Jacoby P, de Klerk N, Stanley FJ (2014). Re-evaluation of link between interpregnancy interval and adverse birth outcomes. BMJ, 349, g4333. <https://doi.org/10.1136/bmj.g4333>; National Health Mission, Ministry of Health and Family Welfare. <https://nhm.gov.in/>",
-      "caveats": "Controversy: Optimal intervals remain debated between 18 and 24 months, with NHS recommending at least 12 months. An Australian within-mother matched sibling cohort study suggested that part of the short-interval risk may stem from unmeasured maternal socioeconomic factors (within-mother OR 1.07 for preterm birth). However, the necessity of proactive contraception itself is uncontroversial. Barrier condoms and progestin-only implants can be initiated immediately postpartum, while combined oral contraceptives should generally wait until at least 6 weeks postpartum if breastfeeding. Discuss contraceptive selection during the routine 42-day postpartum examination (Chapter 27, Rule 16).",
-      "reviewStatus": "draft"
+      "caveats": "Controversy: Optimal intervals remain debated between 18 and 24 months, with NHS recommending at least 12 months. An Australian within-mother matched sibling cohort study suggested that part of the short-interval risk may stem from unmeasured maternal socioeconomic factors (within-mother OR 1.07 for preterm birth). However, the necessity of proactive contraception itself is uncontroversial. Barrier condoms and progestin-only implants can be initiated immediately postpartum, while combined oral contraceptives should generally wait until at least 6 weeks postpartum if breastfeeding. Discuss contraceptive selection during the routine 42-day postpartum examination (Chapter 27, Item 16).",
+      "reviewStatus": "independently-checked"
     }
   ]
 }

@@ -4,7 +4,7 @@
   "title": "Renting and Buying Housing",
   "intro": "Chapter 15: Renting and Buying Housing",
   "edition": "india",
-  "rewriteStatus": "draft",
+  "rewriteStatus": "checked",
   "tips": [
     {
       "id": "15-1",
@@ -29,7 +29,7 @@
       "evidenceGrade": "A",
       "sources": "Model Tenancy Act, 2021. <https://mohua.gov.in/>; National Legal Services Authority. <https://nalsa.gov.in/>; Transfer of Property Act, 1882. <https://www.indiacode.nic.in/>",
       "caveats": "On the day you move out, take photos and videos with the landlord present and record the water, electricity and gas meter readings. If the deposit is withheld without cause, send a written demand; in a state with a Rent Authority under the Model Tenancy Act, complain there, and elsewhere use the civil court or free legal aid through the District Legal Services Authority (NALSA, 15100). For a small amount, a legal notice is often enough.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "15-2",
@@ -54,7 +54,7 @@
       "evidenceGrade": "A",
       "sources": "Model Tenancy Act, 2021. <https://mohua.gov.in/>; Bharatiya Nyaya Sanhita, 2023. <https://www.indiacode.nic.in/>; National Legal Services Authority. <https://nalsa.gov.in/>",
       "caveats": "Calling 112 gives you an official record of the date and time; the police may treat the dispute as civil, but the complaint still exists. Photograph the changed lock, the disconnected meter and the removed belongings, and keep the lease, the rent receipts and the bank statements. Tell the Rent Authority where one exists, and the municipal water or electricity authority if the supply itself was cut.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "15-3",
@@ -79,7 +79,7 @@
       "evidenceGrade": "A",
       "sources": "Model Tenancy Act, 2021. <https://mohua.gov.in/>; Transfer of Property Act, 1882. <https://www.indiacode.nic.in/>; National Legal Services Authority. <https://nalsa.gov.in/>",
       "caveats": "If the payee is not the landlord, ask for a written authorisation signed by the landlord; a chat message from an unknown number is not enough. Match the name to the sale deed where you can. Keep every receipt, because it is the only proof that the rent was paid.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "15-4",
@@ -104,7 +104,7 @@
       "evidenceGrade": "A",
       "sources": "Ministry of Housing and Urban Affairs. <https://mohua.gov.in/>; Reserve Bank of India. <https://www.rbi.org.in/>; Ministry of Corporate Affairs, company search. <https://www.mca.gov.in/>",
       "caveats": "Ask for the landlord's name on the sale deed, the company's CIN and registered address, and the clause that says who refunds the deposit and when. If a “rent loan” is part of the deal, read the loan agreement: the lender's claim is against you, not the rental company. Avoid any arrangement where you pay a year upfront and repay a lender monthly.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "15-5",
@@ -129,7 +129,7 @@
       "evidenceGrade": "A",
       "sources": "Transfer of Property Act, 1882 (section 105; section 106, notice to quit). <https://www.indiacode.nic.in/>; Registration Act, 1908 (section 17(1)(d)). <https://www.indiacode.nic.in/>; Model Tenancy Act, 2021. <https://mohua.gov.in/>",
       "caveats": "This applies only if you are lawfully in possession; keep the lease, the rent receipts and proof of the move-in date. If a buyer asks you to leave before the term ends, do not hand over possession on a phone call: ask for a written notice under section 106 of the Transfer of Property Act or the state rent Act, and get advice from the District Legal Services Authority (NALSA, 15100) if you need it.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "15-6",
@@ -154,7 +154,7 @@
       "evidenceGrade": "A",
       "sources": "Registration Act, 1908 (section 17, documents of which registration is compulsory). <https://www.indiacode.nic.in/>; Transfer of Property Act, 1882 (sections 54 and 55, sale and the duties of buyer and seller). <https://www.indiacode.nic.in/>; National Legal Services Authority, free legal aid. <https://nalsa.gov.in/>",
       "caveats": "The title and encumbrance records sit with the sub-registrar’s office where the deed was registered, and a search of the registered documents is open to anyone on payment of the prescribed fee. At signing, the owner named in the deed should be present; if not, insist on a written authority and check it against the deed. If you are renting from a tenant, check that the lease allows subletting and get the owner’s written consent — a sub-lease without consent can be terminated. Where the flat is in a co-operative society, ask for the society’s no-objection certificate and its share certificate.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "15-7",
@@ -179,7 +179,7 @@
       "evidenceGrade": "A",
       "sources": "Real Estate (Regulation and Development) Act, 2016. <https://www.indiacode.nic.in/>; Transfer of Property Act, 1882. <https://www.indiacode.nic.in/>; Registration Act, 1908. <https://www.indiacode.nic.in/>; Reserve Bank of India. <https://www.rbi.org.in/>",
       "caveats": "An agent's 'token' is not a legal title. Do not pay before the title search and the encumbrance certificate. A power of attorney sale needs a registered power of attorney.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "15-8",
@@ -204,7 +204,7 @@
       "evidenceGrade": "A",
       "sources": "Bureau of Indian Standards, National Building Code of India, 2016 (Part 4: fire and life safety). <https://www.bis.gov.in/>; Delhi Building Bye-Laws, 2016, an example of the state and municipal bye-laws that fix room sizes and occupancy — the bye-laws of your own city apply. <https://delhi.gov.in/>; National Legal Services Authority, free legal aid. <https://nalsa.gov.in/>",
       "caveats": "When an unauthorised subdivision is taken up by the municipality, tenants bear the cost of moving out and often cannot recover the security deposit or the prepaid rent. Safety matters more than the rent: makeshift walls block emergency exits, and overcrowding a single flat overloads the wiring. At the viewing, check three things — whether walls were added after the plan was sanctioned, whether the room has a window that opens to the outside, and whether the electrical connection and meter can carry the number of people who will live there. Get the list of what is let, the fixtures and the meter reading written into the lease, and keep a dated video of the flat as it was handed over.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "15-9",
@@ -229,7 +229,7 @@
       "evidenceGrade": "A",
       "sources": "Registration Act, 1908. <https://www.indiacode.nic.in/>; Transfer of Property Act, 1882. <https://www.indiacode.nic.in/>; Ministry of Rural Development. <https://rural.nic.in/>",
       "caveats": "A 'farmhouse' on agricultural land may not be a lawful residential plot. A power-of-attorney transfer is not a substitute for a registered sale deed. Check the encumbrance certificate and the mutation record.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "15-10",
@@ -254,7 +254,7 @@
       "evidenceGrade": "A",
       "sources": "Real Estate (Regulation and Development) Act, 2016. <https://www.indiacode.nic.in/>; Ministry of Housing and Urban Affairs. <https://mohua.gov.in/>; Reserve Bank of India. <https://www.rbi.org.in/>",
       "caveats": "The state RERA portal is the only reliable check: the registration number, the project account, the quarterly updates and the complaints against the promoter. Money paid before registration is not protected by the Act, so do not pay a “pre-launch” token on a verbal promise. If the developer defaults, the complaint goes to the state RERA authority.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "15-11",
@@ -279,7 +279,7 @@
       "evidenceGrade": "A",
       "sources": "Real Estate (Regulation and Development) Act, 2016. <https://www.indiacode.nic.in/>; Department of Consumer Affairs. <https://consumeraffairs.nic.in/>; National Legal Services Authority. <https://nalsa.gov.in/>",
       "caveats": "Put the refund trigger and the loan contingency in the agreement, not in a chat message. Read the forfeiture clause, because many booking forms forfeit the whole amount if the buyer does not sign within a fixed number of days. If a refund is refused, send a written demand, then use the consumer commission for a deficiency in service or a civil suit; a RERA-registered project can also be complained about to the state RERA.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "15-12",
@@ -304,7 +304,7 @@
       "evidenceGrade": "A",
       "sources": "Real Estate (Regulation and Development) Act, 2016 (sections 14 and 31). <https://www.indiacode.nic.in/>; Consumer Protection Act, 2019. <https://www.indiacode.nic.in/>; Department of Consumer Affairs. <https://consumeraffairs.nic.in/>; Ministry of Housing and Urban Affairs. <https://mohua.gov.in/>",
       "caveats": "Read the definition of area in the agreement: builders often quote “super built-up area”, which includes a share of common areas and is larger than the carpet area you actually get, so compare like with like. A clause allowing the builder to vary the area by a percentage is common, so check what happens to the price if it does. Keep the original brochure and dated photographs of the model flat. Delay in delivery is covered in Chapter 15, item 13; handover defects in item 18.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "15-13",
@@ -329,7 +329,7 @@
       "evidenceGrade": "A",
       "sources": "Real Estate (Regulation and Development) Act, 2016 (sections 17, 18, 31). <https://www.indiacode.nic.in/>; Ministry of Housing and Urban Affairs. <https://mohua.gov.in/>; National Legal Services Authority. <https://nalsa.gov.in/>",
       "caveats": "Do not accept a “grace period” letter as a substitute for possession. Keep every payment receipt, the allotment letter and the agreement, because the amount you paid is what the interest is computed on. A RERA complaint should be filed early; authorities can condone delay, but a long wait weakens the case. If the builder offers a settlement, check whether it covers the interest you are entitled to before you sign.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "15-14",
@@ -353,8 +353,8 @@
       "benefit": "India has no provisional or advance-notice registration. The protection comes from two statutes. Section 17 of the Registration Act, 1908 makes registration compulsory for a sale deed of immovable property, and section 49 makes an unregistered document inadmissible to prove the transfer. Under section 54 of the Transfer of Property Act, 1882 a sale of tangible immovable property of the value of one hundred rupees and upwards is made only by a registered instrument, and title passes on registration, not on payment. Section 50 of the Registration Act gives a registered document effect against an unregistered one, which is why a later buyer who registers promptly can defeat an earlier buyer who did not.",
       "evidenceGrade": "A",
       "sources": "Registration Act, 1908 (sections 17, 49, 50). <https://www.indiacode.nic.in/>; Transfer of Property Act, 1882 (section 54). <https://www.indiacode.nic.in/>; Ministry of Housing and Urban Affairs. <https://mohua.gov.in/>",
-      "caveats": "An encumbrance certificate covers only registered transactions in that sub-registrar's jurisdiction, so a mortgage registered elsewhere will not appear; ask the seller for the lender's no-objection certificate and check the society's records for a flat. Pay the stamp duty and registration fee in the state's prescribed manner, keep the registered deed and the receipt, and check mutation of the revenue records where the property is a plot or agricultural land. Verifying the seller's identity and the title chain before signing is covered in Chapter 15, Rule 6.",
-      "reviewStatus": "draft"
+      "caveats": "An encumbrance certificate covers only registered transactions in that sub-registrar's jurisdiction, so a mortgage registered elsewhere will not appear; ask the seller for the lender's no-objection certificate and check the society's records for a flat. Pay the stamp duty and registration fee in the state's prescribed manner, keep the registered deed and the receipt, and check mutation of the revenue records where the property is a plot or agricultural land. Verifying the seller's identity and the title chain before signing is covered in Chapter 15, Item 6.",
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "15-15",
@@ -379,7 +379,7 @@
       "evidenceGrade": "A",
       "sources": "Reserve Bank of India, interest rate reset of floating-rate loans. <https://www.rbi.org.in/>; Reserve Bank of India, integrated ombudsman scheme. <https://www.rbi.org.in/>; National Housing Bank. <https://nhb.org.in/>",
       "caveats": "Ask what the effective annualised rate is and compare it with what a new borrower is offered today. A switch costs something: processing fee, legal and valuation charges, and paperwork. A part-prepayment cuts the balance and the interest, but check whether it shortens the tenure or reduces the EMI, and decide which you want. If the lender refuses to reset, complain first to the lender's grievance officer, then to the RBI Ombudsman under the Reserve Bank's integrated ombudsman scheme.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "15-16",
@@ -404,7 +404,7 @@
       "evidenceGrade": "A",
       "sources": "Reserve Bank of India, home loans and fair practice. <https://www.rbi.org.in/>; National Housing Bank. <https://nhb.org.in/>; Employees’ Provident Fund Organisation. <https://www.epfo.gov.in/>; Pradhan Mantri Awas Yojana — Urban. <https://pmay-urban.gov.in/>; Ministry of Housing and Urban Affairs, PMAY-U. <https://pmaymis.gov.in/>",
       "caveats": "A “teaser” rate can reset higher. A prepayment penalty may apply on a fixed-rate loan. The EPF advance reduces the retirement corpus. Check your PMAY-U 2.0 eligibility before you pay a booking amount, and do not rely on a builder’s brochure that still quotes the closed credit-linked subsidy.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "15-17",
@@ -429,7 +429,7 @@
       "evidenceGrade": "A",
       "sources": "Electricity Act, 2003 (section 56). <https://www.indiacode.nic.in/>; Consumer Protection Act, 2019. <https://www.indiacode.nic.in/>; Department of Consumer Affairs. <https://consumeraffairs.nic.in/>; Ministry of Housing and Urban Affairs. <https://mohua.gov.in/>",
       "caveats": "If your own electricity bill is unpaid, the distribution company can disconnect after notice, and that is lawful; it is separate from a society dispute. Photograph the disconnection, keep the receipts for what you have paid, and put the dispute in writing to the managing committee. If the water supply was cut, the municipal water authority is the second complaint route. Recovering money for spoiled food or damaged appliances needs a consumer complaint or a civil suit.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "15-18",
@@ -453,8 +453,8 @@
       "benefit": "Section 14(3) of the Real Estate (Regulation and Development) Act, 2016 makes the promoter liable to rectify a structural defect or any other defect in workmanship, quality or provision of services, at the promoter's cost, within thirty days of a written notice from the allottee, and the claim can be made within five years from the date of handing over possession. If the promoter fails to rectify within that period, the allottee is entitled to appropriate compensation under section 18. For a property outside RERA, the claim is contractual against the builder, or a consumer complaint for a deficiency in service under the Consumer Protection Act, 2019.",
       "evidenceGrade": "A",
       "sources": "Real Estate (Regulation and Development) Act, 2016 (section 14). <https://www.indiacode.nic.in/>; Ministry of Housing and Urban Affairs. <https://mohua.gov.in/>; Department of Consumer Affairs. <https://consumeraffairs.nic.in/>",
-      "caveats": "The written handover note is what starts the thirty-day clock, so do not accept a verbal “we will fix it”. Do not begin major renovation before the defects are recorded, because the developer will blame your contractor. Keep the occupancy certificate, the completion certificate and the agreement. In a resale flat the builder's five-year obligation runs from the first possession, not from your purchase. Delay in delivery or in the conveyance deed is covered in Chapter 15, Rule 13.",
-      "reviewStatus": "draft"
+      "caveats": "The written handover note is what starts the thirty-day clock, so do not accept a verbal “we will fix it”. Do not begin major renovation before the defects are recorded, because the developer will blame your contractor. Keep the occupancy certificate, the completion certificate and the agreement. In a resale flat the builder's five-year obligation runs from the first possession, not from your purchase. Delay in delivery or in the conveyance deed is covered in Chapter 15, Item 13.",
+      "reviewStatus": "independently-checked"
     }
   ]
 }

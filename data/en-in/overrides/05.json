@@ -10,12 +10,29 @@
       "sources": "Reserve Bank of India, e-mandate framework. <https://www.rbi.org.in/>; National Payments Corporation of India, UPI Autopay. <https://www.npci.org.in/>; Consumer Protection Act, 2019. <https://consumeraffairs.nic.in/>"
     },
     "5-3": {
+      "id": "5-3",
+      "chapter": 5,
+      "tip": 3,
       "title": "Your EPF is not only for buying a home: it can also pay rent, a housing loan, medical bills and some life events",
+      "tags": {
+        "money": "Free",
+        "time": "Quick",
+        "willpower": "None needed",
+        "benefit": "Medium",
+        "scope": "Money",
+        "audience": []
+      },
+      "costScore": 0,
+      "valueTier": "High",
+      "disputed": false,
+      "stillVerifying": false,
+      "cost": "No fee on the EPFO portal. A bank or employer may ask for documents. An agent who charges a commission is not necessary.",
       "inPlainWords": "The Employees' Provident Fund is not limited to a home purchase. EPFO rules allow a member to withdraw or advance funds for buying or building a house, repaying a housing loan, paying rent in some cases, treatment of a serious illness, marriage or education, and a few other purposes. The amount and the conditions depend on the purpose and the number of years of service. Apply through the EPFO member portal, not an agent.",
       "benefit": "The EPF Scheme, 1952 and the EPFO's circulars set the withdrawal and advance categories. A member can take an advance for a house purchase or construction, for repayment of a housing loan, for rent in specified cases, for illness, for marriage or education, and for a few other needs. The account earns interest declared annually by the EPFO. On death, the nominee or legal heir can withdraw the balance. An early withdrawal reduces the retirement corpus.",
-      "cost": "No fee on the EPFO portal. A bank or employer may ask for documents. An agent who charges a commission is not necessary.",
+      "evidenceGrade": "A",
+      "sources": "Employees' Provident Fund Organisation, member portal. <https://www.epfo.gov.in/>; Code on Social Security, 2020, and the Employees' Provident Funds Scheme, 1952 (continued). <https://labour.gov.in/>; Income-tax Department, EPF taxation. <https://www.incometax.gov.in/>",
       "caveats": "The purpose and the eligible amount change with the EPFO circulars. A withdrawal for a non-eligible purpose can be rejected and may attract tax. Check the passbook and the UAN before applying.",
-      "sources": "Employees' Provident Fund Organisation, member portal. <https://www.epfo.gov.in/>; Employees' Provident Funds and Miscellaneous Provisions Act, 1952. <https://labour.gov.in/>; Income-tax Department, EPF taxation. <https://www.incometax.gov.in/>"
+      "reviewStatus": "draft"
     },
     "5-6": {
       "title": "Walk away from 'guaranteed returns' and 'sure profit' offers",
@@ -147,7 +164,29 @@
       "sources": "Reserve Bank of India, financial literacy. <https://www.rbi.org.in/>; Securities and Exchange Board of India, investor education. <https://www.sebi.gov.in/>"
     },
     "5-28": {
-      "sources": "Reserve Bank of India, home loans. <https://www.rbi.org.in/>; National Housing Bank. <https://nhb.org.in/>"
+      "id": "5-28",
+      "chapter": 5,
+      "tip": 28,
+      "title": "Run a quick comparison before paying off your mortgage — don’t rely on gut feeling",
+      "tags": {
+        "money": "Free",
+        "time": "Quick",
+        "willpower": "None needed",
+        "benefit": "Large",
+        "scope": "Money",
+        "audience": []
+      },
+      "costScore": 0,
+      "valueTier": "Very high",
+      "disputed": false,
+      "stillVerifying": false,
+      "cost": "No cost at all. It only takes about half an hour to do the math. You’ll need to honestly estimate the steady after‑tax return you can expect over the long run.",
+      "inPlainWords": "Paying off your mortgage is essentially the same as earning a guaranteed return equal to your mortgage rate. So the only question you need to ask is: can you reliably earn a higher after‑tax return than that rate? If the answer is yes, it makes sense to keep the money invested. If not, or if you’re unsure, paying off the loan is the better choice. With an equal principal‑and‑interest repayment plan, most of the early payments go toward interest; the earlier you pay, the more you save. Most bank apps have a “pre‑payment calculator” that gives you the exact numbers.",
+      "benefit": "The calculation works like this: let r be the annual mortgage rate as stated in your contract. Next, let g represent the after‑tax annual return you can expect from an alternative investment — the average percentage gain you’d earn each year by putting that money elsewhere. Paying off the mortgage guarantees you a return of exactly r; each rupee you apply to the loan earns you that rate for sure. If g consistently exceeds r, it’s better to keep the money invested. If g is lower than r, or if you can’t reliably predict it, paying off the loan locks in a risk‑free return equal to r. Again, because most of the early payments under an equal principal‑and‑interest plan cover interest, the earlier you pay, the more you save.",
+      "evidenceGrade": "C",
+      "sources": "Reserve Bank of India, home loans. <https://www.rbi.org.in/>; National Housing Bank. <https://nhb.org.in/>",
+      "caveats": "This section provides only the calculation method, not a definitive recommendation. It’s relatively rare for investment returns to reliably surpass mortgage rates. Regardless of which option you choose, be sure to keep enough cash on hand for emergencies. Also, check your contract for any prepayment penalties. This information is not intended as financial advice.",
+      "reviewStatus": "draft"
     },
     "5-29": {
       "title": "Judge an online seller by the invoice, the seller's details and the platform's record, not by followers or five-star reviews",
@@ -286,12 +325,29 @@
       "caveats": "These data are from the United States in the 1990s. Indian costs differ — brokerage, securities transaction tax, stamp duty, exchange charges, GST and the bid-ask spread are charged on every trade, and the amounts were revised in recent budgets — but the core principle is the same: higher trading frequency leads to lower net returns. A trade also has to beat the spread before it earns anything. This information is not intended as investment advice."
     },
     "5-5": {
+      "id": "5-5",
+      "chapter": 5,
+      "tip": 5,
       "title": "Do not buy lottery tickets as an investment",
+      "tags": {
+        "money": "Free",
+        "time": "Quick",
+        "willpower": "None needed",
+        "benefit": "Medium",
+        "scope": "Money",
+        "audience": []
+      },
+      "costScore": 0,
+      "valueTier": "High",
+      "disputed": false,
+      "stillVerifying": false,
       "cost": "Nothing. Not buying is the saving. If you play, set a fixed entertainment amount and treat it as already spent.",
       "inPlainWords": "A lottery is a negative-sum game: the operator keeps a share of every rupee for prizes, administration and the state, so the average ticket returns less than it costs. Exactly how much is returned depends on the scheme and on the state that runs it, and the rules are published, but the direction never changes. In India lotteries are a state subject: the Lotteries (Regulation) Act, 1998 lets a state organise, restrict or ban them, and many states have banned paper lotteries. A ticket is entertainment, not saving.",
       "benefit": "The arithmetic is the argument. Whatever the payout share, the money not returned is the operator's, the state's and the retailer's, so the expected value of a ticket is below its price and repeated play converges on that loss. No skill, system or lucky number changes a draw. India also taxes the win: a prize above the threshold is taxed at the flat rate for lottery income, and the seller deducts it at source, so the amount received is smaller than the advertised prize. The reliable return comes from the money you do not spend.",
+      "evidenceGrade": "A",
       "sources": "Lotteries (Regulation) Act, 1998. <https://www.indiacode.nic.in/>; National Portal of India. <https://www.india.gov.in/>; Income Tax Department. <https://www.incometax.gov.in/>",
-      "caveats": "Anyone selling a 'system' or a guaranteed win is a scam; a state draw has no pattern to beat. Online lotteries are prohibited under the 1998 Act, and the online gaming law of 2025 bans real-money games, so an offshore app is neither a legal route nor a forum that will pay you. If gambling is taking money you need, treat it as a health problem rather than a budgeting one and talk to someone. Keep any entertainment money separate from savings, and never borrow to play."
+      "caveats": "Anyone selling a 'system' or a guaranteed win is a scam; a state draw has no pattern to beat. The Lotteries (Regulation) Act, 1998 lets each State prohibit online lotteries, and most States do, and the online gaming law of 2025 bans real-money games, so an offshore app is neither a legal route nor a forum that will pay you. If gambling is taking money you need, treat it as a health problem rather than a budgeting one and talk to someone. Keep any entertainment money separate from savings, and never borrow to play.",
+      "reviewStatus": "draft"
     },
     "5-8": {
       "title": "Turn off one-tap payments before you tip a streamer or buy inside a game",

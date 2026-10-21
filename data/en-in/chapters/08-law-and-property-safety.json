@@ -4,7 +4,7 @@
   "title": "Law and Property Safety",
   "intro": "Chapter 8: Law and Property Safety",
   "edition": "india",
-  "rewriteStatus": "draft",
+  "rewriteStatus": "checked",
   "tips": [
     {
       "id": "8-1",
@@ -29,7 +29,7 @@
       "evidenceGrade": "A",
       "sources": "Motor Vehicles Act, 1988 (sections 134, 134A, 161). <https://www.indiacode.nic.in/>; Bharatiya Nyaya Sanhita, 2023. <https://www.indiacode.nic.in/>; Ministry of Road Transport and Highways. <https://morth.nic.in/>",
       "caveats": "Do not sign a settlement at the roadside before the injury is assessed. A hit-and-run is treated more seriously than a reported accident. If you are the victim, note the vehicle number and keep the medical records.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "8-2",
@@ -54,7 +54,7 @@
       "evidenceGrade": "A",
       "sources": "National Cyber Crime Reporting Portal. <https://cybercrime.gov.in/>; Reserve Bank of India, customer protection. <https://www.rbi.org.in/>; Bharatiya Nyaya Sanhita, 2023. <https://www.indiacode.nic.in/>",
       "caveats": "Recovery is not guaranteed, especially if the money has moved abroad. Do not pay a 'recovery agent' who asks for an upfront fee. If the fraud used your Aadhaar or PAN, inform the tax department and the UIDAI as well.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "8-3",
@@ -79,7 +79,7 @@
       "evidenceGrade": "B",
       "sources": "Reserve Bank of India, awareness. <https://www.rbi.org.in/>; National Cyber Crime Reporting Portal. <https://cybercrime.gov.in/>; Information Technology Act, 2000. <https://www.indiacode.nic.in/>",
       "caveats": "A caller can show a bank's name on the screen with caller-ID spoofing. A video call does not prove identity. Do not install a screen-sharing app at a caller's request.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "8-4",
@@ -104,7 +104,7 @@
       "evidenceGrade": "B",
       "sources": "National Cyber Crime Reporting Portal. <https://cybercrime.gov.in/>; Ministry of Electronics and Information Technology, AI advisories. <https://www.meity.gov.in/>; Information Technology Act, 2000. <https://www.indiacode.nic.in/>",
       "caveats": "A short video can be recorded or generated. A request to install an app or share a screen is a red flag. If money has gone, call 1930 at once.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "8-5",
@@ -129,7 +129,7 @@
       "evidenceGrade": "A",
       "sources": "Bharatiya Nagarik Suraksha Sanhita, 2023. <https://www.indiacode.nic.in/>; National Legal Services Authority. <https://nalsa.gov.in/>; Bharatiya Nyaya Sanhita, 2023. <https://www.indiacode.nic.in/>",
       "caveats": "A summons must be in writing and state the offence. Ask for a copy. A phone call is not a summons. If you cannot afford a lawyer, apply for legal aid at the court.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "8-6",
@@ -154,7 +154,7 @@
       "evidenceGrade": "A",
       "sources": "Bharatiya Nagarik Suraksha Sanhita, 2023. <https://www.indiacode.nic.in/>; Limitation Act, 1963. <https://www.indiacode.nic.in/>; National Legal Services Authority. <https://nalsa.gov.in/>",
       "caveats": "A surrender is not a guarantee of a lighter sentence. Do not make a statement without a lawyer. A civil limitation period can be extended in some cases, but not as a rule.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "8-7",
@@ -179,7 +179,7 @@
       "evidenceGrade": "A",
       "sources": "Motor Vehicles Act, 1988 (sections 184, 185, 187). <https://www.indiacode.nic.in/>; Bharatiya Nyaya Sanhita, 2023. <https://www.indiacode.nic.in/>; Ministry of Road Transport and Highways. <https://morth.nic.in/>",
       "caveats": "A small amount can still be over the limit depending on body weight and time. A breathalyser test is evidence; refusing a lawful test has consequences. Do not rely on coffee or a cold shower.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "8-8",
@@ -204,7 +204,7 @@
       "evidenceGrade": "A",
       "sources": "Bharatiya Nyaya Sanhita, 2023. <https://www.indiacode.nic.in/>; Prevention of Money Laundering Act, 2002. <https://www.indiacode.nic.in/>; Reserve Bank of India, KYC. <https://www.rbi.org.in/>; National Cyber Crime Reporting Portal. <https://cybercrime.gov.in/>",
       "caveats": "A family member asking to use your account for a 'business' payment is still a risk. If your account is frozen, contact the bank and the cyber police; do not try to move the money.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "8-9",
@@ -229,7 +229,7 @@
       "evidenceGrade": "A",
       "sources": "Reserve Bank of India, credit information. <https://www.rbi.org.in/>; TransUnion CIBIL. <https://www.cibil.com/>; Credit Information Companies (Regulation) Act, 2005. <https://www.indiacode.nic.in/>",
       "caveats": "A hard enquiry can lower your score slightly. Do not share your credit report with an agent who asks for an OTP. A closed loan may still show as open for a month.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "8-10",
@@ -254,7 +254,7 @@
       "evidenceGrade": "A",
       "sources": "Bharatiya Nyaya Sanhita, 2023. <https://www.indiacode.nic.in/>; Bharatiya Nagarik Suraksha Sanhita, 2023. <https://www.indiacode.nic.in/>",
       "caveats": "Do not record and upload the fight; it can be evidence against you. If you are injured, get a medical examination and a copy of the report.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "8-11",
@@ -279,7 +279,7 @@
       "evidenceGrade": "A",
       "sources": "Bharatiya Nyaya Sanhita, 2023 (private defence). <https://www.indiacode.nic.in/>; Ministry of Home Affairs. <https://www.mha.gov.in/>",
       "caveats": "A weapon changes the assessment. Do not continue after the attacker is disabled or has fled. A claim of self-defence does not cover a pre-arranged fight.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "8-12",
@@ -304,7 +304,7 @@
       "evidenceGrade": "A",
       "sources": "Code on Wages, 2019. <https://labour.gov.in/labour-codes>; Industrial Relations Code, 2020. <https://labour.gov.in/labour-codes>; Consumer Protection Act, 2019. <https://consumeraffairs.nic.in/>; National Legal Services Authority. <https://nalsa.gov.in/>",
       "caveats": "The limitation period for a civil claim is generally three years under the Limitation Act, 1963, and labour disputes have their own time limits. Do not destroy or withhold the employer's property as leverage.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "8-13",
@@ -329,7 +329,7 @@
       "evidenceGrade": "A",
       "sources": "Bharatiya Nyaya Sanhita, 2023. <https://www.indiacode.nic.in/>; Tele-MANAS. <https://telemanas.mohfw.gov.in/>; Ministry of Home Affairs. <https://www.mha.gov.in/>",
       "caveats": "Threats posted online are evidence and can lead to arrest. If you are in crisis, ask a friend to stay with you and go to a hospital.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "8-14",
@@ -354,7 +354,7 @@
       "evidenceGrade": "B",
       "sources": "Tele-MANAS. <https://telemanas.mohfw.gov.in/>; Mental Healthcare Act, 2017. <https://www.indiacode.nic.in/>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>",
       "caveats": "A crisis can pass; a violent act cannot be undone. If someone is in immediate danger, call 112. Do not stay alone with a weapon.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "8-15",
@@ -379,7 +379,7 @@
       "evidenceGrade": "A",
       "sources": "Protection of Women from Domestic Violence Act, 2005. <https://www.indiacode.nic.in/>; Ministry of Women and Child Development. <https://wcd.gov.in/>; Childline 1098. <https://childlineindia.org.in/>; National Legal Services Authority. <https://nalsa.gov.in/>",
       "caveats": "A family threat can escalate quickly. Have a safe place and a bag ready. Do not confront the person alone. If a child is in danger, call 1098.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "8-16",
@@ -404,7 +404,7 @@
       "evidenceGrade": "A",
       "sources": "Bharatiya Nyaya Sanhita, 2023. <https://www.indiacode.nic.in/>; Information Technology Act, 2000. <https://www.indiacode.nic.in/>; National Cyber Crime Reporting Portal. <https://cybercrime.gov.in/>",
       "caveats": "A public figure has a lower expectation of privacy but still protects against false statements. A joke can be defamation if it is presented as fact. If the abuse includes a sexual image, report it immediately and do not forward it.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "8-17",
@@ -429,7 +429,7 @@
       "evidenceGrade": "A",
       "sources": "Indian Contract Act, 1872. <https://www.indiacode.nic.in/>; Registration Act, 1908. <https://www.indiacode.nic.in/>; Powers of Attorney Act, 1882. <https://www.indiacode.nic.in/>",
       "caveats": "A document in a language you do not read should be translated. Do not sign a 'standard form' without reading the termination and penalty clauses. A witnessed signature is stronger evidence.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "8-18",
@@ -454,7 +454,7 @@
       "evidenceGrade": "A",
       "sources": "Indian Contract Act, 1872. <https://www.indiacode.nic.in/>; Negotiable Instruments Act, 1881. <https://www.indiacode.nic.in/>; Limitation Act, 1963. <https://www.indiacode.nic.in/>",
       "caveats": "Interest income is taxable, and a cash loan above the prescribed limit can attract tax scrutiny. Do not lend to a stranger who offers a high return. A guarantor should get a copy of the loan agreement.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "8-19",
@@ -479,7 +479,7 @@
       "evidenceGrade": "A",
       "sources": "Limitation Act, 1963. <https://www.indiacode.nic.in/>; Consumer Protection Act, 2019. <https://consumeraffairs.nic.in/>; Code on Wages, 2019. <https://labour.gov.in/labour-codes>; National Legal Services Authority. <https://nalsa.gov.in/>",
       "caveats": "The court does not apply the limitation bar on its own; the defendant must raise it. A payment or a written acknowledgement can restart the clock. Keep the date of the demand and the reply.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "8-20",
@@ -504,7 +504,7 @@
       "evidenceGrade": "A",
       "sources": "Code of Civil Procedure, 1908. <https://www.indiacode.nic.in/>; Insolvency and Bankruptcy Code, 2016. <https://ibbi.gov.in/>; Bharatiya Nyaya Sanhita, 2023. <https://www.indiacode.nic.in/>",
       "caveats": "Do not transfer property after the suit is filed; the transfer can be set aside as fraudulent. A family settlement should be documented. Take advice before signing a settlement.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "8-21",
@@ -529,7 +529,7 @@
       "evidenceGrade": "A",
       "sources": "Code of Civil Procedure, 1908. <https://www.indiacode.nic.in/>; Reserve Bank of India, wilful defaulters. <https://www.rbi.org.in/>; Income-tax Department. <https://www.incometax.gov.in/>; Insolvency and Bankruptcy Board of India. <https://ibbi.gov.in/>",
       "caveats": "A freeze can be partial or full. A joint account can be affected by one holder's liability. Keep the salary account issue in mind; the bank may release a portion for living expenses.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "8-22",
@@ -554,7 +554,7 @@
       "evidenceGrade": "A",
       "sources": "Consumer Protection Act, 2019. <https://consumeraffairs.nic.in/>; Consumer Protection (E-Commerce) Rules, 2020. <https://consumeraffairs.nic.in/>; National Consumer Helpline. <https://consumerhelpline.gov.in/>; Reserve Bank of India, chargebacks. <https://www.rbi.org.in/>",
       "caveats": "A marketplace and a seller are separate; the platform may not be liable for every seller. A 'no refund' clause does not override the consumer law. Do not accept a settlement that requires you to withdraw the complaint before payment.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "8-23",
@@ -579,7 +579,7 @@
       "evidenceGrade": "A",
       "sources": "Transfer of Property Act, 1882. <https://www.indiacode.nic.in/>; Registration Act, 1908. <https://www.indiacode.nic.in/>; Dowry Prohibition Act, 1961. <https://www.indiacode.nic.in/>",
       "caveats": "A gift is generally irrevocable once made. A conditional gift can be recovered only if the condition is proved. A public accusation without evidence can be defamation.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "8-24",
@@ -604,7 +604,7 @@
       "evidenceGrade": "A",
       "sources": "Dowry Prohibition Act, 1961. <https://www.indiacode.nic.in/>; Bharatiya Nyaya Sanhita, 2023. <https://www.indiacode.nic.in/>; Ministry of Women and Child Development. <https://wcd.gov.in/>",
       "caveats": "A wedding gift given voluntarily is not dowry, but a demand made before or after the marriage can be. A 'gift list' demanded by one family is evidence. Do not destroy the messages.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "8-25",
@@ -629,7 +629,7 @@
       "evidenceGrade": "A",
       "sources": "Hindu Marriage Act, 1955. <https://www.indiacode.nic.in/>; Special Marriage Act, 1954. <https://www.indiacode.nic.in/>; Indian Succession Act, 1925. <https://www.indiacode.nic.in/>",
       "caveats": "A prenuptial agreement is not a recognized category with automatic enforceability; a court may consider it as evidence of intention. A joint home loan creates rights and liabilities. Do not transfer a family property without advice.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "8-26",
@@ -654,7 +654,7 @@
       "evidenceGrade": "A",
       "sources": "Bharatiya Nyaya Sanhita, 2023. <https://www.indiacode.nic.in/>; Hindu Marriage Act, 1955. <https://www.indiacode.nic.in/>; Special Marriage Act, 1954. <https://www.indiacode.nic.in/>",
       "caveats": "A divorce decree from another country may need recognition in India. A religious marriage may not be registered; check the applicable law. Do not confront the person alone if you suspect fraud; keep the evidence.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "8-27",
@@ -679,7 +679,7 @@
       "evidenceGrade": "B",
       "sources": "Consumer Protection Act, 2019. <https://consumeraffairs.nic.in/>; National Consumer Helpline. <https://consumerhelpline.gov.in/>; Central Board of Indirect Taxes and Customs. <https://www.cbic.gov.in/>",
       "caveats": "A 'minimum charge' can become a large bill. Do not sign a blank job card. If the repairer keeps the vehicle, get a receipt with the odometer reading.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "8-28",
@@ -704,7 +704,7 @@
       "evidenceGrade": "B",
       "sources": "Companies Act, 2013. <https://www.mca.gov.in/>; Benami Transactions (Prohibition) Act, 1988. <https://www.indiacode.nic.in/>; Ministry of Corporate Affairs. <https://www.mca.gov.in/>",
       "caveats": "A 'sleeping director' is still a director in law. Resigning without filing Form DIR-11 leaves you on record. Do not sign a blank board resolution.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "8-29",
@@ -729,7 +729,7 @@
       "evidenceGrade": "B",
       "sources": "Narcotic Drugs and Psychotropic Substances Act, 1985. <https://www.indiacode.nic.in/>; Customs Act, 1962. <https://www.indiacode.nic.in/>; Bureau of Civil Aviation Security. <https://www.bcasindia.gov.in/>",
       "caveats": "A 'gift for a relative' can be a trap. Do not leave your bag unattended. If a co-passenger asks you to watch a bag, refuse and call security.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "8-30",
@@ -754,7 +754,7 @@
       "evidenceGrade": "A",
       "sources": "Prevention of Cruelty to Animals Act, 1960. <https://www.indiacode.nic.in/>; Ministry of Fisheries, Animal Husbandry and Dairying. <https://dahd.nic.in/>; Bharatiya Nyaya Sanhita, 2023. <https://www.indiacode.nic.in/>",
       "caveats": "A victim who trespasses or provokes the dog may reduce the claim, but not the leash duty. A stray dog is a municipal responsibility. Report a biting dog to the local body and the police.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "8-31",
@@ -779,7 +779,7 @@
       "evidenceGrade": "B",
       "sources": "Bharatiya Nyaya Sanhita, 2023. <https://www.indiacode.nic.in/>; Protection of Children from Sexual Offences Act, 2012. <https://www.indiacode.nic.in/>; Ministry of Women and Child Development. <https://wcd.gov.in/>",
       "caveats": "A person who is drunk can still be the accused; intoxication is not a defence to a sexual offence. Do not share the complainant's identity. Take a medical examination and preserve the clothes if you are the victim.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "8-32",
@@ -804,7 +804,7 @@
       "evidenceGrade": "A",
       "sources": "Bharatiya Nyaya Sanhita, 2023. <https://www.indiacode.nic.in/>; Information Technology Act, 2000. <https://www.indiacode.nic.in/>; National Cyber Crime Reporting Portal. <https://cybercrime.gov.in/>; Ministry of Women and Child Development. <https://wcd.gov.in/>",
       "caveats": "A fake profile can be reported and traced. Tell a trusted person and keep your phone secure. If the content is already public, ask the platform for an urgent takedown and a court injunction.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "8-33",
@@ -829,7 +829,7 @@
       "evidenceGrade": "A",
       "sources": "Bharatiya Nyaya Sanhita, 2023. <https://www.indiacode.nic.in/>; Bharatiya Nagarik Suraksha Sanhita, 2023. <https://www.indiacode.nic.in/>; National Legal Services Authority. <https://nalsa.gov.in/>",
       "caveats": "A complaint to the police is not automatically defamation; the person may have a reasonable belief. Do not publish the accuser's details online; that can be a fresh offence.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "8-34",
@@ -854,7 +854,7 @@
       "evidenceGrade": "A",
       "sources": "Bharatiya Sakshya Adhiniyam, 2023. <https://www.indiacode.nic.in/>; Bharatiya Nagarik Suraksha Sanhita, 2023. <https://www.indiacode.nic.in/>; Supreme Court of India. <https://www.sci.gov.in/>",
       "caveats": "An alibi needs evidence, not just a statement. Do not tamper with a witness. A retrial is not automatic; an appeal must show a legal error.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "8-35",
@@ -879,7 +879,7 @@
       "evidenceGrade": "A",
       "sources": "Bharatiya Nagarik Suraksha Sanhita, 2023. <https://www.indiacode.nic.in/>; National Legal Services Authority. <https://nalsa.gov.in/>; Supreme Court of India. <https://www.sci.gov.in/>",
       "caveats": "An acquittal does not automatically mean the arrest was illegal. A compensation claim can take years. Do not sign a release without advice.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "8-36",
@@ -904,7 +904,7 @@
       "evidenceGrade": "B",
       "sources": "Bharatiya Nagarik Suraksha Sanhita, 2023. <https://www.indiacode.nic.in/>; Consumer Protection Act, 2019. <https://consumeraffairs.nic.in/>; National Legal Services Authority. <https://nalsa.gov.in/>",
       "caveats": "A settlement in a serious offence needs the court's permission. Do not withdraw an FIR before you receive the compensation. Keep the medical and loss records.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "8-37",
@@ -929,7 +929,7 @@
       "evidenceGrade": "A",
       "sources": "Information Technology Act, 2000. <https://www.indiacode.nic.in/>; Bharatiya Nyaya Sanhita, 2023. <https://www.indiacode.nic.in/>; National Cyber Crime Reporting Portal. <https://cybercrime.gov.in/>; National Commission for Women. <https://ncw.nic.in/>",
       "caveats": "Do not engage with the abuser. A screenshot without the URL and date is weaker evidence. If the abuse includes a morphed image, report it as a sexual offence.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "8-38",
@@ -954,7 +954,7 @@
       "evidenceGrade": "A",
       "sources": "Bharatiya Nyaya Sanhita, 2023. <https://www.indiacode.nic.in/>; Insurance Act, 1938. <https://www.indiacode.nic.in/>; Insurance Regulatory and Development Authority of India. <https://irdai.gov.in/>",
       "caveats": "A policy on a child is restricted. A 'keyman' policy is for a business, not a licence to harm. If you suspect a policy fraud, report it to the insurer and the police.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "8-39",
@@ -979,7 +979,7 @@
       "evidenceGrade": "A",
       "sources": "Bharatiya Nagarik Suraksha Sanhita, 2023. <https://www.indiacode.nic.in/>; Ministry of Home Affairs. <https://www.mha.gov.in/>; National Legal Services Authority. <https://nalsa.gov.in/>",
       "caveats": "A police station cannot refuse an FIR because the offence happened in another area; it can register a zero FIR and transfer it. Keep the date and the officer's name.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "8-40",
@@ -1004,7 +1004,7 @@
       "evidenceGrade": "A",
       "sources": "Prevention of Corruption Act, 1988. <https://www.indiacode.nic.in/>; Central Vigilance Commission. <https://cvc.gov.in/>; Bharatiya Nyaya Sanhita, 2023. <https://www.indiacode.nic.in/>",
       "caveats": "A 'speed money' demand can be reported to the anti-corruption helpline. Do not pay and then complain; the payment itself is evidence against you.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "8-41",
@@ -1029,7 +1029,7 @@
       "evidenceGrade": "A",
       "sources": "Bharatiya Sakshya Adhiniyam, 2023. <https://www.indiacode.nic.in/>; Information Technology Act, 2000. <https://www.indiacode.nic.in/>; Supreme Court of India. <https://www.sci.gov.in/>",
       "caveats": "A recording obtained by trespass or coercion may be excluded. Do not record a privileged lawyer-client conversation. A phone recording can be erased; back it up.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "8-42",
@@ -1054,7 +1054,7 @@
       "evidenceGrade": "C",
       "sources": "Bharatiya Sakshya Adhiniyam, 2023. <https://www.indiacode.nic.in/>; Bharatiya Nagarik Suraksha Sanhita, 2023. <https://www.indiacode.nic.in/>; Ministry of Road Transport and Highways. <https://morth.nic.in/>",
       "caveats": "Do not film an injured person's face for social media. Do not edit or filter the video. A wide shot that shows the road and the vehicles is more useful than a close-up of the damage.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "8-43",
@@ -1079,7 +1079,7 @@
       "evidenceGrade": "A",
       "sources": "Protection of Women from Domestic Violence Act, 2005. <https://www.indiacode.nic.in/>; Ministry of Women and Child Development. <https://wcd.gov.in/>; National Legal Services Authority. <https://nalsa.gov.in/>",
       "caveats": "A protection order can be enforced by the police. Do not confront the abuser alone. Keep a safe place and a bag ready. A child in the home is also protected under the JJ Act, 2015.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "8-44",
@@ -1104,7 +1104,7 @@
       "evidenceGrade": "B",
       "sources": "Indian Contract Act, 1872 (section 30). <https://www.indiacode.nic.in/>; Hindu Marriage Act, 1955. <https://www.indiacode.nic.in/>; Bharatiya Nyaya Sanhita, 2023. <https://www.indiacode.nic.in/>",
       "caveats": "A debt for necessities can be different. A joint account or a joint loan creates a separate liability. If a collector threatens you, call 112 and report it.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "8-45",
@@ -1129,7 +1129,7 @@
       "evidenceGrade": "B",
       "sources": "Aadhaar Act, 2016. <https://www.indiacode.nic.in/>; Reserve Bank of India, KYC. <https://www.rbi.org.in/>; Bharatiya Nyaya Sanhita, 2023. <https://www.indiacode.nic.in/>",
       "caveats": "A genuine bank officer will not ask for a face scan on a friend's phone. Check your credit report after refusing. Report a fraudulent loan to the bank and the police.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "8-46",
@@ -1154,7 +1154,7 @@
       "evidenceGrade": "B",
       "sources": "Bharatiya Nyaya Sanhita, 2023. <https://www.indiacode.nic.in/>; Ministry of Home Affairs. <https://www.mha.gov.in/>; Insurance Regulatory and Development Authority of India. <https://irdai.gov.in/>",
       "caveats": "Do not hide a spare key outside. A domestic worker or a tenant needs a background check. Report a suspicious person to the police, not to a WhatsApp group.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     }
   ]
 }

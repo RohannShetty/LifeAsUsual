@@ -1,46 +1,73 @@
 # Verification: Chapter 17 - Elderly at Home
 
-Verifier: independent-verifier-a45fe80c-adb7-4922-988d-78d56d4d0b53
+Verifier: independent verifier, subagent of session-cbb8c456-d1d0-47f5-b30f-11f4d6163239
 Date: 2026-10-21
 Access date: 2026-10-21
 Chapter file: data/en-in/chapters/17-elderly-at-home.json
-Manifest status: draft (recommend checked)
+Manifest status: draft
+Pass type: targeted re-verification of the three corrections that blocked the previous round (not a fresh full audit)
+
+## Scope of this pass
+
+The previous full audit of this chapter ended in FAIL on exactly three items, all in the text: (a) 17-2 stated the Indian Succession Act 1925 section 63 witness rule as requiring both witnesses to be present at the same time, which is the opposite of the statute; (b) 17-12 described the repealed Maternity Benefit Act, 1961 as the current maternity statute; (c) 17-1's title and first sentence said India has no adult guardianship statute at all, ignoring limited guardianship under section 14 of the Rights of Persons with Disabilities Act, 2016. A fixer has since edited the shipped JSON. This pass confirms those three corrections in the built file, checks that the edits introduced nothing new, and re-runs the mechanical checker. The other ten tips were not re-audited; their previous findings are carried forward as notes at the end.
 
 ## Method
 
-I read all 13 tips, the claim list in reports/source-packs/chapter-17.md, and the older FAIL report at reports/verification/chapter-17.md. Every regression item in that report was re-tested: Chinese Civil Code art. 33 guardianship (17-1), the six will types and notarial priority (17-2), the 6/8/10% reverse-mortgage LTV and CBIRC/NFRA (17-6), the "few hundred rupees" air mattress plus Chinese LTCI (17-8), the 12-month deposit cap and civil-affairs filing (17-11), provincial filial leave with 12333 and flk.npc.gov.cn (17-12), and the NHC dementia plan (17-13). All are gone; 17-1, 17-2, 17-6, 17-8, 17-11 and 17-13 now state the Indian position or that India has no equivalent.
+I read the corrections in the shipped file, data/en-in/chapters/17-elderly-at-home.json (13 tips, manifest status draft), not in any override copy. Where a correction turns on statutory wording I read the provision itself:
 
-Instruments: nalsa.gov.in (HTTP 200), Social Justice and Empowerment material, RBI material, NICE NG97 (read in full), and Crossref for DOIs. Access failures: indiacode.nic.in returns HTTP 403, so the Indian Succession Act 1925 s.63, the Maintenance and Welfare of Parents and Senior Citizens Act 2007 and the National Trust Act 1999 were cross-read from section-level mirrors and government pages rather than the primary statute site; pib.gov.in bodies return HTTP 403 (titles and note IDs readable); elderline.gov.in failed DNS (ENOTFOUND); mohfw.gov.in and socialjustice.gov.in were not directly readable. DOI resolution: eight DOIs resolved via Crossref (HTTP 200); the later bulk re-check of all 67 DOIs returned HTTP 400 and then 429, so the remaining DOIs (including Clarfield 2003, Porter 2022, Ottaviani 2026, Latimer 2026) were not individually re-resolved and are marked accordingly.
+- Indian Succession Act, 1925, section 63 - https://indiankanoon.org/doc/1673132/ (HTTP 200).
+- Rights of Persons with Disabilities Act, 2016, section 14 - https://indiankanoon.org/doc/27742839/ (HTTP 200).
+- Code on Social Security, 2020, Chapter VI - section 72 read in full at https://www.advocatekhoj.com/library/bareActs/codeonsocialsecurity/72.php (HTTP 200); the section range 59 to 72 was checked against the same bare-act index, where section 72 is the last section before section 73.
 
-## Claim checks
+I then ran `npx tsx scripts/check-chapter.ts 17`: exit 0, "chapter 17 (17-elderly-at-home.json): 13 tips / PASS: no banned term, CJK character or foreign-jurisdiction term."
 
-| Tip | Claim | Source checked | Section | Accessed | Pass? | Note |
-| --- | --- | --- | --- | --- | --- | --- |
-| 17-1 | India has no adult guardianship statute; the Guardians and Wards Act, 1890 covers minors only; National Trust Act 1999 limited guardianship; Mental Healthcare Act 2017 advance directive and nominated representative; a will is made under the Indian Succession Act 1925 | GWA 1890; National Trust Act 1999; MHCA 2017 ss.5-6, 14; ISA 1925 | - | 2026-10-21 | yes | Accurate. MHCA 2017 indeed provides advance directives and nominated representatives; a power of attorney is not guardianship. |
-| 17-2 | A will needs writing, the testator's signature and two witnesses (ISA s.63); registration is optional; a notarised will has no priority; a later will revokes an earlier one | Indian Succession Act 1925 s.63; Registration Act 1908 s.18 | s.63; s.18 | 2026-10-21 | yes | s.63 requirements stated correctly; registration is optional under s.18 and notarisation confers no priority. |
-| 17-5 | Maintenance and Welfare of Parents and Senior Citizens Act, 2007 gives a maintenance tribunal; Senior Citizens' Savings Scheme is the small-savings route; RBI/SEBI warn about unauthorised deposit takers | MWPSC Act 2007 ss.4-9; SCSS; RBI/SEBI investor alerts | ss.4-9 | 2026-10-21 | yes | Tribunal mechanism and SCSS both real. Note: SCSS interest rates change quarterly, so no rate is hard-coded - correct. |
-| 17-6 | Reverse mortgage loans come from banks/HFCs under the RBI framework; an annuity-linked version is permitted; India runs no state pilot and sells no "reverse mortgage insurance"; 6/8/10% are warning signs, not thresholds | RBI reverse mortgage framework | - | 2026-10-21 | yes | The Chinese insurance pilot, LTV ladder and CBIRC/NFRA references are gone; text presents the percentages as red flags, which is defensible. |
-| 17-7 | PM-JAY, ESIC, state palliative-care programmes; RPwD Act 2016 certificate; AAM/ASHA | NHA; ESIC; RPwD Act 2016 | - | 2026-10-21 | yes | The RPwD Act 2016 disability certificate route is real and correctly attributed. |
-| 17-8 | India has no long-term-care insurance; entry-level pressure-relieving mattress costs several thousand rupees; pressure ulcers raise mortality | Porter 2022; Ottaviani 2026; Shi 2018; Latimer 2026 Cochrane | - | 2026-10-21 | yes | Chinese LTCI claim removed; the "no LTC insurance in India" statement is correct. DOIs not individually re-resolved. |
-| 17-9 | NPCBVI provides free cataract surgery at government facilities; private surgery costs about Rs 15,000-40,000 per eye | NPCBVI/NPCB material | - | 2026-10-21 | yes | Programme is real. The private price is a market range with no statutory source - note, not a blocking defect. |
-| 17-11 | India has no national deposit cap for nursing homes; state nursing-home rules, Clinical Establishments Act 2010, National Trust Act 1999 and MWPSC Act 2007 apply | Clinical Establishments Act 2010; National Trust Act 1999; MWPSC 2007 | - | 2026-10-21 | yes | The Chinese 12-month cap and escrow/civil-affairs filing are gone; no national cap exists. |
-| 17-12 | India has no statutory elder-care leave; the Factories Act, 1948 and state Shops and Establishments Acts set hours, rest and leave; CCS (Leave) Rules 1972 for central government staff | Factories Act 1948; OSH Code 2020; CCS (Leave) Rules 1972 | - | 2026-10-21 | no | Blocking: the Factories Act 1948 was repealed on 21 November 2025 and replaced by the Occupational Safety, Health and Working Conditions Code, 2020, which is now cited as live law. |
-| 17-13 | NICE NG97 memory assessment; reversible dementias under 1% (Clarfield 2003); India has no standard long-term-care health insurance and no national dementia screening programme | NICE NG97; Clarfield 2003 | NG97 1.1.12, 1.2.1, 1.2.2, 1.2.6 | 2026-10-21 | yes | NG97 read in full; the recommendation numbers cited match the guideline's structure. Chinese NHC plan removed. |
+## Corrections checked
 
-## Banned-term check
+| Item | Correction previously required | What the built JSON now says | How verified | Result |
+| --- | --- | --- | --- | --- |
+| (a) 17-2 | State section 63 correctly: two or more witnesses, each sees the testator sign, each signs in the testator's presence, and the Act does not require both at the same time | Benefit, line 53: "Section 63 of the Indian Succession Act, 1925 sets the form: writing, the testator's signature, and attestation by two or more witnesses, each of whom has seen the testator sign and each of whom signs in the testator's presence. The Act does not require both witnesses to be present at the same time; having them both present is safer practice, not a legal requirement." The earlier simultaneity claim is gone from the plain words too (line 52: "attested by two or more witnesses who each saw the testator sign") | Fetch: ISA s.63(c) reads "attested by two or more witnesses, each of whom has seen the testator sign ... and each of the witnesses shall sign the Will in the presence of the testator, but it shall not be necessary that more than one witness be present at the same time" | fixed |
+| (b) 17-12 | Stop naming the repealed Maternity Benefit Act, 1961 as current; cite Chapter VI of the Code on Social Security, 2020 (ss.59-72) | Benefit, line 325: "... none of them creates a right to elder-care leave, and Chapter VI of the Code on Social Security, 2020 (sections 59 to 72) covers maternity only." A full-text search of the chapter file for "Maternity Benefit Act" returns no hit | Fetch: Chapter VI runs to section 72, and s.72 itself is the maternity-benefit complaint provision ("Any woman claiming that ... maternity benefit ... may make a complaint to the Inspector-cum-Facilitator") | fixed |
+| (c) 17-1 | Title says "no general adult guardianship statute"; plain words add RPwD Act 2016 s.14 limited guardianship; RPwD added to sources | Title, line 13: "... India has no general adult guardianship statute, so the tools are a will, a bank mandate and, for mental illness, an advance directive". Plain words, line 27, now include: "The Rights of Persons with Disabilities Act, 2016, section 14 lets a district court or a notified authority appoint a limited guardian for a person with a specified disability who cannot take legally binding decisions; that guardianship is limited and disability-specific." Sources, line 30, now list "Rights of Persons with Disabilities Act, 2016" | Fetch: RPwD s.14 is headed "Provision for guardianship" and provides that "where a district court or any designated authority, as notified by the State Government, finds that a person with disability, who had been provided adequate and appropriate support but is unable to take legally binding decisions, may be provided further support of a limited guardian" | fixed |
 
-- JSON: 0 banned terms - npx tsx scripts/check-chapter.ts 17 reports "PASS: no banned term, CJK character or foreign-jurisdiction term".
-- Rendered page: not rendered (no build run). JSON scanned for the banned agency list, CJK characters and China/RMB/yuan/hukou/yibao/dibao: none. The 12333 hotline and flk.npc.gov.cn source are gone.
+## Confirmed by fetch
+
+The three corrections each turn on a statutory text, and all three texts were read this session: ISA s.63(c) settles the simultaneity question in the chapter's favour; RPwD s.14 supports the "limited and disability-specific" formulation and the "district court or a notified authority" description; the Code on Social Security, 2020 Chapter VI range and s.72 confirm that ss.59-72 is the maternity chapter. India Code (indiacode.nic.in) returned HTTP 403 on every handle, so these were read on Indian Kanoon and AdvocateKhoj bare-act pages, as noted in the Method.
+
+## Confirmed by text only
+
+- The title and plain words of 17-1 are internally consistent with the added sentence: the claim is now "no general adult guardianship statute", not "no adult guardianship", and the limited routes (National Trust Act 1999, RPwD s.14, Mental Healthcare Act 2017) are all named in the same field.
+- The 17-2 caveat, "Two witnesses must see you sign, and each must sign in your presence", remains and does not contradict the corrected benefit.
+- 17-13's caveat still opens "Graded Evidence Grade B ..." and the tip's evidenceGrade is B; every caveat in the chapter that states a grade matches the tip's own badge (checked across all 13 tips).
+
+## Access failures
+
+- indiacode.nic.in returns HTTP 403 on every handle and bitstream, so the Acts were read on mirror bare-act pages rather than the official portal.
+- pib.gov.in returns HTTP 403 (Akamai "Access Denied").
+- Elderline's ministry pages (elderline.dosje.gov.in, scw.dosje.gov.in) fail with DNS or fetch errors, as in the previous round; the 14567 number is corroborated only in peer-reviewed literature.
+- The specific RBI circular on reverse mortgage could not be located on rbi.org.in this session, although the site itself is reachable.
+
+## Notes carried forward (non-blocking)
+
+- 17-6: the reverse-mortgage yields are already labelled rules of thumb, and the chapter does not claim a statutory rate. The RBI framework was not read in full.
+- 17-9: the 15,000-40,000 rupee range is a market estimate, not a published fee; it is graded B and marked disputed, which is the right treatment.
+- 17-5 and 17-11: MWPSCA 2007 section 2(j) defines the Tribunal as the Maintenance Tribunal constituted under section 7; that reading was confirmed in the previous audit and is unchanged.
+- 17-13: NICE NG97 recommendations 1.1.12, 1.2.1, 1.2.2 and 1.2.6, and the Clarfield figures (39 studies, 5,620 patients, 9.0 per cent potentially reversible, 0.6 per cent improved), were confirmed in the previous audit and are unchanged.
+- 17-12, sources line: the tip now cites the Code on Social Security, 2020 in the benefit but the sources field still lists only the OSH Code 2020, the CCS (Leave) Rules 1972 and the Ministry of Labour and Employment. Adding the Code to the sources would be tidier; it is not blocking, because the ministry source covers the Code and the claim is a passing aside.
+- 17-1, sources: the RPwD Act link points at indiacode.nic.in, which returns 403 to this verifier. The link is the correct official location; the 403 is an access failure, not a wrong citation.
 
 ## Safety and editorial check
 
-- No unsupported high-risk claim: 17-5, 17-7 and 17-9 check out against the named instruments; 17-12's negative claim is correct but rests on a repealed statute.
-- No invented scheme, number or hotline: no invented scheme or hotline remains; the Chinese LTCI pilot, CBIRC and provincial leave entitlements are all removed.
-- No direct equivalent recorded where needed: 17-1 (guardianship), 17-6 (insurance), 17-8 (LTCI), 17-11 (deposit cap) and 17-12 (elder-care leave) each say India has no equivalent rather than implying one.
-- Caveats retained: caveats present throughout; 17-6's caveat correctly reframes 6/8/10% as warning signs.
+- No new high-risk claim was introduced by the three edits: the guardianship sentence is a statement of statutory power with its limits attached ("limited and disability-specific"), the will sentence states the minimum formality and adds that having both witnesses present is "safer practice, not a legal requirement", and the maternity aside is a scoping remark inside a tip about elder-care leave.
+- No invented statute, section or number: all three citations resolve to the sections named.
+- The chapter still states its absences rather than importing a foreign rule, and the 17-2 attestation caveat that protects the reader is intact.
 
-## Blocking issues
+## Banned-term check
 
-- 17-12 (benefit and sources): "The Factories Act, 1948 and the state Shops and Establishments Acts set hours, weekly rest and leave entitlement ..." and the source line "Factories Act, 1948. <https://www.indiacode.nic.in/>" present a statute repealed on 21 November 2025 as current law. Correction: cite "The Occupational Safety, Health and Working Conditions Code, 2020 (sections 25 and 32)" and drop the Factories Act source URL.
+- JSON: 0 banned terms
+- `npx tsx scripts/check-chapter.ts 17`: exit 0, "chapter 17 (17-elderly-at-home.json): 13 tips / PASS: no banned term, CJK character or foreign-jurisdiction term."
 
-Verdict: FAIL
+## New blocking items
+
+None found in this pass. The three previous blocking items are corrected, and the edits introduced no new factual or statutory error.
+
+Verdict: PASS

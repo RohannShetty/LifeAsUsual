@@ -4,7 +4,7 @@
   "title": "After a Major Blow",
   "intro": "Chapter 29: After a Major Blow",
   "edition": "india",
-  "rewriteStatus": "draft",
+  "rewriteStatus": "checked",
   "tips": [
     {
       "id": "29-1",
@@ -29,7 +29,7 @@
       "evidenceGrade": "A",
       "sources": "Ministry of Home Affairs, Emergency Response Support System (112). <https://www.mha.gov.in/>; Mostofsky E, et al. (2012). Risk of acute myocardial infarction after the death of a significant person in one's life: the Determinants of Myocardial Infarction Onset Study. Circulation. <https://doi.org/10.1161/CIRCULATIONAHA.111.061770>; Carey IM, et al. (2014). Increased risk of acute cardiovascular events after partner bereavement: a matched cohort study. JAMA Internal Medicine. <https://doi.org/10.1001/jamainternmed.2013.14558>",
       "caveats": "Practical steps are easy to follow: ask someone else to manage your medication rather than relying on memory alone. Avoid long-distance travel during this period, and do not try to cope by drinking alcohol — details on alcohol’s effects are covered in Section 2. Recognizing heart attacks and strokes, plus instructions on calling emergency services, are explained in Section 13. Both studies referenced here rely on retrospective population data, so it’s hard to determine exactly how many participants would have developed these conditions anyway. Yet both studies point to the same general trend and timeframe. For anyone unable to arrange help or who must remain alone during these days, please see point 6 in this section.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "29-2",
@@ -54,7 +54,7 @@
       "evidenceGrade": "A",
       "sources": "Fang F, et al. (2012). Suicide and cardiovascular death after a cancer diagnosis. New England Journal of Medicine. <https://doi.org/10.1056/NEJMoa1110307>",
       "caveats": "These figures apply specifically to cancer patients. No comparable data exist for other serious diagnoses. The actual number of people affected remains low: a total of 6,073,240 individuals were included in the study, and the first‑week suicide rate is 2.50 per 1,000 person‑years, i.e., only 2.5 cases per 1,000 people each year. This information is provided not to frighten, but to emphasize the importance of having someone present during those initial days. Long‑term management, insurance coverage, and follow‑up care are discussed in Sections 16 and 24. For those unable to find a companion, see point 6 in this section, which suggests enlisting neighbours or community contacts instead.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "29-3",
@@ -79,7 +79,7 @@
       "evidenceGrade": "A",
       "sources": "Ministry of Labour and Employment. <https://labour.gov.in/>; Roelfs DJ, et al. (2011). Losing life and livelihood: a systematic review and meta-analysis of unemployment and all-cause mortality. Social Science & Medicine. <https://doi.org/10.1016/j.socscimed.2011.01.005>",
       "caveats": "These findings come from observational studies, so a direct cause‑and‑effect relationship cannot be proven; it’s also possible that poorer health contributes to unemployment. Nevertheless, the 24% reduction in risk after adjusting for health behaviors offers a useful direction for intervention. Details on eligibility for unemployment benefits, how to apply, and how to keep ESIC or state health cover active are provided in Section 7. Information on severance pay and why you should avoid voluntarily resigning can be found in Section 19.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "29-4",
@@ -104,7 +104,7 @@
       "evidenceGrade": "A",
       "sources": "Tele-MANAS, Ministry of Health and Family Welfare. <https://telemanas.mohfw.gov.in/>; Erlangsen A, et al. (2017). Association Between Spousal Suicide and Mental, Physical, and Social Health Outcomes: A Longitudinal and Nationwide Register-Based Study. JAMA Psychiatry. <https://doi.org/10.1001/jamapsychiatry.2017.0226>; Pitman A, et al. (2014). Effects of suicide bereavement on mental health and suicide risk. The Lancet Psychiatry. <https://doi.org/10.1016/S2215-0366(14)70224-X>; Kristensen P et al. (2012). Bereavement and mental health after sudden and violent losses: a review. Psychiatry. <https://doi.org/10.1521/psyc.2012.75.1.76> (The summary in the notes)",
       "caveats": "Sudden, violent deaths refer to accidents, homicides, or disasters. After such events, rates of PTSD, depression, and prolonged grief are higher than after deaths from natural causes, and recovery tends to be slower. Guidance on handling suicidal thoughts is provided in Section 1, Item 25.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "29-5",
@@ -129,7 +129,7 @@
       "evidenceGrade": "A",
       "sources": "Moon JR, et al. (2011). Widowhood and mortality: a meta-analysis. PLoS ONE. <https://doi.org/10.1371/journal.pone.0023465>; Shor E, et al. (2012). Widowhood and mortality: a meta-analysis and meta-regression. Demography. <https://doi.org/10.1007/s13524-012-0096-x>",
       "caveats": "These findings come from retrospective analyses of population data; other confounding factors cannot be completely ruled out because spouses naturally share similar lifestyles and health patterns. Nevertheless, the consistent pattern — a markedly higher risk in the first half‑year compared to later periods — observed in two independent meta‑analyses makes this period a worthwhile window for extra care. Men tend to have higher risk and are less likely to ask for help. Families with bereaved elders should follow Section 17 to sort out accounts, guardianship, and wills. For those who cannot find such a person — whether living alone, having no surviving children, or lacking any close relatives — they should turn to community resources and mobile tools as described in Section 6.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "29-6",
@@ -154,7 +154,7 @@
       "evidenceGrade": "B",
       "sources": "Udell JA, et al. (2012). Living alone and cardiovascular risk in outpatients at risk of or with atherothrombosis. Archives of Internal Medicine. <https://doi.org/10.1001/archinternmed.2012.2782>; Elderline, Ministry of Social Justice and Empowerment. <https://elderline.gov.in/>; Ministry of Social Justice and Empowerment. <https://socialjustice.gov.in/>",
       "caveats": "Here is how to implement each of the three steps. First, give a spare key or temporary lock code to a neighbor or building manager and let them know you will be alone for a few days; no deep friendship is needed, just someone who knows you’re home. Second, ask your ward office or residents’ welfare association to add you to any check-in list, and ask the local ASHA worker what home visits or free safety devices are available. Third, program your phone with emergency contacts and a medical ID card, and keep it on and unmuted during this period. The “B” rating stems from two factors. One, the link between living alone and higher mortality was identified through retrospective data analysis; it remains possible that poorer health or socioeconomic status predispose people to both solitude and earlier death, a confounding factor the original paper itself acknowledges. Two, the outreach policy applies only to seniors; younger adults lack comparable statutory support. However, the same document obliges community workers to “spot early signs of psychological distress such as family loss, unemployment, or school dropout” — a point echoed in Section 11, which notes that calling Tele-MANAS on 14416 can provide needed companionship. Why having someone nearby matters is illustrated in Section 13, where cardiac arrest outside hospitals occurs in 79.2% of cases at home; survival rates jump from 3.9% when no one is present to 16.1% when a bystander performs CPR. Being alone therefore places you in the lower‑survival bracket. Additionally, arranging regular outings — such as daily trips to handle funeral paperwork, visit health clinics, or deal with the ward office — can become part of your routine, making it easier to stay active. The helpline can be contacted repeatedly, not just once, as mentioned in Section 11. Finally, while living alone is a long‑term risk factor (Section 22 cites a hazard ratio of 1.32), for the immediate period described here the three practical measures provide the greatest protective benefit.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "29-7",
@@ -179,7 +179,7 @@
       "evidenceGrade": "B",
       "sources": "Li J, et al. (2014). Mortality after parental death in childhood: a nationwide cohort study from three Nordic countries. PLoS Medicine. <https://doi.org/10.1371/journal.pmed.1001679>",
       "caveats": "When speaking to your child, do not make up stories such as “Mom or Dad has gone away on a trip.” Any arrangements regarding guardianship and upbringing must be put in writing. Whether to transfer schools or send the child to live elsewhere has no direct trial or guideline literature; the author's assessment is that minimizing unnecessary upheaval in the child's daily routine is generally advisable. This recommendation is graded B not because the figures lack solidity; these statistics come from longitudinal studies of entire populations in three countries, which would merit an A rating on their own. The lower grade reflects the absence of direct experimental evidence linking these mortality figures to specific ways of communicating with children or involving them in funerals. The authors also point out that data on parent-child relationships and children’s lifestyles after such a loss are lacking. Both genetic factors and long-term effects of bereavement contribute to these elevated mortality rates. Details on designated guardians and property arrangements can be found in Section 17, while information on child support and schooling is covered in Section 18.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "29-8",
@@ -204,7 +204,7 @@
       "evidenceGrade": "A",
       "sources": "Lundorff M, et al. (2017). Prevalence of prolonged grief disorder in adult bereavement: A systematic review and meta-analysis. Journal of Affective Disorders. <https://doi.org/10.1016/j.jad.2017.01.030>; Prigerson HG, et al. (2009). Prolonged grief disorder: Psychometric validation of criteria proposed for DSM-V and ICD-11. PLoS Medicine. <https://doi.org/10.1371/journal.pmed.1000121>; Shear MK, et al. (2005). Treatment of complicated grief: a randomized controlled trial. JAMA. <https://doi.org/10.1001/jama.293.21.2601>",
       "caveats": "Don’t fixate on exact time limits. The real indicator is whether grief interferes with eating, sleeping, work, or childcare — if so, it’s time to seek help. The appropriate clinics are psychiatry, psychology, or clinical psychology departments, all of which are available at public psychiatric hospitals. This condition is known as prolonged grief disorder or complex grief in various sources; required duration varies from six to twelve months across different guidelines. The 9.8% prevalence figure stems from 14 studies with differing methodologies, so authors caution that it may not apply universally to all populations.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "29-9",
@@ -229,7 +229,7 @@
       "evidenceGrade": "A",
       "sources": "Currier JM, et al. (2008). The effectiveness of psychotherapeutic interventions for bereaved persons: a comprehensive quantitative review. Psychological Bulletin. <https://doi.org/10.1037/0033-2909.134.5.648>; Wittouck C, et al. (2011). <https://doi.org/10.1016/j.cpr.2010.09.005>; Bonanno GA, et al. (2002). Resilience to loss and chronic grief: a prospective study from preloss to 18-months postloss. Journal of Personality and Social Psychology. <https://doi.org/10.1037/0022-3514.83.5.1150>; Stroebe M et al. (2007). Health outcomes of bereavement. Lancet. <https://doi.org/10.1016/S0140-6736(07)61816-9> (review in the notes)",
       "caveats": "This recommendation means “not everyone needs it” rather than “no one should get it.” Those in high-risk groups per item 4 (bereaved after suicide, accidents or violent deaths) and those meeting the criteria in item 8 (grief that has become stuck and warrants psychiatric evaluation) are precisely the individuals for whom such counseling is supported by evidence. This same conclusion appears in a review published in The Lancet. Grief itself is not a disease, and most people do not require professional intervention. Resources should instead be directed toward high-risk individuals and those already suffering from complicated grief, post-loss depression or post-traumatic stress disorder.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "29-10",
@@ -254,7 +254,7 @@
       "evidenceGrade": "A",
       "sources": "Ministry of Women and Child Development. <https://wcd.gov.in/>; Sbarra DA, et al. (2011). Divorce and Death: A Meta-Analysis and Research Agenda for Clinical, Social, and Health Psychology. Perspectives on Psychological Science. <https://doi.org/10.1177/1745691611414724>",
       "caveats": "The source only notes a “significant rise” and provides group comparisons without specific risk‑ratio figures, so no exact numbers are reported here. Given that the evidence points to a clear direction but lacks a quantifiable threshold, the overall benefit is rated as moderate. Property, maintenance and dowry-related issues at the time of divorce are covered in Sections 8 and 10; child‑custody arrangements are discussed in Section 18.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "29-11",
@@ -279,7 +279,7 @@
       "evidenceGrade": "B",
       "sources": "Tele-MANAS, Ministry of Health and Family Welfare. <https://telemanas.mohfw.gov.in/>; Ministry of Health and Family Welfare, District Mental Health Programme. <https://mohfw.gov.in/>; Childline India, Ministry of Women and Child Development. <https://wcd.gov.in/>",
       "caveats": "Coverage and opening hours vary by state, so keep trying or use the nearest government hospital if the line is busy. A psychologist can offer talking therapy; only a qualified psychiatrist can diagnose and prescribe medicine. Check that any private practitioner is registered with the state medical council or the Rehabilitation Council of India, and treat hourly-fee “healing” or “spiritual counselling” services outside that framework with caution.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "29-12",
@@ -304,7 +304,7 @@
       "evidenceGrade": "B",
       "sources": "Author's experience, no direct literature; \"Family accident, unemployment, dropping out of school\" as psychological crisis risk expressions can be found in the Ministry of Health and Family Welfare, National Mental Health Programme. <https://mohfw.gov.in/>; Tele-MANAS. <https://telemanas.mohfw.gov.in/>",
       "caveats": "If you have no such neutral third party nearby, call 14416 and explain your situation (see item 11 in this section on using this line to talk to someone). You can also write down your thoughts and reread them after three days. The “three‑month” timeframe is an author‑set guideline with no scholarly backing, which is why the benefit is rated moderate and the evidence grade is B. Common scams targeting bereaved individuals and seniors are covered in sections 17 (investment and housing schemes) and 6 (fortune‑telling). Pitfalls related to guarantees and promissory notes are discussed in section 8. A few financial actions must be handled promptly and cannot be postponed: withdrawing your EPF balance, claiming ESIC or insurance benefits, and receiving compensation for a work‑related death — details are provided in sections 25 and 19.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "29-13",
@@ -329,7 +329,7 @@
       "evidenceGrade": "A",
       "sources": "Insurance Act, 1938 (section 45). <https://www.indiacode.nic.in/>; Insurance Regulatory and Development Authority of India. <https://irdai.gov.in/>; Employees’ State Insurance Corporation. <https://esic.gov.in/>; Code on Social Security, 2020. <https://labour.gov.in/labour-codes>; Indian Succession Act, 1925. <https://www.indiacode.nic.in/>",
       "caveats": "This entry covers money only. Other entries in this section and Section 1 aim to prevent such situations. The suicide exclusion period and the three-year limit in section 45 are separate rules; do not confuse them. Health risks for family members are described in item 4. For help with suicidal thoughts, see Sections 1.25 and 1.32; for life after a suicide attempt, see Section 1.33. The work-injury benefits are described in Section 19.15, and the estate procedures in Section 25.9.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "29-14",
@@ -353,8 +353,8 @@
       "benefit": "International estimates put the lifetime prevalence of PTSD at about 3.9% of the general population, and about 8% of people exposed to a traumatic event develop PTSD. The ICD-11 and DSM-5 criteria share the same core clusters described here. Core symptom clusters comprise: (1) intrusive re-experiencing (flashbacks, repetitive nightmares); (2) persistent active avoidance of trauma-related stimuli; and (3) persistent physiological hyperarousal (hypervigilance, exaggerated startle response, insomnia). Diagnostic criteria require symptom persistence beyond one month causing significant functional impairment. A comprehensive 2020 meta-analysis of 114 randomized controlled trials (8,171 participants) demonstrated that Trauma-Focused Cognitive Behavioral Therapy (TF-CBT) produced large reductions in PTSD symptoms compared to waitlist or treatment-as-usual (standardized mean difference SMD −1.32; 95% CI −1.57 to −1.08; moderate-quality evidence). Eye Movement Desensitization and Reprocessing (EMDR) similarly showed substantial efficacy (SMD −1.23; 95% CI −1.69 to −0.76). In contrast, non-directive supportive counseling showed no significant advantage over waitlist controls (−0.43; 95% CI −0.90 to 0.04). UK NICE Clinical Guideline (NG116) recommends 8–12 sessions of individual trauma-focused CBT for individuals presenting with clinically significant PTSD symptoms beyond 1 month, and EMDR for chronic presentations beyond 3 months. Regarding immediate post-incident debriefing: a Cochrane systematic review of 11 trials revealed that single-session individual psychological debriefing failed to alleviate psychological distress or prevent PTSD (OR 1.22; 95% CI 0.60–2.46), with 1-year follow-up showing an elevated risk of PTSD in debriefed individuals (OR 2.88; 95% CI 1.11–7.53). A 3-year randomized trial of motor vehicle accident victims found that the debriefing cohort had significantly worse psychological distress, travel anxiety, pain, and functional impairment at 3 years. Consequently, NICE guidelines explicitly instruct clinicians and organizations never to offer psychological debriefing for trauma prevention.",
       "evidenceGrade": "A",
       "sources": "Lewis C, et al. (2020). Psychological therapies for post-traumatic stress disorder in adults: systematic review and meta-analysis. European Journal of Psychotraumatology. <https://doi.org/10.1080/20008198.2020.1729633>; Bisson JI, et al. (2013). Psychological therapies for chronic post-traumatic stress disorder (PTSD) in adults. Cochrane Database of Systematic Reviews, CD003388. <https://doi.org/10.1002/14651858.CD003388.pub4>; Rose S, et al. (2002). Psychological debriefing for preventing post traumatic stress disorder (PTSD). Cochrane Database of Systematic Reviews, CD000560. <https://doi.org/10.1002/14651858.CD000560>; Mayou RA, Ehlers A, Hobbs M (2000). Psychological debriefing for road traffic accident victims. Three-year follow-up of a randomised controlled trial. British Journal of Psychiatry. <https://doi.org/10.1192/bjp.176.6.589>; National Institute for Health and Care Excellence (2018). Post-traumatic stress disorder (NG116), recommendations 1.6.4, 1.6.5, 1.6.15–1.6.19. <https://www.nice.org.uk/guidance/ng116/chapter/Recommendations>; World Health Organization, post-traumatic stress disorder fact sheet. <https://www.who.int/news-room/fact-sheets/detail/post-traumatic-stress-disorder>",
-      "caveats": "Psychological debriefing involves gathering affected individuals within days of an incident to recount the event and their emotional reactions. If your employer or school organizes mandatory debriefing sessions, you are not obligated to disclose personal details. During the first month following trauma, prioritize basic safety, regular sleep, nutrition, and support from loved ones. If symptoms remain acute past 30 days, consult a psychiatric or clinical psychology hospital department and specifically request trauma-focused psychotherapy (such as prolonged exposure, cognitive processing therapy, or EMDR). Do not waste money on generic grief counseling immediately post-loss (see Chapter 29, Rule 9). Immediate post-assault healthcare protocols are covered in Chapter 13, Rule 42. Work-related PTSD in first responders (police, firefighters, medical emergency personnel) is not listed as an occupational disease under ESIC or the Code on Social Security, 2020, so compensation is not automatic.",
-      "reviewStatus": "draft"
+      "caveats": "Psychological debriefing involves gathering affected individuals within days of an incident to recount the event and their emotional reactions. If your employer or school organizes mandatory debriefing sessions, you are not obligated to disclose personal details. During the first month following trauma, prioritize basic safety, regular sleep, nutrition, and support from loved ones. If symptoms remain acute past 30 days, consult a psychiatric or clinical psychology hospital department and specifically request trauma-focused psychotherapy (such as prolonged exposure, cognitive processing therapy, or EMDR). Do not waste money on generic grief counseling immediately post-loss (see Chapter 29, Item 9). Immediate post-assault healthcare protocols are covered in Chapter 13, Item 42. Work-related PTSD in first responders (police, firefighters, medical emergency personnel) is not listed as an occupational disease under ESIC or the Code on Social Security, 2020, so compensation is not automatic.",
+      "reviewStatus": "independently-checked"
     }
   ]
 }

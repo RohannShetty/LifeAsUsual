@@ -4,7 +4,7 @@
   "title": "Emergencies: What to Do First",
   "intro": "Chapter 13: Emergencies: What to Do First",
   "edition": "india",
-  "rewriteStatus": "draft",
+  "rewriteStatus": "checked",
   "tips": [
     {
       "id": "13-1",
@@ -29,7 +29,7 @@
       "evidenceGrade": "A",
       "sources": "Sasson C et al. (2010). Predictors of survival from out-of-hospital cardiac arrest: a systematic review and meta-analysis. Circulation: Cardiovascular Quality and Outcomes. <https://doi.org/10.1161/CIRCOUTCOMES.109.889576>; National Disaster Management Authority. <https://ndma.gov.in/>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>",
       "caveats": "Do not pinch the philtrum first, do not look for family members, and do not record a video. Also, do not hesitate to press hard for fear of breaking ribs.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "13-2",
@@ -54,7 +54,7 @@
       "evidenceGrade": "B",
       "sources": "Motor Vehicles Act, 1988 (section 134A, protection for Good Samaritans). <https://www.indiacode.nic.in/>; Ministry of Road Transport and Highways. <https://morth.nic.in/>; Ministry of Health and Family Welfare, National Programme for Health Care of the Elderly. <https://mohfw.gov.in/>; World Health Organization, Falls. <https://www.who.int/news-room/fact-sheets/detail/falls>; Supreme Court of India, SaveLIFE Foundation v. Union of India (2016) 7 SCC 194. <https://indiankanoon.org/>",
       "caveats": "This grade is assigned because the guidelines describe proper procedures but provide no quantitative data on how many lives they actually save. Section 134A of the Motor Vehicles Act, 1988 protects a Good Samaritan who helps a road-accident victim from civil and criminal liability, but it does not cover moving an injured person unnecessarily, so waiting for 112 remains the safer choice. After dialing 112, stay on the line and follow the dispatcher's instructions. This advice is primarily intended for one's own elderly relatives and acquaintances. For strangers on the street, walking away is legal: Indian law creates no general duty to rescue a stranger. That said, once you stop, you must weigh all associated costs: time spent, leaving your contact details, contact potential from family members, possible legal action, workplace repercussions, and even online backlash. For fall prevention, refer to Section 1, Item 13 (balance and leg-strength training); delayed symptoms following head trauma are covered in Section 10; financial recourse after injury sustained while rescuing others is addressed in Section 39; and evidence collection and reporting in cases of online harassment are outlined in Section 8, Item 16.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "13-3",
@@ -79,7 +79,7 @@
       "evidenceGrade": "A",
       "sources": "Emberson J, Lees KR, Lyden P, et al. (2014). Effect of treatment delay, age, and stroke severity on the effects of intravenous thrombolysis with alteplase for acute ischaemic stroke: a meta-analysis of individual patient data from randomised trials. Lancet, 384(9958), 1929-1935. <https://doi.org/10.1016/S0140-6736(14)60584-5>; National Disaster Management Authority. <https://ndma.gov.in/>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>",
       "caveats": "Thrombolysis involves administering medication to clear blocked blood vessels; the earlier it is given, the greater its effectiveness. After 4.5 hours, it provides little to no benefit. Calling 112 instead of driving is essential because the ambulance can take the patient straight to a hospital with a CT scanner and a stroke team, and staff can be alerted in advance. In India, 112 is the ERSS number that reaches police, fire and ambulance; 108 is the state ambulance service in most states. Recording the exact time symptoms began helps doctors determine whether thrombolysis is still appropriate. Never give water or medicine, and never wait “to see if things get better on their own.”",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "13-4",
@@ -104,7 +104,7 @@
       "evidenceGrade": "B",
       "sources": "Aroor S, Singh R, Goldstein LB (2017). BE-FAST (Balance, Eyes, Face, Arm, Speech, Time): Reducing the Proportion of Strokes Missed Using the FAST Mnemonic. Stroke, 48(2), 479-481. <https://doi.org/10.1161/STROKEAHA.116.015169>; National Disaster Management Authority. <https://ndma.gov.in/>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>",
       "caveats": "Infarctions affecting the cerebellum or brainstem — known as posterior circulation strokes — often lack facial droop or limb weakness. Instead, they manifest as vertigo, gait deviation, double vision, or difficulty swallowing, which are frequently mistaken for cervical spine disorders, hypoglycemia, or benign paroxysmal positional vertigo. Inability to touch one’s nose or maintain balance with eyes closed are telltale signs of cerebellar involvement. However, no single test can definitively rule out stroke; any sudden onset of these symptoms demands immediate emergency care and accurate timing recording. This study relied on records from a single medical center, and the authors themselves acknowledge the need for further validation.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "13-5",
@@ -129,7 +129,7 @@
       "evidenceGrade": "B",
       "sources": "Mac Grory B, Schrag M, Biousse V, et al. (2021). Management of Central Retinal Artery Occlusion: A Scientific Statement From the American Heart Association. Stroke, 52(6), e282-e294. <https://doi.org/10.1161/STR.0000000000000366>; Rothwell PM, Giles MF, Chandratheva A, et al. (2007). Effect of urgent treatment of transient ischaemic attack and minor stroke on early recurrent stroke (EXPRESS study): a prospective population-based sequential comparison. Lancet, 370(9596), 1432-1442. <https://doi.org/10.1016/S0140-6736(07)61448-2>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>",
       "caveats": "The grade B rating is due to the fact that EXPRESS was not a randomized trial; it compared outcomes before and after implementing the new protocol within the same patient population, making it difficult to isolate the effect of the intervention from other potential changes. A brief episode of darkness in one eye that resolves on its own is often dismissed as fatigue or low blood sugar. In reality, it is a type of transient ischemic attack, and the ensuing days are a critical window for stroke risk. Sudden, painless, non‑red, non‑teary loss of vision in one eye must be taken seriously. Do not wait until the next day for an ophthalmology appointment; go directly to the emergency department of a hospital equipped to handle strokes.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "13-6",
@@ -154,7 +154,7 @@
       "evidenceGrade": "B",
       "sources": "Zhou L, Wu S, Wang Y, Bao X, Peng T, Luo W, Ortega-Usobiaga J (2022). Clinical presentation of acute primary angle closure during the COVID-19 epidemic lockdown. Frontiers in Medicine, 9, 1078237. <https://doi.org/10.3389/fmed.2022.1078237>; Sung MS, Kim HJ, Park SW (2023). Predictors of long-term visual field outcome after an episode of acute primary angle closure. Clinical & Experimental Ophthalmology, 51(4), 291-299. <https://doi.org/10.1111/ceo.14206>; Wang J, Wang J, Ng TK, Huang C (2025). Asymmetric intraocular pressure changes in dominant and contralateral eyes: the dark room prone provocative test. Seminars in Ophthalmology, 40(4), 325-331. <https://doi.org/10.1080/08820538.2024.2443972>; Ministry of Health and Family Welfare, National Programme for Control of Blindness and Visual Impairment. <https://mohfw.gov.in/>",
       "caveats": "There are two main reasons this is graded B. First, the Wuhan comparison relied on reviewing old medical records, and the lockdown itself introduced other differences that can’t be separated from the effect of delayed treatment. Second, the South Korean study involved only 50 eyes and was retrospective. This does not mean screen time causes glaucoma; in the dark, pupils dilate, and prolonged head-down posture pushes the lens forward, especially in people with naturally shallow anterior chambers. Those at highest risk are over 50, farsighted, or with a family history of angle-closure glaucoma. Young people who game all night are unlikely to develop this condition. Common misdiagnoses during an attack include gastroenteritis, migraine, or high blood pressure, since headache and vomiting are more noticeable than eye symptoms. Sudden, painless vision loss in one eye is a separate issue — see item 5 (sudden blackout in one eye). Whether blue-light blocking glasses help is discussed in section 6, item 16 (blue-light blocking glasses).",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "13-7",
@@ -179,7 +179,7 @@
       "evidenceGrade": "B",
       "sources": "Karkabi B, Meir G, Zafrir B, et al. (2021). Door-to-balloon time and mortality in patients with ST-elevation myocardial infarction. European Heart Journal - Quality of Care and Clinical Outcomes. <https://doi.org/10.1093/ehjqcco/qcaa037>; National Disaster Management Authority. <https://ndma.gov.in/>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>",
       "caveats": "This study compares outcomes based on the time elapsed after hospital admission, not from the onset of symptoms to arrival at the hospital. However, the underlying principle remains the same: any delay results in additional heart muscle damage. The pain may also be felt in the upper abdomen, back, or jaw, and numbness in the left arm can also be a symptom. Diabetic patients and older adults may not experience any pain at all, only shortness of breath. Again, do not drive yourself — losing consciousness while driving can easily cause another accident.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "13-8",
@@ -204,7 +204,7 @@
       "evidenceGrade": "B",
       "sources": "Hagan PG, Nienaber CA, Isselbacher EM, et al. (2000). The International Registry of Acute Aortic Dissection (IRAD): new insights into an old disease. JAMA, 283(7), 897-903. <https://doi.org/10.1001/jama.283.7.897>; National Disaster Management Authority. <https://ndma.gov.in/>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>",
       "caveats": "Management of aortic dissection is completely opposite to that of heart attacks. Heart attacks require anticoagulant and thrombolytic drugs to prevent blood clotting; applying such drugs to aortic dissection would essentially encourage bleeding at the tear site. Therefore, upon arriving at the hospital, patients must clearly state “a tearing pain that’s moving downward” to prompt doctors to order enhanced CT scans. A notable difference in blood pressure between arms or absence of a pulse on one side are also important warning signs. Individuals with poorly controlled blood pressure, Marfan syndrome, or a family history of aortic aneurysm or dissection are at higher risk. In such cases, driving oneself to the hospital is strongly discouraged; symptoms must be addressed immediately rather than waiting until the next day.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "13-9",
@@ -229,7 +229,7 @@
       "evidenceGrade": "A",
       "sources": "Perry JJ, Stiell IG, Sivilotti MLA, et al. (2013). Clinical decision rules to rule out subarachnoid hemorrhage for acute headache. JAMA, 310(12), 1248-1255. <https://doi.org/10.1001/jama.2013.278018>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>",
       "caveats": "It’s not “how painful it is” that matters, but “how fast it reaches peak pain.” Headaches that erupt within seconds to a minute are the real warning sign; gradually worsening migraines are not. Additional symptoms like vomiting, neck stiffness, light sensitivity, or brief fainting also warrant immediate attention. With a specificity of just 15.3%, most people who follow this rule end up with normal results. Yet missing even one case of bleeding can be fatal, so getting tested is absolutely worthwhile. Do not take painkillers to mask the pain and then fall asleep.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "13-10",
@@ -257,7 +257,7 @@
       "evidenceGrade": "B",
       "sources": "Dziho A et al. (2025). Global prevalence and incidence of chronic subdural hematoma: A systematic review. Brain and Spine, 5, 105893. <https://doi.org/10.1016/j.bas.2025.105893>; Mathon B, Shotar E (2026). Diagnostic and therapeutic management of chronic subdural hematoma in elderly patients. Gériatrie et Psychologie Neuropsychiatrie du Vieillissement, 24(1), 30-41. <https://doi.org/10.1684/pnv.2026.1274>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>",
       "caveats": "At the time of injury, there may be absolutely no symptoms, and the elderly person might not even recall the incident. Therefore, when families notice sudden confusion, unsteady walking, excessive sleepiness, or unilateral weakness, they should first check whether a head injury occurred in the past two to three months before ordering a CT scan. It’s crucial not to automatically attribute these symptoms to “senile dementia” or “post-stroke sequelae,” as doing so could lead to delayed diagnosis. Elderly individuals taking aspirin, clopidogrel, warfarin, or newer oral anticoagulants face higher risks, as does long-term heavy alcohol consumption. For fall prevention, refer to Section 1, Item 13 — focusing on balance training and leg strength exercises.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "13-11",
@@ -282,7 +282,7 @@
       "evidenceGrade": "B",
       "sources": "Goldhaber SZ, Visani L, De Rosa M (1999). Acute pulmonary embolism: clinical outcomes in the International Cooperative Pulmonary Embolism Registry (ICOPER). Lancet, 353(9162), 1386-1389. <https://doi.org/10.1016/S0140-6736(98)07534-5>; WHO (2007). Study results released on travel and blood clots. <https://www.who.int/news/item/29-06-2007-study-results-released-on-travel-and-blood-clots>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>",
       "caveats": "Swelling in both legs is usually linked to issues involving the heart, liver, kidneys, or venous function. Sudden swelling of just one leg, noticeably larger than the other, is a classic sign of deep vein thrombosis. High-risk situations include long car or plane trips, bed rest after surgery or a fracture, wearing a cast, pregnancy and the postpartum period, cancer, and oral contraceptive use. When a clot breaks loose and blocks a pulmonary artery, pulmonary embolism results — marked by sudden shortness of breath, worsening chest pain with deep breaths, rapid heartbeat, dizziness, and sometimes coughing up blood. In such cases, call 112 immediately. The 17.4% figure reflects mortality among confirmed pulmonary embolism cases, not the overall risk associated with leg swelling alone; don’t let this number cause undue alarm.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "13-12",
@@ -307,7 +307,7 @@
       "evidenceGrade": "A",
       "sources": "Teixeira PGR et al. (2018). Civilian Prehospital Tourniquet Use Is Associated with Improved Survival in Patients with Peripheral Vascular Injury. Journal of the American College of Surgeons. <https://doi.org/10.1016/j.jamcollsurg.2018.01.047>; Kragh JF et al. (2009). Survival with emergency tourniquet use to stop bleeding in major limb trauma. Annals of Surgery. <https://doi.org/10.1097/SLA.0b013e31818842ba>; National Disaster Management Authority. <https://ndma.gov.in/>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>",
       "caveats": "Never use thin materials such as rope or shoelaces as tourniquets; they cannot sufficiently constrict arteries and may cut the skin. Once a tourniquet is applied, do not loosen it periodically to “release blood flow.” Compression only applies to neck and torso injuries—never a tourniquet. No amputations resulted from tourniquet use in the battlefield data; transient nerve paralysis occurred in four cases. For arm bleeding, position the tourniquet on the upper third of the arm; for leg bleeding, place it near the groin. Avoid applying it to forearms, calves, elbows, or knees. Experts recommend keeping tourniquet application time under two hours total before reaching medical care; however, if reaching a facility proves impossible and no other method works, leave it on until professional help arrives. Improvised tourniquets made from belts, ties, or sleeves alone rarely suffice; they must be twisted tightly using a stick or similar tool to be effective.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "13-13",
@@ -332,7 +332,7 @@
       "evidenceGrade": "A",
       "sources": "WHO. Rabies Live reports. <https://www.who.int/en/news-room/fact-sheets/detail/rabies>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>",
       "caveats": "Never skip treatment on the assumption that a pet is vaccinated or well‑tended; guidelines base classification strictly on wound severity, not on the animal’s status. Do not attempt to bandage the wound yourself. The ten‑day observation method may inform whether to discontinue vaccination, but it never negates the need to begin it. The same protocol applies to bites inflicted by wild animals or bats.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "13-14",
@@ -357,7 +357,7 @@
       "evidenceGrade": "A",
       "sources": "Griffin BR, Frear CC, Babl F, Oakley E, Kimble RM (2020). Cool Running Water First Aid Decreases Skin Grafting Requirements in Pediatric Burns: A Cohort Study of Two Thousand Four Hundred Ninety-five Children. Annals of Emergency Medicine, 75(1), 75-85. <https://doi.org/10.1016/j.annemergmed.2019.06.028>; Griffin B, Cabilan CJ, Ayoub B, et al. (2022). The effect of 20 minutes of cool running water first aid within three hours of thermal burn injury on patient outcomes: A systematic review and meta-analysis. Australasian Emergency Care, 25(4), 367-376. <https://doi.org/10.1016/j.auec.2022.05.004>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>",
       "caveats": "Use cool water, not ice water, as ice application can worsen burn damage. If clothing sticks to the wound, do not pull it off forcefully; after rinsing, cover the area with a clean cloth and seek medical care. Avoid applying toothpaste, soy sauce, sesame oil, or flour to the burn, as these substances can interfere with doctors’ assessment of injury severity and increase infection risk. Rinsing within 3 hours of injury remains beneficial even if done later than initially intended.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "13-15",
@@ -382,7 +382,7 @@
       "evidenceGrade": "B",
       "sources": "et al. (2022). Clinical Practice Guidelines for Anaphylactic Shock Emergency Care (2020). Frontiers in Pharmacology: \"Epinephrine is the first-line medicine in GRADE II to IV anaphylaxis\" \"Intramuscular epinephrine should be injected in the mid-anterolateral thigh\", upper limit of intramuscular injection in adults: 0.5 mg, under 14 years of age: 0.3 mg, repeat every 5–15 minutes if no response. <https://doi.org/10.3389/fphar.2022.845689>; Muraro A, et al. (2022). EAACI guidelines: Anaphylaxis (2021 update). Allergy. <https://doi.org/10.1111/all.15032>; National Disaster Management Authority. <https://ndma.gov.in/>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>",
       "caveats": "The EAACI allergy guidelines themselves note that “most evidence in this field remains at a low level.” They still classify epinephrine as a strongly recommended treatment because its benefits far outweigh the risks, rather than because of large-scale clinical trials. The best immediate action is to call 112 and clearly describe “suspected anaphylactic shock” so emergency teams can bring epinephrine along. Those with a history of severe allergic reactions should consult a doctor for an epinephrine auto-injector and learn how to inject it into the outer midsection of the thigh — this can be done through clothing as well.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "13-16",
@@ -407,7 +407,7 @@
       "evidenceGrade": "B",
       "sources": "Centers for Disease Control and Prevention, Seizure First Aid: \"Don't hold the person down or stop their movements\" \"Don't put anything in their mouth. This can hurt their teeth or jaw\" \"Don't offer water or food until they are fully alert\" \"Time the seizure to track if it lasts more than 5 minutes. If it does, seek immediate medical attention and call the emergency services.\" <https://www.cdc.gov/epilepsy/first-aid-for-seizures/index.html>; National Health Portal, Ministry of Health and Family Welfare. <https://www.nhp.gov.in/>; in India the single emergency number is 112 (ERSS). <https://112.gov.in/>",
       "caveats": "The same page lists several other situations that also demand immediate ambulance call: a seizure that ends only to recur quickly, post‑seizure unresponsiveness or breathing difficulty, any injury sustained during the episode, a seizure occurring in water, or a first‑time seizure. After the seizure stops, the person should be placed on their side with the mouth down, and only then given water once fully awake.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "13-17",
@@ -432,7 +432,7 @@
       "evidenceGrade": "A",
       "sources": "American Diabetes Association (2025). Standards of Care for Diabetes 2025·Chapter 6 Blood Glucose Goals and Hypoglycemia. Diabetes Care: Grading\"Level 1: Glucose <70 mg/dL (<3.9 mmol/L) and ≥54 mg/dL (≥3.0 mmol/L)\"\"Level 2: Glucose <54 mg/dL (<3.0 mmol/L)\"\"Level 3: A severe event characterized by altered mental and/or physical status requiring assistance for treatment of hypoglycemia, irrespective of glucose level\"; Treatment\"For most individuals, 15 g carbohydrates should be ingested\"\"Fifteen minutes after initial treatment, repeat the treatment if hypoglycemia persists\". <https://doi.org/10.2337/dc25-S006>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>",
       "caveats": "Never feed anything to an unconscious person — they could choke, so call emergency services immediately. The same guidelines also recommend that people on insulin or at high risk of hypoglycemia should always carry glucagon. The original text reads: “All individuals treated with insulin or who are at high risk of hypoglycemia...should be prescribed glucagon.” Nasal glucagon sprays and pre-filled injection kits are easier to use than glucagon that needs to be mixed on the spot. This advice is aimed at you or any diabetic family members you care for — keeping sugar on hand is meant to help them in emergencies.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "13-18",
@@ -457,7 +457,7 @@
       "evidenceGrade": "B",
       "sources": "US CDC. What to Do to Protect Yourself From Electrical Hazards (First aid section). <https://www.cdc.gov/natural-disasters/response/what-to-do-protect-yourself-from-electrical-hazards.html>; Spies C, Trohman RG (2006). Narrative review: Electrocution and life-threatening electrical injuries. Annals of Internal Medicine 145(7):531-537. <https://doi.org/10.7326/0003-4819-145-7-200610030-00011>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>",
       "caveats": "The rule “cut power first, then touch the victim” is purely self-protective: pulling the victim by hand directly means you’ll be the next victim. Never attempt to handle downed high-voltage lines or nearby electrical equipment on your own; move to a safe distance and wait for utility workers to cut the power. For cardiac arrest caused by electrocution, standard CPR and defibrillation procedures apply — don’t hesitate to perform these just because it’s an “electrical injury”.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "13-19",
@@ -482,7 +482,7 @@
       "evidenceGrade": "B",
       "sources": "U.S. Centers for Disease Control and Prevention. Carbon monoxide poisoning: \"More than 400 Americans die from unintentional CO poisoning not linked to fires\" \"More than 100,000 visit an emergency department\" \"More than 14,000 are hospitalized\", common symptoms \"headache, dizziness, weakness, upset stomach, vomiting, chest pain, and confusion\". <https://www.cdc.gov/carbon-monoxide/about/index.html>; U.S. Consumer Product Safety Commission, Carbon Monoxide Information Center. <https://www.cpsc.gov/Safety-Education/Safety-Education-Centers/Carbon-Monoxide-Information-Center>; National Health Portal, Ministry of Health and Family Welfare. <https://www.nhp.gov.in/>; National Disaster Management Authority. <https://ndma.gov.in/>",
       "caveats": "Symptoms of carbon monoxide poisoning often resemble those of a cold or mild intoxication. When several people in the same space experience these symptoms and feel better immediately after leaving the area, it’s a strong sign of exposure. Make sure everyone exits the building before calling for help, and do not attempt to turn off any valves while still inside. Instructions on how to install a carbon monoxide alarm can be found in Section 1, Item 3.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "13-20",
@@ -507,7 +507,7 @@
       "evidenceGrade": "B",
       "sources": "National Disaster Management Authority. <https://ndma.gov.in/>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>",
       "caveats": "This rating of B reflects that official guidance outlines how to respond and how to identify hazardous products, yet it lacks quantitative data on exactly how much risk reduction results from following those steps. The reason not to induce vomiting is that corrosive substances would re‑damage the esophagus upon expulsion. If you’re unsure what was ingested, bring the container, its label, and any vomit to the hospital. Prevention is far cheaper than emergency treatment: store chemicals separately from food and drinks, seal containers tightly, discard empty bottles, and never repurpose them for other liquids. When handling these substances, wear rubber gloves and protective goggles, ensure good ventilation, and never mix different types. For carbon monoxide exposure, see item 19; for burns, refer to item 14.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "13-21",
@@ -532,7 +532,7 @@
       "evidenceGrade": "B",
       "sources": "Ministry of Health and Family Welfare, chemical safety and poison information. <https://mohfw.gov.in/>; National Disaster Management Authority, chemical emergencies. <https://ndma.gov.in/>; World Health Organization, chemical incidents. <https://www.who.int/health-topics/chemical-incidents>; International Labour Organization, International Chemical Safety Cards. <https://www.ilo.org/dyn/icsc/showcard.home>",
       "caveats": "This item is graded B because no single national standard specifies the exact flushing duration; one official source cites 15 minutes while another recommends 20–30 minutes. When seeking medical care, bring the chemical’s name, packaging or its Safety Data Sheet so doctors can tailor treatment. Never attempt to neutralize a chemical by mixing it with another acid or base — such reactions release heat and are impossible to control. The “neutralizing solution” mentioned in the Hunan document refers to pre‑prepared rinse fluids kept on site, not improvised mixtures. Dry powders such as lime or cement should be brushed off before rinsing; some emergency guides suggest drying concentrated sulfuric acid first, but this practice is not uniformly endorsed and is not covered here. For household cleaners and accidental ingestion, refer to Item 20. Pre‑employment protective measures and health checks are detailed in Item 19, sections 10 and 11 — employers must provide hazard information and appropriate PPE before workers start their duties.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "13-22",
@@ -557,7 +557,7 @@
       "evidenceGrade": "B",
       "sources": "US National Weather Service, Heat Related Illnesses. <https://www.weather.gov/safety/heat-illness>; Eifling KP et al. (2024). Wilderness Medical Society Clinical Practice Guidelines for the Prevention and Treatment of Heat Illness: 2024 Update. Wilderness & Environmental Medicine 35(1_suppl):112S-127S. <https://doi.org/10.1177/10806032241227924>; Wilderness Medical Society, guideline summary. <https://wms.org/magazine/magazine/1540/Heat-Illness-CPG/default.aspx>; National Disaster Management Authority, heat wave guidance. <https://ndma.gov.in/>; Ministry of Health and Family Welfare, National Programme on Climate Change and Human Health. <https://mohfw.gov.in/>",
       "caveats": "Do not wait for symptoms to “settle down” — heatstroke can progress from dizziness to unconsciousness in just minutes. Never force water into someone who is unconscious; it can cause choking. Their advice is to cover the entire body with ice packs if they’re plentiful, and otherwise apply them to the cheeks, palms and soles. Both sources agree that cold water immersion is the best option when available.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "13-23",
@@ -582,7 +582,7 @@
       "evidenceGrade": "B",
       "sources": "US CDC/NIOSH. Heat-Related Illnesses. <https://www.cdc.gov/niosh/heat-stress/about/illnesses.html>; National Disaster Management Authority. <https://ndma.gov.in/>",
       "caveats": "After heavy sweating, drinking plain water alone dilutes blood sodium levels, so a bit of salt must be added to the water. Gulping down large amounts at once often leads to vomiting, which can be fatal if liquid enters the airways. These are meant for external application, not ingestion, and cooling must always precede rehydration. Never give anything to drink to anyone who is unconscious or speaking unclearly.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "13-24",
@@ -607,7 +607,7 @@
       "evidenceGrade": "B",
       "sources": "US FEMA Ready.gov, Home Fires. <https://www.ready.gov/home-fires>; National Disaster Management Authority, fire safety. <https://ndma.gov.in/>; Ministry of Home Affairs, Fire Services, Civil Defence and Home Guards. <https://www.mha.gov.in/>",
       "caveats": "Elevators are a major risk during power outages — never use them. Never return inside to grab possessions. Only head upward if you’re certain the roof exit is open; jumping from heights is strictly prohibited. Fold a wet towel three times to create eight layers — too much water makes it heavy and hard to breathe through. Even a wet towel offers little protection against thick smoke or toxic gases.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "13-25",
@@ -632,7 +632,7 @@
       "evidenceGrade": "C",
       "sources": "World Health Organization, Drowning. <https://www.who.int/news-room/fact-sheets/detail/drowning>; National Disaster Management Authority. <https://ndma.gov.in/>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>",
       "caveats": "Grade C is assigned because no official source explicitly states the “do not enter the water” rule; we only have WHO’s global death statistics and the broader principle of “safe rescue.” Never form a human chain by holding hands and jumping in. Untrained individuals should not attempt to pull a drowning person out, as the victim will instinctively pull them underwater. This “stay out of water” rule also serves self-preservation — anyone who enters the water risks drowning, regardless of who the victim is. Most cases involve a child, so prevention is covered in Section 1, Item 12: keep children under constant supervision near water.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "13-26",
@@ -657,7 +657,7 @@
       "evidenceGrade": "B",
       "sources": "US National Library of Medicine, MedlinePlus. Choking – adult or child over 1 year. <https://medlineplus.gov/ency/article/000047.htm>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>",
       "caveats": "Never reach into someone’s mouth to remove an unseen object — this can push it deeper. Do not perform this technique on anyone who is still able to cough. Choking incidents most often occur at home, so these steps are especially useful for family members. Many older online tutorials only cover abdominal thrusts; those are outdated versions of this procedure.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "13-27",
@@ -676,13 +676,13 @@
       "valueTier": "Average",
       "disputed": false,
       "stillVerifying": false,
-      "cost": "Before venturing into such areas, tell someone your planned route, destination, return date, vehicle type and registration number. You will need at least 4 litres of water per person per day. A satellite communicator or a personal locator beacon costs thousands of rupees, and rental runs to a few hundred rupees per use. The real challenge is remembering to stay put and not wander away.",
+      "cost": "Before venturing into such areas, tell someone your planned route, destination, return date, vehicle type and registration number. You will need at least 4 litres of water per person per day. A satellite communicator or a personal locator beacon costs tens of thousands of rupees, and rental runs to a few hundred rupees per use. The real challenge is remembering to stay put and not wander away.",
       "inPlainWords": "Stay right where you are, preferably next to your vehicle — it serves as the best shelter from the sun. The proper sequence is: if you have a signal, send your location first and then make a call; next, shield yourself from the sun and retain body heat; then conserve water by staying motionless during the day and only moving after nightfall when it cools down; avoid wandering off; finally, use reflective surfaces, smoke, or three fire piles to signal for help. Be sure to share your route, destination, return date, vehicle type, and license plate details with someone before you depart.",
       "benefit": "The National Park Service’s Mojave Desert page lists three key statements: “Each person needs at least 1 gallon (roughly 3.8 liters) of water daily; hikers and cyclists require 2 gallons per day.” “Tell someone about your planned route, destination, return date, vehicle type, and license plate number.” “Cell service is intermittent.” Death Valley’s guidance advises: “Avoid hiking in the valley floor or at low elevations during peak heat,” while other wilderness areas note “virtually no cell coverage” and recommend bringing a satellite phone. The Mojave driving guide explicitly states: “In an emergency, staying next to your vehicle is the single most important action you can take.” It also notes that such incidents are rare, yet some people still perish from heat exposure or cold after attempting to walk back to a road. These recommendations are organized into five priority steps: first, transmit a status update and coordinates; second, shield yourself from the sun and retain body heat; third, conserve water by staying still during daylight and moving only after nightfall; fourth, avoid wandering off; fifth, attempt to signal for help. Three fires arranged in a triangle are a long-standing distress convention, and a mirror or a bright tin flashed at an aircraft is one of the easiest signals to use. ",
       "evidenceGrade": "C",
       "sources": "US National Park Service, Mojave National Preserve Safety. <https://www.nps.gov/moja/planyourvisit/safety.htm>; US National Park Service, Death Valley Safety. <https://www.nps.gov/deva/planyourvisit/safety.htm>; National Disaster Management Authority. <https://ndma.gov.in/>; Ministry of Tourism, adventure tourism guidelines. <https://tourism.gov.in/>; Ministry of Home Affairs. <https://www.mha.gov.in/>",
       "caveats": "This C rating reflects that these recommendations stem from official guidelines rather than empirical research data. The recommended water intake levels, mandatory reporting procedures, known signal coverage patterns, the directive to remain near one’s vehicle, and the prescribed distress signals all originate directly from official sources. The three-fire triangle is a convention rather than a documented standard, but it costs nothing to prepare. Additionally, it is vital to avoid hiking in search of help during midday heat, never drink urine, and under no circumstances withhold water intake merely to conserve supplies.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "13-28",
@@ -707,7 +707,7 @@
       "evidenceGrade": "B",
       "sources": "US National Weather Service. During Extreme Cold. <https://www.weather.gov/safety/cold-during>; Dow J et al. (2019). Wilderness Medical Society Clinical Practice Guidelines for the Out-of-Hospital Evaluation and Treatment of Accidental Hypothermia: 2019 Update. Wilderness & Environmental Medicine. <https://doi.org/10.1016/j.wem.2019.10.002>; National Disaster Management Authority. <https://ndma.gov.in/>",
       "caveats": "Do not rub or massage the limbs to warm them. Avoid hot baths at all costs. Do not drag or force‑move a severely hypothermic person — their heart may stop unexpectedly. Remember, the absence of shivering is not a sign of recovery; it often means the condition is worsening. Full access to the Wilderness Medical Society’s guideline requires a subscription; this translation is based solely on its summary.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "13-29",
@@ -732,7 +732,7 @@
       "evidenceGrade": "B",
       "sources": "World Health Organization, Animal bites. <https://www.who.int/news-room/fact-sheets/detail/animal-bites>; World Health Organization, Snakebite envenoming. <https://www.who.int/news-room/fact-sheets/detail/snakebite-envenoming>; Ministry of Health and Family Welfare, National Snakebite Management Protocol. <https://mohfw.gov.in/>; Indian Council of Medical Research. <https://www.icmr.gov.in/>",
       "caveats": "Take a photo of the snake if you can — do not attempt to capture it. Avoid alcohol, running, suction of venom, ice packs, and overly tight bindings. Although the reported hospitalization mortality rate in those 11 provinces appears low, over 10% of patients leave the hospital before completing treatment; their subsequent outcomes are not reflected in these figures.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "13-30",
@@ -757,7 +757,7 @@
       "evidenceGrade": "B",
       "sources": "Armenian HK, Noji EK, Oganesian AP (1992). A case-control study of injuries arising from the earthquake in Armenia, 1988. Bulletin of the World Health Organization, 70(2), 251-257. Mahue-Giangreco M, Mack W, Seligson H, Bourque LB (2001). Risk factors associated with moderate and serious injuries attributable to the 1994 Northridge Earthquake. Annals of Epidemiology, 11(5), 347-357. <https://doi.org/10.1016/s1047-2797(01)00220-4>; National Disaster Management Authority. <https://ndma.gov.in/>",
       "caveats": "This topic remains debated, as the two main conclusions apply to distinctly different types of buildings. In Armenia, entire buildings collapsed, leaving no safe spot to hide, so evacuation was the only viable option. The U.S. Federal Emergency Management Agency advises residents to “drop to the ground, protect the head and neck, hold on tight, and avoid running outside” — where injuries are primarily caused by falling debris and falls during tremors. Research from the Northridge earthquake further shows that reaching for objects or gripping seemingly stable items can actually increase injury risk. Ultimately, the key question isn’t “should I run or stay?” but rather “is this building likely to collapse, and can I reach open ground within seconds?” For buildings constructed after 2001 that require navigating stairs or hallways to exit, staying put is the safest choice. For single-story homes, older brick buildings, and makeshift houses without seismic protection, the exit is just a few steps away — so leave immediately. It’s worth noting that the Armenian study only compared injured and uninjured survivors, excluded fatalities, and didn’t account for differences in building height; since those able to escape were more likely to live on lower floors, these figures should be interpreted with some caution. Under no circumstances should you jump from heights, use elevators, or attempt to run down stairs during tremors. Once outside, stay far away from tall structures, overpasses, utility poles, glass facades, and billboards.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "13-31",
@@ -782,7 +782,7 @@
       "evidenceGrade": "B",
       "sources": "US National Park Service. Staying Safe Around Bears. <https://www.nps.gov/subjects/bears/safety.htm>; Ministry of Environment, Forest and Climate Change. <https://moef.gov.in/>",
       "caveats": "The Grade B rating applies solely to bear encounters. Never try to lure animals with food, approach them for photos, or bring dogs into mountainous areas inhabited by wild boars.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "13-32",
@@ -807,7 +807,7 @@
       "evidenceGrade": "B",
       "sources": "National Weather Service. Outdoor lightning safety: \"There is no safe place outside when thunderstorms are in the area\" \"Avoid open fields, the top of a hill or a ridge top. Stay away from tall, isolated trees or other tall objects\" \"Stay away from water, wet items, such as ropes, and metal objects, such as fences and poles\"; \"If you are in a group, spread out to avoid the current traveling between group members\"; Resume activity \"Wait 30 minutes until after the last rumble of thunder\". <https://www.weather.gov/safety/lightning-outdoors>; National Disaster Management Authority. <https://ndma.gov.in/>",
       "caveats": "Tents, gazebos, areas under trees, and rocky outcrops do not qualify as shelters. Hard-topped cars do count, but convertibles and motorcycles do not. Start retreating the instant you hear thunder; do not wait until rain begins to fall.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "13-33",
@@ -832,7 +832,7 @@
       "evidenceGrade": "A",
       "sources": "U.S. Centers for Disease Control and Prevention. Yellow Book High Altitude Travel and Altitude Sickness: \"Any unacclimatized traveler proceeding to a sleeping altitude of ≥2,450 m (≥8,000 ft)—and sometimes lower—is at risk for altitude illness\"; Ascent rate \"500 m (1,650 ft) per night in sleeping altitude once above 3,000 m (9,800 ft)\" 1000 meters plus acclimatization day; Acetazolamide prophylaxis \"125 mg twice a day; 250 mg twice a day if >100 kg body weight\"; \"If symptoms become worse despite rest or treatment at the same elevation\" must be withdrawn. <https://www.cdc.gov/yellow-book/hcp/environmental-hazards-risks/high-altitude-travel-and-altitude-illness.html>; Wilderness & Environmental Medicine (2024). Clinical Practice Guidelines for the Prevention, Diagnosis, and Treatment of Acute Mountain Sickness (2024 Update). Wilderness & Environmental Medicine. <https://doi.org/10.1016/j.wem.2023.05.013>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>",
       "caveats": "The rule specifically refers to sleeping altitude, not daytime elevation. Headache, nausea, unsteadiness, confusion, or breathlessness at rest are clear signs to descend. Descending should always come before oxygen use or medication; continuing upward while on oxygen is unsafe.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "13-34",
@@ -857,7 +857,7 @@
       "evidenceGrade": "B",
       "sources": "U.S. Centers for Disease Control and Prevention. After a tick bite: \"Grasp the tick as close to the skin's surface as possible using clean fine-tipped tweezers\" \"Pull tick away from the skin with steady, even pressure\" \"Do not use petroleum jelly, heat, nail polish, or other substances to try and make the tick detach from the skin. This may agitate the tick and force infected fluid from the tick into the skin\". <https://www.cdc.gov/ticks/after-a-tick-bite/index.html>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>",
       "caveats": "Be sure to note the date of removal. Should fever, rash, or fatigue appear in the weeks that follow, inform your doctor about the tick bite — otherwise it may be misdiagnosed as a common cold.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "13-35",
@@ -882,7 +882,7 @@
       "evidenceGrade": "B",
       "sources": "Centers for Disease Control and Prevention. Yellow Book Travelers' Water Disinfection: \"All organisms that may cause illness from drinking water are killed within seconds at boiling temperature\" \"CDC recommends that travelers boil water for a full minute to account for user variability in identifying boiling points and to add a margin of safety\" \"Although the boiling point for water decreases with increasing elevation, at common travel elevations the temperature needed to achieve boiling is still well above the temperature required to inactivate enteric pathogens\". <https://www.cdc.gov/yellow-book/hcp/preparing-international-travelers/water-disinfection-for-travelers.html>; National Disaster Management Authority. <https://ndma.gov.in/>",
       "caveats": "The same page also notes that boiling isn’t strictly mandatory: maintaining water at 60°C for 30 minutes achieves the same effect, and boiling simply offers a visible endpoint without needing a thermometer. Filters and chemical tablets each have their own gaps in pathogen coverage, so boiling remains preferable when possible. Just because water appears clear doesn’t mean it’s free of parasites — appearance alone is no reliable indicator.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "13-36",
@@ -907,7 +907,7 @@
       "evidenceGrade": "C",
       "sources": "Bharatiya Nyaya Sanhita, 2023 (sections 34 to 44 on the right of private defence, and sections 308, 309 and 310 on extortion, robbery and dacoity). <https://www.indiacode.nic.in/>; Bharatiya Nagarik Suraksha Sanhita, 2023 (section 173, information in cognizable cases). <https://www.indiacode.nic.in/>; National Legal Services Authority. <https://nalsa.gov.in/>",
       "caveats": "The “C” rating reflects the lack of direct literature supporting the principle that “handing over money avoids danger”; the legal text merely outlines the offender’s risks and your boundaries. Never follow an attacker to a secluded spot to “get money,” never reveal your phone password, and never get into his vehicle. This advice is not an invitation to fight or to refrain from calling police; it applies only when you are physically threatened in a remote setting and must first pay to ensure your safety. In contrast, if someone online threatens to release private photos or videos, you must never pay — see Section 8, Item 32 for those cases.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "13-37",
@@ -932,7 +932,7 @@
       "evidenceGrade": "B",
       "sources": "Bharatiya Nyaya Sanhita, 2023. <https://www.indiacode.nic.in/>; Bharatiya Nagarik Suraksha Sanhita, 2023 (section 173, information in cognizable cases). <https://www.indiacode.nic.in/>; National Legal Services Authority. <https://nalsa.gov.in/>; Ministry of Home Affairs. <https://www.mha.gov.in/>",
       "caveats": "This is graded B because the consequences are set out in statutes, but the advice to walk away rather than intervene is derived from them rather than stated as a rule. Saying \"I was only trying to mediate\" is not a defence; what matters is whether you took part and whom you hit. If an attacker is already down or has fled, chasing them to hit them is no longer private defence. The law does allow reasonable force in private defence of yourself or another person under the Bharatiya Nyaya Sanhita, 2023, but a bare-handed intervention usually just adds another casualty. Calling 112, recording from a distance and staying out of the fight are more effective. There is no statutory duty on a passer-by to step in. If you are later asked to give a statement, tell the truth; fabricating an account, or helping someone hide, is itself an offence. The benefit of calling 112 mainly helps the person on the ground, and overall this entry offers one of the lowest net benefits in the book. If you yourself get caught in a fight, see Section 8, Item 10; if a stranger demands money, see Item 36 of this section; for costs after helping an injured person, see Item 39.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "13-38",
@@ -957,7 +957,7 @@
       "evidenceGrade": "B",
       "sources": "National AIDS Control Organisation. <https://naco.gov.in/>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>; World Health Organization, HIV. <https://www.who.int/health-topics/hiv-aids>",
       "caveats": "PEP is stocked at government ART centres and many district hospitals, not at every emergency room, so call ahead first; the ART centre list is published on naco.gov.in, and turning up at the wrong queue can cost you the night. Situations considered \"exposures\" include unprotected sex, a broken condom, a needle-stick injury or blood contact with mucous membranes; only a doctor can decide whether PEP is appropriate. The full 28-day regimen must be completed; missing doses markedly reduces its effectiveness. Follow-up testing is required at 4-6 weeks and at 3 months as directed by your physician. This is a remedial measure, not a substitute for regular prevention; for everyday safeguards and testing, see items 30 and 31 in Chapter 1 (consistent condom use and testing after high-risk encounters).",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "13-39",
@@ -982,7 +982,7 @@
       "evidenceGrade": "B",
       "sources": "Motor Vehicles Act, 1988 (section 134A). <https://www.indiacode.nic.in/>; Bharatiya Nagarik Suraksha Sanhita, 2023. <https://www.indiacode.nic.in/>; National Legal Services Authority. <https://nalsa.gov.in/>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>",
       "caveats": "A rescue does not create an automatic state-funded payout. Preserve the police report, the medical records and the witness details. A claim has a limitation period.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "13-40",
@@ -1007,7 +1007,7 @@
       "evidenceGrade": "B",
       "sources": "International Federation of Red Cross and Red Crescent Societies (2025). International First Aid, Resuscitation and Education Guidelines 2025, pp. 256–257, 267–268. <https://www.ifrc.org/sites/default/files/2026-03/IFRC%20International%20First%20Aid,%20Resuscitation%20and%20Education%20Guidelines%202025.pdf>; National Disaster Management Authority. <https://ndma.gov.in/>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>",
       "caveats": "This grade is assigned because these actions are widely accepted in official guidelines; however, no randomized trials exist, and it would be unethical to randomly assign patients to “remove” versus “not remove” such objects. The sole exception is when a foreign object blocks the airway and prevents breathing. In such cases, go directly to the emergency triage desk at the hospital and state “penetrating injury.” This falls under the highest priority category – do not wait in line at the registration desk (see Section 24, Item 8). If a penetrating injury occurs, call 112; the ambulance will alert the hospital in advance. For techniques on controlling severe bleeding and applying tourniquets, see Section 12.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "13-41",
@@ -1032,7 +1032,7 @@
       "evidenceGrade": "B",
       "sources": "International Federation of Red Cross and Red Crescent Societies (2025). International First Aid, Resuscitation and Education Guidelines 2025, pp. 301–302. <https://www.ifrc.org/sites/default/files/2026-03/IFRC%20International%20First%20Aid,%20Resuscitation%20and%20Education%20Guidelines%202025.pdf>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>",
       "caveats": "This grade B rating reflects that these practices are widely accepted. There is only one older study supporting the use of traction immobilisation for femoral fractures before hospital care; its reliability is low, yet it shows modest benefits such as reduced blood loss within 24 hours, shorter hospital stays, and no meaningful difference in mortality or complications. No evidence exists regarding whether early realignment yields any advantage over simple immobilisation. Three common misconceptions should be corrected: being able to walk does not rule out a fracture; cold alone — not alternating hot and cold — is appropriate; and sprains do not “work themselves out” with movement; rest is essential. For elderly patients with suspected fractures after a fall, refer to item 2 for handling precautions. Swelling of one leg after casting or bed rest may indicate a clot; see item 11 for details. Information on disability assessment and eligibility for a disability certificate after treatment can be found in section 24, items 10 and 11.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "13-42",
@@ -1051,13 +1051,13 @@
       "valueTier": "Average",
       "disputed": false,
       "stillVerifying": false,
-      "cost": "Calling the police costs nothing. Emergency contraceptives are over-the-counter medicines available at any pharmacy. Post-exposure prophylaxis treatment costs over a thousand rupees per course; whether it is needed must be decided by a doctor — see item 38 in this section regarding obtaining PEP within 72 hours. The real challenge is that it is extremely hard to speak up at the moment, and many victims simply want to take a shower right away.",
+      "cost": "Calling the police costs nothing. Emergency contraceptives are over-the-counter medicines available at any pharmacy. Post-exposure prophylaxis treatment costs several thousand rupees per course at a private hospital; whether it is needed must be decided by a doctor — see item 38 in this section regarding obtaining PEP within 72 hours. The real challenge is that it is extremely hard to speak up at the moment, and many victims simply want to take a shower right away.",
       "inPlainWords": "Physical traces on the body, on clothing, and in the room are the most crucial evidence for identifying the perpetrator. Therefore, avoid showering, washing clothes, or cleaning the area before a medical exam, and call 112 as soon as possible. Emergency contraceptives are readily available at pharmacies and work best when taken early. Within 72 hours, visit a hospital so a doctor can determine if PEP is necessary.",
       "benefit": "Indian practice follows the same sequence. The Bharatiya Nagarik Suraksha Sanhita, 2023 requires the police to record information about a cognizable offence, and a zero FIR can be lodged at any police station, including one outside the area where the assault happened. Every hospital, public or private, must give a survivor of sexual violence free first-aid and medical treatment and must inform the police; the forensic examination is done at a government hospital, and a One Stop Centre (Sakhi Centre) run under the Ministry of Women and Child Development can provide a counsellor and accompany you. Preserving evidence is the priority: keep body fluids, hair, skin cells and communication records, and do not shower, wash clothes, tidy the room or throw anything away before the examination. In cases involving acquaintances, preserve call logs and messages, and document any threats or attempts at bribery. WHO notes that emergency contraception may be used when a woman has been sexually assaulted without effective contraceptive protection, recommending its use within five days for maximum effectiveness; the pills work best when taken early, ideally within 72 hours. PEP for HIV should be taken within two hours if possible, and no later than 72 hours.",
       "evidenceGrade": "B",
       "sources": "Ministry of Women and Child Development, One Stop Centres. <https://wcd.gov.in/>; National Legal Services Authority. <https://nalsa.gov.in/>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>; World Health Organization, Emergency Contraception. <https://www.who.int/news-room/fact-sheets/detail/emergency-contraception>; National AIDS Control Organisation. <https://naco.gov.in/>",
       "caveats": "This grade is assigned because these recommendations stem from official law‑enforcement experience and medical guidance; there are no statistics showing exactly how much they raise conviction rates. The main beneficiaries are the victim herself and her family. These pills have no effect if pregnancy has already occurred. When reporting to police, provide a truthful account without exaggeration or concealment. Any attempts by the perpetrator to settle privately, pay compensation, or threaten you must be documented and never deleted. You may decide to wait before calling police, but be aware that evidence deteriorates over time. Regardless of whether you call police, seek medical care within the stipulated timeframe. Recordings related to this topic are discussed in item 41 of section 8. If the perpetrator later uses photos or police reports to blackmail you, this also constitutes a crime — see item 32 of section 8. If a friend experiences sexual assault, accompany her to report it and to the hospital; do not suggest she shower or rest first.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "13-43",
@@ -1085,7 +1085,7 @@
       "evidenceGrade": "B",
       "sources": "Joyner BL et al. (2025). Part 6: Pediatric Basic Life Support: 2025 American Heart Association and American Academy of Pediatrics Guidelines for Cardiopulmonary Resuscitation and Emergency Cardiovascular Care. Circulation 152(suppl 2):S424-S447. <https://doi.org/10.1161/CIR.0000000000001370>; International Federation of Red Cross and Red Crescent Societies (2025). International First Aid, Resuscitation and Education Guidelines 2025, pp. 238-240. <https://www.ifrc.org/>; National Disaster Management Authority. <https://ndma.gov.in/>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>",
       "caveats": "Rated B because support comes mainly from case reports, with no “how many fewer deaths if you follow this” figure. Benefit is rated large by judgment: a fully blocked airway can stop an infant’s heart within minutes. The main beneficiaries are your own children. For children 1 year and older and adults, use abdominal thrusts; see item 26 in this section (choking: back blows plus abdominal thrusts). The 2025 U.S. guideline dropped two-finger compressions because depth was inadequate. Any of these beats doing nothing. Even after the object is expelled, seek medical care — fragments may remain in the lungs. Keep coins and small toys out of reach. If the baby is unresponsive, see item 44 in this section (infant CPR).",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "13-44",
@@ -1112,8 +1112,8 @@
       "benefit": "The American Heart Association and American Academy of Pediatrics 2025 pediatric basic life support guideline states that respiratory problems remain the main cause of cardiac arrest in infants and children. Among infants with out-of-hospital cardiac arrest, only 6.6% survive to hospital discharge. For an unresponsive infant or child with abnormal breathing and no signs of life, “CPR should be started immediately” without checking a pulse. Compression depth is at least one-third of the anteroposterior chest diameter; for infants, “about 1.5 inches (4 cm).” Rate 100 to 120 per minute. One rescuer: 30 compressions then 2 breaths. Two rescuers: 15 compressions then 2 breaths. Use one-hand heel or two-thumb encircling compressions; if encircling is not possible, use heel of one hand. Two-finger compression has been removed because depth was inadequate. The guideline also states that for out-of-hospital pediatric cardiac arrest, adding ventilations to compressions improves survival. A U.S. registry of 3,900 children under 18 with out-of-hospital cardiac arrest found 59.4% were infants. Bystander CPR was associated with an adjusted hospital discharge survival of 13.2% versus 9.5% without CPR; adjusted OR 1.57 (about 57% higher odds of survival), 95% CI 1.25–1.96. Among infants, CPR with breaths was linked to higher survival and better neurological recovery; compression-only outcomes were similar to no CPR. IFRC 2025 guidance: check responsiveness by picking up the infant or flicking the foot. If alone, call emergency services on speakerphone. If no phone allows simultaneous calling, perform 1 minute of CPR before calling. If you are alone with a phone but no speakerphone, the IFRC guidance is to give 1 minute of CPR before calling. Compression depth is about 4 cm for infants, and breaths are given mouth to mouth and nose.",
       "evidenceGrade": "B",
       "sources": "Joyner BL et al. (2025). Part 6: Pediatric Basic Life Support: 2025 American Heart Association and American Academy of Pediatrics Guidelines for Cardiopulmonary Resuscitation and Emergency Cardiovascular Care. Circulation 152(suppl 2):S424-S447. <https://doi.org/10.1161/CIR.0000000000001370>; Naim MY et al. (2017). Association of Bystander Cardiopulmonary Resuscitation With Overall and Neurologically Favorable Survival After Pediatric Out-of-Hospital Cardiac Arrest in the United States. JAMA Pediatrics 171(2):133-141. <https://doi.org/10.1001/jamapediatrics.2016.3643>; International Federation of Red Cross and Red Crescent Societies (2025). International First Aid, Resuscitation and Education Guidelines 2025, pp. 186-188. <https://www.ifrc.org/>; European Resuscitation Council (2025). ERC Guidelines 2025 for the lay public. <https://www.erc.edu/>; National Disaster Management Authority. <https://ndma.gov.in/>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>",
-      "caveats": "Rated B because survival figures come from registry studies with recording bias, pooled across all children; infant-only discharge numbers were not given in the summary. Benefit is rated large from the pooled figures: discharge survival 9.5% to 13.2%, a relative increase of about 40%. Main beneficiaries are your own children. Three differences from item 1 in this section (hard chest compressions for adults): infants need breaths — compression-only works poorly; use two thumbs or one heel at about 4 cm, not stacked adult hands; if you cannot call while compressing, start CPR before calling. How long to compress before calling varies: Capital Institute of Pediatrics and the U.S. single-rescuer flow say 2 minutes; IFRC says 1 minute. Speakerphone removes the trade-off. The European Resuscitation Council teaches 5 breaths first then compressions; the U.S. guideline compressions first — both beat doing nothing. Older courses taught two-finger compression; the 2025 U.S. guideline removed it. For choking, look in the mouth before breaths and remove only visible objects; see item 43 (infant choking).",
-      "reviewStatus": "draft"
+      "caveats": "Rated B because survival figures come from registry studies with recording bias, pooled across all children; infant-only discharge numbers were not given in the summary. Benefit is rated large from the pooled figures: discharge survival 9.5% to 13.2%, a relative increase of about 40%. Main beneficiaries are your own children. Three differences from item 1 in this section (hard chest compressions for adults): infants need breaths — compression-only works poorly; use two thumbs or one heel at about 4 cm, not stacked adult hands; if you cannot call while compressing, start CPR before calling. How long to compress before calling varies: Some courses teach 2 minutes before calling; IFRC says 1 minute. Speakerphone removes the trade-off. The European Resuscitation Council teaches 5 breaths first then compressions; the U.S. guideline compressions first — both beat doing nothing. Older courses taught two-finger compression; the 2025 U.S. guideline removed it. For choking, look in the mouth before breaths and remove only visible objects; see item 43 (infant choking).",
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "13-45",
@@ -1140,8 +1140,8 @@
       "benefit": "Data from the National Poison Data System spanning 1985 to 2009 showed a 6.7-fold increase in the percentage of button battery ingestions resulting in major injury or fatality. The greatest danger stems from 20 mm diameter lithium coin cells (such as CR2032). Children under age 4 swallowing >=20 mm cells experience disproportionately catastrophic clinical outcomes. Lodged in the esophagus, a battery generates an electrical current that hydrolyzes tissue fluids into concentrated sodium hydroxide, causing severe liquefaction necrosis with lifelong sequelae in as little as 2 to 2.5 hours. In fatal cases, 92% of ingestions were unwitnessed; among major injuries, 56% were unwitnessed. At least 54% of fatal cases and 27% of severe morbidity cases were initially misdiagnosed due to non-specific initial symptoms. Furthermore, injury progression continues deeply after battery extraction; esophageal perforation, tracheoesophageal fistula, aortoesophageal fistula, and fatal exsanguination have occurred days post-removal. In an analysis of 8,648 cases, 61.8% of batteries swallowed by children under 6 were extracted directly by the child from household battery-powered electronics. National Capital Poison Center guidelines instruct: if battery ingestion is suspected, \"do not induce vomiting\"; lodged batteries cause severe burns \"in as little as 2 hours\" and \"do not wait for symptoms to develop.\" All patients under 12 years require immediate emergency X-ray imaging. Surveillance data from Guangdong CDC revealed nearly 100 pediatric battery ingestions over 5 years (92.9% involving children aged 0–6, with 39.3% sustaining moderate-to-severe injuries and 25.0% requiring inpatient hospitalization), mandating immediate emergency care and cautioning against home-induced emesis. When multiple neodymium magnet balls (e.g. Buckyballs) are swallowed, magnetic attraction clamps adjacent bowel segments, causing ischemia, bowel necrosis, intestinal obstruction, and perforation. A 2025 systematic review of 130 children who developed entero-enteric fistulas from multiple magnet ingestion found a median age of 3.3 years, with 95.5% requiring major surgical laparotomy, 19% developing postoperative complications, and 1 fatality.",
       "evidenceGrade": "B",
       "sources": "Litovitz T, et al. (2010). Emerging battery-ingestion hazard: clinical implications. Pediatrics, 125(6), 1168-1177. <https://doi.org/10.1542/peds.2009-3037>; Litovitz T, Whitaker N, Clark L (2010). Preventing battery ingestions: an analysis of 8648 cases. Pediatrics, 125(6), 1178-1183. <https://doi.org/10.1542/peds.2009-3038>; National Capital Poison Center (2024). National Battery Ingestion Hotline Guideline. <https://www.poison.org/battery/guideline>; Nugud AA, et al. (2023). Pediatric Magnet Ingestion, Diagnosis, Management, and Prevention: ESPGHAN Position Paper. Journal of Pediatric Gastroenterology and Nutrition, 76(4), 523-532. <https://doi.org/10.1097/MPG.0000000000003702>; Anfang RR, et al. (2019). pH-neutralizing esophageal irrigations as a novel mitigation strategy for button battery injury. Laryngoscope, 129(1), 49-57. <https://doi.org/10.1002/lary.27312>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>",
-      "caveats": "Graded Evidence Grade B because findings derive from national poison control registries and case series rather than randomized controlled trials. Benefit is categorized as High because coin cells cause fatal esophageal erosion within 2 hours, and mortality is concentrated in unwitnessed and delayed-diagnosis cases. Beneficiaries are predominantly young children. When transporting the child, bring an identical battery sample, product packaging, or the opened device to assist emergency physicians in rapid radiographic size identification. Guidance regarding pre-hospital oral honey administration differs between jurisdictions: National Capital Poison Center suggests giving 10 mL of pure honey every 10 minutes (up to 6 doses) if the child is >=1 year old, ingestion occurred <12 hours prior, the child can swallow, and honey is immediately at hand, based on ex vivo porcine models demonstrating that honey buffers alkaline burns. However, human evidence remains limited, and infants <1 year must never receive honey due to infant botulism risks; Guangdong CDC recommends fasting and strictly avoiding oral fluids or emetics. Never delay hospital transit to search for honey. If a battery is ingested concurrently with a magnet, poison centers mandate urgent endoscopic removal even if it has reached the stomach. The elderly are also vulnerable: 15.5% of 8,648 recorded ingestions involved adults mistaking batteries (predominantly 36.3% hearing aid button cells) for oral prescription pills. For acute airway obstruction, see Chapter 13, Rule 26 (back blows and abdominal thrusts) or Rule 43 (infant choking). Ingestion of caustic household cleaning chemicals is covered in Chapter 13, Rule 20.",
-      "reviewStatus": "draft"
+      "caveats": "Graded Evidence Grade B because findings derive from national poison control registries and case series rather than randomized controlled trials. Benefit is categorized as High because coin cells cause fatal esophageal erosion within 2 hours, and mortality is concentrated in unwitnessed and delayed-diagnosis cases. Beneficiaries are predominantly young children. When transporting the child, bring an identical battery sample, product packaging, or the opened device to assist emergency physicians in rapid radiographic size identification. Guidance regarding pre-hospital oral honey administration differs between jurisdictions: National Capital Poison Center suggests giving 10 mL of pure honey every 10 minutes (up to 6 doses) if the child is >=1 year old, ingestion occurred <12 hours prior, the child can swallow, and honey is immediately at hand, based on ex vivo porcine models demonstrating that honey buffers alkaline burns. However, human evidence remains limited, and infants <1 year must never receive honey due to infant botulism risks; Guangdong CDC recommends fasting and strictly avoiding oral fluids or emetics. Never delay hospital transit to search for honey. If a battery is ingested concurrently with a magnet, poison centers mandate urgent endoscopic removal even if it has reached the stomach. The elderly are also vulnerable: 15.5% of 8,648 recorded ingestions involved adults mistaking batteries (predominantly 36.3% hearing aid button cells) for oral prescription pills. For acute airway obstruction, see Chapter 13, Item 26 (back blows and abdominal thrusts) or Rule 43 (infant choking). Ingestion of caustic household cleaning chemicals is covered in Chapter 13, Item 20.",
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "13-46",
@@ -1165,8 +1165,8 @@
       "benefit": "NHS clinical guidelines list key signs of acute alcohol poisoning: severe mental confusion, slurred speech, loss of coordination, vomiting, incontinence, pale or bluish/clammy skin, slow or irregular respiration, seizures, and unresponsiveness. If alcohol poisoning is suspected, or the individual is unconscious or stops breathing, immediately call emergency services. Core action protocol: remain by their side continuously because they risk suffocating on vomit or experiencing respiratory depression; keep awake individuals seated upright; place unconscious breathing individuals into the lateral recovery position; offer small sips of water only if fully conscious and able to swallow; and keep them warm with coats or blankets. Five critical contraindications: (1) never give more alcohol; (2) never feed food, which induces airway aspiration; (3) never administer coffee or caffeinated drinks, which worsen dehydration; (4) never put them under a cold shower or in a cold bath, which precipitates severe hypothermia, falls, or drowning; and (5) never attempt to induce vomiting. In stuporous or comatose stages marked by cyanosis, cold extremities, hypothermia and shallow breathing, call 112 immediately, keep the person on their side, cover them with warm blankets, and start CPR if breathing stops. The same rule holds everywhere: never let an intoxicated person sleep alone, because nobody will notice if their breathing stops. CDC statistics indicate an average of 2,221 annual alcohol poisoning deaths among individuals aged 15 and older in the United States (roughly 6 deaths per day).",
       "evidenceGrade": "B",
       "sources": "NHS, Alcohol Poisoning. <https://www.nhs.uk/conditions/alcohol-poisoning/>; Kanny D et al. (2015). Vital signs: alcohol poisoning deaths, United States, 2010-2012. MMWR 63(53):1238-1242. <https://pubmed.ncbi.nlm.nih.gov/25577989/>; National Health Portal, Ministry of Health and Family Welfare. <https://www.nhp.gov.in/>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>",
-      "caveats": "Graded B because the advice rests on official health authority emergency guidance and clinical consensus; India has no statute that places a legal duty on a bystander. Benefit is categorized as High because asphyxiation and respiratory arrest occur almost exclusively when victims are left unmonitored. Never attempt manual throat-tickling emesis on lethargic or unresponsive individuals. Beyond family members, these duties apply heavily to dining companions and colleagues: in India a claim against a drinking companion would have to be brought as a civil negligence suit, so the practical duty is social rather than statutory, but failing to get someone home safely is what turns a bad night into a death. Always escort drunk companions directly into the custody of family or remain until sobriety returns. If you discover an unknown intoxicated person collapsed outdoors, call 112 without attempting forceful repositioning unless necessary (see Chapter 13, Rule 2). Alcohol impairs thermoregulation; manage hypothermia as outlined in Chapter 13, Rule 28. Alcohol interactions with cephalosporin or metronidazole antibiotics causing disulfiram-like reactions are detailed in Chapter 34, Rule 11. Never take hot baths or enter saunas after drinking (see Chapter 22, Rule 11).",
-      "reviewStatus": "draft"
+      "caveats": "Graded B because the advice rests on official health authority emergency guidance and clinical consensus; India has no statute that places a legal duty on a bystander. Benefit is categorized as High because asphyxiation and respiratory arrest occur almost exclusively when victims are left unmonitored. Never attempt manual throat-tickling emesis on lethargic or unresponsive individuals. Beyond family members, these duties apply heavily to dining companions and colleagues: in India a claim against a drinking companion would have to be brought as a civil negligence suit, so the practical duty is social rather than statutory, but failing to get someone home safely is what turns a bad night into a death. Always escort drunk companions directly into the custody of family or remain until sobriety returns. If you discover an unknown intoxicated person collapsed outdoors, call 112 without attempting forceful repositioning unless necessary (see Chapter 13, Item 2). Alcohol impairs thermoregulation; manage hypothermia as outlined in Chapter 13, Item 28. Alcohol interactions with cephalosporin or metronidazole antibiotics causing disulfiram-like reactions are detailed in Chapter 34, Item 11. Never take hot baths or enter saunas after drinking (see Chapter 22, Item 11).",
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "13-47",
@@ -1190,8 +1190,8 @@
       "benefit": "MedlinePlus emergency protocols instruct: apply direct manual pressure to the amputation site to arrest hemorrhage and elevate the injured extremity; apply a tourniquet only for life-threatening arterial bleeding unresponsive to direct pressure. Recover and preserve every severed anatomical fragment to accompany the patient. If contaminated, rinse the severed part gently. Wrap the severed digit in a clean damp cloth or sterile saline gauze, seal it inside a waterproof plastic bag, and submerge the sealed bag in an ice-water bath. Crucial contraindications: (1) never submerge the body part directly in water or ice without a sealed bag; (2) never place severed tissue directly in contact with ice cubes; (3) never use dry ice, which causes irreversible frostbite cryo-necrosis; and (4) in the absence of ice, keep the part as cool as possible and insulated from ambient heat. Cold ischemia dramatically extends tissue viability; uncooled amputated digits tolerate warm ischemia for only approximately 4 to 6 hours before microvascular thrombi and muscle necrosis prevent successful revascularization. Never assume an amputated fragment is too mangled or small to salvage, and never attempt to shove protruding bone back into the stump. American Academy of Orthopaedic Surgeons (AAOS) guidelines emphasize prompt transit to trauma centers with 24/7 on-call microvascular hand surgery capabilities. A 2024 systematic review of 31 clinical studies evaluating 2,276 digits demonstrated an overall replantation survival rate of 86.8% (1,976 successful salvages vs. 300 failures); among 1,087 patients undergoing replantation, 82.9% successfully returned to employment. A meta-analysis of 12 studies reported an 85.3% digit survival rate. Another meta-analysis across 12 studies and 3,645 patients identified total ischemic time >=8 hours as a critical risk factor for postoperative microvascular necrosis, with odds of replantation failure 2.25 times higher (OR 2.25, 95% CI: 1.43–3.54).",
       "evidenceGrade": "B",
       "sources": "MedlinePlus (2024). Traumatic Amputation First Aid Protocol. <https://medlineplus.gov/ency/article/000006.htm>; American Academy of Orthopaedic Surgeons (AAOS). Fingertip Injuries and Amputations Guidelines. <https://orthoinfo.aaos.org/en/diseases--conditions/fingertip-injuries-and-amputations>; Treger D, et al. (2026). Return-to-Work After Attempted Digit Replantation: A Systematic Review of 31 Studies. HAND. <https://doi.org/10.1177/15589447241279445>; Stone N, et al. (2021). Comparing digital replantation versus revision amputation patient reported outcomes: A systematic review and meta-analysis. Microsurgery. <https://doi.org/10.1002/micr.30738>; Yu F, et al. (2026). Risk factors associated with postoperative necrosis after digital replantation: a systematic review and meta-analysis. Frontiers in Surgery. <https://doi.org/10.3389/fsurg.2026.1795247>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>",
-      "caveats": "Graded Evidence Grade B because preservation standards reflect international emergency surgery guidelines and observational surgical cohort registries rather than randomized controlled trials. Benefit magnitude is categorized as Moderate: intervention salvages functional limbs rather than saving life. Replantation feasibility is determined by surgical teams based on injury morphology; clean guillotine cuts carry vastly higher replantation success than severe crush or avulsion injuries. Saving life always precedes saving limbs: secure hemostasis on the stump before packaging severed tissue. For tourniquet application under uncontrolled hemorrhage, see Chapter 13, Rule 12. Angle grinder safety guards to prevent traumatic hand amputations are detailed in Chapter 1, Rule 42. Primary beneficiaries are manual laborers, machine operators, and household cooks.",
-      "reviewStatus": "draft"
+      "caveats": "Graded Evidence Grade B because preservation standards reflect international emergency surgery guidelines and observational surgical cohort registries rather than randomized controlled trials. Benefit magnitude is categorized as Moderate: intervention salvages functional limbs rather than saving life. Replantation feasibility is determined by surgical teams based on injury morphology; clean guillotine cuts carry vastly higher replantation success than severe crush or avulsion injuries. Saving life always precedes saving limbs: secure hemostasis on the stump before packaging severed tissue. For tourniquet application under uncontrolled hemorrhage, see Chapter 13, Item 12. Angle grinder safety guards to prevent traumatic hand amputations are detailed in Chapter 1, Item 42. Primary beneficiaries are manual laborers, machine operators, and household cooks.",
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "13-48",
@@ -1215,8 +1215,8 @@
       "benefit": "NHS emergency guidance for a knocked-out tooth dictates: hold the tooth strictly by the crown (the white portion visible above the gumline) without contacting the root surface. If contaminated, rinse gently in milk, saline, or saliva. Attempt to reinsert the tooth back into its socket; if successful, bite gently on a clean tissue or handkerchief to hold it steady and visit an emergency dentist immediately. If reinsertion is impossible, transport the tooth submerged in milk or buccal saliva. Baby teeth (deciduous teeth) must never be replanted as reinsertion damages the underlying developing permanent tooth bud. The International Association of Dental Traumatology (IADT) \"Save a Tooth\" protocols outline identical steps: retrieve tooth, handle only by crown, rinse briefly under cold tap water if dirty, and choose one of three storage methods: (1) immediate replantation into socket; (2) immersion in a glass of cold milk or physiological saline; or (3) transport held between cheek and gum (buccal sulcus), followed by immediate dental transit. A long-term clinical database study from Copenhagen University Hospital tracking 145 avulsed permanent teeth in 116 patients followed for 7 months to 23 years evaluated the risk of replacement resorption (ankylosis, where root cementum fuses to alveolar bone and is gradually resorbed): teeth replanted immediately showed a 17.2% ankylosis rate; teeth stored in physiological wet media (saliva/saline) prior to replantation showed 55.3%; and teeth left in dry storage for >=60 minutes exhibited an 85.7% ankylosis rate. An earlier cohort of 400 avulsed teeth re-evaluated in 2020 revealed that for immature teeth with open apices, dry storage <20 minutes carried a 33.9% ankylosis risk, rising to 60.0% past 60 minutes; for mature teeth with closed apices, ankylosis escalated from 59.4% to 86.4% at 900 days. Tap water storage for >20 minutes caused widespread periodontal ligament necrosis and root resorption. Overall, 30% of avulsed teeth eventually required extraction during long-term follow-up.",
       "evidenceGrade": "B",
       "sources": "NHS (2025). Knocked-out Tooth Protocol. <https://www.nhs.uk/conditions/knocked-out-tooth/>; International Association of Dental Traumatology (IADT). Save a Tooth Guidelines and Poster. <https://iadt-dentaltrauma.org/guidelines-and-resources/save-a-tooth-poster/>; Gul A, et al. (2024). Risk of ankylosis of avulsed teeth immediately replanted or stored under favorable storage conditions before replantation: A long-term clinical study. Dental Traumatology. <https://doi.org/10.1111/edt.12898>; Lauridsen E, et al. (2020). Risk of ankylosis of 400 avulsed and replanted human teeth in relation to length of dry storage: A re-evaluation of a long-term clinical study. Dental Traumatology. <https://doi.org/10.1111/edt.12520>; Andreasen JO, et al. (1995). Replantation of 400 avulsed permanent incisors. 1. Diagnosis of healing complications. Endodontics & Dental Traumatology. <https://doi.org/10.1111/j.1600-9657.1995.tb00461.x>; Andreasen JO, et al. (1995). Replantation of 400 avulsed permanent incisors. 4. Factors related to periodontal ligament healing. Endodontics & Dental Traumatology. <https://doi.org/10.1111/j.1600-9657.1995.tb00464.x>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>",
-      "caveats": "Graded Evidence Grade B because statistics stem from longitudinal specialized dental hospital trauma registries without prospective randomized arms. Benefit is categorized as Moderate because tooth preservation preserves dentition aesthetics and masticatory function rather than preventing mortality. Researchers emphasize that even teeth experiencing prolonged dry storage (>60 min) should not be discarded, as specialized endodontic splinting and chemical treatments still salvage a proportion of teeth or maintain alveolar ridge volume for future implants. Tap water should only be used for a brief 10-second rinse; never transport teeth immersed in tap water due to hypotonic cell lysis. Primary beneficiaries are active children and adults prone to sports impacts, falls, and cycling collisions. In cases of unrecoverable tooth loss, removable partial dentures can bridge the gap during childhood until definitive adult dental bridges or endosseous implants are placed (see Chapter 24, Rule 12 for dental implant bundled pricing).",
-      "reviewStatus": "draft"
+      "caveats": "Graded Evidence Grade B because statistics stem from longitudinal specialized dental hospital trauma registries without prospective randomized arms. Benefit is categorized as Moderate because tooth preservation preserves dentition aesthetics and masticatory function rather than preventing mortality. Researchers emphasize that even teeth experiencing prolonged dry storage (>60 min) should not be discarded, as specialized endodontic splinting and chemical treatments still salvage a proportion of teeth or maintain alveolar ridge volume for future implants. Tap water should only be used for a brief 10-second rinse; never transport teeth immersed in tap water due to hypotonic cell lysis. Primary beneficiaries are active children and adults prone to sports impacts, falls, and cycling collisions. In cases of unrecoverable tooth loss, removable partial dentures can bridge the gap during childhood until definitive adult dental bridges or endosseous implants are placed (see Chapter 24, Item 12 for dental implant bundled pricing).",
+      "reviewStatus": "independently-checked"
     }
   ]
 }

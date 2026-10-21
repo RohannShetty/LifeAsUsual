@@ -29,12 +29,29 @@
       "sources": "University Grants Commission. <https://www.ugc.gov.in/>; National Testing Agency, UGC-NET. <https://ugcnet.nta.ac.in/>; Ministry of Education. <https://www.education.gov.in/>"
     },
     "23-1": {
-      "title": "Below 14 there is no lawful job to take, and from 14 to 18 the law bars hazardous work — an employer who ignores the age line is committing an offence",
+      "id": "23-1",
+      "chapter": 23,
+      "tip": 1,
+      "title": "Below 14 there is almost no lawful job to take, and from 14 to 18 the law bars hazardous work — an employer who ignores the age line is committing an offence",
+      "tags": {
+        "money": "Free",
+        "time": "Quick",
+        "willpower": "None needed",
+        "benefit": "Large",
+        "scope": "Personal freedom",
+        "audience": []
+      },
+      "costScore": 0,
+      "valueTier": "Very high",
+      "disputed": false,
+      "stillVerifying": false,
+      "cost": "Nothing. It takes a minute to know which side of the age line you are on.",
       "inPlainWords": "In India the Child and Adolescent Labour (Prohibition and Regulation) Act, 1986, as amended in 2016, bars the employment of a child below 14, with narrow exceptions for work in a family enterprise and for a child artiste. An adolescent aged 14 to 18 may work, but not in an occupation or process listed as hazardous. The Right to Education Act, 2009 makes schooling a right up to 14. So an employer who offers a full-time job to a child below 14 is breaking the law, and one who puts a 14- to 18-year-old into a hazardous job is breaking it too.",
       "benefit": "The 2016 amendment prohibits the employment of a child below 14 and bars an adolescent from hazardous occupations and processes. The Act also requires the employer to keep records and to provide the facilities the law requires, but a child or adolescent worker has no lawful claim on those protections if the employment itself is illegal. Contravention is punishable with imprisonment, a fine, or both. The Factories Act, 1948 and the state shops and establishments Acts add age and hours limits for young workers. A young worker injured in a lawful, recorded job can claim compensation under the employees' compensation law.",
-      "cost": "Nothing. It takes a minute to know which side of the age line you are on.",
+      "evidenceGrade": "A",
+      "sources": "Child and Adolescent Labour (Prohibition and Regulation) Act, 1986, as amended in 2016. <https://www.indiacode.nic.in/>; Ministry of Labour and Employment. <https://labour.gov.in/>; National Commission for Protection of Child Rights. <https://ncpcr.gov.in/>",
       "caveats": "The family-enterprise exception is narrow and does not cover hazardous work. A 14- to 18-year-old may lawfully work in a non-hazardous job, so the line is not \"16\" and not \"18\" in every case; check your state's rules for hours. A job open to a school-leaver with no qualifications is usually routine work of the kind Section 10 describes as most exposed to automation. The overtime, leave and compensation rules in Section 19 depend on a formal, recorded employment relationship; an unrecorded job gives you none of them.",
-      "sources": "Child and Adolescent Labour (Prohibition and Regulation) Act, 1986, as amended in 2016. <https://www.indiacode.nic.in/>; Ministry of Labour and Employment. <https://labour.gov.in/>; National Commission for Protection of Child Rights. <https://ncpcr.gov.in/>"
+      "reviewStatus": "draft"
     },
     "23-2": {
       "title": "Adding \"education's value\" to mortality statistics: each extra year of schooling reduces adult mortality by roughly 1.9%",

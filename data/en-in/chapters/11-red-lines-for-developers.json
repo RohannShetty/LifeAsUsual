@@ -4,7 +4,7 @@
   "title": "Red Lines for Developers and Techies",
   "intro": "Chapter 11: Red Lines for Developers and Techies",
   "edition": "india",
-  "rewriteStatus": "draft",
+  "rewriteStatus": "checked",
   "tips": [
     {
       "id": "11-1",
@@ -29,7 +29,7 @@
       "evidenceGrade": "C",
       "sources": "Constitution of India. <https://www.indiacode.nic.in/>; National Legal Services Authority. <https://nalsa.gov.in/>; Bharatiya Nagarik Suraksha Sanhita, 2023. <https://www.indiacode.nic.in/>; National Cyber Crime Reporting Portal. <https://cybercrime.gov.in/>",
       "caveats": "There is no fixed countdown to an arrest decision as there is in some jurisdictions. What is fixed is the investigation clock: the charge sheet must come within 60 or 90 days, and bail is decided by a magistrate or court, not by the police. A lawyer is most useful before the first remand hearing, to check the grounds of arrest, oppose police custody and move for bail. Do not sign a statement in the police station; under the Bharatiya Sakshya Adhiniyam, 2023 a confession to a police officer is not admissible. Every other item in this chapter turns on the same question: whether the other side has grounds to complain and the money to pursue it.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "11-2",
@@ -49,12 +49,12 @@
       "disputed": false,
       "stillVerifying": false,
       "cost": "There is no monetary cost. The trade-off is the income from cheat orders and “small tools”. The difficulty is that this money arrives quickly and it is never clear which game publisher will eventually complain.",
-      "inPlainWords": "India has no user-count or rupee threshold for this. Section 66 of the IT Act, 2000 punishes unauthorised access to a computer resource, or damage to it, with up to three years and a fine of up to five lakh rupees, and section 43 lets the owner sue for damages. A cheat that edits game memory, fakes a server response or lifts assets out of the client is the exposure. Separately, cracking the game's protection is an offence under section 65A of the Copyright Act, 1957, and selling copies is infringement under section 63.",
+      "inPlainWords": "India has no user-count or rupee threshold for this. Section 66 of the IT Act, 2000 punishes unauthorised access to a computer resource, or damage to it, with imprisonment up to three years, or a fine of up to five lakh rupees, or both, and section 43 lets the owner sue for damages. A cheat that edits game memory, fakes a server response or lifts assets out of the client is the exposure. Separately, cracking the game's protection is an offence under section 65A of the Copyright Act, 1957, and selling copies is infringement under section 63.",
       "benefit": "The IT Act does not require a minimum number of users or a minimum profit. What it requires is access without the owner's permission, or damage. Section 66 covers acts listed in section 43 done dishonestly or fraudulently, and section 43 covers unauthorised copying, downloading or extraction of data and disruption of a computer resource. A publisher can also sue for breach of its terms and for inducing players to breach theirs, and under the Copyright Act where a cheat copies or redistributes game code or art. If the tool steals player accounts it can attract section 66C (identity theft) and section 66D (cheating by personation) as well.",
       "evidenceGrade": "A",
       "sources": "Information Technology Act, 2000. <https://www.indiacode.nic.in/>; Copyright Act, 1957. <https://www.indiacode.nic.in/>; Copyright Office. <https://copyright.gov.in/>; Ministry of Electronics and Information Technology. <https://www.meity.gov.in/>",
       "caveats": "No reported Indian judgment decides whether a screen-reading assistant that never touches memory is an offence. The practical test is whether the tool talks to the game's servers or copies its code without authorisation; if it only watches the screen the IT Act case is weak, but the publisher can still enforce its terms and pursue copyright claims if assets are copied. Enforcement is driven by the publisher's complaint, not by the tool's author. “It is only a single-player game” does not help: the licence terms and the copyright in the assets apply either way.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "11-3",
@@ -79,7 +79,7 @@
       "evidenceGrade": "A",
       "sources": "Indian Railway Catering and Tourism Corporation. <https://www.irctc.co.in/>; Ministry of Railways. <https://indianrailways.gov.in/>; Information Technology Act, 2000. <https://www.indiacode.nic.in/>; Department of Consumer Affairs. <https://consumeraffairs.nic.in/>",
       "caveats": "Indian enforcement here is mostly platform-level: cancellations, blacklisting, frozen payouts and civil notices rather than reported criminal trials. That makes it easy to mistake for a technical game, which is the point of the tip. Do not build a “personal use” script and then share it; distribution is what turns a contract breach into a conspiracy or abetment case. A platform that suspects automation may also demand fresh KYC and hold the money while it investigates, which is a real cost even when no case is filed.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "11-4",
@@ -100,11 +100,11 @@
       "stillVerifying": false,
       "cost": "No cost at all. A crawler is a program that fetches pages and extracts data. Before running one, read robots.txt and the site's API terms; robots.txt is the file in the site root that lists paths the owner does not want crawled. Anything behind a login, a token or a signature is out of scope. The real difficulty is self-discipline: the data is technically reachable, and that is exactly when the line gets crossed.",
       "inPlainWords": "In India there is no fixed number of records that turns scraping into a crime. The questions are whether you were authorised, whether you got past a protective measure, and whether you took personal data. Bypassing a login or a block is unauthorised access under section 43 of the IT Act, 2000, and section 66 makes it criminal. Personal data brings the DPDP Act, 2023: notice, consent, purpose limitation, security. Selling the data makes every one of those worse.",
-      "benefit": "Public, unauthenticated pages are the part of the web a crawler may read. Once you defeat a rate limit, a captcha, an IP block or a login you are in section 43 territory: the site owner can claim damages, and section 66 can make it an offence punishable with up to three years and a fine. Under the DPDP Act, 2023 the person who decides why and how personal data is processed is a Data Fiduciary and owes notice, consent, purpose limitation, accuracy, security safeguards and breach reporting; the Schedule allows penalties running to hundreds of crores of rupees for security failures, failure to report a breach, and breaches concerning children. Compilations and databases are also protected as literary works under section 2(o) of the Copyright Act, 1957, so lifting a substantial part of a curated database can infringe copyright.",
+      "benefit": "Public, unauthenticated pages are the part of the web a crawler may read. Once you defeat a rate limit, a captcha, an IP block or a login you are in section 43 territory: the site owner can claim damages, and section 66 can make it an offence punishable with imprisonment up to three years, or a fine up to five lakh rupees, or both. Under the DPDP Act, 2023 the person who decides why and how personal data is processed is a Data Fiduciary and owes notice, consent, purpose limitation, accuracy, security safeguards and breach reporting; the Schedule allows penalties running to hundreds of crores of rupees for security failures, failure to report a breach, and breaches concerning children. Compilations and databases are also protected as literary works under section 2(o) of the Copyright Act, 1957, so lifting a substantial part of a curated database can infringe copyright.",
       "evidenceGrade": "A",
       "sources": "Information Technology Act, 2000. <https://www.indiacode.nic.in/>; Digital Personal Data Protection Act, 2023. <https://www.indiacode.nic.in/>; Copyright Office. <https://copyright.gov.in/>; Ministry of Electronics and Information Technology. <https://www.meity.gov.in/>",
       "caveats": "Indian law has no general database right, and scraping facts that are truly public is not by itself unlawful; the liability comes from how you obtained the data and what you do with it. “Public” is not a permanent defence: a site can withdraw permission in its terms or with a technical measure, and continuing after that changes the analysis. If the crawl touches personal data, do not rely on “it was already public”; the DPDP Act still applies to the processing you do. Keep a record of the terms you relied on and the paths you crawled. If a dispute starts, that record is your defence.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "11-5",
@@ -129,7 +129,7 @@
       "evidenceGrade": "A",
       "sources": "Ministry of Electronics and Information Technology. <https://www.meity.gov.in/>; Reserve Bank of India. <https://www.rbi.org.in/>; Information Technology Act, 2000. <https://www.indiacode.nic.in/>; Bharatiya Nyaya Sanhita, 2023. <https://www.indiacode.nic.in/>",
       "caveats": "“I did not know” is judged on what a reasonable developer would have noticed: a fee far above the market, top-up and cash-out screens, betting logic, a client who will not say what the app is for, and a request to hide the app from store review. Those facts are used to prove knowledge. Indian investigators increasingly work backwards from the money, through UPI handles, mule accounts and payout wallets. Keep the written scope of work, the client's KYC and your invoices; if the client refuses to give them, that refusal is your answer.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "11-6",
@@ -154,7 +154,7 @@
       "evidenceGrade": "A",
       "sources": "Information Technology Act, 2000. <https://www.indiacode.nic.in/>; Bharatiya Nyaya Sanhita, 2023. <https://www.indiacode.nic.in/>; Ministry of Electronics and Information Technology. <https://www.meity.gov.in/>; CERT-In. <https://www.cert-in.org.in/>",
       "caveats": "Keep your own payslips and appointment letter; do not copy client data or source code. A non-disclosure agreement can survive resignation. If you find a security flaw, report it instead of testing it further.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "11-7",
@@ -179,7 +179,7 @@
       "evidenceGrade": "A",
       "sources": "Copyright Act, 1957. <https://www.indiacode.nic.in/>; Copyright Office. <https://copyright.gov.in/>; Information Technology Act, 2000. <https://www.indiacode.nic.in/>; Ministry of Corporate Affairs. <https://www.mca.gov.in/>",
       "caveats": "There is no Indian statute that defines a trade secret or sets a penalty for taking one, so any case is built from the contract and from copyright. Two things follow. First, a client list built from public sources is much harder to protect than one that carries pricing, contacts and notes. Second, the realistic remedies for a former employer are an injunction and damages; criminal charges under section 63 are usually brought against commercial piracy rather than one departing employee. If a new employer asks you to bring anything from the old job, get that request in writing and refuse it in writing. Appointment letters in India often carry a confidentiality and non-solicitation clause that survives resignation; read it before you accept the offer.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "11-8",
@@ -204,7 +204,7 @@
       "evidenceGrade": "A",
       "sources": "Information Technology Act, 2000. <https://www.indiacode.nic.in/>; CERT-In. <https://www.cert-in.org.in/>; Bharatiya Nyaya Sanhita, 2023. <https://www.indiacode.nic.in/>; Electricity Act, 2003. <https://www.indiacode.nic.in/>",
       "caveats": "A public bug-bounty programme is a permission, but only within its scope. A 'read-only' scan can still be unauthorised access. Keep the permission in writing.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "11-9",
@@ -224,12 +224,12 @@
       "disputed": false,
       "stillVerifying": false,
       "cost": "No cost at all. Before you join a vendor's bug bounty programme or a public beta test, get a document that states the permitted scope, the target systems and the testing window. Once a vulnerability is confirmed, stop testing. The real challenge is resisting the urge to “give it a quick try”.",
-      "inPlainWords": "In India the question is not how many accounts you took or how much money you made. It is whether you had permission and how far you went into the system. Section 43 of the IT Act, 2000 lets the owner sue for unauthorised access, and section 66 makes it an offence where the access is dishonest or fraudulent, with up to three years and a fine. There is no safe harbour for research: good intentions do not create authority.",
+      "inPlainWords": "In India the question is not how many accounts you took or how much money you made. It is whether you had permission and how far you went into the system. Section 43 of the IT Act, 2000 lets the owner sue for unauthorised access, and section 66 makes it an offence where the access is dishonest or fraudulent, with imprisonment up to three years, or a fine up to five lakh rupees, or both. There is no safe harbour for research: good intentions do not create authority.",
       "benefit": "Section 43 of the IT Act, 2000 covers access to, downloading from, copying from or extracting data out of a computer resource without the permission of the person in charge of it, and it gives the owner a claim for damages. Section 66 turns the same conduct into an offence when it is done dishonestly or fraudulently, punishable with imprisonment up to three years, or a fine up to five lakh rupees, or both. Section 66C covers identity theft and section 66D cheating by personation. If you were given credentials at work and used them outside the scope you were given, that is the clearest case against you: the authorisation was limited, and section 43 does not read it as permission to go further. Selling what you found can add criminal breach of trust under the BNS, 2023, and where personal data is involved, liability under the DPDP Act, 2023.",
       "evidenceGrade": "A",
       "sources": "Information Technology Act, 2000. <https://www.indiacode.nic.in/>; CERT-In. <https://www.cert-in.org.in/>; Ministry of Electronics and Information Technology. <https://www.meity.gov.in/>; National Cyber Crime Reporting Portal. <https://cybercrime.gov.in/>",
       "caveats": "India does not grade unauthorised access by counting credentials, machines or rupees, so the “nobody will notice one export” argument is weaker here, not stronger: there is no threshold to stay under. There is also no statutory safe harbour for security research. The only protection is a written authorisation that names the scope, the targets and the window; a bug bounty policy is such an authorisation only where it says so, and gratitude after the fact is not permission. Collect minimal evidence: a screenshot and a request identifier prove the finding without taking the data. If you have already gone further than you were authorised, stop, do not copy anything else, and take advice before you contact the vendor.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "11-10",
@@ -254,7 +254,7 @@
       "evidenceGrade": "A",
       "sources": "CERT-In. <https://www.cert-in.org.in/>; Information Technology Act, 2000. <https://www.indiacode.nic.in/>; Ministry of Electronics and Information Technology. <https://www.meity.gov.in/>",
       "caveats": "Two warnings. There is no Indian rule that requires you to report a vulnerability, and none that bars you from reporting one to a foreign platform; the DPDP Act lets the government restrict transfers of personal data to specified countries, but that concerns personal data, not the fact of a bug. What does create exposure is how you got the finding: if you accessed the system without authorisation, that is section 43 and possibly section 66 of the IT Act regardless of what you do next. Keep the disclosure private, keep the evidence minimal, and keep a dated record of every message to the vendor; if the vendor is silent, escalate to CERT-In rather than to a public post. Do not name the customer whose data you saw, even in a private report.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "11-11",
@@ -279,7 +279,7 @@
       "evidenceGrade": "B",
       "sources": "Department of Telecommunications. <https://dot.gov.in/>; CERT-In. <https://www.cert-in.org.in/>; Information Technology Act, 2000. <https://www.indiacode.nic.in/>; Ministry of Electronics and Information Technology. <https://www.meity.gov.in/>",
       "caveats": "India does not ban VPN use and there is no penalty for a user who chooses one, but a private international gateway is not unregulated: running one needs an international long-distance (ILD) licence or a unified licence from the Department of Telecommunications, or a virtual network operator authorisation for ILD services (VNO-ILD), so do not read 'VPNs are legal' as 'anyone may run an international gateway'. What remains regulated is providing a telecom or internet service without that authorisation. So the Indian red line is narrower and it is commercial. Do not provide a telecom or internet service without authorisation, do not resell capacity you do not control, and do not advertise evasion of a lawful order. If you run a legitimate VPN or proxy product, the compliance work is subscriber KYC, five-year records, 180-day logs, a grievance officer and a clear statement of what you do with the traffic metadata.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "11-12",
@@ -304,7 +304,7 @@
       "evidenceGrade": "A",
       "sources": "Indian Contract Act, 1872. <https://www.indiacode.nic.in/>; Ministry of Labour and Employment. <https://labour.gov.in/>; Ministry of Corporate Affairs. <https://www.mca.gov.in/>",
       "caveats": "Three practical points. First, employers in India increasingly rely on the confidentiality clause and on the intellectual-property assignment in the appointment letter; a void non-compete does not free you to take documents or to use client and pricing data. Second, some letters are drafted as a non-solicitation or non-dealing clause precisely because a pure non-compete would fail; read the actual wording, not the heading. Third, the employer can still sue, and even a case it loses costs you time and can hold up a new job while an interim application is decided. If a former employer sends a notice, reply through a lawyer who does employment work, and do not discuss the new employer's systems with them.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "11-13",
@@ -329,7 +329,7 @@
       "evidenceGrade": "A",
       "sources": "Copyright Act, 1957. <https://www.indiacode.nic.in/>; Patents Act, 1970. <https://www.indiacode.nic.in/>; Intellectual Property India. <https://ipindia.gov.in/>; Ministry of Corporate Affairs. <https://www.mca.gov.in/>",
       "caveats": "The trap is not the statute but the contract. Many Indian appointment letters assign all intellectual property created during employment, sometimes including work done outside office hours and on your own equipment, and some add a moonlighting clause that restricts outside work altogether. Read those clauses before you sign, and if a personal project matters to you, ask for a named exclusion in writing. Code written at home on your own laptop, with no company data, no company repository and no overlap with your duties, is the version that stays yours; a project that runs on company infrastructure or reads company data is not. Keep your personal repository on your own account and your own hardware, and never copy work code into it to “look something up”.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "11-14",
@@ -354,7 +354,7 @@
       "evidenceGrade": "B",
       "sources": "Copyright Act, 1957. <https://www.indiacode.nic.in/>; Copyright Office. <https://copyright.gov.in/>; Ministry of Electronics and Information Technology. <https://www.meity.gov.in/>",
       "caveats": "India has produced very little reported litigation on open-source licences, so treat the risk as real but unquantified: no judgment sets a going rate for a GPL breach here, and there is no statutory multiple of damages. That is exactly why the practical answer is process rather than law. Keep a licence inventory, prefer permissive licences for closed products, and check the AGPL separately, because its network-use condition catches software you never ship as a binary. If a dependency is GPL and you cannot relicense, the cheapest fix is usually to replace it before launch, while the codebase is small. Do not rely on “we only use it on the server” unless the licence you are relying on actually says that.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "11-15",
@@ -379,7 +379,7 @@
       "evidenceGrade": "B",
       "sources": "Digital Personal Data Protection Act, 2023. <https://www.indiacode.nic.in/>; Ministry of Electronics and Information Technology. <https://www.meity.gov.in/>; CERT-In. <https://www.cert-in.org.in/>",
       "caveats": "The word “necessary” is doing the work: collect what the feature needs, not what might be useful. In practice the choices sit with the product and engineering staff who pick the permissions and write the notice, even though the penalty falls on the organisation. Two common mistakes: treating a pre-ticked box or a bundled consent as consent, and treating a child as someone under 13 as some other laws do, which is not the test here. Keep a record of what you collect, where it is stored, how long you keep it and who you share it with; if the Board asks, that record is the answer. The IT Act, 2000 still applies alongside the DPDP Act, and section 43A requires a body corporate that handles sensitive personal data to compensate a person harmed by its failure to protect it.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "11-16",
@@ -404,7 +404,7 @@
       "evidenceGrade": "A",
       "sources": "Ministry of Electronics and Information Technology. <https://www.meity.gov.in/>; CERT-In. <https://www.cert-in.org.in/>; National Critical Information Infrastructure Protection Centre. <https://nciipc.gov.in/>; Information Technology Act, 2000. <https://www.indiacode.nic.in/>",
       "caveats": "India has no filing that a site must complete before it can host or resolve, and no classification assessment imposed on ordinary systems; do not pay for an ICP consultant and do not let a vendor sell you a classification audit you do not need. The 180-day log retention is real, and it is a floor rather than a target; longer retention brings the DPDP Act's storage limitation into play, so decide a retention period and write it down. Where the log contains personal data, the duty to keep it and the duty to minimise it have to be reconciled in the policy, not left to the engineer.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "11-17",
@@ -429,7 +429,7 @@
       "evidenceGrade": "B",
       "sources": "Ministry of Electronics and Information Technology. <https://www.meity.gov.in/>; Information Technology Act, 2000. <https://www.indiacode.nic.in/>; Digital Personal Data Protection Act, 2023. <https://www.indiacode.nic.in/>; Copyright Office. <https://copyright.gov.in/>",
       "caveats": "The honest summary is that India regulates AI through existing law plus advisories, not through a registration regime. That makes the compliance work less bureaucratic and more substantive: you cannot point to a certificate, so you have to be able to explain your labelling, your takedown route and your training-data provenance. Two traps: assuming the service is not an intermediary because you generate the content rather than host it (the safe-harbour analysis turns on your role and your process, so take advice), and training on scraped personal data or copyrighted text on the theory that it is all public. If a model can produce a real person's likeness or voice, the deepfake advisories and the general law on personality rights apply, and minors' data requires verifiable parental consent under the DPDP Act.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "11-18",
@@ -454,7 +454,7 @@
       "evidenceGrade": "A",
       "sources": "Copyright Act, 1957. <https://www.indiacode.nic.in/>; Information Technology Act, 2000. <https://www.indiacode.nic.in/>; Competition Commission of India. <https://www.cci.gov.in/>; Ministry of Electronics and Information Technology. <https://www.meity.gov.in/>",
       "caveats": "India has no unfair-competition statute aimed at ad blocking: the Competition Act, 2002 addresses anti-competitive agreements and abuse of dominance, and section 4 requires dominance and its abuse, which an ad blocker does not usually have. So the honest position is that a browser extension which filters the user's own browsing, on the user's own device, with the user's consent, has no clear Indian prohibition. What changes the answer is distribution plus interference: injecting into another app, stripping its branding, holding its traffic, or selling the resulting data. If you are building a legitimate ad or tracker blocker, publish what it does, keep it on-device, and do not touch another app's code.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "11-19",
@@ -479,7 +479,7 @@
       "evidenceGrade": "C",
       "sources": "Ministry of Electronics and Information Technology. <https://www.meity.gov.in/>; Digital Personal Data Protection Act, 2023. <https://www.indiacode.nic.in/>; Central Board of Indirect Taxes and Customs. <https://cbic.gov.in/>; Information Technology Act, 2000. <https://www.indiacode.nic.in/>",
       "caveats": "India has no reported prosecution of an API reseller for the reselling itself and no advisory aimed at relay operators, so do not plan around a criminal case; plan around the three civil consequences that do happen: the key is terminated, the customer sues for a service that stopped, and the data-protection duty attaches to you. If you want to build on models legitimately, the route is a business agreement with the provider, clear disclosure to users about where their data goes, a stated retention period, and a GST-compliant invoice. Anything that depends on an account you are not allowed to share is a business that ends the day the provider looks.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "11-20",
@@ -504,7 +504,7 @@
       "evidenceGrade": "A",
       "sources": "Copyright Act, 1957. <https://www.indiacode.nic.in/>; Copyright Office. <https://copyright.gov.in/>; Ministry of Electronics and Information Technology. <https://www.meity.gov.in/>",
       "caveats": "The exemptions in section 65A are narrower than they look: they cover what you do for a permitted purpose, not the tool you hand to someone else. Private study and interoperability work can be defended; publishing the patch or selling the dongle cannot. India's criminal copyright provisions have no monetary trigger, so “I only made a little” saves you nothing on liability, though scale affects sentencing. Civil litigation is the likelier route, and it is slow and expensive: it ends in an injunction plus damages, and your costs are unrecoverable. If you maintain a patcher for legacy software, keep it to interoperability of your own data and get written permission before you share it.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "11-21",
@@ -524,12 +524,12 @@
       "disputed": false,
       "stillVerifying": false,
       "cost": "Zero financial expense. A distributed denial-of-service attack overwhelms a target by pointing coordinated bot traffic at it. The cost is walking away from per-attack or subscription income, and keeping your temper in a game dispute or a business rivalry. Report the dispute to the platform or the police instead of buying an attack.",
-      "inPlainWords": "Knocking someone's site, server or game offline with a flood of traffic is unauthorised access and damage to a computer resource under the IT Act, 2000: section 43 gives the owner a civil claim, and section 66 makes it an offence with up to three years and a fine. Where the attack is meant to strike terror or to threaten the country's security or economic security, section 66F applies and carries the heaviest penalty in the Act. Paying someone to run the attack makes you a party to it.",
+      "inPlainWords": "Knocking someone's site, server or game offline with a flood of traffic is unauthorised access and damage to a computer resource under the IT Act, 2000: section 43 gives the owner a civil claim, and section 66 makes it an offence with imprisonment up to three years, or a fine up to five lakh rupees, or both. Where the attack is meant to strike terror or to threaten the country's security or economic security, section 66F applies and carries the heaviest penalty in the Act. Paying someone to run the attack makes you a party to it.",
       "benefit": "Section 43 of the IT Act, 2000 covers denial of access to a computer resource and disruption of it, and gives the person in charge a claim for damages. Section 66 makes the dishonest or fraudulent version an offence punishable with imprisonment up to three years, or a fine up to five lakh rupees, or both. Section 66F covers cyber terrorism, defined around acts intended to threaten the unity, integrity, sovereignty or security of India or to strike terror in people, and it carries imprisonment which may extend to life. Providing the tools is not a safe sideline: a person who supplies scripts, hosting or botnet access knowing what they are for can be charged as an abettor under the BNS, 2023, and selling a service that does not work is cheating. An attack on a rival business is also a civil wrong, and can be sued for damages.",
       "evidenceGrade": "A",
       "sources": "Information Technology Act, 2000. <https://www.indiacode.nic.in/>; CERT-In. <https://www.cert-in.org.in/>; National Cyber Crime Reporting Portal. <https://cybercrime.gov.in/>; Ministry of Electronics and Information Technology. <https://www.meity.gov.in/>",
       "caveats": "India does not have a separate DDoS offence, so cases are built from sections 43 and 66 and, where the facts are grave enough, section 66F. That matters in two ways: the sentence depends on the harm you caused rather than on a fixed threshold, and the first thing a target will do is preserve logs and file a complaint, which is why the traffic source is usually traceable. Stress testing is legitimate only on systems you own, or where you hold signed written authorisation that states the scope and the window. Booter customers are not anonymous: payments, chat logs and the booter's own records are what an investigation asks for.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     }
   ]
 }

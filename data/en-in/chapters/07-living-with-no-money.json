@@ -4,7 +4,7 @@
   "title": "How to Get By in India When You Have No Money",
   "intro": "Chapter 7: How to Get By in India When You Have No Money. The routes that actually exist here - ration cards, pensions, legal aid, labour offices, night shelters - and the ones that do not, with the official source for each.",
   "edition": "india",
-  "rewriteStatus": "draft",
+  "rewriteStatus": "checked",
   "tips": [
     {
       "id": "7-1",
@@ -29,7 +29,7 @@
       "evidenceGrade": "A",
       "sources": "Employees' State Insurance Corporation - Atal Beemit Vyakti Kalyan Yojana. <https://esic.gov.in/>; Employees' Provident Funds and Miscellaneous Provisions Act, 1952, and the EPF Scheme, 1952, paragraph 69. <https://www.epfo.gov.in/>; Mahatma Gandhi National Rural Employment Guarantee Act, 2005, sections 3 and 7. <https://nrega.nic.in/>; Building and Other Construction Workers' Welfare Cess Act, 1996. <https://labour.gov.in/>",
       "caveats": "There is no direct Indian equivalent of a contributory unemployment insurance fund with statutory benefit durations. ABVKY is conditional and time-limited, and ESIC decides when claims are open, so check the current circular before you rely on it. An early PF withdrawal cuts your retirement corpus. MGNREGA is for rural households and pays the notified wage rate for manual work, not a salary. State schemes change with governments; confirm with the state labour department, never with a paid agent.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "7-2",
@@ -54,7 +54,7 @@
       "evidenceGrade": "A",
       "sources": "Code on Wages, 2019. <https://labour.gov.in/labour-codes>; Industrial Relations Code, 2020. <https://labour.gov.in/labour-codes>; Ministry of Labour and Employment commencement notifications, 21 November 2025. <https://labour.gov.in/>; SAMADHAN portal. <https://samadhan.labour.gov.in/>",
       "caveats": "Coverage decides everything: managerial and supervisory staff may fall outside the Industrial Relations Code definition of workman, and small establishments may be outside the state Shops Act. The limitation period differs, so confirm it before you file. A win is not a payment: if the employer has no assets, enforcement is slow. Free legal aid is covered in tip 7-3.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "7-3",
@@ -79,7 +79,7 @@
       "evidenceGrade": "A",
       "sources": "Legal Services Authorities Act, 1987, sections 12, 13 and 19. <https://www.indiacode.nic.in/>; National Legal Services Authority - legal aid. <https://nalsa.gov.in/legal-aid/>; Department of Justice - legal aid and the 15100 helpline. <https://doj.gov.in/>",
       "caveats": "Eligibility is not automatic for everyone: income ceilings are set by each state and change. Legal aid lawyers vary in quality and caseload, and you can ask the authority for a different panel lawyer if yours does nothing for weeks. Legal aid does not cover a private-lawyer fee you have already agreed to pay. There is no Indian rule that removes the need to show hardship: you still have to show you fall in a listed category.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "7-4",
@@ -104,7 +104,7 @@
       "evidenceGrade": "A",
       "sources": "Ministry of Housing and Urban Affairs - DAY-NULM, Shelter for Urban Homeless. <https://mohua.gov.in/>; Ministry of Women and Child Development - One Stop Centres. <https://wcd.nic.in/>; Emergency Response Support System - 112. <https://112.gov.in/>",
       "caveats": "This tip has no direct Indian equivalent, and the difference matters: no statute obliges any Indian shelter to admit you for ten days, and no government office issues a free ticket home as a matter of right. Shelter capacity is far below need in most cities, and many rain baseras close or run at reduced capacity outside winter. Police can move people off pavements. Carry ID if you have it, keep your belongings with you, and treat any private home that demands money or documents with suspicion.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "7-5",
@@ -129,7 +129,7 @@
       "evidenceGrade": "A",
       "sources": "National Career Service, Ministry of Labour and Employment. <https://www.ncs.gov.in/>; e-Shram, Ministry of Labour and Employment. <https://eshram.gov.in/>; Ministry of Labour and Employment. <https://labour.gov.in/>",
       "caveats": "NCS listings are uneven by state and sector, and many blue-collar jobs never appear there. Employment exchange registration is close to vestigial for private jobs in many states. Never pay a registration or interview fee to a private agency; see tip 7-15. For daily-wage work, verify the rate on site and keep the contractor's name and phone number.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "7-6",
@@ -154,7 +154,7 @@
       "evidenceGrade": "B",
       "sources": "Ministry of Home Affairs - State Disaster Response Fund norms. <https://mha.gov.in/>; National Disaster Management Authority. <https://ndma.gov.in/>; National Social Assistance Programme - National Family Benefit Scheme. <https://nsap.nic.in/>",
       "caveats": "This is not an entitlement you can enforce. SDRF relief is tied to notified disasters, and a house fire or a road accident may not qualify in your district. CM Relief Fund decisions are discretionary, with no appeal. Never pay a middleman who promises to get you relief; applications are free.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "7-7",
@@ -179,7 +179,7 @@
       "evidenceGrade": "A",
       "sources": "National Food Security Act, 2013. <https://nfsa.gov.in/>; Department of Food and Public Distribution - ONORC. <https://dfpd.gov.in/>; National Food Security Act text. <https://www.indiacode.nic.in/>",
       "caveats": "There is no direct Indian equivalent of a monthly cash payment set at the poverty line. NFSA gives grain, not money, and the quantity is small. Inclusion is decided by state surveys and the list is often frozen, so a newly poor household may be refused a new card. Ration cards are also a known source of leakage and exclusion; check your name on the state PDS portal. Antyodaya cards are capped, so eligibility does not guarantee one.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "7-8",
@@ -204,7 +204,7 @@
       "evidenceGrade": "A",
       "sources": "Department of Empowerment of Persons with Disabilities - UDID. <https://www.swavlambancard.gov.in/>; National Social Assistance Programme. <https://nsap.nic.in/>; Rights of Persons with Disabilities Act, 2016. <https://www.indiacode.nic.in/>; ADIP scheme. <https://depwd.gov.in/>",
       "caveats": "This is not the same as a two-tier living and care subsidy. The central disability pension is small and is meant to be topped up by the state; the total may still be a few hundred rupees a month. A UDID card needs a medical assessment, and the percentage recorded decides eligibility. If you cannot apply in person, a family member can file on your behalf with a written authorisation.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "7-9",
@@ -229,7 +229,7 @@
       "evidenceGrade": "A",
       "sources": "National Health Authority - Ayushman Bharat PM-JAY. <https://nha.gov.in/PM-JAY>; PM-JAY senior citizens 70+ FAQ. <https://nha.gov.in/img/resources/English_FAQs_related_to_the_benefits_for_senior_citizens.pdf>; Employees' State Insurance Corporation. <https://esic.gov.in/>",
       "caveats": "There is no Indian equivalent of an annual enrolment window with a waiting-period penalty for missing it. PM-JAY eligibility is fixed by central and state lists, and being poor does not automatically put you on them. Many private hospitals are not empanelled. ESIC coverage ends when insurable employment ends. State schemes differ sharply, so check the state health agency, not a hospital's billing desk.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "7-10",
@@ -254,7 +254,7 @@
       "evidenceGrade": "A",
       "sources": "National Health Authority - PM-JAY. <https://nha.gov.in/PM-JAY>; ESIC - sickness and employment injury benefits. <https://esic.gov.in/>; Social Security Code, 2020 (Chapter VII, employment injury benefit). <https://www.indiacode.nic.in/>; Ministry of Health and Family Welfare - Rashtriya Arogya Nidhi. <https://mohfw.gov.in/>",
       "caveats": "There is no Indian equivalent of a statutory medical-leave ladder of 3 to 24 months that protects your job. ESIC sickness benefit is time-limited and only for insured workers; outside ESIC, paid sick leave depends on your contract or the state Shops Act. PM-JAY does not cover outpatient care, medicines or diagnostics, which is where most of a poor household's health spending goes. Cashless admission can be refused if pre-authorisation is not done, so start the paperwork before the surgery, not after.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "7-11",
@@ -279,7 +279,7 @@
       "evidenceGrade": "A",
       "sources": "Unique Identification Authority of India - e-Aadhaar and Aadhaar retrieval. <https://uidai.gov.in/>; Election Commission of India - e-EPIC. <https://voters.eci.gov.in/>; Parivahan Sewa, Ministry of Road Transport and Highways. <https://parivahan.gov.in/>; DigiLocker. <https://www.digilocker.gov.in/>",
       "caveats": "There is no Indian rule that a replacement ID must be issued within 60 days, and no three-day temporary card. Aadhaar is not mandatory for every service, and the Supreme Court in 2018 struck down several linkage requirements, but many offices still ask for it, so carry a second ID. Never give your Aadhaar OTP or biometrics to an agent who offers to update your card for a fee.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "7-12",
@@ -304,7 +304,7 @@
       "evidenceGrade": "B",
       "sources": "National Career Service. <https://www.ncs.gov.in/>; e-Shram. <https://eshram.gov.in/>; Building and Other Construction Workers' Welfare Cess Act, 1996 and state welfare boards. <https://labour.gov.in/>; Code on Social Security, 2020 - gig and platform workers. <https://labour.gov.in/>",
       "caveats": "This tip has no direct Indian equivalent: there is no recognition that triggers a social-insurance subsidy for an unemployed self-employed person. State welfare board benefits require you to be registered before the event, so join while you are working. Registration alone creates no entitlement to a job. Beware of agents charging for e-Shram or NCS registration, which is free.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "7-13",
@@ -329,7 +329,7 @@
       "evidenceGrade": "A",
       "sources": "Pradhan Mantri Kaushal Vikas Yojana - Ministry of Skill Development and Entrepreneurship. <https://www.pmkvyofficial.org/>; Skill India Digital. <https://www.skillindiadigital.gov.in/>; National Apprenticeship Promotion Scheme. <https://www.apprenticeshipindia.gov.in/>; PM-DAKSH. <https://pmdaksh.dosje.gov.in/>",
       "caveats": "There is no Indian scheme that reimburses you for a course you chose and paid for. PMKVY quality varies enormously by training partner, so ask for the placement record and the assessment body before enrolling. A guaranteed job promise is a warning sign. Apprenticeship stipends are low, a prescribed share of the minimum wage, and not every apprentice is retained.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "7-14",
@@ -354,7 +354,7 @@
       "evidenceGrade": "A",
       "sources": "Liu S, Huang JL, Wang M (2014). Effectiveness of job search interventions: a meta-analytic review. Psychological Bulletin 140(4): 1009-1041. <https://doi.org/10.1037/a0035923>; National Career Service - career counselling and job fairs. <https://www.ncs.gov.in/>",
       "caveats": "The 47 studies were mostly run in Europe and North America; none of them tested Indian labour markets, so the 2.67 figure is an extrapolation, not an Indian result. Coaching improves your odds, it does not create vacancies. Referrals work best where you already have a network; if you do not, job fairs and NCS listings are the substitute.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "7-15",
@@ -379,7 +379,7 @@
       "evidenceGrade": "A",
       "sources": "Code on Wages, 2019. <https://labour.gov.in/labour-codes>; Occupational Safety, Health and Working Conditions Code, 2020. <https://labour.gov.in/labour-codes>; Emigration Act, 1983 and eMigrate. <https://emigrate.gov.in/>; Prize Chits and Money Circulation Schemes (Banning) Act, 1978. <https://www.indiacode.nic.in/>; Banning of Unregulated Deposit Schemes Act, 2019. <https://www.indiacode.nic.in/>; RBI digital lending guidelines. <https://www.rbi.org.in/>",
       "caveats": "India has no single statute that says no recruitment fee for every job; the protection is a patchwork of the Code on Wages, state Shops Acts, the Emigration Act for overseas work, and general cheating law. There is also no four-times-LPR interest cap: the Usurious Loans Act lets a court reopen an unconscionable rate, and state moneylending Acts set their own ceilings. Do not hand over originals even to an HR department for verification: show them and take them back the same day.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "7-16",
@@ -404,7 +404,7 @@
       "evidenceGrade": "B",
       "sources": "Pradhan Mantri Awas Yojana - Urban. <https://pmaymis.gov.in/>; Ministry of Housing and Urban Affairs - Affordable Rental Housing Complexes. <https://mohua.gov.in/>; Delhi Development Authority. <https://dda.gov.in/>",
       "caveats": "This is not a statutory entitlement with a maximum waiting period. ARHC units are limited, located where the implementing body has stock, and allocated on its own rules; some are dormitory beds, not family flats. Rental housing lotteries are heavily oversubscribed. Beware of agents selling PMAY application forms: the application is free and online.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "7-17",
@@ -429,7 +429,7 @@
       "evidenceGrade": "B",
       "sources": "Ministry of Statistics and Programme Implementation - Household Consumption Expenditure Survey 2022-23. <https://mospi.gov.in/>; Department of Food and Public Distribution. <https://dfpd.gov.in/>; Tamil Nadu Civil Supplies Corporation - Amma Canteens. <https://www.tncsc.tn.gov.in/>",
       "caveats": "The percentage shares are national averages and differ sharply between states and between a single migrant and a family. There is no official data on how much a shared room saves; that part is practical judgment, not a statistic. Subsidised canteens are run by state governments and municipal bodies, and eligibility and timings vary. A PG deposit and brokerage can eat the first month's saving, so negotiate the deposit in writing.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "7-18",
@@ -454,7 +454,7 @@
       "evidenceGrade": "A",
       "sources": "Employees' Provident Funds and Miscellaneous Provisions Act, 1952, and the Employees' Pension Scheme, 1995. <https://www.epfo.gov.in/>; Social Security Code, 2020, and the Employees' State Insurance Act, 1948 for contributions already paid; ESIC benefit conditions. <https://esic.gov.in/>; National Health Authority - PM-JAY. <https://nha.gov.in/PM-JAY>",
       "caveats": "There is no Indian rule that fifteen years of contribution earns a pension; the EPS threshold is ten years, and the amount depends on pensionable salary and service. ESIC benefit conditions are technical and change by circular, so check before you assume a gap is harmless. Paying a third party to run contributions in your name is a fraud risk and can void a claim. Withdrawing PF at every job change destroys the compounding that makes it worth anything.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "7-19",
@@ -479,7 +479,7 @@
       "evidenceGrade": "A",
       "sources": "Juvenile Justice (Care and Protection of Children) Act, 2015, section 24. <https://www.indiacode.nic.in/>; Insolvency and Bankruptcy Code, 2016, Part III. <https://www.ibbi.gov.in/>; Credit Information Companies (Regulation) Act, 2005. <https://www.rbi.org.in/>; RBI Integrated Ombudsman Scheme, 2021. <https://www.rbi.org.in/>",
       "caveats": "Do not expect an Indian equivalent of a personal bankruptcy discharge: the IBC's individual insolvency provisions are dormant, and the fresh start process has never been notified. State debt relief Acts cover only small debts and are patchy. Paying a credit repair firm cannot remove a genuine default, and only the lender can correct an error. Disclosure duties for convictions depend on the job: government service, teaching and the bar have their own bars.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "7-20",
@@ -504,7 +504,7 @@
       "evidenceGrade": "B",
       "sources": "Insurance Regulatory and Development Authority of India - health insurance regulations and standard products. <https://irdai.gov.in/>; Insurance Act, 1938, section 45. <https://www.indiacode.nic.in/>; National Health Authority - PM-JAY. <https://nha.gov.in/PM-JAY>",
       "caveats": "This tip keeps its B grade: the rules are official, but there is no Indian data on how much a top-up policy saves a household. Guaranteed renewal is not Indian regulatory language; lifetime renewability is, and it still allows the insurer to change the premium at renewal with IRDAI approval. Non-disclosure of a pre-existing condition can still void a claim within the moratorium. Two indemnity policies will not pay the same bill twice. If PM-JAY or ESIC covers you, the marginal value of a private policy is smaller than the agent will suggest.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "7-21",
@@ -529,7 +529,7 @@
       "evidenceGrade": "B",
       "sources": "Ministry of Housing and Urban Affairs - DAY-NULM shelter for the urban homeless. <https://mohua.gov.in/>; Ministry of Women and Child Development - One Stop Centres and 181. <https://wcd.nic.in/>; Indian Railways - retiring rooms and waiting rooms. <https://indianrailways.gov.in/>",
       "caveats": "There is no direct Indian equivalent of a legal 24-hour refuge, and no official data on the safety of station floors. Shelter capacity is small and many are seasonal. Security staff can and do clear stations at night, and arguing with them is not a strategy. If you have no money and no bed, call 112 and ask for the nearest shelter, or go to a government hospital emergency department if you are unwell.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "7-22",
@@ -554,7 +554,7 @@
       "evidenceGrade": "A",
       "sources": "Occupational Safety, Health and Working Conditions Code, 2020 (Chapter XI, sections 45, 53 and 55). <https://labour.gov.in/labour-codes>; Building and Other Construction Workers welfare framework. <https://labour.gov.in/>; Shram Suvidha portal. <https://shramsuvidha.gov.in/>",
       "caveats": "The principal employer liability is for wages and welfare facilities, not reinstatement, and enforcing it needs the contractor records, which you may not have. Chapter XI applies at 50 or more contract workers, so on a smaller site the Code's contract-labour protections may not apply and the claim runs against the contractor. Domestic workers remain outside most labour law, and a civil suit is slow. A written order, a site gate pass and a photo of the attendance register are worth more than an oral promise.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "7-23",
@@ -579,7 +579,7 @@
       "evidenceGrade": "B",
       "sources": "RBI - responsible lending conduct and recovery agents. <https://www.rbi.org.in/>; RBI - digital lending guidelines. <https://www.rbi.org.in/>; RBI Integrated Ombudsman Scheme, 2021. <https://www.rbi.org.in/>; Credit Information Companies (Regulation) Act, 2005. <https://www.indiacode.nic.in/>",
       "caveats": "There is no Indian statutory right to a five-year repayment plan, and a bank may refuse and sue. A civil suit takes a year or more. Not paying is not a crime by itself, but moving assets or disappearing after borrowing can turn a civil default into a criminal case. Answer the lender's calls and keep your contact details current. If an agent threatens you, complain to the lender and the RBI Ombudsman, and call 112 if you are in danger.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     }
   ]
 }

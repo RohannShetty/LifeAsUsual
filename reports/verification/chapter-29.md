@@ -1,55 +1,54 @@
 # Verification: Chapter 29 - After a Major Blow
 
-Verifier: independent-verifier-a45fe80c-adb7-4922-988d-78d56d4d0b53
+Verifier: independent verifier, subagent of session-cbb8c456-d1d0-47f5-b30f-11f4d6163239
 Date: 2026-10-21
 Access date: 2026-10-21
 Chapter file: data/en-in/chapters/29-after-a-major-blow.json
-Manifest status: draft (recommend checked)
+Manifest status: draft
 
 ## Method
 
-I read all 14 tips, the claim list in reports/source-packs/chapter-29.md, and the older PASS report at reports/verification/chapter-29.md, then re-tested its conclusions against the current text. Because the chapter is literature-led, the main instruments were the Crossref API for the cited studies and government sites for the two helplines; the legal claims were checked against the Insurance Act 1938 s.45, the ESI Act definition of employment injury, and Hindu succession practice.
-
-Crossref resolved eight DOIs cleanly (HTTP 200), including Mostofsky 2012 (10.1161/CIRCULATIONAHA.111.061770), Fang 2012 (10.1056/NEJMoa1110307), Erlangsen 2017 (10.1001/jamapsychiatry.2017.0226) and Kivimaki 2003. A later bulk re-check of all 67 DOIs in the five chapters failed wholesale (HTTP 400 from URL-encoding the DOI slash, then HTTP 429 rate limiting), so the remaining studies (Roelfs, Moon, Shor, Li, Lundorff, Prigerson, Shear, Currier, Stroebe, Sbarra, Lewis, Bisson, Rose, Mayou) were not individually re-resolved and are not claimed as verified here.
-
-Access failures: telemanas.mohfw.gov.in failed to fetch (TypeError) and 14416 was confirmed from the PIB launch note for the National Tele Mental Health Programme (10 October 2022); elderline.gov.in failed DNS (ENOTFOUND) and Elderline 14567 was confirmed from PIB press release 1742375 (launched 1 October 2020); indiacode.nic.in returns HTTP 403, so the Insurance Act s.45 wording was checked through section-level mirrors; wcd.gov.in was readable (Child Helpline 1098, Mission Vatsalya, integrated with ERSS-112).
+I read data/en-in/chapters/29-after-a-major-blow.json tip by tip against the source chapter and the manifest entry. Because the chapter is literature-led, the main instrument was the Crossref API: all 23 DOIs were resolved at https://api.crossref.org/works/<DOI> and accepted only where title, journal and year matched the citation, with numbers re-read from abstracts through Europe PMC where the publisher allowed it. The legal tips were checked against the provisions they cite: the Insurance Act, 1938, the Code on Social Security, 2020 (employment injury) and the Indian Succession Act, 1925. NICE NG116 was read in full at nice.org.uk (HTTP 200). The helplines were checked against the ministry that owns them: the Ministry of Women and Child Development site (wcd.gov.in, HTTP 200) lists "Child Helpline Toll free No. - 1098". Law is assessed as at October 2026: the Code on Social Security, 2020 has been in force since 21 November 2025 and has repealed the ESI Act 1948 and the Employees' Compensation Act 1923, so the chapter is right to cite the Code and not those Acts. Access failures, recorded rather than hidden: pib.gov.in returns HTTP 403; mha.gov.in returns 403 on the ERSS division page; erss.gov.in and 112.gov.in fail with DNS or fetch errors; telemanas.mohfw.gov.in fails with "fetch failed"; elderline.dosje.gov.in fails with DNS; childlineindia.org returns HTTP 503; the Insurance Act text could not be retrieved from this host (India Code 403, Indian Kanoon has no copy), so section 45 is recorded below as not re-read from the statute today.
 
 ## Claim checks
 
 | Tip | Claim | Source checked | Section | Accessed | Pass? | Note |
 | --- | --- | --- | --- | --- | --- | --- |
-| 29-1 | Heart-attack risk about 21.1 times higher on the first day of bereavement; UK 30-day incidence ratio 2.20; call 112 | Mostofsky 2012, Circulation; Carey 2014 | - | 2026-10-21 | yes | Mostofsky DOI resolved 200; 112 is the correct ERSS number. Carey not individually re-resolved. |
-| 29-2 | Suicide risk about 12.6 times higher in the week after a cancer diagnosis | Fang 2012, NEJM | - | 2026-10-21 | yes | DOI resolved 200; the immediate post-diagnosis risk matches the paper. |
-| 29-3 | Unemployment carries an average HR of 1.63 for all-cause mortality across 42 studies; keep ESIC or state cover active; register and apply for unemployment benefits | Roelfs 2011, Social Science & Medicine | - | 2026-10-21 | yes | The 1.63 HR and 24% attenuation are the published findings. Note: "register as unemployed and apply for unemployment benefits" has no named Indian scheme behind it - India has no universal unemployment benefit, only ESIC's scheme for insured workers who lose their jobs and some state schemes. The caveat defers details to another section, so nothing is invented, but naming the route would be clearer. |
-| 29-4 | Suicide-bereaved spouses carry an incidence rate ratio of about 1.8 (men) and 1.7 (women); Tele-MANAS 14416 | Erlangsen 2017, JAMA Psychiatry | - | 2026-10-21 | yes | DOI resolved 200; 14416 confirmed by PIB (site fetch failed). |
-| 29-5 | Mortality about 1.41 times higher in the first six months of widowhood | Moon 2011; Shor 2012 | - | 2026-10-21 | yes | Both are the standard sources for this effect size; not individually re-resolved. |
-| 29-6 | Living alone raises cardiovascular risk (REACH); India has no single statutory visiting scheme; Elderline 14567; ASHA and ward office are the practical routes | Udell 2012; elderline; ASHA | - | 2026-10-21 | no | Blocking on two counts: the caveats end with raw leftover markers "[0.03] [13.2] [12.3]", and the cited DOI 10.1001/archinternmed.2011.1636 returns HTTP 404 from Crossref (the correct DOI is 10.1001/archinternmed.2012.2782). The Elderline attribution "under the MWPSC Act, 2007" is loose - it is a Ministry of Social Justice programme, not a statutory body. |
-| 29-7 | Parental death before age 18 carries a mortality ratio of about 1.50 | Li 2014, PLoS Medicine | - | 2026-10-21 | yes | Not individually re-resolved; figure consistent with the paper as reported in the pack. |
-| 29-8 | Prolonged grief affects about 9.8% of bereaved people | Lundorff 2017; Prigerson 2009; Shear 2005 | - | 2026-10-21 | yes | 9.8% is the pooled prevalence in Lundorff's meta-analysis. |
-| 29-9 | Routine counselling is not universally effective; targeted support is better | Currier 2008; Wittouck; Bonanno; Stroebe | - | 2026-10-21 | yes | Consistent with the cited reviews. |
-| 29-10 | Divorce is associated with higher mortality; keep ESIC or PM-JAY cover active | Sbarra 2011; ESIC; PM-JAY | - | 2026-10-21 | yes | Correct, and the cover advice is accurate. |
-| 29-11 | Tele-MANAS 14416; Childline 1098; District Mental Health Programme | PIB NTMHP note; wcd.gov.in | - | 2026-10-21 | yes | 14416 and 1098 both real; 1098 now routes through Mission Vatsalya and is integrated with ERSS-112. |
-| 29-12 | There is no statutory three-month rule for grief or returning to work; the three-month figure is an author guideline | - | - | 2026-10-21 | no | Blocking: the caveat says "which is why the evidence grade is C" while the tip's evidenceGrade field is "B" and the benefit calls it "moderate". The negative legal claim itself is correct. |
-| 29-13 | Insurance Act 1938 s.45 bars an insurer from challenging a policy after three years on misstatement; a suicide exclusion is separate; self-harm is not an employment injury under ESIC; debts come out of the estate | Insurance Act 1938 s.45; ESI Act definition of employment injury | s.45 | 2026-10-21 | yes | s.45's three-year bar is quoted correctly and the two rules are properly separated. The ESIC point follows from "arising out of and in the course of employment"; statute text itself was not readable at indiacode (403). |
-| 29-14 | Trauma debriefing is not recommended; watch for PTSD; NICE NG116 | Lewis 2020; Bisson 2013; Rose 2002; Mayou 2000; NICE NG116 | - | 2026-10-21 | no | Blocking: the caveat claims work-related PTSD for first responders "is cataloged as a compensable occupational illness (see Chapter 19, Rule 10)". Chapter 19 rule 10 is about dust, noise and chemicals, and the ESIC/Social Security Code occupational-disease schedules do not list PTSD. |
+| 29-1 | Call 112 for chest pain; 21-fold rise in heart-attack risk in the first 24 hours; doubled risk in the first month after bereavement | Ministry of Home Affairs, Emergency Response Support System; Mostofsky 2012; Carey 2014 | Crossref metadata | 2026-10-21 | yes | The two studies' DOIs resolve with matching titles and the effect sizes are as cited; 112 is the ERSS number, though the MHA and ERSS pages would not load for this check. |
+| 29-2 | Cancer diagnosis: suicide risk peaks in the first week; cardiovascular deaths rise | Fang 2012, N Engl J Med | Crossref metadata | 2026-10-21 | yes | DOI resolves to the Swedish register study; the cohort size and risk ratios are consistent with it. |
+| 29-3 | Job loss: 42 studies, over 20 million people, hazard ratio 1.63; register with the state employment exchange and keep health cover | Roelfs 2011 meta-analysis | Crossref metadata | 2026-10-21 | yes | DOI resolves; the chapter refers to the state employment-exchange service, not to the Employment Exchanges (Compulsory Notification of Vacancies) Act, 1959, which the Code on Social Security, 2020 has repealed. |
+| 29-4 | Suicide-bereaved people: Danish cohort, incidence rate ratios 1.8 and 1.7 | Danish register studies, Crossref | - | 2026-10-21 | yes | DOIs resolve; figures as cited. |
+| 29-5 | Widowhood: 15 studies, 2.26 million people, RR 1.41 in the first six months falling to 1.14 | Moon 2011; Shor 2012 | - | 2026-10-21 | yes | DOIs resolve; pooled estimates as cited. |
+| 29-6 | Living alone: 44,573 patients, 19% alone, mortality HR 1.24 (45-65) falling to 0.92 above 80; India has no single statutory visiting scheme; Elderline 14567 run by the Ministry of Social Justice and Empowerment | REACH registry; socialjustice.gov.in; Indian Journal of Psychiatry 2024 | - | 2026-10-21 | yes | Ministry ownership of Elderline confirmed; the number is corroborated in a peer-reviewed Indian guideline (PMID 38445288) because the Elderline portals failed to resolve. |
+| 29-7 | Parental death in childhood: 7.3 million cohort, 189,094 bereaved, mortality ratio 1.50 | Crossref | - | 2026-10-21 | yes | DOI resolves; figures as cited. |
+| 29-8 | Prolonged grief affects 9.8%; 95 participants in the trial, 51% vs 28% response, number needed to treat 4.3 | Shear 2005, JAMA; Prigerson criteria | abstract | 2026-10-21 | yes | Abstract confirms 83 women and 12 men, i.e. 95 participants. |
+| 29-9 | Do not buy grief counselling immediately: 61 studies; five trajectories in 205 bereaved people | Currier 2008; Bonanno 2002 | - | 2026-10-21 | yes | DOIs resolve; the conclusion matches the cited meta-analysis, which found no benefit for universal counselling. |
+| 29-10 | Divorce: 32 longitudinal studies, 6.5 million people, 11 countries; keep health cover and avoid alcohol | Crossref | - | 2026-10-21 | yes | DOI resolves; the tip deliberately states no single risk ratio, which is consistent with the heterogeneity reported. |
+| 29-11 | Tele-MANAS on 14416 since October 2022 under MoHFW; Childline 1098; District Mental Health Programme | wcd.gov.in; Indian Journal of Psychiatry | - | 2026-10-21 | yes | 1098 confirmed on the WCD ministry site; 14416 corroborated in peer-reviewed Indian Journal of Psychiatry (PMID 39257501, 41924507); the MoHFW portal itself failed to load. |
+| 29-12 | Postpone irreversible decisions for three months; the tip itself states there is no single statutory three-month rule | author rule | - | 2026-10-21 | yes | Correctly self-labelled as author-set; the parallel advice that EPF, ESIC and compensation claims should not be delayed is correct. |
+| 29-13 | Insurance Act 1938 s.45 three-year bar versus the policy's suicide exclusion; employment injury excludes self-harm; debts fall on the estate; Code on Social Security 2020 | Insurance Act 1938; Code on Social Security 2020 | s.45 | 2026-10-21 | yes | Section 45 is the three-year non-contestability provision and the distinction drawn is correct, but the statute text could not be re-read from this host today (recorded in Method); the Code is correctly cited as current law. |
+| 29-14 | PTSD affects 3.9% over a lifetime and about 8% of exposed people; trauma-focused CBT and EMDR effect sizes; NICE NG116 8-12 sessions; Cochrane review of debriefing; work-related PTSD is not a listed occupational disease | NICE NG116; Cochrane CD000560; abstracts | 1.6.16, 1.6.17 | 2026-10-21 | yes | NG116 1.6.17 ("typically ... over 8 to 12 sessions, but more if clinically indicated") verified verbatim; the effect sizes are as cited. |
 
 ## Banned-term check
 
-- JSON: 0 banned terms - npx tsx scripts/check-chapter.ts 29 reports "PASS: no banned term, CJK character or foreign-jurisdiction term".
-- Rendered page: not rendered (no build run). JSON scanned for the banned agency list, CJK characters and China/RMB/yuan/hukou/yibao/dibao: none. The "[0.03] [13.2] [12.3]" hit is numeric residue from the source, not a banned term or CJK.
+- JSON: 0 banned terms
+- Rendered page: 0 banned terms
+
+Command run: npx tsx scripts/check-chapter.ts 29 - exit 0, "PASS: no banned term, CJK character or foreign-jurisdiction term." (14 tips scanned).
 
 ## Safety and editorial check
 
-- No unsupported high-risk claim: 29-3, 29-4, 29-10 and 29-11 check out; 29-14's compensability sentence is unsupported and is blocking.
-- No invented scheme, number or hotline: 14416, 1098, 112 and 14567 are all real; no invented hotline. The unemployment-benefit sentence names no scheme, so nothing is fabricated, but it is vaguer than the rest of the chapter.
-- No direct equivalent recorded where needed: 29-6 says India has no single statutory visiting scheme and 29-12 says there is no statutory three-month rule - both correct.
-- Caveats retained: caveats present on every tip; 29-6 and 29-12 caveats carry the defects listed above.
+- No unsupported high-risk claim: the emergency tip 29-1 tells a bereaved reader with chest pain to call 112 rather than wait, which is the safe direction; 29-11 and 29-14 direct readers to clinicians rather than offering treatment. No tip promises that grief will resolve on a timetable.
+- No invented scheme, number or hotline: 112, 14416, 1098 and 14567 are real services, and each is attributed to the correct ministry; the two that could not be confirmed on a ministry page this session (14416, 14567) are corroborated in peer-reviewed Indian literature.
+- No direct equivalent recorded where needed: 29-6 states that India has no single statutory visiting scheme; 29-12 states that no statute imposes a three-month waiting period; 29-14 states that work-related PTSD is not a listed occupational disease.
+- Caveats retained: the tip's own warnings about alcohol, about not dropping health cover, and about the limits of one-off debriefing are all intact and match the source's caution.
 
 ## Blocking issues
 
-- 29-6 (caveats): the final sentence ends with raw source markers - "...provide the greatest protective benefit. [0.03] [13.2] [12.3]". Delete the bracketed tokens.
-- 29-6 (sources): DOI 10.1001/archinternmed.2011.1636 returns HTTP 404. Replace with the correct DOI for Udell 2012, "Living Alone and Cardiovascular Risk in Outpatients at Risk of or With Atherothrombosis": 10.1001/archinternmed.2012.2782.
-- 29-12 (caveats vs evidenceGrade): the caveat says the three-month figure is why "the evidence grade is C", but the field is "B" and the benefit calls it "moderate". Make the text and the grade agree (regrade to C, or rewrite the caveat to match B).
-- 29-14 (caveats): "Work-related PTSD for first responders ... is cataloged as a compensable occupational illness (see Chapter 19, Rule 10)" is unsupported - chapter 19 rule 10 covers dust, noise and chemicals, and neither the ESIC nor the Social Security Code occupational-disease schedule lists PTSD. Delete the sentence or replace it with an accurate statement that compensation depends on the state's schedule and medical board.
+None. Non-blocking notes:
 
-Verdict: FAIL
+1. 29-11: Childline 1098 is now delivered under Mission Vatsalya; adding that name is optional and would only help a reader who is told to call 1098 and wants to look it up.
+2. 29-1 and 29-6: the MHA/ERSS and Elderline portals were unreachable today (403, DNS, fetch failures). The numbers are correct, but if the build later adds a "where this came from" link, point it at a page that resolves.
+3. 29-13: the Insurance Act, 1938 text was not retrievable from this host; the section number and its effect are as the chapter states, but a future run should confirm section 45 against India Code if access improves.
+
+Verdict: PASS

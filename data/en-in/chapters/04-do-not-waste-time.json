@@ -4,7 +4,7 @@
   "title": "Do Not Waste Time",
   "intro": "Chapter 4: Do Not Waste Time",
   "edition": "india",
-  "rewriteStatus": "draft",
+  "rewriteStatus": "checked",
   "tips": [
     {
       "id": "4-1",
@@ -29,7 +29,7 @@
       "evidenceGrade": "A",
       "sources": "Gollwitzer, P. M., & Sheeran, P. (2006). Implementation intentions and goal achievement: A meta-analysis of effects and processes. Advances in Experimental Social Psychology, 38, 69–119. <https://doi.org/10.1016/S0065-2601(06)38002-1>",
       "caveats": "This method works only for goals you genuinely want to achieve. If a goal holds no personal value for you, writing multiple such statements won’t help. Additionally, most research participants were students, and the studies focused on health-related habits; results may not translate directly to workplace settings.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "4-2",
@@ -54,7 +54,7 @@
       "evidenceGrade": "B",
       "sources": "Gollwitzer, P. M., & Sheeran, P. (2006). Implementation intentions and goal achievement: A meta-analysis of effects and processes. Advances in Experimental Social Psychology, 38, 69–119. <https://doi.org/10.1016/S0065-2601(06)38002-1>",
       "caveats": "Exit criteria should be written at the very start of a project, while emotions are still neutral. Deciding on them later gets skewed by all the resources already spent; at that point you should focus only on future investment and future returns, as explained in item 3. Also, “the ability to withdraw” is just one sub‑finding across those studies — no single study has calculated exactly how much time it can save.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "4-3",
@@ -79,7 +79,7 @@
       "evidenceGrade": "B",
       "sources": "Arkes, H. R., & Blumer, C. (1985). The psychology of sunk cost. Organizational Behavior and Human Decision Processes, 35, 124–140. <https://doi.org/10.1016/0749-5978(85)90049-4>; Roth, S., Robbert, T., & Straus, L. (2015). On the sunk-cost effect in economic decision-making: A meta-analytic review. Business Research, 8(1), 99–138. <https://doi.org/10.1007/s40685-014-0014-8>",
       "caveats": "This is exactly what Arkes and Blumer demonstrated in their theater experiment. The Ohio University Theater sold season tickets at three price points: full price ($15), $13, and $8. In the first half of the season, ticket holders who paid full price attended an average of 4.11 shows, compared to 3.32 and 3.29 shows for the other two groups. No significant differences emerged between the groups in the second half of the season. Roth and colleagues found this effect diminishes over time and is less pronounced among older individuals.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "4-4",
@@ -104,7 +104,7 @@
       "evidenceGrade": "B",
       "sources": "Buehler, R., Griffin, D., & Ross, M. (1994). Exploring the \"planning fallacy\": Why people underestimate their task completion times. Journal of Personality and Social Psychology, 67(3), 366–381. <https://doi.org/10.1037/0022-3514.67.3.366>; Flyvbjerg, B. (2006). From Nobel Prize to project management: Getting risks right. Project Management Journal, 37(3), 5–15. <https://doi.org/10.1177/875697280603700302>; Halkjelsvik, T., & Jørgensen, M. (2012). From origami to software development: A review of studies on judgment-based predictions of performance time. Psychological Bulletin, 138(2), 238–271. <https://doi.org/10.1037/a0025996>",
       "caveats": "Buehler’s study involved only university students in Canada; it was a single study with a small sample size of 37 participants, with roughly 40 participants in each group. Estimating timelines based on historical data from similar projects is known as reference class forecasting; specific engineering applications are described in Flyvbjerg’s work. Halkjelsvik’s review of multiple studies shows that underestimating timelines is more common than overestimating, though the magnitude of the error varies widely depending on the task and research methodology.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "4-5",
@@ -129,7 +129,7 @@
       "evidenceGrade": "B",
       "sources": "Leach, D. J., Rogelberg, S. G., Warr, P. B., & Burnfield, J. L. (2009). Perceived meeting effectiveness: The role of design characteristics. Journal of Business and Psychology, 24(1), 65–76. <https://doi.org/10.1007/s10869-009-9092-6>; Bluedorn, A. C., Turban, D. B., & Love, M. S. (1999). The effects of stand-up and sit-down meeting formats on meeting outcomes. Journal of Applied Psychology, 84(2). <https://doi.org/10.1037/0021-9010.84.2.277>",
       "caveats": "The standing‑meeting experiment involved five‑person groups working on tasks in a lab setting. These findings cannot be directly applied to lengthy meetings or large conferences. Leach measured participants’ subjective perceptions of effectiveness rather than actual output levels.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "4-6",
@@ -154,7 +154,7 @@
       "evidenceGrade": "B",
       "sources": "Rogelberg, S. G., Leach, D. J., Warr, P. B., & Burnfield, J. L. (2006). \"Not another meeting!\" Are meeting time demands related to employee well-being? Journal of Applied Psychology, 91(1). <https://doi.org/10.1037/0021-9010.91.1.83>; Luong, A., & Rogelberg, S. G. (2005). Meetings and more meetings: The relationship between meeting load and the daily well-being of employees. Group Dynamics: Theory, Research, and Practice, 9(1). <https://doi.org/10.1037/1089-2699.9.1.58>",
       "caveats": "Controversy: Rogelberg’s 2006 research shows the relationship between meeting frequency and happiness isn’t one-directional; for roles heavily dependent on collaboration, frequent meetings may actually be beneficial. Additionally, no study has directly compared asynchronous written communication to holding meetings, so this recommendation is the author’s own inference.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "4-7",
@@ -179,7 +179,7 @@
       "evidenceGrade": "B",
       "sources": "Kruger, J., & Evans, M. (2004). If you don't want to be late, enumerate: Unpacking reduces the planning fallacy. Journal of Experimental Social Psychology, 40(5), 586–598. <https://doi.org/10.1016/j.jesp.2003.11.001>; Steel, P. (2007). The nature of procrastination: A meta-analytic and theoretical review of quintessential self-regulatory failure. Psychological Bulletin, 133(1). <https://doi.org/10.1037/0033-2909.133.1.65>",
       "caveats": "As a general guideline, each subtask should be small enough to be completed during a single focused work session; splitting tasks into overly detailed pieces is itself time-consuming. Additionally, Kruger and Evans’ study was verified only for its overall direction based on the abstract; the exact percentages cited were not cross-checked against the original research text.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "4-8",
@@ -204,7 +204,7 @@
       "evidenceGrade": "B",
       "sources": "Buehler, R., Griffin, D., & Ross, M. (1994). Exploring the \"planning fallacy\": Why people underestimate their task completion times. Journal of Personality and Social Psychology, 67(3), 366–381. <https://doi.org/10.1037/0022-3514.67.3.366>",
       "caveats": "Telling others about the deadline you set for yourself makes it behave more like an external deadline. It’s worth noting that this research only proves external deadlines are effective. For self-set deadlines such as time-boxing or using Pomodoro timers, no direct studies have been conducted, so this conclusion is drawn by inference.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "4-9",
@@ -229,7 +229,7 @@
       "evidenceGrade": "A",
       "sources": "Steel P (2007). The nature of procrastination: a meta-analytic and theoretical review of quintessential self-regulatory failure. Psychological Bulletin, 133(1), 65–94. <https://doi.org/10.1037/0033-2909.133.1.65>",
       "caveats": "This guideline only provides general direction rather than specific actionable steps, so its overall benefit is rated as moderate — no quantitative estimate of time saved has been calculated. Concrete actions are outlined in item 1 of this section (which specifies exact times, locations, and concrete actions to take), item 7 (which advises breaking large tasks into smaller sub-tasks), and item 8 (which recommends setting a deadline even for tasks without any external deadline). Keep in mind this is a summary of correlational research, so it should not be interpreted as evidence of direct causal relationships.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "4-10",
@@ -254,7 +254,7 @@
       "evidenceGrade": "B",
       "sources": "Hollands GJ, Carter P, Anwer S, et al. (2019). Altering the availability or proximity of food, alcohol, and tobacco products to change their selection and consumption. Cochrane Database of Systematic Reviews, 9, CD012573. <https://doi.org/10.1002/14651858.CD012573.pub3>",
       "caveats": "This B rating stems from the fact that all 24 studies included in the review focused on food only; none examined alcohol or tobacco. Additionally, 14 of those studies were conducted in laboratory settings and originated from high-income countries. Applying these same principles to phones and video games is a logical extrapolation, as no direct trials exist on this specific use case. One study directly examined the effect of removing phones from one’s line of sight; see Section 3, Item 1 for details (turning off nonessential notifications and keeping phones out of sight while working).",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "4-11",
@@ -279,7 +279,7 @@
       "evidenceGrade": "A",
       "sources": "Halpern SD, French B, Small DS, et al. (2015). Randomized trial of four financial-incentive programs for smoking cessation. New England Journal of Medicine, 372(22), 2108–2117. <https://doi.org/10.1056/NEJMoa1414293>",
       "caveats": "This trial focused on smoking cessation; extrapolating the findings to activities such as essay writing or exercise suggests a moderate overall benefit. The key takeaway is not which method is more effective, but whether you’d actually be willing to use it: a powerful incentive that most people reject is essentially useless for them. Therefore, pick an approach you’re comfortable with — even a modest deposit can be more effective than no deposit at all. For practical smoking‑cessation strategies, see Section 2, Item 3 (smoking‑cessation medications).",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "4-12",
@@ -304,7 +304,7 @@
       "evidenceGrade": "B",
       "sources": "Lally P, van Jaarsveld CHM, Potts HWW, Wardle J (2010). How are habits formed: Modelling habit formation in the real world. European Journal of Social Psychology, 40(6), 998–1009. <https://doi.org/10.1002/ejsp.674>",
       "caveats": "This is the only study of its kind, involving just 96 participants who performed very simple actions (like eating a piece of fruit after a meal). No research has examined how long it takes to form more complex habits, such as running three times a week or writing daily. The main takeaway here is to set realistic expectations: finding it hard for two weeks is not a sign of failure. To actually make repetition happen, link the action to a fixed context — see point 1 in this section, which advises specifying “at what time, where, and under what circumstances” the action should be done.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "4-13",
@@ -329,7 +329,7 @@
       "evidenceGrade": "A",
       "sources": "Rozental A, Forsell E, Svensson A, Andersson G, Carlbring P (2015). Internet-based cognitive-behavior therapy for procrastination: A randomized controlled trial. Journal of Consulting and Clinical Psychology, 83(4), 808–824. <https://doi.org/10.1037/ccp0000023>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>; World Health Organization. <https://www.who.int/>",
       "caveats": "The trial participants were Swedish adults using Swedish-language materials, so the size of the benefit may differ with an English or Hindi adaptation. The materials use standard cognitive-behavioural components: behavioural activation, behavioural experiments, stimulus control (as in Section 10, which advises moving unwanted items out of reach), and work on motivation and work strategies. If procrastination comes with significant low mood or anxiety, follow Section 3, item 18: physical activity, daylight, a regular sleep schedule, talking to someone, and Tele-MANAS on 14416.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "4-14",
@@ -354,7 +354,7 @@
       "evidenceGrade": "B",
       "sources": "Whillans, A. V., Dunn, E. W., Smeets, P., Bekkers, R., & Norton, M. I. (2017). Buying time promotes happiness. Proceedings of the National Academy of Sciences. <https://doi.org/10.1073/pnas.1706541114>",
       "caveats": "First, calculate your hourly wage by dividing your monthly after-tax income by the total number of hours you actually work each month. Then determine how much it would cost to outsource a particular chore. If the outsourcing fee is lower than your hourly wage and you truly plan to use the saved time for earning money or resting, then outsourcing makes sense. This guide provides a method rather than a definitive recommendation, since everyone’s hourly wage and outsourcing costs differ. Additionally, Whillans’ research measures how happy people feel after buying time, not how many hours they ultimately save.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "4-15",
@@ -379,7 +379,7 @@
       "evidenceGrade": "C",
       "sources": "Telecom Regulatory Authority of India, The Indian Telecom Services Performance Indicators. <https://trai.gov.in/>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>",
       "caveats": "Online time includes work, study, and social interaction, so not all of it is wasted. It is rated C because no studies have measured exactly how much time is saved after imposing limits or how that time is subsequently used; we only have overall statistics. For the specific activity of “scrolling to see how others live”, a randomized trial has estimated both the time saved and the resulting change in mood; see Section 3, Item 20.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "4-16",
@@ -399,12 +399,12 @@
       "disputed": false,
       "stillVerifying": false,
       "cost": "No monetary cost. The real challenge is breaking the habit of turning on the TV at random times; you might also miss some breaking news.",
-      "inPlainWords": "Americans aged 15 and older watch 2.6 hours of TV per day, which accounts for half of all their leisure time. Switching to viewing information at scheduled times saves you all this time.",
+      "inPlainWords": "Americans aged 15 and older watch 2.6 hours of TV per day, which accounts for half of all their leisure time. Switching to viewing information at scheduled times gives that half of your leisure time back.",
       "benefit": "Americans aged 15 and older watch 2.6 hours of TV daily. Their total leisure time is 5.2 hours, so TV viewing consumes half of it. These figures are from 2025.",
       "evidenceGrade": "C",
       "sources": "U.S. Bureau of Labor Statistics (2026). American Time Use Survey — 2025 Results. <https://www.bls.gov/news.release/atus.nr0.htm>",
       "caveats": "Only aggregate statistics are available. No studies have examined how the time saved by cutting back on TV and news viewing is actually used. The practice of viewing content at set times is based on the author’s personal experience.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "4-17",
@@ -429,7 +429,7 @@
       "evidenceGrade": "B",
       "sources": "Lane, D. M., Napier, H. A., Peres, S. C., & Sándor, A. (2005). Hidden costs of graphical user interfaces: Failure to make the transition from menus and icon toolbars to keyboard shortcuts. International Journal of Human-Computer Interaction. <https://doi.org/10.1207/s15327590ijhc1802_1>",
       "caveats": "Focus on learning shortcuts for operations you use at least ten times daily; learning too many unnecessary shortcuts is counterproductive. It should be noted that the efficiency study involved only six participants, and the summary does not specify the exact number of seconds saved per operation.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "4-18",
@@ -454,7 +454,7 @@
       "evidenceGrade": "B",
       "sources": "Stutzer, A., & Frey, B. S. (2008). Stress that doesn't pay: The commuting paradox. Scandinavian Journal of Economics, 110(2), 339–366. <https://doi.org/10.1111/j.1467-9442.2008.00542.x>; Chatterjee, K., et al. (2020). Commuting and wellbeing: A critical overview of the literature with implications for policy and future research. Transport Reviews, 40(1), 5–34. <https://doi.org/10.1080/01441647.2019.1649317>",
       "caveats": "Point of contention: Chatterjee et al., after analyzing various studies, argue that no consistent link exists between commute length and overall life satisfaction. They suggest that people can generally offset the downsides of long commutes by securing better jobs or housing. It’s also worth noting that transportation statistics include all trips, not just commuting, and that avoiding rush hour can also shorten travel time on the same route.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     }
   ]
 }

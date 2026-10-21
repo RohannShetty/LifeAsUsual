@@ -1,65 +1,118 @@
-# Verification: Chapter 1 - Do Not Die Early
+# Verification: Chapter 01 - Do Not Die Early
 
-Verifier: independent-verifier-025ab0a0-eba1-44cc-96d8-0231fb472844
+Verifier: independent verifier (round 6; re-derived against the source edition)
 Date: 2026-10-21
 Access date: 2026-10-21
 Chapter file: data/en-in/chapters/01-do-not-die-early.json
-Manifest status: draft (recommend checked)
+Manifest status: `data/en-in/manifest.json` chapter "1": status draft, tier A, tips 48, verifier null, verifiedAt null, sourceCount 0, humanReview pending, openIssues ["Independent verification pending"], bannedTerms 0. The manifest has not yet been flipped to verified; that is the publisher's step, not part of this check.
 
 ## Method
 
-All 48 tips were read in the JSON, with the four worklist HIGH RISK tips (1-25, 1-32, 1-37, 1-43) checked against the cited papers. Indian instruments were checked against peso.gov.in (Gas Cylinders Rules 2016), Indian Kanoon for the Motor Vehicles Act 1988 (s.184, s.185), dghs.mohfw.gov.in and telemanas.mohfw.gov.in for Tele-MANAS 14416, nvhcp.mohfw.gov.in for the hepatitis programme, and NDMA/AERB for the emergency-supply and radiation entries. The three previously blocking tips from the older report (1-4, 1-5, 1-9) and the older non-blocking items (1-14, 1-45) were treated as regression tests. Access failures, recorded rather than hidden: indiacode.nic.in returned HTTP 403 ("Access Denied") for the statute PDFs; www.mohfw.gov.in and pib.gov.in returned HTTP 403; telemanas.mohfw.gov.in failed at fetch level ("fetch failed") so the number was confirmed on dghs.mohfw.gov.in ("toll-free helpline number 1800-89-14416 or short code 14416") and in an indexed snippet of the Tele-MANAS site ("24X7 ... Toll Free Number- 14416"). A grep of the JSON for currency symbols was run in addition to the banned-term script, because the script's term list contains no currency tokens.
+Independent audit of the India edition after the round-5 fixes. The source edition
+(`data/en/all-chapters.json`, chapter 1) was compared tip by tip with the shipped
+India chapter: all 48 tips, their ids, order, tags, costScore, valueTier,
+evidenceGrade, disputed and stillVerifying fields are identical (structure diff:
+"counts 48 48", "STRUCTURE DIFFS: none", "ids order match: true"). The mechanical
+gate was re-run and passed:
+
+```
+$ npx tsx scripts/check-chapter.ts 01
+chapter 1 (01-do-not-die-early.json): 48 tips
+PASS: no banned term, CJK character or foreign-jurisdiction term.
+```
+
+Substantive checks were made against primary instruments where the network
+allowed: indiankanoon.org (statute text), SooperKanoon and ziplaw (Occupational
+Safety, Health and Working Conditions Code 2020), PubMed/efetch and
+api.crossref.org (trials and DOIs), naco.mohfw.gov.in, supportbeta.nha.gov.in,
+sha.kerala.gov.in, cghshospitals.com, apollo247.com, apollohomecare.com,
+who.int, services.bis.gov.in, and a gazette copy at gazettetracker.com. Every
+defect that was blocking in earlier rounds was re-derived from scratch rather
+than taken on trust, and the full text of the twelve changed tips was re-read.
+A regression scan confirmed the earlier fixes are still in place: S.O. 5234(E),
+the WHO 92% figure, the Nagpur AF numbers, ICTC and 1097, Inspector-cum-
+Facilitator, 14416, "February 2001 exchange rates", IS 4384, Weaver and
+Parkinson citations are all present; "disease control", "cross-regional",
+"yibao", "12356", "yuan", "China"/"Chinese" are all absent.
+
+Access failures (recorded, not hidden):
+
+| Source | Failure | Consequence |
+| --- | --- | --- |
+| indiacode.nic.in (all URLs) | HTTP 403 from this network | Statute text read from indiankanoon/SooperKanoon/ziplaw instead |
+| pib.gov.in (PressReleasePage, PressReleaseIframePage) and mohfw.gov.in | HTTP 403 | 21 November 2025 commencement corroborated only by an SCC Online report |
+| static.pib.gov.in .../doc20251121701501.pdf | web_fetch rejects `application/pdf` ("unsupported content type") | the PIB notification itself was not read |
+| egazette.gov.in WriteReadData/2026/276542.pdf | official portal unreachable; PDF also unsupported | S.O. 5234(E) read from the gazettetracker.com copy of CG-DL-E-28092026-276542 |
+| telemanas.mohfw.gov.in, en.vikaspedia.in | DNS failure (fetch failed / EAI_AGAIN) | 14416 not re-confirmable this round; verified in an earlier round |
+| www.1mg.com product pages | client-rendered HTML, no rupee figure in the response body | 1mg prices are not independently confirmable here |
+| nha.gov.in/PM-JAY | JS-rendered shell only ("Integrated Portal") | Rs 5 lakh figure corroborated from a state health agency page |
+| latestlaws.com and sooperkanoon.com statute pages (Gas Cylinders Rules 2016; MV Act s.185) | JS-rendered, no statute text in the HTML | 1-4's rule citation and 1-9's section numbers not textually re-read |
 
 ## Claim checks
 
 | Tip | Claim | Source checked | Section | Accessed | Pass? | Note |
 | --- | --- | --- | --- | --- | --- | --- |
-| 1-4 | Cylinders and fittings must be PESO-approved under the Gas Cylinders Rules, 2016 | peso.gov.in, Gas Cylinder Rules 2016 | Rules notified 2016 (S.O. 1081(E)) | 2026-10-21 | yes | Regression cleared: the Chinese gas regulation is gone and no yuan figure remains. |
-| 1-5 | "No Indian agency publishes a nationwide count" of wild-mushroom poisoning | MoHFW/NCDC publications | n/a | 2026-10-21 | yes | Regression cleared: the China CDC figures were deleted, and the remaining sentence is a defensible negative claim. |
-| 1-9 | Drink-driving limit, dangerous driving, no statutory rest break for a private driver | Motor Vehicles Act 1988 s.185 (30 mg/100 ml) and s.184 | ss.184-185 | 2026-10-21 | yes | Regression cleared: the old Chinese "Article 62" rest rule is gone; the four-hour figure is now labelled advice. |
-| 1-25 | Tele-MANAS helpline 14416 | dghs.mohfw.gov.in; telemanas.mohfw.gov.in | Tele-MANAS | 2026-10-21 | yes | Number and scheme real. But "available at least 18 hours a day" understates a 24x7 service; say "24 hours a day". |
-| 1-26 | "Emergency Management Department's National Recommended List of Basic Household Emergency Supplies" (11 items); buy extinguishers with the "CCC certification mark" | No Indian instrument; NDMA publishes no household-supply list | n/a | 2026-10-21 | no | Chinese instrument: the 11-item list is the PRC Ministry of Emergency Management list, and CCC is China Compulsory Certification. India would be BIS/ISI. Also a broken link "docs/.md". |
-| 1-31 | HIV test confidentiality under the "National Measures for HIV Testing Management" and "Regulations on HIV/AIDS Prevention and Control" Articles 23, 38; "Guangdong Provincial CDC" window periods | No Indian instrument cited | n/a | 2026-10-21 | no | Both instruments are PRC State Council regulations. The Indian text is the HIV/AIDS (Prevention and Control) Act, 2017, with NACO/ICMR window-period guidance. |
-| 1-33 | "As of September 26, 2020, soluble concentrate formulations are also prohibited nationwide" (paraquat) | No Indian prohibition; paraquat remains a CIB&RC-registered herbicide with use restrictions | n/a | 2026-10-21 | no | Date and rule are China's 2020 paraquat ban. India has no equivalent nationwide ban. |
-| 1-34 | Fall from height: "a trauma ICU in southern Xinjiang"; average hospital stay ₹1,40,300; total health spending 9,089.55 billion rupees | No Indian source | n/a | 2026-10-21 | no | Chinese hospital series plus converted national accounts; the percentages are meaningful only for China. |
-| 1-35 | 86% of kidney sellers report worse health; organ sale is illegal | Goyal et al. 2002, JAMA 288(13):1589 | abstract/cohort | 2026-10-21 | yes | Indian cohort now cited correctly; United States donor data labelled as such. |
-| 1-36 | "178,000 radioactive sources and 355,000 radiation devices are in use nationwide"; Ningxia iridium-192 case; fine ₹9,94,700 | AERB is the Indian regulator; no such published inventory | n/a | 2026-10-21 | no | Chinese inventory and Chinese criminal case with a converted fine. |
-| 1-37 | Gambling distress: call Tele-MANAS 14416 | as 1-25 | Tele-MANAS | 2026-10-21 | yes | Helpline real; the gambling-law cross-reference points to Chapter 9, outside this chapter. |
-| 1-43 | Asking directly about suicidal thoughts does not plant the idea | Gould et al. 2005, JAMA 293(13):1635 | RCT | 2026-10-21 | yes | Citation and finding match. |
-| 1-45 | Free/nominal HCV testing under the National Viral Hepatitis Control Programme | nvhcp.mohfw.gov.in | NVHCP | 2026-10-21 | yes | Regression cleared: the PRC NHSA source is gone. |
-| 1-47 | "The 2022 national guidelines" advise against population screening; gastroscopy every 5 years from 45 | No Indian guideline; sources are Korean (Jun 2017) and Chinese (Zhang) | n/a | 2026-10-21 | no | Unnamed jurisdiction: it is China's 2022 gastric-cancer screening guideline. India has no gastroscopy screening programme; the COST line also keeps "($40–$80)". |
-| 1-48 | Bongkrekic acid: Jidong County (Heilongjiang), Guangdong wet-rice-noodle directives, 143 deaths in 2020 | FSSAI is named but no FSSAI data is used | n/a | 2026-10-21 | no | Content is China CDC food-poisoning surveillance; only the agency name was localised. |
-| 1-14 | Hepatitis B vaccine: three doses "cost between 100 and ₹4,300 total" | n/a | n/a | 2026-10-21 | no | Mixed-unit range: the lower bound was never converted. |
-| 1-20 | Flu shot: "One shot costs 50 to ₹2,100" | n/a | n/a | 2026-10-21 | no | Same mixed-unit break; ₹50 is not an Indian flu-vaccine price. |
-| 1-21 | Shingles vaccine: two doses "roughly 3,000 to ₹56,800 in total" | n/a | n/a | 2026-10-21 | no | Same break, and the upper bound is a converted Chinese price, not an Indian one. |
-| 1-23 | Breath test "100 to ₹2,800"; eradication drugs "200 to ₹7,100" | n/a | n/a | 2026-10-21 | no | Same mixed-unit break in both ranges. |
-| 1-41 | Ice rescue picks "cost under $15–$30" | n/a | n/a | 2026-10-21 | no | United States dollar amount left in the India edition; the ice guidance itself is United States/Canada, with no Indian equivalent acknowledged. |
-| 1-42 | Safety goggles and face shield "cost $15–$30" | n/a | n/a | 2026-10-21 | no | Dollar amount left in place. |
-| 1-44 | ECG "costs just a few hundred rupees (under $10)" | n/a | n/a | 2026-10-21 | no | Dollar parenthetical left in place. |
+| 1-46 | Factories Act 1948 s.36 no longer current; OSH Code 2020 s.143 is the repeal provision | indiankanoon.org/doc/77342310/; sooperkanoon.com/act/144535 | s.143 "Repeal and Savings", item (a) Factories Act 1948 | 2026-10-21 | yes | Past tense with the Code route; s.143 is the repeal section |
+| 1-46 | Code s.6 (workplace free from hazards) and s.23 (health, safety, ventilation, no dust/noxious gas) | sooperkanoon.com/act/563492; ziplaw.in OSH Code s.23 | ss.6, 23 | 2026-10-21 | yes | Paraphrase accurate |
+| 1-46 | Four labour codes in force 21 November 2025 | scconline.com blog, 26 Nov 2025 (PIB PDF unreachable) | - | 2026-10-21 | yes | Secondary source; consistent with the text |
+| 1-46 | Manual Scavengers Act 2013 s.7; Inspector-cum-Facilitator under the Code; NAMASTE | indiankanoon.org/doc/193205499/; OSH Code s.2(1)(k), s.34; socialjustice.gov.in/schemes/37 | s.7 / s.34 | 2026-10-21 | yes | All three supported |
+| 1-33 | S.O. 5234(E), 22 Sep 2026, s.27(2) r/w s.28 Insecticides Act 1968, published 23 Sep 2026, cancels s.9 registrations; intention notice S.O. 3800(E) 10 Jul 2026 | gazettetracker.com/g/CG-DL-E-28092026-276542 (gazette copy) | Notification text, Gazette No. 5027 | 2026-10-21 | yes | Full order text and dates present; the copy caveat is honest |
+| 1-33 | Bangladesh: 1,420 reported, 257 analysed, CFR 43.2%, leg swelling 71.2%, vomiting 65.8%, abdominal pain 58.0% | PMID 42155406, AJTMH 2026;115(1):176-182 | abstract | 2026-10-21 | yes | Exact match |
+| 1-33 | CO trial: 76 per group, 25.0% vs 46.1% at six weeks, P=0.007, adj OR 0.45 (0.22-0.92) | Weaver 2002 citation restored in sources; api.crossref.org/works/10.1056/NEJMoa013121 | NEJM 347(14):1057-1067 | 2026-10-21 | yes | Citation now present and metadata matches; round-5 blocking item closed |
+| 1-33 | 73 patients: 30% cognitive impairment, 12% white-matter hyperintensities | Parkinson 2002 citation restored; api.crossref.org/works/10.1212/wnl.58.10.1525 | Neurology 58(10):1525-1532 | 2026-10-21 | yes | Citation present; DOI case difference is immaterial |
+| 1-33 | Cross-references: Chapter 13, Item 19 (CO), Item 20 (ingestion), Item 25 (storage) | 13-emergencies-what-to-do-first.json titles | ch13 items 19, 20, 25 | 2026-10-21 | partial | 13-19 and 13-20 correct; 13-25 is drowning rescue, not pesticide storage (inherited from the source edition - see residual items) |
+| 1-12 | WHO: about 300,000 deaths a year; under-fives nearly a quarter; fourth leading cause 1-4 y, third 5-14 y; 92% in low- and middle-income countries | who.int/news-room/fact-sheets/detail/drowning, 1 May 2026 | fact sheet body | 2026-10-21 | yes | Verbatim |
+| 1-12 | Boater life-jacket use, RR 0.51 (95% CI 0.35-0.74) | Cummings 2011 (cited) | - | 2026-10-21 | yes | Unchanged from source edition |
+| 1-44 | Nagpur: 8 of 4,077 adults with AF; 3 on warfarin without routine INR; 1 on aspirin; prophylaxis underused | PMID 27326234, Heart Asia 2016;8(1):56-59 | abstract | 2026-10-21 | yes | Matches |
+| 1-38 | ICTC under NACP tests and refers to ART; National AIDS Helpline 1097, toll-free, 24x7 | naco.mohfw.gov.in/living-with-hiv-aids/hotlines-helplines/ | page header/text | 2026-10-21 | yes | "HIV / AIDS Helpline 1097 Toll Free - 24x7" |
+| 1-35 | PM-JAY: Rs 5 lakh a year per family; cashless at any empanelled hospital outside the home state, home state pays | sha.kerala.gov.in; supportbeta.nha.gov.in/kb/faq.php?id=11 | scheme description / FAQ | 2026-10-21 | yes | Cited NHA page is JS-only; FAQ quoted near-verbatim |
+| 1-35 | Goyal 2002: 305 sellers, February 2001 survey, 6 years after sale, 96% debt-driven, USD 1,070 | PMID 12350189, JAMA 288(13):1589-1593 | abstract | 2026-10-21 | yes | "About Rs 50,000 at February 2001 exchange rates" - clear and arithmetically right (USD 1,070 x c. Rs 47) |
+| 1-35 | Selling a kidney is a criminal offence (TOHOTA 1994); lawful donation in Chapter 9, Item 22 | indiankanoon.org/doc/144870239/ (s.19); 09-everyday-legal-red-lines.json | s.19 commercial dealings | 2026-10-21 | yes | Supported; cross-reference resolves |
+| 1-31 | PARTNER: 972 enrolled, 782 couples / 1,593 couple-years, 15 infections, none linked | PMID 31056293, Lancet 2019;393:2428-2438 | abstract | 2026-10-21 | yes | Accurate |
+| 1-31 | HIV/AIDS Act 2017 bars discrimination and disclosure; "Chapter 27" cross-reference | indiankanoon.org/doc/14863653/; 27-pregnancy-and-childbirth.json | s.3; chapter 27 | 2026-10-21 | yes | Act verified (s.9 disclosure not individually sighted); reference corrected |
+| 1-4 | Gas Cylinders Rules 2016 require PESO-approved cylinders and fittings; OMC safety instructions cover approved-grade short tubing not run through a wall or under a door; IS 4384 cited | peso.gov.in (as cited); BIS listings for IS 4384 | IS 4384 (LPG hose) | 2026-10-21 | yes | Attribution narrowed from the Rules to the OMC instructions, which is the honest split; IS 4384 is the LPG hose standard; round-5 blocking item closed |
+| 1-21 | Shingrix Rs 10,549 Apollo Homecare, Rs 10,509 Tata 1mg; two-dose course about Rs 21,100 | apollohomecare.com/adult-vaccination/ | product price | 2026-10-21 | yes | Apollo exact; 2 x 10,509 = 21,018 and 2 x 10,549 = 21,098, so Rs 21,100 is right; 1mg not confirmable |
+| 1-22 | Pneumococcal: PPSV23 Rs 3,155, PCV13 Rs 4,592, PCV20 Rs 6,150 (Apollo); PPSV23 Rs 2,722 (1mg) | apollohomecare.com/adult-vaccination/ | product prices | 2026-10-21 | yes | Apollo figures exact; 1mg not confirmable |
+| 1-22 | Bonten 2015: 84,496 adults; VE 45.6% (95.2% CI 21.8-62.5); 75.0% (41.4-90.8) | PMID 25785969; api.crossref.org/works/10.1056/NEJMoa1408544 | abstract | 2026-10-21 | yes | "84,500" is a fair rounding; no invented senior programme; no "CI width" sentence |
+| 1-17 | CGHS Rs 1,375 metro NABH, Rs 1,100-1,238 smaller cities, effective 13 Oct 2025; Apollo Pune from Rs 2,800 | cghshospitals.com/rates/x-ray-mammography-bilateral-unilateral-398; apollo247.com/radiology-details/breast-scan-c-pune | rate pages | 2026-10-21 | yes | All three tiers and the effective date on the CGHS page |
+| 1-20 | Flu shot about Rs 2,500-3,200 at a private clinic; government facilities charge less | Apollo Homecare flu Rs 2,499 (verified earlier); no price source cited | - | 2026-10-21 | partial | Range brackets the verified private price; upper bound plausible; no citation for the range itself |
+| 1-7, 1-24, 1-27, 1-39 | Costs qualitative ("a couple of thousand rupees", "a few thousand rupees", "ask the centre") | no numeric claim left | - | 2026-10-21 | yes | Honest; unverifiable figures and generic citations removed |
+| 1-11, 1-15, 1-42 | Rs 500-1,500 window guards; Rs 300-800 clinic plus Rs 1,000-5,000 vaccine; Rs 500-2,000 goggles and shield | none cited | - | 2026-10-21 | partial | Plausible Indian ranges, not mechanical conversions, but no price source |
+| 1-42 | IS 12640 (Part 2) covers RCBOs | services.bis.gov.in listings; BIS product manual | IS 12640 (Part 2):2016 / IEC 61009-1 | 2026-10-21 | yes | Standard exists; BIS not listed among the tip's sources |
+| 1-9 | MV Act 1988 s.185 drink-driving, s.184 dangerous driving | sooperkanoon.com/act/634559 (title only); indiacode 403 | ss.184-185 | 2026-10-21 | partial | Numbering consistent with the Act; text not readable through this network |
+| 1-25, 1-32, 1-37, 1-43 | Tele-MANAS 14416, 24x7 | telemanas.mohfw.gov.in (DNS failure this round); verified earlier | - | 2026-10-21 | yes | Re-check blocked; no indication of change; "Chapter 1, Item 32" resolves to the tell-someone tip |
+| 1-14 | India ran a ten-state hepatitis B pilot in 2002-03; national infant schedule from 2011 | MoHFW/UIP history | - | 2026-10-21 | yes | Qidong trial numbers retained with citation |
+| whole chapter | 48 tips, ids 1-1..1-48, tags/grades/tiers/sequencing preserved | diff script vs source chapter 1 | - | 2026-10-21 | yes | Zero structural drift |
+| whole chapter | No mainland place names, agencies, hotlines, insurance terms or yuan | token scan | - | 2026-10-21 | yes | Only "Qidong" (trial provenance) and "Xinjiang" (paper title) remain |
 
 ## Banned-term check
 
-- JSON: 0 banned terms. `npx tsx scripts/check-chapter.ts 1` reports "PASS: no banned term, CJK character or foreign-jurisdiction term", and a manual sweep found no CJK. The script's list has no currency tokens, so a separate grep was run: it found dollar amounts (`$`) in 1-41, 1-42, 1-44 and 1-47 and no yuan/RMB wording.
-- Rendered page: not checked; the build was not run.
+- JSON: 0 banned terms - `npx tsx scripts/check-chapter.ts 01` printed "PASS: no banned term, CJK character or foreign-jurisdiction term." for 48 tips.
+- Rendered page: not re-checked; `dist/` is older than the chapter JSON and still carries the pre-fix text, so the publisher must rebuild before any rendered-page QA. The JSON itself is clean.
 
 ## Safety and editorial check
 
-- No unsupported high-risk claim: 1-25/1-32/1-37/1-43 rest on real papers and a real helpline, but 1-26, 1-31, 1-33, 1-34, 1-36, 1-47 and 1-48 present Chinese law, Chinese statistics or a Chinese clinical series as if they applied to an Indian reader.
-- No invented scheme, number or hotline: 14416 is real; the "Emergency Management Department" list, the "2022 national guidelines" and the Ningxia/Xinjiang cases are real but foreign, and the converted rupee figures are invented for India.
-- No direct equivalent recorded where needed: missing for paraquat prohibition, the 11-item household kit list, the HIV testing regulations, gastric-cancer screening and bongkrekic-acid surveillance, all of which have no Indian counterpart.
-- Caveats retained: yes, including the honest statement that no Indian agency counts mushroom poisonings and that the four-hour driving guidance is advice, not law.
+- No unsupported high-risk claim: the paraquat order is described accurately, including that it stops new registration and cancels licences but leaves dealer stock; confined-space advice points at the Code and the Inspector-cum-Facilitator, not the repealed section 36; the two carbon-monoxide trials are now cited.
+- No invented scheme, number or hotline: PM-JAY, ESIC, CGHS, NAMASTE, ICTC, 1097, 14416, 112, 108, CGHS rates and the Apollo/1mg vaccine listings all correspond to real instruments or listings.
+- No direct equivalent recorded where needed: 1-46 states that India has no single confined-space regulation; 1-22 says the free pneumococcal programme covers infants, not adults; mainland epidemiology has been replaced in 1-12 and 1-44.
+- Caveats retained: repeal date and the fact that the Code leaves detail to rules and state practice; the gazette-copy caveat in 1-33; grade C reasoning in 1-42; "no statutory rest break" in 1-9; the evidence caveats in 1-25 and 1-33.
 
 ## Blocking issues
 
-- 1-26: replace the PRC "Emergency Management Department" list and the "CCC certification mark" with Indian framing (BIS/ISI mark; no national household-supply list), and repair the broken "docs/.md" link.
-- 1-31: delete the "National Measures for HIV Testing Management" and "Regulations on HIV/AIDS Prevention and Control" Articles 23/38 and the Guangdong CDC figures; cite the HIV/AIDS (Prevention and Control) Act, 2017 and NACO/ICMR window periods, or state that India publishes no official window-period table.
-- 1-33: delete "As of September 26, 2020, soluble concentrate formulations are also prohibited nationwide"; India has no equivalent ban, so say so and keep only the poisoning/emergency-care content.
-- 1-34: remove "a trauma ICU in southern Xinjiang" and the converted national figures (₹1,40,300 average stay, 9,089.55 billion rupees); either label them as Chinese data or drop them.
-- 1-36: remove the "178,000 radioactive sources / 355,000 radiation devices" inventory, the Ningxia case and the ₹9,94,700 fine; cite AERB for Indian rules and keep the generic safety advice.
-- 1-47: name the jurisdiction of "the 2022 national guidelines" or replace them with the Indian position (no population gastroscopy screening), and remove the leftover "($40–$80)".
-- 1-48: remove or explicitly label the Jidong County, Guangdong and 143-death figures as Chinese; FSSAI is named but nothing Indian is said.
-- Currency: 1-41 ($15–$30), 1-42 ($15–$30), 1-44 ("under $10") and 1-47 ("($40–$80)") must be converted to rupees.
-- Currency: 1-14, 1-20, 1-21 and 1-23 have ranges whose lower bound stayed in yuan ("between 100 and ₹4,300", "50 to ₹2,100", "3,000 to ₹56,800", "100 to ₹2,800", "200 to ₹7,100"); convert both bounds or drop the figures.
-- Note (non-blocking): 1-25 should say Tele-MANAS answers 24 hours a day, not "at least 18 hours"; 1-23 and 1-34 name Chinese places without framing; 1-41 and 1-42 rely on United States/Canadian guidance with no Indian equivalent stated.
+None. The two round-5 blockers are closed: 1-33 again cites Weaver 2002 and Parkinson 2002 (both records match the quoted studies), and 1-4 now separates the Gas Cylinders Rules requirement from the oil-marketing-company hose instructions and cites IS 4384.
 
-Verdict: FAIL
+## Residual non-blocking items
+
+- 1-33 caveat's "(Chapter 13, Item 25)" points at 13-25 "Upon seeing someone drowning ...", while the sentence is about not storing pesticides or sedatives at home - that guidance is Chapter 1, Item 25. The wrong pointer is inherited verbatim from the source edition (source 13-25 is also the drowning tip), so it is a source-edition bug rather than an India-edition regression, and the sentence is self-contained. If the fixer wants it airtight, change "Chapter 13, Item 25" to "Chapter 1, Item 25".
+- 1-20's Rs 2,500-3,200 range rests on the verified Apollo Homecare flu price of Rs 2,499 at the bottom end; no source is cited for the range.
+- 1-21 (Rs 10,509) and 1-22 (Rs 2,722) keep Tata 1mg figures that cannot be confirmed from this network; each is paired with a verified Apollo price, so the tip-level claim stands.
+- 1-11, 1-15 and 1-42 give rupee ranges with no price source; 1-42 cites IS 12640 (Part 2) without listing BIS among its sources.
+- 1-9's section numbers (s.185 drink-driving, s.184 dangerous driving) are consistent with the Act but were not textually re-read because indiacode.in returns 403 and the bare-act mirrors are JS-rendered.
+
+## Post-PASS corrections (coordinator, 2026-10-21)
+
+- 1-33 caveats: the parenthetical storage pointer changed from "Chapter 13, Item 25" to
+  "Chapter 1, Item 25", as the verifier proposed. This is the only change after the PASS verdict;
+  the chapter was rebuilt from overrides and check-chapter re-run clean.
+
+Verdict: PASS

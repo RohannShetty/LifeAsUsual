@@ -4,7 +4,7 @@
   "title": "Everyday Legal Red Lines",
   "intro": "Chapter 9: Everyday Legal Red Lines",
   "edition": "india",
-  "rewriteStatus": "draft",
+  "rewriteStatus": "checked",
   "tips": [
     {
       "id": "9-1",
@@ -29,7 +29,7 @@
       "evidenceGrade": "A",
       "sources": "Bharatiya Nyaya Sanhita, 2023. <https://www.indiacode.nic.in/>; Information Technology Act, 2000 (sections 66C, 66D, 67). <https://www.indiacode.nic.in/>",
       "caveats": "Satire and criticism are not automatically offences, but a false factual claim that causes panic can be. The exact offence depends on the words, the audience and the harm. Do not name a suspect or a victim in a forwarded message.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "9-2",
@@ -54,7 +54,7 @@
       "evidenceGrade": "A",
       "sources": "Prevention of Insults to National Honour Act, 1971. <https://www.indiacode.nic.in/>; Emblems and Names (Prevention of Improper Use) Act, 1950. <https://www.indiacode.nic.in/>; Bharatiya Nyaya Sanhita, 2023. <https://www.indiacode.nic.in/>; Ministry of Home Affairs. <https://www.mha.gov.in/>",
       "caveats": "India has no statute that specially protects the reputation of martyrs; the routes that exist are the 1971 Act, defamation of a living person, obscenity, and the platform's own rules. Satire is not automatically safe, and an apology does not end a prosecution. The line depends on the words, the audience and the harm. Keep the evidence before you report a post.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "9-3",
@@ -79,7 +79,7 @@
       "evidenceGrade": "A",
       "sources": "Bharatiya Nyaya Sanhita, 2023 (Chapter VII). <https://www.indiacode.nic.in/>; Unlawful Activities (Prevention) Act, 1967. <https://www.indiacode.nic.in/>; Information Technology Act, 2000. <https://www.indiacode.nic.in/>",
       "caveats": "This is a difficult area and the facts matter. A journalist, researcher or human-rights worker may have lawful grounds to hold material. Take a lawyer's advice before publishing or sharing. Do not assume that a foreign server makes the act immune from Indian law.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "9-4",
@@ -104,7 +104,7 @@
       "evidenceGrade": "A",
       "sources": "Bharatiya Nyaya Sanhita, 2023. <https://www.indiacode.nic.in/>; Information Technology Act, 2000 (section 67). <https://www.indiacode.nic.in/>; Protection of Children from Sexual Offences Act, 2012. <https://www.indiacode.nic.in/>; National Cyber Crime Reporting Portal. <https://cybercrime.gov.in/>",
       "caveats": "The definition of obscenity is judged by community standards and the context. A private group with a few friends can still be a publication if the material is shared. If a minor is involved, the POCSO Act applies regardless of consent.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "9-5",
@@ -129,7 +129,7 @@
       "evidenceGrade": "A",
       "sources": "Bharatiya Nyaya Sanhita, 2023. <https://www.indiacode.nic.in/>; Prevention of Money Laundering Act, 2002. <https://www.indiacode.nic.in/>; Reserve Bank of India, KYC Master Directions. <https://www.rbi.org.in/>; National Cyber Crime Reporting Portal. <https://cybercrime.gov.in/>",
       "caveats": "The fact that you did not know the source is not a complete defence where the pattern was obviously suspicious. A single transaction can trigger a freeze. If your account is frozen, contact the bank and the cyber police rather than trying to move the money.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "9-6",
@@ -154,7 +154,7 @@
       "evidenceGrade": "A",
       "sources": "Bharatiya Nyaya Sanhita, 2023. <https://www.indiacode.nic.in/>; Reserve Bank of India, fair practices code. <https://www.rbi.org.in/>; Prevention of Money Laundering Act, 2002. <https://www.indiacode.nic.in/>",
       "caveats": "A genuine loan facilitator can help with the paperwork, but must not invent facts. Check the lender's registration and the fees in writing. A loan against a forged document can be recovered from the borrower and the guarantor.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "9-7",
@@ -179,7 +179,7 @@
       "evidenceGrade": "A",
       "sources": "Bharatiya Nyaya Sanhita, 2023. <https://www.indiacode.nic.in/>; Indian Contract Act, 1872. <https://www.indiacode.nic.in/>; Reserve Bank of India, card safety. <https://www.rbi.org.in/>",
       "caveats": "The exact offence depends on the value and the intention. A found item handed to the police is not yours to keep. A reward offered by the owner is a matter for the owner; it is not a legal right.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "9-8",
@@ -204,7 +204,7 @@
       "evidenceGrade": "A",
       "sources": "Bharatiya Nyaya Sanhita, 2023. <https://www.indiacode.nic.in/>; Information Technology Act, 2000 (sections 66C, 66D). <https://www.indiacode.nic.in/>; Digital Personal Data Protection Act, 2023. <https://www.indiacode.nic.in/>",
       "caveats": "A genuine pricing error is not your fraud, but exploiting a known loophole repeatedly can be. Keep the offer terms and the receipts. If a platform blocks your account, use its grievance route rather than opening a new fake account.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "9-9",
@@ -229,7 +229,7 @@
       "evidenceGrade": "A",
       "sources": "Bharatiya Nyaya Sanhita, 2023. <https://www.indiacode.nic.in/>; Ministry of Housing and Urban Affairs, solid waste rules. <https://mohua.gov.in/>",
       "caveats": "The offence depends on the risk and the harm. A dropped object during shifting is still a risk; warn people below and use a rope or a lift. Report a repeated thrower to the society and the police.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "9-10",
@@ -254,7 +254,7 @@
       "evidenceGrade": "A",
       "sources": "Arms Act, 1959. <https://www.indiacode.nic.in/>; Ministry of Home Affairs, Arms Rules. <https://www.mha.gov.in/>",
       "caveats": "The classification depends on the weapon's characteristics and the notification in force. State rules may add restrictions. Do not carry a replica in public; it can be treated as a threat even if it cannot fire.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "9-11",
@@ -279,7 +279,7 @@
       "evidenceGrade": "A",
       "sources": "Directorate General of Civil Aviation, Drone Rules 2021. <https://www.dgca.gov.in/>; Digital Sky. <https://digitalsky.dgca.gov.in/>; Aircraft Act, 1934. <https://www.indiacode.nic.in/>",
       "caveats": "The rules depend on the drone's weight category and the zone. A micro drone has fewer requirements, but no-fly zones still apply. Do not fly over a crowd or a private property without permission.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "9-12",
@@ -304,7 +304,7 @@
       "evidenceGrade": "A",
       "sources": "Bharatiya Nyaya Sanhita, 2023 (sections 77, 78). <https://www.indiacode.nic.in/>; Information Technology Act, 2000. <https://www.indiacode.nic.in/>; Digital Personal Data Protection Act, 2023. <https://www.indiacode.nic.in/>; National Cyber Crime Reporting Portal. <https://cybercrime.gov.in/>",
       "caveats": "A camera at your own door for security is different from a camera in a bedroom or bathroom. A guest's consent does not cover a hidden camera in a private space. Preserve the device and the footage if you find one; do not share it online.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "9-13",
@@ -329,7 +329,7 @@
       "evidenceGrade": "B",
       "sources": "Public Gambling Act, 1867. <https://www.indiacode.nic.in/>; Promotion and Regulation of Online Gaming Act, 2025. <https://www.meity.gov.in/>; state gambling laws (check your state). <https://www.indiacode.nic.in/>",
       "caveats": "The state law differs; what is a lawful skill game in one state may be restricted in another. Online platforms may claim a skill exemption that does not cover real-money play. Do not use a friend's account to route the stake.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "9-14",
@@ -354,7 +354,7 @@
       "evidenceGrade": "A",
       "sources": "Wild Life (Protection) Act, 1972. <https://www.indiacode.nic.in/>; Ministry of Environment, Forest and Climate Change. <https://moef.gov.in/>; CITES. <https://cites.org/>",
       "caveats": "The list of protected species is long and includes many birds, reptiles and mammals. A 'farm-bred' claim does not override the Act. State forest department rules may add restrictions. Do not release a pet into the wild.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "9-15",
@@ -379,7 +379,7 @@
       "evidenceGrade": "A",
       "sources": "Bharatiya Nyaya Sanhita, 2023. <https://www.indiacode.nic.in/>; Negotiable Instruments Act, 1881. <https://www.indiacode.nic.in/>; Insolvency and Bankruptcy Code, 2016. <https://ibbi.gov.in/>",
       "caveats": "A threat of criminal action to recover a debt can itself be extortion if it goes beyond a lawful notice. Do not publish the debtor's name and photo to shame them; that can be defamation. Take legal advice before sending a notice.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "9-16",
@@ -404,7 +404,7 @@
       "evidenceGrade": "A",
       "sources": "Aadhaar (Targeted Delivery of Financial and Other Subsidies, Benefits and Services) Act, 2016. <https://www.indiacode.nic.in/>; Bharatiya Nyaya Sanhita, 2023. <https://www.indiacode.nic.in/>; Information Technology Act, 2000. <https://www.indiacode.nic.in/>; Digital Personal Data Protection Act, 2023. <https://www.indiacode.nic.in/>",
       "caveats": "A family member asking for your Aadhaar OTP is still asking you to authorise access. Do not share an OTP, even with a caller who claims to be from the bank. If your identity is misused, file a police complaint and inform the bank and the tax department.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "9-17",
@@ -429,7 +429,7 @@
       "evidenceGrade": "A",
       "sources": "Bharatiya Nyaya Sanhita, 2023. <https://www.indiacode.nic.in/>; Bharatiya Nagarik Suraksha Sanhita, 2023. <https://www.indiacode.nic.in/>; National Human Rights Commission. <https://nhrc.nic.in/>",
       "caveats": "Do not resist even an unlawful arrest; challenge it afterwards. A bystanding video can help, but do not obstruct the officer to take it. If you are injured, ask for a medical examination and record it.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "9-18",
@@ -454,7 +454,7 @@
       "evidenceGrade": "A",
       "sources": "Protection of Children from Sexual Offences Act, 2012. <https://www.indiacode.nic.in/>; Bharatiya Nyaya Sanhita, 2023. <https://www.indiacode.nic.in/>; Prohibition of Child Marriage Act, 2006. <https://www.indiacode.nic.in/>",
       "caveats": "The law does not create a general 'close-in-age' exception; a case is decided on its facts, and courts have quashed some consensual cases involving older adolescents, but that is not a rule you can rely on. A school, hospital or public servant who fails to report an offence can be liable under POCSO.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "9-19",
@@ -479,7 +479,7 @@
       "evidenceGrade": "A",
       "sources": "Bharatiya Nyaya Sanhita, 2023. <https://www.indiacode.nic.in/>; Bharatiya Nagarik Suraksha Sanhita, 2023. <https://www.indiacode.nic.in/>; Ministry of Home Affairs. <https://www.mha.gov.in/>",
       "caveats": "A single blow can cause a fatal injury. 'He hit me first' is not a licence to keep hitting; the right of private defence ends when the threat ends. Do not post about the fight online; it becomes evidence.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "9-20",
@@ -508,7 +508,7 @@
       "evidenceGrade": "A",
       "sources": "Juvenile Justice (Care and Protection of Children) Act, 2015. <https://www.indiacode.nic.in/>; Central Adoption Resource Authority. <https://cara.wcd.gov.in/>; Adoption Regulations, 2022. <https://cara.wcd.gov.in/>; Bharatiya Nyaya Sanhita, 2023. <https://www.indiacode.nic.in/>; Tele-MANAS. <https://telemanas.mohfw.gov.in/>",
       "caveats": "A hospital or a nursing home cannot arrange a private adoption, and a 'gift' or 'donation' to the mother changes the character of the act. The child's best interest is the legal test, and the biological parent's consent is recorded before the Committee. If you are in crisis after the birth, speak to the hospital social worker, call Childline on 1098, or call Tele-MANAS on 14416 for mental-health support.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "9-21",
@@ -533,7 +533,7 @@
       "evidenceGrade": "A",
       "sources": "Bharatiya Nyaya Sanhita, 2023. <https://www.indiacode.nic.in/>; Insurance Act, 1938. <https://www.indiacode.nic.in/>; Insurance Regulatory and Development Authority of India. <https://irdai.gov.in/>; Motor Vehicles Act, 1988. <https://www.indiacode.nic.in/>",
       "caveats": "A genuine claim that is poorly documented can look exaggerated; keep the evidence. A minor dent that is repaired later is not fraud, but attributing old damage to a new incident is. Health-insurance misuse of a family member's card is also fraud.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "9-22",
@@ -558,7 +558,7 @@
       "evidenceGrade": "A",
       "sources": "Transplantation of Human Organs and Tissues Act, 1994. <https://www.indiacode.nic.in/>; National Organ and Tissue Transplant Organisation. <https://notto.mohfw.gov.in/>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>",
       "caveats": "A 'donation' in exchange for money, a job or a visa is commercial dealing. A foreign donor needs additional clearance. Post-mortem donation is a separate, voluntary process. If you are in financial distress, use the welfare routes in Section 7 rather than a broker.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "9-23",
@@ -583,7 +583,7 @@
       "evidenceGrade": "A",
       "sources": "Immoral Traffic (Prevention) Act, 1956. <https://www.indiacode.nic.in/>; Bharatiya Nyaya Sanhita, 2023. <https://www.indiacode.nic.in/>; Ministry of Women and Child Development. <https://wcd.gov.in/>",
       "caveats": "The law distinguishes the person exploited from the organiser; a victim should not be treated as the accused. Health services and HIV prevention are available without judgment. If you are being coerced, contact the police or a shelter.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "9-24",
@@ -608,7 +608,7 @@
       "evidenceGrade": "A",
       "sources": "Copyright Act, 1957. <https://www.indiacode.nic.in/>; Information Technology Act, 2000. <https://www.indiacode.nic.in/>; Intellectual Property India. <https://ipindia.gov.in/>",
       "caveats": "A short quotation for criticism may be fair dealing; a full translation is not. A non-commercial motive does not make the copy lawful, though it affects the remedy. A platform that ignores a takedown notice can lose its safe harbour.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "9-25",
@@ -633,7 +633,7 @@
       "evidenceGrade": "B",
       "sources": "Copyright Act, 1957. <https://www.indiacode.nic.in/>; Trademarks Act, 1999. <https://www.indiacode.nic.in/>; Intellectual Property India. <https://ipindia.gov.in/>",
       "caveats": "The line between an unprotected idea and protected expression is decided case by case. A parody may be protected, but commercial exploitation is riskier. A publisher's contract can assign the rights, so an author may not be free to license a sequel.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "9-26",
@@ -658,7 +658,7 @@
       "evidenceGrade": "A",
       "sources": "Arms Act, 1959. <https://www.indiacode.nic.in/>; Bharatiya Nyaya Sanhita, 2023 (private defence). <https://www.indiacode.nic.in/>; Ministry of Home Affairs. <https://www.mha.gov.in/>",
       "caveats": "A household knife in the kitchen is not the same as a dagger carried in public. A licensed weapon is still subject to the licence conditions. If you have already been charged, take a criminal lawyer immediately.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "9-27",
@@ -683,7 +683,7 @@
       "evidenceGrade": "A",
       "sources": "Indian Fisheries Act, 1897. <https://www.indiacode.nic.in/>; Wild Life (Protection) Act, 1972. <https://www.indiacode.nic.in/>; Department of Fisheries. <https://dof.gov.in/>",
       "caveats": "Recreational angling rules differ by state and by reservoir. A catch from a protected species must be released. Do not buy fish you know were caught illegally; that can be handling stolen property or a wildlife offence.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "9-28",
@@ -708,7 +708,7 @@
       "evidenceGrade": "A",
       "sources": "Indian Forest Act, 1927. <https://www.indiacode.nic.in/>; Forest (Conservation) Act, 1980. <https://www.indiacode.nic.in/>; National Disaster Management Authority. <https://ndma.gov.in/>; Ministry of Environment, Forest and Climate Change. <https://moef.gov.in/>",
       "caveats": "A small controlled fire can become a crown fire in minutes. A fire lit on private land can still spread to forest land. Do not try to fight a large fire yourself; call the professionals and move upwind.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "9-29",
@@ -733,7 +733,7 @@
       "evidenceGrade": "A",
       "sources": "Public Examinations (Prevention of Unfair Means) Act, 2024. <https://www.indiacode.nic.in/>; Bharatiya Nyaya Sanhita, 2023. <https://www.indiacode.nic.in/>; Union Public Service Commission. <https://upsc.gov.in/>",
       "caveats": "The Act's coverage depends on the examination and the authority; state examinations have their own laws. A leaked paper is evidence; do not share it. If you are caught, take a lawyer before making a statement.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     }
   ]
 }

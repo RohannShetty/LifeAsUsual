@@ -1,36 +1,104 @@
 {
   "tips": {
     "28-2": {
+      "id": "28-2",
+      "chapter": 28,
+      "tip": 2,
       "title": "Before any injection, thread lift or surgery, check two things: the clinic's registration and the doctor's registration",
-      "inPlainWords": "Anything that breaks the skin or puts a drug or a device into the body is a medical procedure. In India the clinic must be registered as a clinical establishment with the district registering authority where the state has adopted the Clinical Establishments (Registration and Regulation) Act, 2010, or under that state's own clinical establishments law. The person doing it must be a doctor registered with the National Medical Commission or a state medical council, and a dentist registered with the Dental Council of India for a dental procedure. A salon, a studio or a hotel room is not a clinical establishment.",
-      "benefit": "The 2010 Act, and the state laws built on the same model, require a clinical establishment to register, to meet minimum standards, and give the district authority power to inspect and to close an unregistered one. The National Medical Commission Act, 2019 and the state medical councils register a qualified doctor, and practising without registration is an offence. The drug or device used must itself be approved and licensed under the Drugs and Cosmetics Act, 1940. An injection given in a salon is therefore both a clinical-establishment offence and, very often, a drugs offence.",
+      "tags": {
+        "money": "Free",
+        "time": "Quick",
+        "willpower": "None needed",
+        "benefit": "Large",
+        "scope": "Lifespan",
+        "audience": []
+      },
+      "costScore": 0,
+      "valueTier": "Very high",
+      "disputed": false,
+      "stillVerifying": false,
       "cost": "Checking a registration is free. A legitimate procedure costs what the clinic charges, and the cheap version is cheap for a reason.",
+      "inPlainWords": "Anything that breaks the skin or puts a drug or a device into the body is a medical procedure. In India the clinic must be registered as a clinical establishment with the district registering authority where the state has adopted the Clinical Establishments (Registration and Regulation) Act, 2010, or under that state's own clinical establishments law. The person doing it must be a doctor registered with the National Medical Commission or a state medical council, and a dentist registered with the National Dental Commission or a State Dental Council for a dental procedure. A salon, a studio or a hotel room is not a clinical establishment.",
+      "benefit": "The 2010 Act, and the state laws built on the same model, require a clinical establishment to register, to meet minimum standards, and give the district authority power to inspect and to close an unregistered one. The National Medical Commission Act, 2019 and the state medical councils register a qualified doctor, and practising without registration is an offence. The drug or device used must itself be approved and licensed under the Drugs and Cosmetics Act, 1940. An injection given in a salon is therefore both a clinical-establishment offence and, very often, a drugs offence.",
+      "evidenceGrade": "A",
+      "sources": "Clinical Establishments (Registration and Regulation) Act, 2010. <https://www.indiacode.nic.in/>; Ministry of Health and Family Welfare. <https://www.mohfw.gov.in/>; Central Drugs Standard Control Organisation. <https://cdsco.gov.in/>",
       "caveats": "Ask to see the registration certificate and the doctor's registration number, and check the number with the state medical council. Do not accept a practitioner whose only qualification is a short course. Keep the bill and the batch number of the product used.",
-      "sources": "Clinical Establishments (Registration and Regulation) Act, 2010. <https://www.indiacode.nic.in/>; Ministry of Health and Family Welfare. <https://www.mohfw.gov.in/>; Central Drugs Standard Control Organisation. <https://cdsco.gov.in/>"
+      "reviewStatus": "draft"
     },
     "28-6": {
+      "id": "28-6",
+      "chapter": 28,
+      "tip": 6,
       "title": "Weight-loss drugs are prescription-only: a seller who ships without a prescription breaks the drug rules and the record-keeping rules",
-      "inPlainWords": "A prescription drug may be sold only against the prescription of a registered medical practitioner, and the pharmacy must keep that prescription on record for two years, or three years for a Schedule H1 drug, which also needs its own register. An online seller must have a licensed pharmacy behind it, a registered pharmacist and a real prescription. A site that sells without one and posts the strip is not a shortcut, it is an unlicensed sale. Check the retail licence and the pharmacist's registration before you pay.",
-      "benefit": "The Drugs and Cosmetics Act, 1940 and the Drugs and Cosmetics Rules, 1945 restrict the sale of a prescription drug to a licensed pharmacy against a prescription and require the prescription to be retained. A Schedule H1 drug needs a separate register with the patient's and the prescriber's details and a three-year retention. Selling without a licence is an offence, and a drug imported without registration is an unapproved drug. A pharmacist who dispenses without a prescription risks the licence.",
+      "tags": {
+        "money": "Small cost",
+        "time": "A few hours",
+        "willpower": "None needed",
+        "benefit": "Medium",
+        "scope": "Lifespan",
+        "audience": []
+      },
+      "costScore": 2,
+      "valueTier": "Average",
+      "disputed": false,
+      "stillVerifying": false,
       "cost": "A legitimate prescription costs a consultation. A grey-market seller is cheap until the product turns out to be counterfeit.",
+      "inPlainWords": "A prescription drug may be sold only against the prescription of a registered medical practitioner, and the pharmacy must record the sale in a register kept for two years, or three years for a Schedule H1 drug, which also needs its own separate register. An online seller must have a licensed pharmacy behind it, a registered pharmacist and a real prescription. A site that sells without one and posts the strip is not a shortcut, it is an unlicensed sale. Check the retail licence and the pharmacist's registration before you pay.",
+      "benefit": "The Drugs and Cosmetics Act, 1940 and the Drugs and Cosmetics Rules, 1945 restrict the sale of a prescription drug to a licensed pharmacy against a prescription and require the sale to be recorded in a prescription register that is kept for two years (rule 65(7)), and a copy of a Schedule X prescription to be kept for two years. A Schedule H1 drug needs a separate register with the patient's and the prescriber's details and kept for three years (rule 65(3)(1)(h), inserted by G.S.R. 588(E) of 30 August 2013). Selling without a licence is an offence, and a drug imported without registration is an unapproved drug. A pharmacist who dispenses without a prescription risks the licence.",
+      "evidenceGrade": "B",
+      "sources": "Drugs and Cosmetics Rules, 1945 (rules 65(3), 65(7) and 65(9)). <https://www.indiacode.nic.in/>; Central Drugs Standard Control Organisation. <https://cdsco.gov.in/>; Ministry of Health and Family Welfare. <https://www.mohfw.gov.in/>; Drugs and Cosmetics Act, 1940. <https://www.indiacode.nic.in/>",
       "caveats": "Do not buy a weight-loss injection or pill from a social-media seller. Check the batch, the expiry and the licence number on the pack. Report an illegal sale to the state drug controller.",
-      "sources": "Central Drugs Standard Control Organisation. <https://cdsco.gov.in/>; Ministry of Health and Family Welfare. <https://www.mohfw.gov.in/>; Drugs and Cosmetics Act, 1940. <https://www.indiacode.nic.in/>"
+      "reviewStatus": "draft"
     },
     "28-9": {
+      "id": "28-9",
+      "chapter": 28,
+      "tip": 9,
       "title": "Clear aligners are a supervised dental treatment: buy the treatment from a registered dentist, not the tray from a website",
-      "inPlainWords": "A clear aligner moves teeth, and moving teeth is a dental treatment. In India the appliance is a medical device, and the treatment has to be planned and monitored by a dentist registered with the Dental Council of India or a state dental council, with in-person review and usually x-rays or scans. A website that mails trays after a selfie is selling you a device without a diagnosis. The risks are root damage, a bite that does not settle and a result that cannot be corrected. Ask who the treating dentist is and where the reviews happen.",
-      "benefit": "The Medical Devices Rules, 2017 regulate the manufacture, import and sale of a medical device, and a custom-made appliance is made to a dentist's prescription. The Dentists Act, 1948 restricts the practice of dentistry to a registered dentist. A direct-to-consumer tray skips the diagnosis, the planning and the follow-up on which the treatment depends, and it is the follow-up that catches a tooth that is moving the wrong way.",
+      "tags": {
+        "money": "Small cost",
+        "time": "A few hours",
+        "willpower": "Some",
+        "benefit": "Small",
+        "scope": "Lifespan",
+        "audience": []
+      },
+      "costScore": 3,
+      "valueTier": "Average",
+      "disputed": false,
+      "stillVerifying": false,
       "cost": "A supervised treatment costs more than a mail-order tray. Correcting a bad result costs more still.",
+      "inPlainWords": "A clear aligner moves teeth, and moving teeth is a dental treatment. In India the tray is a custom-made dental appliance, supplied on a registered dentist’s written prescription, and the treatment has to be planned and monitored by a dentist registered with the National Dental Commission or a State Dental Council, with in-person review and usually x-rays or scans. A website that mails trays after a selfie is selling you an appliance without a diagnosis. The risks are root damage, a bite that does not settle and a result that cannot be corrected. Ask who the treating dentist is and where the reviews happen.",
+      "benefit": "The Medical Devices Rules, 2017 regulate the manufacture, import and sale of a medical device, and a custom-made appliance is made to a dentist’s prescription. The National Dental Commission Act, 2023 bars anyone who is not a registered dentist from practising dentistry (section 32), and the Dental Council of India was dissolved when that Act replaced the Dentists Act, 1948 on 19 March 2026 (S.O. 1446(E)). A direct-to-consumer tray skips the diagnosis, the planning and the follow-up on which the treatment depends, and it is the follow-up that catches a tooth that is moving the wrong way.",
+      "evidenceGrade": "C",
+      "sources": "Central Drugs Standard Control Organisation, medical devices. <https://cdsco.gov.in/>; Ministry of Health and Family Welfare. <https://www.mohfw.gov.in/>; National Dental Commission Act, 2023. <https://indiacode.gov.in/>",
       "caveats": "A severe case, such as an impacted tooth, gum disease or a jaw discrepancy, is not an aligner case at all. Wear the retainer afterwards. Keep the treatment plan and the records.",
-      "sources": "Central Drugs Standard Control Organisation, medical devices. <https://cdsco.gov.in/>; Ministry of Health and Family Welfare. <https://www.mohfw.gov.in/>; Dentists Act, 1948. <https://www.indiacode.nic.in/>"
+      "reviewStatus": "draft"
     },
     "28-10": {
+      "id": "28-10",
+      "chapter": 28,
+      "tip": 10,
       "title": "Check the cream before you put it on your face: a cosmetic needs a licence, and a mercury or steroid cream is not a cosmetic",
-      "inPlainWords": "A skin-lightening cream sold in India is a cosmetic, and a cosmetic must be manufactured or imported under a licence and be free of a prohibited ingredient: mercury and its compounds are not permitted, and a corticosteroid in a cosmetic is not permitted either. A cream that promises a dramatic change, comes in an unlabelled jar from a salon, or is sold by an influencer with no label is the one to refuse. Check the label for the manufacturer or importer, the licence number and the ingredient list.",
-      "benefit": "The Drugs and Cosmetics Act, 1940 and the Cosmetics Rules, 2020 license the manufacture and import of a cosmetic and set the labelling and ingredient rules, and mercury compounds are prohibited. A corticosteroid in a fairness cream is a prescription drug sold as a cosmetic, and long use thins the skin and can cause a rebound. CDSCO and the state drug controllers inspect and seize an illegal cosmetic, so a report to the state drug controller is the practical step.",
+      "tags": {
+        "money": "Free",
+        "time": "Quick",
+        "willpower": "Some",
+        "benefit": "Medium",
+        "scope": "Lifespan",
+        "audience": []
+      },
+      "costScore": 1,
+      "valueTier": "Average",
+      "disputed": false,
+      "stillVerifying": false,
       "cost": "A licensed product costs what it costs. The illegal one is cheap, and the dermatitis is not.",
+      "inPlainWords": "A skin-lightening cream sold in India is a cosmetic, and a cosmetic must be manufactured or imported under a licence and be free of a prohibited ingredient: mercury and its compounds are allowed only at the trace limits the cosmetic rules set (as a preservative in eye-area products up to 70 ppm, and unintentional traces up to 1 ppm), and a corticosteroid in a cosmetic is not permitted at all. A cream that promises a dramatic change, comes in an unlabelled jar from a salon, or is sold by an influencer with no label is the one to refuse. Check the label for the manufacturer or importer, the licence number and the ingredient list.",
+      "benefit": "The Drugs and Cosmetics Act, 1940 and the Cosmetics Rules, 2020 license the manufacture and import of a cosmetic and set the labelling and ingredient rules, and mercury compounds are permitted only within those trace limits (70 ppm as an eye-area preservative, 1 ppm as an unintentional trace). A corticosteroid in a fairness cream is a prescription drug sold as a cosmetic, and long use thins the skin and can cause a rebound. CDSCO and the state drug controllers inspect and seize an illegal cosmetic, so a report to the state drug controller is the practical step.",
+      "evidenceGrade": "B",
+      "sources": "Central Drugs Standard Control Organisation, cosmetics. <https://cdsco.gov.in/>; Ministry of Health and Family Welfare. <https://www.mohfw.gov.in/>; Drugs and Cosmetics Act, 1940. <https://www.indiacode.nic.in/>",
       "caveats": "Do not use a cream from a salon jar, or a treatment mixed at a parlour. Patch-test first. If the skin thins, streaks or burns, stop and see a dermatologist.",
-      "sources": "Central Drugs Standard Control Organisation, cosmetics. <https://cdsco.gov.in/>; Ministry of Health and Family Welfare. <https://www.mohfw.gov.in/>; Drugs and Cosmetics Act, 1940. <https://www.indiacode.nic.in/>"
+      "reviewStatus": "draft"
     },
     "28-8": {
       "caveats": "The reported prevalence varies widely — from 2.21% up to 56.67% — because different studies use distinct questionnaires and populations. Thus we can only conclude that this condition is fairly common and warrants screening; the 15.04% figure should not be taken as an exact statistic. This is why it is graded B. Importantly, most people seeking cosmetic treatments do not have psychological issues; only a small subset — those whose preoccupation is persistent, interferes with work or social life, and leads to repeated surgical attempts — are at risk. Warning signs include spending excessive time each day inspecting or concealing a body part, avoiding social interactions or photos, and constantly fixating on new areas after previous corrections.",
@@ -38,17 +106,82 @@
       "cost": "A single visit to a psychiatrist or clinical psychologist is affordable at a government hospital and costlier in private practice. The real challenge is making that appointment before scheduling any surgery."
     },
     "28-7": {
+      "id": "28-7",
+      "chapter": 28,
+      "tip": 7,
+      "title": "Sex hormone therapy should only be used when prescribed by a doctor and with regular follow‑up; do not buy it online and do not adjust the dose on your own.",
+      "tags": {
+        "money": "Small cost",
+        "time": "A few hours",
+        "willpower": "None needed",
+        "benefit": "Medium",
+        "scope": "Lifespan",
+        "audience": []
+      },
+      "costScore": 2,
+      "valueTier": "Average",
+      "disputed": false,
+      "stillVerifying": false,
       "cost": "Regular doctor visits and blood tests are required. Over a year the monitoring adds up and takes several half‑days of your time.",
-      "sources": "Getahun D et al. (2018). Cross-sex Hormones and Acute Cardiovascular Events in Transgender Persons: A Cohort Study. Ann Intern Med. <https://doi.org/10.7326/M17-2785>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>"
+      "inPlainWords": "This section does not discuss whether hormone therapy is appropriate, only how to use it safely. A study followed transgender individuals for about four years. Transgender women taking estrogen had a noticeably higher rate of venous thrombosis than matched cisgender men — 4.1 extra cases per 1,000 people in two years and 16.7 extra cases per 1,000 in eight years; against cisgender women the excess was 3.4 and 13.7 per 1,000. Such risks must be monitored through long‑term follow‑up, and that monitoring only happens when a clinician checks you regularly. When people buy hormones online and adjust doses themselves, there is no one to provide that oversight.",
+      "benefit": "Researchers examined electronic medical records from Kaiser Permanente, a large health‑care system. They identified 2,842 transgender women and 2,118 transgender men, with average follow‑up periods of 4.0 and 3.6 years respectively. Each participant was matched to roughly ten cisgender controls based on birth year, race, clinic location, and enrollment date — resulting in 48,686 cisgender men and 48,775 cisgender women. Compared with cisgender men, transgender women showed more venous thromboembolism: 4.1 extra cases per 1,000 people after two years (95% CI 1.6–6.7) and 16.7 extra cases after eight years (6.4–27.5). Compared with cisgender women, the excess was smaller: 3.4 (1.1–5.6) and 13.7 (4.1–22.7) respectively. Rates of ischemic stroke and myocardial infarction were similar across groups. The differences were more pronounced among transgender women who started hormone therapy during the study period. Evidence for transgender men was insufficient to draw conclusions. The authors concluded that “these results may indicate the need for long-term vigilance in identifying vascular side effects of cross-sex estrogen.”",
+      "evidenceGrade": "A",
+      "sources": "Getahun D et al. (2018). Cross-sex Hormones and Acute Cardiovascular Events in Transgender Persons: A Cohort Study. Ann Intern Med. <https://doi.org/10.7326/M17-2785>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>",
+      "caveats": "The researchers acknowledged a limitation: they could not determine how many participants obtained hormones outside the health‑care system, so the data on actual medication use are incomplete. This limitation actually underscores why regular medical follow‑up is essential. The study only examined vascular events; it does not address whether hormone therapy should be used or what its overall benefits are — those questions require different evidence. The same principle applies to any use of sex hormones, including birth‑control pills, menopausal hormone therapy, and testosterone replacement. Anyone who buys hormones online, adjusts doses based on internet advice, and never monitors blood clots or liver/kidney function is at risk primarily because there is no medical oversight.",
+      "reviewStatus": "draft"
     },
     "28-1": {
-      "sources": "Arcelus J et al. (2011). Mortality rates in patients with anorexia nervosa and other eating disorders. A meta-analysis of 36 studies. Arch Gen Psychiatry. <https://doi.org/10.1001/archgenpsychiatry.2011.74>; Patton GC et al. (1999). Onset of adolescent eating disorders: population based cohort study over 3 years. BMJ. <https://doi.org/10.1136/bmj.318.7186.765>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>"
+      "id": "28-1",
+      "chapter": 28,
+      "tip": 1,
+      "title": "Do not use extreme dieting, fasting, or self-induced vomiting to control weight; if you want to lose weight, focus on exercise instead.",
+      "tags": {
+        "money": "Free",
+        "time": "Quick",
+        "willpower": "None needed",
+        "benefit": "Large",
+        "scope": "Lifespan",
+        "audience": []
+      },
+      "costScore": 0,
+      "valueTier": "Very high",
+      "disputed": false,
+      "stillVerifying": false,
+      "cost": "No cost at all. In fact, it saves money you would otherwise spend on weight-loss products.",
+      "inPlainWords": "People with anorexia nervosa have a mortality rate roughly 5.9 times higher than their peers. Over a period of one year, 5.1 out of every 1,000 individuals in this group die. One in five of those who die commit suicide. The root cause of this is dieting: a three-year study of students at 44 secondary schools found that girls who engaged in severe dieting were 18 times more likely to develop eating disorders than those who did not diet. If you want to manage your weight, increase physical activity rather than cutting food intake to the point of hunger.",
+      "benefit": "This conclusion comes from a combined analysis of 36 studies that tracked a total of 166,642 person-years of data on individuals with anorexia nervosa. Their standardized mortality ratio was 5.86, meaning their mortality rate is about 5.9 times higher than that of the general population. As noted above, 5.1 deaths occur per 1,000 person-years, and roughly one-fifth of these deaths are suicides. For bulimia nervosa, the standardized mortality ratio is 1.93, and for other eating disorders it is 1.92 — both values are roughly 1.9 times higher than those of the general population. Another study conducted in 44 secondary schools in Victoria, Australia, followed 14–15-year-old students for three years, with six rounds of assessments during that time. It found that 21.8 new cases of eating disorders occurred per 1,000 person-years among girls; girls who dieted severely were 18 times more likely to develop such disorders than those who did not, while those with moderate dieting habits had a five times higher risk. After adjusting for prior dieting habits and existing mental health issues, factors such as BMI, physical activity levels, and gender no longer predicted the development of eating disorders. The authors concluded that for adolescents, using exercise rather than diet restriction to manage weight appears to lower the risk of developing eating disorders.",
+      "evidenceGrade": "A",
+      "sources": "Arcelus J et al. (2011). Mortality rates in patients with anorexia nervosa and other eating disorders. A meta-analysis of 36 studies. Arch Gen Psychiatry. <https://doi.org/10.1001/archgenpsychiatry.2011.74>; Patton GC et al. (1999). Onset of adolescent eating disorders: population based cohort study over 3 years. BMJ. <https://doi.org/10.1136/bmj.318.7186.765>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>",
+      "caveats": "The term “severe dieting” here refers to long-term food intake that is far below the body’s actual needs; it does not include skipping a single meal or foregoing late-night snacks. If you or someone you know exhibits symptoms such as self-induced vomiting, feelings of guilt after binge eating, or an inability to stop weighing oneself, it is recommended to seek help from a psychiatrist or a clinical psychology department at a general hospital. This is a medical condition with established treatment methods, and it is not a matter of lacking willpower. For information on the relationship between BMI and mortality, please refer to Section 2, Item 32, which discusses long-term weight ranges rather than weight-loss methods.",
+      "reviewStatus": "draft"
     },
     "28-3": {
       "sources": "Beleznay K et al. (2019). Update on Avoiding and Treating Blindness From Fillers: A Recent Review of the World Literature. Aesthet Surg J. <https://doi.org/10.1093/asj/sjz053>; Central Drugs Standard Control Organisation. <https://cdsco.gov.in/>"
     },
     "28-5": {
-      "sources": "Horwitz H et al. (2019). Health consequences of androgenic anabolic steroid use. J Intern Med. <https://doi.org/10.1111/joim.12850>; Central Drugs Standard Control Organisation. <https://cdsco.gov.in/>"
+      "id": "28-5",
+      "chapter": 28,
+      "tip": 5,
+      "title": "Do not use anabolic steroids (“muscle‑building injections” or “oral pills”) to build muscle",
+      "tags": {
+        "money": "Free",
+        "time": "Quick",
+        "willpower": "Some",
+        "benefit": "Large",
+        "scope": "Lifespan",
+        "audience": []
+      },
+      "costScore": 1,
+      "valueTier": "High",
+      "disputed": true,
+      "stillVerifying": false,
+      "cost": "There is no cost involved; you even save money on medication. The hard part is accepting that muscle growth will be slow.",
+      "inPlainWords": "A Danish study followed 545 men who tested positive for anabolic steroids and compared them with 5,450 age‑matched controls. Users had a three‑fold higher risk of death, and the median number of hospital visits per year was 0.81 versus 0.36 for controls. More than 10 % of steroid users developed acne, gynecomastia, or erectile dysfunction.",
+      "benefit": "The Danish researchers matched each steroid user with a control of the same age. The original cohort comprised 545 men whose androgenic steroid tests were positive between 2006‑01‑03 and 2018‑03‑01; they were paired with 5,450 controls. An additional validation used 644 refusers and 6,440 controls. Results showed a three‑fold increase in mortality among users (HR = 3.0; 95 % CI 1.3–7.0). The median yearly number of hospital visits was 0.81 versus 0.36 (P < 0.0001). Median means that half of the users had more visits and half fewer; such a low P‑value indicates this difference is highly unlikely to be random. Acne, gynecomastia, and erectile dysfunction each affected over 10 % of users – at least one in ten – a rate far above that of controls (P < 0.0001). The validation cohort yielded the same findings. In India anabolic steroids are prescription drugs: entry 31 of Schedule H to the Drugs and Cosmetics Rules, 1945 lists androgenic anabolic, oestrogenic and progestational substances, and rule 65(9) allows a Schedule H drug to be sold only against the prescription of a registered medical practitioner.",
+      "evidenceGrade": "A",
+      "sources": "Horwitz H et al. (2019). Health consequences of androgenic anabolic steroid use. J Intern Med. <https://doi.org/10.1111/joim.12850>; Drugs and Cosmetics Rules, 1945 (Schedule H and rule 65). <https://www.indiacode.nic.in/>; Central Drugs Standard Control Organisation. <https://cdsco.gov.in/>",
+      "caveats": "This is an observational study, not a randomized trial; steroid users may also engage in other risky behaviors, so the three‑fold risk increase may not be attributable solely to the drugs. The true effect size likely falls between 1.3 and 7.0. However, visible side effects such as acne, gynecomastia, and erectile dysfunction are less prone to bias. Legally these products are termed “anabolic steroids”; any product described with that phrase contains them. Ordinary protein powder or creatine does not fall under this category. A problem is that some products marketed as “muscle‑building powders” or “nutritional supplements” may contain hidden steroids while claiming rapid results. The screening method is the same as for weight‑loss products (see item 4: avoid any weight‑loss drug promising quick results). Legitimate drugs are prescription‑only and carry verifiable approval numbers; any product sold as a “muscle‑building supplement” that promises results within weeks is probably adulterated.",
+      "reviewStatus": "draft"
     },
     "28-4": {
       "caveats": "SCOUT enrolled high‑risk individuals already suffering from heart disease or diabetes; it does not prove that healthy young people would experience the same effects. Because it’s impossible to identify who is truly low‑risk, regulators opted to withdraw the drug entirely. Another common illicit additive is phenolphthalein, originally a laxative whose chronic overuse can disturb electrolyte balance and provoke arrhythmias. How to tell a legitimate product from a fraudulent one: genuine weight‑loss medicines are prescription drugs whose approval numbers can be verified at pharmacies or hospitals. In India, weight‑loss products sit between two regimes: medicines are cleared by the Central Drugs Standard Control Organisation, while foods and supplements fall under the Food Safety and Standards Authority of India; a licensed pharmacist can confirm whether a product is a licensed medicine. Products marketed as “coffee,” “candies,” “plums,” or “meal replacements” that promise rapid weight loss should, by definition, have no therapeutic effect; any such effect indicates illegal adulteration.",

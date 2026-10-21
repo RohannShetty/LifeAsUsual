@@ -4,7 +4,7 @@
   "title": "Do Not Waste Money",
   "intro": "Chapter 5: Do Not Waste Money",
   "edition": "india",
-  "rewriteStatus": "draft",
+  "rewriteStatus": "checked",
   "tips": [
     {
       "id": "5-1",
@@ -29,7 +29,7 @@
       "evidenceGrade": "C",
       "sources": "Reserve Bank of India, e-mandate framework. <https://www.rbi.org.in/>; National Payments Corporation of India, UPI Autopay. <https://www.npci.org.in/>; Consumer Protection Act, 2019. <https://consumeraffairs.nic.in/>",
       "caveats": "Turning off auto-renew can lose a promotional price. Keep the annual plan for a service you use weekly; cancel the rest. Check the card statement for a merchant you do not recognise.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "5-2",
@@ -54,7 +54,7 @@
       "evidenceGrade": "A",
       "sources": "Income Tax Department, e-filing portal. <https://www.incometax.gov.in/>; Income-tax Act, 2025. <https://www.indiacode.nic.in/>; Central Board of Direct Taxes. <https://www.incometaxindia.gov.in/>",
       "caveats": "Filing late costs a fee and interest, and a wrong claim can be reopened. Keep the proofs — rent receipts, the insurance premium receipt, the home-loan interest certificate — because the department's pre-filled data and your own records often disagree. Most deductions you claim under the old regime are not available under the new one, so the cheaper regime is not always the one with more deductions. A refund is not a windfall: it is your own money that was withheld during the year.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "5-3",
@@ -77,9 +77,9 @@
       "inPlainWords": "The Employees' Provident Fund is not limited to a home purchase. EPFO rules allow a member to withdraw or advance funds for buying or building a house, repaying a housing loan, paying rent in some cases, treatment of a serious illness, marriage or education, and a few other purposes. The amount and the conditions depend on the purpose and the number of years of service. Apply through the EPFO member portal, not an agent.",
       "benefit": "The EPF Scheme, 1952 and the EPFO's circulars set the withdrawal and advance categories. A member can take an advance for a house purchase or construction, for repayment of a housing loan, for rent in specified cases, for illness, for marriage or education, and for a few other needs. The account earns interest declared annually by the EPFO. On death, the nominee or legal heir can withdraw the balance. An early withdrawal reduces the retirement corpus.",
       "evidenceGrade": "A",
-      "sources": "Employees' Provident Fund Organisation, member portal. <https://www.epfo.gov.in/>; Employees' Provident Funds and Miscellaneous Provisions Act, 1952. <https://labour.gov.in/>; Income-tax Department, EPF taxation. <https://www.incometax.gov.in/>",
+      "sources": "Employees' Provident Fund Organisation, member portal. <https://www.epfo.gov.in/>; Code on Social Security, 2020, and the Employees' Provident Funds Scheme, 1952 (continued). <https://labour.gov.in/>; Income-tax Department, EPF taxation. <https://www.incometax.gov.in/>",
       "caveats": "The purpose and the eligible amount change with the EPFO circulars. A withdrawal for a non-eligible purpose can be rejected and may attract tax. Check the passbook and the UAN before applying.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "5-4",
@@ -104,7 +104,7 @@
       "evidenceGrade": "A",
       "sources": "Telecom Regulatory Authority of India. <https://trai.gov.in/>; Department of Telecommunications. <https://dot.gov.in/>; National Consumer Helpline. <https://consumerhelpline.gov.in/>; Consumer Protection Act, 2019. <https://consumeraffairs.nic.in/>",
       "caveats": "A 'free' upgrade often resets a lock-in or bundles a service you start paying for after a few months. Check whether the cheaper plan keeps the data, the speed and the add-ons you use, and whether your broadband has a fair-usage cap that slows you after a limit. Porting does not cancel dues; clear the outstanding bill first. Keep the complaint number — without it, an escalation has no date to work from.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "5-5",
@@ -128,8 +128,8 @@
       "benefit": "The arithmetic is the argument. Whatever the payout share, the money not returned is the operator's, the state's and the retailer's, so the expected value of a ticket is below its price and repeated play converges on that loss. No skill, system or lucky number changes a draw. India also taxes the win: a prize above the threshold is taxed at the flat rate for lottery income, and the seller deducts it at source, so the amount received is smaller than the advertised prize. The reliable return comes from the money you do not spend.",
       "evidenceGrade": "A",
       "sources": "Lotteries (Regulation) Act, 1998. <https://www.indiacode.nic.in/>; National Portal of India. <https://www.india.gov.in/>; Income Tax Department. <https://www.incometax.gov.in/>",
-      "caveats": "Anyone selling a 'system' or a guaranteed win is a scam; a state draw has no pattern to beat. Online lotteries are prohibited under the 1998 Act, and the online gaming law of 2025 bans real-money games, so an offshore app is neither a legal route nor a forum that will pay you. If gambling is taking money you need, treat it as a health problem rather than a budgeting one and talk to someone. Keep any entertainment money separate from savings, and never borrow to play.",
-      "reviewStatus": "draft"
+      "caveats": "Anyone selling a 'system' or a guaranteed win is a scam; a state draw has no pattern to beat. The Lotteries (Regulation) Act, 1998 lets each State prohibit online lotteries, and most States do, and the online gaming law of 2025 bans real-money games, so an offshore app is neither a legal route nor a forum that will pay you. If gambling is taking money you need, treat it as a health problem rather than a budgeting one and talk to someone. Keep any entertainment money separate from savings, and never borrow to play.",
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "5-6",
@@ -154,7 +154,7 @@
       "evidenceGrade": "A",
       "sources": "Securities and Exchange Board of India, investor education. <https://www.sebi.gov.in/>; Reserve Bank of India, unauthorised entities. <https://www.rbi.org.in/>; Banning of Unregulated Deposit Schemes Act, 2019. <https://www.indiacode.nic.in/>",
       "caveats": "Past returns do not guarantee future returns. A 'fixed return' insurance plan is not a bank deposit. A friend or relative who sells the scheme may be a victim too.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "5-7",
@@ -179,7 +179,7 @@
       "evidenceGrade": "C",
       "sources": "Reserve Bank of India, Master Direction - Credit Card and Debit Card - Issuance and Conduct Directions, 2022. <https://www.rbi.org.in/>; Reserve Bank of India, credit cards and loans. <https://www.rbi.org.in/>; Consumer Protection Act, 2019. <https://consumeraffairs.nic.in/>",
       "caveats": "The rate on your own card is the only one that matters: read it on the statement, not on a comparison site. Interest is compounded, so a rate that looks small per month is a large annual figure, and a missed payment also triggers a late fee and can push the rate higher. A balance transfer or a personal loan can be cheaper than revolving, but compare the processing fee and the total repayment, not the headline rate. If you cannot pay, talk to the issuer before the due date; a payment plan agreed in advance is cheaper than a default.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "5-8",
@@ -204,7 +204,7 @@
       "evidenceGrade": "B",
       "sources": "Reserve Bank of India, e-mandates. <https://www.rbi.org.in/>; Consumer Protection Act, 2019. <https://consumeraffairs.nic.in/>; Ministry of Electronics and Information Technology. <https://www.meity.gov.in/>; National Consumer Helpline. <https://consumerhelpline.gov.in/>",
       "caveats": "An app store refund is a goodwill policy, not a right, and it is usually one-time. A card chargeback is for an unauthorised or undelivered payment, not for buyer's remorse. Put a child's account under a family setting that requires approval for purchases, and read the statement every month, because the small amounts are the ones that escape notice. The 2025 ban on real-money online games does not make an in-game purchase refundable.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "5-9",
@@ -231,7 +231,7 @@
       "evidenceGrade": "A",
       "sources": "Indian Contract Act, 1872 (section 11). <https://www.indiacode.nic.in/>; Consumer Protection Act, 2019. <https://consumeraffairs.nic.in/>; Reserve Bank of India, chargebacks. <https://www.rbi.org.in/>",
       "caveats": "Proving the child made the purchase is the hard part; keep the device logs, the timestamps and the child's statement. A parent who knowingly allowed the purchase may not get a refund. Set a spending limit and do not share the payment PIN.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "5-10",
@@ -258,7 +258,7 @@
       "evidenceGrade": "B",
       "sources": "National Cyber Crime Reporting Portal. <https://cybercrime.gov.in/>; Reserve Bank of India, awareness. <https://www.rbi.org.in/>; Information Technology Act, 2000. <https://www.indiacode.nic.in/>",
       "caveats": "A caller can spoof a number and use a fake logo. A video call is not proof. Do not scold the child before you have reported the fraud; the report matters more.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "5-11",
@@ -283,7 +283,7 @@
       "evidenceGrade": "B",
       "sources": "Chen T, Kalra A, Sun B (2009). Why Do Consumers Buy Extended Service Contracts? Journal of Consumer Research 36(4):611-623. <https://doi.org/10.1086/605298>; Department of Consumer Affairs. <https://consumeraffairs.nic.in/>; Bureau of Indian Standards. <https://www.bis.gov.in/>",
       "caveats": "The gross‑margin figure comes from an industry estimate referenced in the paper (Business Week, 2004); it wasn’t measured directly by the authors. The calculations above apply to ordinary consumers who can afford a single repair bill. For people who rely on a single device and lack a backup, the calculation changes. Screen‑protection plans for phones must also be evaluated separately: first estimate how often you’re likely to drop the phone, then decide whether the premium is worth it.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "5-12",
@@ -308,7 +308,7 @@
       "evidenceGrade": "A",
       "sources": "Central Drugs Standard Control Organisation. <https://cdsco.gov.in/>; National Pharmaceutical Pricing Authority. <https://www.nppaindia.nic.in/>; Pharmaceuticals and Medical Devices Bureau of India, Jan Aushadhi. <https://janaushadhi.gov.in/>; Department of Pharmaceuticals. <https://pharmaceuticals.gov.in/>",
       "caveats": "A generic must contain the same active ingredient, but the fillers, the coating and the manufacturer can differ, and quality failures do occur — the drug regulator publishes lists of batches that fail testing. Buy from a licensed pharmacy with a visible drug licence, check the batch number and the expiry, and keep the bill. If you switch a chronic medicine, measure the result — blood pressure, HbA1c, thyroid function — instead of relying on how you feel, and tell the doctor if it changes. Never stop a medicine on your own. Original brands remain available at a higher price.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "5-13",
@@ -333,7 +333,7 @@
       "evidenceGrade": "A",
       "sources": "National Health Authority, Ayushman Bharat PM-JAY. <https://nha.gov.in/>; Employees' State Insurance Corporation. <https://esic.gov.in/>; Central Government Health Scheme. <https://cghs.gov.in/>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>",
       "caveats": "Coverage is for listed procedures and empanelled hospitals; not every cost is covered. A 'family card' sold by an agent is not a government scheme. Check the NHA and state health department websites.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "5-14",
@@ -358,7 +358,7 @@
       "evidenceGrade": "C",
       "sources": "Ministry of Jal Shakti, drinking water. <https://jalshakti-ddws.gov.in/>; Bureau of Indian Standards. <https://www.bis.gov.in/>; Food Safety and Standards Authority of India. <https://www.fssai.gov.in/>; Ministry of Housing and Urban Affairs. <https://mohua.gov.in/>",
       "caveats": "Boiling is not purification: it concentrates whatever is dissolved in the water. A filter that is not replaced becomes a bacterial growth medium, so follow the service interval. A building's tank and pipes can undo a good municipal supply, which is why a change in taste or colour is worth reporting. If the supply is contaminated, complain to the municipal corporation or the state water authority and stop drinking it; a home filter is not a substitute for a clean source. Bottled water is worth the money when you are travelling or when the supply has failed, not as a year-round default.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "5-15",
@@ -383,7 +383,7 @@
       "evidenceGrade": "A",
       "sources": "Barber BM, Odean T (2000). Trading Is Hazardous to Your Wealth: The Common Stock Investment Performance of Individual Investors. The Journal of Finance 55(2):773-806. <https://doi.org/10.1111/0022-1082.00226>; An L, Lou D, Shi D (2022). Wealth redistribution in bubbles and crashes. Journal of Monetary Economics 126:134-153. <https://doi.org/10.1016/j.jmoneco.2022.01.001>; Working paper draft published by the same author (October 2021, domestic figures are verified verbatim). <https://personal.lse.ac.uk/loud/AnLouShi.pdf>; Reserve Bank of India. <https://www.rbi.org.in/>; Securities and Exchange Board of India. <https://www.sebi.gov.in/>; Insurance Regulatory and Development Authority of India. <https://irdai.gov.in/>",
       "caveats": "These data are from the United States in the 1990s. Indian costs differ — brokerage, securities transaction tax, stamp duty, exchange charges, GST and the bid-ask spread are charged on every trade, and the amounts were revised in recent budgets — but the core principle is the same: higher trading frequency leads to lower net returns. A trade also has to beat the spread before it earns anything. This information is not intended as investment advice.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "5-16",
@@ -408,7 +408,7 @@
       "evidenceGrade": "B",
       "sources": "Securities and Exchange Board of India. <https://www.sebi.gov.in/>; Reserve Bank of India. <https://www.rbi.org.in/>; Indian Contract Act, 1872. <https://www.indiacode.nic.in/>",
       "caveats": "Margin trading is legal in India through a SEBI-registered broker, which makes it look safer than it is: the broker's terms, not your judgement, decide when a position is closed. Interest on a personal loan or a card advance used for investing is not deductible, so the return has to beat the rate before tax. If you already hold a leveraged position, reduce it while you can still choose the moment. This content is not investment advice.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "5-17",
@@ -433,7 +433,7 @@
       "evidenceGrade": "B",
       "sources": "Fama EF, French KR (2010). Luck versus Skill in the Cross-Section of Mutual Fund Returns. The Journal of Finance 65(5):1915-1947. <https://doi.org/10.1111/j.1540-6261.2010.01598.x>; S&P Dow Jones Indices (2025). SPIVA U.S. Scorecard Year-End 2024. <https://www.spglobal.com/spdji/en/spiva/article/spiva-us/> (The official website refuses to be automatically captured, and the numbers are checked against the archive of 2025-05-12: <https://web.archive.org/web/20250512071051/https://www.spglobal.com/spdji/en/spiva/article/spiva-us/>); Harvey CR, Liu Y (2022). Luck versus Skill in the Cross Section of Mutual Fund Returns: Reexamining the Evidence. The Journal of Finance, 77(3). <https://doi.org/10.1111/jofi.13123> (Disputing Party); Reserve Bank of India. <https://www.rbi.org.in/>; Securities and Exchange Board of India. <https://www.sebi.gov.in/>; Insurance Regulatory and Development Authority of India. <https://irdai.gov.in/>",
       "caveats": "Debate exists: one study re-examined this conclusion and argued that the original Fama-French methodology of repeatedly re-sampling data might be overly strict. Under that approach, even funds with genuinely strong outperformance could be classified as “no different from luck.” Thus, the claim that “almost no active funds possess skill” might be overstated. This dataset only covers up to five years, so longer-term figures remain unavailable. This information does not constitute investment advice.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "5-18",
@@ -458,7 +458,7 @@
       "evidenceGrade": "C",
       "sources": "Securities and Exchange Board of India. <https://www.sebi.gov.in/>; SEBI (Mutual Funds) Regulations, 1996. <https://www.sebi.gov.in/>; Indian Contract Act, 1872. <https://www.indiacode.nic.in/>",
       "caveats": "The comparison assumes both funds earn the same before costs; a cheaper fund that tracks its index badly can still lose. Check the exit load, the tracking error of an index fund and the portfolio, not only the ratio. A direct plan means you do the paperwork yourself; if you use a distributor you are paying for advice, which may be worth it. This information is not investment advice.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "5-19",
@@ -483,7 +483,7 @@
       "evidenceGrade": "B",
       "sources": "Markowitz, H. (1952). Portfolio Selection. The Journal of Finance, 7(1), 77–91. <https://doi.org/10.1111/j.1540-6261.1952.tb01525.x>; Securities and Exchange Board of India, investor education. <https://www.sebi.gov.in/>",
       "caveats": "This is rated as a B grade because the original academic paper relies purely on mathematical derivation, without providing concrete figures on exactly how much diversification reduces potential losses. Diversification can only lessen the fluctuations of your portfolio balance, it does not guarantee you won’t suffer any losses. Buying broad-based index funds (see item 17 in this section) is the easiest way to achieve effective diversification. This information is not intended as investment advice.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "5-20",
@@ -508,7 +508,7 @@
       "evidenceGrade": "A",
       "sources": "Income-tax Department, deductions. <https://www.incometax.gov.in/>; Pension Fund Regulatory and Development Authority. <https://www.pfrda.org.in/>; National Pension System. <https://www.npscra.nsdl.co.in/>",
       "caveats": "The ceilings and the treatment change with each Finance Act, and the 2025 Act rewrote the numbering, so a deduction quoted in an older article or calculator may no longer point at the right provision. An NPS tier-II account does not get the same treatment as tier-I. Compare the NPS with the EPF and the PPF on cost, lock-in and the annuity requirement at exit before you commit.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "5-21",
@@ -533,7 +533,7 @@
       "evidenceGrade": "B",
       "sources": "DellaVigna S, Malmendier U (2006). Paying Not to Go to the Gym. American Economic Review 96(3):694-719. <https://doi.org/10.1257/aer.96.3.694>; Department of Consumer Affairs. <https://consumeraffairs.nic.in/>; National Consumer Helpline. <https://consumerhelpline.gov.in/>",
       "caveats": "This is just one study using data from the United States. Nevertheless, its underlying principle is universally applicable: people tend to overestimate their future self‑control. If you’ve already maintained a consistent routine of going to the gym at least twice a week for a full year, then an annual membership does prove to be the cheaper option.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "5-22",
@@ -558,7 +558,7 @@
       "evidenceGrade": "A",
       "sources": "Consumer Protection Act, 2019. <https://consumeraffairs.nic.in/>; Real Estate (Regulation and Development) Act, 2016. <https://mohua.gov.in/>; National Consumer Helpline. <https://consumerhelpline.gov.in/>; e-Daakhil. <https://edaakhil.nic.in/>",
       "caveats": "These rights work after the money is gone, and a business that has spent it may have nothing to refund. A consumer complaint takes months and a decree still needs something to attach. So limit the float: pay per session, buy a quarter rather than a year, and never pay a large deposit for a discount you have not costed. If the business is a company in insolvency a consumer is only an operational creditor, and the recovery is slow; do not count on it.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "5-23",
@@ -583,7 +583,7 @@
       "evidenceGrade": "C",
       "sources": "Consumer Protection Act, 2019. <https://consumeraffairs.nic.in/>; Consumer Protection (E-Commerce) Rules, 2020. <https://consumeraffairs.nic.in/>; National Consumer Helpline. <https://consumerhelpline.gov.in/>; e-Daakhil. <https://edaakhil.nic.in/>",
       "caveats": "A 'no-questions-asked' badge is a marketing promise; the binding text is the policy page, and it can be narrower than the badge. Keep the packaging, the tags and the invoice, and photograph the parcel before you open it if the item is expensive. The cooling-off day helps only with purchases you can postpone — not with a fridge that has died or a medicine you need today.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "5-24",
@@ -608,7 +608,7 @@
       "evidenceGrade": "C",
       "sources": "Department of Consumer Affairs. <https://consumeraffairs.nic.in/>; Legal Metrology Act, 2009. <https://www.indiacode.nic.in/>; National Consumer Helpline. <https://consumerhelpline.gov.in/>",
       "caveats": "The anchoring research comes from laboratory studies; nobody has measured exactly how much is lost to over-buying. There are hidden costs too: stock expires, it takes space, and having it at hand makes you use more. Buy in bulk only when the shelf life is long, the need is certain and the price is genuinely below what you usually pay. Screenshot the price claim before you order, because the page can change after the sale.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "5-25",
@@ -633,7 +633,7 @@
       "evidenceGrade": "C",
       "sources": "Insurance Regulatory and Development Authority of India, Insurance Products Regulations, 2024. <https://irdai.gov.in/>; IRDAI, policyholder education. <https://policyholder.gov.in/>; Insurance Act, 1938. <https://www.indiacode.nic.in/>",
       "caveats": "A savings or return-of-premium policy forces a regular payment, and for someone who would not invest the difference that discipline can be worth the lower return. Whether a term plan plus your own investment beats a savings policy depends on the product and on how the money is invested, and there is no official Indian study that settles it for every case, which is why this tip carries a C grade. A bonus declared in past years is not a promise for later years, and an illustration from an earlier year may use different assumptions from today's. Surrendering early usually returns less than you paid. This is general information, not investment advice.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "5-26",
@@ -658,7 +658,7 @@
       "evidenceGrade": "A",
       "sources": "Motor Vehicles Act, 1988. <https://www.indiacode.nic.in/>; Ministry of Road Transport and Highways. <https://morth.nic.in/>; Insurance Regulatory and Development Authority of India, India Motor Tariff (third-party property damage limits). <https://irdai.gov.in/>; Insurance Information Bureau of India. <https://iib.gov.in/>",
       "caveats": "The property-damage figure comes from the tariff and the policy wording, not from the Act, and it is a limit per claim — buying more premium on the compulsory policy does not raise it. Do not read it as the death or injury limit. A claim can be reduced, or the policy avoided, if the driver had no licence, was drunk, or used the vehicle outside the policy terms, and the insurer may pay the victim and then recover the money from you. Third-party premium is regulated, so shop on the insurer's service and claim record rather than on a 'bigger' limit. Verify the current policy wording before you buy, because both the Act and the tariff have been amended more than once.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "5-27",
@@ -683,7 +683,7 @@
       "evidenceGrade": "C",
       "sources": "Reserve Bank of India, financial literacy. <https://www.rbi.org.in/>; Securities and Exchange Board of India, investor education. <https://www.sebi.gov.in/>",
       "caveats": "The recommendation to save 3–6 months’ worth of expenses is a widely accepted guideline, but no official or academic sources have been identified to support it, hence the C grade. The required amount should be calculated based on your regular monthly expenses, not your income. This information does not constitute investment advice.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "5-28",
@@ -704,11 +704,11 @@
       "stillVerifying": false,
       "cost": "No cost at all. It only takes about half an hour to do the math. You’ll need to honestly estimate the steady after‑tax return you can expect over the long run.",
       "inPlainWords": "Paying off your mortgage is essentially the same as earning a guaranteed return equal to your mortgage rate. So the only question you need to ask is: can you reliably earn a higher after‑tax return than that rate? If the answer is yes, it makes sense to keep the money invested. If not, or if you’re unsure, paying off the loan is the better choice. With an equal principal‑and‑interest repayment plan, most of the early payments go toward interest; the earlier you pay, the more you save. Most bank apps have a “pre‑payment calculator” that gives you the exact numbers.",
-      "benefit": "The calculation works like this: let r be the annual mortgage rate as stated in your contract. Next, let g represent the after‑tax annual return you can expect from an alternative investment — the average percentage gain you’d earn each year by putting that money elsewhere. Paying off the mortgage guarantees you a return of exactly r; each dollar you apply to the loan earns you that rate for sure. If g consistently exceeds r, it’s better to keep the money invested. If g is lower than r, or if you can’t reliably predict it, paying off the loan locks in a risk‑free return equal to r. Again, because most of the early payments under an equal principal‑and‑interest plan cover interest, the earlier you pay, the more you save.",
+      "benefit": "The calculation works like this: let r be the annual mortgage rate as stated in your contract. Next, let g represent the after‑tax annual return you can expect from an alternative investment — the average percentage gain you’d earn each year by putting that money elsewhere. Paying off the mortgage guarantees you a return of exactly r; each rupee you apply to the loan earns you that rate for sure. If g consistently exceeds r, it’s better to keep the money invested. If g is lower than r, or if you can’t reliably predict it, paying off the loan locks in a risk‑free return equal to r. Again, because most of the early payments under an equal principal‑and‑interest plan cover interest, the earlier you pay, the more you save.",
       "evidenceGrade": "C",
       "sources": "Reserve Bank of India, home loans. <https://www.rbi.org.in/>; National Housing Bank. <https://nhb.org.in/>",
       "caveats": "This section provides only the calculation method, not a definitive recommendation. It’s relatively rare for investment returns to reliably surpass mortgage rates. Regardless of which option you choose, be sure to keep enough cash on hand for emergencies. Also, check your contract for any prepayment penalties. This information is not intended as financial advice.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "5-29",
@@ -733,7 +733,7 @@
       "evidenceGrade": "A",
       "sources": "Department of Consumer Affairs. <https://consumeraffairs.nic.in/>; Consumer Protection Act, 2019. <https://www.indiacode.nic.in/>; Bureau of Indian Standards. <https://www.bis.gov.in/>; National Consumer Helpline. <https://consumerhelpline.gov.in/>",
       "caveats": "A five-star average over a hundred reviews is cheap to manufacture; read the one-star reviews and the return policy instead. A countdown timer and a pre-ticked add-on are dark patterns, and a screenshot of them is evidence. An advance you pay is governed by the contract, and a forfeiture clause that works as a penalty can be challenged; if the seller defaults, claim the advance back. India has no statutory rule that triples the price for every fraud, so the realistic award is the refund, the loss and the cost of the complaint.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "5-30",
@@ -758,7 +758,7 @@
       "evidenceGrade": "A",
       "sources": "Consumer Protection Act, 2019. <https://consumeraffairs.nic.in/>; Consumer Protection (E-Commerce) Rules, 2020. <https://consumeraffairs.nic.in/>; National Consumer Helpline. <https://consumerhelpline.gov.in/>; e-Daakhil. <https://edaakhil.nic.in/>",
       "caveats": "There is no Indian equivalent of a stand-alone livestream-shopping rule: no provision requires the platform to disclose the host's identity, so a refused request is a dispute to escalate, not a breach of a specific duty. Nor is there a general statutory seven-day no-questions-asked return — that is a platform or seller policy, enforceable as a contract, as point 23 explains. Before buying, record the stream and any promise the host makes, and buy from a listing that names the seller on the invoice, because an unnamed seller is the one case where the platform's own terms decide who answers.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "5-31",
@@ -783,7 +783,7 @@
       "evidenceGrade": "A",
       "sources": "Food Safety and Standards Authority of India. <https://www.fssai.gov.in/>; Consumer Protection Act, 2019. <https://consumeraffairs.nic.in/>; National Consumer Helpline. <https://consumerhelpline.gov.in/>",
       "caveats": "A 'best before' date is not a guarantee of safety after opening. A claim for a large amount needs medical evidence. Do not throw away the packaging or the remaining food before you complain.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "5-32",
@@ -808,7 +808,7 @@
       "evidenceGrade": "B",
       "sources": "Bureau of Indian Standards. <https://www.bis.gov.in/>; Bureau of Energy Efficiency. <https://beeindia.gov.in/>; Department of Consumer Affairs. <https://consumeraffairs.nic.in/>; National Consumer Helpline. <https://consumerhelpline.gov.in/>",
       "caveats": "The ISI mark certifies conformity to a standard; it is not a ranking, and it does not mean the product is better than a certified rival. The star rating is measured under test conditions, so your bill depends on how you use the appliance. A seller who shows a certificate image, or a licence number that does not match the model on the box, is worth avoiding — check the number yourself. The lists of products that need certification and star labels change, so check the current list rather than a blog post.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "5-33",
@@ -833,7 +833,7 @@
       "evidenceGrade": "A",
       "sources": "Bureau of Indian Standards, hallmarking. <https://www.bis.gov.in/>; Central Board of Indirect Taxes and Customs. <https://www.cbic.gov.in/>; Department of Consumer Affairs. <https://consumeraffairs.nic.in/>",
       "caveats": "If you pawn an item, the lender values the metal or a conservative estimate, not the price you paid, and the interest runs from the day you take the loan; pawnbroking is governed by the state's pawnbrokers law and by the contract, so read the forfeiture and auction clauses before you sign. A jeweller's buy-back promise usually means exchange against another purchase and often excludes the making charge. Gold bought to hedge against inflation should be bullion or a gold fund, not a necklace. This is not investment advice.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "5-34",
@@ -858,7 +858,7 @@
       "evidenceGrade": "A",
       "sources": "Bureau of Indian Standards, hallmarking. <https://www.bis.gov.in/>; Department of Consumer Affairs. <https://consumeraffairs.nic.in/>; Consumer Protection Act, 2019. <https://www.indiacode.nic.in/>; National Consumer Helpline. <https://consumerhelpline.gov.in/>",
       "caveats": "A hallmark certifies the metal's purity and nothing else; it does not value the piece and says nothing about the stone. Certificates and HUID labels can be copied, so check the number in the app while you are in the shop rather than trusting a photograph. A laboratory report is an opinion at a point in time, and a stone can be treated after it was tested. Buy from a licensed jeweller, get a full invoice, and pay by card or UPI so a record exists. A claim that a stone cures a disease is false advertising under the consumer law.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "5-35",
@@ -883,7 +883,7 @@
       "evidenceGrade": "A",
       "sources": "Consumer Protection Act, 2019. <https://consumeraffairs.nic.in/>; Central Consumer Protection Authority, Guidelines for Prevention and Regulation of Dark Patterns, 2023. <https://ccpa.gov.in/>; Ministry of Electronics and Information Technology, IT Rules, 2021. <https://www.meity.gov.in/>; Ministry of Electronics and Information Technology, Promotion and Regulation of Online Gaming Act, 2025. <https://www.meity.gov.in/>",
       "caveats": "None of this makes the sale void or entitles you to your money back because you did not get the item you wanted; what you can challenge is a false statement, a hidden charge or a prohibited game, not bad luck. Keep the published rules, the odds screen and the unboxing on record before you complain, because the page can change after the sale. A minor's purchase is the strongest case, as section 9 of this chapter explains, and a parent who funded the wallet knowingly has a weaker one. The dark-pattern guidelines are enforced by the consumer authority against a platform rather than by you as a claim in a forum, so use them to frame a complaint. If the draw takes a stake and offers a cash prize, stop paying: since the 2025 Act that is an online money game and it is banned.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "5-36",
@@ -908,7 +908,7 @@
       "evidenceGrade": "A",
       "sources": "Food Safety and Standards Authority of India, labelling. <https://www.fssai.gov.in/>; Department of Consumer Affairs, Legal Metrology. <https://consumeraffairs.nic.in/>; Food Safety and Standards Act, 2006. <https://www.indiacode.nic.in/>",
       "caveats": "A 'no added sugar' claim does not mean no sugar. A 'natural' claim is not a nutritional claim. A loose product with no date is a freshness risk.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "5-37",
@@ -933,7 +933,7 @@
       "evidenceGrade": "A",
       "sources": "Odean T (1998). Are Investors Reluctant to Realize Their Losses? The Journal of Finance 53(5):1775-1798. <https://doi.org/10.1111/0022-1082.00072>; Securities and Exchange Board of India, investor education. <https://www.sebi.gov.in/>",
       "caveats": "This point addresses the decision “to sell or not to sell”; point 15 (“avoid excessive trading”) deals with how often to trade — the two are not contradictory. Following a pre‑defined rule actually reduces the number of trades. Mathematically, buying more shares does lower the average cost per share, but treating this as a way to recover losses is misguided; it merely increases the amount of capital tied up in a single stock (see point 19, “don’t bet everything on one stock”). The data originate from U.S. accounts in the 1980s‑1990s; trading costs and tax regimes differ for Indian investors. This information is not intended as investment advice.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "5-38",
@@ -958,7 +958,7 @@
       "evidenceGrade": "A",
       "sources": "Reserve Bank of India, Liberalised Remittance Scheme. <https://www.rbi.org.in/>; Securities and Exchange Board of India. <https://www.sebi.gov.in/>; Foreign Exchange Management Act, 1999. <https://www.indiacode.nic.in/>; Income Tax Department. <https://www.incometax.gov.in/>",
       "caveats": "Read the scheme's current rules before you remit: the annual cap (USD 250,000 per person per financial year at the time of writing), the permitted purposes and the declaration change with each budget, and a purpose code that does not match the use is your problem, not the bank's. A remittance for a purpose the bank does not recognise can be refused or reversed. An overseas broker may not be regulated in India, so a dispute has no Indian forum; check that the platform is one your bank will remit to. Past returns in a foreign market tell you nothing about the next ten years. This is information, not investment advice.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "5-39",
@@ -983,7 +983,7 @@
       "evidenceGrade": "C",
       "sources": "Insurance Regulatory and Development Authority of India. <https://irdai.gov.in/>; Policyholders' education. <https://policyholder.gov.in/>; Motor Vehicles Act, 1988. <https://www.indiacode.nic.in/>; Reserve Bank of India, financial literacy. <https://www.rbi.org.in/>",
       "caveats": "A policy excludes pre-existing conditions for a waiting period. A low premium can mean a high deductible or a narrow network. Do not cancel a health policy to save a small premium.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "5-40",
@@ -1008,7 +1008,7 @@
       "evidenceGrade": "C",
       "sources": "Reserve Bank of India. <https://www.rbi.org.in/>; Securities and Exchange Board of India. <https://www.sebi.gov.in/>; Insurance Regulatory and Development Authority of India. <https://irdai.gov.in/>",
       "caveats": "The C rating reflects the absence of official Indian guidance on the right amount, not doubt about the priority: a child's death does not remove household income, while the earner's death leaves the loan instalments and the school fees behind. When money is tight, insure the adults first — term life and a one-year health policy — before considering a child policy. Read the exclusion list and the claim-settlement record before you choose an insurer, and disclose your health history truthfully, because a claim can be refused for a non-disclosure. See Section 7, item 20 on one-year medical cover.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "5-41",
@@ -1033,7 +1033,7 @@
       "evidenceGrade": "A",
       "sources": "Insurance Regulatory and Development Authority of India. <https://irdai.gov.in/>; IRDAI policyholder education. <https://policyholder.gov.in/>; Insurance Act, 1938. <https://www.indiacode.nic.in/>",
       "caveats": "The window runs from receipt of the document, not from the sale, so note the date the policy was delivered. It is a right to reconsider, not a right to a full refund: the risk premium for the days on cover and the medical-examination cost are deducted. After the window a late surrender can lose a large part of the premiums, and a unit-linked policy's fund value can be below the premiums paid. Do not cancel health cover you need before the replacement policy is issued and its waiting periods have started, and do not cancel a policy you are claiming under.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "5-42",
@@ -1058,7 +1058,7 @@
       "evidenceGrade": "B",
       "sources": "Insurance Regulatory and Development Authority of India, Registration of Corporate Agents Regulations. <https://irdai.gov.in/>; IRDAI, Bima Bharosa grievance redressal. <https://irdai.gov.in/>; Insurance Ombudsman. <https://irdai.gov.in/>; Reserve Bank of India, deposit insurance. <https://www.rbi.org.in/>; Insurance Act, 1938. <https://www.indiacode.nic.in/>",
       "caveats": "A bank employee who earns a commission on the policy is not a neutral adviser; ask whether the person is paid for the sale. The free-look clock runs from the day you receive the policy document, not the day you signed, so write that date down. A 'guaranteed' return in a brochure is guaranteed only if it is written into the contract as an absolute amount, which is how a non-participating product works; a participating policy's bonus is not. Elderly relatives are the usual target, so check what they signed while the free-look period is still open. If the bank will not give you the policy document, complain to the insurer and to IRDAI, because the document is what starts your rights. This is general information, not financial advice.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "5-43",
@@ -1083,7 +1083,7 @@
       "evidenceGrade": "B",
       "sources": "Insurance Regulatory and Development Authority of India, Bima Bharosa. <https://bimabharosa.irdai.gov.in/>; IRDAI. <https://irdai.gov.in/>; IRDAI policyholder education. <https://policyholder.gov.in/>; Department of Consumer Affairs. <https://consumeraffairs.nic.in/>",
       "caveats": "Surrender is final: the cover stops that day, and a new policy at an older age, or after a diagnosis, can cost more or be refused. If the premium is the problem, ask the insurer about a reduced paid-up policy or a policy loan before you surrender — both keep some cover alive. The Ombudsman's award binds the insurer only if you accept it; you can still go to a consumer commission or a court. And never sign a complaint that describes a sale that did not happen: a false allegation is your liability, not the agent's.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "5-44",
@@ -1108,7 +1108,7 @@
       "evidenceGrade": "A",
       "sources": "Insurance Act, 1938. <https://www.indiacode.nic.in/>; Insurance Regulatory and Development Authority of India. <https://irdai.gov.in/>; Limitation Act, 1963. <https://www.indiacode.nic.in/>; Department of Consumer Affairs. <https://consumeraffairs.nic.in/>",
       "caveats": "A nomination is not a will: it tells the insurer whom to pay, and heirs can still challenge it. Update it after a marriage, a divorce, a birth or a death — an old nomination in favour of an ex-spouse is a dispute waiting to happen. Keep one list of the policies, the policy numbers and the insurers, and tell one reliable person where it is; a policy nobody knows about is money the family never claims. For a claim, the death certificate, the policy document and the nominee's KYC are the basic papers. A claim rejected for a missing document can usually be revived; one barred by limitation usually cannot.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "5-45",
@@ -1133,7 +1133,7 @@
       "evidenceGrade": "A",
       "sources": "Reserve Bank of India. <https://www.rbi.org.in/>; Income Tax Department. <https://www.incometax.gov.in/>; Cyber Crime Portal, Ministry of Home Affairs. <https://cybercrime.gov.in/>; Department of Economic Affairs. <https://dea.gov.in/>",
       "caveats": "Never let anyone route money through your bank account to buy crypto; that is a money-laundering exposure for you, not a favour. Do not connect a wallet to a link you did not expect, and revoke approvals you do not recognise. If you are defrauded, report at cybercrime.gov.in or on 1930 at once, because the trail is traced in hours, not weeks. If you hold tokens, keep the records the return needs — exchange statements, wallet addresses and dates — because the burden of proof is yours. A fall in price is not a recoverable loss, and a platform that has spent the money is a poor defendant.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "5-46",
@@ -1158,7 +1158,7 @@
       "evidenceGrade": "A",
       "sources": "Pension Fund Regulatory and Development Authority. <https://www.pfrda.org.in/>; National Pension System. <https://www.npscra.nsdl.co.in/>; National Savings Institute, PPF. <https://www.nsiindia.gov.in/>; Employees' Provident Fund Organisation. <https://www.epfo.gov.in/>",
       "caveats": "The tax rules and the contribution limits change. An NPS annuity is taxable in part. Do not put all your retirement money in one product. Check the PFRDA and the PPF rules.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "5-47",
@@ -1183,7 +1183,7 @@
       "evidenceGrade": "A",
       "sources": "Consumer Protection Act, 2019. <https://consumeraffairs.nic.in/>; Ministry of Road Transport and Highways. <https://morth.nic.in/>; National Consumer Helpline. <https://consumerhelpline.gov.in/>",
       "caveats": "A 'zero kilometre' claim can be false; check the odometer and the manufacturing date. Do not sign the delivery note before the inspection. A used car needs a different check.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "5-48",
@@ -1208,7 +1208,7 @@
       "evidenceGrade": "A",
       "sources": "Ministry of Road Transport and Highways, VAHAN. <https://vahan.parivahan.gov.in/>; Parivahan Sewa. <https://parivahan.gov.in/>; Consumer Protection Act, 2019. <https://consumeraffairs.nic.in/>; Motor Vehicles Act, 1988. <https://www.indiacode.nic.in/>",
       "caveats": "The consumer route is strongest against a dealer; in a private sale you are in contract law, so inspect before you pay and do not rely on assurances. An 'as is' clause does not protect a seller who actively conceals damage, but proving concealment takes documents and an expert. Ask the insurer about the claim history and the no-claim bonus, and remember that a cheap car with a pending loan, a duplicate registration certificate or an expired fitness certificate is a problem you inherit. Pay by bank transfer so a trail exists.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "5-49",
@@ -1233,7 +1233,7 @@
       "evidenceGrade": "B",
       "sources": "Consumer Protection Act, 2019. <https://consumeraffairs.nic.in/>; Reserve Bank of India, fair practices. <https://www.rbi.org.in/>; Insurance Regulatory and Development Authority of India. <https://irdai.gov.in/>; Ministry of Road Transport and Highways. <https://morth.nic.in/>",
       "caveats": "A genuine service fee should be disclosed and agreed. A 'discount' can hide a higher interest rate. Do not sign a blank delivery note or a loan form.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "5-50",
@@ -1258,7 +1258,7 @@
       "evidenceGrade": "A",
       "sources": "Ministry of Tourism. <https://tourism.gov.in/>; Department of Consumer Affairs. <https://consumeraffairs.nic.in/>; National Consumer Helpline. <https://consumerhelpline.gov.in/>; Consumer Protection Act, 2019. <https://indiacode.nic.in/>",
       "caveats": "If the itinerary you signed listed the shopping stop, or you signed a consent form on the bus, your case weakens; argue the price and the misrepresentation instead. The overseas shop is outside Indian jurisdiction, so pursue the operator, not the shop. Complain in writing while the tour is fresh — receipts, the guide's name and the itinerary's wording fade, and a consumer complaint has a two-year limit from the cause of action. The cheapest tours are priced on the assumption of kickbacks; a tour that costs less than the flights is worth a second look before you pay.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     }
   ]
 }

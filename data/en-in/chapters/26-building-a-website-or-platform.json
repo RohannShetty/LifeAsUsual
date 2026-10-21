@@ -4,7 +4,7 @@
   "title": "Building a Website or Platform",
   "intro": "Chapter 26: Building a Website or Platform",
   "edition": "india",
-  "rewriteStatus": "draft",
+  "rewriteStatus": "checked",
   "tips": [
     {
       "id": "26-1",
@@ -29,7 +29,7 @@
       "evidenceGrade": "A",
       "sources": "Reserve Bank of India, regulation of payment aggregators and payment gateways. <https://www.rbi.org.in/>; Payment and Settlement Systems Act, 2007. <https://www.indiacode.nic.in/>",
       "caveats": "Do not use your current account as a pass-through. Do not hold settlement back to smooth your cash flow: that is exactly the conduct the rules forbid. Have the money flow checked by a lawyer before you launch.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "26-2",
@@ -49,12 +49,12 @@
       "disputed": false,
       "stillVerifying": false,
       "cost": "Domain and hosting are the real cost. GST registration is free, and a company registration and a trade licence carry fees.",
-      "inPlainWords": "There is no value-added telecommunications licence in India, and no general licence for a website that charges its users. What you need depends on the activity: a GST registration if you sell, an authorised payment partner if you collect money, a marketplace that follows the e-commerce rules, and the ordinary company and municipal registrations. A free site needs the same domain and hosting as a paid one, but no content licence. Some activities do carry their own permission: news, film, gaming, lending, insurance and health claims each have a regulator.",
+      "inPlainWords": "Running a website needs no licence in India, and there is no general licence for a site that charges its users. Telecom and internet service providers are licensed separately under the Unified Licence regime, including the virtual-network-operator variant (UL-VNO), but that licensing stops at the network and does not reach what you publish on it. What you need depends on the activity: a GST registration if you sell, an authorised payment partner if you collect money, a marketplace that follows the e-commerce rules, and the ordinary company and municipal registrations. A free site needs the same domain and hosting as a paid one, but no content licence. Some activities do carry their own permission: news, film, gaming, lending, insurance and health claims each have a regulator.",
       "benefit": "The Information Technology Act, 2000 and the Intermediary Guidelines Rules, 2021 regulate platforms as intermediaries, and the safe harbour depends on due diligence rather than on a licence fee. Business registration runs through the GST portal and the Ministry of Corporate Affairs, and a shop needs a municipal trade licence. Telecom licensing by the Department of Telecommunications covers telecom and internet service providers, not a website. Sector regulators license the activity: the Reserve Bank for lending and payments, SEBI for securities, IRDAI for insurance.",
       "evidenceGrade": "A",
       "sources": "Ministry of Electronics and Information Technology. <https://www.meity.gov.in/>; Reserve Bank of India. <https://www.rbi.org.in/>; Goods and Services Tax portal. <https://www.gst.gov.in/>",
       "caveats": "A licence offered to a small site by an agency is usually unnecessary. Ask a professional about the specific activity. Do not assume that charging money is what triggers regulation.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "26-3",
@@ -79,7 +79,7 @@
       "evidenceGrade": "A",
       "sources": "Intermediary Guidelines and Digital Media Ethics Code Rules, 2021. <https://www.meity.gov.in/>; Information Technology Act, 2000. <https://www.indiacode.nic.in/>",
       "caveats": "Do not stream a concert, a match or a film without the rights. Do not assume the content rules stop at the internet. Keep a record of every takedown and every order.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "26-4",
@@ -104,7 +104,7 @@
       "evidenceGrade": "A",
       "sources": "Information Technology Act, 2000. <https://www.indiacode.nic.in/>; IT (Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021. <https://www.meity.gov.in/>; Digital Personal Data Protection Act, 2023. <https://www.indiacode.nic.in/>; CERT-In. <https://www.cert-in.org.in/>",
       "caveats": "A platform cannot claim safe harbour if it knowingly hosts unlawful content. A server outside India does not avoid Indian law if the service targets Indian users. A 'licence' sold by an agent is not a substitute for compliance.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "26-5",
@@ -129,7 +129,7 @@
       "evidenceGrade": "A",
       "sources": "Consumer Protection (E-Commerce) Rules, 2020. <https://consumeraffairs.nic.in/>; Intermediary Guidelines Rules, 2021. <https://www.meity.gov.in/>; Goods and Services Tax portal. <https://www.gst.gov.in/>",
       "caveats": "Do not rely on a self-declaration alone; keep the document you checked. Do not delete a seller's records when the seller leaves. A seller's fake address becomes the platform's problem in a consumer case.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "26-6",
@@ -154,7 +154,7 @@
       "evidenceGrade": "A",
       "sources": "Information Technology Act, 2000, section 79. <https://www.indiacode.nic.in/>; Intermediary Guidelines Rules, 2021. <https://www.meity.gov.in/>; National Cyber Crime Reporting Portal. <https://cybercrime.gov.in/>",
       "caveats": "Do not remove content merely because someone objects; ask for an order or for evidence. Do not promise users that the platform is not responsible for content. Preserve the notice and your response.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "26-7",
@@ -179,7 +179,7 @@
       "evidenceGrade": "A",
       "sources": "Intermediary Guidelines Rules, 2021. <https://www.meity.gov.in/>; Digital Personal Data Protection Act, 2023. <https://www.meity.gov.in/>; Indian Contract Act, 1872. <https://www.indiacode.nic.in/>",
       "caveats": "Do not collect an identity document you do not need. Do not publish a user's real name without consent. A verification mark must mean something, so do not sell it.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "26-8",
@@ -204,7 +204,7 @@
       "evidenceGrade": "A",
       "sources": "Digital Personal Data Protection Act, 2023. <https://www.meity.gov.in/>; Indian Contract Act, 1872. <https://www.indiacode.nic.in/>; Department of Consumer Affairs. <https://consumeraffairs.nic.in/>",
       "caveats": "A self-declared date of birth is not parental consent. Do not design a top-up prompt aimed at a child. Keep the refund route simple and visible.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "26-9",
@@ -229,7 +229,7 @@
       "evidenceGrade": "A",
       "sources": "Information Technology Act, 2000 (section 79). <https://www.indiacode.nic.in/>; IT (Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021. <https://www.meity.gov.in/>; Ministry of Electronics and Information Technology. <https://www.meity.gov.in/>",
       "caveats": "Do not remove content just because a rights holder demands it; ask for the order or the evidence. Preserve the notice and your response. A false or malicious notice can be a defamation or a civil wrong.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "26-10",
@@ -254,7 +254,7 @@
       "evidenceGrade": "A",
       "sources": "Digital Personal Data Protection Act, 2023. <https://www.meity.gov.in/>; Reserve Bank of India, storage of payment system data. <https://www.rbi.org.in/>; National Health Authority. <https://nha.gov.in/>",
       "caveats": "Do not assume a standard contractual clause is enough. Check the sector rule for the data you hold. Keep a record of what leaves India and where it goes.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "26-11",
@@ -279,7 +279,7 @@
       "evidenceGrade": "C",
       "sources": "Author’s experience, no direct documentation; see the entry on data security and breach reporting for breach-notification duties; Ministry of Electronics and Information Technology. <https://www.meity.gov.in/>; CERT-In. <https://www.cert-in.org.in/>",
       "caveats": "This entry is a guideline rather than a piece of evidence. The only verifiable item within it is the vendor’s licensing status. To save money, cut costs on configuration and bandwidth rather than on ensuring proper licensing.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "26-12",
@@ -304,7 +304,7 @@
       "evidenceGrade": "A",
       "sources": "CERT-In. <https://www.cert-in.org.in/>; Ministry of Electronics and Information Technology. <https://www.meity.gov.in/>; Digital Personal Data Protection Act, 2023. <https://www.indiacode.nic.in/>",
       "caveats": "Do not delete the logs. Do not tell users more than you know, and do not tell them less than the law requires. Keep one timeline of who knew what and when.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "26-13",
@@ -329,7 +329,7 @@
       "evidenceGrade": "A",
       "sources": "Reserve Bank of India, recurring e-mandates. <https://www.rbi.org.in/>; Department of Consumer Affairs. <https://consumeraffairs.nic.in/>; Consumer Protection Act, 2019. <https://www.indiacode.nic.in/>",
       "caveats": "Do not bury the renewal in the terms. Do not make the user telephone you to cancel. Keep the cancellation confirmation and the pre-debit notices you sent.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     }
   ]
 }

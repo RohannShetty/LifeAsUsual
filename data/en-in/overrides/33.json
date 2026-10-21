@@ -25,12 +25,29 @@
       "sources": "Rights of Persons with Disabilities Act, 2016. <https://www.indiacode.nic.in/>; Department of Empowerment of Persons with Disabilities. <https://depwd.gov.in/>; National Legal Services Authority. <https://nalsa.gov.in/>"
     },
     "33-3": {
+      "id": "33-3",
+      "chapter": 33,
+      "tip": 3,
       "title": "A psychiatric admission in India does not need a guardian to sign: the Mental Healthcare Act uses a nominated representative and a review board",
-      "inPlainWords": "If a person with a mental illness has the capacity to consent, they are admitted as a voluntary patient and can leave when they choose. If they lack that capacity, the Mental Healthcare Act, 2017 allows a supported admission of up to 30 days on the application of the person's nominated representative, but only after two independent psychiatric assessments certify that admission is necessary. Nobody has to sign as a guardian, and there is no separate right to a second evaluation after three days: instead the person's capacity is reviewed every 15 days, and the Mental Health Review Board must review the admission. An advance directive and a nominated representative can be put in place in advance, while the person is well.",
-      "benefit": "The Act gives every person the right to free or affordable mental health care from the state, and it makes the nominated representative the person who is consulted, not a guardian who decides. Sections 4 and 5 deal with capacity and the advance directive, section 14 with the nominated representative, section 89 with a supported admission that lasts up to 30 days, section 90 with a longer admission of 30 to 90 days that needs the Board's approval, and sections 73 to 82 with the Mental Health Review Board. Section 88 covers discharge: a voluntary patient can leave, and a supported patient must be discharged when the grounds end.",
+      "tags": {
+        "money": "Free",
+        "time": "Quick",
+        "willpower": "None needed",
+        "benefit": "Large",
+        "scope": "Personal freedom",
+        "audience": []
+      },
+      "costScore": 0,
+      "valueTier": "Very high",
+      "disputed": false,
+      "stillVerifying": false,
       "cost": "Government psychiatric hospitals and district hospitals charge nothing or a token amount, and the Act gives a right to affordable care. A private psychiatric hospital charges its own daily rate, which varies widely by city and by whether the ward is general or single-occupancy.",
-      "caveats": "If the person lacks capacity and has not named a nominated representative, the hospital has to follow the Act's procedure for that case, and a relative cannot simply admit them as a guardian. Keep the admission papers, the two assessment reports and the Board reference number. If the person asks to leave and is not discharged, or the 15-day review does not happen, complain to the hospital's medical superintendent, then to the State Mental Health Authority and the Review Board. An emergency can justify a short admission while the paperwork is completed, but it still has to be reported and reviewed.",
-      "sources": "India Code, Mental Healthcare Act, 2017 (Act 10 of 2017). <https://www.indiacode.nic.in/>; Ministry of Health and Family Welfare, mental health programmes. <https://mohfw.gov.in/>; National Legal Services Authority, legal aid for persons with mental illness. <https://nalsa.gov.in/>"
+      "inPlainWords": "If a person with a mental illness has the capacity to consent, they are admitted as a voluntary patient and can leave when they choose. If they lack that capacity, the Mental Healthcare Act, 2017 allows a supported admission of up to 30 days on the application of the person's nominated representative, but only after independent psychiatric and mental health assessments certify that admission is necessary. Nobody has to sign as a guardian. The capacity review the Act requires follows seven days after a supported admission where the nominated representative consented under section 89(7), and the Mental Health Review Board must review the admission. An advance directive and a nominated representative can be put in place in advance, while the person is well.",
+      "benefit": "The Act gives every person the right to free or affordable mental health care from the state, and it makes the nominated representative the person who is consulted, not a guardian who decides. Sections 4 and 5 deal with capacity and the advance directive, section 14 with the nominated representative, section 89 with a supported admission that lasts up to 30 days, section 90 with a longer admission of 30 to 90 days that needs the Board's approval, and sections 73 to 82 with the Mental Health Review Board. Section 88 lets a voluntary patient be discharged, and section 89(3) says a supported patient must no longer remain in the establishment once the grounds for admission have ended.",
+      "evidenceGrade": "A",
+      "sources": "India Code, Mental Healthcare Act, 2017 (Act 10 of 2017). <https://www.indiacode.nic.in/>; Ministry of Health and Family Welfare, mental health programmes. <https://mohfw.gov.in/>; National Legal Services Authority, legal aid for persons with mental illness. <https://nalsa.gov.in/>",
+      "caveats": "If the person lacks capacity and has not named a nominated representative, the hospital has to follow the Act's procedure for that case, and a relative cannot simply admit them as a guardian. Keep the admission papers, the independent psychiatric and mental health assessments, and the Board reference number. If the person asks to leave and is not discharged, or the capacity review under section 89(8) of a supported admission does not happen, complain to the hospital's medical superintendent, then to the State Mental Health Authority and the Review Board. An emergency can justify a short admission while the paperwork is completed, but it still has to be reported and reviewed.",
+      "reviewStatus": "draft"
     },
     "33-7": {
       "title": "The one card that unlocks most Indian disability benefits is the UDID; the pension itself is paid by your state",
@@ -57,12 +74,29 @@
       "sources": "Department of Empowerment of Persons with Disabilities, schemes and services. <https://depwd.gov.in/en/schemes-and-services/>; Department of Empowerment of Persons with Disabilities, ADIP scheme. <https://depwd.gov.in/en/adip-scheme/>; Department of Empowerment of Persons with Disabilities, the RPwD Act, 2016 and its rules. <https://depwd.gov.in/en/rpwd-act-2016/>"
     },
     "33-11": {
+      "id": "33-11",
+      "chapter": 33,
+      "tip": 11,
       "title": "The income-tax deduction for your own disability is section 80U; for a dependant it is section 80DD",
-      "inPlainWords": "If you have a disability of 40 per cent or more, section 80U lets you deduct Rs 75,000 from your taxable income, and if the disability is 80 per cent or more the deduction is Rs 1,25,000. If you support a dependant with a disability, section 80DD gives the same two amounts, and the money does not have to be spent on treatment: it can go towards their care, nursing or a trained attendant. You claim it in your income-tax return with a certificate from a government medical authority. There is no office to visit and no application to a tax officer, and no agent needs to be paid to get it.",
-      "benefit": "The deduction is a flat amount, so it does not depend on how much you actually spent, and it is available every year that the disability continues. Section 80U is claimed by the person with the disability; section 80DD is claimed by the relative who supports them, and the dependant must be wholly dependent on that person. Only one of the two can be used for the same person in a year, so a family where the person with a disability has their own taxable income should decide which claim saves more. A severe disability at 80 per cent or more gives the higher figure under both sections.",
+      "tags": {
+        "money": "Free",
+        "time": "Quick",
+        "willpower": "None needed",
+        "benefit": "Small",
+        "scope": "Money",
+        "audience": []
+      },
+      "costScore": 0,
+      "valueTier": "Average",
+      "disputed": false,
+      "stillVerifying": false,
       "cost": "The certificate is issued by a government hospital's medical board and is free or charged at the hospital's nominal rate. A tax preparer's fee is optional, and the portal walks you through the claim.",
+      "inPlainWords": "If you have a disability of 40 per cent or more, section 80U lets you deduct Rs 75,000 from your taxable income, and if the disability is 80 per cent or more the deduction is Rs 1,25,000. If you support a dependant with a disability, section 80DD gives the same two amounts, and the money does not have to be spent on treatment: it can go towards their care, nursing or a trained attendant. You claim it in your income-tax return with a certificate from a government medical authority. There is no office to visit and no application to a tax officer, and no agent needs to be paid to get it.",
+      "benefit": "The deduction is a flat amount, so it does not depend on how much you actually spent, and it is available every year that the disability continues. Section 80U is claimed by the person with the disability; section 80DD is claimed by the relative who supports them, and the dependant must be wholly or mainly dependent on that person. Only one of the two can be used for the same person in a year, so a family where the person with a disability has their own taxable income should decide which claim saves more. A severe disability at 80 per cent or more gives the higher figure under both sections.",
+      "evidenceGrade": "A",
+      "sources": "Income Tax Department, e-filing portal. <https://www.incometax.gov.in/iec/foportal/>; Income Tax Department, deductions for disability. <https://www.incometaxindia.gov.in/>; Department of Empowerment of Persons with Disabilities, UDID. <https://depwd.gov.in/en/unique-disability-id-udid/>",
       "caveats": "This is a deduction, not a payment: it reduces taxable income, so the saving is your marginal tax rate multiplied by the amount. If you file under the new regime in section 115BAC, most deductions of this kind are withdrawn, so work out both regimes before choosing, because for a family with a large medical bill the old regime can still be better. A certificate must be renewed if the disability changes, and a false certificate is an offence. Keep the certificate and the acknowledgement with your return papers.",
-      "sources": "Income Tax Department, e-filing portal. <https://www.incometax.gov.in/iec/foportal/>; Income Tax Department, deductions for disability. <https://www.incometaxindia.gov.in/>; Department of Empowerment of Persons with Disabilities, UDID. <https://depwd.gov.in/en/unique-disability-id-udid/>"
+      "reviewStatus": "draft"
     },
     "33-12": {
       "title": "Buses have to be accessible under the RPwD Act, but free travel is a state concession, not a national right",
@@ -97,12 +131,29 @@
       "sources": "Ministry of Road Transport and Highways, Parivahan Sewa. <https://parivahan.gov.in/parivahan/>; Ministry of Road Transport and Highways. <https://morth.gov.in/>; Department of Empowerment of Persons with Disabilities, the RPwD Act, 2016 and its rules. <https://depwd.gov.in/en/rpwd-act-2016/>"
     },
     "33-18": {
+      "id": "33-18",
+      "chapter": 33,
+      "tip": 18,
       "title": "No court now declares an adult with a disability wholly incapable; Indian law uses support and limited guardianship",
-      "inPlainWords": "The Rights of Persons with Disabilities Act, 2016 states that a person with a disability enjoys legal capacity on an equal basis with others, and it replaced the old model in which a court declared someone of unsound mind incapable and appointed a guardian over everything. Now a district court, or an authority the state government notifies, can appoint only a limited guardian: a joint arrangement for a specific decision and a specific period, made according to the person's own will, and only where the person has been given support and still cannot take a legally binding decision. Total support is exceptional and is reviewed. Every guardian appointed before the Act is treated as a limited guardian.",
-      "benefit": "In practice the person keeps the right to decide about their money, property, treatment, marriage and vote, and a guardian's signature is not needed for ordinary decisions. Where a bank, a registrar or a hospital insists on a guardian, quote sections 13 and 14 and ask for the refusal in writing, then take it to the state commissioner for persons with disabilities. For the four disabilities covered by the National Trust Act, a local level committee can appoint a guardian under section 14 of that Act, which is a separate and usually quicker route for autism, cerebral palsy, intellectual disability and multiple disabilities.",
+      "tags": {
+        "money": "Small cost",
+        "time": "A few hours",
+        "willpower": "Some",
+        "benefit": "Medium",
+        "scope": "Personal freedom",
+        "audience": []
+      },
+      "costScore": 3,
+      "valueTier": "Average",
+      "disputed": false,
+      "stillVerifying": false,
       "cost": "A court application costs court fees and a lawyer's fee, and it takes months. The National Trust committee route is cheaper and faster but is limited to its four disabilities.",
+      "inPlainWords": "The Rights of Persons with Disabilities Act, 2016 states that a person with a disability enjoys legal capacity on an equal basis with others, and it replaced the old model in which a court declared someone of unsound mind incapable and appointed a guardian over everything. Now a district court, or an authority the state government notifies, can appoint only a limited guardian: a joint arrangement for a specific decision and a specific period, made according to the person's own will, and only where the person has been given support and still cannot take a legally binding decision. Total support is exceptional and is reviewed. Section 14(2) also deems every guardian appointed under any other law to function as a limited guardian.",
+      "benefit": "In practice the person keeps the right to decide about their money, property, treatment, marriage and vote, and a guardian's signature is not needed for ordinary decisions. Where a bank, a registrar or a hospital insists on a guardian, quote sections 13 and 14 and ask for the refusal in writing, then take it to the state commissioner for persons with disabilities. For the four disabilities covered by the National Trust Act, a local level committee can appoint a guardian under section 14 of that Act, which is a separate and usually quicker route for autism, cerebral palsy, intellectual disability and multiple disabilities.",
+      "evidenceGrade": "A",
+      "sources": "Department of Empowerment of Persons with Disabilities, the RPwD Act, 2016 and its rules. <https://depwd.gov.in/en/rpwd-act-2016/>; National Trust, legal guardianship. <https://nationaltrust.nic.in/about-legal-guardianship/>; India Code. <https://www.indiacode.nic.in/>",
       "caveats": "The Act does not abolish guardianship for children: a minor's property is still dealt with under the Guardians and Wards Act, 1890. A limited guardianship order can be reviewed and appealed, and it does not transfer the person's rights to the guardian. If a relative is managing someone's money without any order, that is a civil dispute about the money, not a legal guardianship, and it should be challenged rather than regularised. Keep the order, the period and the decisions it covers in writing.",
-      "sources": "Department of Empowerment of Persons with Disabilities, the RPwD Act, 2016 and its rules. <https://depwd.gov.in/en/rpwd-act-2016/>; National Trust, legal guardianship. <https://nationaltrust.nic.in/about-legal-guardianship/>; India Code. <https://www.indiacode.nic.in/>"
+      "reviewStatus": "draft"
     },
     "33-19": {
       "title": "A guardian in India is not automatically liable for harm an adult with a disability causes; that adult's own assets are answerable",
@@ -127,6 +178,56 @@
           "Community‑based rehabilitation and assistive devices are discussed in Section 16.7 (contact the district disability office)."
         ]
       ]
+    },
+    "33-4": {
+      "id": "33-4",
+      "chapter": 33,
+      "tip": 4,
+      "title": "For caregivers of disabled family members at home, it’s vital to watch your own health",
+      "tags": {
+        "money": "Free",
+        "time": "Quick",
+        "willpower": "Some",
+        "benefit": "Large",
+        "scope": "Lifespan",
+        "audience": []
+      },
+      "costScore": 1,
+      "valueTier": "High",
+      "disputed": true,
+      "stillVerifying": false,
+      "cost": "There’s no cost involved. Simply share some of the caregiving duties and use that time to get a medical checkup.",
+      "inPlainWords": "It’s not exaggeration when caregivers feel completely exhausted. One U.S. study followed over 800 older adults for four years. Those caring for a disabled spouse while also reporting high levels of mental strain had a mortality risk roughly 63% higher than people who weren’t caregivers. No such increase appeared among caregivers who didn’t report feeling stressed. So the real issue isn’t caregiving itself, but the long-term strain it causes.",
+      "benefit": "This prospective cohort study ran from 1993 to 1998, with an average follow-up period of 4.5 years across four U.S. communities. It included 392 caregivers and 427 non-caregivers aged 66–96 who all lived with their spouses. Over four years, 103 participants (12.6%) passed away. After adjusting for socioeconomic factors, pre-existing conditions, and subclinical cardiovascular disease, caregivers reporting mental or emotional stress had a 63% higher mortality risk compared to non-caregivers (RR 1.63, 95% CI 1.00–2.65). No significant increase in mortality was seen among caregivers without reported stress (RR 1.08, 95% CI 0.61–1.90) or among spouses who were disabled but not cared for by their partners (RR 1.37, 95% CI 0.73–2.58).",
+      "evidenceGrade": "A",
+      "sources": "Schulz R, Beach SR (1999). Caregiving as a risk factor for mortality: the Caregiver Health Effects Study. JAMA, 282(23):2215-2219. <https://doi.org/10.1001/jama.282.23.2215>",
+      "caveats": "Caution: The lower bound of the confidence interval here is exactly 1.00, meaning there remains a small chance that no actual difference exists. This study focused on older U.S. adults living with disabled spouses, so its findings may not fully apply to caregivers of younger disabled family members. Still, it clearly shows that those experiencing high stress face greater risk. Whenever possible, share caregiving duties with others; contact local disability associations, or a District Disability Rehabilitation Centre, for respite care or day programmes. Caregivers should also keep taking any prescribed medications — see Section 16, Item 1. The main beneficiary of all this advice is you.",
+      "reviewStatus": "draft"
+    },
+    "33-17": {
+      "id": "33-17",
+      "chapter": 33,
+      "tip": 17,
+      "title": "Getting a hearing aid when hearing declines — the reason is to hear better now, not to prevent dementia",
+      "tags": {
+        "money": "Real money",
+        "time": "A few hours",
+        "willpower": "Some",
+        "benefit": "Medium",
+        "scope": "Lifespan",
+        "audience": []
+      },
+      "costScore": 4,
+      "valueTier": "Average",
+      "disputed": true,
+      "stillVerifying": false,
+      "cost": "Hearing aids cost several thousand to tens of thousands of rupees; most must be paid for out of pocket. Fitting requires professional testing and multiple follow‑up adjustments.",
+      "inPlainWords": "The claim that “wearing a hearing aid prevents dementia” currently lacks solid evidence. A three‑year trial involving nearly a thousand participants found no overall difference between groups. Only among people already at higher risk of cognitive decline did a modest benefit appear. Thus, the main reason to get a hearing aid is to hear clearly now — to talk with others and hear traffic while crossing the street — not to protect the brain decades later.",
+      "benefit": "The ACHIEVE trial took place in four U.S. communities and enrolled 977 individuals aged 70–84 with untreated hearing loss but no obvious cognitive impairment. Participants were randomly assigned to either hearing intervention (counseling and hearing aid fitting) or health‑education control, with follow‑up every six months. The primary endpoint was change in overall cognitive scores over three years. In the combined analysis of both participant cohorts, there was no significant difference: the intervention group showed a change of −0.200 (95% CI −0.256 to −0.144) versus −0.202 (95% CI −0.258 to −0.145) in the control group; the difference was 0.002 (95% CI −0.077 to 0.081, P = 0.96). A pre‑specified sensitivity analysis revealed a statistically significant interaction (P = 0.010) between the two cohorts. The second cohort comprised older participants with more risk factors for cognitive decline and lower baseline cognitive scores. Researchers concluded that hearing intervention may modestly slow cognitive decline over three years in high‑risk individuals but not in those at lower risk. No serious adverse events attributable to the intervention were reported.",
+      "evidenceGrade": "A",
+      "sources": "Lin FR, Pike JR, Albert MS, et al.; ACHIEVE Collaborative Research Group (2023). Hearing intervention versus health education control to reduce cognitive decline in older adults with hearing loss in the USA (ACHIEVE): a multicentre, randomised controlled trial. Lancet, 402(10404):786-797. <https://doi.org/10.1016/S0140-6736(23)01406-X>",
+      "caveats": "Controversy: The oft‑quoted claim that “hearing aids cut cognitive decline by nearly half” stems from a subgroup analysis of this trial, not its primary result, which showed no overall difference. This note is included to separate the practical benefit of hearing aids from the unproven dementia‑prevention claim. Exam bodies and universities have to provide reasonable accommodations under the Rights of Persons with Disabilities Act, 2016; see item 13 in this section. A driver with hearing loss should wear the hearing aids the licensing authority expects; see item 15 in this section.",
+      "reviewStatus": "draft"
     }
   }
 }

@@ -74,12 +74,7 @@
           "If you are alone with a phone but no speakerphone, the IFRC guidance is to give 1 minute of CPR before calling. Compression depth is about 4 cm for infants, and breaths are given mouth to mouth and nose."
         ]
       ],
-      "caveats": [
-        [
-          "Older Chinese courses taught two-finger compression",
-          "Older courses taught two-finger compression"
-        ]
-      ],
+      "caveats": "Rated B because survival figures come from registry studies with recording bias, pooled across all children; infant-only discharge numbers were not given in the summary. Benefit is rated large from the pooled figures: discharge survival 9.5% to 13.2%, a relative increase of about 40%. Main beneficiaries are your own children. Three differences from item 1 in this section (hard chest compressions for adults): infants need breaths — compression-only works poorly; use two thumbs or one heel at about 4 cm, not stacked adult hands; if you cannot call while compressing, start CPR before calling. How long to compress before calling varies: Some courses teach 2 minutes before calling; IFRC says 1 minute. Speakerphone removes the trade-off. The European Resuscitation Council teaches 5 breaths first then compressions; the U.S. guideline compressions first — both beat doing nothing. Older courses taught two-finger compression; the 2025 U.S. guideline removed it. For choking, look in the mouth before breaths and remove only visible objects; see item 43 (infant choking).",
       "sources": "Joyner BL et al. (2025). Part 6: Pediatric Basic Life Support: 2025 American Heart Association and American Academy of Pediatrics Guidelines for Cardiopulmonary Resuscitation and Emergency Cardiovascular Care. Circulation 152(suppl 2):S424-S447. <https://doi.org/10.1161/CIR.0000000000001370>; Naim MY et al. (2017). Association of Bystander Cardiopulmonary Resuscitation With Overall and Neurologically Favorable Survival After Pediatric Out-of-Hospital Cardiac Arrest in the United States. JAMA Pediatrics 171(2):133-141. <https://doi.org/10.1001/jamapediatrics.2016.3643>; International Federation of Red Cross and Red Crescent Societies (2025). International First Aid, Resuscitation and Education Guidelines 2025, pp. 186-188. <https://www.ifrc.org/>; European Resuscitation Council (2025). ERC Guidelines 2025 for the lay public. <https://www.erc.edu/>; National Disaster Management Authority. <https://ndma.gov.in/>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>"
     },
     "13-6": {
@@ -93,7 +88,7 @@
     },
     "13-27": {
       "title": "If you are lost or stranded in a desert, on a high plateau or in any other remote area, stay put next to your vehicle. First transmit your location, then shield yourself from the sun, retain body heat, conserve water and avoid wandering off.",
-      "cost": "Before venturing into such areas, tell someone your planned route, destination, return date, vehicle type and registration number. You will need at least 4 litres of water per person per day. A satellite communicator or a personal locator beacon costs thousands of rupees, and rental runs to a few hundred rupees per use. The real challenge is remembering to stay put and not wander away.",
+      "cost": "Before venturing into such areas, tell someone your planned route, destination, return date, vehicle type and registration number. You will need at least 4 litres of water per person per day. A satellite communicator or a personal locator beacon costs tens of thousands of rupees, and rental runs to a few hundred rupees per use. The real challenge is remembering to stay put and not wander away.",
       "benefit": [
         [
           "The Chongqing Emergency Management Bureau adds",
@@ -123,7 +118,8 @@
     },
     "13-42": {
       "benefit": "Indian practice follows the same sequence. The Bharatiya Nagarik Suraksha Sanhita, 2023 requires the police to record information about a cognizable offence, and a zero FIR can be lodged at any police station, including one outside the area where the assault happened. Every hospital, public or private, must give a survivor of sexual violence free first-aid and medical treatment and must inform the police; the forensic examination is done at a government hospital, and a One Stop Centre (Sakhi Centre) run under the Ministry of Women and Child Development can provide a counsellor and accompany you. Preserving evidence is the priority: keep body fluids, hair, skin cells and communication records, and do not shower, wash clothes, tidy the room or throw anything away before the examination. In cases involving acquaintances, preserve call logs and messages, and document any threats or attempts at bribery. WHO notes that emergency contraception may be used when a woman has been sexually assaulted without effective contraceptive protection, recommending its use within five days for maximum effectiveness; the pills work best when taken early, ideally within 72 hours. PEP for HIV should be taken within two hours if possible, and no later than 72 hours.",
-      "sources": "Ministry of Women and Child Development, One Stop Centres. <https://wcd.gov.in/>; National Legal Services Authority. <https://nalsa.gov.in/>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>; World Health Organization, Emergency Contraception. <https://www.who.int/news-room/fact-sheets/detail/emergency-contraception>; National AIDS Control Organisation. <https://naco.gov.in/>"
+      "sources": "Ministry of Women and Child Development, One Stop Centres. <https://wcd.gov.in/>; National Legal Services Authority. <https://nalsa.gov.in/>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>; World Health Organization, Emergency Contraception. <https://www.who.int/news-room/fact-sheets/detail/emergency-contraception>; National AIDS Control Organisation. <https://naco.gov.in/>",
+      "cost": "Calling the police costs nothing. Emergency contraceptives are over-the-counter medicines available at any pharmacy. Post-exposure prophylaxis treatment costs several thousand rupees per course at a private hospital; whether it is needed must be decided by a doctor — see item 38 in this section regarding obtaining PEP within 72 hours. The real challenge is that it is extremely hard to speak up at the moment, and many victims simply want to take a shower right away."
     },
     "13-46": {
       "benefit": [

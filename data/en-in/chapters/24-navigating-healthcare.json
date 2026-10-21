@@ -4,7 +4,7 @@
   "title": "Navigating Healthcare and Doctors",
   "intro": "Chapter 24: Navigating Healthcare and Doctors",
   "edition": "india",
-  "rewriteStatus": "draft",
+  "rewriteStatus": "checked",
   "tips": [
     {
       "id": "24-1",
@@ -29,7 +29,7 @@
       "evidenceGrade": "A",
       "sources": "National Health Authority, Ayushman Bharat PM-JAY. <https://nha.gov.in/>; Employees' State Insurance Corporation. <https://esic.gov.in/>; Central Government Health Scheme. <https://cghs.nic.in/>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>",
       "caveats": "A package covers a defined procedure, not every cost: a non-listed investigation, an implant or a room upgrade may sit outside it. A private hospital that is not empanelled for your scheme will bill you in full. Do not assume a government hospital is free; some charge user fees. If you are treated in another state, check whether your scheme allows it before you travel. Keep the referral paper and the package authorisation with your discharge summary.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "24-2",
@@ -54,7 +54,7 @@
       "evidenceGrade": "A",
       "sources": "National Health Authority, Ayushman Bharat PM-JAY. <https://nha.gov.in/>; Employees' State Insurance Corporation. <https://esic.gov.in/>; Central Government Health Scheme. <https://cghs.nic.in/>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>",
       "caveats": "Do not choose a hospital by its name. Check whether it is empanelled for your scheme and for the procedure, and ask for the package name and the estimate in writing. A \"free\" package may exclude implants, consumables, a private room or follow-up. For a planned operation, compare the package with the out-of-pocket cost at a government hospital. If you are paying yourself, ask for the itemised estimate before you are admitted.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "24-3",
@@ -79,7 +79,7 @@
       "evidenceGrade": "A",
       "sources": "Ministry of Health and Family Welfare. <https://mohfw.gov.in/>; National Health Authority, Ayushman Bharat. <https://nha.gov.in/>; Department of Health and Family Welfare, Government of West Bengal. <https://www.wbhealth.gov.in/>",
       "caveats": "A referral does not create a legal right to a bed or an appointment, and no national rule obliges a hospital to hold one for you. Do not pay anyone to arrange a slot: a hospital allocates its own appointments, and a tout has no access that you do not have. In an emergency, go to the nearest emergency department rather than waiting for a referral. Keep the referral paper, the registration slip and the receipt with the rest of your records.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "24-4",
@@ -104,7 +104,7 @@
       "evidenceGrade": "A",
       "sources": "National Health Authority, Ayushman Bharat PM-JAY. <https://nha.gov.in/>; Central Government Health Scheme. <https://cghs.nic.in/>; Employees' State Insurance Corporation. <https://esic.gov.in/>",
       "caveats": "Keep the referral or the authorisation with the discharge summary; without it a claim can be refused even for necessary treatment. An emergency is treated first and regularised afterwards, but that is not a reason to skip the paperwork on a planned trip. If you are paying yourself, the cost in a metro private hospital can be far higher than at home, and the scheme's package, if any, will not cover travel and stay. Ask for the estimate in writing before you go.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "24-5",
@@ -129,7 +129,7 @@
       "evidenceGrade": "A",
       "sources": "Ministry of Health and Family Welfare. <https://mohfw.gov.in/>; National Health Authority, Ayushman Bharat health and wellness centres. <https://nha.gov.in/>",
       "caveats": "A stable condition can become unstable, and a primary-care doctor should send you back if the readings, the symptoms or the tests change. Do not extend a prescription indefinitely without a review; the dose and the medicine need checking. Some medicines, and some conditions, need a specialist's supervision, and a refill at primary level is not a substitute. Keep a written list of your medicines, doses and last test results, and take it to every visit.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "24-6",
@@ -154,7 +154,7 @@
       "evidenceGrade": "A",
       "sources": "Clinical Establishments (Registration and Regulation) Act, 2010. <https://www.indiacode.nic.in/>; Ministry of Health and Family Welfare, Charter of Patients' Rights. <https://mohfw.gov.in/>; Digital Personal Data Protection Act, 2023. <https://www.meity.gov.in/>",
       "caveats": "Never take the only copy; ask for a certified copy and leave the original in the hospital's custody. If you suspect that a drip, a transfusion, an injection or a medicine caused harm, ask the hospital in writing to preserve the bag, vial, syringe and packaging, and note the batch number and the time. India has no joint-sealing rule, so your written request is the protection. If the hospital refuses, complain to the state authority that registers clinical establishments, and take the refusal to the consumer commission or the court with the rest of your file.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "24-7",
@@ -179,7 +179,7 @@
       "evidenceGrade": "A",
       "sources": "Clinical Establishments (Registration and Regulation) Act, 2010. <https://www.indiacode.nic.in/>; Ministry of Health and Family Welfare, Charter of Patients' Rights. <https://mohfw.gov.in/>; Digital Personal Data Protection Act, 2023. <https://www.meity.gov.in/>",
       "caveats": "Ask for a certified copy, not a photograph of a screen, and check that every page carries the hospital's name and the date. Leave the originals in the hospital's custody and keep your copy at home; do not hand your only copy to an agent. For a chronic condition keep one folder in date order and a single page listing the medicines, the doses and the last results. If the hospital says the record is not ready, ask for that in writing with a date; a refusal is itself worth recording.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "24-8",
@@ -204,7 +204,7 @@
       "evidenceGrade": "A",
       "sources": "Supreme Court of India, Pt. Parmanand Katara v Union of India (1989). <https://www.sci.gov.in/>; Clinical Establishments (Registration and Regulation) Act, 2010. <https://www.indiacode.nic.in/>; Ministry of Health and Family Welfare, Charter of Patients' Rights. <https://mohfw.gov.in/>",
       "caveats": "A hospital may transfer a stabilised patient to a facility with the needed specialty. Keep the triage record and the time of arrival. A refusal can be a complaint to the state health department and the consumer commission.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "24-9",
@@ -229,7 +229,7 @@
       "evidenceGrade": "A",
       "sources": "Rights of Persons with Disabilities Act, 2016. <https://www.indiacode.nic.in/>; Department of Empowerment of Persons with Disabilities, UDID. <https://www.swavlambancard.gov.in/>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>",
       "caveats": "Do not confuse the three assessments: the RPwD certificate for benefits, the motor accident compensation assessment, and the work-injury assessment under the employees' compensation law. Each uses its own scale and its own authority, and one does not substitute for another. A condition that may improve can be reassessed; ask the certifying authority about the review. Bring the full record, because a missing report is a common reason for a lower rating. A private doctor's letter is not the statutory certificate.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "24-10",
@@ -254,7 +254,7 @@
       "evidenceGrade": "A",
       "sources": "Rights of Persons with Disabilities Act, 2016. <https://www.indiacode.nic.in/>; Department of Empowerment of Persons with Disabilities, UDID. <https://www.swavlambancard.gov.in/>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>",
       "caveats": "The certificate is not a guarantee of a job; the reservation rules apply to identified posts. A temporary impairment may get a temporary certificate. Keep the medical records for the assessment.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "24-11",
@@ -279,7 +279,7 @@
       "evidenceGrade": "A",
       "sources": "National Medical Commission. <https://www.nmc.org.in/>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>; Prevention of Corruption Act, 1988. <https://www.indiacode.nic.in/>",
       "caveats": "A gift that is refused is not a personal rejection; the doctor may be required to refuse it. Cash is different from a thank-you letter: for a government doctor an offer or a demand can become a criminal case under the Prevention of Corruption Act, 1988, and for any doctor it is the kind of payment a hospital's own code may treat as misconduct. Do not offer money before treatment either — a bed, a slot or a test is allocated by the hospital's rules, and an offer can be treated as a bribe. If you believe you were asked for money, note the date, the name and the amount, and complain to the hospital's grievance officer or the state health authority; for a government hospital the vigilance officer is the route.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "24-12",
@@ -304,7 +304,7 @@
       "evidenceGrade": "A",
       "sources": "Central Drugs Standard Control Organisation. <https://cdsco.gov.in/>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>; Dental Council of India. <https://dciindia.gov.in/>",
       "caveats": "A quoted \"per implant\" price often excludes the abutment, the crown, the bone graft, the CT scan and the follow-up. Ask what happens if the implant fails and what the revision costs. A missing tooth does not always need an implant: a bridge or a removable denture is a legitimate alternative and usually cheaper. Do not choose a clinic on price alone; ask how many of these procedures the dentist does, and look at the infection-control arrangements. Treatment abroad is not a saving if the follow-up happens in another country.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "24-13",
@@ -329,7 +329,7 @@
       "evidenceGrade": "A",
       "sources": "Pharmaceuticals & Medical Devices Bureau of India, Jan Aushadhi. <https://janaushadhi.gov.in/>; National Pharmaceutical Pricing Authority. <https://www.nppaindia.nic.in/>; Central Drugs Standard Control Organisation. <https://cdsco.gov.in/>",
       "caveats": "A generic must be from a licensed manufacturer; check the batch and the expiry. Do not buy from an unlicensed online seller. A substitution by the pharmacist needs the doctor's consent where the law requires it.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "24-14",
@@ -354,7 +354,7 @@
       "evidenceGrade": "A",
       "sources": "Ministry of Health and Family Welfare, Telemedicine Practice Guidelines 2020. <https://mohfw.gov.in/>; eSanjeevani. <https://esanjeevani.mohfw.gov.in/>; National Medical Commission. <https://www.nmc.org.in/>",
       "caveats": "A teleconsultation is not suitable for chest pain, a severe injury or a new neurological symptom; go to an emergency department. A 'prescription' from an unregistered seller is not valid. Do not share an OTP with a platform.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "24-15",
@@ -379,7 +379,7 @@
       "evidenceGrade": "A",
       "sources": "Department of Consumer Affairs. <https://consumeraffairs.nic.in/>; National Health Authority, Ayushman Bharat PM-JAY. <https://nha.gov.in/>; Ministry of Health and Family Welfare, Charter of Patients' Rights. <https://mohfw.gov.in/>; Consumer Protection Act, 2019. <https://www.indiacode.nic.in/>",
       "caveats": "A consumer complaint has a limitation period and needs documents: the bill, the discharge summary, the correspondence and the estimate. Keep the original bill; a photograph is not enough. A scheme grievance is about the fund, not about a refund to you, so pursue the hospital's billing desk for your own money at the same time. Ask for the estimate in writing before a non-covered item is used, except in an emergency. At discharge, ask for the final itemised bill and file it with the discharge summary.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     }
   ]
 }
