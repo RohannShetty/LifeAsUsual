@@ -13,7 +13,7 @@ if (!manifest.chapters[String(n)]) {
   process.exit(2);
 }
 const source = JSON.parse(fs.readFileSync('data/en/all-chapters.json', 'utf-8'));
-const sourceChapter = source.find((c) => c.chapter === n);
+const sourceChapter = source.find((c: { chapter: number; slug: string }) => c.chapter === n);
 if (!sourceChapter) {
   console.error('No source chapter ' + n);
   process.exit(2);

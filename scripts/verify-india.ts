@@ -328,7 +328,7 @@ for (const [key, meta] of Object.entries(manifest.chapters)) {
       if (!/verdict\s*:\s*pass/i.test(text)) {
         errors.push('Chapter ' + key + ' verification report has no PASS verdict');
       }
-      if (!/chapter\s+' + chapterNumber + '\b/i.test(text)) {
+      if (!new RegExp('chapter\\s+' + chapterNumber + '\\b', 'i').test(text)) {
         errors.push('Chapter ' + key + ' verification report does not name chapter ' + chapterNumber);
       }
     }

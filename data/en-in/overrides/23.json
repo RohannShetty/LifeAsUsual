@@ -1,5 +1,9 @@
 {
   "tips": {
+    "23-7": {
+      "inPlainWords": "Globally, each extra year of formal schooling translates into about a 9% annual increase in personal income, and the benefit tends to be higher for women than for men. This figure applies to regular schooling, not to short courses or workshops. Think of it as a yardstick: if a hypothetical course costs ₹50,000 and lasts half a year, ask whether its expected income boost matches what one extra year of schooling would deliver.",
+      "caveats": "This is a global average for one extra year of schooling, and it should not be taken as the expected return from a single course or workshop, nor as a figure specific to India. It serves merely as a rough reference point. Its main purpose is to provide a standard for evaluating any training program: if a hypothetical course demanded a ₹50,000 fee and six months of effort, you can gauge whether its income impact is comparable to that of one additional year of formal education. Keep in mind that this average masks considerable differences across fields and countries."
+    },
     "23-9": {
       "title": "Use a government training subsidy first; do not pay a commercial course before you check what is free",
       "inPlainWords": "India runs free or subsidised skill training through the Pradhan Mantri Kaushal Vikas Yojana, the National Skill Development Corporation and state skill missions. A commercial course may be good, but check the government option and the placement record first. A 'guaranteed job' course is a red flag. Ask for the fee, the duration, the certification and the placement data in writing.",
@@ -9,6 +13,7 @@
       "sources": "Ministry of Skill Development and Entrepreneurship. <https://www.msde.gov.in/>; Pradhan Mantri Kaushal Vikas Yojana. <https://www.pmkvyofficial.org/>; National Skill Development Corporation. <https://www.nsdcindia.org/>"
     },
     "23-22": {
+      "title": "A forged degree or a ghostwritten paper can cost you the admission or the qualification — and land you in a criminal case under the BNS, 2023.",
       "inPlainWords": "Do not hire an agent to handle a degree evaluation, a credential assessment or an application, and never buy a ghostwritten paper or a fake certificate. A forged document can lead to rejection, a ban and a criminal case under the BNS, 2023. Use the official body: the university, the Association of Indian Universities, the UGC or the embassy. Keep every original.",
       "benefit": "The BNS, 2023 punishes forgery, cheating and using a forged document. A university can cancel an admission or a degree obtained on a false document. The UGC and the AICTE publish the recognised institutions and the rules. An official transcript and a verified certificate are the only reliable route. An agent cannot create a recognised degree.",
       "cost": "An official evaluation fee is modest. A fake document costs far more.",

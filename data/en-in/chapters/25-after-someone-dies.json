@@ -4,7 +4,7 @@
   "title": "After Someone Dies",
   "intro": "Chapter 25: After Someone Dies",
   "edition": "india",
-  "rewriteStatus": "draft",
+  "rewriteStatus": "checked",
   "tips": [
     {
       "id": "25-1",
@@ -29,7 +29,7 @@
       "evidenceGrade": "A",
       "sources": "Bharatiya Nagarik Suraksha Sanhita, 2023. <https://www.indiacode.nic.in/>; Registration of Births and Deaths Act, 1969. <https://www.indiacode.nic.in/>; Ministry of Home Affairs, Emergency Response Support System. <https://www.mha.gov.in/>",
       "caveats": "Do not cremate, bury or embalm before the death is registered and, in an unnatural case, before the police give clearance. Keep the case number, the doctor's certificate and the post-mortem report. A hospital death is certified by the hospital; a home death by the treating doctor or the medical officer of the area.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "25-2",
@@ -54,7 +54,7 @@
       "evidenceGrade": "A",
       "sources": "Registration of Births and Deaths Act, 1969. <https://www.indiacode.nic.in/>; Ministry of Home Affairs, civil registration. <https://crsorgi.gov.in/>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>",
       "caveats": "A death certificate is not a succession certificate. Keep several copies. If the cause of death is unnatural, the police and the post-mortem report come first.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "25-3",
@@ -79,7 +79,7 @@
       "evidenceGrade": "A",
       "sources": "Registration of Births and Deaths Act, 1969. <https://www.indiacode.nic.in/>; Ministry of Health and Family Welfare. <https://www.mohfw.gov.in/>; Ministry of Home Affairs. <https://www.mha.gov.in/>",
       "caveats": "Do not let an agent move the body before the hospital and the police release it. Ask for the entry in the mortuary register. An unregistered crematorium is a health risk and a legal problem; check the licence at the gate.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "25-4",
@@ -104,7 +104,7 @@
       "evidenceGrade": "A",
       "sources": "Bharatiya Nagarik Suraksha Sanhita, 2023. <https://www.indiacode.nic.in/>; Ministry of Health and Family Welfare. <https://www.mohfw.gov.in/>; National Legal Services Authority. <https://nalsa.gov.in/>",
       "caveats": "The 48-hour and seven-day windows in the source edition are not Indian rules; the practical deadline is the release of the body. Do not accept a certificate that states no cause of death without asking why. Keep the inquest papers, the post-mortem report and the hospital file together.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "25-5",
@@ -129,7 +129,7 @@
       "evidenceGrade": "A",
       "sources": "Registration of Births and Deaths Act, 1969. <https://www.indiacode.nic.in/>; Employees' Provident Fund Organisation. <https://www.epfo.gov.in/>; Insurance Regulatory and Development Authority of India. <https://irdai.gov.in/>; Indian Succession Act, 1925. <https://www.indiacode.nic.in/>",
       "caveats": "A nomination is not a will, and it can be challenged by another heir. Do not withdraw the balance before the bank's process is complete. Keep the funeral receipt and the death certificate.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "25-6",
@@ -154,7 +154,7 @@
       "evidenceGrade": "A",
       "sources": "Consumer Protection Act, 2019. <https://www.indiacode.nic.in/>; Department of Consumer Affairs. <https://consumeraffairs.nic.in/>; e-Daakhil consumer portal. <https://edaakhil.nic.in/>",
       "caveats": "A basic and non-basic split is the seller's marketing, not a legal category. Ask the municipal rate before you accept a private package. Keep the quote, the bill and a photograph of the price board.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "25-7",
@@ -179,7 +179,7 @@
       "evidenceGrade": "A",
       "sources": "Consumer Protection Act, 2019. <https://www.indiacode.nic.in/>; Department of Consumer Affairs, National Consumer Helpline. <https://consumeraffairs.nic.in/>; e-Daakhil. <https://edaakhil.nic.in/>",
       "caveats": "A complaint needs the bill and a written account of what was demanded. Do not sign a no-further-claim line at the counter. Keep a copy of the death certificate with the papers.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "25-8",
@@ -204,7 +204,7 @@
       "evidenceGrade": "A",
       "sources": "Goods and Services Tax portal. <https://www.gst.gov.in/>; Ministry of Corporate Affairs. <https://www.mca.gov.in/>; Ministry of Health and Family Welfare. <https://www.mohfw.gov.in/>",
       "caveats": "Do not hand cash to someone who approaches you in a hospital corridor. Ask for a bill with the GSTIN printed on it. If an agent demands money to release the body, speak to the hospital's medical officer or the police.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "25-9",
@@ -229,7 +229,7 @@
       "evidenceGrade": "A",
       "sources": "Employees' Provident Fund Organisation. <https://www.epfo.gov.in/>; Employees' State Insurance Corporation. <https://esic.gov.in/>; Insurance Regulatory and Development Authority of India. <https://irdai.gov.in/>; Reserve Bank of India, nominations. <https://www.rbi.org.in/>",
       "caveats": "A nominee holds the money for the legal heirs; it is not a substitute for a will. The employer may also owe a gratuity or leave encashment. Keep the acknowledgement for every claim.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "25-10",
@@ -254,7 +254,7 @@
       "evidenceGrade": "A",
       "sources": "Digital Personal Data Protection Act, 2023. <https://www.meity.gov.in/>; Digital Personal Data Protection Act, 2023 (text). <https://www.indiacode.nic.in/>; National Legal Services Authority. <https://nalsa.gov.in/>",
       "caveats": "Deleting an account can destroy messages and records that an heir needs. Do not pay an agent who promises to unlock an account. Ask in writing and keep the reply. Free legal aid is available from the District Legal Services Authority and the National Legal Services Authority helpline.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "25-11",
@@ -279,7 +279,7 @@
       "evidenceGrade": "A",
       "sources": "Indian Succession Act, 1925. <https://www.indiacode.nic.in/>; Code of Civil Procedure, 1908. <https://www.indiacode.nic.in/>; Insolvency and Bankruptcy Board of India. <https://ibbi.gov.in/>",
       "caveats": "Do not sign a personal guarantee for the deceased's debt. A joint loan may make the surviving borrower liable. A secured asset can be repossessed even if the heir refuses the inheritance.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "25-12",
@@ -304,7 +304,7 @@
       "evidenceGrade": "A",
       "sources": "Reserve Bank of India, customer service. <https://www.rbi.org.in/>; Indian Succession Act, 1925. <https://www.indiacode.nic.in/>; Code of Civil Procedure, 1908. <https://www.indiacode.nic.in/>",
       "caveats": "A nominee is a trustee for the legal heirs, not necessarily the owner. A joint account with a survivorship clause passes to the survivor. Do not withdraw before the bank completes its process.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     }
   ]
 }

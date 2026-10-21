@@ -1,60 +1,92 @@
 # Verification: Chapter 20 - Newborn Care
 
-Verifier: Independent verification agent
-Date: 21 October 2026
-Access date: 21 October 2026
+Verifier: independent verifier (chapter 20 re-check, round 3)
+Date: 2026-10-21
+Access date: 2026-10-21
 Chapter file: data/en-in/chapters/20-newborn-care.json
-Manifest status: data/en-in/manifest.json lists chapter 20 as status draft, 17 tips, verifier null, verifiedAt null, humanReview pending, openIssues ["Independent verification pending"]. Read only; nothing was edited.
+Manifest status: draft (tier B, 17 tips, verifier null, humanReview pending)
 
 ## Method
 
-The source pack records no high-risk claim for this chapter, so the whole chapter was read and the claims that carry a national schedule, a national guideline or a regulator were checked: 20-3 (immunisation schedule), 20-4 (infant feeding guidance), 20-10 (diaper quality inspections), 20-13 (post-discharge follow-up) and 20-16 (vitamin D dose). The remaining tips were spot-checked against the international guideline they cite.
+All 17 tips were read in the current build of `data/en-in/chapters/20-newborn-care.json` and compared
+with the corresponding source chapter in `data/en/all-chapters.json`, then checked against Indian
+official guidance and the primary literature the tips cite. The main Indian instrument used is the
+MoHFW/NHM *Mother and Child Protection (MCP) Guide Book* (Immunization and IYCF chapters), retrieved
+in full and read locally; the Home Based Newborn Care page of the National Health Mission was read for
+tip 20-13. Every DOI in the chapter was resolved through the Crossref REST API
+(`https://api.crossref.org/works/<DOI>`, batched where possible) and matched on journal, volume, pages
+and year; the Nagoya DOI 10.18999/nagjms.80.1.11 does not appear in Crossref (404) but was confirmed
+through the Europe PMC record (Nagoya J Med Sci 2018;80(1):11-20). Public-law citations (Indiacode is
+blocked with 403) were checked against bare-act or departmental reproductions.
 
-Official sites were probed on 21 October 2026 with curl and a desktop browser user-agent from C:/Users/$hetty/AppData/Local/Temp/verif. mohfw.gov.in returned HTTP 403 to the fetcher and was readable only through curl with a browser user-agent (partial access). nhm.gov.in and wcd.gov.in were reachable. Where a tip cites a Chinese regulator or a Chinese service norm, that is recorded even though the site itself may be reachable.
-
-Pass means: the tip's authority is the Indian one it names, or the international guideline it names. A tip that keeps China's National Health Commission, the State Administration for Market Regulation or the national basic public health service norm as its authority fails, even where the clinical advice is correct.
+Access failures recorded: indiacode.nic.in returns 403 and was not used; `web_fetch` rejects
+`application/pdf`, so the MCP Guide Book was downloaded with curl and converted with pdftotext; the
+Beary 2025 (J Food Prot) and Sima 2025 (BMC Microbiology) full texts are paywalled, so the 73.8 °C and
+>5 log-unit figures in tip 20-5 could not be re-derived (this is an access limitation, not an error);
+the IAP policy statement behind the tip 20-16 attribution was not retrieved.
 
 ## Claim checks
 
 | Tip | Claim | Source checked | Section | Accessed | Pass? | Note |
 | --- | --- | --- | --- | --- | --- | --- |
-| 20-1 | Back sleep on a firm surface, room-share but not bed-share, nothing soft in the crib; about 3,500 US infant deaths a year | AAP 2022 policy statement (Moon, Carlin; Pediatrics 150(1) e2022057990) | Sleep-related deaths | 2026-10-21 | yes | Consistent with the AAP 2022 statement; the ~3,500 figure is the US annual sleep-related death count used there |
-| 20-2 | First hepatitis B dose within 24 hours; about 95% of untreated infant infections become chronic; HBIG if the mother is HBsAg positive | WHO | Hepatitis B | 2026-10-21 | yes | WHO recommends a birth dose within 24 hours; the chronicity figure and HBIG use are standard |
-| 20-3 | "The current guidelines date to 2026", HPV is now in the national schedule, DTaP starts at 2 months with five doses at 2, 4 and 6 months, all free | MoHFW; WHO | National immunisation schedule | 2026-10-21 | no | This is China's 国家免疫规划 revision. India's Universal Immunisation Programme gives DPT at 6, 10 and 14 weeks with boosters at 16-24 months and 5-6 years, has no universal HPV dose in the national schedule, and the chapter's own "2026" framing matches no Indian schedule |
-| 20-4 | Exclusive breastfeeding for six months, no water, solids from six months while breastfeeding continues | WHO; MoHFW | Infant feeding | 2026-10-21 | yes | WHO recommendation correctly stated |
-| 20-4 | "The national Health Commission's guidelines likewise promote exclusive breastfeeding ... iron-rich animal products"; caveat requires "at least four of the seven essential food groups" | No Indian authority | Guidance | 2026-10-21 | no | The authority named is China's National Health Commission, and the seven-food-group rule is the Chinese dietary guideline for infants. India's guidance is the IYCF guideline under NHM/MoHFW; the cited mohfw.gov.in and who.int cannot support the quoted rule |
-| 20-5 | Prepare formula with water hotter than 70 C, cool before feeding, discard leftovers; 73.8 C | WHO/FAO 2007; Beary 2025 (J Food Protection 88(9) 100571) | Formula preparation | 2026-10-21 | yes | 70 C and the >5 log reduction are the WHO/FAO 2007 recommendation; the 73.8 C figure is from the cited 2025 study |
-| 20-6 | No honey under one year | No Indian instrument needed | Botulism | 2026-10-21 | yes | Standard infant botulism advice |
-| 20-7 | Vitamin K injection at birth | No Indian instrument needed | VKDB | 2026-10-21 | yes | Standard practice; India's UIP includes vitamin K at birth |
-| 20-8 | Under three months with 38 C, go straight to hospital | No Indian instrument needed | Fever | 2026-10-21 | yes | Standard young-infant fever rule |
-| 20-9 | Never shake a baby | No Indian instrument needed | Abusive head trauma | 2026-10-21 | yes | Uncontroversial; no legal claim |
-| 20-10 | Judge diapers on fit, change frequency, and whether they were flagged in quality inspections; cites "State Administration for Market Regulation" and a June 2026 formaldehyde-in-diapers task force | No Indian regulator | Product safety | 2026-10-21 | no | SAMR is China's market regulator; the June 2026 formaldehyde diaper inspection is a Chinese enforcement action. India's regulator for such products is the BIS/CDSCO/Consumer Protection (Product Liability) route, none of which is named |
-| 20-11 | Buy big-ticket baby items in the order borrow, buy used, buy new | No instrument needed | Practical | 2026-10-21 | yes | Spot-check: spending advice; nothing invented |
-| 20-12 | Do not avoid peanuts for severe eczema or egg allergy; introduce early under medical guidance; never whole peanuts | LEAP trial | Allergy prevention | 2026-10-21 | yes | Matches LEAP and later guidance; the "never whole peanuts" caution is correct |
-| 20-13 | Jaundice within 24 hours, unarousable or refusing feeds, deepening jaundice or pale stools mean same-day assessment | AAP 2022 (Kemper); NICE CG98; NHS | Hyperbilirubinaemia | 2026-10-21 | yes | Clinical thresholds are consistent with the cited guidance |
-| 20-13 | Caveat: follow-up "per the national basic public health service norm: home visit within one week after discharge" | No Indian authority | Follow-up | 2026-10-21 | no | The 国家基本公共卫生服务规范 postpartum home visit (28-30 days, with a visit within a week) is Chinese. India's Home Based Newborn Care programme schedules six visits up to 42 days through ASHA/ANM; the norm cited does not exist in India |
-| 20-14 | Vegan mothers need B12 or fortified foods; complementary foods must include animal-source foods; consult a paediatrician before a strict vegan diet | No Indian instrument needed | Nutrition | 2026-10-21 | yes | Consistent with ESPGHAN and CDC material; the extra source "National Health Commission General Office (2020)... gov.cn" is a source-edition citation that should go, but the claim itself is supported |
-| 20-15 | Do not buy wheeled walkers; use stationary activity centres or playpens; Canada banned them in 2004; 230,676 injuries | Sims 2018 (NEISS); Canada ban | Walker injuries | 2026-10-21 | yes | Figures match the cited study; the Canadian ban date is correct |
-| 20-16 | 400 IU vitamin D daily from birth for breastfed infants; no routine calcium in the first six months for term infants | AAP; Munns 2016; Cochrane 2020 | Vitamin D | 2026-10-21 | yes | 400 IU is the correct Indian and international dose; note that the JSON also keeps "National health guidelines stipulate 400-800 IU daily" with an NHC gov.cn source, which should be replaced by the Indian guidance |
-| 20-17 | Cold water first then hot; test on inner wrist or elbow; set the heater below 50 C (120 F); scald times 65/60/54/49 C | CPSC; WHO/UNICEF 2008 | Bath scalds | 2026-10-21 | yes | The 2 s/6 s/30 s/5 min scald ladder and the 49 C Washington State setting match the cited sources |
+| 20-1 | Back sleeping prevents sleep-related death; firm mattress; ~3,500 US infant sleep deaths a year | AAP Moon 2022, DOI 10.1542/peds.2022-057990 (Crossref) | – | 2026-10-21 | yes | DOI resolves to Pediatrics 150 (2022). Cost band "a few hundred rupees" for a firm crib mattress sits below Indian retail prices — advisory only |
+| 20-2 | Hepatitis B vaccine within 24 h of birth; free on the UIP; ~95% of infected infants become chronic; HBIG for HBsAg-positive mothers | MCP Guide Book, vaccine table and notes | pp. 36, 65 | 2026-10-21 | yes | "Hepatitis B vaccine should be given within 24 hours of birth" confirmed; the WHO fact sheet cited in Sources no longer prints an infant chronicity percentage, so ~95% is neither confirmed nor contradicted by the cited page |
+| 20-3 | Full UIP schedule: BCG/OPV-0/HepB at birth; pentavalent + OPV + rotavirus + PCV at 6/10/14 weeks with two fractional IPV doses; MR-1, JE-1, PCV booster at 9-12 months; MR-2, JE-2, DPT booster-1 at 16-24 months; DPT booster-2 at 5-6 years; Td at 10 and 16 years; missed doses are caught up, not restarted | MCP Guide Book schedule chart | pp. 36, 65-66 | 2026-10-21 | yes | Matches the UIP chart exactly, including fractional IPV at 6 and 14 weeks (intradermal), PCV-1 at 6 weeks, PCV-2 at 14 weeks, PCV booster at 9 months, and Td at 10 and 16 years |
+| 20-4 | Exclusive breastfeeding for 6 months, no water; solids from 6 months; caveat gives solid-food frequencies | MCP Guide Book, IYCF counselling pages | pp. 65-66 (IYCF) | 2026-10-21 | no | The caveat's frequencies ("6-8 months 1-2 times daily", "9-12 months 2-3 servings per day") are below India's own IYCF guidance — see Blocking issues |
+| 20-5 | Prepare formula at >70 °C; temperature falls to about 73.8 °C; >5 log reduction of Cronobacter; mortality 40-80% | Beary 2025 (DOI 10.1016/j.jfp.2025.100571), Sima 2025 (DOI 10.1186/s12866-025-04380-y) | – | 2026-10-21 | yes | Both DOIs resolve (J Food Prot 88:100571; BMC Microbiology 26). Paywalled, so 73.8 °C and the 5-log figure are recorded as not re-derived |
+| 20-6 | No honey under 12 months (infant botulism) | Cited CDC page; no Indian-specific claim made | – | 2026-10-21 | yes | No jurisdiction-specific claim to test |
+| 20-7 | Vitamin K 1-2 mg IM at birth; Tashkent incidence 478/100,000; >78.5% reduction | Fiesack, Nutrients 13:4109 (DOI 10.3390/nu13114109); Tursunov, Nagoya J Med Sci 80(1):11-20 (DOI 10.18999/nagjms.80.1.11) | – | 2026-10-21 | yes | Nagoya DOI absent from Crossref (404) but confirmed via Europe PMC (PMID 29581610) |
+| 20-8 | Fever >=38 °C in an infant under 3 months means hospital now; AAP 8-60 day pathway | AAP 2021, DOI 10.1542/peds.2021-052228 | – | 2026-10-21 | yes | DOI resolves to Pediatrics 148 |
+| 20-9 | Never shake a baby; 2,250 US deaths under 5, 1999-2014; retinal findings | MMWR 65:505-509 (DOI 10.15585/mmwr.mm6520a1); Choudhary 2018 (DOI 10.1007/s00247-018-4149-1) | – | 2026-10-21 | yes | Both DOIs resolve |
+| 20-10 | No Indian regulator ranks diaper brands; BIS standards, CDSCO device remit, consumer commissions under the CP Act 2019, Legal Metrology (Packaged Commodities) Rules 2011, National Consumer Helpline | Consumer Protection Act 2019; Legal Metrology (Packaged Commodities) Rules 2011; consumerhelpline.gov.in | – | 2026-10-21 | yes | Statutes named are current; helpline 1915 confirmed on the departmental site |
+| 20-11 | Borrow, buy used or new for big-ticket baby items; never a used car seat or mattress | Author's experience, grade C, no legal claim | – | 2026-10-21 | yes | Consistent with the chapter's own grade |
+| 20-12 | LEAP: 640 infants, 1.9% vs 13.7%; EAT: 1,162 infants, 5.6% vs 7.1%, P=0.32 | DOI 10.1056/NEJMoa1414850; DOI 10.1056/NEJMoa1514210 | – | 2026-10-21 | yes | Both DOIs resolve to NEJM 372:803 and 374:1733 |
+| 20-13 | Jaundice follow-up in India runs through HBNC under NHM: ASHA/ANM home visits, six visits in the first 42 days | NHM, Home Based Newborn Care and HBYC page (nhm.gov.in/index4.php?lang=1&level=0&linkid=491&lid=760) | HBNC schedule | 2026-10-21 | yes | Page states six visits on days 3, 7, 14, 21, 28 and 42 after institutional delivery (plus one within 24 h for home deliveries) |
+| 20-14 | Vegan mothers need B12; case hospitalised at 15 months, deficits at 32 months | CDC MMWR 2003;52(4):61-64; ESPGHAN DOI 10.1097/MPG.0000000000001454; AND DOI 10.1016/j.jand.2016.09.025 | – | 2026-10-21 | yes | Both DOIs resolve (JPGN 64:119; JAND 116:1970) |
+| 20-15 | No wheeled walkers; NEISS 230,676 ED visits; 22.7% fall after the 2010 standard; Canada banned sales 7 April 2004 | DOIs 10.1542/peds.2017-4332, 10.1542/peds.108.3.790, 10.1136/bmj.324.7352.1494, 10.12968/bjcn.2002.7.11.10889 | – | 2026-10-21 | yes | All four DOIs resolve to the cited journals, volumes and pages |
+| 20-16 | 400 IU (10 mcg) vitamin D daily from birth; IAP and AAP both recommend it; Cochrane 43% reduction (RR 0.57) | Global Consensus DOI 10.1210/jc.2015-2175; Cochrane CD013046; JAMA DOI 10.1001/jama.2013.3404 | – | 2026-10-21 | yes | Three DOIs resolve; the IAP statement itself was not retrieved (access limitation), no contrary evidence found |
+| 20-17 | Cold water first, test on wrist/elbow, heater below 50 °C (120 °F); CPSC scald times; Washington State 1983 law; NSW 50 °C cap | CPSC, NHS, WHO and Erdmann 1991 as cited | – | 2026-10-21 | yes | US/Australian regulator claims are attributed to those regulators, not to India |
 
 ## Banned-term check
 
-- JSON: 0 banned terms. No China, Chinese, mainland, RMB, yuan, hukou, yibao, dibao or CNY, and no CJK characters.
-- Rendered page: 0 banned terms.
+- JSON: 0 banned terms
+- Rendered page: 0 banned terms
+
+`npx tsx scripts/check-chapter.ts 20` reports 17 tips and "PASS: no banned term, CJK character or
+foreign-jurisdiction term."
 
 ## Safety and editorial check
 
-- No unsupported high-risk claim: FAIL. 20-3 states a 2026 national immunisation schedule with HPV and a two-month DTaP start that is not India's; 20-13 states a post-discharge home-visit norm that is not India's.
-- No invented scheme, number or hotline: FAIL. 20-3's schedule and 20-13's follow-up norm are Chinese, not invented, but they are presented as Indian; 20-10 attributes diaper inspections to a regulator India does not have.
-- No direct equivalent recorded where needed: FAIL. The chapter never says that India's schedule differs (DPT at 6/10/14 weeks, no universal HPV) or that HBNC, not a "basic public health service norm", governs newborn follow-up.
-- Caveats retained: PASS on clinical caution; FAIL on the 20-4 food-group rule and 20-13 follow-up norm, which are Chinese.
+- No unsupported high-risk claim: the emergency advice (38 °C under 3 months, no shaking, no honey, no
+  walkers, vitamin K at birth) is consistent with the cited guidance; the one exception is the day-to-day
+  solid-food frequency in 20-4, which is below Indian guidance.
+- No invented scheme, number or hotline: HBNC, UIP, BIS, CDSCO, the National Consumer Helpline, the 1915
+  number and the Legal Metrology rules all exist as described; no unreachable hotline or scheme is cited.
+- No direct equivalent recorded where needed: the chapter does not claim an Indian equivalent for the US
+  CPSC scald rules, the Canadian walker ban or the NHS jaundice pathway; the India paragraph that does
+  exist (HBNC) is accurate.
+- Caveats retained: formula-is-fine and "breastfeeding matters less than safe sleep" caveats are intact,
+  as are the grade-C labels on 20-10 and 20-11.
 
 ## Blocking issues
 
-- 20-3: "current guidelines date to 2026", HPV added to the national schedule, and DTaP from two months in five doses are China's national immunisation programme. India's UIP schedule (DPT 6/10/14 weeks, boosters, no universal HPV) is different, so the tip misinforms parents about which vaccines are free and when.
-- 20-4: the authority is China's National Health Commission, and the "at least four of the seven essential food groups" caveat is the Chinese infant feeding guideline, not Indian IYCF guidance.
-- 20-10: the diaper quality-inspection claim cites the State Administration for Market Regulation and a June 2026 formaldehyde task force, both Chinese; no Indian regulator or inspection is identified.
-- 20-13: the post-discharge "national basic public health service norm" home visit is the Chinese norm; India's HBNC schedule (six visits to 42 days) is different.
+- **20-4, caveats — solid-food frequencies contradict India's own IYCF guidance.** Current text:
+  "As for frequency of solid food intake: infants aged 6-8 months should consume solids 1-2 times daily,
+  while those aged 9-12 months should have 2-3 servings per day."
+  The MoHFW/NHM MCP Guide Book gives: at 6-9 months "2-3 times per day plus 1-2 snacks"; at 9-12 months
+  "3-4 meals of finely chopped foods ... and 1-2 snacks per day between meals"; at 13-24 months "3-4 times
+  a day and 1-2 snacks".
+  Correction — replace that sentence with: "As for frequency of solid food intake: infants aged 6-8 months
+  should eat 2-3 times a day plus 1-2 snacks, while those aged 9-12 months should have 3-4 meals a day plus
+  1-2 snacks between meals." Add the MCP Guide Book (MoHFW/NHM) to Sources for this tip.
+
+Advisory, not blocking:
+
+- 20-1 cost band ("a few hundred rupees" for a firm crib mattress) reads like a carried-over currency band;
+  Indian crib mattresses start around a few thousand rupees. Consider "a few thousand rupees" or dropping
+  the figure.
+- 20-2 "~95%" is a commonly quoted perinatal figure but the cited WHO page no longer prints a percentage;
+  consider "about 90% of infants infected at birth" with the WHO fact sheet, or cite a source that states
+  the number.
 
 Verdict: FAIL

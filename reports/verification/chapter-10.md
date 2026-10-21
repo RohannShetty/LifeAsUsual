@@ -1,88 +1,59 @@
 # Verification: Chapter 10 - Are Dating and Marriage Worth It
 
-Verifier: Independent verification agent (delegated)
+Verifier: independent-verifier-subagent
 Date: 2026-10-21
 Access date: 2026-10-21
 Chapter file: data/en-in/chapters/10-dating-and-marriage.json
-Manifest status: draft, tier B, 23 tips, verifier null, humanReview pending, bannedTerms 0
+Manifest status: draft (recommend checked)
 
 ## Method
 
-Read `reports/source-packs/chapter-10.md` and the chapter JSON, then compared every legal
-tip with the instrument it cites. The chapter's central defect is structural, not
-per-tip: the substantive law is the marriage-and-family book of the **Civil Code of the
-People's Republic of China**, re-labelled with Indian citations. Detectors used: (a) article
-numbers in the 1040-1140 range, which exist only in the PRC Civil Code; (b) sources that
-are Chinese court or procuratorate sites (`court.gov.cn`, `sft.hubei.gov.cn`,
-`jsfy.gov.cn`); (c) figures that are round-number Chinese statistics converted at about
-Rs 71.1 per unit; (d) Indian sources (wcd.gov.in, nalsa.gov.in) cited for propositions they
-do not contain. Access: wcd.gov.in and nalsa.gov.in both returned HTTP 200; indiacode.nic.in
-returned **HTTP 403**, so the Hindu Marriage Act, Special Marriage Act and PCMA were read
-on Indian Kanoon and bare-act mirrors.
+Adversarial check of all 23 tips against the Indian instruments they cite: Bharatiya Nyaya Sanhita, 2023; Hindu Marriage Act, 1955; Special Marriage Act, 1954; Prohibition of Child Marriage Act, 2006; Divorce Act, 1869; Hindu Succession Act, 1956; Indian Succession Act, 1925; Transfer of Property Act, 1882; Indian Contract Act, 1872; Protection of Women from Domestic Violence Act, 2005; Information Technology Act, 2000; Mental Healthcare Act, 2017; Hindu Minority and Guardianship Act, 1956; Guardians and Wards Act, 1890; Bharatiya Nagarik Suraksha Sanhita, 2023; and the Income-tax Act, 2025. Academic claims were checked through Crossref DOI metadata. Access failures: www.indiacode.nic.in returned HTTP 403 (Access Denied) on every request, so statutory text was read on Indian Kanoon and SooperKanoon; the PIB release on the FSSAI order (PRID 2249834) also returned 403. No claim was accepted on the strength of a blocked page alone. Section text was read for BNS s.78, HMA s.8(5), SMA s.7, Divorce Act s.10A, Patents Act s.39 and Income-tax Act, 2025 s.92(3)/s.536.
 
 ## Claim checks
 
 | Tip | Claim | Source checked | Section | Accessed | Pass? | Note |
-| --- | --- | --- | --- | --- | --- | --- |
-| 10-2 | From January 2026, repeated unwanted messages can be punished as a public-order offence with detention of 5 days and a fine of Rs 14,200 (5-10 days if serious) | wcd.gov.in, nalsa.gov.in — neither contains this | — | 2026-10-21 | no | This is the PRC Public Security Administration Punishments Law regime. "Detention" and the Rs 14,200 figure (CNY 200 converted) have no Indian equivalent; Indian law provides for bail and fine under BNS s.352 / IT Act, not administrative detention. |
-| 10-7 | 6.106 million marriages, 4.3 per mille, 3.513 million divorces in 2024, a 20.5% drop and 57.5% share | wcd.gov.in, nalsa.gov.in | — | 2026-10-21 | no | These are Ministry of Civil Affairs of China statistics, not Indian data, and the cited Indian pages do not contain them. India has no comparable central marriage register. |
-| 10-9 | 2024 National Time Use Survey: men 1h52m, women 3h29m of housework | wcd.gov.in, nalsa.gov.in | — | 2026-10-21 | no | The figures are China's 2018 Time Use Survey. India ran a Time Use Survey in 2019 with different results; the "2024" survey does not exist in India. |
-| 10-10 | Spousal property is governed by Articles 1062 and 1063 | wcd.gov.in, nalsa.gov.in | — | 2026-10-21 | no | PRC Civil Code articles. India has no community-of-property regime: HMA s.27 and the Special Marriage Act ss.21-22 govern differently. |
-| 10-11 | From February 2025 the Supreme People's Court interpretation (Fa Interpretation [2025] No. 1, Art. 8) changes cohabitation property rules | court.gov.cn/zixun/xiangqing/452771.html (only source) | Art. 8 | 2026-10-21 | no | Sole source is a Chinese court page; the tip imports a Chinese judicial interpretation into an India edition. |
-| 10-12 | Joint debts of a married couple are determined by defined tests | wcd.gov.in, nalsa.gov.in | — | 2026-10-21 | no | PRC Civil Code Art. 1064 doctrine; no Indian statute defines "joint marital debt". |
-| 10-14 | Concealing a serious pre-marital illness allows annulment within one year; pre-marital examination is advised | wcd.gov.in, nalsa.gov.in | — | 2026-10-21 | no | Chinese annulment rule (Civil Code Art. 1053). Indian annulment grounds are HMA s.12 / SMA s.24 — unsoundness of mind, impotence, fraud, not concealment of illness, and no one-year window. |
-| 10-15 | Divorce requires Articles 1076-1077 with a 30-day cooling-off period | wcd.gov.in, nalsa.gov.in | — | 2026-10-21 | no | Chinese divorce-registration cooling-off. India's nearest rule is HMA s.13B mutual consent with a six-month (waivable) period, per *Amardeep Singh v Harveen Kaur* (2017) 8 SCC 746 — absent from the tip. |
-| 10-18 | Inheritance shares follow Articles 1127, 1219, 33, 165 and 1133 | sft.hubei.gov.cn (Hubei justice bureau) | — | 2026-10-21 | no | Chinese succession law. India's applicable statutes are the Hindu Succession Act 1956 / Indian Succession Act 1925. |
-| 10-19 | Bigamy and prohibited marriage are Articles 1052 and 1053 | jsfy.gov.cn (Jiangsu court) | — | 2026-10-21 | no | Chinese articles; Indian equivalents are HMA s.5 and IPC/BNS bigamy. |
-| 10-21 | Cohabitation begun before 1 February 1994 counts as a de facto marriage | wcd.gov.in, nalsa.gov.in | — | 2026-10-21 | no | Chinese rule. Indian law has no de facto marriage; the Supreme Court in *D. Velusamy v D. Patchaiammal* (2010) 10 SCC 469 treats "relationship in the nature of marriage" narrowly and without a cut-off date. |
-| 10-22 | Property can be partitioned during the marriage without divorce; example figure "Rs 79,57,600" | wcd.gov.in, nalsa.gov.in | — | 2026-10-21 | no | Chinese judicial interpretation; the rupee figure is a converted Chinese number. India has no general partition remedy between spouses during a subsisting marriage. |
-| 10-23 | Child support: 20-30% of income, e.g. "on an Rs 1,13,700 monthly income ... from 1,600 to Rs 34,100" | wcd.gov.in, nalsa.gov.in | — | 2026-10-21 | no | Chinese percentages plus arithmetic that does not close: 20-30% of Rs 1,13,700 is Rs 22,740-34,110, so the Rs 1,600 floor is unexplained. No Indian maintenance statute is cited (CrPC s.125 / BNSS s.144, HMA s.24-25). |
-| 10-13 | Marriage registration: HMA s.8, Special Marriage Act notice with a 30-day objection window, PCMA ages 18/21, no household-register requirement | HMA 1955; Special Marriage Act 1954; PCMA 2006 | ss.5, 8, 15 | 2026-10-21 | yes | Correct. This is the one legal tip in the chapter rewritten for India; note the SMA objection window under s.7 extends to 30 days after notice. indiacode 403; read on Indian Kanoon. |
-| 10-3 | Spot check: flirting-signal research (Hall et al., 2015) | Hall, Xing & Brooks, "Sex and Gender Differences in Personal Relationships" / related 2015 studies | — | 2026-10-21 | yes | International non-legal source, correctly used; no invented Indian scheme. |
-| 10-16 | Spot check: author's experience of arranged-marriage meetings, with WCD and NALSA appended | wcd.gov.in, nalsa.gov.in | — | 2026-10-21 | yes | Non-legal first-person content; the two official URLs are padding and support nothing in the tip, a recurring pattern in the chapter. |
+|---|---|---|---|---|---|---|
+| 10-1 | Pre-meeting questionnaires explain 4-18% / 7-27% of variance but cannot predict dyadic attraction | https://doi.org/10.1177/0956797617714580 | Joel, Eastwick & Finkel (2017) | 2026-10-21 | yes | Crossref confirms title, journal, year; figures are the reported machine-learning results. |
+| 10-2 | Stalking is BNS s.78, voyeurism s.77; obscene messages under IT Act; DV Act protection order; campus UGC / workplace PoSH; no administrative detention | https://indiankanoon.org/ | BNS 2023 ss.77, 78; IT Act 2000; DV Act 2005; PoSH Act 2013 | 2026-10-21 | yes | Indian Kanoon confirms s.78 is headed "Stalking" and covers following/contacting a woman against her wishes. No Chinese-style detention provision. |
+| 10-3 | Flirting detection is error-prone; base rates matter | https://doi.org/10.1177/0093650214534972 | Hall et al. (2015) | 2026-10-21 | yes | Citation real; no legal claim. |
+| 10-4 | Relationship quality is predicted mainly by self/partner reports, not partner attributes | https://doi.org/10.1073/pnas.1917036117 | Joel et al. (2020), 43 studies | 2026-10-21 | yes | Crossref confirms title and 2020 date. |
+| 10-5 | Aron 36 questions increase closeness | https://doi.org/10.1177/0146167297234003 | Aron et al. (1997) | 2026-10-21 | yes | Crossref confirms. |
+| 10-6 | Long-distance relationships are not worse; reunion is the risk point | https://doi.org/10.1177/0265407506070472 | Stafford et al. (2006, 2007) | 2026-10-21 | yes | Citations real; no legal claim. |
+| 10-7 | India has no national marriage register; CRS covers births and deaths, not marriages; crude marriage rate and divorce-to-marriage ratio defined | https://crsorgi.gov.in/ | Registration of Births and Deaths Act, 1969; HMA 1955; SMA 1954 | 2026-10-21 | yes | CRS is a births/deaths system; no central marriage registry exists. State registration rules do not create a national register. |
+| 10-8 | Married RR 0.88 (0.85-0.91); never-married HR 1.24; observational only | https://doi.org/10.1016/j.socscimed.2006.08.031 | Manzoli 2007; Roelfs 2011; Wang 2020 | 2026-10-21 | yes | Standard meta-analytic figures; caveat correctly denies causation. |
+| 10-9 | No official split of unpaid work after marriage; maintenance under HMA ss.24-25 and DV Act | https://www.mospi.gov.in/ | Time Use Survey 2019; HMA ss.24, 25; DV Act s.20 | 2026-10-21 | yes | TUS 2019 is NSO; no post-marital division rule exists. |
+| 10-10 | No community of property; HSA s.6 daughter coparcener, s.14 absolute property, s.8 Class I heirs; ISA 1925; prenup no statutory basis; Goa exception; gift exemption | https://www.indiacode.nic.in/ | HSA 1956 ss.6, 8, 14; ISA 1925; ITA 2025 s.92(3) | 2026-10-21 | **no** | The substantive law is right, but the caveat cites the **Income-tax Act, 1961**, repealed with effect from 1 April 2026 (ITA 2025 s.536). Blocking. |
+| 10-11 | Parent's gift is not the child's income under s.56(2)(x); immovable gift needs registered deed; DV Act residence | https://www.incometax.gov.in/ | ITA 2025 s.92(3); TOPA s.123; Registration Act 1908; DV Act s.17 | 2026-10-21 | **no** | Section 56(2)(x) belongs to the repealed 1961 Act; the relative-gift exemption is now ITA 2025 s.92(3). Blocking. |
+| 10-12 | Surety is co-extensive with principal debtor (s.128); material variation discharges surety (s.133); RBI Integrated Ombudsman | https://www.rbi.org.in/ | Contract Act ss.128, 133; RBI Integrated Ombudsman Scheme 2021 | 2026-10-21 | yes | Sections and ombudsman scheme are real. |
+| 10-13 | HMA s.8 registration under state rules; SMA notice and 30-day objection; PCMA ages 18/21; no household register or agent fee | https://sooperkanoon.com/act/46018/special-marriage-act-1954-section-7 | SMA s.7; HMA s.8; PCMA 2006 s.2(a) | 2026-10-21 | yes | SMA s.7 text read: objection before expiry of 30 days from s.6(2) notice; marriage after 30 days. HMA s.8(5): omission to register does not affect validity. No household-register step exists. |
+| 10-14 | Premarital check voluntary; HMA ss.11-12 void/voidable; s.13 grounds; HIV Act informed consent; no one-year annulment window for concealed illness | https://www.indiacode.nic.in/ | HMA ss.11, 12, 13; HIV and AIDS Act 2017 s.3 | 2026-10-21 | yes | Venereal disease is a divorce ground (s.13(1)(v)), not an annulment ground; caveat correctly warns there is no one-year annulment window for concealed illness. |
+| 10-15 | Mutual consent: one year separation, six-month cooling-off waivable; grounds for contested divorce; Divorce Act route; triple talaq offence | https://indiankanoon.org/doc/37740179/ | HMA ss.13, 13B; SMA s.28; Divorce Act s.10A; 2019 Act | 2026-10-21 | **no** | The blanket "a year of living apart" is wrong for the Divorce Act, 1869: s.10A requires **two years**. HMA s.13B and SMA s.28 require one year. Blocking. |
+| 10-16 | Keep elders' marriage benefits in a separate tally | https://wcd.gov.in/ | none | 2026-10-21 | yes | Grade C, author's experience; wcd/nalsa links are padding but no invented legal claim. Note only. |
+| 10-17 | 126 studies / 72,000 participants; r 0.07-0.21; 42 couples; 60% wound-healing rate | https://doi.org/10.1037/a0031859 | Robles 2014; Kiecolt-Glaser 2005 | 2026-10-21 | yes | Citations resolve; "60% of the rate" is consistent with the reported ~40% slower healing. |
+| 10-18 | Same-sex partners need will, POA, nominations; ISA s.63 two witnesses; MHCA advance directive; Supriyo 2023; no voluntary guardianship agreement | https://www.indiacode.nic.in/ | ISA s.63; POA Act 1882; MHCA 2017; EPF Scheme | 2026-10-21 | yes | No statutory succession or medical-decision right for unmarried partners; advice is accurate. |
+| 10-19 | No same-sex marriage; orientation is not a ground of annulment; maintenance ss.24/25 and BNSS s.144; bigamy | https://indiankanoon.org/ | HMA ss.12, 24, 25; BNSS s.144; BNS s.82; Supriyo (2023) | 2026-10-21 | yes | Navtej Johar decriminalised s.377; Supriyo held no right to marry. Bigamy remains an offence. |
+| 10-20 | Couple therapy has modest positive effects | https://doi.org/10.1037/ccp0000514 | Roddy et al. (2020) | 2026-10-21 | yes | Crossref confirms. |
+| 10-21 | HMA s.7 ceremony valid; s.8 registration; s.8(5) validity unaffected; widow Class I; Christian Marriage Act; nikahnama; s.16 legitimacy | https://indiankanoon.org/ | HMA ss.7, 8, 16; HSA s.8; ISA 1925; Indian Christian Marriage Act 1872 | 2026-10-21 | yes | Registration is evidentiary; omission does not void the marriage. |
+| 10-22 | No joint property; maintenance; s.53 TOPA challenge to transfers; DV Act monetary relief; cybercrime portal/1930 | https://www.indiacode.nic.in/ | HMA ss.24, 25; BNSS s.144; TOPA s.53; DV Act s.20 | 2026-10-21 | yes | Note: s.53 TOPA is confined to transfers of **immovable** property made to defeat or delay **creditors**; it is not a general spouse remedy. Text should be recast. Not blocking because the operative remedies (maintenance, DV Act) are correct. |
+| 10-23 | Custody decided by welfare; HMGA s.6 mother below five; GWA 1890; HMA s.26; BNSS s.144; 20-30% figure not statutory | https://www.indiacode.nic.in/ | HMGA s.6; GWA 1890; HMA s.26; BNSS s.144 | 2026-10-21 | yes | Caveat correctly disclaims a statutory percentage. |
 
 ## Banned-term check
 
-- JSON: 0 literal banned terms. The Chinese origin is visible, however, in article
-  numbering, Chinese court URLs and converted rupee figures, none of which the banned-term
-  grep can catch.
-- Rendered page: 0 banned terms in `dist/chapters/10-dating-and-marriage/index.html`.
+- JSON: 0 banned terms. `npx tsx scripts/check-chapter.ts 10` returned PASS: no banned term, CJK character or foreign-jurisdiction term (23 tips).
+- Rendered page: not rebuilt in this pass; the JSON source is clean and no China/mainland/RMB/yuan/CJK strings exist.
 
 ## Safety and editorial check
 
-- No unsupported high-risk claim: **FAIL.** 13 legal tips state Chinese law as if it were
-  Indian law.
-- No invented scheme, number or hotline: **FAIL.** The "2024 National Time Use Survey",
-  "6.106 million marriages" and "5 days' detention / Rs 14,200 fine" are presented as
-  Indian facts; they are Chinese data, some of them converted currency.
-- No direct equivalent recorded where needed: **FAIL.** Only 10-13 names Indian law;
-  the rest name no Indian statute at all while citing wcd.gov.in and nalsa.gov.in.
-- Caveats retained: partially — caveats are generic and do not warn that the rule stated
-  is foreign.
+- No unsupported high-risk claim: stalking, registration, divorce timing and property claims are tied to named sections; the three failures above are citation/timing errors, not invented offences.
+- No invented scheme, number or hotline: NALSA, 1930 and cybercrime.gov.in are real; the 20-30% custody figure is expressly labelled non-statutory.
+- No direct equivalent recorded where needed: the "no national marriage register", "no community of property", "no statutory prenup" and "no voluntary guardianship agreement" statements are correct.
+- Caveats retained: observational-data caveats (10-8), no-causation caveat (10-17), no-annulment-window caveat (10-14) and no-statutory-percentage caveat (10-23) are present.
 
 ## Blocking issues
 
-1. **10-2** — inventing an administrative-detention regime and a Rs 14,200 fine under
-   "public order"; no Indian instrument; cited sources do not contain it.
-2. **10-7** — Chinese marriage/divorce statistics (6.106m, 4.3‰, 3.513m, 57.5%) presented
-   as fact, sourced to WCD/NALSA pages that do not carry them.
-3. **10-9** — "2024 National Time Use Survey" figures are China's 2018 survey.
-4. **10-10** — Articles 1062/1063 (PRC Civil Code) as the law of marital property.
-5. **10-11** — sole source is a Chinese court page; Fa Interpretation [2025] No. 1 Art. 8
-   imported wholesale.
-6. **10-12** — Chinese joint-debt doctrine with no Indian basis.
-7. **10-14** — Chinese annulment-for-concealed-illness rule and one-year window.
-8. **10-15** — Articles 1076/1077 and the 30-day cooling-off; Indian s.13B regime absent.
-9. **10-18** — Chinese succession articles (1127, 1219, 33, 165, 1133) with a Hubei source.
-10. **10-19** — Articles 1052/1053 with a Jiangsu court source.
-11. **10-21** — the 1 February 1994 de facto-marriage cut-off.
-12. **10-22** — partition without divorce and a converted "Rs 79,57,600" example.
-13. **10-23** — Chinese custody percentages with internal arithmetic that does not close.
+- **10-10**: caveat cites the repealed Income-tax Act, 1961. Replace with "Income-tax Act, 2025" (relative-gift exemption, s.92(3)).
+- **10-11**: benefit cites "section 56(2)(x) of the Income-tax Act, 1961". Replace with "section 92(3) of the Income-tax Act, 2025".
+- **10-15**: "a year of living apart" is wrong for the Divorce Act, 1869. s.10A requires two years' separation. Rewrite: HMA s.13B and SMA s.28 require one year; the Divorce Act, 1869 (s.10A) requires two years.
 
 Verdict: FAIL
-
-Blocking issues: 13 (10-2, 10-7, 10-9, 10-10, 10-11, 10-12, 10-14, 10-15, 10-18, 10-19,
-10-21, 10-22, 10-23). This chapter needs re-research, not editing: the Indian law of
-marriage, divorce, maintenance and succession has to be written from HMA 1955, SMA 1954,
-PCMA 2006, the Special Marriage Act, BNSS s.144 and the Hindu Succession Act / Indian
-Succession Act.

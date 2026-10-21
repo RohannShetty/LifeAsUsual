@@ -35,6 +35,12 @@
           "Roelfs DJ, et al. (2011)",
           "Ministry of Labour and Employment. <https://labour.gov.in/>; Roelfs DJ, et al. (2011)"
         ]
+      ],
+      "cost": [
+        [
+          "First, register as unemployed and apply for unemployment benefits; then schedule job searches at set times.",
+          "First, register with the state employment exchange and keep ESIC or your state health cover active; then schedule job searches at set times."
+        ]
       ]
     },
     "29-4": {
@@ -59,7 +65,7 @@
           "tell your residents’ welfare association or ward office that you live alone so they can add you to a check-in list"
         ]
       ],
-      "benefit": "A total of 44,573 outpatients with a history or risk of atherosclerotic thrombosis were enrolled in the international REACH study between December 2003 and December 2004; they were followed for four years. Of these, 8,594 participants (19%) lived alone. Over the four‑year period, the overall mortality rate for solo dwellers was 14.1%, compared with 11.1% for those living with others; cardiovascular deaths occurred in 8.6% versus 6.8% respectively. Both figures yielded log‑rank P‑values below 0.01, indicating the difference is unlikely to be coincidental. The magnitude of this effect varied by age: among people aged 45–65, solo living raised mortality from 5.7% to 7.7%; after adjusting for other factors, the hazard ratio was 1.24 (95% CI 1.01–1.51). For ages 66–80 the HR was 1.12 (1.01–1.26). In contrast, for those over 80 the rate fell to 24.6% versus 28.4%, giving an HR of 0.92 (0.79–1.06). India has no single statutory visiting scheme for people who live alone. In practice, register with your ward office, residents’ welfare association, or the local ASHA and ANM workers, and ask what home visits or check-in calls exist. Elderline (14567) is the national helpline for older people under the Maintenance and Welfare of Parents and Senior Citizens Act, 2007; it can advise on local support and escalate a welfare concern.",
+      "benefit": "A total of 44,573 outpatients with a history or risk of atherosclerotic thrombosis were enrolled in the international REACH study between December 2003 and December 2004; they were followed for four years. Of these, 8,594 participants (19%) lived alone. Over the four‑year period, the overall mortality rate for solo dwellers was 14.1%, compared with 11.1% for those living with others; cardiovascular deaths occurred in 8.6% versus 6.8% respectively. Both figures yielded log‑rank P‑values below 0.01, indicating the difference is unlikely to be coincidental. The magnitude of this effect varied by age: among people aged 45–65, solo living raised mortality from 5.7% to 7.7%; after adjusting for other factors, the hazard ratio was 1.24 (95% CI 1.01–1.51). For ages 66–80 the HR was 1.12 (1.01–1.26). In contrast, for those over 80 the rate fell to 24.6% versus 28.4%, giving an HR of 0.92 (0.79–1.06). India has no single statutory visiting scheme for people who live alone. In practice, register with your ward office, residents’ welfare association, or the local ASHA and ANM workers, and ask what home visits or check-in calls exist. Elderline (14567) is a national helpline for older people run by the Ministry of Social Justice and Empowerment, not a body created by the Maintenance and Welfare of Parents and Senior Citizens Act, 2007; it can advise on local support and escalate a welfare concern.",
       "cost": [
         [
           "tell a neighbor or a member of the residents’ committee",
@@ -75,9 +81,17 @@
         [
           "calling the 12356 helpline",
           "calling Tele-MANAS on 14416"
+        ],
+        [
+          ". 〔0.03〕 〔13.2〕 〔12.3〕",
+          "."
+        ],
+        [
+          "or deal with civil affairs offices",
+          "or deal with the ward office"
         ]
       ],
-      "sources": "Udell JA, et al. (2012). Living alone and cardiovascular risk in outpatients at risk of or with atherothrombosis. Archives of Internal Medicine. <https://doi.org/10.1001/archinternmed.2011.1636>; Elderline, Ministry of Social Justice and Empowerment. <https://elderline.gov.in/>; Ministry of Social Justice and Empowerment. <https://socialjustice.gov.in/>"
+      "sources": "Udell JA, et al. (2012). Living alone and cardiovascular risk in outpatients at risk of or with atherothrombosis. Archives of Internal Medicine. <https://doi.org/10.1001/archinternmed.2012.2782>; Elderline, Ministry of Social Justice and Empowerment. <https://elderline.gov.in/>; Ministry of Social Justice and Empowerment. <https://socialjustice.gov.in/>"
     },
     "29-10": {
       "title": "Don’t drop health cover or turn to alcohol after separating or divorcing",
@@ -133,6 +147,10 @@
         [
           "withdrawing your housing provident fund balance, claiming social insurance benefits, and receiving compensation for a work‑related death",
           "withdrawing your EPF balance, claiming ESIC or insurance benefits, and receiving compensation for a work‑related death"
+        ],
+        [
+          "which is why the evidence grade is C",
+          "which is why the benefit is rated moderate and the evidence grade is B"
         ]
       ],
       "sources": [
@@ -160,6 +178,12 @@
         [
           "National Health Commission General Office (2020). Notice on Issuing Specifications for the Diagnosis and Treatment of Psychiatric Disorders (2020 Edition), Chapter 8 Trauma and Stressor-Related Disorders. <https://www.nhc.gov.cn/yzygj/c100068/202012/b4305ace9e14440792eb76d29602c88a.shtml>",
           "World Health Organization, post-traumatic stress disorder fact sheet. <https://www.who.int/news-room/fact-sheets/detail/post-traumatic-stress-disorder>"
+        ]
+      ],
+      "caveats": [
+        [
+          "Work-related PTSD for first responders (police, firefighters, medical emergency personnel) is cataloged as a compensable occupational illness (see Chapter 19, Rule 10).",
+          "Work-related PTSD in first responders (police, firefighters, medical emergency personnel) is not listed as an occupational disease under ESIC or the Code on Social Security, 2020, so compensation is not automatic."
         ]
       ]
     }

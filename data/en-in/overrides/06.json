@@ -10,14 +10,22 @@
       "sources": "Krogsbøll LT, Jørgensen KJ, Gøtzsche PC (2019). General health checks in adults for reducing morbidity and mortality from disease. Cochrane Database of Systematic Reviews, 1, CD009009. <https://doi.org/10.1002/14651858.CD009009.pub3>; Ministry of Health and Family Welfare, National Programme for Prevention and Control of Cancer, Diabetes, Cardiovascular Diseases and Stroke. <https://mohfw.gov.in/>; National Health Mission, Ayushman Arogya Mandir. <https://nhm.gov.in/>"
     },
     "6-28": {
-      "sources": "American Psychological Association Task Force on Appropriate Therapeutic Responses to Sexual Orientation (2009). Report of the Task Force on Appropriate Therapeutic Responses to Sexual Orientation. <https://www.apa.org/pi/lgbt/resources/therapeutic-response.pdf>; Blosnich JR, Henderson ER, Coulter RWS, Goldbach JT, Meyer IH. (2020). Sexual Orientation Change Efforts, Adverse Childhood Experiences, and Suicide Ideation and Attempt Among Sexual Minority Adults, United States, 2016–2018. American Journal of Public Health, 110(7), 1024–1030. <https://doi.org/10.2105/AJPH.2020.305637>; Ryan C, Toomey RB, Diaz RM, Russell ST. (2020). Parent-Initiated Sexual Orientation Change Efforts With LGBT Adolescents: Implications for Young Adult Mental Health and Adjustment. Journal of Homosexuality, 67(2), 159–173. <https://doi.org/10.1080/00918369.2018.1538407>; World Health Organization. ICD-10 Version:2019, F66 Psychological and behavioral disorders associated with sexual development and orientation. <https://icd.who.int/browse10/2019/en#/F66>; Opposition: Sullins DP. (2022). Sexual Orientation Change Efforts Do Not Increase Suicide: Correcting a False Research Narrative. Archives of Sexual Behavior, 51, 3377–3393. <https://doi.org/10.1007/s10508-022-02408-2>; Blosnich JR, Coulter RWS, Henderson ER, et al. (2023). Correcting a False Research Narrative: A Commentary on Sullins (2022). Archives of Sexual Behavior, 52(3), 885–888. <https://doi.org/10.1007/s10508-022-02521-2>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>"
+      "sources": "American Psychological Association Task Force on Appropriate Therapeutic Responses to Sexual Orientation (2009). Report of the Task Force on Appropriate Therapeutic Responses to Sexual Orientation. <https://www.apa.org/pi/lgbt/resources/therapeutic-response.pdf>; Blosnich JR, Henderson ER, Coulter RWS, Goldbach JT, Meyer IH. (2020). Sexual Orientation Change Efforts, Adverse Childhood Experiences, and Suicide Ideation and Attempt Among Sexual Minority Adults, United States, 2016–2018. American Journal of Public Health, 110(7), 1024–1030. <https://doi.org/10.2105/AJPH.2020.305637>; Ryan C, Toomey RB, Diaz RM, Russell ST. (2020). Parent-Initiated Sexual Orientation Change Efforts With LGBT Adolescents: Implications for Young Adult Mental Health and Adjustment. Journal of Homosexuality, 67(2), 159–173. <https://doi.org/10.1080/00918369.2018.1538407>; World Health Organization. ICD-10 Version:2019, F66 Psychological and behavioral disorders associated with sexual development and orientation. <https://icd.who.int/browse10/2019/en#/F66>; Opposition: Sullins DP. (2022). Sexual Orientation Change Efforts Do Not Increase Suicide: Correcting a False Research Narrative. Archives of Sexual Behavior, 51, 3377–3393. <https://doi.org/10.1007/s10508-022-02408-2>; Blosnich JR, Coulter RWS, Henderson ER, et al. (2023). Correcting a False Research Narrative: A Commentary on Sullins (2022). Archives of Sexual Behavior, 52(3), 885–888. <https://doi.org/10.1007/s10508-022-02521-2>; Mental Healthcare Act, 2017. <https://www.indiacode.nic.in/>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>",
+      "caveats": [
+        [
+          "Legally, involuntary hospitalization is permitted only",
+          "can result in legal liability.",
+          "Legally, the Mental Healthcare Act, 2017 sets the only route for admitting an adult to a psychiatric facility against their wishes, and it is narrower than “seems to be a risk”. Admission as a supported patient under section 89, for up to thirty days, requires two independent examinations — one by a psychiatrist, the other by a psychiatrist, a mental health professional or a medical practitioner — each concluding that the person has a mental illness of such severity that they have recently threatened, attempted or are threatening to cause bodily harm to themselves, or have recently behaved violently towards another person or caused another person to fear bodily harm, or are unable to care for themselves to a degree that places them at risk of harm. It also requires that admission is the least restrictive option available, that the person is unable to make mental healthcare decisions independently and needs very high support, and that a nominated representative is appointed. Anyone admitted without that paperwork can challenge the admission before the Mental Health Review Board. No Indian statute bans conversion therapy outright; the Indian Psychiatric Society's position and the National Medical Commission's professional-conduct regulations treat it as improper practice rather than a criminal offence, so the protection here is professional discipline and civil liability, not prosecution."
+        ]
+      ]
     },
     "6-34": {
       "sources": "Ferracioli-Oda E, Qawasmi A, Bloch MH (2013). Meta-analysis: melatonin for the treatment of primary sleep disorders. PLoS One, 8(5), e63773. <https://doi.org/10.1371/journal.pone.0063773>; Sateia MJ, Buysse DJ, Krystal AD, Neubauer DN, Heald JL (2017). Clinical Practice Guideline for the Pharmacologic Treatment of Chronic Insomnia in Adults: An American Academy of Sleep Medicine Clinical Practice Guideline. Journal of Clinical Sleep Medicine, 13(2), 307-349 (Recommendation 12). <https://doi.org/10.5664/jcsm.6470>; Herxheimer A, Petrie KJ (2002). Melatonin for the prevention and treatment of jet lag. Cochrane Database of Systematic Reviews, CD001520. <https://doi.org/10.1002/14651858.CD001520>; Central Drugs Standard Control Organisation. <https://cdsco.gov.in/>"
     },
     "6-35": {
-      "sources": "Ministry of Health and Family Welfare. <https://mohfw.gov.in/>; National Health Mission. <https://nhm.gov.in/>; World Health Organization. <https://www.who.int/>",
-      "inPlainWords": "A drip is a medical procedure with real risks, not a tonic. No infusion of saline, vitamins or “antioxidants” flushes away or dissolves the plaques in your arteries; the artery wall is protected over years by blood pressure and lipid control. Extra intravenous fluid strains the heart and kidneys, and can precipitate heart failure in someone with heart disease. Indian guidance on rational use of medicines and antibiotic stewardship points the same way - a common cold or an uncomplicated viral throat infection does not need an outpatient infusion - but clinics and “wellness” centres sell them anyway, which is why you have to ask what the drip is for."
+      "sources": "Ministry of Health and Family Welfare. <https://mohfw.gov.in/>; National Health Mission. <https://nhm.gov.in/>; Indian Pharmacopoeia Commission, Pharmacovigilance Programme of India. <https://ipc.gov.in/>; World Health Organization. <https://www.who.int/>",
+      "inPlainWords": "A drip is a medical procedure with real risks, not a tonic. No infusion of saline, vitamins or “antioxidants” flushes away or dissolves the plaques in your arteries; the artery wall is protected over years by blood pressure and lipid control. Extra intravenous fluid strains the heart and kidneys, and can precipitate heart failure in someone with heart disease. Indian guidance on rational use of medicines and antibiotic stewardship points the same way - a common cold or an uncomplicated viral throat infection does not need an outpatient infusion - but clinics and “wellness” centres sell them anyway, which is why you have to ask what the drip is for.",
+      "benefit": "The principle is simple and the World Health Organization states it plainly: never inject when oral medication is possible; never infuse intravenously when intramuscular injection is possible. An intravenous infusion is clinically justified in three situations: an inability to swallow; severe gastrointestinal malabsorption, with persistent vomiting or severe diarrhoea; or a critical, rapidly progressing illness that needs a high drug concentration in the blood at once. A common cold, an uncomplicated sore throat or a seasonal “flush” is none of those. Infusions cannot dislodge or clear atherosclerotic plaques; unindicated fluid loading risks circulatory volume overload, cardiac strain and acute heart failure. India has no nationwide directive that designates outpatient drip clinics off limits. The standard comes instead from professional regulation: the National Medical Commission's professional-conduct regulations require the rational use of medicines, hospital antimicrobial-stewardship committees review what is prescribed, and the Pharmacovigilance Programme of India collects reports of adverse drug reactions — in which injections feature far more heavily than oral medicines."
     },
     "6-20": {
       "caveats": "This topic is still debated. The exact criteria for those exceptions haven’t been verified yet. Another counterpoint concerns small stones: those under 5 mm are more closely linked to pancreatitis, and Dutch research suggests prophylactic removal might either extend or shorten life depending on how common and severe pancreatitis is in a given population. European guidelines do list two exceptions: porcelain gallbladder and gallstones over 1 cm alongside large polyps — both warrant removal. Removal may also be considered during other major abdominal surgeries. Crucially, this advice applies only to stones inside the gallbladder with no prior symptoms; stones in the common bile duct are a completely different matter. UK and European guidelines both stress that stones in the bile duct must be removed along with the gallbladder, regardless of symptoms. Seek emergency care immediately if you experience persistent upper abdominal pain, fever, chills, yellowing of the eyes or skin, or dark urine. When a doctor recommends surgery after reviewing imaging, ask which specific criteria prompted that decision — whether it’s bile duct involvement, polyps, or abnormal gallbladder walls — so you can weigh those factors against this general guideline, which is meant to discourage surgery without any valid medical reason. Both cited studies tracked patients over 4 to 9 years, focusing on what happens when no intervention is taken; they don’t compare treatment effectiveness. Longer follow-ups would likely show a higher rate of symptom development."
@@ -29,6 +37,62 @@
     },
     "6-17": {
       "caveats": "This entry does not oppose blood donation itself, but the notion that it is a personal health practice. The blood goes to other people, and under this book’s classification of beneficiaries that is category 4, strangers. India has no national scheme that waives your own future hospital fees or gives you free transport in return for donating; some states and blood banks operate a replacement arrangement, and hospitals may waive processing charges for a donor, but none of that is a right you can rely on. Eligibility is decided by the blood centre, not by you: Indian blood-bank rules set a minimum weight, a minimum haemoglobin level and a minimum gap between whole-blood donations, and the centre is required to check them. Do not shorten the interval to meet an honour target or a camp’s collection goal. Women, people with low body weight and women with heavy periods start with smaller iron reserves; a regular donor may want a ferritin test. If persistent fatigue, cold intolerance or restless legs appear after donation, that is likely iron deficiency rather than “loss of vitality” - get a blood count and a ferritin level, take iron if advised, and lengthen the interval. The cold-intolerance evidence comes from a single study of 2,024 participants and is quoted to show the phenomenon exists, not to say how common it is."
+    },
+    "6-1": {
+      "cost": "They cost roughly ₹7 to ₹28 per day, or ₹2,800 to ₹9,900 per year. Taking them requires almost no time — just one pill a day. Over time, they can create a sense of dependency, making it feel like something is missing if you skip a day.",
+      "inPlainWords": [
+        [
+          "Skipping them saves you between 200 and 700 yuan each year.",
+          "Skipping them saves you between ₹2,800 and ₹9,900 each year."
+        ]
+      ],
+      "sources": "Sesso HD et al. (2012). Multivitamins in the prevention of cardiovascular disease in men: the Physicians' Health Study II randomized controlled trial. JAMA, 308(17), 1751-1760. <https://doi.org/10.1001/jama.2012.14805>; Gaziano JM et al. (2012). Multivitamins in the Prevention of Cancer in Men: the Physicians' Health Study II randomized controlled trial. JAMA, 308(18), 1871-1880. <https://doi.org/10.1001/jama.2012.14641>; Indian Council of Medical Research. <https://www.icmr.gov.in/>"
+    },
+    "6-2": {
+      "cost": "It costs roughly ₹14 to ₹43 per day, or ₹5,700 to ₹14,200 per year. Taking it requires no extra time at all.",
+      "inPlainWords": [
+        [
+          "Skipping them saves you 400 to 1000 yuan each year.",
+          "Skipping them saves you ₹5,700 to ₹14,200 each year."
+        ]
+      ]
+    },
+    "6-3": {
+      "cost": "Roughly ₹3 to ₹7 per day, or ₹1,400 to ₹2,800 per year. That's not much money, but the real cost is the false sense of security it gives — the belief that you've already taken preventive steps."
+    },
+    "6-4": {
+      "cost": "Roughly ₹7 to ₹28 per day. For smokers, the real cost is a higher risk of lung cancer."
+    },
+    "6-6": {
+      "cost": "Each effervescent tablet costs roughly ₹14–₹28; annual expense ranges from ₹4,300 to ₹9,900."
+    },
+    "6-7": {
+      "cost": "A whole-body PET-CT costs roughly ₹15,000–₹35,000 per scan at a private centre, and exposes you to ionizing radiation. Tumour marker panels cost a few thousand rupees. The real cost comes later: when an “abnormality” is found — usually a false positive — follow-up tests, biopsies, and surgeries add up both financially and physically."
+    },
+    "6-8": {
+      "cost": "Devices cost between ₹2,800 and ₹28,400. Plus, you have to constantly pay attention to the data they display every day."
+    },
+    "6-15": {
+      "inPlainWords": [
+        [
+          "The price isn’t just a few dollars",
+          "sentenced to 11 years in prison.",
+          "The price isn’t measured in rupees alone: a free reading ends with a demand for “offering fees” or “donation packages”, and the sums climb."
+        ]
+      ],
+      "benefit": [
+        [
+          "Official records show a similar pattern",
+          "plus a 100,000‑yuan fine.",
+          "The commercial version follows the same script: a free reading, then “offering fees” and “donation packages” once the customer is drawn in. Under the Consumer Protection Act, 2019, a seller who states outright that such a service will cure an illness or guarantee money is making a misleading claim, which can be complained about to the Central Consumer Protection Authority or to a district consumer commission."
+        ]
+      ],
+      "caveats": [
+        [
+          "Spending a few dollars",
+          "Spending a little money"
+        ]
+      ]
     }
   }
 }

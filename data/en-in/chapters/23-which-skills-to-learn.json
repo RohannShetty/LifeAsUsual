@@ -174,11 +174,11 @@
       "disputed": false,
       "stillVerifying": false,
       "cost": "No cost at all. Memorize this figure and use it as a benchmark for evaluating any “learning opportunity.”",
-      "inPlainWords": "Globally, each extra year of formal schooling translates into about a 9% annual increase in personal income; this benefit tends to be higher for women than for men. This figure applies to regular schooling, not to short courses or workshops. Think of it as a yardstick: if a course costs ₹4,26,300 and lasts half a year, ask whether its expected income boost matches what one extra year of schooling would deliver.",
+      "inPlainWords": "Globally, each extra year of formal schooling translates into about a 9% annual increase in personal income, and the benefit tends to be higher for women than for men. This figure applies to regular schooling, not to short courses or workshops. Think of it as a yardstick: if a hypothetical course costs ₹50,000 and lasts half a year, ask whether its expected income boost matches what one extra year of schooling would deliver.",
       "benefit": "A comprehensive review covering 1120 estimates from 139 countries between 1950 and 2014 found that the worldwide average private return on each additional year of schooling is 9% per year. This private return is the portion that directly affects an individual’s earnings — on average, an extra year of schooling raises income by 9%. The private return on higher education is on the rise, while the social return on education (the benefit to society as a whole) remains substantial. Women continue to reap higher average returns than men from schooling.",
       "evidenceGrade": "A",
       "sources": "Psacharopoulos G, Patrinos HA (2018). Returns to investment in education: a decennial review of the global literature. Education Economics, 26(5), 445-458. <https://doi.org/10.1080/09645292.2018.1484426>; World Bank Policy Research Working Paper 8402. <https://doi.org/10.1596/1813-9450-8402>; Ministry of Skill Development and Entrepreneurship. <https://www.msde.gov.in/>; National Skill Development Corporation. <https://www.nsdcindia.org/>",
-      "caveats": "It serves merely as a rough reference point. Its main purpose is to provide a standard for evaluating any training program: if a course demands a 30000‑rupees investment and six months of effort, you can gauge whether its income impact is comparable to that of one additional year of formal education. Keep in mind that this average masks considerable differences across fields and countries.",
+      "caveats": "This is a global average for one extra year of schooling, and it should not be taken as the expected return from a single course or workshop, nor as a figure specific to India. It serves merely as a rough reference point. Its main purpose is to provide a standard for evaluating any training program: if a hypothetical course demanded a ₹50,000 fee and six months of effort, you can gauge whether its income impact is comparable to that of one additional year of formal education. Keep in mind that this average masks considerable differences across fields and countries.",
       "reviewStatus": "draft"
     },
     {
@@ -535,7 +535,7 @@
       "id": "23-22",
       "chapter": 23,
       "tip": 22,
-      "title": "Don’t hire agents to handle evaluations, don’t pay for ghostwritten papers, and don’t falsify any application materials: any proven violations will result in immediate revocation of your professional title and a 3-year entry in your integrity record.",
+      "title": "A forged degree or a ghostwritten paper can cost you the admission or the qualification — and land you in a criminal case under the BNS, 2023.",
       "tags": {
         "money": "Free",
         "time": "Quick",

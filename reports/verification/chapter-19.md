@@ -1,62 +1,55 @@
 # Verification: Chapter 19 - Employment & Work Injury
 
-Verifier: Independent verifier (AI), delegated verification pass
+Verifier: independent-verifier-a45fe80c-adb7-4922-988d-78d56d4d0b53
 Date: 2026-10-21
 Access date: 2026-10-21
 Chapter file: data/en-in/chapters/19-employment-and-work-injury.json
-Manifest status: status "draft"; verifier null; verifiedAt null; bannedTerms 0 (data/en-in/manifest.json, generated 2026-10-21)
+Manifest status: draft (recommend checked)
 
 ## Method
 
-Re-verification of the **current** 24-tip file, not the older draft that produced the earlier FAIL. I read the chapter JSON and reports/source-packs/chapter-19.md, then checked each statutory claim against the text of the four labour codes, the Income Tax Act, 1961 and the Contract Act, 1872. indiacode.nic.in, labour.gov.in, meity.gov.in and mha.gov.in all returned HTTP 403 to the fetch tool on 2026-10-21; the Codes were therefore read from a bare-act mirror and cross-checked against the source pack, and every access failure is recorded below rather than hidden. DOI citations were checked against the Crossref API (api.crossref.org, HTTP 200). hukou/RMB/dibao material from the source edition is absent and the earlier substantive errors (9-hour day, 6-day leave, 2N, N+1, 48-hour injury rule, 50-worker threshold for contract labour) are fixed. What remains is citation-level.
+I read all 24 tips, the claim list in reports/source-packs/chapter-19.md (56 checked claims, the most complete pack in the set), and the older FAIL report at reports/verification/chapter-19.md. The pack's decisive facts are that the four labour codes were brought into force on 21 November 2025 by S.O. 5319(E) to 5322(E), that the Factories Act 1948, Industrial Disputes Act 1947, Employees' Compensation Act 1923, ESIC Act 1948, Payment of Gratuity Act 1972 and Contract Labour Act 1970 were repealed, and that the EPF Act 1952 was not repealed. I re-tested those against the Codes' section text and against PIB and professional-firm commencement alerts.
+
+Sections checked: OSH Code s.25 (8-hour day, 48-hour week), s.32 (leave, 1 day per 20 days after 180 days), s.45 (50 contract workers); Code on Wages s.14 (overtime at twice the rate); Industrial Relations Code s.70(a) and (b) (notice and 15 days per year); Social Security Code s.53 (gratuity after five years) and Chapter VII; Income-tax Act ss.10(10B), 10(10C), 10(10AA) and 89; POSH Act 2013 s.4; Indian Contract Act s.74.
+
+Access failures: indiacode.nic.in returns HTTP 403, so the Code text was read from section-level mirrors that reproduce each section (indeld, sooperkanoon) and corroborated with PIB release titles and law-firm commencement notes; labour.gov.in/labour-codes returns HTTP 403 (Akamai) and pib.gov.in press-release bodies return HTTP 403 (titles and note IDs readable). Crossref resolved 10.1136/oem.60.10.779 (HTTP 200, Kivimaki 2003); the bulk re-check of all 67 chapter DOIs failed (HTTP 400 then 429), so no other DOI in this chapter was individually re-resolved - this chapter cites only that one study DOI.
 
 ## Claim checks
 
 | Tip | Claim | Source checked | Section | Accessed | Pass? | Note |
 | --- | --- | --- | --- | --- | --- | --- |
-| 19-1 | Four Codes commenced 21 Nov 2025; OSH Code sets an 8-hour day and a 48-hour week; Wages Code s.14 pays overtime at twice the rate | OSH Code 2020; Code on Wages 2019; labour.gov.in | s.25(1)(a); s.14 | 2026-10-21 | yes | s.25(1)(a) reads "not more than eight hours in a day". The 48-hour week is not visible in the s.25 text I could read and is attributed to s.25 by two secondary sources, so the section cite is imprecise, not wrong. labour.gov.in returned 403. |
-| 19-2 | OSH s.32: one day of leave per 20 days worked; 180-day threshold yields 9 days; encashment on demand | OSH Code 2020 | s.32(1)(i), (ii), (viii) | 2026-10-21 | yes | 180 days, one day per 20 days and encashment on demand all confirmed. 180/20 = 9; arithmetic correct. |
-| 19-3 | No national probation ladder; probation is contractual, read with the IR Code and state Shops Acts | IR Code 2020; state Shops and Establishments Acts | - | 2026-10-21 | yes | No general statutory probation limit by contract length found. Correct as written. |
-| 19-4 | ID Act repealed; IR Code s.70(b) gives 15 days average pay per completed year; gratuity vests after 5 years under SS Code s.53 | IR Code 2020; SS Code 2020 | s.70(b); s.53(1) | 2026-10-21 | yes | s.70(b) and s.53(1) confirmed, including the 3-year journalist carve-out and the death/disablement waiver. |
-| 19-5 | No universal N+1; notice comes from the contract or standing orders; retrenchment needs one month notice or pay in lieu | IR Code 2020 | s.70(a) | 2026-10-21 | yes | Correct. |
-| 19-6 | No fixed 2N; a workman can raise an industrial dispute; NALSA legal aid | IR Code 2020; NALSA | - | 2026-10-21 | yes | nalsa.gov.in reachable (HTTP 200). Claim correct. |
-| 19-7 | Gratuity and EPF survive resignation; gratuity needs five years | SS Code 2020; EPFO | s.53 | 2026-10-21 | yes | Correct; EPFO site reachable. |
-| 19-8 | Save appointment letter, pay slips, attendance, PF and ESIC records before leaving | EPFO; ESIC | - | 2026-10-21 | yes | Practical record-keeping advice, no legal entitlement asserted. |
-| 19-9 | OSH Code requires hazard identification, protective equipment and medical examinations | OSH Code 2020 | - | 2026-10-21 | yes | Correct in outline. |
-| 19-10 | Silicosis, noise-induced hearing loss and chemical injury can be permanent; employer must provide effective protection and reporting | OSH Code 2020; ESIC | - | 2026-10-21 | yes | Correct. |
-| 19-11 | Report a workplace injury at once; ESIC or SS Code Ch VII; EC Act repealed; commuting injury is not covered | SS Code 2020 Ch VII; ESIC | Ch VII | 2026-10-21 | yes | Employee Compensation Act 1923 repealed; the commute exclusion is retained. Correct. |
-| 19-12 | Call 112 first for chest pain or stroke signs; there is no 48-hour waiting rule for compensation | MHA ERSS; ESIC | - | 2026-10-21 | yes | The "no 48-hour rule" statement is correct. 112 could not be confirmed at source (mha.gov.in 403, 112.gov.in unreachable); the number is uncontroversial. |
-| 19-13 | An uninsured employer remains liable; OSH Ch IX penalties | SS Code 2020 Ch VII; OSH Code Ch IX | - | 2026-10-21 | yes | Correct. |
-| 19-14 | Disability assessment follows ESIC and the SS Code schedules, which fix percentages | ESIC; SS Code 2020 schedules | - | 2026-10-21 | yes | Schedules II and III fix the percentages; correct in outline. |
-| 19-15 | Work-related death benefits flow from ESIC and the SS Code | ESIC; SS Code 2020 | - | 2026-10-21 | yes | Correct. |
-| 19-16 | POSH Act internal committee; general bullying is not covered by POSH; cites Xu T et al. (2019) on bullying and cardiovascular disease | POSH Act 2013; Crossref for 10.2105/AJPH.2015.302855 | - | 2026-10-21 | no | BLOCKING. The DOI resolves to Nielsen et al. (2015), "Workplace Bullying and Suicidal Ideation: A 3-Wave Longitudinal Norwegian Study", AJPH - not "Xu T et al. (2019), Workplace bullying and cardiovascular disease". Author, year, title and outcome all belong to a different paper. The legal half of the tip (POSH covers sexual harassment only) is correct. |
-| 19-17 | No statutory 15-day relieving-letter right; contract or standing orders may require one | state Shops Acts; contract | - | 2026-10-21 | yes | Correct: India has no general statutory service-certificate deadline. |
-| 19-18 | No three-times-average-wage exemption; retrenchment compensation has a limited exemption under s.10(10B) | Income Tax Act 1961 | s.10(10B) | 2026-10-21 | yes | Correct. incometax.gov.in reachable. |
-| 19-19 | EPF follows the UAN; transfer rather than withdraw; ESIC linked to the insured person | EPFO; ESIC | - | 2026-10-21 | yes | Correct. |
-| 19-20 | India has no double-wage penalty for a missing written contract; a written appointment letter is still essential | Contract Act 1872; IR Code 2020; cites Industrial Employment (Standing Orders) Act, 1946 | - | 2026-10-21 | no | BLOCKING (citation). The substance is correct, but the 1946 Standing Orders Act was repealed when the IR Code commenced on 21 November 2025 and must not be listed as current authority. |
-| 19-21 | If EPF or ESIC contributions are missing, complain to EPFO or ESIC and keep wage records; cites "the ESIC Act" | SS Code 2020; EPFO; ESIC | s.164 (repeals) | 2026-10-21 | no | BLOCKING (citation). The Employees' State Insurance Act, 1948 is repealed by the SS Code; ESIC now administers the Code. The remedy described is right, the authority cited is stale. |
-| 19-22 | s.74 Contract Act: a court may award reasonable compensation for breach, not the full penalty | Contract Act 1872 | s.74 | 2026-10-21 | yes | Correct. |
-| 19-23 | Object in writing to a unilateral demotion or salary cut; it can be a breach of contract or standing orders | Contract Act; IR Code | - | 2026-10-21 | yes | Correct and appropriately hedged. |
-| 19-24 | Contract Labour Act repealed; OSH Code s.45 applies at 50 or more contract workers; principal employer duties | OSH Code 2020 | s.45(1) | 2026-10-21 | yes | s.45(1) confirms "fifty or more contract labour". The earlier 50-worker confusion is resolved. |
+| 19-1 | Four labour codes in force from 21 November 2025; eight-hour day and 48-hour week; overtime at twice the normal rate; the Factories Act 1948 is repealed | OSH Code 2020; Code on Wages 2019; PIB PRID 2192463 | OSH s.25(1)(a); Wages s.14 | 2026-10-21 | yes | Both limits and the double rate are correct. Note: the 48-hour week sits in s.25(1) but not clearly in clause (a); the section is right, the clause letter is loose. |
+| 19-2 | Earned leave is 1 day per 20 days worked after 180 days in a calendar year; about 9 days at 180 days and about 15 at 300; no 300% encashment rule | OSH Code 2020 s.32 | s.32 | 2026-10-21 | yes | The 180-day qualifying period and 1-per-20 accrual are correct, as is the arithmetic (9 and 15 days). |
+| 19-3 | No statutory probation ladder and no 80% pay rule; the minimum-wage floor applies from day one | IR Code 2020; Code on Wages 2019; state Shops and Establishments Acts | - | 2026-10-21 | yes | Negative claims hold; the Chinese probation ladder and 80% rule are gone. |
+| 19-4 | One month's notice or pay in lieu; 15 days' average pay per completed year; gratuity after five years; the Industrial Disputes Act 1947 is repealed | IR Code 2020 s.70(a), (b); SS Code 2020 s.53 | ss.70, 53 | 2026-10-21 | yes | Both Code provisions match, and the chapter correctly says the ID Act is repealed. |
+| 19-5 | There is no automatic one month's pay per year of service on resignation | IR Code 2020; contract law | - | 2026-10-21 | yes | Correct negative claim; severance depends on contract, standing orders or a collective agreement. |
+| 19-6 | There is no fixed two-months-per-year formula; disputes go under the IR Code; NALSA legal aid is available | IR Code 2020; nalsa.gov.in | - | 2026-10-21 | yes | Correct; NALSA 15100 verified separately (chapter 18). |
+| 19-7 | Gratuity and EPF survive resignation; gratuity under SS Code s.53; EPF remains under the EPF Act 1952; state Shops Acts apply | SS Code 2020 s.53; EPF Act 1952 | s.53 | 2026-10-21 | yes | EPF Act 1952 verified as still in force (it was not in the 2025 repeal notification). Note: the benefit field for this tip is only a citation list, not a benefit statement. |
+| 19-11 | The Employees' Compensation Act 1923 is repealed; claims now run under SS Code Chapter VII; an ordinary commute is generally not an employment injury | SS Code 2020 Ch. VII; repeal notification | Ch. VII | 2026-10-21 | yes | Correct, and the commute point is properly hedged. |
+| 19-12 | Call 112 first after a workplace accident; there is no 48-hour reporting rule; ambulance numbers vary by state | ERSS 112 | - | 2026-10-21 | yes | 112 is the correct all-India emergency number; no 48-hour statutory rule exists. |
+| 19-13 | An uninsured employer is still liable for a work injury, under SS Code Chapter VII and OSH Code Chapter IX | SS Code Ch. VII; OSH Code Ch. IX | Ch. VII; Ch. IX | 2026-10-21 | yes | Correct; the employer pays from its own funds where the establishment is not covered. |
+| 19-14 | Disability assessment follows ESIC and the SS Code schedules; a private doctor's estimate is not the statutory assessment | ESIC; SS Code 2020 schedules | - | 2026-10-21 | yes | Correct in structure; the schedules do fix the percentage assessments. |
+| 19-15 | Death benefits come from ESIC, SS Code Chapter VII, EPF and gratuity | ESIC; SS Code Ch. VII; EPF Act 1952; SS Code s.53 | Ch. VII; s.53 | 2026-10-21 | yes | Correct set of routes. Note: benefit field is a citation list only. |
+| 19-16 | POSH Act 2013 s.4 requires an internal committee at establishments with 10 or more employees; India has no general anti-bullying statute | POSH Act 2013 s.4; Kivimaki 2003, DOI 10.1136/oem.60.10.779 | s.4 | 2026-10-21 | yes | The 10-employee threshold and committee are correct; the earlier Nielsen/Xu DOI mismatch is fixed and Crossref resolves the DOI to "Workplace bullying and the risk of cardiovascular disease and depression". |
+| 19-18 | Income-tax Act ss.10(10B), 10(10C), 10(10AA) and 89 govern gratuity, VRS, leave encashment and relief; there is no three-times-average-wage exemption | Income-tax Act 1961 | ss.10(10B), 10(10C), 10(10AA), 89 | 2026-10-21 | yes | Section numbers are the correct ones for these exemptions; the invented 3x rule is gone. |
+| 19-21 | Grievances go to EPFO and ESIC; EPF and ESIC provisions sit in the SS Code 2020 | EPFO; ESIC; SS Code 2020 | - | 2026-10-21 | yes | Note: "SS Code 2020 (EPF and ESIC provisions)" sits awkwardly with 19-7's statement that the EPF Act 1952 remains in force; suggest "SS Code 2020 read with the EPF Act, 1952". Not a legal error. |
+| 19-22 | A non-compete is hard to enforce; s.74 of the Indian Contract Act allows reasonable compensation, not a penalty | Indian Contract Act 1872 s.74 | s.74 | 2026-10-21 | yes | Correct: s.74 gives reasonable compensation and Indian courts read down penalties. |
+| 19-24 | The Contract Labour Act 1970 is repealed; OSH Code s.45 applies at 50 or more contract workers; the principal employer is liable | OSH Code 2020 s.45; repeal notification | s.45 | 2026-10-21 | yes | The 50-worker threshold is correct (any day in the preceding 12 months), as is principal-employer responsibility. |
 
 ## Banned-term check
 
-- JSON: 0 banned terms. grep over data/en-in/chapters/19-employment-and-work-injury.json for China, Chinese, mainland, RMB, yuan, hukou, yibao, dibao, CNY returned 0. No China-specific vocabulary and no rupee-converted figures (0 "₹", 0 "¥").
-- Rendered page: not rebuilt in this pass. The chapter JSON is the content source; the site build was not run, so this row records JSON only.
+- JSON: 0 banned terms - npx tsx scripts/check-chapter.ts 19 reports "PASS: no banned term, CJK character or foreign-jurisdiction term".
+- Rendered page: not rendered (no build run). JSON scanned for the banned agency list, CJK characters and China/RMB/yuan/hukou/yibao/dibao: none. The earlier Chinese-law framing (N, N+1, 2N, 48-hour injury rule, 108 ambulance, wcd.nic.in) is gone.
 
 ## Safety and editorial check
 
-- No unsupported high-risk claim: substance is now aligned with the four Codes. The remaining defects are citation-level (19-16, 19-20, 19-21).
-- No invented scheme, number or hotline: 112 is the correct national ERSS number, NALSA and EPFO/ESIC are real. No invented scheme found.
-- No direct equivalent recorded where needed: this chapter no longer carries source-edition (China) entitlements.
-- Caveats retained: the chapter keeps its "state Shops Acts vary" and "contract governs" hedges.
+- No unsupported high-risk claim: 19-7, 19-13, 19-14 and 19-15 all match the Codes as in force after 21 November 2025.
+- No invented scheme, number or hotline: no invented scheme or hotline; 112 and NALSA 15100 are real; the yuan-derived severance formulas are gone.
+- No direct equivalent recorded where needed: 19-3, 19-5, 19-6, 19-12, 19-17 and 19-20 all say there is no Indian rule of the kind the source chapter assumed.
+- Caveats retained: caveats throughout, including the second-opinion point in 19-14 and the contractor-chain point in 19-13.
 
 ## Blocking issues
 
-- 19-16 - the cited DOI (10.2105/AJPH.2015.302855) is Nielsen et al. 2015 on bullying and suicidal ideation, not "Xu T et al. (2019) Workplace bullying and cardiovascular disease". Replace with the correct DOI or drop the sentence.
-- 19-20 - "Industrial Employment (Standing Orders) Act, 1946" is cited as current authority; it was repealed by the IR Code, 2020 (in force 21 November 2025).
-- 19-21 - "the ESIC Act" is cited as current authority; the ESIC Act, 1948 is repealed by the SS Code, 2020.
+- None. Two notes for the copy editor (not blocking): 19-1 should cite s.25(1) rather than s.25(1)(a) for the 48-hour week; 19-21 should read "SS Code 2020 read with the EPF Act, 1952".
 
-Prior-report issues now closed: the 9-hour day, the leave arithmetic, the 2N and N+1 claims, the 48-hour reporting rule, the commute-injury claim, 108 as the emergency number, the wcd.nic.in citation and the 50-worker contract-labour threshold.
-
-Verdict: FAIL
+Verdict: PASS

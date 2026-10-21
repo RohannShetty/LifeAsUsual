@@ -5,7 +5,8 @@
     },
     "1-14": {
       "inPlainWords": "The test itself is very inexpensive. In the Qidong 30-year follow-up study, infants who received the hepatitis B vaccine at birth had an 84% lower risk of developing primary liver cancer and a 72% lower rate of carrying the hepatitis B virus than unvaccinated peers. An adult found to have no antibodies needs three doses over six months.",
-      "caveats": "This recommendation is for adults who were never vaccinated as a child, or whose antibodies have waned. India added hepatitis B to the routine infant immunisation schedule only in 2011, so most adults born before that were not vaccinated at birth and should check their status rather than assume they are covered. The 84% cancer-risk reduction belongs to people immunised at birth; adolescents vaccinated later saw only a 21% fall in virus carriage. For an adult the aim is to prevent a new infection, not to reproduce that cancer benefit. Vaccination does nothing for someone already infected; they need regular follow-up with a hepatologist. Infection is confirmed when the hepatitis B surface antigen (HBsAg) test is positive, and a full panel tells you whether you are immune, infected or susceptible."
+      "caveats": "This recommendation is for adults who were never vaccinated as a child, or whose antibodies have waned. India added hepatitis B to the routine infant immunisation schedule only in 2011, so most adults born before that were not vaccinated at birth and should check their status rather than assume they are covered. The 84% cancer-risk reduction belongs to people immunised at birth; adolescents vaccinated later saw only a 21% fall in virus carriage. For an adult the aim is to prevent a new infection, not to reproduce that cancer benefit. Vaccination does nothing for someone already infected; they need regular follow-up with a hepatologist. Infection is confirmed when the hepatitis B surface antigen (HBsAg) test is positive, and a full panel tells you whether you are immune, infected or susceptible.",
+      "cost": "The test costs just a few hundred rupees per person. For adults lacking antibodies, three doses of the hepatitis B vaccine cost between ₹1,400 and ₹4,300 in total, to be completed within six months."
     },
     "1-15": {
       "cost": "A clinic visit and wound cleaning cost about ₹300–₹800. If a tetanus vaccine or immunoglobulin is needed, add about ₹1,000–₹5,000 depending on the product and the hospital.",
@@ -19,14 +20,24 @@
           ""
         ]
       ],
-      "sources": "Zalsman G et al. (2016). Suicide prevention strategies revisited: 10-year systematic review. Lancet Psychiatry. <https://doi.org/10.1016/S2215-0366(16)30030-X>; Tele-MANAS, Ministry of Health and Family Welfare. <https://telemanas.mohfw.gov.in/>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>"
+      "sources": "Zalsman G et al. (2016). Suicide prevention strategies revisited: 10-year systematic review. Lancet Psychiatry. <https://doi.org/10.1016/S2215-0366(16)30030-X>; Tele-MANAS, Ministry of Health and Family Welfare. <https://telemanas.mohfw.gov.in/>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>",
+      "inPlainWords": [
+        [
+          "call 12356",
+          "available at least 18 hours a day.",
+          "call 14416 (Tele-MANAS) — this helpline answers 24 hours a day, every day."
+        ]
+      ]
     },
     "1-27": {
       "cost": "A routine urine test costs about ₹200–₹500, and an ultrasound of the urinary tract about ₹800–₹2,000. If the doctor advises a cystoscopy, it costs roughly ₹8,000–₹15,000 in a private hospital and less in a government hospital."
     },
     "1-31": {
       "title": "If you have engaged in high-risk behaviour, get tested for HIV — government testing is free and confidential",
-      "sources": "Rodger AJ, Cambiano V, Bruun T, et al. (2019). Risk of HIV transmission through condomless sex in serodifferent gay couples with the HIV-positive partner taking suppressive antiretroviral therapy (PARTNER): final results of a multicentre, prospective, observational study. The Lancet, 393(10189), 2428-2438. <https://doi.org/10.1016/S0140-6736(19)30418-0>; National AIDS Control Organisation. <https://naco.gov.in/>"
+      "inPlainWords": "The HIV and AIDS (Prevention and Control) Act, 2017 keeps your HIV status confidential: anyone who learns it through testing, treatment or counselling may not pass it on without your informed consent. A positive result does not mean a death sentence: people who take treatment and keep their viral load undetectable cannot transmit the virus to sexual partners. One major study followed more than 700 couples through over 70,000 unprotected acts; there were zero transmissions between partners.",
+      "benefit": "Testing is free and confidential at the government Integrated Counselling and Testing Centres run under the National AIDS Control Programme in every district, and pre-test counselling is part of the visit. Early detection is far more than a psychological comfort — antiretroviral therapy can drive the virus down to undetectable levels, and first-line treatment is free at government centres. The World Health Organization states that individuals on such treatment with an undetectable viral load pose no risk of HIV transmission. The PARTNER study observed 782 same-sex couples (serodiscordant pairs) for a total of 1,593 person-years; despite 76,088 unprotected encounters, only 15 new infections occurred, and genetic analysis proved none originated from the partner. The Act also bars any person who holds HIV-related information from disclosing it without informed consent, except in the narrow cases it lists, such as a court order.",
+      "caveats": "The “window period” is a property of the test, not of the infection: a nucleic-acid test can detect HIV after roughly one week, a fourth-generation antigen-antibody test after about two weeks, and a third-generation antibody-only test after three weeks. No Indian agency publishes an official table of window periods, so these figures come from the assay makers and from WHO. It is advisable to wait at least two weeks post-exposure and then retest after another two to four weeks; after three months, 99.99% of people can be certain they are not infected. The Act prohibits discrimination against people living with HIV and their families in employment, education, healthcare, housing and public facilities, and requires that they be treated like anyone else. It also obliges a person diagnosed with HIV to take reasonable precautions to prevent transmission, while protecting their right to keep their status confidential; compelling a partner disclosure is not the mechanism the Act uses. Screening for HIV, syphilis, and hepatitis B during pregnancy and related prevention measures are covered in Rule 27 of this chapter.",
+      "sources": "Rodger AJ, Cambiano V, Bruun T, et al. (2019). Risk of HIV transmission through condomless sex in serodifferent gay couples with the HIV-positive partner taking suppressive antiretroviral therapy (PARTNER): final results of a multicentre, prospective, observational study. The Lancet, 393(10189), 2428-2438. <https://doi.org/10.1016/S0140-6736(19)30418-0>; HIV and AIDS (Prevention and Control) Act, 2017. <https://www.indiacode.nic.in/>; National AIDS Control Organisation. <https://naco.gov.in/>"
     },
     "1-37": {
       "title": "When gambling leads to borrowing and persistent low mood, call Tele-MANAS on 14416, then hand your cards and payment passwords to a family member",
@@ -89,25 +100,178 @@
       "sources": "US Preventive Services Task Force, Owens DK, Davidson KW, et al. (2020). Screening for Hepatitis C Virus Infection in Adolescents and Adults: US Preventive Services Task Force Recommendation Statement. JAMA, 323(10), 970-975. <https://doi.org/10.1001/jama.2020.1123>; Chou R, Dana T, Fu R, Zakher B, Wagner J, Ramirez S, Grusing S, Jou JH (2020). Screening for Hepatitis C Virus Infection in Adolescents and Adults: Updated Evidence Report and Systematic Review for the US Preventive Services Task Force. JAMA. <https://doi.org/10.1001/jama.2019.20788>; Carrat F, Fontaine H, Dorival C, et al. (2019). Clinical outcomes in patients with chronic hepatitis C after direct-acting antiviral treatment: a prospective cohort study. The Lancet, 393(10179), 1453-1464. <https://doi.org/10.1016/S0140-6736(18)32111-1>; Backus LI, Belperio PS, Shahoumian TA, Mole LA (2019). Impact of Sustained Virologic Response with Direct-Acting Antiviral Treatment on Mortality in Patients with Advanced Liver Disease. Hepatology, 69(2), 487-497. <https://doi.org/10.1002/hep.29408>; Jakobsen JC, Nielsen EE, Feinberg J, et al. (2017). Direct-acting antivirals for chronic hepatitis C. Cochrane Database of Systematic Reviews, CD012143.pub3. <https://doi.org/10.1002/14651858.CD012143.pub3>; Ministry of Health and Family Welfare, National Viral Hepatitis Control Programme. <https://mohfw.gov.in/>; World Health Organization (2026). Hepatitis C fact sheet. <https://www.who.int/news-room/fact-sheets/detail/hepatitis-c>"
     },
     "1-26": {
-      "sources": "Kendrick D et al. (2012). Home safety education and provision of safety equipment for injury prevention. Cochrane Database of Systematic Reviews. <https://doi.org/10.1002/14651858.CD005014.pub3>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>; World Health Organization. <https://www.who.int/>; National Disaster Management Authority. <https://ndma.gov.in/>"
+      "cost": "A set of fire extinguishers, fire blankets, one escape respirator per person and a first-aid kit costs a few thousand rupees, and it is bought once. After that, inspecting the items takes about 10 minutes a year.",
+      "inPlainWords": "A fire extinguisher, a fire blanket, an escape respirator and a first-aid kit are the core of a household emergency kit. India has no single government list of household emergency supplies, but the Bureau of Indian Standards sets the standard each item is made to, and the ISI mark on an extinguisher shows it was type-tested. The set is bought once and takes about ten minutes a year to check. Studies of home safety programmes that included on-site guidance found these measures cut injury rates by roughly 25%.",
+      "benefit": "A home emergency kit is built around four items. A fire extinguisher and a fire blanket are for putting out a small fire at its start, and the blanket can be draped over a person to help them get out. An escape respirator is designed to be worn on the way out of a smoke-filled room, not to fight the fire. The first-aid box holds dressings, bandages and antiseptic for treating a wound. In India, portable extinguishers are made and tested to the Bureau of Indian Standards specification and carry the ISI mark, and a pressure gauge on the cylinder shows whether it is still charged. Cochrane analysed 98 studies involving 2,605,044 participants in total. Home safety interventions lowered injury rates to an IRR of 0.89; the 95% confidence interval for this figure is 0.78 to 1.01. For interventions that included on-site guidance, injury rates dropped by around 25% (IRR 0.75, 95% CI 0.62 to 0.91).",
+      "caveats": "This finding is somewhat controversial. The same Cochrane meta-analysis found that interventions that did not provide emergency supplies also lowered injury rates by roughly 20%. The original IRR for those interventions was 0.78, with a 95% confidence interval of 0.66 to 0.92. Providing emergency supplies alone did not yield better results than other measures. The main effect of these interventions comes from on-site education and home modifications, so the benefit of supplying emergency supplies is rated as “moderate” rather than “significant”. When buying a fire extinguisher, look for the ISI mark and check that the pressure gauge needle points to the green zone. Details on smoke alarms and carbon monoxide detectors are covered in Rule 3 of this chapter. Instructions for using tourniquets can be found in Chapter 13, Rule 12. Ask the supplier how each item is refilled or replaced, and what its service life is.",
+      "sources": "Kendrick D et al. (2012). Home safety education and provision of safety equipment for injury prevention. Cochrane Database of Systematic Reviews. <https://doi.org/10.1002/14651858.CD005014.pub3>; Bureau of Indian Standards. <https://www.bis.gov.in/>; National Disaster Management Authority. <https://ndma.gov.in/>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>"
     },
     "1-33": {
-      "sources": "Gawarammana IB, Buckley NA (2011). Medical management of paraquat ingestion. British Journal of Clinical Pharmacology, 72(5), 745-757. <https://doi.org/10.1111/j.1365-2125.2011.04026.x>; Chowdhury FR et al. (2026). Clinical and Laboratory Profile of Paraquat Poisoning: A Toxicological Crisis in Bangladesh. American Journal of Tropical Medicine and Hygiene, 115, 176-182. <https://doi.org/10.4269/ajtmh.25-0719>; Weaver LK, Hopkins RO, Chan KJ, et al. (2002). Hyperbaric oxygen for acute carbon monoxide poisoning. New England Journal of Medicine, 347(14), 1057-1067. <https://doi.org/10.1056/NEJMoa013121>; Parkinson RB, Hopkins RO, Cleavinger HB, et al. (2002). White matter hyperintensities and neuropsychological outcome following carbon monoxide poisoning. Neurology, 58(10), 1525-1532. <https://doi.org/10.1212/wnl.58.10.1525>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>"
+      "sources": "Gawarammana IB, Buckley NA (2011). Medical management of paraquat ingestion. British Journal of Clinical Pharmacology, 72(5), 745-757. <https://doi.org/10.1111/j.1365-2125.2011.04026.x>; Chowdhury FR et al. (2026). Clinical and Laboratory Profile of Paraquat Poisoning: A Toxicological Crisis in Bangladesh. American Journal of Tropical Medicine and Hygiene, 115, 176-182. <https://doi.org/10.4269/ajtmh.25-0719>; Central Insecticides Board and Registration Committee. <https://cibrc.nic.in/>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>",
+      "benefit": [
+        [
+          "Since July 1, 2014, China has banned",
+          "as the primary reason for these strict controls.",
+          "India has not banned paraquat nationwide. It remains a herbicide registered with the Central Insecticides Board and Registration Committee, sold under restrictions to licensed dealers, and it is still used in agriculture — so the poisoning described here is a live risk in India, not a historical one."
+        ]
+      ]
     },
     "1-36": {
-      "sources": "International Atomic Energy Agency (1988). The Radiological Accident in Goiânia. IAEA, Vienna. <https://www-pub.iaea.org/MTCD/Publications/PDF/Pub815_web.pdf>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>; World Health Organization. <https://www.who.int/>; Atomic Energy Regulatory Board. <https://www.aerb.gov.in/>"
+      "inPlainWords": [
+        [
+          "The chance of an ordinary person encountering one is extremely low",
+          "each year.",
+          "The chance of an ordinary person encountering one is extremely low."
+        ]
+      ],
+      "benefit": [
+        [
+          "As of 2025, roughly 178,000",
+          "below one per 10,000 sources.",
+          ""
+        ],
+        [
+          "Official example: In June 2020",
+          "were fined 70,000 yuan.",
+          "The Atomic Energy Regulatory Board is the Indian regulator that licenses, inspects and deregisters such sources; an uncontrolled source should be reported to the police and to it without delay."
+        ],
+        [
+          "(National and international statistics)",
+          ""
+        ]
+      ],
+      "sources": "International Atomic Energy Agency (1988). The Radiological Accident in Goiânia. IAEA, Vienna. <https://www-pub.iaea.org/MTCD/Publications/PDF/Pub815_web.pdf>; Atomic Energy Regulatory Board. <https://www.aerb.gov.in/>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>; World Health Organization. <https://www.who.int/>"
     },
     "1-41": {
+      "cost": [
+        [
+          "These cost under $15–$30.",
+          "A pair costs a few hundred to a couple of thousand rupees."
+        ]
+      ],
       "sources": "Minnesota Department of Natural Resources. General ice thickness guidelines. <https://www.dnr.state.mn.us/safety/ice/thickness.html>; Minnesota Department of Natural Resources. Ice safety protocols. <https://www.dnr.state.mn.us/safety/ice/index.html>; Minnesota Department of Natural Resources. Steps for surviving immersion. <https://www.dnr.state.mn.us/safety/ice/survival.html>; National Weather Service. Winter Weather Safety: Ice and Frost. <https://www.weather.gov/safety/winter-ice-frost>; Canadian Centre for Occupational Health and Safety. Working on or near Ice Covered Water - Basic Information. <https://www.ccohs.ca/oshanswers/hsprograms/work_ice.html>; National Disaster Management Authority. <https://ndma.gov.in/>"
     },
     "1-46": {
       "sources": "NIOSH (1994). Worker Deaths in Confined Spaces: A Summary of NIOSH Surveillance and Investigative Findings (DHHS (NIOSH) Publication No. 94-103), pp. 20, 22. <https://web.archive.org/web/20230308204907/https://www.cdc.gov/niosh/docs/94-103/pdfs/94-103.pdf>; NIOSH (1986). Request for Assistance in Preventing Occupational Fatalities in Confined Spaces (DHHS (NIOSH) Publication No. 86-110). <https://web.archive.org/web/20230611112004/https://www.cdc.gov/niosh/docs/86-110/default.html>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>; World Health Organization. <https://www.who.int/>; Ministry of Labour and Employment. <https://labour.gov.in/>"
     },
     "1-48": {
-      "sources": "Liu Z et al. (2026). Controlling the Storage Time Is an Effective Measure to Reduce the Risk of Bongkrekic Acid Poisoning Caused by Wet Rice Noodles. Foodborne Pathogens and Disease, 23(7), 468-472. <https://doi.org/10.1089/fpd.2024.0131>; Food Safety and Standards Authority of India. <https://www.fssai.gov.in/>"
+      "cost": [
+        [
+          " (such as suantangzi)",
+          ""
+        ]
+      ],
+      "inPlainWords": "Black fungus and tremella (silver ear) soaked for hours, fresh wet rice noodles kept at room temperature, and home-fermented corn flour can all grow a bacterium, Burkholderia gladioli pathovar cocovenenans, that produces bongkrekic acid, a lethal toxin. It cannot be broken down by 100°C boiling or pressure cooking, and no medical antidote exists. Indian kitchens ferment rice, dal and corn, and leftover soaked fungus or noodles are common, so the risk is preparative habit rather than any particular dish.",
+      "benefit": "Bongkrekic acid is produced when oil-rich plant material is fermented in warm conditions, or when wet rice noodles stand at room temperature for hours. It is heat-stable and resistant to boiling and pressure cooking, and no specific antidote exists; care is supportive — fluids, and intensive care for the severe cases, which are often fatal. The risk sits in everyday practice: a batch of home-fermented corn or rice left standing through a hot afternoon, wet rice noodles or soaked fungus kept outside the refrigerator, and fungus soaked far longer than the recipe needs. FSSAI's contaminant regulations set limits for packaged food and require manufacturers to control the hazard, but a batch fermented or soaked at home is outside any inspection, so the only control is the one you apply in your own kitchen.",
+      "caveats": "Dried black fungus requires only 1 to 2 hours of cold-water soaking; market guidelines stipulate soaking should never exceed 8 hours. If soaked fungus feels slimy, loses elasticity, gives off a sour or unpleasant odor, or the soaking water turns turbid, discard the whole batch. If vomiting, dizziness or profound weakness appear after eating, do not wait to see how it goes: go to a hospital emergency department immediately and take the leftover food or its container with you. Anyone who shared the meal should be medically evaluated even if they feel well so far. Wild toxic mushrooms are covered in Rule 5 of this chapter.",
+      "sources": "Liu Z et al. (2026). Controlling the Storage Time Is an Effective Measure to Reduce the Risk of Bongkrekic Acid Poisoning Caused by Wet Rice Noodles. Foodborne Pathogens and Disease, 23(7), 468-472. <https://doi.org/10.1089/fpd.2024.0131>; Food Safety and Standards Authority of India. <https://www.fssai.gov.in/>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>; World Health Organization. <https://www.who.int/>"
     },
     "1-43": {
       "caveats": "Grade B is assigned because while trials conclusively prove that direct inquiry causes no harm, trials cannot ethically measure reductions in completed suicides. Benefit magnitude is rated Low because it reflects surrogate endpoints (ideation frequency rather than absolute mortality counts). Most trial protocols utilized clinical interviews or standardized screening questionnaires rather than informal peer conversations, though clinical guidelines generalize this finding to friends and family. If someone confirms they are having suicidal thoughts, do not leave them unattended: stay with them, connect them immediately to a crisis helpline (Tele-MANAS on 14416, or 112 if it is an emergency), and remove access to lethal means (medications, sharp objects, chemicals), as outlined in Chapter 1, Rule 25. If they express intent to harm others or have active preparations underway, immediate emergency services or hospital evaluation is necessary, as described in Chapter 8, Rule 15. The interval between acute ideation and action is often mere minutes, as noted in Chapter 1, Rule 32. Primary beneficiaries are family members, partners, friends, and colleagues."
+    },
+    "1-20": {
+      "cost": [
+        [
+          "One shot costs 50 to 150 yuan.",
+          "One shot costs about ₹700 to ₹2,100."
+        ]
+      ],
+      "inPlainWords": [
+        [
+          "for just 50 to 150 yuan",
+          "for about ₹700 to ₹2,100"
+        ]
+      ]
+    },
+    "1-21": {
+      "cost": "The recombinant shingles vaccine requires two doses, costing roughly ₹42,600 to ₹56,800 in total. This expense must be paid out of pocket.",
+      "inPlainWords": [
+        [
+          "both doses cost several thousand yuan",
+          "both doses cost tens of thousands of rupees"
+        ]
+      ]
+    },
+    "1-23": {
+      "cost": "The carbon-13 or carbon-14 breath test costs ₹1,400 to ₹2,800. Eradicating the bacteria requires taking four different medications for two weeks; the medication cost for that period is ₹2,800 to ₹7,100. The main difficulty is ensuring the full two-week course of medication is taken on schedule."
+    },
+    "1-34": {
+      "inPlainWords": [
+        [
+          "A trauma ICU in southern Xinjiang",
+          "evaluated patients who fell from heights.",
+          "A trauma ICU followed patients who fell from heights over a little more than four years."
+        ]
+      ],
+      "benefit": [
+        [
+          "Nationwide, the average cost per hospital stay in 2024",
+          "or 27.5% of the total.",
+          ""
+        ]
+      ],
+      "caveats": [
+        [
+          "The average national hospital cost is an overall figure",
+          "for comparison.",
+          ""
+        ]
+      ]
+    },
+    "1-42": {
+      "cost": [
+        [
+          "cost $15–$30.",
+          "cost roughly ₹500–₹2,000."
+        ]
+      ]
+    },
+    "1-44": {
+      "cost": [
+        [
+          "A standard ECG costs just a few dozen yuan (under $10).",
+          "A standard ECG costs just a few hundred rupees."
+        ]
+      ]
+    },
+    "1-47": {
+      "cost": "A standard diagnostic gastroscopy costs a few thousand rupees at a private hospital and less at a government one; painless gastroscopy with sedation costs a few thousand rupees more, varying by city. Patients must fast overnight, occupying half a day. Sedated procedures require an accompanying adult. The primary physical discomfort is the passing of the endoscope through the throat during unsedated procedures.",
+      "benefit": [
+        [
+          "The 2024 screening protocols issued by",
+          "any of the following:",
+          "Screening programmes define high-risk criteria starting at age 45 with any of the following:"
+        ],
+        [
+          "residence in high-incidence counties",
+          "residence in a high-incidence area"
+        ],
+        [
+          "Screening is recommended between ages 45 and 74",
+          "outside high-risk groups.",
+          "Screening is recommended between ages 45 and 74, using endoscopy as the primary modality, generally performed every 5 years, and those guidelines explicitly advise against population screening outside high-risk groups. India runs no population gastroscopy screening programme: the National Programme for Prevention and Control of Cancer, Diabetes, Cardiovascular Diseases and Stroke screens for oral, breast and cervical cancers, not gastric or oesophageal cancer, so this is a decision to discuss with a gastroenterologist rather than a test to wait for."
+        ],
+        [
+          "A population-based cohort study across six high-incidence regions in China",
+          "A population-based cohort study across six high-incidence regions of East Asia"
+        ],
+        [
+          "In northern China, the ESECC",
+          "In a high-incidence rural region, the ESECC"
+        ]
+      ],
+      "caveats": [
+        [
+          "The 2022 national guidelines cite potential harms",
+          "Guidelines for endoscopic screening cite potential harms"
+        ],
+        [
+          "Residents can inquire with local CDCs or county hospitals",
+          "qualifies as high-incidence.",
+          "India issues no area-based screening invitation, so a person with a family history of the disease or a long-standing H. pylori infection should ask a gastroenterologist whether an endoscopy is warranted."
+        ]
+      ],
+      "sources": "Jun JK et al. (2017). Effectiveness of the Korean National Cancer Screening Program in Reducing Gastric Cancer Mortality. Gastroenterology, 152(6), 1319-1328. <https://doi.org/10.1053/j.gastro.2017.01.029>; Zhang X et al. (2018). Endoscopic Screening in Asian Countries Is Associated With Reduced Gastric Cancer Mortality: A Meta-analysis. Gastroenterology, 155(2), 347-354. <https://doi.org/10.1053/j.gastro.2018.04.026>; Hibino M et al. (2023). Effectiveness of gastric cancer screening on gastric cancer incidence and mortality. Lancet Regional Health Western Pacific. <https://doi.org/10.1016/j.lanwpc.2023.100884>; Chen R et al. (2021). Effectiveness of one-time endoscopic screening programme in prevention of upper gastrointestinal cancer: a multicentre population-based cohort study. Gut, 70(2), 251-260. <https://doi.org/10.1136/gutjnl-2019-320200>; Wei WQ et al. (2015). Long-Term Follow-Up of a Community Assignment, One-Time Endoscopic Screening Study of Esophageal Cancer. Journal of Clinical Oncology, 33(17), 1951-1957. <https://doi.org/10.1200/JCO.2014.58.0423>; Liu M et al. (2024). Nine-Year Report of the Endoscopic Screening for Esophageal Cancer (ESECC) Randomized Trial. Journal of Clinical Oncology. <https://doi.org/10.1200/JCO.23.01235>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>; Indian Council of Medical Research. <https://www.icmr.gov.in/>"
     }
   }
 }

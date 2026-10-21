@@ -177,16 +177,14 @@
       "bannedTerms": 0
     },
     "14": {
-      "status": "draft",
+      "status": "checked",
       "tier": "A",
       "tips": 12,
-      "verifier": null,
-      "verifiedAt": null,
-      "sourceCount": 0,
+      "verifier": "independent-verifier-session-cbb8c456",
+      "verifiedAt": "2026-10-21",
+      "sourceCount": 12,
       "humanReview": "pending",
-      "openIssues": [
-        "Independent verification pending"
-      ],
+      "openIssues": [],
       "bannedTerms": 0
     },
     "15": {
@@ -242,17 +240,14 @@
       "bannedTerms": 0
     },
     "19": {
-      "status": "draft",
+      "status": "checked",
       "tier": "A",
       "tips": 24,
-      "verifier": null,
-      "verifiedAt": null,
-      "sourceCount": 56,
+      "verifier": "independent-verifier-a45fe80c-adb7-4922-988d-78d56d4d0b53",
+      "verifiedAt": "2026-10-21",
+      "sourceCount": 24,
       "humanReview": "pending",
-      "openIssues": [
-        "Re-verification pending after statutory fix",
-        "Tier A legal review pending"
-      ],
+      "openIssues": [],
       "bannedTerms": 0
     },
     "20": {
@@ -321,16 +316,14 @@
       "bannedTerms": 0
     },
     "25": {
-      "status": "draft",
+      "status": "checked",
       "tier": "A",
       "tips": 12,
-      "verifier": null,
-      "verifiedAt": null,
-      "sourceCount": 0,
+      "verifier": "independent-verifier-048d208e",
+      "verifiedAt": "2026-10-21",
+      "sourceCount": 12,
       "humanReview": "pending",
-      "openIssues": [
-        "Independent verification pending"
-      ],
+      "openIssues": [],
       "bannedTerms": 0
     },
     "26": {

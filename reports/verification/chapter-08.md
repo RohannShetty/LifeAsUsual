@@ -1,60 +1,99 @@
 # Verification: Chapter 8 - Law and Property Safety
 
-Verifier: Independent verification agent
-Date: 21 October 2026
-Access date: 21 October 2026
+Verifier: independent-verifier-9600c4f1-c66a-4988-8379-91adcaffe41a
+Date: 2026-10-21
+Access date: 2026-10-21
 Chapter file: data/en-in/chapters/08-law-and-property-safety.json
-Manifest status: unchanged - 46 tips; chapter rewriteStatus draft, every tip reviewStatus draft. No chapter, manifest or source file was edited.
+Manifest status: draft (recommend checked)
 
 ## Method
 
-All 46 tips were read, with the twelve HIGH RISK rows in the pack checked against BNS 2023, BNSS 2023, POCSO 2012, the Limitation Act 1963, the Consumer Protection Act 2019, the IT Act 2000 and the Contract Act 1872. Hotlines were checked against government pages. In this chapter the bodies have been rewritten correctly, but seven titles still state Chinese-law rules - and the title is what a reader acts on. Title-level errors are therefore treated as blocking.
+Read all 46 tips in data/en-in/chapters/08-law-and-property-safety.json and cross-read
+reports/source-packs/chapter-8.md. The earlier reports/verification/chapter-08.md failed
+seven tips (8-6, 8-13, 8-31, 8-33, 8-35, 8-39, 8-45) for carrying Chinese criminal-law
+content; each was re-checked against the current text as a regression test and all seven
+titles are now rewritten.
 
-Access results: cybercrime.gov.in returned HTTP 200 but is a JavaScript SPA whose text is only "Cybercrime Portal", so 1930 could not be text-verified there; 112/1930 are treated as widely published and non-blocking. indiacode.nic.in returned HTTP 403, so section numbers below rest on the BNS/BNSS/CPA text as published and on the pack's citations. Tele-MANAS 14416 was confirmed on a Government of Assam page (200). 1915 and 1098 are the published national numbers.
+Instruments: Indian Kanoon for BNSS 2023 ss.173, 175 and 396, BNS 2023 ss.37, 44, 77, 78,
+115, 117, 118 and 356, the Consumer Protection Act 2019, the Limitation Act 1963, the
+Indian Contract Act 1872, the Protection of Women from Domestic Violence Act 2005 and the
+Legal Services Authorities Act 1987; devgan.in section pages for BNS titles; the Motor
+Vehicles Act 1988 ss.134, 134A, 184, 185; the Credit Information Companies (Regulation)
+Act 2005; the Companies Act 2013 s.164; the Prevention of Corruption Act 1988; and the
+published helplines 112, 181, 1091, 1098, 14416, 1915 and 1930.
+
+Access failures: indiacode.nic.in returned HTTP 403 (Akamai "Access Denied") for every
+attempt; pib.gov.in and labour.gov.in returned 403; PDFs (thc.nic.in, MHA, MSJE) return
+"unsupported content type application/pdf" and were readable only as indexed snippets;
+devgan.in returned intermittent 503s; nalsa.gov.in and indiankanoon.org responded
+normally. The BNSS limitation-of-cognizance provision (s.514, successor to CrPC s.468)
+could not be located in indexed full text, which is why 8-6 is marked with a note rather
+than credited to a section it does not cite.
 
 ## Claim checks
 
 | Tip | Claim | Source checked | Section | Accessed | Pass? | Note |
 | --- | --- | --- | --- | --- | --- | --- |
-| 8-2 | On a scam, call 112 or 1930 for a stop-payment; do not investigate first | ERSS 112; cybercrime.gov.in / CFCFRMS 1930 | body | 2026-10-21 | yes | 112 is ERSS; 1930 is the cyber-fraud financial helpline. Correct sequence. |
-| 8-3 | Never trust unsolicited calls, share OTPs/PINs or click links; verify transfer requests | RBI awareness material; IT Act 2000 | body | 2026-10-21 | yes | Advice only; no invented scheme or number. |
-| 8-12 | Unpaid wages/wrongful dismissal: labour commissioner and IR Code route, not revenge | IR Code 2020; Code on Wages 2019 | body | 2026-10-21 | yes | Correct forum; old ID Act route no longer applies. |
-| 8-14 | Threat to kill/die together is a medical emergency: leave, remove keys/knives, call 14416 | Tele-MANAS; NMHP | body | 2026-10-21 | yes | 14416 confirmed 24x7 on dhubri-mch.assam.gov.in. |
-| 8-15 | "No one will be safe" / "I'll take the children": danger signal; call 1098 or 112 | Childline 1098; DV Act 2005; JJ Act 2015 | body | 2026-10-21 | yes | 1098 is the national child helpline; 112 ERSS. Correct. |
-| 8-19 | Three years for most civil claims, two years for a consumer complaint, shorter for some labour claims | Limitation Act 1963; CPA 2019 s.69 | body | 2026-10-21 | yes | Art. 113 (3 years) and s.69 (2 years) correctly stated. |
-| 8-27 | Ask for a written quote and stay present during repairs/renovations | CPA 2019; Indian Contract Act 1872 | body | 2026-10-21 | yes | Advice; no legal overclaim. |
-| 8-32 | Extortion/sextortion: do not pay, preserve records, call police (112/1930) | BNS 2023 extortion; IT Act 2000 s.67 | body | 2026-10-21 | yes | Correct offences; no invented provision. |
-| 8-36 | Victim compensation: 1915 National Consumer Helpline, suit or lawyer; never meet alone | CPA 2019; NCH 1915 | body | 2026-10-21 | yes | 1915 is the National Consumer Helpline. |
-| 8-37 | Cyberbullying: preserve evidence, then injunction/private complaint/police | IT Act 2000 ss.66E, 67; BNS 2023 | body | 2026-10-21 | yes | No foreign instrument. |
-| 8-44 | A wager is not enforceable and is not a joint marital debt | Indian Contract Act 1872 s.30 | body | 2026-10-21 | yes | s.30 makes wagers void; correct. |
-| 8-6 | TITLE: self-surrender cuts a sentence by up to 40%, and the "statute of limitations" defence does not exist | BNS 2023; BNSS 2023 | title | 2026-10-21 | no | No fixed 40% discount exists in Indian law (sentence mitigation is discretionary), and BNSS Chapter XXXVI does provide criminal limitation. The body contradicts the title. |
-| 8-13 | TITLE: deliberately driving into a crowd is "endangering public safety by dangerous means", minimum three years, death if anyone dies | BNS 2023 | title | 2026-10-21 | no | That offence is Chinese (以危险方法危害公共安全罪). India has no such offence; the body cites only BNS murder/attempt provisions. |
-| 8-31 | TITLE: do not have sex with someone "under 14" | POCSO Act 2012 s.2(1)(d) | title | 2026-10-21 | no | A child under POCSO is anyone under 18. The body says 18; the title says 14, which is the Chinese age line and is dangerous. |
-| 8-33 | TITLE: false accusation gives up to 5 days' detention for minor violations, up to 3 years for criminal acts | BNS 2023 s.356; CrPC/BNSS | title | 2026-10-21 | no | India has no 5-day public-security detention. Defamation under BNS s.356 carries up to 2 years simple imprisonment, not 3 years. |
-| 8-35 | TITLE: state compensation for wrongful detention is "calculated on a daily basis" | BNS/BNSS; State Compensation Law (China) | title | 2026-10-21 | no | The daily-rate formula is China's State Compensation Law. India has no statutory daily-rate compensation scheme; compensation is awarded by courts on facts. |
-| 8-39 | TITLE: reconsideration within 7 days, review within another 7 days, and "the procuratorate can order the police to open a case" | BNSS 2023 ss.173, 175 | title | 2026-10-21 | no | "Procuratorate" is a Chinese institution; India has no 7-day reconsideration/review timetable. The body correctly describes the BNSS FIR, Superintendent and magistrate routes. |
-| 8-45 | TITLE: an "AB Loan" scam where you become the legal borrower | BNS 2023; Contract Act 1872 | title | 2026-10-21 | no | "AB Loan" (AB贷) is a Chinese scam label. The body's advice is generic and correct, but the title keeps the source-edition term. |
+| 8-1 | MV Act 1988 s.134 duty to stop and report; s.134A Good Samaritan protection | Motor Vehicles Act 1988 | ss.134, 134A | 2026-10-21 | yes | Both sections exist and say what the tip says. 112 is the ERSS number. |
+| 8-2 | 1930 cyber-fraud helpline; National Cyber Crime Reporting Portal; BNS 2023 and IT Act 2000 for cheating and identity misuse | cybercrime.gov.in; BNS/IT Act titles | — | 2026-10-21 | yes | 1930 is the correct national cyber-fraud number; the portal is real. |
+| 8-5 | BNSS 2023 sets arrest, bail and 24-hour production before a magistrate; NALSA 15100 legal aid | BNSS 2023; nalsa.gov.in | Production within 24 hours | 2026-10-21 | yes | 24-hour production is BNSS s.58 read with Article 22(2). |
+| 8-6 | Voluntary surrender and cooperation can help at sentencing but no fixed discount; criminal cases do have limitation periods; Limitation Act 1963 for civil claims | Limitation Act 1963; BNSS 2023 | Limitation Act 1963 | 2026-10-21 | yes | Regression fixed - the invented 40% self-surrender discount and "no limitation period" claim are gone. Note: the criminal limitation periods sit in BNSS s.514; the tip does not cite it and states no period, so no number is at risk. |
+| 8-7 | MV Act 1988 s.185 alcohol above 30 mg per 100 ml of blood; s.184 dangerous driving; BNS for death by negligence | Motor Vehicles Act 1988 | ss.184, 185 | 2026-10-21 | yes | 30 mg/100 ml is the statutory threshold in s.185. |
+| 8-8 | BNS 2023, PMLA 2002 and IT Act 2000 cover money-mule accounts; bank freeze | PMLA 2002; BNS 2023 | — | 2026-10-21 | yes | Correct in outline; no invented punishment. |
+| 8-9 | Credit Information (Companies) Regulation Act 2005 and RBI directions govern credit bureaus; free annual report | CICRA 2005 | — | 2026-10-21 | yes | Note: the statute's short title is the Credit Information Companies (Regulation) Act, 2005; the chapter's word order is wrong but identifiable. One free report per bureau per year is the CICRA rule. |
+| 8-10 | BNSS FIR; compoundable offences may be settled with the court's permission; a first strike is not self-defence | BNSS 2023; BNS 2023 private defence | — | 2026-10-21 | yes | Compoundable-offence settlement with court permission is correct. |
+| 8-11 | "Sections 34 to 38 of the BNS, 2023 set out the right of private defence, including the limits and the exceptions" | Indian Kanoon, BNS 2023 ss.37-44 | BNS ss.34-44 | 2026-10-21 | yes | Note, not blocking: private defence runs from s.34 to s.44 (s.37 lists acts with no right of defence; s.44 covers harm to an innocent person). The range "34 to 38" is under-inclusive and omits the very limits the tip mentions. |
+| 8-12 | Code on Wages 2019 claims; Industrial Relations Code 2020 adjudication; Consumer Protection Act 2019; LSA 1987; three-year civil limitation | Indian Kanoon, CPA 2019 and Limitation Act 1963 | CPA 2019; Limitation Act 1963 | 2026-10-21 | yes | Three years for a civil claim is correct; labour disputes have their own limits as stated. |
+| 8-13 | Driving into a crowd is murder or attempted murder and death remains a possible sentence | BNS 2023 murder provisions | BNS s.103 | 2026-10-21 | yes | Regression fixed - the Chinese "endangering public safety by dangerous means" and its fixed three-year minimum are gone. Death remains a possible sentence for murder under BNS s.103. |
+| 8-14 | Tele-MANAS 24-hour helpline 14416; Mental Healthcare Act 2017 rights and advance directive | Tele-MANAS; MHCA 2017 | — | 2026-10-21 | yes | 14416 is the correct Tele-MANAS number; the advance-directive right is in the 2017 Act. |
+| 8-15 | Protection of Women from Domestic Violence Act 2005 orders; protection officer; JJ Act 2015; 112 | PWDVA 2005; JJ Act 2015 | PWDVA ss.12, 18-22 | 2026-10-21 | yes | Protection, residence, monetary relief and custody orders are all available under the 2005 Act. |
+| 8-16 | BNS 2023 defamation, criminal intimidation; IT Act 2000 obscene publication; IT Rules 2021 grievance officer | BNS 2023 s.356; IT Act 2000 s.67; IT Rules 2021 | s.356 | 2026-10-21 | yes | Correct. |
+| 8-17 | Indian Contract Act 1872: contract without free consent voidable | Contract Act 1872 | ss.14, 19 | 2026-10-21 | yes | Coercion, undue influence, fraud and misrepresentation are the s.14 vitiating factors. |
+| 8-18 | Guarantor liability under the Contract Act; NI Act 1881 s.138 for a bounced cheque; three-year limitation | Contract Act 1872; NI Act 1881; Limitation Act 1963 | s.138 NI Act | 2026-10-21 | yes | Correct. |
+| 8-19 | Three years for civil claims, two years for a consumer complaint; twelve years for immovable property | Limitation Act 1963; CPA 2019 s.69 | CPA s.69; Limitation Act Art. 65 | 2026-10-21 | yes | Both periods are right. |
+| 8-20 | CPC 1908 Order 21 execution: attachment, arrest; IBC 2016 route | CPC 1908; IBC 2016 | Order 21 | 2026-10-21 | yes | Correct. |
+| 8-21 | Order 21 attachment; Income-tax Act 1961 and GST Act attachment powers; IBC resolution | CPC 1908; IT Act 1961; CGST Act 2017 | Order 21 | 2026-10-21 | yes | Correct in outline. |
+| 8-22 | Platform grievance officer; National Consumer Helpline 1915; CPA 2019 two-year limit | CPA 2019; National Consumer Helpline | s.69 | 2026-10-21 | yes | 1915 is the correct National Consumer Helpline number. |
+| 8-23 | Contract Act 1872, Transfer of Property Act 1882 and Registration Act 1908 govern gifts; Dowry Prohibition Act 1961 | TPA 1882; Registration Act 1908 | TPA s.122 | 2026-10-21 | yes | Correct. |
+| 8-24 | Dowry Prohibition Act 1961 prohibits giving, taking and demanding dowry; BNS 2023 dowry death | Dowry Prohibition Act 1961; BNS 2023 s.80 | s.80 BNS | 2026-10-21 | yes | Correct; no penalty figure stated. |
+| 8-25 | Hindu Marriage Act 1955, Special Marriage Act 1954 and Indian Succession Act 1925 govern property and succession for different communities | Statutes named | — | 2026-10-21 | yes | Correct; pre-marital property is generally separate under personal law as the tip says. |
+| 8-26 | Special Marriage Act 1954 notice and objection; neither party may have a living spouse | SMA 1954 | ss.5, 6, 14 | 2026-10-21 | yes | Correct. |
+| 8-27 | Consumer Protection Act 2019 covers deficient service and unfair trade practice | CPA 2019 | — | 2026-10-21 | yes | Correct. |
+| 8-28 | Companies Act 2013 director duties; disqualification under s.164 for failure to file returns | Companies Act 2013 | s.164(2) | 2026-10-21 | yes | s.164(2) disqualifies a director of a company that has not filed financial statements or annual returns for three years. |
+| 8-29 | NDPS Act 1985 and Customs Act 1962 apply to contraband carried for another person | NDPS 1985; Customs Act 1962 | — | 2026-10-21 | yes | Correct in outline; no invented punishment. |
+| 8-30 | Owner liable in tort for animal injury; Prevention of Cruelty to Animals Act 1960; state municipal leash rules | PCA 1960; tort liability | — | 2026-10-21 | yes | Correct; no invented statutory leash rule claimed. |
+| 8-31 | POCSO Act 2012: a child is anyone under 18; intoxicated or unconscious person cannot consent | POCSO 2012 s.2(d); BNS 2023 consent definition | POCSO s.2(d) | 2026-10-21 | yes | Regression fixed - the old "under 14" threshold is gone; 18 is correct. |
+| 8-32 | Extortion and criminal intimidation under BNS 2023; IT Act for private images; IT Rules 2021 grievance officer | BNS 2023; IT Act 2000 | — | 2026-10-21 | yes | Correct in outline. |
+| 8-33 | False accusation: civil defamation and false evidence; "not five days' detention, and defamation carries up to two years" | Indian Kanoon, BNS 2023 s.356 | s.356 | 2026-10-21 | yes | Regression fixed - the Chinese five-day detention and three-year defamation are gone. BNS s.356 provides up to two years, or fine, or both. |
+| 8-35 | Compensation for wrongful arrest under BNSS 2023 and Supreme Court guidelines; s.396 BNSS victim compensation; court awards on the facts | Indian Kanoon, BNSS 2023 s.396 | s.396 | 2026-10-21 | yes | Regression fixed - the fixed daily-rate formula is gone. Note: s.396 is the victim-compensation scheme (State/DLSA, on court recommendation), while compensation for a wrongful arrest rests on the Supreme Court's constitutional-tort principles; the tip uses s.396 only as context, which is acceptable. |
+| 8-36 | Victim compensation routes; 1915; CPA 2019; LSA 1987 free legal aid | CPA 2019; LSA 1987 | — | 2026-10-21 | yes | Correct; no invented compensation table. |
+| 8-37 | Cyberbullying: platform tools, injunction, BNS 2023 defamation/criminal intimidation/stalking, IT Rules 2021 | BNS 2023 s.78; IT Rules 2021 | s.78 | 2026-10-21 | yes | Correct. |
+| 8-38 | Insurance Act 1938 and policy terms exclude a claim where the beneficiary caused the death; murder under BNS | Insurance Act 1938; BNS 2023 | — | 2026-10-21 | yes | Correct in principle; no invented section. |
+| 8-39 | "Section 173 of the BNSS, 2023 requires the officer in charge to register an FIR and give a copy to the informant free of cost"; "Section 175 allows a complaint to the Superintendent of Police and then to the magistrate" | Indian Kanoon, BNSS 2023 s.173 (doc/165794322) and s.175 (doc/25110765) | s.173(2) free copy; s.173(4) SP route; s.175 police power to investigate | 2026-10-21 | no | s.173(2) is correct ("given forthwith, free of cost, to the informant or the victim"). The second sentence is wrong: the Superintendent-of-Police escalation is s.173(4); s.175 is the police officer's power to investigate a cognizable case, and 175(3) lets a magistrate order investigation on an application that itself comes through s.173(4). |
+| 8-40 | Prevention of Corruption Act 1988 punishes offering and accepting a bribe; BNS 2023 abetment | PCA 1988 | ss.7, 8 | 2026-10-21 | yes | Correct. |
+| 8-41 | Bharatiya Sakshya Adhiniyam 2023 electronic evidence with certificate; a party's own recording is admissible if genuine | BSA 2023 s.63; Supreme Court recording cases | s.63 | 2026-10-21 | yes | Correct in outline; the tip does not overstate admissibility. |
+| 8-43 | PWDVA 2005 protection, residence, monetary relief and custody; 112/181; JJ Act 2015 | PWDVA 2005 | ss.12, 18-22 | 2026-10-21 | yes | Correct; 181 is the women's helpline. |
+| 8-44 | Contract Act 1872 s.30: a wager is void and no suit lies to recover it; spouse not liable for the other's independent debt | Indian Kanoon, Indian Contract Act 1872 s.30 | s.30 | 2026-10-21 | yes | s.30 makes wagering agreements void and bars suits to recover winnings. |
+| 8-45 | "If an acquaintance asks you to scan your face, stand witness for a loan or read out an SMS code, refuse: the loan becomes yours, not theirs"; Aadhaar Act 2016 and RBI KYC | Aadhaar Act 2016; RBI KYC Master Direction | — | 2026-10-21 | yes | Regression fixed - the invented "AB Loan" scam name is gone; the biometric/KYC description is accurate. |
+
+Advice-only tips without a statutory citation (8-3, 8-4, 8-34, 8-42, 8-46) were read for
+invented numbers and none contains one; 8-42 correctly limits itself to scene safety,
+BNSS cooperation and "do not film a face for social media".
 
 ## Banned-term check
 
-- JSON: 0 banned terms. Regex /China|Chinese|mainland|RMB|yuan|hukou|yibao|dibao|CNY|¥|￥/i returns no match. The residual source-edition content is in the titles: "procuratorate" (8-39) and "AB Loan" (8-45), plus the Chinese legal rules in 8-6, 8-13, 8-31, 8-33 and 8-35.
-- Rendered page: not rebuilt; the faulty strings are in the JSON titles and would render.
+- JSON: 0 banned terms - `npx tsx scripts/check-chapter.ts 8` prints "PASS: no banned term, CJK character or foreign-jurisdiction term."
+- Rendered page: not rebuilt in this pass (the site build was deliberately not run), so the rendered check is the JSON scan, which is clean.
 
 ## Safety and editorial check
 
-- No unsupported high-risk claim: FAIL - five titles state rules that are not Indian law, one gives a wrong child age, and one misstates defamation exposure.
-- No invented scheme, number or hotline: no invented hotline. "AB Loan" is a real Chinese scam label, not an Indian one.
-- No direct equivalent recorded where needed: 8-13 and 8-35 need either the Indian equivalent (murder/attempt; court-awarded compensation) or an explicit statement that no statutory equivalent exists; 8-39 needs the BNSS route only.
-- Caveats retained: yes; the bodies are notably careful and repeatedly correct the original claims - which makes the untouched titles the sole remaining defect.
+- No unsupported high-risk claim: one high-risk tip (8-39) cites the wrong section for the police-superintendent escalation; all other high-risk tips match a real instrument.
+- No invented scheme, number or hotline: no invented hotline or figure found; every number quoted (24 hours, 30 mg/100 ml, three years, two years, 1930, 1915, 181, 14416, 1091) is real.
+- No direct equivalent recorded where needed: the chapter no longer imports a Chinese rule anywhere; the seven earlier title-level imports are all corrected.
+- Caveats retained: caveats on limitation, on settlement being unenforceable for serious offences, and on recordings needing proof of genuineness are intact.
 
 ## Blocking issues
 
-- 8-6: title asserts a 40% self-surrender discount and that criminal limitation does not exist; both false, and the body says so.
-- 8-13: title imports the Chinese offence "endangering public safety by dangerous means" with a three-year minimum and death penalty.
-- 8-31: title says "under 14"; POCSO protects all children under 18.
-- 8-33: title claims up to 5 days' detention for minor violations and up to 3 years for defamation; India has neither.
-- 8-35: title says state compensation is calculated on a daily basis; that is China's rule.
-- 8-39: title cites a 7-day reconsideration and 7-day review by a "procuratorate"; none exists in India.
-- 8-45: title keeps the Chinese scam name "AB Loan".
+- 8-39: "Section 175 allows a complaint to the Superintendent of Police and then to the magistrate" is the wrong section. In the BNSS 2023 the Superintendent-of-Police escalation is s.173(4) (a person refused registration may send the substance of the information in writing to the SP, and if the SP does not investigate, apply to the magistrate); s.175 is the police officer's power to investigate a cognizable case. Correction: "Section 173(4) lets an aggrieved person write to the Superintendent of Police, and then apply to the magistrate; section 175 sets out the police officer's power to investigate."
 
 Verdict: FAIL

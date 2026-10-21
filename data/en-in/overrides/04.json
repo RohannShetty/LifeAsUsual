@@ -3,6 +3,17 @@
     "4-13": {
       "cost": "A self-help book costs about ₹300–₹1,000, and some are free. It takes about ten weeks of effort: one chapter a week plus one related exercise.",
       "caveats": "The trial participants were Swedish adults using Swedish-language materials, so the size of the benefit may differ with an English or Hindi adaptation. The materials use standard cognitive-behavioural components: behavioural activation, behavioural experiments, stimulus control (as in Section 10, which advises moving unwanted items out of reach), and work on motivation and work strategies. If procrastination comes with significant low mood or anxiety, follow Section 3, item 18: physical activity, daylight, a regular sleep schedule, talking to someone, and Tele-MANAS on 14416."
+    },
+    "4-14": {
+      "inPlainWords": "People who pay to save time tend to report higher life satisfaction. For the same amount of money, spending it on time rather than goods brings greater immediate happiness."
+    },
+    "4-16": {
+      "benefit": "Americans aged 15 and older watch 2.6 hours of TV daily. Their total leisure time is 5.2 hours, so TV viewing consumes half of it. These figures are from 2025."
+    },
+    "4-15": {
+      "inPlainWords": "The figure that matters is already on your phone: screen time, broken down by app. No Indian regulator publishes an average daily short-video figure, so this entry does not quote one — but the arithmetic needs no survey. Cutting one hour a day frees 365 hours a year, which is nine 40-hour working weeks. Turning off notifications, setting a daily limit in the app, or deleting the app for a week are each a few minutes of work.",
+      "benefit": "India's telecom regulator publishes subscriber numbers every quarter: the country had about 1.11 billion internet subscribers at the end of June 2026 (Telecom Regulatory Authority of India, The Indian Telecom Services Performance Indicators). What no Indian regulator publishes is the average time a person spends watching short videos, so treat any confident national figure for it with suspicion. The arithmetic does not need one. One hour a day is 365 hours a year — nine 40-hour working weeks, or the equivalent of a second part-time job. Your own phone already keeps the only measurement that changes your behaviour: screen time by app. Set the limit against that number, and check it weekly rather than once.",
+      "sources": "Telecom Regulatory Authority of India, The Indian Telecom Services Performance Indicators. <https://trai.gov.in/>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>"
     }
   }
 }

@@ -40,7 +40,13 @@
       "caveats": "This measure reduces recurrence rates by roughly 55% at zero cost, making it the most cost-effective recommendation in this section according to our ranking criteria. The key metric to monitor is 24-hour urine volume, which should reach at least 2–2.5 liters — not simply the amount of water you drink. People who sweat heavily or work in hot environments need to drink even more. This trial involved only patients experiencing their first idiopathic calcium stone episode; different types of stones — such as uric acid, infection-related, or cystine stones — require different treatment approaches. Anyone with a history of kidney stones should undergo a stone composition analysis and a 24-hour urine test to determine whether medication is needed. Do not cut calcium intake to prevent stones; see section 6, item 21 for more details. Severe flank or abdominal pain during a stone episode requires immediate medical attention — drinking more water alone will not resolve it. Non-painful blood in the urine may indicate other conditions; see section 1, item 27 for further information."
     },
     "16-9": {
-      "cost": "Allopurinol is an inexpensive medicine, but the price depends on the brand, the strength and the pharmacy, so check it at a Jan Aushadhi Kendra or a licensed pharmacy. At first, blood uric‑acid levels must be checked every few weeks to adjust the dose; once stable, checks can be done every few months. For the first 3–6 months, a second medication to prevent flare‑ups is also required. The difficulty is that patients must keep taking it even when they feel no pain."
+      "cost": "Allopurinol is an inexpensive medicine, but the price depends on the brand, the strength and the pharmacy, so check it at a Jan Aushadhi Kendra or a licensed pharmacy. At first, blood uric‑acid levels must be checked every few weeks to adjust the dose; once stable, checks can be done every few months. For the first 3–6 months, a second medication to prevent flare‑ups is also required. The difficulty is that patients must keep taking it even when they feel no pain.",
+      "benefit": [
+        [
+          "The CARES trial linked allopurinol to a 22 % higher risk of all‑cause mortality (HR 1.22) and a 34 % higher risk of cardiovascular death (HR 1.34) versus allopurinol",
+          "The CARES trial linked febuxostat to a 22% higher risk of all‑cause mortality (HR 1.22) and a 34% higher risk of cardiovascular death (HR 1.34) versus allopurinol"
+        ]
+      ]
     }
   }
 }

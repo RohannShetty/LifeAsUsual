@@ -60,7 +60,7 @@
       "id": "24-3",
       "chapter": 24,
       "tip": 3,
-      "title": "Go to a major hospital via a referral from a local clinic or the hospital’s referral center — don’t turn to scalpers.",
+      "title": "Ask for a referral rather than a tout — but India has no national rule that reserves hospital appointments or beds for referred patients",
       "tags": {
         "money": "Free",
         "time": "A few hours",
@@ -73,12 +73,12 @@
       "valueTier": "Average",
       "disputed": false,
       "stillVerifying": false,
-      "cost": "No direct cost, but an extra referral step is required.",
-      "inPlainWords": "Major hospitals must set aside a portion of appointments and beds specifically for patients referred from local clinics. They must also establish a referral center or designate a dedicated department to handle referrals — this requirement will be fully implemented by 2027. Not being able to book a slot online does not mean there is no way in. Scalpers charge exorbitant fees and may even route you to the wrong department.",
-      "benefit": "Lead hospitals in tightly integrated medical networks must reserve a specific share of appointments and beds for patients referred from local clinics, and promptly admit them. Such networks consist of multiple hospitals and community health centers working together. In other words, there is a separate pool of appointments and beds reserved for referred patients, separate from the general booking pool. All hospitals must set up referral centers or assign a dedicated department by 2027.",
+      "cost": "A referral usually costs nothing extra. A tout charges a fee, and the wrong department costs you another visit.",
+      "inPlainWords": "India has no national rule that requires major hospitals to set aside a share of appointments or beds for patients referred from clinics, and no national referral-centre mandate or 2027 deadline. Some states run their own arrangements: West Bengal has asked private hospitals to keep about 10% of beds for patients referred by government hospitals, but that is one state's administrative request, not a statute, and it is not a national entitlement. Not being able to book a slot online does not mean there is no way in. Ask the hospital's outpatient or referral desk, or your own doctor, for the referral route; a tout charges an exorbitant fee and may send you to the wrong department.",
+      "benefit": "A referral from a primary health centre, a health and wellness centre or a family doctor is still the cheapest way into a specialist clinic: the note tells the specialist what has already been tried, and it can save a duplicate test. The Ayushman Bharat health and wellness centres and the government hospital's outpatient counter are the usual starting points. A referral is not a guaranteed appointment, though. Whether a hospital accepts one depends on its specialty, its own booking rules and, for a scheme patient, its empanelment. Ask at the counter what the hospital's route is and what it costs before you pay anyone.",
       "evidenceGrade": "A",
-      "sources": "Ministry of Health and Family Welfare. <https://mohfw.gov.in/>; National Health Authority. <https://nha.gov.in/>",
-      "caveats": "The reserved appointments and beds are specifically meant for referred patients. Failing to book online does not mean there is no way in. Using scalpers is not only costly but may also lead to being assigned to the wrong department. If you cannot locate the referral center, call the hospital’s service line for help.",
+      "sources": "Ministry of Health and Family Welfare. <https://mohfw.gov.in/>; National Health Authority, Ayushman Bharat. <https://nha.gov.in/>; Department of Health and Family Welfare, Government of West Bengal. <https://www.wbhealth.gov.in/>",
+      "caveats": "A referral does not create a legal right to a bed or an appointment, and no national rule obliges a hospital to hold one for you. Do not pay anyone to arrange a slot: a hospital allocates its own appointments, and a tout has no access that you do not have. In an emergency, go to the nearest emergency department rather than waiting for a referral. Keep the referral paper, the registration slip and the receipt with the rest of your records.",
       "reviewStatus": "draft"
     },
     {
@@ -260,7 +260,7 @@
       "id": "24-11",
       "chapter": 24,
       "tip": 11,
-      "title": "Thank the team with a letter or honest feedback, not cash — a cash gift to a doctor is a conduct violation, and for a government doctor a criminal risk",
+      "title": "Thank the team with a letter or honest feedback, not cash — conduct rules bar gifts from industry, and for a government doctor a cash gift can be a criminal offence",
       "tags": {
         "money": "Free",
         "time": "Quick",
@@ -274,11 +274,11 @@
       "disputed": false,
       "stillVerifying": false,
       "cost": "A letter costs nothing. A bribe costs money and can create a criminal record for the person who takes it.",
-      "inPlainWords": "Offering money to jump a queue or to get a bed does not buy you a right, and it puts the doctor at risk. In India a doctor's conduct is governed by the National Medical Commission's Registered Medical Practitioner (Professional Conduct) Regulations, 2023, and a government doctor is also a public servant under the Prevention of Corruption Act, 1988. Gratitude is not the problem: a letter to the hospital, a note naming the team, or the hospital's patient-feedback form is the right way to say thank you.",
-      "benefit": "The NMC's 2023 regulations set the professional-conduct rules for registered practitioners, including the standards on gifts, referrals and relationships with patients and industry. The Prevention of Corruption Act, 1988 applies to a public servant, and a doctor in a government hospital is one; a demand for money for a service that should be free is a matter for the hospital's vigilance officer and the anti-corruption bureau. A private hospital's own code and the consumer law apply to the rest. Feedback through the hospital's grievance cell or the state health department's portal is recorded and can change how a department runs.",
+      "inPlainWords": "Offering money to jump a queue or to get a bed does not buy you a right, and it puts the doctor at risk. In India a doctor's conduct is governed by the National Medical Commission's Registered Medical Practitioner (Professional Conduct) Regulations, 2023. The gift rule there is aimed at gifts from pharmaceutical, commercial and corporate-hospital interests rather than at a patient's thank-you, but a cash payment for a queue jump is still a conflict of interest, and a hospital's own service rules may treat it as misconduct. A government doctor is also a public servant under the Prevention of Corruption Act, 1988, so money offered or demanded for a service that should be free is a criminal risk. Gratitude is not the problem: a letter to the hospital, a note naming the team, or the hospital's patient-feedback form is the right way to say thank you.",
+      "benefit": "The NMC's 2023 regulations set the professional-conduct rules for registered practitioners, including the standards on gifts from industry and on referrals. The Prevention of Corruption Act, 1988 applies to a public servant, and a doctor in a government hospital is one; a demand for money for a service that should be free is a matter for the hospital's vigilance officer and the anti-corruption bureau. A private hospital's own code and the consumer law apply to the rest. Feedback through the hospital's grievance cell or the state health department's portal is recorded and can change how a department runs.",
       "evidenceGrade": "A",
       "sources": "National Medical Commission. <https://www.nmc.org.in/>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>; Prevention of Corruption Act, 1988. <https://www.indiacode.nic.in/>",
-      "caveats": "A gift that is refused is not a personal rejection; the doctor may be required to refuse it. Cash is different from a thank-you letter: the first can end a career and, for a government doctor, attract a criminal case. Do not offer money before treatment either — a bed, a slot or a test is allocated by the hospital's rules, and an offer can be treated as a bribe. If you believe you were asked for money, note the date, the name and the amount, and complain to the hospital's grievance officer or the state health authority; for a government hospital the vigilance officer is the route.",
+      "caveats": "A gift that is refused is not a personal rejection; the doctor may be required to refuse it. Cash is different from a thank-you letter: for a government doctor an offer or a demand can become a criminal case under the Prevention of Corruption Act, 1988, and for any doctor it is the kind of payment a hospital's own code may treat as misconduct. Do not offer money before treatment either — a bed, a slot or a test is allocated by the hospital's rules, and an offer can be treated as a bribe. If you believe you were asked for money, note the date, the name and the amount, and complain to the hospital's grievance officer or the state health authority; for a government hospital the vigilance officer is the route.",
       "reviewStatus": "draft"
     },
     {

@@ -4,7 +4,7 @@
   "title": "Accounts and Information Security",
   "intro": "Chapter 14: Accounts and Information Security",
   "edition": "india",
-  "rewriteStatus": "draft",
+  "rewriteStatus": "checked",
   "tips": [
     {
       "id": "14-1",
@@ -29,7 +29,7 @@
       "evidenceGrade": "A",
       "sources": "Doerfler P, Thomas K, Marincenko M, et al. (2019). Evaluating Login Challenges as a Defense Against Account Takeover. The World Wide Web Conference (WWW '19). <https://doi.org/10.1145/3308558.3313481>; Ministry of Electronics and Information Technology. <https://www.meity.gov.in/>",
       "caveats": "The same study also found that these verification methods occasionally block legitimate users from accessing their accounts. 52% of real users failed to log in on their first try. However, 97% of them eventually gained access. It is recommended to enable this feature on email accounts first, as most other accounts allow password recovery via email.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "14-2",
@@ -54,7 +54,7 @@
       "evidenceGrade": "C",
       "sources": "US CISA. Use Strong Passwords. <https://www.cisa.gov/secure-our-world/use-strong-passwords>; Ministry of Electronics and Information Technology. <https://www.meity.gov.in/>",
       "caveats": "If you struggle to memorize passwords, use the built-in password manager in your web browser. It stores passwords for each site for you, which is far safer than reusing the same password everywhere. Avoid saving passwords in chat apps, notes or a plain text file.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "14-3",
@@ -79,7 +79,7 @@
       "evidenceGrade": "C",
       "sources": "author’s experience, no direct literature; Reserve Bank of India. <https://www.rbi.org.in/>; CERT-In. <https://www.cert-in.org.in/>",
       "caveats": "You can set the SIM PIN under “SIM card lock” in your phone settings. The default factory codes are usually 1234 or 0000. If you enter the wrong code three times in a row, you’ll need the PUK code provided by your carrier to unlock it. After setting the PIN, be sure to write it down somewhere safe.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "14-4",
@@ -104,7 +104,7 @@
       "evidenceGrade": "C",
       "sources": "US FCC. Protect Your Smart Device. <https://www.fcc.gov/consumers/guides/protect-your-mobile-device>; The sequence of steps is based on the author’s experience; see section 7 for a replacement ID card, and section 8 about credit information for fake loans.; Department of Telecommunications, Sanchar Saathi. <https://sancharsaathi.gov.in/>",
       "caveats": "Also note the city where you registered your phone number, as customer service agents will ask for this information. You can still call carrier hotlines from someone else’s phone to block your SIM card.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "14-5",
@@ -129,7 +129,7 @@
       "evidenceGrade": "A",
       "sources": "Reserve Bank of India, customer protection circular on unauthorised electronic transactions. <https://www.rbi.org.in/>; National Cyber Crime Reporting Portal. <https://cybercrime.gov.in/>; Information Technology Act, 2000. <https://www.indiacode.nic.in/>",
       "caveats": "A delay can shift part of the liability to you. Do not share the OTP or PIN, even with a caller who claims to be from the bank. Keep the card blocked until the investigation ends.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "14-6",
@@ -154,7 +154,7 @@
       "evidenceGrade": "C",
       "sources": "author’s experience, no direct literature; Reserve Bank of India. <https://www.rbi.org.in/>; CERT-In. <https://www.cert-in.org.in/>",
       "caveats": "This feature exists in Google, Apple and Microsoft accounts, in most banking and UPI apps, and in the security settings of Android and iOS. If you spot any unfamiliar devices, simply log out from all devices and change your password.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "14-7",
@@ -179,7 +179,7 @@
       "evidenceGrade": "A",
       "sources": "Digital Personal Data Protection Act, 2023. <https://www.indiacode.nic.in/>; Ministry of Electronics and Information Technology. <https://www.meity.gov.in/>; Reserve Bank of India, customer protection. <https://www.rbi.org.in/>",
       "caveats": "The deciding factor is simple: is this data actually necessary for the service? Location is necessary for a map; a contact list is not necessary for a torch. After installing an app, open the phone's app-permission settings and turn off anything the app does not need; grant a permission when you actually use it, and prefer “only this time” to “while using the app”. If an app will not work unless you hand over data that is plainly unrelated to what it does, that is a reason to use another app, and you can complain to the Data Protection Board of India, which the Act sets up to hear such complaints.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "14-8",
@@ -204,7 +204,7 @@
       "evidenceGrade": "A",
       "sources": "Digital Personal Data Protection Act, 2023. <https://www.indiacode.nic.in/>; Ministry of Electronics and Information Technology. <https://www.meity.gov.in/>; Reserve Bank of India, KYC Master Direction. <https://www.rbi.org.in/>",
       "caveats": "The right to erasure stops where another law requires retention: a bank keeps KYC records under the RBI's master directions, a company keeps tax and company-law records, and an investigation can put a hold on data. Deactivating an account is not the same as erasing the data, so ask for both, in writing. Before you switch phones or sell a device, log out of every account, unlink them and factory-reset the handset. The Act gives you a complaint route and penalties, not compensation; a claim for money would need a separate civil suit. The law cannot retrieve data that has already leaked.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "14-9",
@@ -229,7 +229,7 @@
       "evidenceGrade": "A",
       "sources": "Digital Personal Data Protection Act, 2023. <https://www.indiacode.nic.in/>; Aadhaar Act, 2016. <https://www.indiacode.nic.in/>; Unique Identification Authority of India. <https://uidai.gov.in/>; Reserve Bank of India, KYC Master Direction. <https://www.rbi.org.in/>; Ministry of Electronics and Information Technology. <https://www.meity.gov.in/>",
       "caveats": "Common requests come from apartment gates, gyms, hotels and rental platforms. When you are told “the system only does face recognition”, ask for the alternative and put the request in writing; a card, a PIN, an OTP or a photo-ID check usually exists. India has no rule that bans cameras in changing rooms, but filming a person in a private space without consent is the offence of voyeurism under the Bharatiya Nyaya Sanhita, 2023, and the data protection Act applies to whatever is captured. Financial and government services may have their own rules. Unlike a password, a face cannot be changed after a leak, so it deserves more caution. Your rights to see and erase the data are covered in item 8.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "14-10",
@@ -254,7 +254,7 @@
       "evidenceGrade": "B",
       "sources": "Liu H, Shou C, Wen H, Chen Y, Fang RJ, Feng Y. (2026). Your Agent Is Mine: Measuring Malicious Intermediary Attacks on the LLM Supply Chain. arXiv:2604.08407. <https://arxiv.org/abs/2604.08407>; CERT-In. <https://www.cert-in.org.in/>; Ministry of Electronics and Information Technology. <https://www.meity.gov.in/>",
       "caveats": "Rated Grade B because it relies on a single empirical preprint prior to peer-reviewed publication. The majority of evaluated relays were free public endpoints, with only 28 commercial services tested, precluding an exact statistical percentage of compromised market share. Some media reports mistakenly exaggerated the test wallet theft to $500,000; the actual loss reported in the paper was under $50. Benefit is rated medium due to the severity of credential leaks and device takeover risks, though individual financial losses vary. If you have previously routed sensitive requests through unknown proxies, immediately revoke and regenerate affected API keys with the official model provider, as well as any exposed cloud provider and code repository access tokens. When routing through third-party proxies, never grant AI agents unreviewed autonomous command execution—manually inspect every shell command before confirmation. For criminal liabilities associated with operating unauthorized proxy relays, see Chapter 11, Rule 19.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "14-11",
@@ -279,7 +279,7 @@
       "evidenceGrade": "C",
       "sources": "Department of Telecommunications, Sanchar Saathi. <https://sancharsaathi.gov.in/>; Reserve Bank of India, KYC. <https://www.rbi.org.in/>; TransUnion CIBIL. <https://www.cibil.com/>; Aadhaar Act, 2016. <https://www.indiacode.nic.in/>",
       "caveats": "A family member may have used your ID for a SIM; ask before reporting. A closed account can still show for a month. Do not share an OTP with anyone who offers to 'check' your SIM.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     },
     {
       "id": "14-12",
@@ -304,7 +304,7 @@
       "evidenceGrade": "C",
       "sources": "Telecom Regulatory Authority of India, mobile number portability. <https://www.trai.gov.in/>; Department of Telecommunications, Sanchar Saathi. <https://sancharsaathi.gov.in/>; Reserve Bank of India, KYC Master Direction. <https://www.rbi.org.in/>; Ministry of Electronics and Information Technology. <https://www.meity.gov.in/>",
       "caveats": "Start with the accounts that can move money — bank, UPI, cards, demat, insurance — and only then the social and shopping accounts. Keep the old number alive on the cheapest plan for one to two months so that a forgotten verification code still reaches you, and forward calls if the operator allows it. Check the connections in your name on Sanchar Saathi before you close anything. If a number is already disconnected, the operator cannot recover the SMS and you will have to prove your identity to each provider another way, which is slow. Managing unauthorised device logins is covered in Chapter 14, Rule 6; wiping an old phone before selling it is covered in Rule 8.",
-      "reviewStatus": "draft"
+      "reviewStatus": "independently-checked"
     }
   ]
 }
