@@ -1,0 +1,360 @@
+{
+  "chapter": 17,
+  "slug": "elderly-at-home",
+  "title": "Elderly at Home",
+  "intro": "Chapter 17: Elderly at Home",
+  "edition": "india",
+  "rewriteStatus": "draft",
+  "tips": [
+    {
+      "id": "17-1",
+      "chapter": 17,
+      "tip": 1,
+      "title": "While the elderly are still lucid, designate a future guardian in writing",
+      "tags": {
+        "money": "Small cost",
+        "time": "Quick",
+        "willpower": "Some",
+        "benefit": "Large",
+        "scope": "Money",
+        "audience": []
+      },
+      "costScore": 2,
+      "valueTier": "High",
+      "disputed": false,
+      "stillVerifying": false,
+      "cost": "It costs only a few hundred rupees to have a notarized document drawn up at a notary office. A single conversation with the elderly person is enough to settle the matter. The real difficulty lies in bringing it up — you must directly discuss the day when they will no longer be able to make decisions for themselves.",
+      "inPlainWords": "While an elderly person still has a clear mind, it’s worth spending a few hundred rupees to have a written document notarized, naming who will serve as their guardian. Without such a document, once they lose decision-making capacity, a court must decide who gets to sign on their behalf and manage their finances. If family members disagree, the process can drag on even longer.",
+      "benefit": "Under civil law, adults who are mentally sound and capable of independent decisions (legally termed “adults with full civil capacity”) may proactively arrange for a future guardian through mutual agreement. This person can be a close relative or any willing individual or organization. Such an arrangement must be formalized in writing. When the person later loses all or part of their decision-making ability, the designated individual assumes responsibility. Absent this document, guardianship must be assigned by a court.",
+      "evidenceGrade": "A",
+      "sources": "Ministry of Social Justice and Empowerment. <https://socialjustice.gov.in/>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>",
+      "caveats": "This arrangement is known as “voluntary guardianship,” meaning the guardian is chosen by the individual themselves, taking precedence over the standard legal order of guardianship. It is especially important for elderly people living alone, whose children reside far away, or those from complex family backgrounds. It is recommended to have the document notarized at a notary office.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "17-2",
+      "chapter": 17,
+      "tip": 2,
+      "title": "Make a will — remember that later ones override earlier ones, and notarized wills no longer take priority",
+      "tags": {
+        "money": "Free",
+        "time": "Quick",
+        "willpower": "Some",
+        "benefit": "Large",
+        "scope": "Money",
+        "audience": []
+      },
+      "costScore": 1,
+      "valueTier": "High",
+      "disputed": false,
+      "stillVerifying": false,
+      "cost": "Writing a will by hand costs nothing. Having it notarized at a notary office costs several hundred to over a thousand rupees. The hard part is bringing it up: you must discuss end‑of‑life matters with your family.",
+      "inPlainWords": "The law recognizes six types of wills, but a single mistake in the format can render the entire document invalid — this is the most common pitfall. A handwritten will must be written entirely by the testator, signed, and dated. If multiple wills exist and they conflict, the last one signed prevails. Since 2021, a notarized will no longer automatically takes precedence over others.",
+      "benefit": "Each type has specific formal requirements that must be met. When several wills exist, the most recent one governs. Starting in 2021, notarized wills no longer automatically rank above others.",
+      "evidenceGrade": "A",
+      "sources": "Ministry of Social Justice and Empowerment. <https://socialjustice.gov.in/>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>",
+      "caveats": "A handwritten will must be written entirely by the testator, signed, and dated. For printed wills, at least two witnesses are required; both the testator and witnesses must sign every page and include the date. Relatives of the testator, potential heirs, or anyone named to receive assets cannot serve as witnesses. Any failure to meet these formal rules renders the will invalid — this is the most frequent cause of problems.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "17-3",
+      "chapter": 17,
+      "tip": 3,
+      "title": "Keep the elderly person’s money in a separate account and set a rule requiring two people to approve any large withdrawals",
+      "tags": {
+        "money": "Free",
+        "time": "Quick",
+        "willpower": "Some",
+        "benefit": "Large",
+        "scope": "Money",
+        "audience": [
+          "Older relatives at home",
+          "Age 60+"
+        ]
+      },
+      "costScore": 1,
+      "valueTier": "High",
+      "disputed": false,
+      "stillVerifying": false,
+      "cost": "This costs nothing. You only need to discuss it once with family members and agree on a spending limit. The real challenge is how to bring it up without making the senior feel you’re trying to restrict them.",
+      "inPlainWords": "Scammers targeting seniors for health products, collectibles, or financial schemes all follow the same pattern: they spend months building rapport, then strike all at once. By establishing a rule that any withdrawal above a certain amount must be approved by another person, you effectively delay the spending decision until the initial impulse fades.",
+      "benefit": "Most scams aimed at older adults rely on building trust over weeks or months before making a large financial demand. Setting a rule that requires a second person’s approval for any sizable expenditure helps delay that decision, reducing the chance of impulsive, costly mistakes.",
+      "evidenceGrade": "B",
+      "sources": "Author’s experience, no direct literature; see Sections 8 and 13 for general anti-fraud rules; Ministry of Social Justice and Empowerment. <https://socialjustice.gov.in/>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>",
+      "caveats": "Frame this not as “protecting them from fraud” but as “keeping household finances organized.” That approach is far easier for seniors to accept. Also, avoid moving all of their money into a child’s account — doing so can lead to entirely different kinds of disputes.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "17-4",
+      "chapter": 17,
+      "tip": 4,
+      "title": "A ready-made phrase for seniors to deflect unwanted offers",
+      "tags": {
+        "money": "Free",
+        "time": "Quick",
+        "willpower": "None needed",
+        "benefit": "Medium",
+        "scope": "Money",
+        "audience": [
+          "Older relatives at home",
+          "Age 60+"
+        ]
+      },
+      "costScore": 0,
+      "valueTier": "High",
+      "disputed": false,
+      "stillVerifying": false,
+      "cost": "No cost at all. It only takes a few minutes to discuss this with the senior once.",
+      "inPlainWords": "Sales pitches and scams rely on creating immediate pressure, making it hard for people to say no on the spot. By agreeing beforehand on the phrase “I need to go home and discuss this with my family,” the senior has an easy way out whenever needed. This works far better than trying to reason with them later.",
+      "benefit": "Both sales tactics and scams depend on on‑the‑spot pressure. Having a pre‑arranged line such as “I need to go home and discuss this with my family” gives seniors a graceful exit, making it far more effective than any post‑event explanation.",
+      "evidenceGrade": "B",
+      "sources": "author’s experience, no direct literature; Ministry of Social Justice and Empowerment. <https://socialjustice.gov.in/>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>",
+      "caveats": "Use this together with tip #3 (keeping the senior’s money in a separate account). You can also carry out home modifications to prevent falls, as described in Section 1. This phrase isn’t meant to protect the senior from themselves; it simply provides a way to decline politely without feeling awkward. When surrounded by salespeople, the hardest part isn’t judging whether they’re trustworthy — it’s finding the courage to say no in front of everyone. Agreeing on this line beforehand removes that burden entirely.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "17-5",
+      "chapter": 17,
+      "tip": 5,
+      "title": "Avoid 'investment-based' senior-care schemes that demand a large upfront payment",
+      "tags": {
+        "money": "Free",
+        "time": "Quick",
+        "willpower": "Some",
+        "benefit": "Large",
+        "scope": "Money",
+        "audience": [
+          "Older relatives at home",
+          "Age 60+"
+        ]
+      },
+      "costScore": 1,
+      "valueTier": "High",
+      "disputed": false,
+      "stillVerifying": false,
+      "cost": "A legitimate facility charges a monthly fee and a refundable deposit; a 'guaranteed return' scheme is a red flag.",
+      "inPlainWords": "A scheme that asks an older person to pay a large deposit for lifetime care, a membership card or a 'guaranteed' return is a credit and fraud risk. India has no regulator for a prepaid senior-care deposit. The safe routes are a registered senior-living facility with a written contract, the Senior Citizens' Savings Scheme, and the Maintenance and Welfare of Parents and Senior Citizens Act, 2007. Do not sign over property for a promise of care.",
+      "benefit": "The Maintenance and Welfare of Parents and Senior Citizens Act, 2007 allows a senior citizen to claim maintenance from a child or a relative and provides for a tribunal. The Senior Citizens' Savings Scheme is a government small-saving product. A senior-living facility should be a registered entity with a written agreement, a clear refund clause and a complaint route. The RBI and SEBI have warned against unauthorised deposit and investment schemes.",
+      "evidenceGrade": "A",
+      "sources": "Maintenance and Welfare of Parents and Senior Citizens Act, 2007. <https://www.indiacode.nic.in/>; Ministry of Social Justice and Empowerment. <https://socialjustice.gov.in/>; Reserve Bank of India, unauthorised schemes. <https://www.rbi.org.in/>; Securities and Exchange Board of India. <https://www.sebi.gov.in/>",
+      "caveats": "A 'lifetime care' promise is only as good as the company. A transfer of property for care should be a registered deed with a life interest. Take a lawyer and a family member to the signing.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "17-6",
+      "chapter": 17,
+      "tip": 6,
+      "title": "Apart from the housing reverse mortgage insurance offered by insurers, you should avoid all other “housing-for-pension” schemes — never mortgage your home to buy financial products.",
+      "tags": {
+        "money": "Free",
+        "time": "Quick",
+        "willpower": "Some",
+        "benefit": "Large",
+        "scope": "Money",
+        "audience": [
+          "Older relatives at home",
+          "Age 60+"
+        ]
+      },
+      "costScore": 1,
+      "valueTier": "High",
+      "disputed": false,
+      "stillVerifying": false,
+      "cost": "There’s no cost involved. Keep your property deed in your own hands and don’t hand it over to anyone promoting “housing-for-pension” schemes. Before signing any mortgage, guarantee, or loan agreements, show them to your children first. The difficulty lies in the fact that promoters often come repeatedly and appear very enthusiastic, leaving seniors feeling awkward about refusing them.",
+      "inPlainWords": "The only legitimate “housing-for-pension” option is the housing reverse mortgage insurance provided by insurers, which is currently still in the pilot phase and used by very few people. Door‑to‑door sales pitches have nothing to do with this official program. Scammers trick seniors into mortgaging their homes so they can use the borrowed money to buy financial products recommended by the fraudsters — essentially a “pay‑old‑debts‑with‑new‑money” Ponzi scheme. Regulators report cases where seniors were unaware their homes had been mortgaged; as a result they ended up losing their property while still owing a loan.",
+      "benefit": "The legitimate program is called “Housing Reverse Mortgage Insurance for Seniors.” Eligible seniors who fully own their homes may mortgage them to an insurer while continuing to live there, rent it out, or otherwise use it. Any sale or disposal of the property requires consent from the mortgagee — the insurer. Seniors then receive a pension according to agreed terms until their death. This service remains a pilot project with limited participants. Illegal operators label their schemes “housing‑for‑pension,” but they bear no relation to the official program; they merely exploit national policy to promote illegal fundraising. Their modus operandi is to persuade seniors to mortgage their homes and then use the proceeds to purchase recommended financial products — often a classic Ponzi arrangement. The original warning states that some participants are completely unaware their homes have been mortgaged, ultimately resulting in loss of the property and outstanding debt. A useful guideline for evaluating returns is also provided: if a financial product promises a yield above 6 %, it should be viewed with suspicion; above 8 % it becomes highly risky; and anything over 10 % means you should expect to lose all principal — “high returns with guaranteed principal” is a hallmark of financial fraud. The same warning also stresses the need to be cautious when signing contracts and never to sign blank documents (National level, June 2021).",
+      "evidenceGrade": "B",
+      "sources": "Ministry of Social Justice and Empowerment. <https://socialjustice.gov.in/>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>",
+      "caveats": "This grade B reflects that the statements derive from regulatory risk warnings and expert judgment rather than empirical research data. The 6 %, 8 %, and 10 % thresholds are reference points suggested by regulators for consumers, not legally mandated standards. The former CBIRC has been merged into the National Financial Regulatory Administration; the original announcement page is no longer accessible, so we cite a reposted version from a provincial financial regulator. The core issue here is not merely possible losses on financial investments, but that after mortgaging their homes seniors still carry a loan obligation — a loss far exceeding any potential principal loss. General rules concerning contract signing and blank documents are covered in Section 8, Item 17; steps to halt fraudulent transactions after being scammed are outlined in Section 8, Item 2.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "17-7",
+      "chapter": 17,
+      "tip": 7,
+      "title": "For a bedridden or severely disabled elder at home, ask the scheme and the district for home-based care",
+      "tags": {
+        "money": "Free",
+        "time": "A few hours",
+        "willpower": "None needed",
+        "benefit": "Large",
+        "scope": "Money",
+        "audience": []
+      },
+      "costScore": 1,
+      "valueTier": "High",
+      "disputed": false,
+      "stillVerifying": false,
+      "cost": "PM-JAY is free for eligible households. A private home-nursing service is paid.",
+      "inPlainWords": "India has no single 'home care' benefit, but there are routes: PM-JAY for eligible households, ESIC for insured workers, the state health department's palliative-care and home-care programmes, and the district disability office for an assessment and a certificate. Ayushman Arogya Mandir and ASHA workers can visit. Ask the district health officer what home-based palliative care exists.",
+      "benefit": "PM-JAY covers hospitalisation and some packages; the state health department may run home-based palliative care through medical colleges and NGOs. The Rights of Persons with Disabilities Act, 2016 provides for a disability certificate, an assessment and some concessions. ESIC provides medical benefit to insured persons and dependants. The National Programme for Health Care of the Elderly provides geriatric services at some district hospitals.",
+      "evidenceGrade": "A",
+      "sources": "National Health Authority, PM-JAY. <https://nha.gov.in/>; Department of Empowerment of Persons with Disabilities. <https://depwd.gov.in/>; Ministry of Health and Family Welfare, elderly care. <https://mohfw.gov.in/>; Employees' State Insurance Corporation. <https://esic.gov.in/>",
+      "caveats": "A disability certificate is issued after an assessment by a medical board; it is not automatic. A home-care NGO should be verified. Keep the treatment records.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "17-8",
+      "chapter": 17,
+      "tip": 8,
+      "title": "For families with someone bedridden at home, pressure ulcers are a top concern: use an electric alternating-pressure air mattress, turn the patient regularly, and check bony areas daily",
+      "tags": {
+        "money": "Small cost",
+        "time": "Takes time every day",
+        "willpower": "A lot",
+        "benefit": "Large",
+        "scope": "Lifespan",
+        "audience": []
+      },
+      "costScore": 5,
+      "valueTier": "Average",
+      "disputed": false,
+      "stillVerifying": false,
+      "cost": "Electric alternating-pressure air mattresses for home use start at a few hundred rupees. Turning a patient takes just a few minutes. The real challenge is doing it every two to three hours, even at night — no single caregiver can manage that alone.",
+      "inPlainWords": "Pressure ulcers are far more than just superficial skin injuries. Among older adults undergoing hip-fracture surgery, those already having pressure ulcers at admission face a roughly 20% higher chance of dying within 30 days. Three evidence‑based actions help: using an electric air mattress cuts new ulcer formation by about 60% compared with ordinary hospital mattresses; consistently turning the patient reduces risk by roughly 70% versus standard care; and keeping the person from lying prone for long periods also helps. Check the sacrum, heels, hips, and shoulders each day; if any area shows persistent redness that doesn’t fade when pressed, contact a nurse or doctor right away.",
+      "benefit": "Data come from 19,520 hip‑fracture patients in the U.S. NSQIP registry (2016‑2019). Those with pre‑existing pressure ulcers showed a higher 30‑day mortality rate; after adjusting for other factors, this link remained significant (OR 1.2, a 21% increase in risk, P = 0.004). They also faced higher rates of deep‑vein thrombosis (OR 1.59), pneumonia (OR 1.39), unplanned readmissions (OR 1.43), and an average hospital stay 0.4 days longer. In a follow‑up of 324 elderly inpatients (mean age 86) over 18 months, pressure ulcers independently predicted long‑term death (HR 1.500, 95% CI 1.059‑2.126, P = 0.020). A network meta‑analysis of 65 randomized trials compared electric alternating‑pressure air mattresses with standard hospital mattresses; the former lowered ulcer incidence (RR 0.42, 95% CI 0.29‑0.63, moderate certainty). Similar benefits were seen with hybrid systems (RR 0.22, 95% CI 0.07‑0.66). A 2026 Cochrane review of 11 trials involving 4,462 patients found little difference between turning schedules of 2 hours versus 4 hours (RR 1.05, 95% CI 0.79‑1.39, very low certainty). However, using wearable sensors to enforce 2‑hour turning intervals in an ICU setting cut ulcer rates compared with usual care (RR 0.28, 95% CI 0.10‑0.75, moderate certainty). Finally, patients kept in a prone position developed ulcers far more often than those lying supine (RR 4.55, 95% CI 2.31‑8.98).",
+      "evidenceGrade": "B",
+      "sources": "Porter SB, Pla R, Chow JH, et al. (2022). Preoperative Pressure Ulcers, Mortality, and Complications in Older Hip Fracture Surgery Patients. JAAOS Global Research & Reviews, 6(11). <https://doi.org/10.5435/JAAOSGlobal-D-22-00117>; Ottaviani S, Rondanina E, Longo E, et al. (2026). Impact of pressure ulcers and frailty on long-term mortality: a prospective cohort study of hospitalized older adults. European Geriatric Medicine, 17(2), 665-672. <https://doi.org/10.1007/s41999-025-01331-8>; Shi C, Dumville JC, Cullum N (2018). Support surfaces for pressure ulcer prevention: A network meta-analysis. PLoS ONE, 13(2), e0192707. <https://doi.org/10.1371/journal.pone.0192707>; Latimer SL, Chaboyer WP, Probst S, et al. (2026). Repositioning for pressure injury prevention in adults. Cochrane Database of Systematic Reviews, 6, CD009958. <https://doi.org/10.1002/14651858.CD009958.pub4>",
+      "caveats": "This grade reflects three main points. First, the mortality studies showed only that patients with ulcers fared worse; they did not prove that preventing ulcers directly lowers death rates. Second, the evidence on optimal turning intervals from randomized trials is quite weak. Third, the data on air mattresses are relatively stronger, yet they compared hospital‑grade mattresses to ordinary home mattresses, so extrapolation to home use is somewhat uncertain. Daily inspection of bony areas is standard nursing practice and lacks dedicated research support. The mortality benefit is evaluated separately from cost calculations for other items in this section. Home‑based care services covered by long‑term care insurance are described in item 7. Sudden leg swelling should be treated as a possible deep‑vein thrombosis, as covered in section 13, item 11. Situations involving prolonged bed rest after falls or severe injury are discussed in section 1, item 34.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "17-9",
+      "chapter": 17,
+      "tip": 9,
+      "title": "If cataract is affecting walking safely, get an eye assessment; surgery is free in a government hospital",
+      "tags": {
+        "money": "Real money",
+        "time": "A few hours",
+        "willpower": "None needed",
+        "benefit": "Medium",
+        "scope": "Lifespan",
+        "audience": [
+          "Older relatives at home",
+          "Age 60+"
+        ]
+      },
+      "costScore": 3,
+      "valueTier": "Average",
+      "disputed": true,
+      "stillVerifying": false,
+      "cost": "Free at a government hospital under the programme; about ₹15,000–₹40,000 per eye in a private hospital, depending on the lens.",
+      "inPlainWords": "A cataract that makes walking or reading unsafe should be assessed by an ophthalmologist. The National Programme for Control of Blindness and Visual Impairment provides free cataract surgery at government hospitals and through camp-based programmes in many districts. If both eyes are affected, the surgeon usually operates on one eye first. Do not wait until the cataract is 'ripe'.",
+      "benefit": "The National Programme for Control of Blindness and Visual Impairment funds cataract surgery and screening at district hospitals and vision centres. A government hospital provides a free intraocular lens; a private hospital charges. The surgery is usually day-care, and the first eye is operated before the second. An untreated cataract can lead to falls and a loss of independence.",
+      "evidenceGrade": "B",
+      "sources": "National Programme for Control of Blindness and Visual Impairment. <https://npcbvi.gov.in/>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>; All India Institute of Medical Sciences, ophthalmology. <https://www.aiims.edu/>",
+      "caveats": "The waiting period varies by district. A 'free' camp should be a government or a registered NGO camp. Bring the Aadhaar or another ID for the hospital record.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "17-10",
+      "chapter": 17,
+      "tip": 10,
+      "title": "When elderly family members walk dogs: Hold the leash in the palm rather than wrapping it around hands or wrists, keep the lead short, and train the dog not to surge forward",
+      "tags": {
+        "money": "Small cost",
+        "time": "A few hours",
+        "willpower": "Some",
+        "benefit": "Small",
+        "scope": "Lifespan",
+        "audience": [
+          "Older relatives at home",
+          "Age 60+"
+        ]
+      },
+      "costScore": 3,
+      "valueTier": "Average",
+      "disputed": false,
+      "stillVerifying": false,
+      "cost": "Gripping the leash properly and shortening lead length costs nothing—simply walk with your elder once to demonstrate proper technique. Training a dog not to surge takes time, either trained personally or through a professional trainer (incurring variable local fees). The main difficulty is changing ingrained habits if seniors are accustomed to retractable leashes or tightly wrapping webbing around their wrists.",
+      "inPlainWords": "In the United States, annual fractures among adults aged 65 and older associated with walking leashed dogs surged from roughly 1,700 to 4,400 cases, with women accounting for nearly 80%. The hip was the single most common fracture site, and nearly 30% of patients required hospitalization. Among patients sustaining hand injuries from dog leashes, approximately three-quarters occurred when a sudden jerk tightened a leash wrapped around the hand or fingers. Keep the leash gripped in the palm, maintain a short lead, and train dogs not to pull aggressively.",
+      "benefit": "US national emergency department surveillance data estimate that annual fractures among individuals aged 65 and older walking leashed dogs rose from 1,671 in 2004 to 4,396 in 2017—a statistically significant increase. Among fracture victims, 78.6% were women and 28.7% required inpatient hospital admission. By anatomical site, hip fractures were the most frequent single injury (17.3%), while upper extremity fractures comprised 52.1% across broad categories. Another nationwide emergency database covering 2001–2018 estimated 356,746 dog-leash-related injuries: 193,483 involved being pulled down or strained by a dog, and 136,767 involved tripping or entanglement. Population injury rates climbed from 25.4 to 105.5 per million individuals. In a 5-year study at an outpatient hand surgery clinic reviewing 443 leash-related hand injuries, 75.9% (337 patients) occurred when a leash wrapped around the hand or fingers was abruptly yanked by the dog, and 21.6% (96 patients) required surgical intervention. CDC surveillance (2001–2006) showed approximately 86,629 fall-related injuries annually involving pet cats and dogs, with 88.0% attributable to dogs; 26% occurred while walking dogs, and 21.2% were caused by dogs pushing or pulling their handlers.",
+      "evidenceGrade": "B",
+      "sources": "Pirruccio K, Yoon YM, Ahn J (2019). Fractures in Elderly Americans Associated With Walking Leashed Dogs. JAMA Surgery, 154(5), 458-459. <https://doi.org/10.1001/jamasurg.2019.0061>; Forrester MB (2020). Dog leash-related injuries treated at emergency departments. American Journal of Emergency Medicine, 38(9), 1782-1786. <https://doi.org/10.1016/j.ajem.2020.05.082>; Plusch K, Givner D, Wiafe B, Lutsky K, Beredjiklian P (2026). Hand and Wrist Dog-Leash Injuries in the Outpatient Setting: A Review of 443 Cases. Hand, 21(4), 582-586. <https://doi.org/10.1177/15589447241299128>; CDC (2009). Nonfatal fall-related injuries associated with dogs and cats — United States, 2001-2006. MMWR, 58(11), 277-281. <https://www.cdc.gov/mmwr/preview/mmwrhtml/mm5811a1.htm>; Rosa R, Buckley RE (2024). Leash-related injuries associated with dog walking: an understudied risk for dog owners? Journal of the American Veterinary Medical Association, 262(7), 973-978. <https://doi.org/10.2460/javma.23.11.0608>",
+      "caveats": "Gripping the leash firmly in the palm without wrapping it around fingers or wrists is explicitly recommended by hand surgeons: it protects fingers and wrists against spiral fractures and degloving injuries, though it does not completely prevent falls caused by aggressive surges. Keeping the lead short prevents the dog from building kinetic momentum and reduces trip hazards. Extended retractable leashes function as hazardous long lines; however, no controlled trials have isolated fall incidence between retractable versus standard fixed leashes (noted in a 2024 JAVMA review). Behavioral loose-leash training is recommended by both the CDC and orthopedic trauma researchers. For seniors considering adopting a new pet, researchers recommend smaller, lower-mass breeds. Benefit magnitude is rated small as exact reduction percentages for these combined interventions have not been evaluated in randomized trials. For bone fracture resilience, see Chapter 1, Rule 39 (bone mineral density screening) and Rule 40 (osteoporosis medication). For elder balance training, see Chapter 1, Rule 13. For counting dog walking toward daily physical activity goals, see Chapter 2, Rule 44. Beneficiaries are elderly parents and grandparents.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "17-11",
+      "chapter": 17,
+      "tip": 11,
+      "title": "When placing an elderly relative in a nursing home, verify administrative filing with civil affairs authorities and sign a written contract: security deposits are capped at 12 months' bed fees in dedicated bank escrow accounts",
+      "tags": {
+        "money": "Free",
+        "time": "Quick",
+        "willpower": "None needed",
+        "benefit": "Large",
+        "scope": "Money",
+        "audience": [
+          "Older relatives at home"
+        ]
+      },
+      "costScore": 0,
+      "valueTier": "Very high",
+      "disputed": false,
+      "stillVerifying": false,
+      "cost": "Zero financial fee. Spend half a day calling local county-level civil affairs bureaus or requesting the facility's official administrative filing receipt, then cross-reference service agreements, fee schedules, and escrow bank accounts. The challenge is hesitating to scrutinize contracts when nursing home beds are scarce.",
+      "inPlainWords": "Legitimate eldercare institutions must register with civil affairs authorities and execute written contracts with residents or their guardians. Security deposits are legally capped at 12 months of that resident's monthly bed fee, and service fees can only be prepaid for up to 12 months. All deposits and membership fees must be deposited directly into bank-supervised escrow accounts. Never wire money to personal accounts or accept generic cash receipts without formal invoices.",
+      "benefit": "Ministry of Civil Affairs regulations mandate that eldercare institutions must file with local civil affairs authorities within 10 working days of admitting residents, who then issue an official filing receipt. Facilities must execute written service agreements detailing nursing care tiers, billing standards, refund terms, and breach liabilities; failure to execute agreements warrants administrative warnings and fines up to ₹4,26,300. Joint directives issued in 2024 by seven national ministries established strict caps on advance fees: eldercare operational service fees may be collected for a maximum of 12 months in advance; security deposits cannot exceed 12 times the individual resident's monthly bed fee. Deposits may only be utilized for fee refunds, emergency medical advances, billing arrears, and tort indemnification. Publicly operated and public-private partnership (PPP) eldercare facilities are strictly prohibited from charging membership fees; uncompleted facilities not yet capable of admitting seniors cannot charge membership fees. All deposits and membership funds must be deposited into third-party bank-supervised escrow accounts, with individual employee personal accounts strictly banned and formal tax invoices mandatory. Upon contract termination prior to check-in, facilities must issue full advance refunds promptly; after admission, unused portions must be refunded in a lump sum via the original payment channel. Under 2025 escrow implementation rules, custodian banks must disburse refunds within 1 to 2 business days of receiving facility requests.",
+      "evidenceGrade": "A",
+      "sources": "Ministry of Civil Affairs (2020). Measures for the Administration of Eldercare Institutions (MCA Order No. 66, Articles 10, 12, 16, 46). <https://www.gov.cn/zhengce/zhengceku/2020-09/19/content_5544761.htm>; Ministry of Civil Affairs, NDRC, MPS, et al. (2024). Guiding Opinions on Strengthening the Supervision of Advance Payments in Eldercare Institutions (Min Fa [2024] No. 19, Articles 4, 5, 6, 8, 9). <https://www.gov.cn/zhengce/zhengceku/202405/content_6950308.htm>; Ministry of Civil Affairs, National Financial Regulatory Administration (2025). Work Guidelines for the Escrow of Advance Payments in Eldercare Institutions (Min Ban Fa [2025] No. 9). <https://www.gov.cn/zhengce/zhengceku/202511/content_7049045.htm>",
+      "caveats": "Individual provinces may enact even shorter deposit caps or prepayment limits; verify provincial rules before signing. Model contracts published by provincial civil affairs and market supervision departments provide standard legal baselines. Because administrative filing occurs post-admission, recently opened homes may be actively completing filing procedures. If refund disputes arise, avenues include civil mediation, administrative complaints to civil affairs bureaus (free of charge), arbitration, and civil litigation. Elder care investment scams promising fixed financial returns are addressed in Chapter 17, Rule 5. Primary beneficiaries are your elderly parents and grandparents.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "17-12",
+      "chapter": 17,
+      "tip": 12,
+      "title": "If an only child's parent is hospitalized, check provincial statutes for statutory filial care leave and submit a written request with hospitalization proof",
+      "tags": {
+        "money": "Free",
+        "time": "Quick",
+        "willpower": "None needed",
+        "benefit": "Medium",
+        "scope": "Money",
+        "audience": [
+          "Older relatives at home"
+        ]
+      },
+      "costScore": 0,
+      "valueTier": "High",
+      "disputed": false,
+      "stillVerifying": false,
+      "cost": "Zero financial outlay. Spend several minutes querying provincial regulations on the National Database of Laws and Regulations, then submit a formal written leave application accompanied by clinical hospital admission slips. The challenge is overcoming workplace intimidation when employers resist granting statutory leave.",
+      "inPlainWords": "Multiple provincial regulations guarantee statutory paid parental care leave for only children when their elderly parents are hospitalized. Durations vary by province: Henan mandates not less than 20 days annually (counted as full attendance), Fujian up to 10 days (with full salary and benefits), and Guangdong up to 15 days for hospitalized parents aged 60+. If an employer refuses or docks pay, file a complaint with human resources and social security authorities.",
+      "benefit": "Statutory eldercare leave is codified within provincial regional legislation. Under Henan's Regulations on the Protection of the Rights and Interests of the Elderly, employers must provide paid care leave to only-child employees whose parents hold an Only Child Parental Honor Certificate during inpatient hospital treatment, cumulative to not less than 20 days per year, legally deemed full attendance. Under Fujian's provincial regulations, when only children's parents reach age 60 and require inpatient care, employers must grant up to 10 days of care leave annually with unchanged salary and welfare benefits; refusal to pay wages triggers administrative orders to pay within a mandated cure period. Under Guangdong's Population and Family Planning Regulations, parents aged 60+ in registered households who voluntarily had an only child qualify their adult children for 5 days of annual eldercare leave, rising to up to 15 days if hospitalized; failure to grant statutory leave triggers administrative rectification orders from human resources authorities.",
+      "evidenceGrade": "B",
+      "sources": "Standing Committee of Henan Provincial People's Congress (2018). Regulations of Henan Province on the Protection of the Rights and Interests of the Elderly (Article 29). <https://flk.npc.gov.cn/detail?id=2c90e5ba65c68cf70165d0eed8020053>; Fujian Provincial People's Congress (2017). Regulations of Fujian Province on the Protection of the Rights and Interests of the Elderly (Articles 27, 70). <https://flk.npc.gov.cn/detail?id=4028abcc61277793016128072d0848f4>; Standing Committee of Guangdong Provincial People's Congress (2021 Revision). Regulations of Guangdong Province on Population and Family Planning (Articles 36(5), 45). <https://flk.npc.gov.cn/detail?id=ff8081817fb1209d017fb5c92e623844>",
+      "caveats": "To check statutory allowances in your province, search the National Database of Laws and Regulations (flk.npc.gov.cn) for your province plus \"Regulations on the Protection of the Rights and Interests of the Elderly\" and \"Regulations on Population and Family Planning,\" checking only versions labeled \"Effective.\" Statutes apply almost exclusively to verified only children. If an employer unlawfully denies leave or deducts wages, lodge a free complaint with the 12333 labor inspection hotline or file for labor arbitration (mandated to conclude within 45 days). Henan's statutory language stipulates \"not less than\" 20 days, whereas Fujian and Guangdong specify \"up to\" ceilings. Graded Evidence Grade B because leave provisions and statutory caps are established by provincial jurisdictions rather than national unified legislation. Primary beneficiaries are your parents, with financial wage preservation flowing to yourself.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "17-13",
+      "chapter": 17,
+      "tip": 13,
+      "title": "If an elderly relative suffers progressive memory decline impairing daily functioning, visit a hospital memory clinic or neurology department to rule out reversible causes like depression, sensory deficits, or anticholinergic drugs",
+      "tags": {
+        "money": "Small cost",
+        "time": "A few hours",
+        "willpower": "None needed",
+        "benefit": "Small",
+        "scope": "Lifespan",
+        "audience": [
+          "Older relatives at home",
+          "Age 60+"
+        ]
+      },
+      "costScore": 2,
+      "valueTier": "Average",
+      "disputed": false,
+      "stillVerifying": false,
+      "cost": "Low cost. Clinical registration at a hospital memory clinic or neurology outpatient department, cognitive psychometric tests, and routine blood/urine panels take half a day to a full day, covered under standard health insurance. The challenge is overcoming elderly family members' denial or reluctance to undergo cognitive testing.",
+      "inPlainWords": "Progressive cognitive decline is not simply inevitable \"old age.\" First rule out reversible conditions such as late-life depression, adverse drug side effects, and uncorrected hearing or vision loss. Truly reversible dementias are rare (under 1%), but early diagnosis serves another crucial purpose: while the individual retains decision-making capacity, legally designate future legal guardians and manage asset arrangements.",
+      "benefit": "UK National Institute for Health and Care Excellence (NICE NG97) guidelines mandate that when dementia is suspected, clinicians must take comprehensive histories from both patient and family, perform physical examinations, order laboratory blood/urine tests to rule out reversible etiologies, and conduct validated cognitive testing. NICE guidelines specifically highlight four treatable or modifiable confounders: delirium, depression, sensory impairment (vision and hearing deficits), and high anticholinergic cognitive burden from medications. Once reversible factors are excluded, patients are referred to specialist memory clinics. A classic meta-analysis of 39 clinical studies encompassing 5,620 dementia patients found that 56.3% had Alzheimer's disease and 20.3% had vascular dementia; potentially reversible etiologies represented 9.0%, but actual clinical improvement occurred in only 0.6% (0.29% partial improvement, 0.31% full recovery). NICE guidelines mandate early advance care planning while cognitive capacity remains, including designating lasting powers of attorney for finances and healthcare. National Health Commission 2024 directives call for routine cognitive screening in adults aged 65+ and expansion of dedicated hospital memory clinics.",
+      "evidenceGrade": "B",
+      "sources": "National Institute for Health and Care Excellence (2018). Dementia: assessment, management and support for people living with dementia and their carers (NICE NG97, Recommendations 1.1.12, 1.2.1, 1.2.2, 1.2.6). <https://www.nice.org.uk/guidance/ng97/chapter/Recommendations>; Clarfield AM (2003). The decreasing prevalence of reversible dementias: an updated meta-analysis. Archives of Internal Medicine, 163(18), 2219-2229. <https://doi.org/10.1001/archinte.163.18.2219>; National Health Commission et al. (2024). National Action Plan for Addressing Dementia in the Elderly (2024-2030). <https://www.gov.cn/zhengce/zhengceku/202501/content_6996231.htm>",
+      "caveats": "Graded Evidence Grade B based on clinical consensus guidelines and diagnostic cohort reviews. Benefit is categorized as Low because clinical reversibility is under 1% and no evidence indicates that early screening alters ultimate dementia mortality. Never discontinue medications unilaterally; bring medication boxes to consultation. For acute cognitive decline and gait ataxia following minor head trauma, see Chapter 13, Rule 10 (head CT for chronic subdural hematoma). Hearing aid fitting for cognitive maintenance is covered in Chapter 33, Rule 17. Crucially, while clear-minded, execute written guardianship designations (Chapter 17, Rule 1) and statutory wills (Chapter 17, Rule 2). Judicial declaration of civil incapacity is covered in Chapter 33, Rule 18. Beneficiaries are elderly parents and grandparents.",
+      "reviewStatus": "draft"
+    }
+  ]
+}
