@@ -16,6 +16,18 @@ import path from 'node:path';
 const DIST = 'dist';
 const SKIP_PREFIXES = ['http://', 'https://', '//', 'mailto:', 'tel:', 'data:', 'javascript:', '#'];
 
+// Astro prefixes absolute links with the configured base. Set BASE to the same
+// value the site was built with so a production build (e.g. GitHub Pages under
+// /LifeAsUsual/) can be checked too: BASE=/LifeAsUsual/ node scripts/check-links.mjs
+const BASE = (process.env.BASE || '/').replace(/\/+$/, '');
+
+const stripBase = (target) => {
+  if (!BASE) return target;
+  if (target === BASE || target === BASE + '/') return '/';
+  if (target.startsWith(BASE + '/')) return target.slice(BASE.length);
+  return null;
+};
+
 const files = [];
 const walk = (dir) => {
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
@@ -56,7 +68,9 @@ for (const file of files) {
     if (!target || SKIP_PREFIXES.some((p) => target.startsWith(p))) continue;
     if (target.startsWith('/')) {
       checked += 1;
-      if (!exists(target)) problems.push(page + ' -> ' + target);
+      const stripped = stripBase(target);
+      if (stripped === null) problems.push(page + ' -> ' + target + ' (outside base ' + BASE + ')');
+      else if (!exists(stripped)) problems.push(page + ' -> ' + target);
     } else {
       checked += 1;
       const resolved = path.posix.normalize(path.posix.join(path.posix.dirname(page), target));
@@ -66,7 +80,7 @@ for (const file of files) {
 }
 
 console.log('Link check (internal)');
-console.log('pages: ' + files.length + ', internal links: ' + checked);
+console.log('pages: ' + files.length + ', internal links: ' + checked + ', base: ' + (BASE || '/') );
 if (problems.length) {
   console.log('broken: ' + problems.length);
   for (const p of problems.slice(0, 50)) console.log('  ' + p);
