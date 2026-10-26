@@ -4,7 +4,7 @@
 **Date:** 21 October 2026
 **Branch:** rewrite/india-edition
 **Scope:** complete India rewrite of all 34 chapters, chapter status model, verification gates
-**Status:** 34/34 chapters and 765/765 tips have an India rewrite, and all 34 chapters and 765 tips are independently verified and checked; Tier A human review is the only outstanding step before reviewed
+**Status:** published. 34/34 chapters and 765/765 tips have an India rewrite, all 34 chapters and 765 tips are independently verified and checked, and the edition is live on GitHub Pages; Tier A human review is the only outstanding step before reviewed
 
 ## 1. Coverage
 
@@ -79,17 +79,16 @@ titles that name a place and titles that do not; that is a consequence of the ga
 - Tier A human review is outstanding for the legal, medical and financial chapters.
 - A source pack exists for every chapter; official portals that returned 403 or DNS failures are
   recorded in the per-chapter packs.
-- The merge to master is prepared: `master` was fast-forwarded to the verified tip (68564c4) and
-  `npm run verify:india -- --final` is green on it. The push is rejected by GitHub: the local
-  `gh` OAuth token carries the scopes `gist`, `read:org` and `repo` but not `workflow`, and the
-  push adds `.github/workflows/india-verify.yml`. Pushing workflow files requires the `workflow`
-  scope. Fix with `gh auth refresh -h github.com -s workflow`, then `git push origin master`.
-  The Pages deploy workflow (`deploy.yml`) is unchanged by this edition.
-- The deployed artifact itself was validated locally: built with
+- Published: `master` was pushed to `origin/master` (6c122ed..f98cc01) once the `gh` token
+  carried the `workflow` scope the India CI file needs. Both workflows succeeded:
+  "Deploy to GitHub Pages" (run 40273322659) and "India edition verification" (run 40273322631).
+- The live site was checked after deployment. Chapters 19 and 5 both serve 200 with
+  `data-rewrite-status="checked"`, every tip carries the checked badge and the Tier A
+  pending-review badge, no draft badge, zero horizontal overflow and zero banned terms in the
+  rendered text at 390x844 and 1440x900. The home page and chapter 1 are also term-clean.
+- The deployed artifact was also validated locally before the push: built with
   `SITE=https://rohannshetty.github.io BASE=/LifeAsUsual/`, the term scan is clean and
-  `BASE=/LifeAsUsual/ node scripts/check-links.mjs` resolves all 2,234 links; chapters 1 and 19
-  were rendered from that build at 390x844 and 1440x900 with the checked badge and the Tier A
-  pending-review badge visible. Only the push and the live Pages run remain.
+  `BASE=/LifeAsUsual/ node scripts/check-links.mjs` resolves all 2,234 links.
 
 ## 6. Rollback
 

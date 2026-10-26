@@ -69,7 +69,7 @@
 - [x] 7.2 Verify the built site: 0 banned terms across all 52 pages, 0 CJK, 0 broken internal links; verify scan-dist-terms and the link checker exit 0.
 - [x] 7.3 Run the full suite: npm run build, npm run check, npm run verify, npx playwright test at 360/390/768/1440, light/dark; verify every command exits 0.
 - [x] 7.4 Update /india/, reports/india-edition-report.md and reports/india-rewrite-worklist.csv to the final manifest; verify no queued chapter is presented as rewritten.
-- [ ] 7.5 Merge rewrite/india-edition to master and push; verify the Pages workflow succeeds and live Chapter 19 plus a newly rewritten chapter have 0 banned terms and render at 390 px and 1440 px.
+- [x] 7.5 Merge rewrite/india-edition to master and push; verify the Pages workflow succeeds and live Chapter 19 plus a newly rewritten chapter have 0 banned terms and render at 390 px and 1440 px.
 
 ## Workflow follow-up
 
