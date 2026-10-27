@@ -24,7 +24,7 @@ export function triggerChapterCompleteBurst(): void {
   if (typeof document === 'undefined') return;
 
   const isCalm = document.body.dataset.calmChapter === 'true';
-  const comicEffects = document.documentElement.dataset.comicEffects !== 'false';
+  const comicEffects = document.documentElement.dataset.comicEffects !== 'off';
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   if (isCalm || !comicEffects || reducedMotion) {

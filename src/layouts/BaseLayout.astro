@@ -173,46 +173,7 @@ const currentPath = Astro.url.pathname;
     }
   }
 
-  /* View Transitions Comic Panel Wipe */
-  ::view-transition-old(root) {
-    animation: 350ms var(--ease-out) both panel-wipe-out;
-  }
-
-  ::view-transition-new(root) {
-    animation: 350ms var(--ease-out) both panel-wipe-in;
-  }
-
-  @keyframes panel-wipe-out {
-    from {
-      opacity: 1;
-      transform: translateX(0) scale(1);
-    }
-    to {
-      opacity: 0;
-      transform: translateX(-40px) scale(0.98);
-    }
-  }
-
-  @keyframes panel-wipe-in {
-    from {
-      opacity: 0;
-      transform: translateX(40px) scale(0.98);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0) scale(1);
-    }
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    ::view-transition-old(root),
-    ::view-transition-new(root) {
-      animation: 150ms ease-out both fade;
-    }
-
-    @keyframes fade {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-  }
+  /* Route transitions are defined once, globally, in src/styles/comic.css.
+     A scoped copy used to live here; it never matched, because view-transition
+     pseudo-elements are generated outside this component's style scope. */
 </style>

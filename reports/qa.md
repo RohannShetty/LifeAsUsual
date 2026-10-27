@@ -8,6 +8,18 @@
 > in `reports/india-edition-report.md`; all 34 chapters are rewritten for India and independently
 > verified, with Tier A human review still outstanding.
 
+> **Update, 26 October 2026 (typographic and material pass, v2.5.0):** Re-run against the redesign in
+> `reports/redesign-after.md`. Build 52 pages; pagefind 52 pages / 18,268 words; `scripts/verify.ts`
+> 34/34 chapters, 765/765 tips, 2,491 URL checks, 11,682 number checks, 0 CJK (Check 2 PASS);
+> `scripts/scan-dist-terms.mjs` 0 banned terms over 37 pages (Check 8 text side); `scripts/check-links.mjs`
+> 2,234 internal links, all resolve (Check 3); `scripts/verify-india.ts` green (34 chapters, 765 tips);
+> `astro check` 0 errors, 0 warnings, 4 hints; Playwright both suites across 360, 390, 768 and 1440 px
+> **184 passed, 0 failed** (Check 5). Reader JS on a chapter page 9,763 B gzip against a 60 KB cap;
+> font payload unchanged at 221,088 B; comic font 10,672 B against a 25 KB cap.
+> **Check 6's Lighthouse half is unverified for v2.5.0** — no Lighthouse toolchain is installed in this
+> environment — and no rendered page was visually reviewed, because the session's model cannot accept
+> image input. Both are recorded as open in `reports/redesign-after.md` §5.
+
 **Status:** ALL 9 CHECKS PASSED (Milestone M4 Complete; pre-rewrite)
 **Date of Audit:** 2026-10-19  
 **Platform:** Astro v5 Static Output, Vanilla TypeScript, Apple-Style Liquid Glass + Comic Layer (v2)

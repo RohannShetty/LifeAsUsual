@@ -8,14 +8,20 @@
   src: url('../../public/fonts/lilita-one.woff2') format('woff2');
 }
 
+/* Literata ships as a variable font with a real weight axis (400-900) and an
+   optical-size axis (7-72). Declaring only 400 made every bold serif run
+   synthesised faux bold. The axis is declared here so the browser uses it. */
 @font-face {
   font-family: 'Literata';
   font-style: normal;
-  font-weight: 400;
+  font-weight: 400 900;
   font-display: swap;
   src: url('../../public/fonts/literata-regular.woff2') format('woff2');
 }
 
+/* The italic file carries only an optical-size axis: it has no weight axis, so
+   it is declared at 400 alone. Bold italic serif is therefore synthesised by
+   the browser; nothing in the reading column relies on it. */
 @font-face {
   font-family: 'Literata';
   font-style: italic;
@@ -24,10 +30,14 @@
   src: url('../../public/fonts/literata-italic.woff2') format('woff2');
 }
 
+/* Bricolage Grotesque carries weight 200-800 and optical size 12-96. The range
+   used to stop at 700 while the CSS asks for 800 in 51 places, so those
+   declarations were clamped back to 700 and the heaviest rung of the type
+   scale never rendered. */
 @font-face {
   font-family: 'Bricolage Grotesque';
   font-style: normal;
-  font-weight: 400 700;
+  font-weight: 200 800;
   font-display: swap;
   src: url('../../public/fonts/bricolage-grotesque.woff2') format('woff2');
 }

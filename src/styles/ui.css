@@ -211,3 +211,31 @@ a, button, input, select, textarea {
 }
 
 [data-show-inr="false"] .inr-ref { display: none; }
+
+/* ==========================================================================
+   Material ladder
+   Every surface on the site is one of three things, in order of cost:
+     paper  — a matte tint and a hairline edge. The default. Unlimited.
+     plate  — paper plus a single 2px rule along the top edge. Use it to mark
+              the one thing on a screen that matters. At most three per page.
+     glass  — .liquid-glass in glass.css. Chrome only: the bottom nav and one
+              floating control. At most two per page, never inside the reading
+              column. A backdrop-filter is the most expensive thing on the page,
+              so it is reserved for surfaces that float over content.
+   Glass used to be the default for content panels, which made every screen
+   equally loud and put three blurs under one thumb on a mid-range phone.
+   ========================================================================== */
+
+.paper {
+  background: var(--theme-card);
+  border: 1px solid var(--theme-hairline);
+  border-radius: var(--radius-card);
+}
+
+.plate {
+  background: var(--theme-card);
+  border: 1px solid var(--theme-hairline);
+  border-top: 2px solid var(--color-jade-text);
+  border-radius: var(--radius-card);
+}
+

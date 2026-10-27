@@ -6,6 +6,36 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ---
 
+## [2.5.0] - 2026-10-26
+
+A typographic and material pass on the reading experience: the page reads as a field guide rather than a stack of glass cards. No content, data, test, script or palette hue changed.
+
+### Fixed
+- **Comic effects off now works.** The settings sheet wrote `data-comic-effects="on"|"off"` while `Bubble.astro`, `Character.astro` and `particle-burst.ts` all listened for `"false"`. Turning Comic effects off now removes every bubble, character and burst, which is what Acceptance Check 8 required all along.
+- **Route transitions moved the whole window.** The live `::view-transition-*` rule animated the root group, so the rail, the nav and the sticky header travelled with the page. The duplicate rule in `BaseLayout.astro` was dead (scoped styles never match view-transition pseudo-elements) and is deleted.
+
+### Changed
+- **Real variable-font axes.** Literata declares `400 900` and Bricolage `200 800`, measured from the shipped `fvar` tables. Heavy headlines were previously clamped to 700; bold body serif was synthesised.
+- **Two type roles.** Chapter titles and all 765 tip titles are now Literata 600; Bricolage keeps labels, metadata and chrome.
+- **Material ladder.** New `.paper` and `.plate` surfaces in `ui.css`. Home panels (`index.astro`), chapter pagination and every tip card move off glass; `backdrop-filter` is now chrome only (sticky header, bottom nav, settings sheet, reading map).
+- **Tip card** is one ruled page instead of seven nested boxes: metadata chips collapse into a tracked caption line, Cost and Benefit become two ruled columns under one hairline, the caveats panel becomes a rule with a coloured label.
+- **Chapter opener** gains a hairline with a jade flag rule and a serif title at true optical size.
+- **View transitions** are cut into three named groups, so only the reading column moves.
+
+### Verified
+- `npm run build`: 52 pages in 106 s; `pagefind` indexed 52 pages / 18,268 words.
+- `scripts/verify.ts`: 34/34 chapters, 765/765 tips, 2,491 URL checks, 11,682 number checks, zero CJK — Check 2 PASSED.
+- `scripts/check-links.mjs`: 52 pages, 2,234 internal links, all resolve.
+- `scripts/scan-dist-terms.mjs`: 37 pages, no banned terms.
+- Playwright, 4 viewports, both suites: **184 passed, 0 failed**.
+- Reader JS on a chapter page: 9,763 B gzip (cap 60 KB). Font payload unchanged at 221,088 B.
+
+### Not verified
+- Lighthouse mobile (Check 6) — no auditing toolchain in this environment.
+- Rendered screenshots — no image-capable review was possible in this session. See `reports/redesign-after.md`.
+
+---
+
 ## [2.4.0] - 2026-10-21
 
 Chapter 19 is now an India rewrite. The bridge framing and policy crosswalk are gone; the site tracks what is rewritten and what is still queued.
