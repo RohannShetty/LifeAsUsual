@@ -33,7 +33,28 @@
 > **Still open:** a human visual review of the four palettes and the evidence fold (this session's model
 > cannot accept image input), and the Tier A human review of the India rewrite.
 
-**Status:** ALL 9 CHECKS PASSED (v2.6.0; Check 4 human review and Tier A India review outstanding)
+> **Update, 27 October 2026 (visual review pass, v2.6.1):** The reader was reviewed by a vision model
+> (modlens CLI) against screenshots from a local preview, because this session's model cannot accept
+> image input, and the findings were then re-measured in the browser before anything changed. Seven
+> defects were real and fixed: two status chips that contradicted each other now read one chip
+> ("Review pending" / "Checked"), pill content no longer overflows its 23 px box (measured 30 px inside
+> 23 px, now 21 px inside 21 px), the wrapped metadata line no longer starts with an orphaned "/",
+> the badge row holds one height at 390 px, body text no longer reads through the floating nav (104 px
+> scrim plus 6.25 rem of reserved shell height), the "Sources & Citations" box and the footer rule were
+> flattened so a tip card reads as one block, and the home hero gained 6 px of air below the mascot
+> bubble. Three flagged problems were declined after measurement: the teal "Very high ROI" pill measures
+> 7.06 / 9.08 / 5.15 / 5.19 : 1 and the uppercase metadata labels 9.95 / 9.18 / 7.60 / 7.06 : 1 across
+> Neel / Monsoon / Chandni / Kora, all above the 4.5:1 AA floor; the US/NHTSA figures under the India
+> banner are the faithful-translation rule working; the home column's whitespace is the centred shell.
+> All gates re-ran green: build 52 pages, `scripts/verify.ts` 34/34 chapters and 765/765 tips with 2,491
+> URL and 11,682 number checks and 0 CJK, `scripts/scan-dist-terms.mjs --final` 52 pages clean,
+> `scripts/check-links.mjs` 2,234 links resolve, Playwright 184 passed. Evidence and the measurement
+> tables: `reports/monsoon-glass.md` §3b; the two reproducible tools are `reports/tools/capture-screens.mjs`
+> and `reports/tools/contrast-audit.mjs`.
+> **Still open:** a person must still look at the palettes and the fold on a real phone, and the Tier A
+> human review of the India rewrite remains outstanding.
+
+**Status:** ALL 9 CHECKS PASSED (v2.6.1; Check 4 human review and Tier A India review outstanding)
 **Date of Audit:** 2026-10-19  
 **Platform:** Astro v5 Static Output, Vanilla TypeScript, Apple-Style Liquid Glass + Comic Layer (v2)
 

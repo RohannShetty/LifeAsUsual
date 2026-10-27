@@ -6,6 +6,31 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ---
 
+## [2.6.1] - 2026-10-27
+
+Reader polish from the first visual review pass (Monsoon Glass screenshots inspected through the modlens vision CLI and Orca's browser). No content, data, slug, test target or gate changed.
+
+### Changed
+- **One status chip instead of two.** A tip that is independently checked but still awaiting named human review used to carry both "Checked" and "Draft: human review pending" — a pair that argues with itself. It now carries one chip, "Review pending", with a brass bead and the full phrase in its `title`; a reviewed tip reads "Checked". The classes on the element are unchanged (`.badge-checked`, `.badge-human-review`), so the India rewrite suite still counts them.
+- **Metadata line separators trail their pair.** The slash moved from `.meta-chip + .meta-chip::before` to `.meta-chip:not(:last-child)::after`, so a wrapped line can no longer begin with an orphaned "/". Below 640 px the separators are dropped entirely and the chips are spaced instead: the line now holds "SCOPE Lifespan / COST Free / TIME Quick / EFFORT None needed" on one clean row at 390 px, and pairs never break mid-pair.
+- **The mobile badge row has one height and does not squeeze.** The id chip and every pill share `--badge-h` (23 px) with `--badge-pad`/`--badge-fs` retuned per breakpoint; pills are `flex: none; white-space: nowrap`. Previously the row compressed the pills to fit, which wrapped "Very high ROI" onto two lines inside a 23 px box. At 390 px three chips now sit on one line; at 360 px the row wraps to two tidy lines rather than clipping.
+- **The bottom nav has a scrim.** A fixed gradient (104 px, `z-index: -1`) sits behind the floating capsule so body text never reads through it at rest; the capsule still hides on scroll-down. The reader shell reserves 6.25 rem below the last line so the final paragraph always clears the capsule.
+- **A tip card is one block, not a stack of boxes.** The "Sources & Citations" disclosure lost its filled, rounded, bordered box and became a quiet 44 px row with a chevron; the footer action row lost its own hairline. Inside a card the brass fold rule is now the only deliberate divider, with the Cost/Benefit split using one hairline.
+- **The featured card on the home page breathes.** Hero bottom margin 1.4 rem → 1.75 rem, so the mascot bubble no longer crowds the card's top-left border (measured gap 22 px → 28 px).
+
+### Fixed
+- **Pill content no longer overflows its border.** The 13 px evidence ring is an inline SVG, so it sat on the text baseline and added descender space: measured content height was 30 px inside a 23 px pill (modlens reported "text clipping into the pill borders"). `.editorial-badge svg { display: block }` plus `line-height: 1.15` brings `scrollHeight` back to `clientHeight` (21 px).
+- **A broken CSS comment was killing the whole ≤639 px block.** The comment above the media query had lost its closing delimiter, so the block parsed as invalid and every mobile rule in `TipCard.astro` was silently dead. Media-query overrides now use inherited custom properties where they must beat a scoped rule.
+
+### Verified
+- `scripts/verify.ts`: 34/34 chapters, 765/765 tips, 2,491 URL checks, 11,682 number checks, 0 CJK.
+- `scripts/scan-dist-terms.mjs --final`: 52 pages, no banned terms. `scripts/check-links.mjs`: 2,234 internal links resolve.
+- Playwright: 184 passed (2.4 min).
+- Badge matrix 360/390/768 px × text size 100/115/130 %: zero clipped pills, zero horizontal overflow; one badge row at 390 and 768, two tidy rows at 360.
+- modlens re-audit of the mobile card header: "No clipping observed… badges are arranged horizontally on a single line… metadata fits on exactly one clean line… no visual defects detected."
+- Contrast of the two elements the review flagged, measured from screenshots rather than judged by eye (modal pill colour vs painted text): "Very high ROI" pill 7.06 / 9.08 / 5.15 / 5.19 : 1 and metadata labels 9.95 / 9.18 / 7.60 / 7.06 : 1 across Neel / Monsoon / Chandni / Kora — all above the 4.5:1 AA floor, so no colour was changed.
+- Desktop re-audit after the flattening: "the tip card is framed as a single unified container with a subtle rounded border rather than nested boxes"; the open fold: "clean two-column expanded drawer… without nested heavy borders".
+
 ## [2.6.0] - 2026-10-27
 
 "Monsoon Glass": the reader is now a glass shell over a living ground, with the whole per-tip evidence block folded away until asked for. No content, data, slug or test target changed.

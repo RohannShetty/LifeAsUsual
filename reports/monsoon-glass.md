@@ -46,6 +46,42 @@ Other gates: build 52 pages; `scripts/verify.ts` 34/34 chapters, 765/765 tips, 2
 
 Fold geometry, measured in the browser: 0 px closed, 857.89 px open for a typical tip; horizontal overflow 0 px at 360, 390, 768 and 1440; no layout shift from the fold itself (CLS 0.041 comes from font and ground settling at load).
 
+## 3b. Visual review (v2.6.1)
+
+The session model cannot accept image input, so the screens were reviewed by a vision model: `modlens` run from the CLI (`npx @liustack/modlens analyze -i <png> -m "Gemini 3.8 Flash (Low)"`), against a local `astro preview`, with pages driven by Playwright and by Orca's built-in browser. Screenshots live in `reports/visual/` (gitignored). Nine screens were read: home and chapter, Neel / Chandni / Kora, 1440 px and 390 px, plus a 2x card-header crop.
+
+What the review found, and what changed:
+
+| Defect | Evidence | Fix |
+| --- | --- | --- |
+| Two status chips that contradict each other ("Checked" beside "Draft: human review pending") | every chapter card | one chip, "Review pending" / "Checked", full phrase in `title`, brass bead |
+| Metadata line wrapped with an orphaned leading "/" | 390 px card | separators trail their pair and are dropped below 640 px |
+| Pill text clipped by its own border | measured 30 px content inside a 23 px pill | block-level SVG in the chip, `line-height: 1.15`; now 21 px / 21 px |
+| Pills squeezed to two lines inside a fixed height | 360–390 px, until `flex: none` | `flex: none; white-space: nowrap`, size via `--badge-fs`/`--badge-pad`/`--badge-h` |
+| Body text reading through the floating nav | 390 px at rest | 104 px gradient scrim behind the capsule, trust shell padding raised to 6.25 rem |
+| Nested rules inside a tip card (card, metrics, caveats) | 1440 px desktop | caveats section lost its own rule; the fold's brass rule is the only divider |
+| "Sources & Citations" rendered as a filled rounded box inside the card | 1440 px desktop | flattened to a quiet 44 px disclosure row with a chevron; no second rectangle, no fill |
+| Mascot bubble tight against the featured card | 1440 px home | hero margin 1.4 rem → 1.75 rem (measured gap 22 px → 28 px) |
+
+Three findings were declined as false positives after measurement.
+
+1. The US/NHTSA figures under an "India edition" banner are the faithful-translation rule working (`data/en-in/chapters/01-do-not-die-early.json` keeps and cites them).
+2. The home column's right-hand whitespace is the centred app shell (rail 240 px + main 760 px, 220 px either side), not an alignment bug.
+3. The flagged contrast of the teal "Very high ROI" pill and of the uppercase metadata labels. Measured, not eyeballed: the pill was screenshotted in all four palettes and its own flat interior colour taken as the modal colour of the crop, then compared with the painted text colour.
+
+| Palette | ROI pill (text on pill) | Metadata label (text on card) | AA floor |
+| --- | --- | --- | --- |
+| Neel | 7.06:1 | 9.95:1 | 4.5:1 |
+| Monsoon | 9.08:1 | 9.18:1 | 4.5:1 |
+| Chandni | 5.15:1 | 7.60:1 | 4.5:1 |
+| Kora | 5.19:1 | 7.06:1 | 4.5:1 |
+
+The vision model saw the lively teal pill against a bright ground and inferred a contrast failure; the arithmetic says every combination clears AA, and the tightest (Chandni, 5.15:1) still has 14 % headroom. Nothing was darkened, because darkening a passing colour would have cost the palette its accent.
+
+Re-audit after the fixes: "No clipping observed… badges are arranged horizontally on a single line with consistent baseline vertical alignment… metadata fits on exactly one clean line… no visual defects detected." Badge geometry was then checked as a matrix — 360/390/768 px × text size 100/115/130 % — with zero clipped pills and zero horizontal overflow; one row at 390 and 768, two tidy rows at 360.
+
+Remaining known compromise: the floating nav still passes over body text mid-scroll. It hides on scroll-down, the scrim keeps contrast, and the shell reserves 6.25 rem so the last line always clears it; a nav that never overlaps would have to be a static bar.
+
 ## 4. Limits accepted
 
 - **Blur is a budget, not a promise.** Three cards blur at once; a fast flick can leave a card opaque mid-scroll. The tint is thick enough that this reads as a material change, not a flash.

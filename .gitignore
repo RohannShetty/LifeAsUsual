@@ -20,3 +20,6 @@ howtolivebetter-india-edition.zip
 # Generated India edition data
 data/en-in/all-chapters.json
 reports/lighthouse-*.json
+
+# Local visual audit output
+reports/visual/

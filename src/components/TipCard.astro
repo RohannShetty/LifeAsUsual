@@ -123,15 +123,20 @@ if (isIndiaTip) {
           </span>
         )}
 
-        {tip.reviewStatus === 'independently-checked' && pendingHumanReview && (
-          <span class="editorial-badge badge-human-review" title="Checked against official Indian sources; awaiting named human review">
-            Draft: human review pending
+        {tip.reviewStatus === 'independently-checked' && (
+          <span
+            class={`editorial-badge badge-checked${pendingHumanReview ? ' badge-human-review' : ''}`}
+            title={pendingHumanReview
+              ? 'Checked against official Indian sources; awaiting named human review'
+              : 'Rewritten for India and checked against official Indian sources'}
+          >
+            {pendingHumanReview ? 'Review pending' : 'Checked'}
           </span>
         )}
 
-        {(tip.reviewStatus === 'independently-checked' || tip.reviewStatus === 'reviewed') && (
-          <span class="editorial-badge badge-checked" title="Rewritten for India and checked against official Indian sources">
-            {tip.reviewStatus === 'reviewed' ? 'Reviewed' : 'Checked'}
+        {tip.reviewStatus === 'reviewed' && (
+          <span class="editorial-badge badge-checked" title="Rewritten for India, checked against official sources and reviewed by a named reviewer">
+            Reviewed
           </span>
         )}
       </div>
@@ -387,17 +392,30 @@ if (isIndiaTip) {
     flex-wrap: wrap;
   }
 
+  /* Size comes from inherited custom properties so the mobile block can retune
+     the pills without fighting this rule's specificity. */
   .editorial-badge {
     display: inline-flex;
     align-items: center;
+    flex: none;
+    white-space: nowrap;
     gap: 4px;
-    padding: 3px 9px;
+    padding: var(--badge-pad, 3px 9px);
+    min-height: var(--badge-h, auto);
     font-family: var(--font-sans);
-    font-size: 0.78rem;
+    font-size: var(--badge-fs, 0.78rem);
     font-weight: 700;
     letter-spacing: 0.01em;
+    line-height: 1.15;
     border-radius: var(--radius-capsule);
     border: 1px solid transparent;
+  }
+
+  /* An inline SVG sits on the text baseline and adds descender space to the
+     line box, which made the pill's content taller than the pill itself. */
+  .editorial-badge svg {
+    display: block;
+    flex: none;
   }
 
   .roi-very-high {
@@ -445,6 +463,73 @@ if (isIndiaTip) {
     background: color-mix(in srgb, var(--color-jade) 16%, transparent);
     color: var(--color-jade-text);
     border: 1px solid color-mix(in srgb, var(--color-jade) 45%, transparent);
+  }
+
+  /* Checked but not yet seen by a named reviewer: one chip, not two.
+     A brass bead carries the "still waiting" half of the state. */
+  .badge-checked.badge-human-review {
+    background: color-mix(in srgb, var(--theme-bg) 55%, transparent);
+    color: var(--theme-text);
+    border-color: color-mix(in srgb, var(--color-brass) 42%, transparent);
+    gap: 6px;
+  }
+
+  .badge-checked.badge-human-review::before {
+    content: "";
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--color-brass);
+    flex: none;
+  }
+
+  /* At 390px the top row has to hold the id, ROI, grade and one status chip on
+     a single line; the pills tighten rather than wrap into a second row. */
+  @media (max-width: 639px) {
+    .tip-card {
+      --badge-fs: 0.7rem;
+      --badge-pad: 0 8px;
+      --badge-h: 23px;
+    }
+
+    .editorial-badge {
+      letter-spacing: 0;
+    }
+
+    /* One height for the id and every pill, so the row reads as a rule. */
+    .tip-id-badge {
+      display: inline-flex;
+      align-items: center;
+      height: var(--badge-h, 23px);
+      padding: 0 7px;
+    }
+
+    .tip-top-row {
+      gap: 0.4rem;
+      margin-bottom: 0.7rem;
+      flex-wrap: nowrap;
+    }
+
+    .tip-badges-group {
+      gap: 0.2rem;
+      row-gap: 0.3rem;
+      min-width: 0;
+    }
+
+    /* Narrow screens always wrap this line, and a separator stranded at the end
+       of a wrapped line reads as a typo. Spacing groups the pairs instead. */
+    .tip-meta-bar {
+      gap: 0.28rem 0.8rem;
+      --chip-sep: none;
+    }
+  }
+
+  /* Smallest phones: the badge row wraps; keep both lines tight and even. */
+  @media (max-width: 380px) {
+    .tip-card {
+      --badge-fs: 0.68rem;
+      --badge-pad: 0 6px;
+    }
   }
 
   .badge-source {
@@ -537,12 +622,15 @@ if (isIndiaTip) {
     border-radius: 0;
     background: none;
     border: 0;
+    white-space: nowrap;
   }
 
-  .meta-chip + .meta-chip::before {
-    content: "/";
+  /* The slash trails its pair instead of leading the next one: when the line
+     wraps, the break lands after a separator, never before one. */
+  .meta-chip:not(:last-child)::after {
+    content: var(--chip-sep, "/");
     color: var(--theme-hairline);
-    margin-right: 0.4rem;
+    margin-left: 0.45rem;
     font-size: 0.7rem;
   }
 
@@ -671,19 +759,14 @@ if (isIndiaTip) {
     color: var(--theme-text);
   }
 
-  /* Caveats & Context (Refined Full Border — Anti-Slop Compliant) */
+  /* Caveats & Context. No rule of its own: the fold's brass rule is the only
+     divider inside a card, so the evidence reads as one block, not stacked boxes. */
   .caveats-section {
     margin-bottom: 1.15rem;
     background: none;
     border: 0;
-    border-top: 1px solid var(--theme-hairline);
-    padding: 0.85rem 0 0;
+    padding: 0.4rem 0 0;
     border-radius: 0;
-  }
-
-  :global([data-theme="light"]) .caveats-section {
-    background: none;
-    border-color: rgba(38, 84, 124, 0.18);
   }
 
   .caveats-label {
@@ -927,32 +1010,36 @@ if (isIndiaTip) {
     margin-bottom: 1.15rem;
   }
 
+  /* A quiet disclosure row, not a filled box: the card already carries a border,
+     and a second rounded rectangle inside it reads as nested chrome. */
   .sources-toggle-btn {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 0.75rem;
     width: 100%;
-    padding: 0.65rem 0.95rem;
+    padding: 0.55rem 0;
     min-height: 44px;
-    background: rgba(255, 255, 255, 0.04);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 10px;
+    background: none;
+    border: 0;
+    border-radius: 0;
     color: var(--theme-text-muted);
     font-family: var(--font-sans);
-    font-size: 0.84rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
     cursor: pointer;
-    transition: background var(--dur-fast), color var(--dur-fast), border-color var(--dur-fast);
-  }
-
-  :global([data-theme="light"]) .sources-toggle-btn {
-    background: rgba(4, 17, 15, 0.03);
-    border-color: rgba(4, 17, 15, 0.08);
+    transition: color var(--dur-fast);
   }
 
   .sources-toggle-btn:hover {
-    background: rgba(255, 255, 255, 0.08);
     color: var(--theme-text);
-    border-color: rgba(255, 255, 255, 0.16);
+  }
+
+  .sources-toggle-btn:focus-visible {
+    outline: 2px solid var(--theme-focus, var(--color-jade));
+    outline-offset: 3px;
+    border-radius: 4px;
   }
 
   .toggle-icon {
@@ -1005,17 +1092,15 @@ if (isIndiaTip) {
   }
 
   /* Tip Card Footer Actions */
+  /* No rule above the actions: the sources row already closes the card's content,
+     and a second hairline read as a dedicated "buttons" box. */
   .tip-footer {
     display: flex;
     align-items: center;
     gap: 0.4rem;
-    padding-top: 1rem;
-    border-top: 1px solid rgba(232, 241, 239, 0.08);
+    padding-top: 1.15rem;
+    border: 0;
     flex-wrap: wrap;
-  }
-
-  :global([data-theme="light"]) .tip-footer {
-    border-top-color: rgba(4, 17, 15, 0.08);
   }
 
   .action-btn {

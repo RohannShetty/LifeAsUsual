@@ -36,6 +36,7 @@ const navItems = [
 ---
 
 <nav class="bottom-nav-container" aria-label="Mobile navigation" data-bottom-nav>
+  <div class="nav-scrim" aria-hidden="true"></div>
   <div class="liquid-glass nav-capsule">
     {navItems.map(item => {
       const isActive = currentPath === item.href || (item.path !== '/' && currentPath.includes(item.path));
@@ -84,6 +85,29 @@ const navItems = [
 
   @media (min-width: 1024px) {
     .bottom-nav-container { display: none; }
+  }
+
+  /* The capsule floats over body text; this fade lets that text leave the page
+     instead of showing half-legible through the glass. */
+  .nav-scrim {
+    position: fixed;
+    inset-inline: 0;
+    bottom: 0;
+    height: calc(104px + env(safe-area-inset-bottom, 0px));
+    pointer-events: none;
+    z-index: -1;
+    background: linear-gradient(
+      to top,
+      color-mix(in srgb, var(--theme-bg) 86%, transparent) 0%,
+      color-mix(in srgb, var(--theme-bg) 52%, transparent) 42%,
+      transparent 100%
+    );
+  }
+
+  @media (prefers-reduced-transparency: reduce) {
+    .nav-scrim {
+      background: linear-gradient(to top, var(--theme-bg) 55%, transparent 100%);
+    }
   }
 
   .nav-capsule {
