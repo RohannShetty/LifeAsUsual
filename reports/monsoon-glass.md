@@ -39,6 +39,7 @@ Lighthouse, chapter 02 (`reports/lighthouse-desktop.json`, `reports/lighthouse-m
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | Desktop | 99 | 100 | 100 | 100 | 0.6 s | 0.6 s | 0 ms | 0.007 |
 | Mobile (throttled) | 91 | 100 | 100 | 100 | 2.6 s | 2.8 s | 0 ms | 0.041 |
+| Mobile (throttled), v2.6.1 | 92 | 100 | 100 | 100 | 2.7 s | 2.7 s | 0 ms | 0.041 |
 
 Mobile performance was 88 before `content-visibility` and the blur removal, with 2,022 ms of Style & Layout; after, 901 ms and 91. Accessibility was 96 with two real defects (focusable content inside `aria-hidden` closed sheets, and a button whose `aria-label` ignored its visible text) and is now 100.
 

@@ -48,7 +48,8 @@
 > banner are the faithful-translation rule working; the home column's whitespace is the centred shell.
 > All gates re-ran green: build 52 pages, `scripts/verify.ts` 34/34 chapters and 765/765 tips with 2,491
 > URL and 11,682 number checks and 0 CJK, `scripts/scan-dist-terms.mjs --final` 52 pages clean,
-> `scripts/check-links.mjs` 2,234 links resolve, Playwright 184 passed. Evidence and the measurement
+> `scripts/check-links.mjs` 2,234 links resolve, Playwright 184 passed, and Check 6 re-measured: mobile
+> Lighthouse 92 / 100 / 100 / 100 (FCP 2.7 s, LCP 2.7 s, TBT 0 ms, CLS 0.041). Evidence and the measurement
 > tables: `reports/monsoon-glass.md` §3b; the two reproducible tools are `reports/tools/capture-screens.mjs`
 > and `reports/tools/contrast-audit.mjs`.
 > **Still open:** a person must still look at the palettes and the fold on a real phone, and the Tier A

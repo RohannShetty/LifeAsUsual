@@ -29,6 +29,7 @@ Reader polish from the first visual review pass (Monsoon Glass screenshots inspe
 - Badge matrix 360/390/768 px × text size 100/115/130 %: zero clipped pills, zero horizontal overflow; one badge row at 390 and 768, two tidy rows at 360.
 - modlens re-audit of the mobile card header: "No clipping observed… badges are arranged horizontally on a single line… metadata fits on exactly one clean line… no visual defects detected."
 - Contrast of the two elements the review flagged, measured from screenshots rather than judged by eye (modal pill colour vs painted text): "Very high ROI" pill 7.06 / 9.08 / 5.15 / 5.19 : 1 and metadata labels 9.95 / 9.18 / 7.60 / 7.06 : 1 across Neel / Monsoon / Chandni / Kora — all above the 4.5:1 AA floor, so no colour was changed.
+- Mobile Lighthouse after the pass: 92 / 100 / 100 / 100, FCP 2.7 s, LCP 2.7 s, TBT 0 ms, CLS 0.041 (was 91 for v2.6.0; flatter cards mean slightly less paint).
 - Desktop re-audit after the flattening: "the tip card is framed as a single unified container with a subtle rounded border rather than nested boxes"; the open fold: "clean two-column expanded drawer… without nested heavy borders".
 
 ## [2.6.0] - 2026-10-27
