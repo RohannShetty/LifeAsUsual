@@ -1,0 +1,63 @@
+/* Monsoon ground.
+   Glass needs something to refract. Behind every page sits a slow, low-cost
+   sky: three accent-tinted pools drifting on a 90 second cycle, plus the same
+   2% dither the glass uses so banding never shows. Fixed, non-interactive, and
+   painted behind all content (z-index -1) on a transparent body. */
+
+.monsoon-ground {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+  background: var(--theme-bg);
+}
+
+.monsoon-ground::before {
+  content: "";
+  position: absolute;
+  inset: -25%;
+  background:
+    radial-gradient(46% 42% at 18% 12%, color-mix(in srgb, var(--color-jade) 16%, transparent), transparent 70%),
+    radial-gradient(42% 48% at 82% 26%, color-mix(in srgb, var(--color-amber) 11%, transparent), transparent 72%),
+    radial-gradient(58% 52% at 56% 92%, color-mix(in srgb, var(--color-steel) 15%, transparent), transparent 74%);
+  animation: ground-drift 90s var(--ease-inout) infinite alternate;
+  will-change: transform;
+}
+
+.monsoon-ground::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='grain'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23grain)' opacity='0.028'/%3E%3C/svg%3E");
+  mix-blend-mode: soft-light;
+}
+
+@keyframes ground-drift {
+  from {
+    transform: translate3d(-2%, -1%, 0) scale(1);
+  }
+  to {
+    transform: translate3d(2%, 2%, 0) scale(1.08);
+  }
+}
+
+[data-theme="light"] .monsoon-ground::before {
+  background:
+    radial-gradient(46% 42% at 18% 12%, color-mix(in srgb, var(--color-jade) 20%, transparent), transparent 70%),
+    radial-gradient(42% 48% at 82% 26%, color-mix(in srgb, var(--color-amber) 15%, transparent), transparent 72%),
+    radial-gradient(58% 52% at 56% 92%, color-mix(in srgb, var(--color-steel) 20%, transparent), transparent 74%);
+}
+
+[data-theme="dark"][data-palette="monsoon"] .monsoon-ground::before {
+  background:
+    radial-gradient(46% 42% at 18% 12%, color-mix(in srgb, var(--color-jade) 10%, transparent), transparent 70%),
+    radial-gradient(42% 48% at 82% 26%, color-mix(in srgb, #B07A3A 14%, transparent), transparent 72%),
+    radial-gradient(58% 52% at 56% 92%, color-mix(in srgb, var(--color-steel) 10%, transparent), transparent 74%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .monsoon-ground::before {
+    animation: none;
+  }
+}

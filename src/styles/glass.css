@@ -75,6 +75,23 @@
   }
 }
 
+/* Reading cards are the one content surface allowed a backdrop-filter. Honour
+   both the OS setting and the in-app toggle by going opaque, not by dropping the
+   tint: the text must keep its contrast either way. */
+@media (prefers-reduced-transparency: reduce) {
+  .tip-card {
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+    background: var(--theme-surface) !important;
+  }
+}
+
+[data-reduce-transparency="true"] .tip-card {
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+  background: var(--theme-surface) !important;
+}
+
 /* In-App Reading Settings Transparency Toggle Hook */
 [data-reduce-transparency="true"] .liquid-glass {
   background: var(--bg-surface) !important;

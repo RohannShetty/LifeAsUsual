@@ -70,7 +70,7 @@ if (isIndiaTip) {
 ---
 
 <article 
-  class="paper tip-card" 
+  class="tip-card"
   id={anchorId}
   data-tip-id={tip.id}
   data-chapter={tip.chapter}
@@ -164,23 +164,46 @@ if (isIndiaTip) {
     )}
   </section>
 
-  <!-- Cost & Benefit Analysis -->
-  <div class="metrics-grid">
-    <div class="metric-block cost-block">
-      <span class="metric-label">Cost</span>
-      <p class="metric-text">{tip.cost}</p>
-    </div>
-    <div class="metric-block benefit-block">
-      <span class="metric-label">Benefit</span>
-      <p class="metric-text">{tip.benefit}</p>
+  <!-- Evidence ledger. Cost, benefit and caveats are the long part of every
+       entry, so they fold away behind one brass-ruled handle. The text is always
+       in the page; opening is a disclosure, not a swap. -->
+  <div class="notes-fold" data-notes-fold>
+    <button
+      type="button"
+      class="notes-toggle"
+      aria-expanded="false"
+      aria-controls={`notes-${anchorId}`}
+    >
+      <span class="notes-rule" aria-hidden="true"></span>
+      <span class="notes-toggle-label">Open the notes</span>
+      <span class="notes-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+      <svg class="notes-chevron" viewBox="0 0 20 20" width="13" height="13" fill="currentColor" aria-hidden="true">
+        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+      </svg>
+    </button>
+
+    <div class="notes-body" id={`notes-${anchorId}`}>
+      <div class="notes-inner">
+        <!-- Cost & Benefit Analysis -->
+        <div class="metrics-grid">
+          <div class="metric-block cost-block">
+            <span class="metric-label">Cost</span>
+            <p class="metric-text">{tip.cost}</p>
+          </div>
+          <div class="metric-block benefit-block">
+            <span class="metric-label">Benefit</span>
+            <p class="metric-text">{tip.benefit}</p>
+          </div>
+        </div>
+
+        <!-- Caveats & Context -->
+        <section class="caveats-section">
+          <span class="caveats-label">Caveats & Context</span>
+          <p class="caveats-text">{tip.caveats}</p>
+        </section>
+      </div>
     </div>
   </div>
-
-  <!-- Caveats & Context (Refined Full Border — No Slop Side-Tab) -->
-  <section class="caveats-section">
-    <span class="caveats-label">Caveats & Context</span>
-    <p class="caveats-text">{tip.caveats}</p>
-  </section>
 
   <!-- India application (one chapter-level note shared by every tip in the chapter) -->
   {chapterGuidance && (
@@ -255,18 +278,50 @@ if (isIndiaTip) {
   /* One tip is one entry in a field guide: a ruled page, not a floating card.
      The .paper material supplies the hairline and radius; the background is the
      opaque variant so body copy keeps its 7:1 margin. No shadow, no glow. */
+  /* Full glass, thickest rung: 72% tint. The ground shows through as moving
+     colour, never as moving type. Only cards in view pay for the blur; the
+     IntersectionObserver in glass-cards.ts sets .is-glassy. */
   .tip-card {
-    padding: 1.15rem 1rem;
-    margin-bottom: 1.1rem;
-    transition: border-color var(--dur-fast) var(--ease-out);
     position: relative;
+    padding: 1.15rem 1rem;
+    margin-bottom: 1.15rem;
     border-radius: var(--radius-card);
-    background: var(--theme-card-strong);
-    box-shadow: none;
+    background: var(--glass-thick);
+    /* Offscreen tips skip layout and paint; the reserved height keeps the
+       scrollbar honest. Roughly the height of one collapsed tip. */
+    content-visibility: auto;
+    contain-intrinsic-size: auto 420px;
+    border: 1px solid var(--glass-hairline);
+    border-top-color: var(--glass-lit-edge);
+    box-shadow:
+      0 10px 30px rgba(0, 0, 0, 0.18),
+      inset 0 1px 0 rgba(255, 255, 255, 0.06);
+    transition: border-color var(--dur-fast) var(--ease-out), box-shadow var(--dur-fast) var(--ease-out);
+  }
+
+  .tip-card.is-glassy {
+    -webkit-backdrop-filter: blur(var(--glass-blur-card)) saturate(var(--glass-sat-card));
+    backdrop-filter: blur(var(--glass-blur-card)) saturate(var(--glass-sat-card));
   }
 
   .tip-card:hover {
-    border-color: color-mix(in srgb, var(--color-jade) 35%, var(--theme-hairline));
+    border-color: color-mix(in srgb, var(--color-brass) 45%, var(--glass-hairline));
+    box-shadow:
+      0 14px 38px rgba(0, 0, 0, 0.22),
+      inset 0 1px 0 rgba(255, 255, 255, 0.09);
+  }
+
+  :global([data-theme="light"]) .tip-card {
+    box-shadow:
+      0 10px 26px rgba(10, 16, 32, 0.08),
+      inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  }
+
+  /* No filter support: fall back to an opaque surface, never a translucent one. */
+  @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+    .tip-card {
+      background: var(--theme-surface);
+    }
   }
 
   @media (min-width: 640px) {
@@ -346,21 +401,21 @@ if (isIndiaTip) {
   }
 
   .roi-very-high {
-    background: rgba(70, 217, 160, 0.14);
+    background: rgba(63, 201, 180, 0.14);
     color: var(--color-jade-text);
-    border-color: rgba(70, 217, 160, 0.3);
+    border-color: rgba(63, 201, 180, 0.3);
   }
 
   .roi-high {
-    background: rgba(245, 184, 90, 0.14);
+    background: rgba(239, 175, 62, 0.14);
     color: var(--color-amber-text);
-    border-color: rgba(245, 184, 90, 0.3);
+    border-color: rgba(239, 175, 62, 0.3);
   }
 
   .roi-average {
-    background: rgba(143, 179, 217, 0.14);
+    background: rgba(147, 163, 201, 0.14);
     color: var(--color-steel-text);
-    border-color: rgba(143, 179, 217, 0.3);
+    border-color: rgba(147, 163, 201, 0.3);
   }
 
   .grade-badge {
@@ -424,21 +479,21 @@ if (isIndiaTip) {
   }
 
   :global([data-theme="light"]) .roi-very-high {
-    background: rgba(70, 217, 160, 0.2);
+    background: rgba(63, 201, 180, 0.2);
     color: #0E7048;
-    border-color: rgba(70, 217, 160, 0.4);
+    border-color: rgba(63, 201, 180, 0.4);
   }
 
   :global([data-theme="light"]) .roi-high {
-    background: rgba(245, 184, 90, 0.2);
+    background: rgba(239, 175, 62, 0.2);
     color: #925400;
-    border-color: rgba(245, 184, 90, 0.4);
+    border-color: rgba(239, 175, 62, 0.4);
   }
 
   :global([data-theme="light"]) .roi-average {
-    background: rgba(143, 179, 217, 0.2);
+    background: rgba(147, 163, 201, 0.2);
     color: #26547C;
-    border-color: rgba(143, 179, 217, 0.4);
+    border-color: rgba(147, 163, 201, 0.4);
   }
 
   /* Tip Headline — set in the reading serif, like a heading in a printed book.
@@ -652,6 +707,155 @@ if (isIndiaTip) {
     color: var(--theme-text);
   }
 
+  /* ==========================================================================
+     The notes fold
+     One brass-ruled handle per card. Closed by default; the handle is the only
+     ornament on the card, so the entry reads as title → plain words → handle.
+     Content stays in the DOM and opens in place. Without JS the fold is open
+     and the handle is hidden (html.js is set before first paint).
+     ========================================================================== */
+
+  .notes-fold {
+    margin-bottom: 1.1rem;
+  }
+
+  .notes-toggle {
+    display: none;
+    align-items: center;
+    gap: 0.7rem;
+    width: 100%;
+    min-height: 44px;
+    padding: 0.5rem 0.05rem;
+    background: none;
+    border: 0;
+    border-radius: 0;
+    color: var(--theme-text-muted);
+    font-family: var(--font-sans);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: color var(--dur-fast) var(--ease-out);
+  }
+
+  :global(html.js) .notes-toggle {
+    display: flex;
+  }
+
+  .notes-toggle:hover {
+    color: var(--color-brass);
+  }
+
+  .notes-rule {
+    order: 2;
+    flex: 1 1 auto;
+    height: 1px;
+    background: linear-gradient(90deg, color-mix(in srgb, var(--color-brass) 55%, transparent), transparent);
+  }
+
+  .notes-toggle-label {
+    order: 1;
+  }
+
+  .notes-dots {
+    order: 3;
+    display: inline-flex;
+    gap: 4px;
+    align-items: center;
+  }
+
+  .notes-dots i {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: color-mix(in srgb, var(--color-brass) 70%, transparent);
+    transition: transform var(--dur-base) var(--ease-out), background var(--dur-base);
+  }
+
+  .notes-chevron {
+    order: 4;
+    flex: 0 0 auto;
+    color: var(--color-brass);
+    transition: transform var(--dur-base) var(--ease-out);
+  }
+
+  .notes-toggle[aria-expanded="true"] .notes-chevron {
+    transform: rotate(180deg);
+  }
+
+  .notes-toggle[aria-expanded="true"] .notes-dots i {
+    background: var(--color-brass);
+    transform: translateY(-1px);
+  }
+
+  .notes-toggle[aria-expanded="true"] .notes-dots i:nth-child(2) { transition-delay: 30ms; }
+  .notes-toggle[aria-expanded="true"] .notes-dots i:nth-child(3) { transition-delay: 60ms; }
+
+  .notes-body {
+    display: grid;
+    grid-template-rows: 1fr;
+  }
+
+  :global(html.js) .notes-body {
+    grid-template-rows: 0fr;
+    transition: grid-template-rows var(--dur-settle) var(--ease-out);
+  }
+
+  :global(html.js) .notes-body.is-open {
+    grid-template-rows: 1fr;
+  }
+
+  .notes-inner {
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  .notes-inner > .metrics-grid,
+  .notes-inner > .caveats-section {
+    transition:
+      opacity var(--dur-base) var(--ease-out),
+      transform var(--dur-settle) var(--ease-out),
+      filter var(--dur-base) var(--ease-out);
+  }
+
+  :global(html.js) .notes-body:not(.is-open) .notes-inner > .metrics-grid,
+  :global(html.js) .notes-body:not(.is-open) .notes-inner > .caveats-section {
+    opacity: 0;
+  }
+
+  :global(html.js) .notes-body:not(.is-open) .notes-inner > .metrics-grid {
+    transform: translateY(-6px);
+  }
+
+  :global(html.js) .notes-body:not(.is-open) .notes-inner > .caveats-section {
+    transform: translateY(-3px);
+  }
+
+  :global(html.js) .notes-body.is-open .notes-inner > .metrics-grid {
+    transition-delay: 40ms;
+  }
+
+  :global(html.js) .notes-body.is-open .notes-inner > .caveats-section {
+    transition-delay: 80ms;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    :global(html.js) .notes-body,
+    .notes-inner > .metrics-grid,
+    .notes-inner > .caveats-section,
+    .notes-chevron,
+    .notes-dots i {
+      transition-duration: 1ms !important;
+      transition-delay: 0ms !important;
+    }
+
+    :global(html.js) .notes-body:not(.is-open) .notes-inner > .metrics-grid,
+    :global(html.js) .notes-body:not(.is-open) .notes-inner > .caveats-section {
+      transform: none;
+    }
+  }
+
   /* India application */
   .india-application {
     margin-bottom: 1rem;
@@ -861,13 +1065,91 @@ if (isIndiaTip) {
 </style>
 
 <script>
-  // Handle Sources Drawer Expansion on click
-  document.addEventListener('click', (e) => {
-    const target = e.target as HTMLElement;
-    const btn = target.closest('.sources-toggle-btn');
-    if (btn) {
-      const isExpanded = btn.getAttribute('aria-expanded') === 'true';
-      btn.setAttribute('aria-expanded', String(!isExpanded));
+  // A fold remembers the card, not the scroll position: reopening a page in the
+  // same tab restores only the notes the reader had already opened.
+  const NOTES_KEY = 'htlb_notes_open_v1';
+
+  function readOpenNotes(): Set<string> {
+    try {
+      const raw = sessionStorage.getItem(NOTES_KEY);
+      const parsed = raw ? JSON.parse(raw) : [];
+      return new Set(
+        Array.isArray(parsed) ? parsed.filter((id): id is string => typeof id === 'string') : []
+      );
+    } catch {
+      return new Set();
     }
+  }
+
+  function rememberOpenNotes(ids: Set<string>) {
+    try {
+      sessionStorage.setItem(NOTES_KEY, JSON.stringify([...ids].slice(-40)));
+    } catch {
+      /* Private mode: the fold still works, it just will not be remembered. */
+    }
+  }
+
+  const openNotes = readOpenNotes();
+  let lastOpened: HTMLElement | null = null;
+
+  function setFold(fold: HTMLElement, open: boolean, animate = true) {
+    const toggle = fold.querySelector<HTMLButtonElement>('.notes-toggle');
+    const body = fold.querySelector<HTMLElement>('.notes-body');
+    if (!toggle || !body) return;
+
+    if (!animate) body.style.transition = 'none';
+    toggle.setAttribute('aria-expanded', String(open));
+    body.classList.toggle('is-open', open);
+    body.inert = !open;
+    if (!animate) {
+      requestAnimationFrame(() => {
+        body.style.transition = '';
+      });
+    }
+  }
+
+  function initFolds() {
+    document.querySelectorAll<HTMLElement>('[data-notes-fold]').forEach((fold) => {
+      const id = fold.closest<HTMLElement>('.tip-card')?.dataset.tipId ?? '';
+      setFold(fold, openNotes.has(id), false);
+    });
+  }
+
+  document.addEventListener('click', (e) => {
+    const target = e.target as HTMLElement | null;
+    if (!target) return;
+
+    const sourcesBtn = target.closest('.sources-toggle-btn');
+    if (sourcesBtn) {
+      const isExpanded = sourcesBtn.getAttribute('aria-expanded') === 'true';
+      sourcesBtn.setAttribute('aria-expanded', String(!isExpanded));
+      return;
+    }
+
+    const toggle = target.closest<HTMLButtonElement>('.notes-toggle');
+    const fold = toggle?.closest<HTMLElement>('[data-notes-fold]');
+    if (!toggle || !fold) return;
+
+    const open = toggle.getAttribute('aria-expanded') !== 'true';
+    setFold(fold, open);
+
+    const id = fold.closest<HTMLElement>('.tip-card')?.dataset.tipId;
+    if (id) {
+      if (open) openNotes.add(id);
+      else openNotes.delete(id);
+      rememberOpenNotes(openNotes);
+    }
+    if (open) lastOpened = fold;
   });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key !== 'Escape' || !lastOpened) return;
+    const body = lastOpened.querySelector('.notes-body');
+    if (!body?.classList.contains('is-open')) return;
+    setFold(lastOpened, false);
+    lastOpened.querySelector<HTMLButtonElement>('.notes-toggle')?.focus();
+  });
+
+  initFolds();
+  document.addEventListener('astro:page-load', initFolds);
 </script>

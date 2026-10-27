@@ -20,7 +20,20 @@
 > environment — and no rendered page was visually reviewed, because the session's model cannot accept
 > image input. Both are recorded as open in `reports/redesign-after.md` §5.
 
-**Status:** ALL 9 CHECKS PASSED (Milestone M4 Complete; pre-rewrite)
+> **Update, 27 October 2026 (Monsoon Glass, v2.6.0):** Check 6's Lighthouse half is now measured, not
+> assumed. Chapter 02, local preview: desktop 99 / 100 / 100 / 100 and mobile 91 / 100 / 100 / 100
+> (performance / accessibility / best practices / SEO), mobile FCP 2.6 s, LCP 2.8 s, TBT 0 ms,
+> CLS 0.041. Mobile performance rose from 88 to 91 after `content-visibility: auto` on tip cards and
+> the removal of the closed-fold blur filter; accessibility rose from 96 to 100 after closed sheets
+> became `inert` and the chapter "Tips (N)" button lost its conflicting `aria-label`. All other gates
+> re-ran green: build 52 pages, `scripts/verify.ts` 34/34 chapters and 765/765 tips with 2,491 URL and
+> 11,682 number checks and 0 CJK, `scripts/scan-dist-terms.mjs --final` 52 pages clean,
+> `scripts/check-links.mjs` 2,234 links resolve, Playwright 184 passed. Client JS 16,987 B gzip across
+> the build; font payload 207,308 B. Design and measurements: `reports/monsoon-glass.md`.
+> **Still open:** a human visual review of the four palettes and the evidence fold (this session's model
+> cannot accept image input), and the Tier A human review of the India rewrite.
+
+**Status:** ALL 9 CHECKS PASSED (v2.6.0; Check 4 human review and Tier A India review outstanding)
 **Date of Audit:** 2026-10-19  
 **Platform:** Astro v5 Static Output, Vanilla TypeScript, Apple-Style Liquid Glass + Comic Layer (v2)
 

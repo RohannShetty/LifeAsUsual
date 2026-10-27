@@ -17,7 +17,7 @@ interface Particle {
   isSquare: boolean;
 }
 
-const COLORS = ['#46D9A0', '#F5B85A', '#8FB3D9', '#04110F', '#FFFFFF'];
+const COLORS = ['#3FC9B4', '#EFAF3E', '#93A3C9', '#04110F', '#FFFFFF'];
 
 export function triggerChapterCompleteBurst(): void {
   // Check Calm Mode and Comic Effects suppression

@@ -8,6 +8,7 @@ import { resolvePath } from '../utils/paths';
 import '../styles/fonts.css';
 import '../styles/tokens.css';
 import '../styles/glass.css';
+import '../styles/ground.css';
 import '../styles/comic.css';
 import '../styles/ui.css';
 
@@ -33,11 +34,12 @@ const currentPath = Astro.url.pathname;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
     <meta name="description" content={description} />
-    <meta name="theme-color" content="#08171C" id="theme-color-meta" />
+    <meta name="theme-color" content="#0A1230" id="theme-color-meta" />
 
     <!-- Apply saved theme before first paint (no flash) -->
     <script is:inline>
       (function () {
+        document.documentElement.classList.add('js');
         try {
           var raw = localStorage.getItem('htlb_settings_v1');
           var saved = raw ? JSON.parse(raw) : {};
@@ -55,7 +57,7 @@ const currentPath = Astro.url.pathname;
           document.documentElement.setAttribute('data-palette', palette);
           document.documentElement.setAttribute('data-show-inr', saved.inrReference === false ? 'false' : 'true');
           var meta = document.getElementById('theme-color-meta');
-          if (meta) meta.setAttribute('content', mode === 'light' ? '#F2F6F4' : '#08171C');
+          if (meta) meta.setAttribute('content', mode === 'light' ? '#EFF2F4' : '#0A1230');
         } catch (e) {}
       })();
     </script>
@@ -80,6 +82,7 @@ const currentPath = Astro.url.pathname;
     </script>
   </head>
   <body class="theme-root">
+    <div class="monsoon-ground" aria-hidden="true"></div>
     <a href="#main-content" class="skip-link">Skip to content</a>
     <!-- Desktop Left Rail -->
     <LeftRail currentPath={currentPath} />
@@ -101,6 +104,7 @@ const currentPath = Astro.url.pathname;
     <script>
       import '../scripts/read-tracker';
       import '../scripts/inr';
+      import '../scripts/glass-cards';
     </script>
   </body>
 </html>
@@ -115,10 +119,11 @@ const currentPath = Astro.url.pathname;
   html {
     font-size: 16px;
     -webkit-text-size-adjust: 100%;
+    background-color: var(--theme-bg);
   }
 
   body {
-    background-color: var(--theme-bg);
+    background-color: transparent;
     color: var(--theme-text);
     font-family: var(--font-serif);
     font-size: var(--text-body-size);

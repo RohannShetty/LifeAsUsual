@@ -12,6 +12,7 @@ import currency from '../../data/currency.json';
   aria-modal="true"
   aria-labelledby="settings-title"
   aria-hidden="true"
+  inert
 >
   <header class="sheet-header">
     <div class="sheet-title-row">
@@ -45,20 +46,20 @@ import currency from '../../data/currency.json';
       </div>
       <div class="palette-grid" id="palette-toggles" role="group" aria-labelledby="palette-label">
         <button type="button" class="palette-btn is-selected" data-palette="midnight" data-mode="dark" aria-pressed="true">
-          <span class="palette-swatch" style="--sw-bg:#08171C;--sw-a:#46D9A0;--sw-b:#F5B85A" aria-hidden="true"></span>
-          <span class="palette-name">Midnight</span>
+          <span class="palette-swatch" style="--sw-bg:#0A1230;--sw-a:#3FC9B4;--sw-b:#EFAF3E" aria-hidden="true"></span>
+          <span class="palette-name">Neel</span>
         </button>
         <button type="button" class="palette-btn" data-palette="monsoon" data-mode="dark" aria-pressed="false">
-          <span class="palette-swatch" style="--sw-bg:#12100E;--sw-a:#7BD6AE;--sw-b:#EFB26A" aria-hidden="true"></span>
+          <span class="palette-swatch" style="--sw-bg:#12100E;--sw-a:#7FD8C6;--sw-b:#F0B86A" aria-hidden="true"></span>
           <span class="palette-name">Monsoon</span>
         </button>
         <button type="button" class="palette-btn" data-palette="pearl" data-mode="light" aria-pressed="false">
-          <span class="palette-swatch" style="--sw-bg:#F2F6F4;--sw-a:#0B6B47;--sw-b:#7A4E00" aria-hidden="true"></span>
-          <span class="palette-name">Pearl</span>
+          <span class="palette-swatch" style="--sw-bg:#EFF2F4;--sw-a:#0A6657;--sw-b:#7A4E00" aria-hidden="true"></span>
+          <span class="palette-name">Chandni</span>
         </button>
         <button type="button" class="palette-btn" data-palette="ivory" data-mode="light" aria-pressed="false">
-          <span class="palette-swatch" style="--sw-bg:#FAF4EA;--sw-a:#1E6B50;--sw-b:#8A5200" aria-hidden="true"></span>
-          <span class="palette-name">Ivory</span>
+          <span class="palette-swatch" style="--sw-bg:#F7F3EA;--sw-a:#12675A;--sw-b:#7E5400" aria-hidden="true"></span>
+          <span class="palette-name">Kora</span>
         </button>
       </div>
     </div>
@@ -67,7 +68,7 @@ import currency from '../../data/currency.json';
       <span class="setting-label" id="font-label">Typography</span>
       <div class="toggle-group" id="font-toggles" role="group" aria-labelledby="font-label">
         <button type="button" class="toggle-pill is-selected" data-font="serif" aria-pressed="true">Literata</button>
-        <button type="button" class="toggle-pill" data-font="sans" aria-pressed="false">Bricolage</button>
+        <button type="button" class="toggle-pill" data-font="sans" aria-pressed="false">Mukta</button>
       </div>
     </div>
 
@@ -504,8 +505,8 @@ import currency from '../../data/currency.json';
     const meta = document.getElementById('theme-color-meta');
     if (meta) {
       meta.setAttribute('content', mode === 'light'
-        ? (palette === 'ivory' ? '#FAF4EA' : '#F2F6F4')
-        : (palette === 'monsoon' ? '#12100E' : '#08171C'));
+        ? (palette === 'ivory' ? '#F7F3EA' : '#EFF2F4')
+        : (palette === 'monsoon' ? '#12100E' : '#0A1230'));
     }
 
     try {
@@ -553,6 +554,7 @@ import currency from '../../data/currency.json';
   function openSheet() {
     applySettings(currentSettings);
     syncUi(currentSettings);
+    if (sheet) sheet.inert = false;
     sheet?.classList.add('is-open');
     backdrop?.classList.add('is-open');
     sheet?.setAttribute('aria-hidden', 'false');
@@ -564,6 +566,7 @@ import currency from '../../data/currency.json';
   function closeSheet() {
     sheet?.classList.remove('is-open');
     backdrop?.classList.remove('is-open');
+    if (sheet) sheet.inert = true;
     sheet?.setAttribute('aria-hidden', 'true');
     backdrop?.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = '';

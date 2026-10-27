@@ -1,4 +1,8 @@
-/* Self-Hosted Fonts (Section 8 & 10) */
+/* Self-Hosted Fonts (Section 8 & 10)
+   Mukta (Ek Type, Mumbai; SIL OFL) carries the interface. Literata carries the
+   reading column. Mukta's Latin subset has no rupee sign, so ₹ resolves through
+   the platform UI font declared after Mukta in --font-sans; no extra webfont is
+   shipped or fetched for it. */
 
 @font-face {
   font-family: 'Lilita One';
@@ -6,6 +10,33 @@
   font-weight: 400;
   font-display: swap;
   src: url('../../public/fonts/lilita-one.woff2') format('woff2');
+}
+
+/* Mukta ships as three static weights; 600 and 650 resolve to 700 by the
+   CSS font-matching algorithm, so only the weights the design actually uses
+   are downloaded. Each Latin subset is about 21 KB. */
+@font-face {
+  font-family: 'Mukta';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../../public/fonts/mukta-400.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Mukta';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('../../public/fonts/mukta-700.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Mukta';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url('../../public/fonts/mukta-800.woff2') format('woff2');
 }
 
 /* Literata ships as a variable font with a real weight axis (400-900) and an
@@ -30,14 +61,3 @@
   src: url('../../public/fonts/literata-italic.woff2') format('woff2');
 }
 
-/* Bricolage Grotesque carries weight 200-800 and optical size 12-96. The range
-   used to stop at 700 while the CSS asks for 800 in 51 places, so those
-   declarations were clamped back to 700 and the heaviest rung of the type
-   scale never rendered. */
-@font-face {
-  font-family: 'Bricolage Grotesque';
-  font-style: normal;
-  font-weight: 200 800;
-  font-display: swap;
-  src: url('../../public/fonts/bricolage-grotesque.woff2') format('woff2');
-}

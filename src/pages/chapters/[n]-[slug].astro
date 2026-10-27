@@ -64,7 +64,7 @@ const pendingHumanReview =
         <p class="chapter-subheading">{chapter.title}</p>
       </div>
       <div class="header-actions">
-        <button type="button" class="on-page-btn" id="open-toc-btn" aria-label="On this page">
+        <button type="button" class="on-page-btn" id="open-toc-btn">
           <svg viewBox="0 0 20 20" width="16" height="16" fill="currentColor">
             <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd" />
           </svg>
@@ -149,7 +149,7 @@ const pendingHumanReview =
 
   <!-- "On This Page" Bottom Sheet / Drawer -->
   <div id="toc-backdrop" class="toc-backdrop" aria-hidden="true"></div>
-  <aside id="toc-sheet" class="liquid-glass toc-sheet" aria-modal="true" aria-hidden="true" role="dialog">
+  <aside id="toc-sheet" class="liquid-glass toc-sheet" aria-modal="true" aria-hidden="true" role="dialog" inert>
     <div class="toc-header">
       <h3 class="toc-title">On This Page</h3>
       <button type="button" id="close-toc-btn" class="close-btn" aria-label="Close table of contents">✕</button>
@@ -589,12 +589,20 @@ const pendingHumanReview =
     const closeTocBtn = document.getElementById('close-toc-btn');
 
     function openToc() {
-      tocSheet?.classList.add('is-open');
+      if (tocSheet) {
+        tocSheet.inert = false;
+        tocSheet.setAttribute('aria-hidden', 'false');
+        tocSheet.classList.add('is-open');
+      }
       tocBackdrop?.classList.add('is-open');
     }
 
     function closeToc() {
-      tocSheet?.classList.remove('is-open');
+      if (tocSheet) {
+        tocSheet.classList.remove('is-open');
+        tocSheet.inert = true;
+        tocSheet.setAttribute('aria-hidden', 'true');
+      }
       tocBackdrop?.classList.remove('is-open');
     }
 

@@ -6,6 +6,46 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ---
 
+## [2.6.0] - 2026-10-27
+
+"Monsoon Glass": the reader is now a glass shell over a living ground, with the whole per-tip evidence block folded away until asked for. No content, data, slug or test target changed.
+
+### Added
+- **Ground layer** (`src/styles/ground.css`): a fixed `.monsoon-ground` plane behind every page with three low-alpha accent pools, a 2.8% SVG grain and a 90 s drift; a light-theme variant and a static reduced-motion variant. Cards are tinted over it rather than sitting on flat colour.
+- **Evidence fold** (`src/components/TipCard.astro`): Cost, Benefit and Caveats collapse into one brass-ruled "Open the notes" handle with three brass dots. The body animates `grid-template-rows: 0fr → 1fr`, keeps `aria-expanded`/`aria-controls`/`inert` in step, closes on Escape, restores per session from `sessionStorage` key `htlb_notes_open_v1`. Without JavaScript the notes render open and the handle is hidden.
+- **Glass budget script** (`src/scripts/glass-cards.ts`): an IntersectionObserver puts `.is-glassy` (16 px blur, 118% saturation) on at most 3 in-view tip cards and evicts the oldest; it stands down for `prefers-reduced-transparency` and the Reduce transparency setting.
+- **Material scale** in `src/styles/tokens.css`: five ascending tints — `--glass-ultra-thin` 45%, `--glass-thin` 55%, `--glass-regular` 63%, `--glass-thick` 72% (reading cards), `--glass-opaque` 94% (chrome) — plus `--glass-blur-card`, `--glass-sat-card`, `--theme-brass` and `--text-measure`.
+- **Mukta** (Ek Type, Mumbai; SIL OFL) as the interface face, self-hosted at 400/700/800 (63,108 B total, Latin subset); `public/fonts/OFL-Mukta.txt` carries the licence.
+
+### Changed
+- **Palette retint, same four IDs.** `data-palette` values stay `midnight`/`monsoon`/`pearl`/`ivory` so saved settings and tests keep working, but the grounds are now Neel `#0A1230`, Monsoon `#12100E`, Chandni `#EFF2F4`, Kora `#F7F3EA`, and the accents Peacock `#3FC9B4`, Marigold `#EFAF3E`, Indigo-steel `#93A3C9`, with Brass `#C8A24A` and Kumkum `#C24E58` added for rules and outline only.
+- **Tip cards are glass** (`background: var(--glass-thick)` with a hairline and a lit top edge) instead of `.paper`; the reading column keeps a 15.98–18.35:1 measured title/body contrast across the four palettes because the tint is near-opaque and only the ground moves behind it.
+- **The settings sheet names the palettes** Neel, Monsoon, Chandni and Kora (IDs unchanged), and the type pill now reads Mukta.
+- **Tip cards skip offscreen work**: `content-visibility: auto` with `contain-intrinsic-size: auto 420px`, which cut throttled-mobile Style & Layout from 2,022 ms to 901 ms.
+
+### Removed
+- **Bricolage Grotesque** (76,888 B). It was documented as the rupee fallback but its Latin subset contains no ₹, so the browser paid for the whole file to discover that. `₹` now resolves through the platform UI font declared after Mukta. Font payload: 207,308 B, down 13,780 B from v2.5.0.
+- The closed-fold `filter: blur(2px)`; opacity and translate carry the reveal, without 47 extra filters on one page.
+
+### Fixed
+- **Closed sheets were reachable by keyboard and screen readers.** The TOC drawer and the settings sheet set `aria-hidden="true"` while their buttons stayed focusable; both now also carry `inert` while closed (and drop it on open). Accessibility: Lighthouse 96 → 100 on both presets.
+- The chapter "Tips (N)" button had `aria-label="On this page"` against visible text `Tips (12)`, a label-content-name mismatch; the visible text is now the accessible name.
+
+### Verified
+- `npm run build`: 52 pages.
+- `scripts/verify.ts`: 34/34 chapters, 765/765 tips, 2,491 URL checks, 11,682 number checks, zero CJK.
+- `scripts/scan-dist-terms.mjs --final`: 52 pages, no banned terms. `scripts/check-links.mjs`: 2,234 internal links, all resolve.
+- Playwright, 4 viewports, both suites: **184 passed, 0 failed**.
+- Lighthouse desktop (chapter page): performance **99**, accessibility **100**, best practices **100**, SEO **100**; FCP 0.6 s, LCP 0.6 s, TBT 0 ms, CLS 0.007.
+- Lighthouse mobile (same page, throttled): performance **91**, accessibility **100**, best practices **100**, SEO **100**; FCP 2.6 s, LCP 2.8 s, TBT 0 ms, CLS 0.041. Check 6's mobile half is now measured rather than assumed.
+- Client JS across the whole build: 16,987 B gzip; a chapter reader page stays under 9 KB against the 60 KB cap. Comic font 10,672 B. Character SVG ~9.5 KB.
+- Fold behaviour, measured: closed height 0 px → 857.89 px, `aria-expanded` false→true, `inert` true→false, Escape closes and returns focus, `sessionStorage` restores the open card after reload; horizontal overflow 0 px at 360, 390, 768 and 1440.
+
+### Not verified
+- Rendered pixels were never seen: this session's model cannot accept image input, so the palette and the fold were checked by computed style, contrast maths, geometry and the test suite, not by eye. A human visual pass is still owed — see `reports/monsoon-glass.md` §5.
+
+---
+
 ## [2.5.0] - 2026-10-26
 
 A typographic and material pass on the reading experience: the page reads as a field guide rather than a stack of glass cards. No content, data, test, script or palette hue changed.

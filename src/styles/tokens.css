@@ -1,18 +1,21 @@
 :root {
-  /* Color Palette (Section 8) */
-  --bg-deep: #08171C;
-  --bg-surface: #0F2E36;
-  --color-jade: #46D9A0;     /* Benefit & strong evidence (Grade A) */
-  --color-amber: #F5B85A;    /* Cost & Grade B */
-  --color-steel: #8FB3D9;    /* Neutral & Grade C */
-  --color-mist: #E8F1EF;     /* Main text & pearl surfaces */
-  --color-ink: #04110F;      /* Comic outlines & deep text */
+  /* Color Palette (Section 8) — Monsoon Glass, India edition.
+     Indigo ground, peacock / marigold / indigo-steel accents, brass hairlines. */
+  --bg-deep: #0A1230;
+  --bg-surface: #16224A;
+  --color-jade: #3FC9B4;     /* Benefit & strong evidence (Grade A) — peacock */
+  --color-amber: #EFAF3E;    /* Cost & Grade B — marigold */
+  --color-steel: #93A3C9;    /* Neutral & Grade C — indigo steel */
+  --color-mist: #ECEFF7;     /* Main text & light surfaces */
+  --color-ink: #070D1C;      /* Comic outlines & deep text */
+  --color-brass: #C8A24A;    /* Hairlines, rules, seals. Never body text. */
+  --color-kumkum: #C24E58;   /* Disputed / caution. Outline only. */
 
   /* Theme Dependent Tokens (Default Dark) */
   --theme-bg: var(--bg-deep);
   --theme-surface: var(--bg-surface);
   --theme-text: var(--color-mist);
-  --theme-text-muted: rgba(232, 241, 239, 0.72);
+  --theme-text-muted: rgba(236, 239, 247, 0.78);
   --theme-ink: var(--color-ink);
   --color-ink-muted: var(--theme-text-muted);
 
@@ -24,18 +27,32 @@
   /* Glass surfaces */
   --color-glass-fill: rgba(255, 255, 255, 0.1);
   --color-glass-border: rgba(255, 255, 255, 0.2);
-  --shadow-glass: 0 12px 40px rgba(0, 0, 0, 0.28);
+  --shadow-glass: 0 12px 40px rgba(0, 0, 0, 0.32);
+
+  /* Monsoon material scale: five thicknesses, ascending tint, one contract.
+     ultra-thin (no blur) → thin → regular → thick (reading) → opaque (chrome) */
+  --glass-ultra-thin: color-mix(in srgb, var(--theme-bg) 45%, transparent);
+  --glass-thin: color-mix(in srgb, var(--theme-bg) 55%, transparent);
+  --glass-regular: color-mix(in srgb, var(--theme-bg) 63%, transparent);
+  --glass-thick: color-mix(in srgb, var(--theme-bg) 72%, transparent);
+  --glass-opaque: color-mix(in srgb, var(--theme-bg) 94%, transparent);
+  --glass-hairline: rgba(255, 255, 255, 0.12);
+  --glass-lit-edge: rgba(255, 255, 255, 0.28);
+  --glass-blur-chrome: 24px;
+  --glass-blur-card: 16px;
+  --glass-sat-chrome: 180%;
+  --glass-sat-card: 118%;
 
   /* Typography */
   --font-serif: "Literata", Georgia, serif;
-  --font-sans: "Bricolage Grotesque", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-sans: "Mukta", "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   --font-comic: "Lilita One", cursive, sans-serif;
   --font-display: var(--font-sans);
   --font-body: var(--font-serif);
 
   --text-body-size: 17px;
   --text-body-lh: 1.7;
-  --text-measure: 65ch;
+  --text-measure: 62ch;
 
   /* Motion & Easing Tokens (Section 9) */
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
@@ -43,6 +60,7 @@
   --spring-overshoot: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-spring: cubic-bezier(0.16, 1, 0.3, 1);
 
+  --dur-tap: 120ms;
   --dur-fast: 150ms;
   --dur-base: 250ms;
   --dur-settle: 400ms;
@@ -58,26 +76,35 @@
 }
 
 [data-theme="light"] {
-  --theme-bg: #F4F7F6;
-  --theme-surface: #E3EBE9;
-  --theme-text: #04110F;
-  --theme-text-muted: rgba(4, 17, 15, 0.68);
-  --theme-ink: #04110F;
+  --theme-bg: #EFF2F4;
+  --theme-surface: #E2E8EE;
+  --theme-text: #0A1020;
+  --theme-text-muted: rgba(10, 16, 32, 0.72);
+  --theme-ink: #0A1020;
 
   /* Accents stay luminous for fills, darken when used as text on a tint */
-  --color-jade-text: #0B6B47;
+  --color-jade-text: #0A6657;
   --color-amber-text: #7A4E00;
-  --color-steel-text: #2C5878;
+  --color-steel-text: #2C4A74;
 
   --color-glass-fill: rgba(255, 255, 255, 0.55);
-  --color-glass-border: rgba(4, 17, 15, 0.08);
-  --shadow-glass: 0 12px 30px rgba(4, 17, 15, 0.08);
+  --color-glass-border: rgba(10, 16, 32, 0.08);
+  --shadow-glass: 0 12px 30px rgba(10, 16, 32, 0.08);
+
+  --glass-ultra-thin: color-mix(in srgb, #FFFFFF 45%, transparent);
+  --glass-thin: color-mix(in srgb, #FFFFFF 55%, transparent);
+  --glass-regular: color-mix(in srgb, #FFFFFF 63%, transparent);
+  --glass-thick: color-mix(in srgb, #FFFFFF 72%, transparent);
+  --glass-opaque: color-mix(in srgb, #FFFFFF 94%, transparent);
+  --glass-hairline: rgba(10, 16, 32, 0.1);
+  --glass-lit-edge: rgba(255, 255, 255, 0.9);
 }
 
 /* ------------------------------------------------------------------
    Theme palettes (India edition)
    Two dark and two light palettes share one semantic token contract.
-   Default: Midnight Jade (dark) / Pearl (light).
+   Default: Neel (dark indigo) / Chandni (moonlit light).
+   IDs stay midnight / monsoon / pearl / ivory for saved settings.
    ------------------------------------------------------------------ */
 
 :root {
@@ -86,8 +113,9 @@
   --theme-card-strong: rgba(255, 255, 255, 0.09);
   --theme-hairline: rgba(255, 255, 255, 0.1);
   --theme-soft: rgba(0, 0, 0, 0.16);
-  --theme-shadow-soft: 0 8px 24px rgba(0, 0, 0, 0.18);
-  --theme-glow: rgba(70, 217, 160, 0.18);
+  --theme-shadow-soft: 0 8px 24px rgba(0, 0, 0, 0.2);
+  --theme-glow: rgba(63, 201, 180, 0.18);
+  --theme-brass: color-mix(in srgb, var(--color-brass) 42%, transparent);
 }
 
 /* Dark palette 2: Monsoon Ink — warm charcoal, same semantic accents. */
@@ -96,69 +124,70 @@
   --theme-bg: #12100e;
   --theme-surface: #211c17;
   --theme-text: #f4ede2;
-  --theme-text-muted: rgba(244, 237, 226, 0.71);
+  --theme-text-muted: rgba(244, 237, 226, 0.74);
   --theme-ink: #0a0806;
 
-  --color-jade-text: #7bd6ae;
-  --color-amber-text: #efb26a;
-  --color-steel-text: #a9b9c9;
+  --color-jade-text: #7FD8C6;
+  --color-amber-text: #F0B86A;
+  --color-steel-text: #B3BDD6;
 
   --color-glass-fill: rgba(255, 255, 255, 0.075);
   --color-glass-border: rgba(255, 255, 255, 0.17);
-  --shadow-glass: 0 14px 42px rgba(0, 0, 0, 0.34);
+  --shadow-glass: 0 14px 42px rgba(0, 0, 0, 0.38);
   --theme-card: rgba(255, 255, 255, 0.05);
   --theme-card-strong: rgba(255, 255, 255, 0.085);
   --theme-hairline: rgba(244, 237, 226, 0.12);
   --theme-soft: rgba(0, 0, 0, 0.18);
-  --theme-glow: rgba(123, 214, 174, 0.16);
+  --theme-glow: rgba(127, 216, 198, 0.16);
 }
 
-/* Light palette 1: Pearl (existing light theme, slightly cleaner). */
+/* Light palette 1: Chandni — moonlit cool light. */
 [data-theme="light"] {
   color-scheme: light;
-  --theme-bg: #f2f6f4;
-  --theme-surface: #e4ecea;
-  --theme-text: #04110f;
-  --theme-text-muted: rgba(4, 17, 15, 0.68);
-  --theme-ink: #04110f;
+  --theme-bg: #EFF2F4;
+  --theme-surface: #E2E8EE;
+  --theme-text: #0A1020;
+  --theme-text-muted: rgba(10, 16, 32, 0.72);
+  --theme-ink: #0A1020;
 
-  --color-jade-text: #0b6b47;
-  --color-amber-text: #7a4e00;
-  --color-steel-text: #2c5878;
+  --color-jade-text: #0A6657;
+  --color-amber-text: #7A4E00;
+  --color-steel-text: #2C4A74;
 
   --color-glass-fill: rgba(255, 255, 255, 0.58);
-  --color-glass-border: rgba(4, 17, 15, 0.08);
-  --shadow-glass: 0 12px 30px rgba(4, 17, 15, 0.08);
+  --color-glass-border: rgba(10, 16, 32, 0.08);
+  --shadow-glass: 0 12px 30px rgba(10, 16, 32, 0.08);
 
   --theme-card: rgba(255, 255, 255, 0.55);
   --theme-card-strong: rgba(255, 255, 255, 0.78);
-  --theme-hairline: rgba(4, 17, 15, 0.08);
-  --theme-soft: rgba(4, 17, 15, 0.04);
-  --theme-shadow-soft: 0 8px 22px rgba(4, 17, 15, 0.06);
-  --theme-glow: rgba(11, 107, 71, 0.12);
+  --theme-hairline: rgba(10, 16, 32, 0.08);
+  --theme-soft: rgba(10, 16, 32, 0.04);
+  --theme-shadow-soft: 0 8px 22px rgba(10, 16, 32, 0.06);
+  --theme-glow: rgba(10, 102, 87, 0.12);
+  --theme-brass: color-mix(in srgb, var(--color-brass) 52%, transparent);
 }
 
-/* Light palette 2: Ivory Clove — warm paper, forest and clove accents. */
+/* Light palette 2: Kora — raw silk, warm and quiet. */
 [data-theme="light"][data-palette="ivory"] {
   color-scheme: light;
-  --theme-bg: #faf4ea;
-  --theme-surface: #f0e6d6;
-  --theme-text: #201a13;
-  --theme-text-muted: rgba(32, 26, 19, 0.68);
-  --theme-ink: #201a13;
+  --theme-bg: #F7F3EA;
+  --theme-surface: #EDE4D2;
+  --theme-text: #1B160F;
+  --theme-text-muted: rgba(27, 22, 15, 0.72);
+  --theme-ink: #1B160F;
 
-  --color-jade-text: #1e6b50;
-  --color-amber-text: #8a5200;
-  --color-steel-text: #39566a;
+  --color-jade-text: #12675A;
+  --color-amber-text: #7E5400;
+  --color-steel-text: #344F70;
 
   --color-glass-fill: rgba(255, 255, 255, 0.6);
-  --color-glass-border: rgba(32, 26, 19, 0.1);
-  --shadow-glass: 0 12px 30px rgba(65, 47, 26, 0.1);
+  --color-glass-border: rgba(27, 22, 15, 0.1);
+  --shadow-glass: 0 12px 30px rgba(65, 47, 26, 0.12);
 
   --theme-card: rgba(255, 255, 255, 0.62);
   --theme-card-strong: rgba(255, 255, 255, 0.84);
-  --theme-hairline: rgba(32, 26, 19, 0.1);
+  --theme-hairline: rgba(27, 22, 15, 0.1);
   --theme-soft: rgba(65, 47, 26, 0.05);
   --theme-shadow-soft: 0 8px 22px rgba(65, 47, 26, 0.08);
-  --theme-glow: rgba(30, 107, 80, 0.14);
+  --theme-glow: rgba(18, 103, 90, 0.14);
 }
