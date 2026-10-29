@@ -47,3 +47,12 @@ Access failures recorded: bls.gov returned HTTP 403 with "Access Denied ... Auto
 - None.
 
 Verdict: PASS
+
+## Addendum 2026-10-30 — the two blocked reads, re-fetched
+
+This session re-requested the two sources the verification round could not read. Both answered, so the block was intermittent rather than a page problem. Recorded here so the hedge in 4-16 is not mistaken for a gap in the evidence.
+
+- https://www.bls.gov/news.release/atus.nr0.htm — HTTP 200 (62,901 bytes), release 10:00 a.m. ET Thursday, 25 June 2026, USDL-26-1022, title "American Time Use Survey - 2025 Results". The release-body line reads: "Watching TV was the leisure and sports activity that occupied the most time (2.6 hours per day), accounting for half of all leisure time, on average (5.2 hours)." Both 4-16 figures and the "half" framing are exact.
+- TRAI, quarter ended 30 June 2026 — press release No.135/2026 dated 12 October 2026, carried by PIB (PRID=2322388) and summarised by DD News on 13 October 2026: "India's internet subscriber base increased to 1,114.17 million at the end of June 2026, from 1,092.79 million at the end of March 2026." 4-15's "about 1.11 billion ... at the end of June 2026" holds, as does its claim that TRAI publishes subscribers and not viewing time.
+
+Nothing above changes the chapter's verdict. The 4-16 overclaim row still stands as recorded (n/a, note not blocking) and is carried into [chapter-04-review-findings.md](reports/chapter-04-review-findings.md) as blocking item F1, together with the two other blocking items found in the line review.
