@@ -49,6 +49,38 @@ const dailyHref = dailyTip
   ? resolvePath('/chapters/' + String(dailyTip.chapter).padStart(2, '0') + '-' + dailyChapterSlug + '/#' + dailyTip.id)
   : resolvePath('/chapters/');
 
+// Cusped arch crown for the daily panel. One scalloped intrados drawn in a
+// 0 0 22 box: an ellipse sampled into seven chords, each struck as a circular
+// arc longer than half its chord (so the arc exists) but shorter than the chord
+// (so neighbouring scallops meet in a cusp). preserveAspectRatio="none"
+// stretches the single path to the panel width and vector-effect in
+// ornament.css holds the stroke at one device pixel, so the cusps survive
+// 360px as well as 1440px.
+const ARCH_PATH = (() => {
+  const width = 100;
+  const height = 22;
+  const inset = 2;
+  const apexY = 5;
+  const lobes = 7;
+  const points: Array<{ x: number; y: number }> = [];
+  for (let i = 0; i <= lobes; i++) {
+    const u = i / lobes;
+    points.push({
+      x: inset + (width - inset * 2) * u,
+      y: height - (height - apexY) * Math.sin(Math.PI * u),
+    });
+  }
+  let d = 'M ' + points[0].x.toFixed(2) + ' ' + points[0].y.toFixed(2);
+  for (let i = 1; i < points.length; i++) {
+    const a = points[i - 1];
+    const b = points[i];
+    const chord = Math.hypot(b.x - a.x, b.y - a.y);
+    const r = (chord * 0.68).toFixed(2);
+    d += ' A ' + r + ' ' + r + ' 0 0 1 ' + b.x.toFixed(2) + ' ' + b.y.toFixed(2);
+  }
+  return d;
+})();
+
 const scopeOptions = ['Lifespan', 'Money', 'Time and energy', 'Personal freedom'];
 const timeOptions = ['Quick', 'A few hours', 'Takes time every day'];
 const willpowerOptions = ['None needed', 'Some', 'A lot'];
@@ -95,7 +127,19 @@ for (const scope of ['all', ...scopeOptions]) {
   </header>
 
   {dailyTip && (
-    <section class="daily-win-panel plate">
+    <div class="daily-crown">
+      <svg
+        class="orn-arch"
+        viewBox="0 0 100 22"
+        preserveAspectRatio="none"
+        aria-hidden="true"
+        focusable="false"
+      >
+        <path class="orn-arch-line" d={ARCH_PATH} />
+        <circle class="orn-arch-foot" cx="2" cy="22" r="2.5" />
+        <circle class="orn-arch-foot" cx="98" cy="22" r="2.5" />
+      </svg>
+      <section class="daily-win-panel plate">
       <div class="daily-topline">
         <span class="daily-badge">Today's quick win</span>
         <span class="daily-tier">{dailyTip.valueTier} ROI</span>
@@ -116,7 +160,8 @@ for (const scope of ['all', ...scopeOptions]) {
       </div>
 
       <a href={dailyHref} class="ui-btn ui-btn-primary daily-cta">Read the full tip and evidence <span aria-hidden="true">→</span></a>
-    </section>
+      </section>
+    </div>
   )}
 
   <section class="overview-section paper">
@@ -248,6 +293,16 @@ for (const scope of ['all', ...scopeOptions]) {
     border-radius: 18px;
     border-top: 2px solid var(--color-jade);
     overflow: hidden;
+  }
+
+  /* The arch sits in flow above the panel so nothing is clipped by the panel's
+     own overflow, and the panel keeps its radius, padding and backdrop as-is. */
+  .daily-crown {
+    margin-bottom: 1rem;
+  }
+
+  .daily-crown .daily-win-panel {
+    margin-bottom: 0;
   }
 
   .daily-topline {

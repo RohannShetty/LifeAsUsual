@@ -1,0 +1,205 @@
+/* ==========================================================================
+   Brass ornament layer — v2.7.0 "monsoon ornaments"
+   One hairline family, drawn with the site's brass, never with body text.
+   These are the only ornament values on the site; nothing shadows tokens.css.
+
+   Ladder, ascending thickness:
+     hairline 1px  a rule under a secondary annotation, a loop contour, a tick
+     rule     2px  the seal's outer ring, the arch springing line
+     bead     5px  a drawn bead, used to foot the arch
+
+   Every motif here is stroke only, decorative, and aria-hidden by its markup.
+   ========================================================================== */
+
+:root {
+  --orn-hairline: 1px;
+  --orn-rule: 2px;
+  --orn-bead: 5px;
+  --orn-arch-h: 22px;
+  --orn-gap: 20px;
+
+  /* Drawn line colours. One mix per palette so a hairline still reads on paper. */
+  --orn-line: color-mix(in srgb, var(--color-brass) 62%, transparent);
+  --orn-line-strong: color-mix(in srgb, var(--color-brass) 82%, transparent);
+}
+
+[data-theme="light"] {
+  --orn-line: color-mix(in srgb, var(--color-brass) 72%, transparent);
+  --orn-line-strong: color-mix(in srgb, var(--color-brass) 92%, transparent);
+}
+
+/* --------------------------------------------------------------------------
+   Arch crown — a cusped intrados that springs from a panel's top rule.
+   Drawn in a 0 0 100 22 box and stretched to the panel width; the stroke is
+   kept at one device pixel by vector-effect, so the cusps survive any width.
+   -------------------------------------------------------------------------- */
+.orn-arch {
+  display: block;
+  width: 100%;
+  height: var(--orn-arch-h);
+  overflow: visible;
+  fill: none;
+  stroke: none;
+}
+
+.orn-arch .orn-arch-line {
+  fill: none;
+  stroke: var(--orn-line-strong);
+  stroke-width: var(--orn-hairline);
+  stroke-linecap: round;
+  vector-effect: non-scaling-stroke;
+}
+
+.orn-arch .orn-arch-foot {
+  fill: var(--orn-line-strong);
+  stroke: none;
+  r: calc(var(--orn-bead) / 2);
+}
+
+/* --------------------------------------------------------------------------
+   Kolam loop — one closed petal-cusp contour per chapter cluster.
+   The loop traces the read frontier through stroke-dashoffset, so progress
+   costs one custom property per cluster and no per-bead work.
+   -------------------------------------------------------------------------- */
+.orn-kolam {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  pointer-events: none;
+}
+
+/* The lattice itself: drawn at build time for every cluster in the dimmest
+   brass, so the map keeps its contour when nothing has been read yet and when
+   JavaScript is blocked. Only the lit loop above it is progress-dependent. */
+.orn-kolam .orn-kolam-base {
+  fill: none;
+  stroke: var(--orn-line);
+  stroke-width: var(--orn-hairline);
+  stroke-linecap: round;
+  vector-effect: non-scaling-stroke;
+  opacity: 0.38;
+}
+
+.orn-kolam .orn-kolam-loop {
+  fill: none;
+  stroke: var(--orn-line);
+  stroke-width: var(--orn-hairline);
+  stroke-linecap: round;
+  vector-effect: non-scaling-stroke;
+  stroke-dasharray: 1 1;
+  stroke-dashoffset: calc(1 - var(--kolam-trace, 0));
+  transition: stroke-dashoffset var(--dur-settle) var(--ease-out);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .orn-kolam .orn-kolam-loop {
+    transition: none;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Completion seal — concentric hairlines, radial ticks, the chapter numeral.
+   Static: the settle is one opacity and one ring dashoffset, defined by the
+   page that owns it, and only when motion is welcome.
+   -------------------------------------------------------------------------- */
+.orn-seal {
+  display: block;
+  width: 96px;
+  height: 96px;
+  margin: var(--orn-gap) auto 0;
+}
+
+.orn-seal .orn-seal-rule {
+  fill: none;
+  stroke: var(--orn-line-strong);
+  stroke-width: var(--orn-rule);
+  vector-effect: non-scaling-stroke;
+}
+
+.orn-seal .orn-seal-ring {
+  fill: none;
+  stroke: var(--orn-line);
+  stroke-width: var(--orn-hairline);
+  vector-effect: non-scaling-stroke;
+}
+
+.orn-seal .orn-seal-trace {
+  fill: none;
+  stroke: var(--orn-line-strong);
+  stroke-width: var(--orn-hairline);
+  stroke-linecap: round;
+  vector-effect: non-scaling-stroke;
+  stroke-dasharray: 1 1;
+  stroke-dashoffset: 0;
+  opacity: 1;
+}
+
+/* The settle: 380ms of opacity and one ring dashoffset, 120ms after the chapter
+   end reaches the viewport, and only when motion is welcome. The ring beneath
+   is always drawn, so nothing on this seal ever depends on JavaScript. */
+@media (prefers-reduced-motion: no-preference) {
+  .orn-seal .orn-seal-trace {
+    stroke-dashoffset: 1;
+    opacity: 0;
+  }
+
+  .chapter-celebration.is-settled .orn-seal .orn-seal-trace {
+    animation: orn-seal-settle 380ms var(--ease-out) 120ms forwards;
+  }
+}
+
+@keyframes orn-seal-settle {
+  from {
+    stroke-dashoffset: 1;
+    opacity: 0;
+  }
+  to {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+}
+
+.orn-seal .orn-seal-tick {
+  fill: none;
+  stroke: var(--orn-line);
+  stroke-width: var(--orn-hairline);
+  vector-effect: non-scaling-stroke;
+}
+
+.orn-seal .orn-seal-numeral {
+  fill: color-mix(in srgb, var(--color-brass) 70%, var(--theme-text));
+  stroke: none;
+  font-family: var(--font-sans);
+  font-weight: 800;
+  font-size: 27px;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
+}
+
+/* --------------------------------------------------------------------------
+   Ruled rupee reference — the indicative INR beside an author's RMB figure.
+   A ruled secondary annotation, not a badge: no fill, no radius, one brass
+   hairline under tabular figures. The author's amount stays first in the DOM
+   and is never wrapped; the rule is the only thing marking the aside. Lives
+   here, not in ui.css, so every --orn-* consumer is an ornament rule.
+   -------------------------------------------------------------------------- */
+.inr-ref {
+  display: inline;
+  white-space: nowrap;
+  margin-left: 2px;
+  padding: 0 2px;
+  border: 0;
+  border-bottom: var(--orn-hairline) solid var(--theme-brass);
+  border-radius: 0;
+  background: none;
+  color: var(--theme-text-muted);
+  font-family: var(--font-sans);
+  font-size: 0.78em;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.35;
+}
+
+[data-show-inr="false"] .inr-ref { display: none; }

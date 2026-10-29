@@ -6,6 +6,67 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ---
 
+## [2.7.0] - 2026-10-30
+
+Monsoon ornaments: one brass hairline family for the reading map, the home daily panel and the chapter
+end. No tip text, data file, slug or gate target changed — the rendered reader text is byte-identical
+to v2.6.1 (proof below). Openspec change: `redesign-monsoon-ornaments`.
+
+### Added
+- **A brass ornament layer** (`src/styles/ornament.css`, imported after `ui.css`): one ladder of values —
+  `--orn-hairline` 1px, `--orn-rule` 2px, `--orn-bead` 5px — plus `--orn-arch-h` 22px and `--orn-gap`
+  20px. Every drawn line is mixed from `--color-brass` (62% / 82% dark, 72% / 92% light) and never from
+  body text. Every motif is stroke only and `aria-hidden`.
+- **A kolam lattice on the reading map.** Each of the 34 chapter clusters now carries one closed
+  petal-cusp contour in a 100x100 box, stretched over the bead grid with
+  `preserveAspectRatio="none"` and a non-scaling stroke. It is drawn twice: a static dim base path (the
+  lattice itself, present with JavaScript blocked and before anything is read) and a lit loop whose
+  `stroke-dashoffset` traces the read frontier. Progress costs one custom property per cluster
+  (`--kolam-trace`, written by the existing ledger subscription), not one write per bead.
+- **An arch crown above the home daily panel.** One cusped intrados SVG, 22 px tall, footed by two 5 px
+  brass beads, sitting on the panel's existing top rule. It is the only drawn motif on the home page.
+- **A completion seal on every chapter page.** A 96 px static SVG inside `.chapter-celebration`: outer
+  hairline ring, 2 px rule, twelve radial ticks, and the chapter numeral in Mukta tabular figures. It
+  renders on calm chapters too — the calm rule now removes only the comic frame.
+
+### Changed
+- **The celebration section is always rendered.** Calm chapters keep `.chapter-celebration` (hairline
+  border, no ink shadow, smaller padding) and lose only the cast; the seal closes the chapter either
+  way. The burst is imported only when `.celebration-cast` exists.
+- **The ruled rupee annotation is a rule, not a badge.** `.inr-ref` lost its fill, radius and border;
+  it is a 1 px brass underline under 0.78em Mukta tabular figures, inline, immediately after the
+  author's figure. The rule moved from `ui.css` to `ornament.css` so every `--orn-*` consumer is an
+  ornament rule. Rewritten chapters state rupees directly, so in practice the annotation is exercised
+  on `/guides/` pages that still carry an RMB figure.
+
+### Fixed
+- **A calm-chapter burst guard that never fired.** `src/cast/particle-burst.ts` read
+  `document.body.dataset.calmChapter`, but the flag lives on `.chapter-page-root`, so the guard was
+  dead and calm chapters were protected only by rendering no celebration. It now reads the chapter root.
+- **A bead press could open a neighbouring tip.** The 44 px touch targets sit on a 20 px lattice, so
+  adjacent hit areas overlap and the browser always gives the click to whichever painted last — measured
+  on the shipped map, pressing tip 1-3 could land on 1-13. A press now resolves to the bead whose centre
+  is nearest the finger. Keyboard activation and non-primary buttons keep the plain anchor behaviour.
+
+### Verified
+- Rendered reader text byte-identical to the pre-change build: HEAD built in a separate worktree, both
+  `dist/` trees stripped of scripts, styles, SVG and comments, 52 pages / 6,146,471 bytes each, no diff.
+- `scripts/verify.ts`: 34/34 chapters, 765/765 tips, 2,491 URL checks, 11,682 number checks, 0 CJK.
+- `scripts/verify-india.ts --final`: green (34 chapters, 765 tips). `scripts/scan-dist-terms.mjs --final`:
+  52 pages, no banned terms. `scripts/check-links.mjs`: 2,234 internal links resolve.
+- Playwright: **216 passed** (2.4 min) across 360x800, 390x844, 768x1024 and 1440x900, including 32 new
+  ornament checks: the ornament cap in dark/light x reduced motion on/off x Comic effects on/off, the
+  seal settling exactly once, the reduced-motion final state, 44 px bead targets, real bead presses in
+  three chapters, the JS-blocked map, and the ruled annotation.
+- Reader JS: chapter 12.0 KB gzip, `/progress/` 11.5 KB, home 12.3 KB against the 60 KB cap (+0.3 KB on
+  `/progress/` for the press resolver, unchanged elsewhere). Page HTML +0.2 to +0.5 KB gzip.
+- Check 6's Lighthouse half is **unverified for this release** — no Lighthouse toolchain is installed;
+  the 27 October mobile run (92/100/100/100) remains the recorded evidence.
+- **Still open:** a human visual review of the four palettes and the fold on a real phone, which is also
+  the condition for archiving the openspec change.
+
+---
+
 ## [2.6.1] - 2026-10-27
 
 Reader polish from the first visual review pass (Monsoon Glass screenshots inspected through the modlens vision CLI and Orca's browser). No content, data, slug, test target or gate changed.

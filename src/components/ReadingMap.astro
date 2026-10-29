@@ -12,6 +12,29 @@ try {
 } catch (e) {
   console.warn('Could not load data/en-in/all-chapters.json:', e);
 }
+
+// One canonical kolam loop, shared by every cluster. Drawn in a 0 0 100 100
+// box as four arcs that meet in cusps at the edge midpoints: each arc is
+// struck at 0.66 of its chord, which is longer than half the chord (so the arc
+// exists) but shorter than the chord itself (so neighbouring arcs meet at an
+// angle). preserveAspectRatio="none" stretches the same path to each cluster,
+// and vector-effect keeps the stroke at one device pixel, so no per-cluster
+// geometry or media query is needed.
+const KOLAM_PATH = (() => {
+  const inset = 6;
+  const far = 100 - inset;
+  const mid = 50;
+  const chord = Math.hypot(far - mid, mid - inset);
+  const r = (chord * 0.66).toFixed(2);
+  return [
+    'M ' + mid + ' ' + inset,
+    'A ' + r + ' ' + r + ' 0 0 1 ' + far + ' ' + mid,
+    'A ' + r + ' ' + r + ' 0 0 1 ' + mid + ' ' + far,
+    'A ' + r + ' ' + r + ' 0 0 1 ' + inset + ' ' + mid,
+    'A ' + r + ' ' + r + ' 0 0 1 ' + mid + ' ' + inset,
+    'Z'
+  ].join(' ');
+})();
 ---
 
 <div class="reading-map-card liquid-glass">
@@ -36,6 +59,16 @@ try {
           <span class="cluster-count">{ch.tips.length}</span>
         </div>
         <div class="cluster-beads">
+          <svg
+            class="orn-kolam"
+            viewBox="0 0 100 100"
+            preserveAspectRatio="none"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <path class="orn-kolam-base" d={KOLAM_PATH} pathLength="1" />
+          <path class="orn-kolam-loop" d={KOLAM_PATH} pathLength="1" />
+          </svg>
           {ch.tips.map(tip => (
             <a 
               href={resolvePath(`/chapters/${String(ch.chapter).padStart(2, '0')}-${ch.slug}/#${tip.chapter}-${tip.tip}`)} 
@@ -123,6 +156,11 @@ try {
   }
 
   .chapter-cluster {
+    /* Positioning context for the kolam contour; the bead row is the second
+       one, so the loop hugs the beads and never crosses the cluster header. */
+    position: relative;
+    --kolam-pitch: 20px;
+    --kolam-disc: 14px;
     background: rgba(0, 0, 0, 0.15);
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 12px;
@@ -149,7 +187,10 @@ try {
   .cluster-beads {
     display: flex;
     flex-wrap: wrap;
-    gap: 6px;
+    /* 14px disc + 6px gutter = the 20px lattice pitch. The kolam contour
+       stretches to this box, so keeping the pitch fixed keeps the cusps fixed. */
+    gap: calc(var(--kolam-pitch) - var(--kolam-disc));
+    position: relative;
   }
 
   .map-bead {
@@ -157,8 +198,8 @@ try {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 14px;
-    height: 14px;
+    width: var(--kolam-disc);
+    height: var(--kolam-disc);
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.12);
     border: 1px solid rgba(255, 255, 255, 0.2);
@@ -229,6 +270,7 @@ try {
   function initMapSync() {
     const counter = document.getElementById('map-read-counter');
     const beads = document.querySelectorAll('.map-bead');
+    const clusters = document.querySelectorAll<HTMLElement>('.chapter-cluster');
 
     subscribeLedger((state) => {
       const readSet = new Set(state.readTipIds);
@@ -245,13 +287,71 @@ try {
         }
       });
 
+      // Kolam contour: one custom property per cluster, consumed as
+      // stroke-dashoffset by ornament.css. Per-cluster, never per-bead, so a
+      // ledger change still costs one class toggle per bead and nothing else.
+      clusters.forEach((cluster) => {
+        const clusterBeads = cluster.querySelectorAll<HTMLElement>('.map-bead');
+        let readInCluster = 0;
+        clusterBeads.forEach((bead) => {
+          const tipId = bead.dataset.tipId;
+          if (tipId && readSet.has(tipId)) readInCluster++;
+        });
+        const totalTips = clusterBeads.length;
+        cluster.style.setProperty(
+          '--kolam-trace',
+          totalTips ? (readInCluster / totalTips).toFixed(3) : '0'
+        );
+      });
+
       if (counter) {
         counter.textContent = `${count} / 765 Beads`;
       }
     });
   }
 
+  // A 44px touch target on a 20px lattice overlaps its neighbours, and the
+  // browser always hands the click to whichever hit area painted last. Resolve
+  // a real pointer press to the bead the finger is actually nearest to, so a
+  // click lands on the dot that is visible under it. Keyboard activation
+  // (detail === 0) and non-primary buttons keep the plain anchor behaviour.
+  function initBeadResolution() {
+    const flag = window as unknown as { __beadResolutionBound?: boolean };
+    if (flag.__beadResolutionBound) return;
+    flag.__beadResolutionBound = true;
+
+    document.addEventListener('click', (event) => {
+      if (event.button !== 0 || event.detail === 0) return;
+      const target = event.target as Element | null;
+      const anchor = target?.closest?.('.map-bead') as HTMLAnchorElement | null;
+      if (!anchor) return;
+      const cluster = anchor.closest('.chapter-cluster');
+      if (!cluster) return;
+
+      const beads = Array.from(cluster.querySelectorAll<HTMLAnchorElement>('.map-bead'));
+      let nearest = anchor;
+      let best = Infinity;
+      for (const bead of beads) {
+        const rect = bead.getBoundingClientRect();
+        const dx = event.clientX - (rect.left + rect.width / 2);
+        const dy = event.clientY - (rect.top + rect.height / 2);
+        const distance = dx * dx + dy * dy;
+        if (distance < best) {
+          best = distance;
+          nearest = bead;
+        }
+      }
+
+      if (nearest !== anchor) {
+        event.preventDefault();
+        const href = nearest.getAttribute('href');
+        if (href) window.location.href = href;
+      }
+    });
+  }
+
   if (typeof window !== 'undefined') {
     document.addEventListener('astro:page-load', initMapSync);
+    initBeadResolution();
   }
 </script>

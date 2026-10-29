@@ -23,7 +23,8 @@ export function triggerChapterCompleteBurst(): void {
   // Check Calm Mode and Comic Effects suppression
   if (typeof document === 'undefined') return;
 
-  const isCalm = document.body.dataset.calmChapter === 'true';
+  const chapterRoot = document.querySelector<HTMLElement>('.chapter-page-root');
+  const isCalm = chapterRoot?.dataset.calmChapter === 'true';
   const comicEffects = document.documentElement.dataset.comicEffects !== 'off';
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 

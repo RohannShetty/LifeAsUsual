@@ -194,24 +194,6 @@ a, button, input, select, textarea {
   border-color: rgba(32, 26, 19, 0.1);
   box-shadow: 0 12px 30px rgba(65, 47, 26, 0.1), inset 0 1px 1px rgba(255, 255, 255, 0.85);
 }
-
-/* India edition: indicative INR reference beside the author's RMB figure. */
-.inr-ref {
-  display: inline;
-  white-space: nowrap;
-  margin-left: 2px;
-  padding: 0 3px;
-  border-radius: 4px;
-  background: color-mix(in srgb, var(--color-jade) 12%, transparent);
-  color: var(--color-jade-text);
-  font-family: var(--font-sans);
-  font-size: 0.78em;
-  font-weight: 700;
-  line-height: 1.35;
-}
-
-[data-show-inr="false"] .inr-ref { display: none; }
-
 /* ==========================================================================
    Material ladder
    Every surface on the site is one of three things, in order of cost:

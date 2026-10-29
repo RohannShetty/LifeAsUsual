@@ -36,9 +36,11 @@ test.describe('How To Live Better - Comprehensive E2E Tests', () => {
     const root = page.locator('.chapter-page-root');
     await expect(root).toHaveAttribute('data-calm-chapter', 'true');
 
-    // Confirm celebration card is suppressed
+    // The celebration still closes the chapter: the seal renders, the cast does not
     const celebration = page.locator('#chapter-celebration');
-    await expect(celebration).toHaveCount(0);
+    await expect(celebration).toHaveCount(1);
+    await expect(page.locator('.celebration-cast')).toHaveCount(0);
+    await expect(celebration.locator('.orn-seal')).toHaveCount(1);
 
     // Confirm the India rewrite notice is present and status-aware
     const notice = page.locator('#india-rewrite-notice');
@@ -60,9 +62,11 @@ test.describe('How To Live Better - Comprehensive E2E Tests', () => {
     const root = page.locator('.chapter-page-root');
     await expect(root).toHaveAttribute('data-calm-chapter', 'false');
 
-    // Check celebration card exists
+    // Check celebration card exists, with the cast and the seal
     const celebration = page.locator('#chapter-celebration');
     await expect(celebration).toBeVisible();
+    await expect(celebration.locator('.celebration-cast')).toHaveCount(1);
+    await expect(celebration.locator('.orn-seal')).toHaveCount(1);
 
     // Tip cards exist
     const tipCards = page.locator('.tip-card');
