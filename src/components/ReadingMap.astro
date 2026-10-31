@@ -356,7 +356,7 @@ const KOLAM_PATH = (() => {
       if (targetAnchor === nearest) return; // Preserve native anchor navigation.
       event.preventDefault();
       window.location.assign(href);
-    });
+    }, true); // Capture before Astro's client router can follow the wrong overlapping anchor.
   }
 
   if (typeof window !== 'undefined') {
