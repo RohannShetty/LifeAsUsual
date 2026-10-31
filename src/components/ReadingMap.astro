@@ -359,8 +359,31 @@ const KOLAM_PATH = (() => {
     }, true); // Capture before Astro's client router can follow the wrong overlapping anchor.
   }
 
+  // The mobile navigation capsule sits over the bottom of the viewport.
+  // When the reading map reaches that region, give priority to the many small
+  // targets in the map, rather than let the floating nav cover their centres.
+  // Restore navigation when the map leaves the viewport.
+  function initMapVisibility() {
+    const state = window as unknown as { __readingMapObserver?: IntersectionObserver };
+    state.__readingMapObserver?.disconnect();
+    document.body.removeAttribute('data-reading-map-in-view');
+
+    const map = document.querySelector('.beads-container');
+    if (!map || typeof IntersectionObserver === 'undefined') return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        document.body.toggleAttribute('data-reading-map-in-view', entry.isIntersecting);
+      },
+      { rootMargin: '0px 0px -104px 0px', threshold: 0 }
+    );
+    observer.observe(map);
+    state.__readingMapObserver = observer;
+  }
+
   if (typeof window !== 'undefined') {
     document.addEventListener('astro:page-load', initMapSync);
+    document.addEventListener('astro:page-load', initMapVisibility);
     initBeadResolution();
+    initMapVisibility();
   }
 </script>
