@@ -10,7 +10,9 @@ test.describe('India-first financial cyber-fraud reporting guide', () => {
     await expect(page.locator('a[href*="rbi.org.in/commonman/Upload/English/Notification/PDFs/NOTI1506072017.PDF"]')).toHaveCount(2);
     await expect(page.getByText('Do not assume an automatic refund.')).toBeVisible();
     const links = await page.locator('.sources a').count();
-    expect(links).toBe(4);
+    expect(links).toBe(3);
+    await expect(page.getByText(/their exact claim mappings have not yet been signed off/)).toBeVisible();
+    await expect(page.locator('a[href*="Crime_AuthoLogin.aspx"]')).toHaveCount(0);
   });
 
   test('a lightweight, private checklist is usable without saving account details', async ({ page }) => {
