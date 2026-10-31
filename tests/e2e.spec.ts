@@ -176,12 +176,14 @@ test.describe('How To Live Better - Comprehensive E2E Tests', () => {
     await expect(page.locator('html')).toHaveAttribute('data-show-inr', 'true');
   });
 
-  test('11. Rewritten tips hide the source-edition India notes and show the checked badge', async ({ page }) => {
+  test('11. India-adapted tips show AI-reviewed draft status rather than expert approval', async ({ page }) => {
     await page.goto('/chapters/18-is-having-kids-worth-it/');
     await expect(page.locator('.tip-card')).toHaveCount(7);
     await expect(page.locator('.india-application')).toHaveCount(0);
     await expect(page.locator('.badge-source')).toHaveCount(0);
-    await expect(page.locator('.badge-checked')).toHaveCount(7);
+    await expect(page.locator('.badge-draft')).toHaveCount(7);
+    await expect(page.locator('.badge-draft').first()).toContainText('AI-reviewed draft');
+    await expect(page.locator('.badge-checked')).toHaveCount(0);
   });
 
   test('9. Marking a tip read persists in localStorage', async ({ page }) => {
