@@ -84,6 +84,13 @@ const navItems = [
     pointer-events: none;
   }
 
+  /* Child has pointer-events:auto in its normal state; disable it immediately
+     during the hide transition so a moving capsule cannot swallow map taps. */
+  .bottom-nav-container.is-hidden .nav-capsule,
+  :global(body[data-reading-map-in-view]) .bottom-nav-container .nav-capsule {
+    pointer-events: none;
+  }
+
   @media (min-width: 1024px) {
     .bottom-nav-container { display: none; }
   }
