@@ -174,7 +174,7 @@ test.describe('Brass ornament layer', () => {
     expect(await overflowX(page)).toBe(0);
   });
 
-  test('5. A bead click lands on the right tip in three different chapters', async ({ page }) => {
+  test('5. A bead pointer press resolves to its visible centre across chapters', async ({ page }) => {
     await page.goto('/progress/');
 
     for (const clusterIndex of [0, 6, 17]) {
@@ -184,26 +184,52 @@ test.describe('Brass ornament layer', () => {
       expect(href).toBeTruthy();
       const target = new URL(href as string, 'http://localhost:4321');
 
-      // A real pointer press, not a locator click: the 44px hit areas overlap on
-      // the 20px lattice, so the page resolves the press to the nearest bead.
-      // Centre the bead: the bottom navigation is fixed, and a bead parked under
-      // it would give the press to the nav instead of the map.
-      await bead.evaluate((el) => el.scrollIntoView({ block: 'center', inline: 'center' }));
-      await page.waitForTimeout(250);
+      // The map is a *nested* 520px scroll container. Keep the chosen bead
+      // inside that viewport, not merely inside the outer document.
+      await bead.scrollIntoViewIfNeeded();
+      await expect(bead).toBeInViewport({ ratio: 1 });
       const box = await bead.boundingBox();
       expect(box).not.toBeNull();
       if (!box) continue;
-      await page.mouse.click(box.x + box.width / 2, box.y + box.height / 2);
+
+      // Verify that the visible dot is not covered by fixed navigation or
+      // another layer. A failure here is a real hit-target regression, not
+      // something to paper over by increasing navigation timeouts.
+      const point = { x: box.x + box.width / 2, y: box.y + box.height / 2 };
+      const isInsideMap = await page.evaluate(({ x, y }) => {
+        const hit = document.elementFromPoint(x, y);
+        return !!hit?.closest('.beads-container');
+      }, point);
+      expect(isInsideMap, `Bead centre for cluster ${clusterIndex} is obscured`).toBe(true);
+
+      await page.mouse.click(point.x, point.y);
       await page.waitForURL((url) => url.pathname === target.pathname && url.hash === target.hash);
 
-      // The landing anchor is a real tip, and the chapter shell rendered.
       await expect(page.locator('.chapter-main-title')).toBeVisible();
-      const anchorId = target.hash.slice(1);
-      await expect(page.locator('[id="' + anchorId + '"]')).toHaveCount(1);
+      await expect(page.locator('[id="' + target.hash.slice(1) + '"]')).toHaveCount(1);
       expect(await overflowX(page)).toBe(0);
-
       await page.goto('/progress/');
     }
+  });
+
+  test('5b. Gap between overlapping bead hit targets resolves to the nearest dot', async ({ page }) => {
+    await page.goto('/progress/');
+    const beads = page.locator('.chapter-cluster').first().locator('.map-bead');
+    const bead = beads.nth(2);
+    await bead.scrollIntoViewIfNeeded();
+    const box = await bead.boundingBox();
+    expect(box).not.toBeNull();
+    if (!box) return;
+
+    // A 20px lattice with 14px dots has a 6px visual gap. Clicking 2px to
+    // the right of the disc tests navigation without relying on the anchor
+    // DOM target, which may be a neighbouring expanded pseudo-element.
+    const expected = await bead.getAttribute('href');
+    expect(expected).toBeTruthy();
+    const point = { x: box.x + box.width + 2, y: box.y + box.height / 2 };
+    await page.mouse.click(point.x, point.y);
+    const target = new URL(expected as string, 'http://localhost:4321');
+    await page.waitForURL((url) => url.pathname === target.pathname && url.hash === target.hash);
   });
 
   test('6. Reading one chapter lights only that cluster', async ({ page }) => {
