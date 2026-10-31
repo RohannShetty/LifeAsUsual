@@ -12,6 +12,12 @@ on:
 permissions:
   contents: read
 
+# Only the latest revision of a pull request needs a full browser-test run.
+# Keep the master-branch verification group separate from each PR.
+concurrency:
+  group: india-verify-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   verify:
     name: Verify India edition
