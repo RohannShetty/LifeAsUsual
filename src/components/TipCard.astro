@@ -118,25 +118,25 @@ if (isIndiaTip) {
         )}
 
         {tip.reviewStatus === 'draft' && (
-          <span class="editorial-badge badge-draft" title="Rewritten for India; pending independent verification">
-            Draft rewrite
+          <span class="editorial-badge badge-draft" title="India adaptation draft; evidence still needs independent verification">
+            Unverified draft
           </span>
         )}
 
         {tip.reviewStatus === 'independently-checked' && (
           <span
-            class={`editorial-badge badge-checked${pendingHumanReview ? ' badge-human-review' : ''}`}
+            class={`editorial-badge badge-draft${pendingHumanReview ? ' badge-human-review' : ''}`}
             title={pendingHumanReview
-              ? 'Checked against official Indian sources; awaiting named human review'
-              : 'Rewritten for India and checked against official Indian sources'}
+              ? 'AI-reviewed India draft. Named expert review is still pending; individual claims may need correction.'
+              : 'AI-reviewed India draft. Automated source checks are not professional verification.'}
           >
-            {pendingHumanReview ? 'Review pending' : 'Checked'}
+            AI-reviewed draft
           </span>
         )}
 
         {tip.reviewStatus === 'reviewed' && (
-          <span class="editorial-badge badge-checked" title="Rewritten for India, checked against official sources and reviewed by a named reviewer">
-            Reviewed
+          <span class="editorial-badge badge-checked" title="A named qualified reviewer has signed off on this India edition version">
+            Human-reviewed
           </span>
         )}
       </div>
@@ -465,16 +465,15 @@ if (isIndiaTip) {
     border: 1px solid color-mix(in srgb, var(--color-jade) 45%, transparent);
   }
 
-  /* Checked but not yet seen by a named reviewer: one chip, not two.
-     A brass bead carries the "still waiting" half of the state. */
-  .badge-checked.badge-human-review {
+  /* An AI-reviewed draft still awaiting named specialist review. */
+  .badge-draft.badge-human-review {
     background: color-mix(in srgb, var(--theme-bg) 55%, transparent);
     color: var(--theme-text);
     border-color: color-mix(in srgb, var(--color-brass) 42%, transparent);
     gap: 6px;
   }
 
-  .badge-checked.badge-human-review::before {
+  .badge-draft.badge-human-review::before {
     content: "";
     width: 5px;
     height: 5px;

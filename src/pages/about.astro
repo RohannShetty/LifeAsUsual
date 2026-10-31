@@ -1,6 +1,11 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { resolvePath } from '../utils/paths';
+import manifest from '../../data/en-in/manifest.json';
+
+const chapterStatuses = Object.values(manifest.chapters);
+const checkedChapters = chapterStatuses.filter((chapter) => chapter.status === 'checked' || chapter.status === 'reviewed').length;
+const awaitingHumanReview = chapterStatuses.filter((chapter) => chapter.tier === 'A' && chapter.humanReview !== 'signed-off').length;
 ---
 
 <BaseLayout
@@ -12,7 +17,7 @@ import { resolvePath } from '../utils/paths';
       <span class="comic-sticker sticker-scope">Attribution & Legal</span>
       <h1 class="page-title">About This Project</h1>
       <p class="page-lead">
-        A fast, mobile-first English translation of <em>How To Live Better</em>, with an India rewrite in progress.
+        A mobile-first adaptation of <em>How To Live Better</em>, with India-specific drafts and an expanding evidence-review process.
       </p>
     </header>
 
@@ -37,10 +42,10 @@ import { resolvePath } from '../utils/paths';
     <section class="info-card liquid-glass">
       <h2 class="card-heading">India Rewrite Status & Professional Deference</h2>
       <div class="callout-box">
-        <strong>Rewrite status:</strong> Chapter 19 (employment and work injury) is rewritten for Indian law and marked as a draft for legal review. The remaining chapters are still source text and are queued.
+        <strong>Current India edition:</strong> {checkedChapters} of {manifest.totalChapters} inherited chapters have India-adapted files marked checked by the existing automated review process. This is not a guarantee of factual accuracy or professional sign-off.
       </div>
       <p style="margin-top: 1rem;">
-        <strong>What changed:</strong> the rewrite status is tracked per chapter. Every tip states whether it is rewritten or queued; Chapter 19 is the first full rewrite.
+        <strong>Review limitations:</strong> {awaitingHumanReview} higher-priority chapters still await named human sign-off. Some claims or citations may require correction even in chapters marked checked. Verify high-stakes advice against current official sources and qualified professionals.
       </p>
       <p style="margin-top: 0.75rem;">
         <a href={resolvePath('/india/')} class="link"><strong>Open the India rewrite status and helplines →</strong></a>
@@ -66,10 +71,10 @@ import { resolvePath } from '../utils/paths';
     <!-- The Guide Totals -->
     <section class="info-card liquid-glass">
       <h2 class="card-heading">Dataset Totals & Coverage</h2>
-      <p>The English edition keeps the source tip counts. The India rewrite does not change the dataset totals:</p>
+      <p>These are the totals for the current inherited dataset. Planned original Indian lessons may change the totals:</p>
       <div class="stats-grid">
         <div class="stat-box">
-          <span class="stat-number">765</span>
+          <span class="stat-number">{manifest.totalTips}</span>
           <span class="stat-label">Total Tips</span>
         </div>
         <div class="stat-box">
@@ -81,7 +86,7 @@ import { resolvePath } from '../utils/paths';
           <span class="stat-label">Very High ROI</span>
         </div>
         <div class="stat-box">
-          <span class="stat-number">34</span>
+          <span class="stat-number">{manifest.totalChapters}</span>
           <span class="stat-label">Chapters</span>
         </div>
       </div>

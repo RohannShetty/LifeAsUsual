@@ -10,7 +10,7 @@
       "id": "13-1",
       "chapter": 13,
       "tip": 1,
-      "title": "Immediate chest compressions can save lives when someone collapses and stops breathing — call 112 and fetch an AED too",
+      "title": "For a teen or adult who collapses and is not breathing normally, call 112, start CPR and use an AED if available",
       "tags": {
         "money": "Free",
         "time": "A few hours",
@@ -23,12 +23,12 @@
       "valueTier": "High",
       "disputed": false,
       "stillVerifying": false,
-      "cost": "This costs nothing. A CPR course from the Red Cross or a hospital lasts half a day to a full day, and one training session is enough for years of use. Even without prior training, you can do it: place both hands on top of each other at the midpoint between the nipples, then press down hard at a rate of about 2 times per second without stopping.",
-      "inPlainWords": "Most people you’d need to help are family members — 79.2% of cardiac arrests happen at home. When someone performs CPR, the survival rate jumps from 3.9% to 16.1%. If a person is unresponsive and not breathing, start compressions right away. Position your hands at the midpoint between the nipples, press down hard at 2 times per second, and keep going. Ask a second person to call 112 and bring an AED; you must not stop compressing.",
-      "benefit": "Meta-analysis of 79 studies involving 142,740 participants shows that overall, only 7.6% of people suffering from out-of-hospital cardiac arrest survive to leave the hospital. For those receiving CPR from bystanders, the survival rate rises from 3.9% to 16.1%. While 53% of cardiac arrests are witnessed by someone nearby, only 32% actually get CPR. In this group, the bystander CPR rate was 20.3%, and the survival rate was just 1.2%. The correct sequence is to start compressions first, then ask someone else to call 112 and fetch an AED; once the AED is powered on, follow its voice prompts.",
+      "cost": "Training costs and course lengths vary by provider. Learning and practising CPR with a recognised first-aid organisation or hospital can help you respond; do not delay emergency help while searching for a course.",
+      "inPlainWords": "If a teen or adult collapses, is unresponsive and is not breathing normally (including only gasping), check that the scene is safe and call 112 immediately. Start chest compressions hard and fast in the centre of the chest at 100–120 per minute, allowing the chest to rise between pushes. Ask someone else to fetch an AED if available. Turn it on and follow the voice prompts as soon as it arrives.",
+      "benefit": "Meta-analysis of 79 studies involving 142,740 participants shows that overall, only 7.6% of people suffering from out-of-hospital cardiac arrest survive to leave the hospital. For those receiving CPR from bystanders, the survival rate rises from 3.9% to 16.1%. While 53% of cardiac arrests are witnessed by someone nearby, only 32% actually get CPR. In this group, the bystander CPR rate was 20.3%, and the survival rate was just 1.2%. The review's survival figures are historical and do not establish survival rates for India. For suspected adult cardiac arrest, seek emergency help, start CPR and follow AED prompts.",
       "evidenceGrade": "A",
-      "sources": "Sasson C et al. (2010). Predictors of survival from out-of-hospital cardiac arrest: a systematic review and meta-analysis. Circulation: Cardiovascular Quality and Outcomes. <https://doi.org/10.1161/CIRCOUTCOMES.109.889576>; National Disaster Management Authority. <https://ndma.gov.in/>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>",
-      "caveats": "Do not pinch the philtrum first, do not look for family members, and do not record a video. Also, do not hesitate to press hard for fear of breaking ribs.",
+      "sources": "Sasson C et al. (2010). Predictors of survival from out-of-hospital cardiac arrest: a systematic review and meta-analysis. Circulation: Cardiovascular Quality and Outcomes. <https://doi.org/10.1161/CIRCOUTCOMES.109.889576>; American Heart Association (reviewed 14 September 2026), Treatment of Cardiac Arrest (adult response instructions). <https://www.heart.org/en/health-topics/cardiac-arrest/emergency-treatment-of-cardiac-arrest>; Government of India Emergency Response Support System, nationwide emergency number 112. <https://112.gov.in/>",
+      "caveats": "The survival percentages above come from historical international research, not an estimate of outcomes in India. Follow instructions from the emergency dispatcher and the AED, including any requested pauses, and continue CPR as directed until help takes over or the person responds. Hands-only CPR guidance for teens and adults does not cover all child, infant, drowning or overdose emergencies; obtain formal training where possible.",
       "reviewStatus": "independently-checked"
     },
     {

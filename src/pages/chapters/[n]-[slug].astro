@@ -99,12 +99,12 @@ const sealTicks = Array.from({ length: 12 }, (_, index) => {
     {isIndiaRewrite ? (
       <aside class="rewrite-notice" id="india-rewrite-notice" data-rewrite-status={rewriteStatus}>
         <span class="rewrite-badge">IN</span>
-        {pendingHumanReview ? (
-          <p><strong>India rewrite.</strong> This chapter has been rewritten for Indian law and practice and checked against official Indian sources. It covers legal, medical or financial claims, so it stays a checked draft until a named human reviewer signs off. <a href={resolvePath('/india/')}>Coverage and sources →</a></p>
+        {rewriteStatus === 'reviewed' ? (
+          <p><strong>Human-reviewed India edition.</strong> This chapter has a recorded named reviewer sign-off for the current version. Sources, legal applicability and evidence may still change. <a href={resolvePath('/india/')}>Coverage and sources →</a></p>
         ) : isCheckedChapter ? (
-          <p><strong>India rewrite.</strong> This chapter has been rewritten for Indian law and practice and checked against official Indian sources. <a href={resolvePath('/india/')}>Coverage and sources →</a></p>
+          <p><strong>AI-reviewed draft for India.</strong> Automated checks have been recorded, but they do not establish that every claim has a matching primary source or qualified professional approval. {pendingHumanReview ? 'This higher-priority chapter still awaits named specialist review.' : 'Review individual sources and limitations before relying on this advice.'} <a href={resolvePath('/india/')}>Coverage and sources →</a></p>
         ) : (
-          <p><strong>India rewrite.</strong> This chapter has been rewritten for Indian law and practice. It is a draft pending independent verification. <a href={resolvePath('/india/')}>Coverage and sources →</a></p>
+          <p><strong>Unverified India draft.</strong> This chapter is an India adaptation pending independent source verification. <a href={resolvePath('/india/')}>Coverage and sources →</a></p>
         )}
       </aside>
     ) : (
@@ -117,8 +117,8 @@ const sealTicks = Array.from({ length: 12 }, (_, index) => {
       <h1 class="chapter-main-title">{chapter.title}</h1>
       <p class="chapter-meta-line">
         {isIndiaRewrite
-          ? chapter.tips.length + ' tips rewritten for India; ' + (pendingHumanReview ? 'checked against official Indian sources; human review pending.' : isCheckedChapter ? 'checked against official Indian sources.' : 'drafts pending independent verification.')
-          : chapter.tips.length + ' verified tips in this chapter. Each tip is an option, not an assignment.'}
+          ? chapter.tips.length + ' India-adapted tips; ' + (rewriteStatus === 'reviewed' ? 'recorded human review.' : isCheckedChapter ? 'AI-reviewed drafts, not professional sign-off.' : 'unverified drafts.')
+          : chapter.tips.length + ' source-edition tips in this chapter. Each tip is an option, not an assignment.'}
       </p>
     </header>
 

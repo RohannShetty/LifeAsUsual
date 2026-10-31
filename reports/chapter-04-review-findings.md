@@ -1,5 +1,7 @@
 # Chapter 04 review findings — for human sign-off
 
+> **Implementation addendum (2026-10-31; Phase 0 branch, not human sign-off):** F1-F3 have been corrected in both `data/en-in/overrides/04.json` and the compiled chapter file. D1: removed the unsourced ₹300–₹1,000 book-price estimate. D2: removed unrelated MoHFW/WHO homepage citations and linked the relevant Swedish trial, Tele-MANAS helpline, and April–June 2026 TRAI/PIB report to the claims they support. D3: retained India-specific Tele-MANAS and linked its official page. **D4-D7 still require separate editorial decisions; the chapter has not received human sign-off.** The original findings below are preserved as the review baseline. Passing automated checks after this change must not be described as expert verification.
+
 Prepared 2026-10-30 in the same session as the worksheet [chapter-04-line-review.md](reports/chapter-04-line-review.md).
 Scope: acceptance Check 4 in [AGENTS.md](AGENTS.md) section 2. This file is the *result* of the line-by-line pass; the worksheet stays the reading instrument and the [sign-off block](reports/chapter-04-line-review.md) stays the human's to sign.
 

@@ -1,8 +1,12 @@
 {
   "tips": {
+    "4-9": {
+      "inPlainWords": "Procrastination is not simply laziness. Research links it to how unpleasant a task feels, how confident you are that you can complete it, how readily immediate distractions pull you away, and self-control. Traits such as neuroticism and sensation-seeking have much weaker links. Try making the first step smaller and easier rather than just blaming yourself."
+    },
     "4-13": {
-      "cost": "A self-help book costs about ₹300–₹1,000, and some are free. It takes about ten weeks of effort: one chapter a week plus one related exercise.",
-      "caveats": "The trial participants were Swedish adults using Swedish-language materials, so the size of the benefit may differ with an English or Hindi adaptation. The materials use standard cognitive-behavioural components: behavioural activation, behavioural experiments, stimulus control (as in Section 10, which advises moving unwanted items out of reach), and work on motivation and work strategies. If procrastination comes with significant low mood or anxiety, follow Section 3, item 18: physical activity, daylight, a regular sleep schedule, talking to someone, and Tele-MANAS on 14416."
+      "cost": "Self-help materials may be free or paid; prices vary. The programme studied in the cited trial lasted ten weeks, with one chapter and a related exercise each week.",
+      "caveats": "The trial participants were Swedish adults using Swedish-language materials, so the size of the benefit may differ with an English or Hindi adaptation. The materials use standard cognitive-behavioural components: behavioural activation, behavioural experiments, stimulus control (as in item 10 of this section, which advises moving unwanted items out of reach), and work on motivation and work strategies. If procrastination comes with significant low mood or anxiety, follow Section 3, item 18: physical activity, daylight, a regular sleep schedule, talking to someone, and Tele-MANAS on 14416.",
+      "sources": "Rozental A, Forsell E, Svensson A, Andersson G, Carlbring P (2015). Internet-based cognitive-behavior therapy for procrastination: A randomized controlled trial. Journal of Consulting and Clinical Psychology, 83(4), 808–824. <https://doi.org/10.1037/ccp0000023>; Tele-MANAS, Ministry of Health and Family Welfare (India; source for the support line mentioned in caveats). <https://telemanas.mohfw.gov.in/>"
     },
     "4-14": {
       "inPlainWords": "People who pay to save time tend to report higher life satisfaction. For the same amount of money, spending it on time rather than goods brings greater immediate happiness."
@@ -25,7 +29,7 @@
       "disputed": false,
       "stillVerifying": false,
       "cost": "No monetary cost. The real challenge is breaking the habit of turning on the TV at random times; you might also miss some breaking news.",
-      "inPlainWords": "Americans aged 15 and older watch 2.6 hours of TV per day, which accounts for half of all their leisure time. Switching to viewing information at scheduled times gives that half of your leisure time back.",
+      "inPlainWords": "Americans aged 15 and older watch 2.6 hours of TV per day, which accounts for half of all their leisure time. Watching or reading at set times may save some time, but the amount depends on what you actually cut back.",
       "benefit": "Americans aged 15 and older watch 2.6 hours of TV daily. Their total leisure time is 5.2 hours, so TV viewing consumes half of it. These figures are from 2025.",
       "evidenceGrade": "C",
       "sources": "U.S. Bureau of Labor Statistics (2026). American Time Use Survey — 2025 Results. <https://www.bls.gov/news.release/atus.nr0.htm>",
@@ -35,7 +39,7 @@
     "4-15": {
       "inPlainWords": "The figure that matters is already on your phone: screen time, broken down by app. No Indian regulator publishes an average daily short-video figure, so this entry does not quote one — but the arithmetic needs no survey. Cutting one hour a day frees 365 hours a year, which is nine 40-hour working weeks. Turning off notifications, setting a daily limit in the app, or deleting the app for a week are each a few minutes of work.",
       "benefit": "India's telecom regulator publishes subscriber numbers every quarter: the country had about 1.11 billion internet subscribers at the end of June 2026 (Telecom Regulatory Authority of India, The Indian Telecom Services Performance Indicators). What no Indian regulator publishes is the average time a person spends watching short videos, so treat any confident national figure for it with suspicion. The arithmetic does not need one. One hour a day is 365 hours a year — nine 40-hour working weeks, or the equivalent of a second part-time job. Your own phone already keeps the only measurement that changes your behaviour: screen time by app. Set the limit against that number, and check it weekly rather than once.",
-      "sources": "Telecom Regulatory Authority of India, The Indian Telecom Services Performance Indicators. <https://trai.gov.in/>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>"
+      "sources": "Telecom Regulatory Authority of India (2026), Indian Telecom Services Performance Indicator Report, April–June 2026, published 12 October 2026. Government of India Press Information Bureau summary. <https://www.pib.gov.in/PressReleasePage.aspx?PRID=2322388&lang=1&reg=48>"
     }
   }
 }

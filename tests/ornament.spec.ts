@@ -19,8 +19,13 @@ const baseSettings = {
   inrReference: true
 };
 
-const combos = [];
-for (const theme of ['dark', 'light']) {
+const combos: Array<{
+  theme: 'dark' | 'light';
+  palette: 'midnight' | 'chandni';
+  reducedMotion: 'no-preference' | 'reduce';
+  comicEffects: boolean;
+}> = [];
+for (const theme of ['dark', 'light'] as const) {
   for (const reducedMotion of ['no-preference', 'reduce'] as const) {
     for (const comicEffects of [true, false]) {
       combos.push({ theme, palette: theme === 'dark' ? 'midnight' : 'chandni', reducedMotion, comicEffects });
@@ -30,8 +35,8 @@ for (const theme of ['dark', 'light']) {
 
 async function applySettings(page: Page, settings: Record<string, unknown>) {
   await page.evaluate(
-    ([key, value]) => localStorage.setItem(key, JSON.stringify(value)),
-    [SETTINGS_KEY, settings]
+    ({ key, value }) => localStorage.setItem(key, JSON.stringify(value)),
+    { key: SETTINGS_KEY, value: settings }
   );
 }
 
@@ -169,7 +174,7 @@ test.describe('Brass ornament layer', () => {
     expect(await overflowX(page)).toBe(0);
   });
 
-  test('5. A bead click lands on the right tip in three different chapters', async ({ page }) => {
+  test('5. A bead pointer press resolves to its visible centre across chapters', async ({ page }) => {
     await page.goto('/progress/');
 
     for (const clusterIndex of [0, 6, 17]) {
@@ -179,26 +184,70 @@ test.describe('Brass ornament layer', () => {
       expect(href).toBeTruthy();
       const target = new URL(href as string, 'http://localhost:4321');
 
-      // A real pointer press, not a locator click: the 44px hit areas overlap on
-      // the 20px lattice, so the page resolves the press to the nearest bead.
-      // Centre the bead: the bottom navigation is fixed, and a bead parked under
-      // it would give the press to the nav instead of the map.
-      await bead.evaluate((el) => el.scrollIntoView({ block: 'center', inline: 'center' }));
-      await page.waitForTimeout(250);
+      // The map is a *nested* 520px scroll container. Keep the chosen bead
+      // inside that viewport, not merely inside the outer document.
+      await bead.scrollIntoViewIfNeeded();
+      await expect(bead).toBeInViewport({ ratio: 1 });
+      await expect(page.locator('body')).toHaveAttribute('data-reading-map-in-view', '');
+      await expect(page.locator('[data-bottom-nav] .nav-capsule')).toHaveCSS('pointer-events', 'none');
       const box = await bead.boundingBox();
       expect(box).not.toBeNull();
       if (!box) continue;
-      await page.mouse.click(box.x + box.width / 2, box.y + box.height / 2);
+
+      // Verify that the visible dot is not covered by fixed navigation or
+      // another layer. A failure here is a real hit-target regression, not
+      // something to paper over by increasing navigation timeouts.
+      const point = { x: box.x + box.width / 2, y: box.y + box.height / 2 };
+      const hitDebug = await page.evaluate(({ x, y }) => {
+        const hit = document.elementFromPoint(x, y);
+        const nav = document.querySelector('[data-bottom-nav]')?.getBoundingClientRect();
+        const map = document.querySelector('.beads-container')?.getBoundingClientRect();
+        return {
+          insideMap: !!hit?.closest('.beads-container'),
+          hit: hit ? hit.tagName + '.' + (hit.getAttribute('class') ?? '') : 'none',
+          nav: nav ? { top: nav.top, bottom: nav.bottom } : null,
+          map: map ? { top: map.top, bottom: map.bottom } : null,
+          point: { x, y },
+          scrollY: window.scrollY
+        };
+      }, point);
+      expect(hitDebug.insideMap, `Bead centre for cluster ${clusterIndex} is obscured: ${JSON.stringify(hitDebug)}`).toBe(true);
+
+      await page.mouse.click(point.x, point.y);
       await page.waitForURL((url) => url.pathname === target.pathname && url.hash === target.hash);
 
-      // The landing anchor is a real tip, and the chapter shell rendered.
       await expect(page.locator('.chapter-main-title')).toBeVisible();
-      const anchorId = target.hash.slice(1);
-      await expect(page.locator('[id="' + anchorId + '"]')).toHaveCount(1);
+      await expect(page.locator('[id="' + target.hash.slice(1) + '"]')).toHaveCount(1);
       expect(await overflowX(page)).toBe(0);
-
       await page.goto('/progress/');
     }
+  });
+
+  test('5b. Gap between overlapping bead hit targets resolves to the nearest dot', async ({ page }) => {
+    await page.goto('/progress/');
+    const beads = page.locator('.chapter-cluster').first().locator('.map-bead');
+    const bead = beads.nth(2);
+    await bead.scrollIntoViewIfNeeded();
+    await expect(page.locator('body')).toHaveAttribute('data-reading-map-in-view', '');
+    await expect(page.locator('[data-bottom-nav] .nav-capsule')).toHaveCSS('pointer-events', 'none');
+    const box = await bead.boundingBox();
+    expect(box).not.toBeNull();
+    if (!box) return;
+
+    // A 20px lattice with 14px dots has a 6px visual gap. Clicking 2px to
+    // the right of the disc tests navigation without relying on the anchor
+    // DOM target, which may be a neighbouring expanded pseudo-element.
+    const expected = await bead.getAttribute('href');
+    expect(expected).toBeTruthy();
+    const point = { x: box.x + box.width + 2, y: box.y + box.height / 2 };
+    const hit = await page.evaluate(({ x, y }) => {
+      const target = document.elementFromPoint(x, y);
+      return { insideMap: !!target?.closest('.beads-container'), tag: target?.tagName, className: target?.getAttribute('class') };
+    }, point);
+    expect(hit.insideMap, 'Gap hit target is obstructed: ' + JSON.stringify(hit)).toBe(true);
+    await page.mouse.click(point.x, point.y);
+    const target = new URL(expected as string, 'http://localhost:4321');
+    await page.waitForURL((url) => url.pathname === target.pathname && url.hash === target.hash);
   });
 
   test('6. Reading one chapter lights only that cluster', async ({ page }) => {
@@ -207,7 +256,7 @@ test.describe('Brass ornament layer', () => {
     const chapterOneTipCount = await page.locator('.chapter-cluster').first().locator('.map-bead').count();
     const readTipIds = Array.from({ length: chapterOneTipCount }, (_, i) => '1-' + (i + 1));
 
-    await page.evaluate(([key, ids]) => {
+    await page.evaluate(({ key, ids }) => {
       localStorage.setItem(key, JSON.stringify({
         version: 1,
         readTipIds: ids,
@@ -217,7 +266,7 @@ test.describe('Brass ornament layer', () => {
         streak: 0,
         lastActiveDate: null
       }));
-    }, ['htlb_ledger_v1', readTipIds]);
+    }, { key: 'htlb_ledger_v1', ids: readTipIds });
 
     await page.goto('/progress/');
     await page.waitForTimeout(300);

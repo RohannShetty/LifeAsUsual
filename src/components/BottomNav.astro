@@ -77,9 +77,17 @@ const navItems = [
     transition: transform var(--dur-base) var(--ease-out), opacity var(--dur-base);
   }
 
-  .bottom-nav-container.is-hidden {
+  .bottom-nav-container.is-hidden,
+  :global(body[data-reading-map-in-view]) .bottom-nav-container {
     transform: translateY(calc(100% + 1.35rem));
     opacity: 0;
+    pointer-events: none;
+  }
+
+  /* Child has pointer-events:auto in its normal state; disable it immediately
+     during the hide transition so a moving capsule cannot swallow map taps. */
+  .bottom-nav-container.is-hidden .nav-capsule,
+  :global(body[data-reading-map-in-view]) .bottom-nav-container .nav-capsule {
     pointer-events: none;
   }
 

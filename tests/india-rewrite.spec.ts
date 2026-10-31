@@ -46,19 +46,26 @@ test.describe('India rewrite chapters', () => {
       const notice = page.locator('#india-rewrite-notice');
       await expect(notice).toBeVisible();
       await expect(notice).toHaveAttribute('data-rewrite-status', meta.status);
-      await expect(notice).toContainText(meta.status === 'draft' ? 'draft pending independent verification' : 'checked against official Indian sources');
+      await expect(notice).toContainText(
+        meta.status === 'draft' ? 'Unverified India draft'
+          : meta.status === 'reviewed' ? 'Human-reviewed India edition'
+          : 'AI-reviewed draft for India'
+      );
 
       await expect(page.locator('.tip-card')).toHaveCount(expectedTips);
 
-      if (meta.status === 'draft') {
-        await expect(page.locator('.badge-draft')).toHaveCount(expectedTips);
-        await expect(page.locator('.badge-checked')).toHaveCount(0);
-        await expect(page.locator('.badge-human-review')).toHaveCount(0);
-      } else {
+      if (meta.status === 'reviewed') {
         await expect(page.locator('.badge-checked')).toHaveCount(expectedTips);
         await expect(page.locator('.badge-draft')).toHaveCount(0);
-        const awaitingHuman = meta.tier === 'A' && meta.humanReview !== 'signed-off';
+        await expect(page.locator('.badge-human-review')).toHaveCount(0);
+      } else {
+        await expect(page.locator('.badge-draft')).toHaveCount(expectedTips);
+        await expect(page.locator('.badge-checked')).toHaveCount(0);
+        const awaitingHuman = meta.status === 'checked' && meta.tier === 'A' && meta.humanReview !== 'signed-off';
         await expect(page.locator('.badge-human-review')).toHaveCount(awaitingHuman ? expectedTips : 0);
+        if (meta.status === 'checked') {
+          await expect(page.locator('.badge-draft').first()).toContainText('AI-reviewed draft');
+        }
       }
 
       const text = await page.locator('body').innerText();

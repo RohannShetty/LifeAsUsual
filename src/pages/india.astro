@@ -38,17 +38,17 @@ const queuedRows = manifestRows
       <h1 class="india-title">The India rewrite, chapter by chapter.</h1>
       <p class="india-lead">{india.intro}</p>
       <div class="india-meta">
-        <span>Reviewed {india.lastReviewed}</span>
+        <span>Status updated {india.lastReviewed}</span>
         <span aria-hidden="true">·</span>
         <span>{india.sources.length} official sources</span>
         <span aria-hidden="true">·</span>
-        <span>{checkedRows.length} checked</span>
+        <span>{checkedRows.length} AI-checked chapters</span>
         <span aria-hidden="true">·</span>
         <span>{draftRows.length} draft</span>
         <span aria-hidden="true">·</span>
         <span>{queuedRows.length} queued</span>
         <span aria-hidden="true">·</span>
-        <span>{queuedRows.length > 0 ? 'Draft for review' : pendingHumanRows.length > 0 ? pendingHumanRows.length + ' Tier A chapters await human review' : 'Verification complete'}</span>
+        <span>{queuedRows.length > 0 ? 'Draft for review' : pendingHumanRows.length > 0 ? pendingHumanRows.length + ' higher-priority chapters await human review' : 'No pending Tier A sign-offs'}</span>
       </div>
     </header>
 
@@ -101,7 +101,7 @@ const queuedRows = manifestRows
       <p class="section-kicker">{queuedRows.length === 0 ? 'Coverage' : 'Still queued'}</p>
       <h2 class="india-h2">{queuedRows.length === 0 ? 'All 34 chapters have an India rewrite' : 'Chapters still on the source text'}</h2>
       {queuedRows.length === 0 ? (
-        <p class="india-body">Every chapter now has an India file and a passing independent verification report. Legal, medical and financial chapters stay checked drafts until a named human reviewer signs off.</p>
+        <p class="india-body">All current chapters have India-adapted files with automated review statuses. These checks do not prove every source supports every claim. Review and correction work continues, especially for high-stakes topics.</p>
       ) : (
         <p class="india-body">{queuedRows.length} chapters have not been rewritten yet. Their tips say so, and the India application note points to the Indian starting point.</p>
       )}
@@ -134,7 +134,7 @@ const queuedRows = manifestRows
 
     <aside class="india-disclaimer">
       <strong>This is a checked draft, not legal or medical advice.</strong>
-      <p>All 34 chapters have been rewritten for India and checked against official Indian sources. Legal, medical and financial chapters still await a named human reviewer. For a decision that matters, use the current official portal and a qualified Indian professional.</p>
+      <p>All 34 inherited chapters have India-adapted drafts, but automated checks are not professional verification. Some citations or claims may still need correction. For an important decision, confirm the applicable rules with the current official source and a qualified professional.</p>
     </aside>
   </article>
 </BaseLayout>

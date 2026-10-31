@@ -1,12 +1,12 @@
 {
-  "lastReviewed": "21 October 2026",
-  "intro": "The India edition is being rewritten chapter by chapter. Chapter 19 (employment and work injury) is rewritten for Indian law and marked as a draft for legal review. The remaining chapters are still source text and are queued. This page tracks coverage, the Indian sources used, and the helplines to save.",
+  "lastReviewed": "31 October 2026",
+  "intro": "All 34 inherited chapters currently have India-adapted drafts (765 tips). Automated AI checks and source listings do not guarantee that every claim is correct. Higher-priority legal, medical and financial chapters still await qualified human review. This page shows coverage and official starting points for further checking.",
   "changed": [
-    "Chapter 19 has been rewritten for Indian employment and work-injury law; it is marked as a draft for legal review.",
-    "Every tip carries an India application note; tips in queued chapters say that the rewrite is still pending.",
-    "A dated INR reference is shown beside source amounts, with a toggle in Reading Settings.",
-    "This page now tracks the rewrite chapter by chapter.",
-    "The About page states what is rewritten and what is still queued."
+    "All 34 inherited chapters currently have India-adapted versions; their automated review status is not professional sign-off.",
+    "Individual tips may still need corrections, stronger primary-source links or specialist review before they should be relied on for high-stakes decisions.",
+    "Indian laws, eligibility and procedures may differ by state and can change; verify them with the current competent authority.",
+    "A dated INR reference is available alongside some source-edition figures; it is indicative, not a local price or purchasing-power estimate.",
+    "Use the chapter list and published sources to inspect the current edition; new India-first lessons and more languages are planned, not yet delivered."
   ],
   "currency": {
     "title": "Source amounts, with an Indian reference",
