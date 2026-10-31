@@ -53,7 +53,10 @@ jobs:
     # Diagnostic only: errors here are migration tasks, never silently waived.
     continue-on-error: true
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout the candidate with Phase 0 type fixes
+        uses: actions/checkout@v4
+        with:
+          ref: chore/phase0-stability-editorial
 
       - name: Set up Node 22
         uses: actions/setup-node@v4
