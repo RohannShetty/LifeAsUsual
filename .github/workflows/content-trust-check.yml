@@ -1,0 +1,40 @@
+name: Content trust contract checks
+
+on:
+  push:
+    branches: [feat/content-trust-model]
+  pull_request:
+    branches: [master]
+    paths:
+      - 'src/lib/content-trust.ts'
+      - 'tests/content-trust.spec.ts'
+      - '.github/workflows/content-trust-check.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  contract:
+    name: Validate claim-level trust model
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+
+      - name: Install locked packages
+        run: npm ci
+
+      - name: Validate schema TypeScript and inherited India data
+        run: npm run check
+
+      - name: Build for Playwright preview
+        run: npm run build
+
+      - name: Verify synthetic trust contract fixtures
+        run: npx playwright test tests/content-trust.spec.ts --project=Desktop-1440x900
