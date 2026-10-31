@@ -1,5 +1,12 @@
 {
   "tips": {
+    "13-1": {
+      "title": "For a teen or adult who collapses and is not breathing normally, call 112, start CPR and use an AED if available",
+      "cost": "Training costs and course lengths vary by provider. Learning and practising CPR with a recognised first-aid organisation or hospital can help you respond; do not delay emergency help while searching for a course.",
+      "inPlainWords": "If a teen or adult collapses, is unresponsive and is not breathing normally (including only gasping), check that the scene is safe and call 112 immediately. Start chest compressions hard and fast in the centre of the chest at 100–120 per minute, allowing the chest to rise between pushes. Ask someone else to fetch an AED if available. Turn it on and follow the voice prompts as soon as it arrives.",
+      "sources": "Sasson C et al. (2010). Predictors of survival from out-of-hospital cardiac arrest: a systematic review and meta-analysis. Circulation: Cardiovascular Quality and Outcomes. <https://doi.org/10.1161/CIRCOUTCOMES.109.889576>; American Heart Association (reviewed 14 September 2026), Treatment of Cardiac Arrest (adult response instructions). <https://www.heart.org/en/health-topics/cardiac-arrest/emergency-treatment-of-cardiac-arrest>; Government of India Emergency Response Support System, nationwide emergency number 112. <https://112.gov.in/>",
+      "caveats": "The survival percentages above come from historical international research, not an estimate of outcomes in India. Follow instructions from the emergency dispatcher and the AED, including any requested pauses, and continue CPR as directed until help takes over or the person responds. Hands-only CPR guidance for teens and adults does not cover all child, infant, drowning or overdose emergencies; obtain formal training where possible."
+    },
     "13-39": {
       "title": "After an injury while helping, use the legal compensation routes — there is no automatic reimbursement fund",
       "inPlainWords": "If you are injured while saving someone, you may have a claim against the person who caused the danger, a claim under the Motor Vehicles Act for a road accident, or victim compensation under the BNSS, 2023. The Good Samaritan protection in section 134A of the Motor Vehicles Act protects you from liability; it does not pay your bill. Keep the medical records and the police report.",
