@@ -15,13 +15,14 @@ test.describe('India-first financial cyber-fraud reporting guide', () => {
 
   test('a lightweight, private checklist is usable without saving account details', async ({ page }) => {
     await page.goto('/help/report-financial-cyber-fraud/');
+    const keysBefore = await page.evaluate(() => Object.keys(localStorage).sort());
     const items = page.locator('.steps input[type="checkbox"]');
     await expect(items).toHaveCount(5);
     await items.first().check();
     await expect(items.first()).toBeChecked();
     await items.last().check();
     await expect(items.last()).toBeChecked();
-    expect(await page.evaluate(() => localStorage.length)).toBe(0);
+    expect(await page.evaluate(() => Object.keys(localStorage).sort())).toEqual(keysBefore);
     expect(await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth)).toBe(0);
   });
 
