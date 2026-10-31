@@ -374,7 +374,7 @@ const KOLAM_PATH = (() => {
       ([entry]) => {
         document.body.toggleAttribute('data-reading-map-in-view', entry.isIntersecting);
       },
-      { rootMargin: '0px 0px -104px 0px', threshold: 0 }
+      { rootMargin: '0px', threshold: 0 }
     );
     observer.observe(map);
     state.__readingMapObserver = observer;
