@@ -2,7 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { resolvePath } from '../../utils/paths';
 
-const checkedAt = '1 November 2026';
+const draftUpdatedAt = '1 November 2026';
 const actions = [
   { id: 'bank', title: 'Contact your bank or payment provider immediately', details: 'Use the official bank app, number on your card, or the bank’s verified website. Report the transaction as suspected fraud. Ask for an acknowledgement or complaint number and whether any protective action is available. Do not trust a support number supplied in a suspicious message.' },
   { id: 'call', title: 'Call the national cyber-fraud reporting helpline: 1930', details: 'India’s National Cyber Crime Reporting Portal directs victims of financial cyber fraud to call 1930 for immediate reporting. Keep your transaction information ready. Reporting quickly may help authorities and banks respond, but recovery is not guaranteed.' },
@@ -25,7 +25,7 @@ const actions = [
       <h1>Money lost to a UPI or online scam?</h1>
       <p class="lede">Act quickly. Contact your bank, report the incident through India's official cybercrime channels, and keep your evidence. These steps can help you report a loss, but no guide can promise that money will be recovered.</p>
       <div class="status" role="note">
-        <strong>Editorial draft, not professional advice.</strong> Information last source-checked {checkedAt}. The reporting methods are linked to government and RBI sources below. State-level police procedures and individual bank decisions may differ.
+        <strong>Editorial draft, not professional advice.</strong> Draft updated {draftUpdatedAt}. Source links are supplied for independent verification; their exact claim mappings have not yet been signed off. State-level police procedures and individual bank decisions may differ.
       </div>
     </header>
 
@@ -63,10 +63,9 @@ const actions = [
       <ul class="sources">
         <li><a href="https://cybercrime.gov.in/Accept.aspx" target="_blank" rel="noopener noreferrer">National Cyber Crime Reporting Portal</a>, homepage notice directing immediate financial-fraud reporting to 1930.</li>
         <li><a href="https://www.cybercrime.gov.in/webform/FAQ.aspx" target="_blank" rel="noopener noreferrer">Cybercrime portal FAQ</a>, “Report Other Cybercrimes” guidance and how to submit an online financial-fraud complaint.</li>
-        <li><a href="https://www.cybercrime.gov.in/webform/Crime_AuthoLogin.aspx" target="_blank" rel="noopener noreferrer">Cybercrime complainant checklist</a>, transaction information and supporting evidence to keep ready.</li>
         <li><a href="https://rbi.org.in/commonman/Upload/English/Notification/PDFs/NOTI1506072017.PDF" target="_blank" rel="noopener noreferrer">Reserve Bank of India, Customer Protection (2017)</a>, paragraphs 5–10 on reporting and liability for unauthorised electronic banking transactions.</li>
       </ul>
-      <p class="note">The cybercrime portal and bank are official destinations. This project is independent and is not affiliated with the Government of India, RBI or any bank.</p>
+      <p class="note">The former “complainant checklist” reference pointed to a portal login route, not a verified public checklist; it was removed pending an exact accessible source. The cybercrime portal and bank are official destinations. This project is independent and is not affiliated with the Government of India, RBI or any bank.</p>
     </section>
 
     <footer>
