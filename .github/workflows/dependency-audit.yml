@@ -1,0 +1,83 @@
+name: Dependency audit evidence
+
+on:
+  pull_request:
+    branches: [ master ]
+    paths:
+      - 'package.json'
+      - 'package-lock.json'
+      - 'scripts/summarize-npm-audit.mjs'
+      - '.github/workflows/dependency-audit.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  report:
+    name: Review full and production dependency tree
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Node 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+
+      - name: Install locked dependencies
+        run: npm ci
+
+      - name: Collect npm advisory details
+        shell: bash
+        run: |
+          mkdir -p audit-evidence
+          npm audit --json > audit-evidence/full.json || true
+          npm audit --omit=dev --json > audit-evidence/production.json || true
+
+      - name: Print readable evidence summary
+        run: node scripts/summarize-npm-audit.mjs audit-evidence/full.json audit-evidence/production.json
+
+      - name: Upload raw reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: npm-audit-evidence
+          path: audit-evidence/*.json
+          retention-days: 14
+
+  migration-probe:
+    name: Astro 7 and Zod 4 compatibility probe (non-deploying)
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    # Diagnostic only: errors here are migration tasks, never silently waived.
+    continue-on-error: true
+    steps:
+      - name: Checkout the candidate with Phase 0 type fixes
+        uses: actions/checkout@v4
+        with:
+          ref: chore/phase0-stability-editorial
+
+      - name: Set up Node 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+
+      - name: Install existing lockfile
+        run: npm ci
+
+      - name: Install candidate patched major versions in runner only
+        run: npm install --no-audit astro@7.4.4 zod@4.6.7 @astrojs/check@latest
+
+      - name: Print effective versions
+        run: npm ls astro zod @astrojs/check --depth=0
+
+      - name: Type-check migrated dependency tree
+        run: npm run check
+
+      - name: Build migrated dependency tree
+        run: npm run build
+
+      - name: Recheck production dependency advisories
+        run: npm audit --omit=dev --audit-level=high
