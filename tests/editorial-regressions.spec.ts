@@ -4,13 +4,12 @@ import chapter13 from '../data/en-in/chapters/13-emergencies-what-to-do-first.js
 import overrides04 from '../data/en-in/overrides/04.json';
 import overrides13 from '../data/en-in/overrides/13.json';
 
-type Tip = { id: string; [key: string]: unknown };
-type TipCollection = { tips: Tip[] };
+type TipCollection = { tips: readonly { id: string }[] };
 
-function getTip(chapter: TipCollection, id: string): Tip {
+function getTip(chapter: TipCollection, id: string): Record<string, unknown> {
   const tip = chapter.tips.find((item) => item.id === id);
   if (!tip) throw new Error('Missing expected India tip: ' + id);
-  return tip;
+  return tip as Record<string, unknown>;
 }
 
 test.describe('Editorial safety regression checks', () => {
