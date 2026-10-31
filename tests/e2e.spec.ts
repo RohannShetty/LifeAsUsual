@@ -124,7 +124,8 @@ test.describe('How To Live Better - Comprehensive E2E Tests', () => {
     expect(pageText).toContain('Creative Commons Attribution 4.0 International');
     expect(pageText).toContain('Translated into English and reformatted for the web');
     expect(pageText).toContain('India Rewrite Status');
-    expect(pageText).toContain('Chapter 19');
+    expect(pageText).toContain('inherited chapters have India-adapted files');
+    expect(pageText).toContain('not a guarantee of factual accuracy or professional sign-off');
   });
 
   test('7. Theme palettes switch both modes and survive reload', async ({ page }) => {
