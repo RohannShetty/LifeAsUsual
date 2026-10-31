@@ -310,29 +310,35 @@ const KOLAM_PATH = (() => {
     });
   }
 
-  // A 44px touch target on a 20px lattice overlaps its neighbours, and the
-  // browser always hands the click to whichever hit area painted last. Resolve
-  // a real pointer press to the bead the finger is actually nearest to, so a
-  // click lands on the dot that is visible under it. Keyboard activation
-  // (detail === 0) and non-primary buttons keep the plain anchor behaviour.
+  // A 44px target on a 20px bead lattice overlaps other targets and the gaps.
+  // Browser hit testing may report the next painted bead or a plain container
+  // element even though the pointer is centred over a visible bead. Resolve
+  // primary pointer clicks by coordinates across the *entire* map, not only
+  // within the chapter of the DOM-reported target.
+  //
+  // Do not intercept links outside the map, keyboard activation (detail=0),
+  // modified clicks for new tabs or clicks further than the hit target.
   function initBeadResolution() {
     const flag = window as unknown as { __beadResolutionBound?: boolean };
     if (flag.__beadResolutionBound) return;
     flag.__beadResolutionBound = true;
 
     document.addEventListener('click', (event) => {
-      if (event.button !== 0 || event.detail === 0) return;
-      const target = event.target as Element | null;
-      const anchor = target?.closest?.('.map-bead') as HTMLAnchorElement | null;
-      if (!anchor) return;
-      const cluster = anchor.closest('.chapter-cluster');
-      if (!cluster) return;
+      if (event.defaultPrevented || event.button !== 0 || event.detail === 0) return;
+      if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+      const target = event.target;
+      if (!(target instanceof Element)) return;
+      const container = target.closest('.beads-container');
+      if (!container) return;
 
-      const beads = Array.from(cluster.querySelectorAll<HTMLAnchorElement>('.map-bead'));
-      let nearest = anchor;
+      let nearest: HTMLAnchorElement | null = null;
       let best = Infinity;
-      for (const bead of beads) {
+      for (const bead of container.querySelectorAll<HTMLAnchorElement>('.map-bead')) {
         const rect = bead.getBoundingClientRect();
+        // Fully clipped beads can report valid rects outside the inner scroller.
+        // Never navigate to an off-screen bead because its rectangle is nearest.
+        const viewport = container.getBoundingClientRect();
+        if (rect.bottom < viewport.top || rect.top > viewport.bottom) continue;
         const dx = event.clientX - (rect.left + rect.width / 2);
         const dy = event.clientY - (rect.top + rect.height / 2);
         const distance = dx * dx + dy * dy;
@@ -342,11 +348,14 @@ const KOLAM_PATH = (() => {
         }
       }
 
-      if (nearest !== anchor) {
-        event.preventDefault();
-        const href = nearest.getAttribute('href');
-        if (href) window.location.href = href;
-      }
+      // Half the 44px tap area, with a small allowance for the diagonal corners.
+      if (!nearest || best > 31 * 31) return;
+      const href = nearest.getAttribute('href');
+      if (!href) return;
+      const targetAnchor = target.closest('.map-bead');
+      if (targetAnchor === nearest) return; // Preserve native anchor navigation.
+      event.preventDefault();
+      window.location.assign(href);
     });
   }
 
