@@ -1,10 +1,17 @@
 import { test, expect } from '@playwright/test';
-import chapter04 from '../data/en-in/chapters/04-do-not-waste-time.json';
-import chapter13 from '../data/en-in/chapters/13-emergencies-what-to-do-first.json';
-import overrides04 from '../data/en-in/overrides/04.json';
-import overrides13 from '../data/en-in/overrides/13.json';
+import { readFileSync } from 'node:fs';
 
 type TipCollection = { tips: readonly { id: string }[] };
+type OverrideCollection = { tips: Record<string, Record<string, unknown>> };
+
+function loadJson<T>(relativePath: string): T {
+  return JSON.parse(readFileSync(new URL(relativePath, import.meta.url), 'utf8')) as T;
+}
+
+const chapter04 = loadJson<TipCollection>('../data/en-in/chapters/04-do-not-waste-time.json');
+const chapter13 = loadJson<TipCollection>('../data/en-in/chapters/13-emergencies-what-to-do-first.json');
+const overrides04 = loadJson<OverrideCollection>('../data/en-in/overrides/04.json');
+const overrides13 = loadJson<OverrideCollection>('../data/en-in/overrides/13.json');
 
 function getTip(chapter: TipCollection, id: string): Record<string, unknown> {
   const tip = chapter.tips.find((item) => item.id === id);
@@ -20,7 +27,7 @@ test.describe('Editorial safety regression checks', () => {
     ] as const) {
       for (const id of tipIds) {
         const compiled = getTip(chapter, id);
-        const override = (overrides.tips as Record<string, Record<string, unknown>>)[id];
+        const override = overrides.tips[id];
         expect(override).toBeDefined();
         for (const [field, value] of Object.entries(override)) {
           if (typeof value === 'string') expect(compiled[field]).toBe(value);
