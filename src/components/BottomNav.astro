@@ -77,7 +77,8 @@ const navItems = [
     transition: transform var(--dur-base) var(--ease-out), opacity var(--dur-base);
   }
 
-  .bottom-nav-container.is-hidden {
+  .bottom-nav-container.is-hidden,
+  :global(body[data-reading-map-in-view]) .bottom-nav-container {
     transform: translateY(calc(100% + 1.35rem));
     opacity: 0;
     pointer-events: none;
