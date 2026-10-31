@@ -1,0 +1,111 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { resolvePath } from '../../utils/paths';
+
+const checkedAt = '1 November 2026';
+const actions = [
+  { id: 'bank', title: 'Contact your bank or payment provider immediately', details: 'Use the official bank app, number on your card, or the bank’s verified website. Report the transaction as suspected fraud. Ask for an acknowledgement or complaint number and whether any protective action is available. Do not trust a support number supplied in a suspicious message.' },
+  { id: 'call', title: 'Call the national cyber-fraud reporting helpline: 1930', details: 'India’s National Cyber Crime Reporting Portal directs victims of financial cyber fraud to call 1930 for immediate reporting. Keep your transaction information ready. Reporting quickly may help authorities and banks respond, but recovery is not guaranteed.' },
+  { id: 'portal', title: 'Submit a complaint on the official cybercrime portal', details: 'Use cybercrime.gov.in and select the appropriate financial cybercrime reporting option. Save the acknowledgement/reference number. Follow any instructions given by the helpline or the portal about completing the online complaint.' },
+  { id: 'evidence', title: 'Keep your transaction record and related evidence', details: 'Preserve the date and time, amount, bank or wallet name, transaction ID/UTR, relevant messages, screenshots, and the phone number or handle that contacted you. Do not post account or identity information publicly.' },
+  { id: 'secure', title: 'Secure affected accounts and avoid recovery scams', details: 'If you shared a PIN, password, OTP or granted remote access, contact your bank using an official channel about securing your account. Do not send more money to someone claiming they can recover the funds for a fee.' }
+];
+---
+
+<BaseLayout title="I lost money to a UPI or online scam: What to do in India" description="An India-first draft checklist for reporting suspected cyber financial fraud: contact the bank, call 1930, use cybercrime.gov.in and preserve evidence.">
+  <article class="journey">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href={resolvePath('/guides/')}>All guides</a>
+      <span aria-hidden="true">/</span>
+      <span>Cyber financial fraud</span>
+    </nav>
+
+    <header>
+      <p class="eyebrow">India-first problem guide · English draft</p>
+      <h1>Money lost to a UPI or online scam?</h1>
+      <p class="lede">Act quickly. Contact your bank, report the incident through India's official cybercrime channels, and keep your evidence. These steps can help you report a loss, but no guide can promise that money will be recovered.</p>
+      <div class="status" role="note">
+        <strong>Editorial draft, not professional advice.</strong> Information last source-checked {checkedAt}. The reporting methods are linked to government and RBI sources below. State-level police procedures and individual bank decisions may differ.
+      </div>
+    </header>
+
+    <section class="urgent" aria-labelledby="act-now">
+      <h2 id="act-now">Start here if this just happened</h2>
+      <p class="primary-number"><a href="tel:1930" aria-label="Call national financial cyber-fraud helpline 1930">Call 1930</a></p>
+      <p>India’s national financial cyber-fraud helpline. If you cannot call, try the official <a href="https://cybercrime.gov.in/" rel="noopener noreferrer" target="_blank">National Cyber Crime Reporting Portal</a>. Also contact your bank immediately. Both reporting channels matter.</p>
+    </section>
+
+    <section aria-labelledby="steps">
+      <h2 id="steps">Your reporting checklist</h2>
+      <p class="note">Tick the steps as you go. This checklist does not ask for or save bank details, names, account numbers, or documents.</p>
+      <ol class="steps">
+        {actions.map((action) => (
+          <li>
+            <label class="step-head">
+              <input type="checkbox" aria-label={`Completed: ${action.title}`} />
+              <span>{action.title}</span>
+            </label>
+            <p>{action.details}</p>
+          </li>
+        ))}
+      </ol>
+    </section>
+
+    <section class="clarification" aria-labelledby="refund">
+      <h2 id="refund">Does the bank have to refund the money?</h2>
+      <p><strong>Do not assume an automatic refund.</strong> The RBI’s customer-liability rules for *unauthorised electronic banking transactions* depend on how the transaction happened, whose negligence was involved, and how quickly the bank was notified.</p>
+      <p>A payment that you personally authorised after being tricked may be assessed differently from a payment you never authorised. Tell the bank exactly what happened and request its complaint process in writing. The RBI rules must not be read as a guarantee that every scam transfer will be reversed.</p>
+      <p>Read the relevant <a href="https://rbi.org.in/commonman/Upload/English/Notification/PDFs/NOTI1506072017.PDF" target="_blank" rel="noopener noreferrer">RBI customer protection circular (6 July 2017)</a> and ask your bank how it applies to your case.</p>
+    </section>
+
+    <section aria-labelledby="sources">
+      <h2 id="sources">Official sources and what they support</h2>
+      <ul class="sources">
+        <li><a href="https://cybercrime.gov.in/Accept.aspx" target="_blank" rel="noopener noreferrer">National Cyber Crime Reporting Portal</a>, homepage notice directing immediate financial-fraud reporting to 1930.</li>
+        <li><a href="https://www.cybercrime.gov.in/webform/FAQ.aspx" target="_blank" rel="noopener noreferrer">Cybercrime portal FAQ</a>, “Report Other Cybercrimes” guidance and how to submit an online financial-fraud complaint.</li>
+        <li><a href="https://www.cybercrime.gov.in/webform/Crime_AuthoLogin.aspx" target="_blank" rel="noopener noreferrer">Cybercrime complainant checklist</a>, transaction information and supporting evidence to keep ready.</li>
+        <li><a href="https://rbi.org.in/commonman/Upload/English/Notification/PDFs/NOTI1506072017.PDF" target="_blank" rel="noopener noreferrer">Reserve Bank of India, Customer Protection (2017)</a>, paragraphs 5–10 on reporting and liability for unauthorised electronic banking transactions.</li>
+      </ul>
+      <p class="note">The cybercrime portal and bank are official destinations. This project is independent and is not affiliated with the Government of India, RBI or any bank.</p>
+    </section>
+
+    <footer>
+      <a href={resolvePath('/guides/')}>Back to all practical guides</a>
+    </footer>
+  </article>
+</BaseLayout>
+
+<style>
+  .journey { max-width: 740px; margin: 0 auto; padding: 1rem 0 5rem; color: var(--theme-text); }
+  .breadcrumb { display: flex; align-items: center; gap: .6rem; color: var(--theme-text-muted); font-size: .88rem; margin-bottom: 1.4rem; }
+  .breadcrumb a, .journey a { color: var(--color-jade-text); text-underline-offset: 3px; }
+  .eyebrow { color: var(--color-amber-text); font-weight: 700; font-size: .8rem; letter-spacing: .03em; text-transform: uppercase; }
+  h1 { font-family: var(--font-display); font-size: clamp(2rem, 6vw, 3rem); line-height: 1.15; margin: .5rem 0 1rem; }
+  h2 { font-family: var(--font-display); font-size: clamp(1.25rem, 4vw, 1.65rem); margin: 2rem 0 .85rem; }
+  p { line-height: 1.65; }
+  .lede { font-size: 1.08rem; color: var(--theme-text-muted); }
+  .status, .clarification, .urgent { margin-top: 1.5rem; padding: 1.15rem 1.25rem; border-radius: var(--radius-card); border: 1px solid var(--theme-hairline); }
+  .status { background: color-mix(in srgb, var(--color-amber) 8%, var(--theme-bg)); line-height: 1.55; }
+  .urgent { border-color: color-mix(in srgb, var(--color-jade) 38%, var(--theme-hairline)); background: var(--theme-card); }
+  .urgent h2 { margin-top: 0; }
+  .primary-number { margin: .6rem 0; font-size: clamp(1.7rem, 6vw, 2.4rem); font-weight: 800; }
+  .primary-number a { display: inline-block; min-height: 44px; }
+  .steps { display: grid; gap: .9rem; padding: 0; list-style: none; counter-reset: step; }
+  .steps li { counter-increment: step; border: 1px solid var(--theme-hairline); background: var(--theme-card); border-radius: var(--radius-card); padding: 1.05rem 1.15rem; }
+  .step-head { display: flex; align-items: flex-start; gap: .9rem; font-weight: 750; line-height: 1.45; cursor: pointer; }
+  .step-head input { flex: none; width: 22px; height: 22px; accent-color: var(--color-jade); }
+  .steps li p { margin: .5rem 0 0 2rem; color: var(--theme-text-muted); font-size: .95rem; }
+  .steps li:has(input:checked) { border-color: var(--color-jade); }
+  .steps li:has(input:checked) .step-head span { text-decoration: underline; text-decoration-style: dotted; }
+  .note { color: var(--theme-text-muted); font-size: .91rem; }
+  .sources { padding-left: 1.4rem; display: grid; gap: .7rem; line-height: 1.55; }
+  .clarification { background: var(--theme-card); }
+  .clarification h2 { margin-top: 0; }
+  footer { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--theme-hairline); }
+  @media (max-width: 430px) {
+    .journey { padding-inline: .3rem; }
+    .step-head { gap: .65rem; }
+    .steps li { padding: .9rem; }
+    .steps li p { margin-left: 1.7rem; }
+  }
+</style>
