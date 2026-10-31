@@ -188,6 +188,8 @@ test.describe('Brass ornament layer', () => {
       // inside that viewport, not merely inside the outer document.
       await bead.scrollIntoViewIfNeeded();
       await expect(bead).toBeInViewport({ ratio: 1 });
+      await expect(page.locator('body')).toHaveAttribute('data-reading-map-in-view', '');
+      await expect(page.locator('[data-bottom-nav] .nav-capsule')).toHaveCSS('pointer-events', 'none');
       const box = await bead.boundingBox();
       expect(box).not.toBeNull();
       if (!box) continue;
@@ -226,6 +228,8 @@ test.describe('Brass ornament layer', () => {
     const beads = page.locator('.chapter-cluster').first().locator('.map-bead');
     const bead = beads.nth(2);
     await bead.scrollIntoViewIfNeeded();
+    await expect(page.locator('body')).toHaveAttribute('data-reading-map-in-view', '');
+    await expect(page.locator('[data-bottom-nav] .nav-capsule')).toHaveCSS('pointer-events', 'none');
     const box = await bead.boundingBox();
     expect(box).not.toBeNull();
     if (!box) return;
