@@ -1,0 +1,57 @@
+name: Dependency security audit
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'package.json'
+      - 'package-lock.json'
+      - '.github/workflows/dependency-audit.yml'
+      - 'scripts/summarize-npm-audit.mjs'
+  pull_request:
+    branches: [master]
+    paths:
+      - 'package.json'
+      - 'package-lock.json'
+      - '.github/workflows/dependency-audit.yml'
+      - 'scripts/summarize-npm-audit.mjs'
+  schedule:
+    - cron: '0 0 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    name: Report advisories and gate applicable production highs
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+
+      - name: Install dependencies from lockfile
+        run: npm ci
+
+      - name: Capture advisory evidence without hiding errors
+        shell: bash
+        run: |
+          mkdir -p audit-evidence
+          npm audit --json > audit-evidence/full.json || true
+          npm audit --omit=dev --json > audit-evidence/production.json || true
+
+      - name: Summarize full and production dependency advisories
+        run: node scripts/summarize-npm-audit.mjs audit-evidence/full.json audit-evidence/production.json
+
+      - name: Upload raw audit evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: dependency-audit-json
+          path: audit-evidence/*.json
+          retention-days: 14
+
+      - name: Reject high or critical production dependency advisories
+        run: npm audit --omit=dev --audit-level=high
