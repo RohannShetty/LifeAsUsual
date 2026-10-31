@@ -196,11 +196,20 @@ test.describe('Brass ornament layer', () => {
       // another layer. A failure here is a real hit-target regression, not
       // something to paper over by increasing navigation timeouts.
       const point = { x: box.x + box.width / 2, y: box.y + box.height / 2 };
-      const isInsideMap = await page.evaluate(({ x, y }) => {
+      const hitDebug = await page.evaluate(({ x, y }) => {
         const hit = document.elementFromPoint(x, y);
-        return !!hit?.closest('.beads-container');
+        const nav = document.querySelector('[data-bottom-nav]')?.getBoundingClientRect();
+        const map = document.querySelector('.beads-container')?.getBoundingClientRect();
+        return {
+          insideMap: !!hit?.closest('.beads-container'),
+          hit: hit ? hit.tagName + '.' + (hit.getAttribute('class') ?? '') : 'none',
+          nav: nav ? { top: nav.top, bottom: nav.bottom } : null,
+          map: map ? { top: map.top, bottom: map.bottom } : null,
+          point: { x, y },
+          scrollY: window.scrollY
+        };
       }, point);
-      expect(isInsideMap, `Bead centre for cluster ${clusterIndex} is obscured`).toBe(true);
+      expect(hitDebug.insideMap, `Bead centre for cluster ${clusterIndex} is obscured: ${JSON.stringify(hitDebug)}`).toBe(true);
 
       await page.mouse.click(point.x, point.y);
       await page.waitForURL((url) => url.pathname === target.pathname && url.hash === target.hash);
@@ -227,6 +236,11 @@ test.describe('Brass ornament layer', () => {
     const expected = await bead.getAttribute('href');
     expect(expected).toBeTruthy();
     const point = { x: box.x + box.width + 2, y: box.y + box.height / 2 };
+    const hit = await page.evaluate(({ x, y }) => {
+      const target = document.elementFromPoint(x, y);
+      return { insideMap: !!target?.closest('.beads-container'), tag: target?.tagName, className: target?.getAttribute('class') };
+    }, point);
+    expect(hit.insideMap, 'Gap hit target is obstructed: ' + JSON.stringify(hit)).toBe(true);
     await page.mouse.click(point.x, point.y);
     const target = new URL(expected as string, 'http://localhost:4321');
     await page.waitForURL((url) => url.pathname === target.pathname && url.hash === target.hash);
