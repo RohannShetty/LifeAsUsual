@@ -1,6 +1,8 @@
 # Agent Operating Rules & Non-Negotiables
 
-This file governs all AI coding agents working on the **How To Live Better** project. It restates sections 3, 13, and 14 from `BRIEF.md`.
+This file preserves the **legacy rules for the inherited English edition**. The approved India-first direction is recorded in [docs/india-first-roadmap.md](docs/india-first-roadmap.md). Until the content-schema and acceptance-test migration is implemented, the current release checks must still pass. Do not reinterpret the legacy source fidelity and English-only restrictions below as a ban on future original Indian lessons, accurate state-specific adaptation, or localized Hindi/regional scripts. Those features require new explicit verification and licensing rules before publication.
+
+**Current status:** 34 inherited chapters and 765 tips are India-adapted drafts with automated checks. Automated checks are not qualified human sign-off; never claim that every cited source independently establishes every claim. Preserve the original source and attribution. This header does not mark planned languages, states, PWA, audio or checklists as delivered.
 
 ---
 
