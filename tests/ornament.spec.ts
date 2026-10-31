@@ -19,8 +19,13 @@ const baseSettings = {
   inrReference: true
 };
 
-const combos = [];
-for (const theme of ['dark', 'light']) {
+const combos: Array<{
+  theme: 'dark' | 'light';
+  palette: 'midnight' | 'chandni';
+  reducedMotion: 'no-preference' | 'reduce';
+  comicEffects: boolean;
+}> = [];
+for (const theme of ['dark', 'light'] as const) {
   for (const reducedMotion of ['no-preference', 'reduce'] as const) {
     for (const comicEffects of [true, false]) {
       combos.push({ theme, palette: theme === 'dark' ? 'midnight' : 'chandni', reducedMotion, comicEffects });
@@ -30,8 +35,8 @@ for (const theme of ['dark', 'light']) {
 
 async function applySettings(page: Page, settings: Record<string, unknown>) {
   await page.evaluate(
-    ([key, value]) => localStorage.setItem(key, JSON.stringify(value)),
-    [SETTINGS_KEY, settings]
+    ({ key, value }) => localStorage.setItem(key, JSON.stringify(value)),
+    { key: SETTINGS_KEY, value: settings }
   );
 }
 
@@ -207,7 +212,7 @@ test.describe('Brass ornament layer', () => {
     const chapterOneTipCount = await page.locator('.chapter-cluster').first().locator('.map-bead').count();
     const readTipIds = Array.from({ length: chapterOneTipCount }, (_, i) => '1-' + (i + 1));
 
-    await page.evaluate(([key, ids]) => {
+    await page.evaluate(({ key, ids }) => {
       localStorage.setItem(key, JSON.stringify({
         version: 1,
         readTipIds: ids,
@@ -217,7 +222,7 @@ test.describe('Brass ornament layer', () => {
         streak: 0,
         lastActiveDate: null
       }));
-    }, ['htlb_ledger_v1', readTipIds]);
+    }, { key: 'htlb_ledger_v1', ids: readTipIds });
 
     await page.goto('/progress/');
     await page.waitForTimeout(300);
