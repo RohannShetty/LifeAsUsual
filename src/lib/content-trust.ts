@@ -170,6 +170,14 @@ export function assessLesson(lesson: CanonicalLesson): TrustAssessment {
     if (!supported) add('No precise supporting evidence for claim ' + claim.id);
   }
 
+  // A passing AI-only structural review cannot authorize high-stakes guidance.
+  // Human approval is necessary but not sufficient: source evidence must still
+  // be independently checked by the editorial workflow before publication.
+  if (lesson.claims.some((claim) => claim.risk === 'high' || claim.risk === 'critical') &&
+      lesson.reviewStatus !== 'human-reviewed') {
+    add('High-risk and critical claims require qualified human review before publication');
+  }
+
   if (lesson.reviewStatus === 'withdrawn') add('Withdrawn lessons are not publishable');
   if (lesson.claims.length === 0) add('Lesson has no claim records');
   if (lesson.reviewStatus === 'unverified') add('Unverified lessons are not publishable');
