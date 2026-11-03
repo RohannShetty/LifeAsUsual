@@ -154,14 +154,22 @@ export function assessLesson(lesson: CanonicalLesson): TrustAssessment {
         continue;
       }
       if (source.assessment === 'contradicts') add('Contradicting source for claim ' + claim.id);
-      if (source.assessment === 'supports' && source.locator?.trim().length >= 4) supported = true;
+      if (source.assessment === 'supports' && source.locator?.trim().length >= 4 &&
+          (!(claim.risk === 'high' || claim.risk === 'critical') ||
+           !claim.jurisdiction.startsWith('IN') ||
+           source.jurisdiction === claim.jurisdiction || source.jurisdiction === 'IN')) supported = true;
       // International studies can inform general advice but do not establish
       // that a jurisdiction-specific law or percentage applies in India.
       if (claim.jurisdiction.startsWith('IN') &&
           source.jurisdiction !== claim.jurisdiction &&
-          source.jurisdiction !== 'IN' &&
-          source.jurisdiction !== 'international') {
-        warnings.push('Check jurisdiction mismatch for claim ' + claim.id + ': ' + sourceId);
+          source.jurisdiction !== 'IN') {
+        if ((claim.risk === 'high' || claim.risk === 'critical') && source.assessment === 'supports') {
+          // Foreign studies and another state's rules cannot establish a
+          // high-stakes India-specific claim. Require a matching India source.
+          warnings.push('Foreign or other-state source is not India-specific evidence for ' + claim.id + ': ' + sourceId);
+        } else if (source.jurisdiction !== 'international') {
+          warnings.push('Check jurisdiction mismatch for claim ' + claim.id + ': ' + sourceId);
+        }
       }
       if (claim.studyPopulation && !source.population?.trim()) {
         add('Study population not stated in source for ' + claim.id);
