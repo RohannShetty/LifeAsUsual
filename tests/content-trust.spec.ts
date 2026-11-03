@@ -115,6 +115,62 @@ test.describe('India-first claim-level trust contract (synthetic fixtures)', () 
     expect(assessLesson(lesson).publishable).toBe(true);
   });
 
+  test('AI-only review cannot publish high or critical risk claims', () => {
+    for (const risk of ['high', 'critical'] as const) {
+      const lesson = fixture();
+      lesson.claims[0].risk = risk;
+      const result = assessLesson(lesson);
+      expect(result.publishable).toBe(false);
+      expect(result.errors.join(' ')).toContain('require qualified human review');
+    }
+  });
+
+  test('a valid human review is necessary for high-risk claims but not a substitute for evidence', () => {
+    const lesson = fixture();
+    lesson.claims[0].risk = 'high';
+    lesson.reviewStatus = 'human-reviewed';
+    lesson.humanApproval = {
+      name: 'Fixture reviewer', qualification: 'Fixture qualification',
+      scope: 'Fixture claim', approvedAt: '2026-11-01'
+    };
+    lesson.verification = [{
+      reviewer: 'Fixture reviewer', method: 'qualified-human',
+      reviewedAt: '2026-11-01', lessonRevision: '1',
+      claimIds: ['in-test-only-claim1'], verdict: 'pass',
+      reportPath: 'fixtures/human-review-example.md'
+    }];
+    expect(assessLesson(lesson).publishable).toBe(true);
+    lesson.evidence[0].assessment = 'inconclusive';
+    expect(assessLesson(lesson).publishable).toBe(false);
+  });
+
+  test('foreign and other-state sources cannot alone support high-stakes India claims', () => {
+    const lesson = fixture();
+    lesson.claims[0].risk = 'high';
+    lesson.claims[0].jurisdiction = 'IN-MH';
+    lesson.reviewStatus = 'human-reviewed';
+    lesson.humanApproval = {
+      name: 'Fixture reviewer', qualification: 'Fixture qualification',
+      scope: 'Fixture claim', approvedAt: '2026-11-01'
+    };
+    lesson.verification = [{
+      reviewer: 'Fixture reviewer', method: 'qualified-human',
+      reviewedAt: '2026-11-01', lessonRevision: '1',
+      claimIds: ['in-test-only-claim1'], verdict: 'pass',
+      reportPath: 'fixtures/human-review-example.md'
+    }];
+    for (const jurisdiction of ['international', 'IN-KA', 'US']) {
+      lesson.evidence[0].jurisdiction = jurisdiction;
+      const result = assessLesson(lesson);
+      expect(result.publishable).toBe(false);
+      expect(result.errors.join(' ')).toContain('No precise supporting evidence');
+    }
+    lesson.evidence[0].jurisdiction = 'IN';
+    expect(assessLesson(lesson).publishable).toBe(true);
+    lesson.evidence[0].jurisdiction = 'IN-MH';
+    expect(assessLesson(lesson).publishable).toBe(true);
+  });
+
   test('inherited content retains its original ID mapping', () => {
     const lesson = fixture();
     lesson.origin = 'inherited';
