@@ -171,6 +171,23 @@ test.describe('India-first claim-level trust contract (synthetic fixtures)', () 
     expect(assessLesson(lesson).publishable).toBe(true);
   });
 
+  test('failed review on current revision overrides a passing review', () => {
+    const lesson = fixture();
+    lesson.verification?.push({
+      reviewer: 'Synthetic dissenting verifier', method: 'independent-ai',
+      reviewedAt: '2026-11-02', lessonRevision: '1',
+      claimIds: ['in-test-only-claim1'], verdict: 'fail',
+      reportPath: 'fixtures/failed-review.md'
+    });
+    const result = assessLesson(lesson);
+    expect(result.publishable).toBe(false);
+    expect(result.errors.join(' ')).toContain('Failed verification for current lesson revision');
+    // A failed review on an older revision is not automatically a failure of
+    // the current revision, which must independently satisfy its own gates.
+    lesson.verification![1].lessonRevision = '0';
+    expect(assessLesson(lesson).publishable).toBe(true);
+  });
+
   test('inherited content retains its original ID mapping', () => {
     const lesson = fixture();
     lesson.origin = 'inherited';
