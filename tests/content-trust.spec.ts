@@ -188,6 +188,21 @@ test.describe('India-first claim-level trust contract (synthetic fixtures)', () 
     expect(assessLesson(lesson).publishable).toBe(true);
   });
 
+  test('current-revision rejection cannot be hidden by omitting claim IDs', () => {
+    const lesson = fixture();
+    lesson.verification?.push({
+      reviewer: 'Synthetic dissenting verifier', method: 'independent-ai',
+      reviewedAt: '2026-11-02', lessonRevision: '1',
+      claimIds: [], verdict: 'fail',
+      reportPath: 'fixtures/failed-review.md'
+    });
+    const result = assessLesson(lesson);
+    expect(result.publishable).toBe(false);
+    expect(result.errors.join(' ')).toContain('Failed verification for current lesson revision');
+    lesson.verification![1].lessonRevision = '0';
+    expect(assessLesson(lesson).publishable).toBe(true);
+  });
+
   test('inherited content retains its original ID mapping', () => {
     const lesson = fixture();
     lesson.origin = 'inherited';
