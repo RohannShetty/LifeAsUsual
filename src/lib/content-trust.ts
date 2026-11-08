@@ -204,8 +204,7 @@ export function assessLesson(lesson: CanonicalLesson): TrustAssessment {
   // A failed review for this revision cannot be overridden by an earlier pass.
   // Require a new revision and a fresh passing review after resolving findings.
   if (lesson.verification?.some((v) =>
-    v.lessonRevision === lesson.revision && v.verdict === 'fail' &&
-    v.claimIds.some((id) => ids.has(id))
+    v.lessonRevision === lesson.revision && v.verdict === 'fail'
   )) {
     add('Failed verification for current lesson revision blocks publication');
   }
