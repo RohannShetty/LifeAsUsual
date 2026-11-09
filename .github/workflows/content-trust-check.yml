@@ -7,7 +7,12 @@ on:
     branches: [master]
     paths:
       - 'src/lib/content-trust.ts'
+      - 'src/lib/publication-gate.ts'
+      - 'scripts/verify-published-lessons.ts'
+      - 'data/india-publications.json'
+      - 'package.json'
       - 'tests/content-trust.spec.ts'
+      - 'tests/publication-gate.spec.ts'
       - '.github/workflows/content-trust-check.yml'
 
 permissions:
@@ -37,4 +42,4 @@ jobs:
         run: npm run build
 
       - name: Verify synthetic trust contract fixtures
-        run: npx playwright test tests/content-trust.spec.ts --project=Desktop-1440x900
+        run: npx playwright test tests/content-trust.spec.ts tests/publication-gate.spec.ts --project=Desktop-1440x900
