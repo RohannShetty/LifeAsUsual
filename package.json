@@ -14,11 +14,12 @@
     "verify": "tsx scripts/verify.ts",
     "check": "astro check",
     "pagefind": "pagefind --site dist",
-    "prebuild": "tsx scripts/build-india-data.ts && tsx scripts/verify-india.ts",
+    "prebuild": "tsx scripts/build-india-data.ts && tsx scripts/verify-india.ts && npm run verify:publication",
     "india:data": "tsx scripts/build-india-data.ts",
     "india:worklist": "tsx scripts/build-india-worklist.ts",
     "india:cost-audit": "tsx scripts/audit-costs.ts",
     "verify:india": "tsx scripts/verify-india.ts",
+    "verify:publication": "tsx scripts/verify-published-lessons.ts",
     "scan:terms": "node scripts/scan-dist-terms.mjs",
     "check:links": "node scripts/check-links.mjs",
     "test:india": "playwright test tests/india-rewrite.spec.ts"
