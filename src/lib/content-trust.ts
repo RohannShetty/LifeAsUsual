@@ -93,7 +93,7 @@ const LOCAL_JURISDICTION = /^IN(?:-[A-Z0-9]{2,3})?$/;
 function validDate(date: string | undefined): boolean {
   if (!date || !ISO_DATE.test(date)) return false;
   const value = new Date(date + 'T00:00:00Z');
-  return !Number.isNaN(value.valueOf()) && value.toISOString().slice(0, 10) === date;
+  return !Number.isNaN(value.valueOf()) && value.toISOString().slice(0, 10) === date && date <= new Date().toISOString().slice(0, 10);
 }
 
 function validSourceUrl(value: string): boolean {
