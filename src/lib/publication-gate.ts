@@ -19,7 +19,15 @@ export function publicationInventoryErrors(
   records: IndiaPublicationRecord[]
 ): string[] {
   const errors: string[] = [];
-  const routeSet = new Set(routes.map(normalizePublicationRoute));
+  const normalizedRoutes = routes.map(normalizePublicationRoute);
+  const routeSet = new Set(normalizedRoutes);
+  if (routeSet.size !== normalizedRoutes.length) {
+    const seen = new Set<string>();
+    for (const route of normalizedRoutes) {
+      if (seen.has(route)) errors.push('Duplicate public route in publication inventory: ' + route);
+      seen.add(route);
+    }
+  }
   const recordByRoute = new Map<string, IndiaPublicationRecord>();
 
   for (const record of records) {
