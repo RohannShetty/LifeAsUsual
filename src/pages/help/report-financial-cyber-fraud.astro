@@ -5,7 +5,7 @@ import { resolvePath } from '../../utils/paths';
 const draftUpdatedAt = '1 November 2026';
 const actions = [
   { id: 'bank', title: 'Contact your bank or payment provider immediately', details: 'Use the official bank app, number on your card, or the bank’s verified website. Report the transaction as suspected fraud. Ask for an acknowledgement or complaint number and whether any protective action is available. Do not trust a support number supplied in a suspicious message.' },
-  { id: 'call', title: 'Call the national cyber-fraud reporting helpline: 1930', details: 'India’s National Cyber Crime Reporting Portal directs victims of financial cyber fraud to call 1930 for immediate reporting. Keep your transaction information ready. Reporting quickly may help authorities and banks respond, but recovery is not guaranteed.' },
+  { id: 'call', title: 'Call the national cyber-fraud reporting helpline: 1930', details: 'The National Cyber Crime Reporting Portal states that 1930 is the national helpline for reporting cyber financial fraud and that it runs in all States and Union Territories. Keep your transaction information ready. Reporting quickly may help authorities and banks respond, but recovery is not guaranteed.' },
   { id: 'portal', title: 'Submit a complaint on the official cybercrime portal', details: 'Use cybercrime.gov.in and select the appropriate financial cybercrime reporting option. Save the acknowledgement/reference number. Follow any instructions given by the helpline or the portal about completing the online complaint.' },
   { id: 'evidence', title: 'Keep your transaction record and related evidence', details: 'Preserve the date and time, amount, bank or wallet name, transaction ID/UTR, relevant messages, screenshots, and the phone number or handle that contacted you. Do not post account or identity information publicly.' },
   { id: 'secure', title: 'Secure affected accounts and avoid recovery scams', details: 'If you shared a PIN, password, OTP or granted remote access, contact your bank using an official channel about securing your account. Do not send more money to someone claiming they can recover the funds for a fee.' }
@@ -25,7 +25,7 @@ const actions = [
       <h1>Money lost to a UPI or online scam?</h1>
       <p class="lede">Act quickly. Contact your bank, report the incident through India's official cybercrime channels, and keep your evidence. These steps can help you report a loss, but no guide can promise that money will be recovered.</p>
       <div class="status" role="note">
-        <strong>Editorial draft, not professional advice.</strong> Draft updated {draftUpdatedAt}. Source links are supplied for independent verification; their exact claim mappings have not yet been signed off. State-level police procedures and individual bank decisions may differ.
+        <strong>Editorial draft, not professional advice.</strong> Draft updated {draftUpdatedAt}. Claim-level source mapping is recorded in <code>reports/india-fraud-guide-source-verification.md</code>; qualified human review of the claims is still outstanding. State-level police procedures and individual bank decisions may differ.
       </div>
     </header>
 
@@ -53,17 +53,20 @@ const actions = [
 
     <section class="clarification" aria-labelledby="refund">
       <h2 id="refund">Does the bank have to refund the money?</h2>
-      <p><strong>Do not assume an automatic refund.</strong> The RBI’s customer-liability rules for *unauthorised electronic banking transactions* depend on how the transaction happened, whose negligence was involved, and how quickly the bank was notified.</p>
+      <p><strong>Do not assume an automatic refund.</strong> The RBI’s customer-liability rules for <em>unauthorised electronic banking transactions</em> depend on how the transaction happened, whose negligence was involved, and how quickly the bank was notified.</p>
       <p>A payment that you personally authorised after being tricked may be assessed differently from a payment you never authorised. Tell the bank exactly what happened and request its complaint process in writing. The RBI rules must not be read as a guarantee that every scam transfer will be reversed.</p>
-      <p>Read the relevant <a href="https://rbi.org.in/commonman/Upload/English/Notification/PDFs/NOTI1506072017.PDF" target="_blank" rel="noopener noreferrer">RBI customer protection circular (6 July 2017)</a> and ask your bank how it applies to your case.</p>
+      <p>Read the relevant <a href="https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=11040" target="_blank" rel="noopener noreferrer">RBI customer protection circular (6 July 2017)</a> and ask your bank how it applies to your case.</p>
+      <p>From 1 January 2027, amended RBI directions widen this framework for transactions on or after that date. They define a “fraudulent electronic banking transaction” to include a payment the customer executed by “granting approval under coercion or duress”, and they require banks to process these complaints faster and to pay compensation for small-value fraudulent transactions. Ask your bank which rules apply to your transaction date.</p>
     </section>
 
     <section aria-labelledby="sources">
       <h2 id="sources">Official sources and what they support</h2>
       <ul class="sources">
-        <li><a href="https://cybercrime.gov.in/Accept.aspx" target="_blank" rel="noopener noreferrer">National Cyber Crime Reporting Portal</a>, homepage notice directing immediate financial-fraud reporting to 1930.</li>
-        <li><a href="https://www.cybercrime.gov.in/webform/FAQ.aspx" target="_blank" rel="noopener noreferrer">Cybercrime portal FAQ</a>, “Report Other Cybercrimes” guidance and how to submit an online financial-fraud complaint.</li>
-        <li><a href="https://rbi.org.in/commonman/Upload/English/Notification/PDFs/NOTI1506072017.PDF" target="_blank" rel="noopener noreferrer">Reserve Bank of India, Customer Protection (2017)</a>, paragraphs 5–10 on reporting and liability for unauthorised electronic banking transactions.</li>
+        <li><a href="https://i4c.mha.gov.in/ncrp.aspx" target="_blank" rel="noopener noreferrer">Indian Cyber Crime Coordination Centre, National Cyber Crime Reporting Portal</a>: “This helps citizens to report cyber financial frauds on National Helpline number 1930”, and “1930 National Helpline number is running in all States/UTs”.</li>
+        <li><a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=1814120" target="_blank" rel="noopener noreferrer">Press Information Bureau, 6 April 2022</a>: the Ministry of Home Affairs operationalised the toll-free 1930 helpline for immediate reporting of financial frauds and for assistance in lodging complaints on cybercrime.gov.in.</li>
+        <li><a href="https://cybercrime.gov.in/" target="_blank" rel="noopener noreferrer">National Cyber Crime Reporting Portal</a>, the official destination for filing a complaint. Its complaint and FAQ pages build their content with JavaScript, so this project could not independently verify their on-page wording.</li>
+        <li><a href="https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=11040" target="_blank" rel="noopener noreferrer">Reserve Bank of India, Customer Protection – Limiting Liability of Customers in Unauthorised Electronic Banking Transactions (6 July 2017)</a>, paragraphs 6–10: zero and limited liability, the ₹5,000/₹10,000/₹25,000 caps, shadow reversal within 10 working days, and resolution within 90 days.</li>
+        <li><a href="https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63011" target="_blank" rel="noopener noreferrer">RBI press release, 24 June 2026</a> and the <a href="https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=13543" target="_blank" rel="noopener noreferrer">amended Responsible Business Conduct directions</a>: “fraudulent electronic banking transaction” includes a payment approved under coercion or duress, effective for transactions on or after 1 January 2027.</li>
       </ul>
       <p class="note">The former “complainant checklist” reference pointed to a portal login route, not a verified public checklist; it was removed pending an exact accessible source. The cybercrime portal and bank are official destinations. This project is independent and is not affiliated with the Government of India, RBI or any bank.</p>
     </section>

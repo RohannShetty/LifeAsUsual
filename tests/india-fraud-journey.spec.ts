@@ -6,12 +6,26 @@ test.describe('India-first financial cyber-fraud reporting guide', () => {
     await expect(page.getByRole('heading', { name: /Money lost to a UPI or online scam/ })).toBeVisible();
     await expect(page.getByText('Editorial draft, not professional advice.')).toBeVisible();
     await expect(page.locator('a[href="tel:1930"]')).toBeVisible();
-    await expect(page.locator('a[href="https://cybercrime.gov.in/"]')).toHaveCount(1);
-    await expect(page.locator('a[href*="rbi.org.in/commonman/Upload/English/Notification/PDFs/NOTI1506072017.PDF"]')).toHaveCount(2);
+    await expect(page.locator('.urgent a[href="https://cybercrime.gov.in/"]')).toHaveCount(1);
+    await expect(page.locator('.sources a[href="https://cybercrime.gov.in/"]')).toHaveCount(1);
     await expect(page.getByText('Do not assume an automatic refund.')).toBeVisible();
+    await expect(page.getByText(/customer-liability rules for/)).toBeVisible();
+
+    // Official RBI notification page, not the unextractable PDF or an unofficial mirror.
+    await expect(page.locator('.clarification a[href*="NotificationUser.aspx?Id=11040"]')).toHaveCount(1);
+    await expect(page.locator('.sources a[href*="NotificationUser.aspx?Id=11040"]')).toHaveCount(1);
+    await expect(page.locator('a[href*="NOTI1506072017.PDF"]')).toHaveCount(0);
+
+    // No literal markdown emphasis leaks into the rendered page.
+    await expect(page.locator('article.journey')).not.toContainText('*unauthorised electronic banking transactions*');
+
+    // The directions effective 1 January 2027 are disclosed where liability is explained.
+    await expect(page.getByText(/From 1 January 2027, amended RBI directions/)).toBeVisible();
+    await expect(page.getByText(/granting approval under coercion or duress/)).toBeVisible();
+
     const links = await page.locator('.sources a').count();
-    expect(links).toBe(3);
-    await expect(page.getByText(/their exact claim mappings have not yet been signed off/)).toBeVisible();
+    expect(links).toBe(6);
+    await expect(page.getByText(/Claim-level source mapping is recorded/)).toBeVisible();
     await expect(page.locator('a[href*="Crime_AuthoLogin.aspx"]')).toHaveCount(0);
   });
 
