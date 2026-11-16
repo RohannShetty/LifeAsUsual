@@ -50,6 +50,14 @@ test.describe('production publication inventory gate', () => {
     expect(errors.join(' ')).toContain('No canonical trust record');
   });
 
+  test('duplicate route paths cannot bypass the publication inventory', () => {
+    const errors = publicationInventoryErrors(
+      ['/help/example', '/help/example/'],
+      [record(makeLesson())]
+    );
+    expect(errors.join(' ')).toContain('Duplicate public route in publication inventory: /help/example/');
+  });
+
   test('high and critical AI-only lessons fail the production inventory gate', () => {
     for (const risk of ['high', 'critical'] as const) {
       const errors = publicationInventoryErrors(['/help/example/'], [record(makeLesson(risk))]);
