@@ -50,6 +50,29 @@ test.describe('India-first claim-level trust contract (synthetic fixtures)', () 
     expect(result.status).toBe('ai-reviewed-draft');
   });
 
+
+  test('future-dated evidence and verification cannot authorize publication', () => {
+    const lesson = fixture();
+    lesson.evidence[0].checkedAt = '2099-01-01';
+    expect(assessLesson(lesson).errors.join(' ')).toContain('Invalid evidence checked date');
+    lesson.evidence[0].checkedAt = '2026-11-01';
+    lesson.verification![0].reviewedAt = '2099-01-01';
+    expect(assessLesson(lesson).publishable).toBe(false);
+    lesson.verification![0].reviewedAt = '2026-11-01';
+    lesson.reviewStatus = 'human-reviewed';
+    lesson.humanApproval = {
+      name: 'Fixture reviewer', qualification: 'Fixture qualification',
+      scope: 'Fixture claim', approvedAt: '2099-01-01'
+    };
+    lesson.verification = [{
+      reviewer: 'Fixture reviewer', method: 'qualified-human',
+      reviewedAt: '2026-11-01', lessonRevision: '1',
+      claimIds: ['in-test-only-claim1'], verdict: 'pass',
+      reportPath: 'fixtures/human-review-example.md'
+    }];
+    expect(assessLesson(lesson).errors.join(' ')).toContain('Named, dated, scoped qualified human approval');
+  });
+
   test('missing evidence locator fails closed', () => {
     const lesson = fixture();
     lesson.evidence[0].locator = '';
