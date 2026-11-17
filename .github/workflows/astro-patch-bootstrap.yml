@@ -19,7 +19,8 @@ jobs:
       - name: Install patched Astro without a major-version upgrade
         run: npm install --save-dev --save-exact astro@7.4.12
       - name: Assert GitHub Pages static-only build (Astro is not deployed as a Node server)
-        run: grep -q "output: 'static'" astro.config.mjs
+        run: |
+          grep -q "output: 'static'" astro.config.mjs
       - name: Fail if production high severity advisories remain
         run: npm audit --omit=dev --audit-level=high
       - name: Verify Astro build and typecheck
