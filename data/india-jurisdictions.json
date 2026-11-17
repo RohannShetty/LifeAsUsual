@@ -1,0 +1,262 @@
+{
+  "schemaVersion": 1,
+  "directorySource": {
+    "title": "State & UTs — National Portal of India, Contact Directory",
+    "url": "https://www.india.gov.in/directory/contact-directory/state-uts",
+    "checkedAt": "2026-11-09"
+  },
+  "jurisdictions": [
+    {
+      "code": "IN-AN",
+      "name": "Andaman and Nicobar Islands",
+      "kind": "union-territory",
+      "coverageStatus": "unsupported",
+      "coverageNote": "No state/UT-specific procedures have been verified for this jurisdiction in this product."
+    },
+    {
+      "code": "IN-AP",
+      "name": "Andhra Pradesh",
+      "kind": "state",
+      "coverageStatus": "unsupported",
+      "coverageNote": "No state/UT-specific procedures have been verified for this jurisdiction in this product."
+    },
+    {
+      "code": "IN-AR",
+      "name": "Arunachal Pradesh",
+      "kind": "state",
+      "coverageStatus": "unsupported",
+      "coverageNote": "No state/UT-specific procedures have been verified for this jurisdiction in this product."
+    },
+    {
+      "code": "IN-AS",
+      "name": "Assam",
+      "kind": "state",
+      "coverageStatus": "unsupported",
+      "coverageNote": "No state/UT-specific procedures have been verified for this jurisdiction in this product."
+    },
+    {
+      "code": "IN-BR",
+      "name": "Bihar",
+      "kind": "state",
+      "coverageStatus": "unsupported",
+      "coverageNote": "No state/UT-specific procedures have been verified for this jurisdiction in this product."
+    },
+    {
+      "code": "IN-CH",
+      "name": "Chandigarh",
+      "kind": "union-territory",
+      "coverageStatus": "unsupported",
+      "coverageNote": "No state/UT-specific procedures have been verified for this jurisdiction in this product."
+    },
+    {
+      "code": "IN-CG",
+      "name": "Chhattisgarh",
+      "kind": "state",
+      "coverageStatus": "unsupported",
+      "coverageNote": "No state/UT-specific procedures have been verified for this jurisdiction in this product."
+    },
+    {
+      "code": "IN-DN",
+      "name": "Dadra and Nagar Haveli and Daman and Diu",
+      "kind": "union-territory",
+      "coverageStatus": "unsupported",
+      "coverageNote": "No state/UT-specific procedures have been verified for this jurisdiction in this product."
+    },
+    {
+      "code": "IN-DL",
+      "name": "Delhi",
+      "kind": "union-territory",
+      "coverageStatus": "unsupported",
+      "coverageNote": "No state/UT-specific procedures have been verified for this jurisdiction in this product."
+    },
+    {
+      "code": "IN-GA",
+      "name": "Goa",
+      "kind": "state",
+      "coverageStatus": "unsupported",
+      "coverageNote": "No state/UT-specific procedures have been verified for this jurisdiction in this product."
+    },
+    {
+      "code": "IN-GJ",
+      "name": "Gujarat",
+      "kind": "state",
+      "coverageStatus": "unsupported",
+      "coverageNote": "No state/UT-specific procedures have been verified for this jurisdiction in this product."
+    },
+    {
+      "code": "IN-HR",
+      "name": "Haryana",
+      "kind": "state",
+      "coverageStatus": "unsupported",
+      "coverageNote": "No state/UT-specific procedures have been verified for this jurisdiction in this product."
+    },
+    {
+      "code": "IN-HP",
+      "name": "Himachal Pradesh",
+      "kind": "state",
+      "coverageStatus": "unsupported",
+      "coverageNote": "No state/UT-specific procedures have been verified for this jurisdiction in this product."
+    },
+    {
+      "code": "IN-JK",
+      "name": "Jammu and Kashmir",
+      "kind": "union-territory",
+      "coverageStatus": "unsupported",
+      "coverageNote": "No state/UT-specific procedures have been verified for this jurisdiction in this product."
+    },
+    {
+      "code": "IN-JH",
+      "name": "Jharkhand",
+      "kind": "state",
+      "coverageStatus": "unsupported",
+      "coverageNote": "No state/UT-specific procedures have been verified for this jurisdiction in this product."
+    },
+    {
+      "code": "IN-KA",
+      "name": "Karnataka",
+      "kind": "state",
+      "coverageStatus": "unsupported",
+      "coverageNote": "No state/UT-specific procedures have been verified for this jurisdiction in this product."
+    },
+    {
+      "code": "IN-KL",
+      "name": "Kerala",
+      "kind": "state",
+      "coverageStatus": "unsupported",
+      "coverageNote": "No state/UT-specific procedures have been verified for this jurisdiction in this product."
+    },
+    {
+      "code": "IN-LA",
+      "name": "Ladakh",
+      "kind": "union-territory",
+      "coverageStatus": "unsupported",
+      "coverageNote": "No state/UT-specific procedures have been verified for this jurisdiction in this product."
+    },
+    {
+      "code": "IN-LD",
+      "name": "Lakshadweep",
+      "kind": "union-territory",
+      "coverageStatus": "unsupported",
+      "coverageNote": "No state/UT-specific procedures have been verified for this jurisdiction in this product."
+    },
+    {
+      "code": "IN-MP",
+      "name": "Madhya Pradesh",
+      "kind": "state",
+      "coverageStatus": "unsupported",
+      "coverageNote": "No state/UT-specific procedures have been verified for this jurisdiction in this product."
+    },
+    {
+      "code": "IN-MH",
+      "name": "Maharashtra",
+      "kind": "state",
+      "coverageStatus": "unsupported",
+      "coverageNote": "No state/UT-specific procedures have been verified for this jurisdiction in this product."
+    },
+    {
+      "code": "IN-MN",
+      "name": "Manipur",
+      "kind": "state",
+      "coverageStatus": "unsupported",
+      "coverageNote": "No state/UT-specific procedures have been verified for this jurisdiction in this product."
+    },
+    {
+      "code": "IN-ML",
+      "name": "Meghalaya",
+      "kind": "state",
+      "coverageStatus": "unsupported",
+      "coverageNote": "No state/UT-specific procedures have been verified for this jurisdiction in this product."
+    },
+    {
+      "code": "IN-MZ",
+      "name": "Mizoram",
+      "kind": "state",
+      "coverageStatus": "unsupported",
+      "coverageNote": "No state/UT-specific procedures have been verified for this jurisdiction in this product."
+    },
+    {
+      "code": "IN-NL",
+      "name": "Nagaland",
+      "kind": "state",
+      "coverageStatus": "unsupported",
+      "coverageNote": "No state/UT-specific procedures have been verified for this jurisdiction in this product."
+    },
+    {
+      "code": "IN-OD",
+      "name": "Odisha",
+      "kind": "state",
+      "coverageStatus": "unsupported",
+      "coverageNote": "No state/UT-specific procedures have been verified for this jurisdiction in this product."
+    },
+    {
+      "code": "IN-PY",
+      "name": "Puducherry",
+      "kind": "union-territory",
+      "coverageStatus": "unsupported",
+      "coverageNote": "No state/UT-specific procedures have been verified for this jurisdiction in this product."
+    },
+    {
+      "code": "IN-PB",
+      "name": "Punjab",
+      "kind": "state",
+      "coverageStatus": "unsupported",
+      "coverageNote": "No state/UT-specific procedures have been verified for this jurisdiction in this product."
+    },
+    {
+      "code": "IN-RJ",
+      "name": "Rajasthan",
+      "kind": "state",
+      "coverageStatus": "unsupported",
+      "coverageNote": "No state/UT-specific procedures have been verified for this jurisdiction in this product."
+    },
+    {
+      "code": "IN-SK",
+      "name": "Sikkim",
+      "kind": "state",
+      "coverageStatus": "unsupported",
+      "coverageNote": "No state/UT-specific procedures have been verified for this jurisdiction in this product."
+    },
+    {
+      "code": "IN-TN",
+      "name": "Tamil Nadu",
+      "kind": "state",
+      "coverageStatus": "unsupported",
+      "coverageNote": "No state/UT-specific procedures have been verified for this jurisdiction in this product."
+    },
+    {
+      "code": "IN-TS",
+      "name": "Telangana",
+      "kind": "state",
+      "coverageStatus": "unsupported",
+      "coverageNote": "No state/UT-specific procedures have been verified for this jurisdiction in this product."
+    },
+    {
+      "code": "IN-TR",
+      "name": "Tripura",
+      "kind": "state",
+      "coverageStatus": "unsupported",
+      "coverageNote": "No state/UT-specific procedures have been verified for this jurisdiction in this product."
+    },
+    {
+      "code": "IN-UP",
+      "name": "Uttar Pradesh",
+      "kind": "state",
+      "coverageStatus": "unsupported",
+      "coverageNote": "No state/UT-specific procedures have been verified for this jurisdiction in this product."
+    },
+    {
+      "code": "IN-UK",
+      "name": "Uttarakhand",
+      "kind": "state",
+      "coverageStatus": "unsupported",
+      "coverageNote": "No state/UT-specific procedures have been verified for this jurisdiction in this product."
+    },
+    {
+      "code": "IN-WB",
+      "name": "West Bengal",
+      "kind": "state",
+      "coverageStatus": "unsupported",
+      "coverageNote": "No state/UT-specific procedures have been verified for this jurisdiction in this product."
+    }
+  ]
+}

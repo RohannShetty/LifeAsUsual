@@ -96,6 +96,10 @@ function validDate(date: string | undefined): boolean {
   return !Number.isNaN(value.valueOf()) && value.toISOString().slice(0, 10) === date;
 }
 
+function validPastDate(date: string | undefined): boolean {
+  return validDate(date) && date! <= new Date().toISOString().slice(0, 10);
+}
+
 function validSourceUrl(value: string): boolean {
   try {
     const url = new URL(value);
@@ -134,7 +138,7 @@ export function assessLesson(lesson: CanonicalLesson): TrustAssessment {
     if (!source.locator?.trim() || source.locator.trim().length < 4) {
       add('Exact source locator missing: ' + source.id);
     }
-    if (!validDate(source.checkedAt)) add('Invalid evidence checked date: ' + source.id);
+    if (!validPastDate(source.checkedAt)) add('Invalid evidence checked date: ' + source.id);
     if (!source.jurisdiction.trim()) add('Missing study/source jurisdiction: ' + source.id);
   }
 
@@ -154,20 +158,36 @@ export function assessLesson(lesson: CanonicalLesson): TrustAssessment {
         continue;
       }
       if (source.assessment === 'contradicts') add('Contradicting source for claim ' + claim.id);
-      if (source.assessment === 'supports' && source.locator?.trim().length >= 4) supported = true;
+      if (source.assessment === 'supports' && source.locator?.trim().length >= 4 &&
+          (!(claim.risk === 'high' || claim.risk === 'critical') ||
+           !claim.jurisdiction.startsWith('IN') ||
+           source.jurisdiction === claim.jurisdiction || source.jurisdiction === 'IN')) supported = true;
       // International studies can inform general advice but do not establish
       // that a jurisdiction-specific law or percentage applies in India.
       if (claim.jurisdiction.startsWith('IN') &&
           source.jurisdiction !== claim.jurisdiction &&
-          source.jurisdiction !== 'IN' &&
-          source.jurisdiction !== 'international') {
-        warnings.push('Check jurisdiction mismatch for claim ' + claim.id + ': ' + sourceId);
+          source.jurisdiction !== 'IN') {
+        if ((claim.risk === 'high' || claim.risk === 'critical') && source.assessment === 'supports') {
+          // Foreign studies and another state's rules cannot establish a
+          // high-stakes India-specific claim. Require a matching India source.
+          warnings.push('Foreign or other-state source is not India-specific evidence for ' + claim.id + ': ' + sourceId);
+        } else if (source.jurisdiction !== 'international') {
+          warnings.push('Check jurisdiction mismatch for claim ' + claim.id + ': ' + sourceId);
+        }
       }
       if (claim.studyPopulation && !source.population?.trim()) {
         add('Study population not stated in source for ' + claim.id);
       }
     }
     if (!supported) add('No precise supporting evidence for claim ' + claim.id);
+  }
+
+  // A passing AI-only structural review cannot authorize high-stakes guidance.
+  // Human approval is necessary but not sufficient: source evidence must still
+  // be independently checked by the editorial workflow before publication.
+  if (lesson.claims.some((claim) => claim.risk === 'high' || claim.risk === 'critical') &&
+      lesson.reviewStatus !== 'human-reviewed') {
+    add('High-risk and critical claims require qualified human review before publication');
   }
 
   if (lesson.reviewStatus === 'withdrawn') add('Withdrawn lessons are not publishable');
@@ -179,16 +199,24 @@ export function assessLesson(lesson: CanonicalLesson): TrustAssessment {
       v.method === method && v.verdict === 'pass' &&
       v.lessonRevision === lesson.revision &&
       v.reviewer.trim() && v.reportPath.trim() &&
-      validDate(v.reviewedAt) &&
+      validPastDate(v.reviewedAt) &&
       lesson.claims.every((claim) => v.claimIds.includes(claim.id))
     );
     if (!validEvent) add('Missing independent passing verification for current lesson revision');
   }
 
+  // A failed review for this revision cannot be overridden by an earlier pass.
+  // Require a new revision and a fresh passing review after resolving findings.
+  if (lesson.verification?.some((v) =>
+    v.lessonRevision === lesson.revision && v.verdict === 'fail'
+  )) {
+    add('Failed verification for current lesson revision blocks publication');
+  }
+
   if (lesson.reviewStatus === 'human-reviewed') {
     const approval = lesson.humanApproval;
     if (!approval?.name.trim() || !approval.qualification.trim() ||
-        !approval.scope.trim() || !validDate(approval.approvedAt)) {
+        !approval.scope.trim() || !validPastDate(approval.approvedAt)) {
       add('Named, dated, scoped qualified human approval is required');
     }
   }
