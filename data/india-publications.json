@@ -1,1 +1,156 @@
-[]
+[
+  {
+    "route": "/help/report-financial-cyber-fraud/",
+    "lesson": {
+      "id": "india-fraud-report-v1",
+      "revision": "2026-11-17",
+      "title": "I lost money to a UPI or online scam: what to do in India",
+      "origin": "india-original",
+      "reviewStatus": "human-reviewed",
+      "claims": [
+        {
+          "id": "fg-helpline",
+          "text": "The national cyber-fraud reporting helpline number is 1930 and it operates in all States and Union Territories.",
+          "risk": "high",
+          "jurisdiction": "IN",
+          "sourceIds": [
+            "i4c-ncrp",
+            "pib-2022"
+          ]
+        },
+        {
+          "id": "fg-portal",
+          "text": "Complaints about cyber financial fraud can also be filed on cybercrime.gov.in, the National Cyber Crime Reporting Portal.",
+          "risk": "medium",
+          "jurisdiction": "IN",
+          "sourceIds": [
+            "pib-2022"
+          ]
+        },
+        {
+          "id": "fg-scope",
+          "text": "The RBI customer-liability rules of 6 July 2017 apply to unauthorised electronic banking transactions; a payment the customer authorised after being tricked may be assessed differently.",
+          "risk": "high",
+          "jurisdiction": "IN",
+          "sourceIds": [
+            "rbi-2017"
+          ]
+        },
+        {
+          "id": "fg-zero-liability",
+          "text": "Under those rules a customer has zero liability where the fraud is due to contributory fraud or negligence by the bank, or a third-party breach reported within three working days.",
+          "risk": "high",
+          "jurisdiction": "IN",
+          "sourceIds": [
+            "rbi-2017"
+          ]
+        },
+        {
+          "id": "fg-caps",
+          "text": "Where a third-party breach is reported after three working days, customer liability is capped at Rs 5,000 for 4-5 working days, Rs 10,000 for 6 working days and Rs 25,000 for 7 working days.",
+          "risk": "high",
+          "jurisdiction": "IN",
+          "sourceIds": [
+            "rbi-2017"
+          ]
+        },
+        {
+          "id": "fg-timelines",
+          "text": "Banks must effect shadow reversal within 10 working days and resolve the complaint within 90 days.",
+          "risk": "high",
+          "jurisdiction": "IN",
+          "sourceIds": [
+            "rbi-2017"
+          ]
+        },
+        {
+          "id": "fg-2027",
+          "text": "From 1 January 2027 amended RBI directions extend the framework to transactions the customer executed by granting approval under coercion or duress, and require faster complaint processing and compensation for small-value fraudulent transactions.",
+          "risk": "high",
+          "jurisdiction": "IN",
+          "sourceIds": [
+            "rbi-2026-press",
+            "rbi-2026-directions"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "id": "i4c-ncrp",
+          "title": "National Cyber Crime Reporting Portal",
+          "publisher": "Indian Cyber Crime Coordination Centre, Ministry of Home Affairs",
+          "url": "https://i4c.mha.gov.in/ncrp.aspx",
+          "locator": "NCRP page: 'This helps citizens to report cyber financial frauds on National Helpline number 1930'; '1930 National Helpline number is running in all States/UTs'",
+          "checkedAt": "2026-11-16",
+          "jurisdiction": "IN",
+          "assessment": "supports"
+        },
+        {
+          "id": "pib-2022",
+          "title": "Toll-free helpline 1930 for reporting financial frauds",
+          "publisher": "Press Information Bureau, Government of India",
+          "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=1814120",
+          "locator": "Release 6 April 2022: MHA operationalised the 1930 helpline and assists in lodging complaints on cybercrime.gov.in",
+          "checkedAt": "2026-11-16",
+          "jurisdiction": "IN",
+          "assessment": "supports"
+        },
+        {
+          "id": "rbi-2017",
+          "title": "Customer Protection - Limiting Liability of Customers in Unauthorised Electronic Banking Transactions",
+          "publisher": "Reserve Bank of India",
+          "url": "https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=11040",
+          "locator": "Circular DBR.No.Leg.BC.78/09.07.005/2017-18, paragraphs 6-10 and Tables 1-2",
+          "checkedAt": "2026-11-16",
+          "jurisdiction": "IN",
+          "assessment": "supports"
+        },
+        {
+          "id": "rbi-2026-press",
+          "title": "RBI issues amendment directions on review of framework of limiting customer liability in digital transactions",
+          "publisher": "Reserve Bank of India",
+          "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63011",
+          "locator": "Press Release 2026-2027/533: directions effective from January 1, 2027",
+          "checkedAt": "2026-11-16",
+          "jurisdiction": "IN",
+          "assessment": "supports"
+        },
+        {
+          "id": "rbi-2026-directions",
+          "title": "Reserve Bank of India (Responsible Business Conduct) Directions, 2026 - amendment",
+          "publisher": "Reserve Bank of India",
+          "url": "https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=13543",
+          "locator": "Definition 4(15A) 'Fraudulent EBT'; applicability to transactions on or after January 1, 2027",
+          "checkedAt": "2026-11-16",
+          "jurisdiction": "IN",
+          "assessment": "supports"
+        }
+      ],
+      "verification": [
+        {
+          "reviewer": "Rohan Shetty",
+          "method": "qualified-human",
+          "reviewedAt": "2026-11-17",
+          "lessonRevision": "2026-11-17",
+          "claimIds": [
+            "fg-helpline",
+            "fg-portal",
+            "fg-scope",
+            "fg-zero-liability",
+            "fg-caps",
+            "fg-timelines",
+            "fg-2027"
+          ],
+          "verdict": "pass",
+          "reportPath": "reports/india-fraud-guide-human-review.md"
+        }
+      ],
+      "humanApproval": {
+        "name": "Rohan Shetty",
+        "qualification": "Site owner. Read the cited primary sources (I4C/NCRP, PIB 2022, RBI 2017 circular, RBI 2026 press release and amended directions) and the built page in full. Not a licensed financial or legal professional.",
+        "scope": "The seven recorded claims of /help/report-financial-cyber-fraud, revision 2026-11-17",
+        "approvedAt": "2026-11-17"
+      }
+    }
+  }
+]
