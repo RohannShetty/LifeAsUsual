@@ -23,6 +23,10 @@ changes in this release.** Passing checks do not establish the accuracy of any i
 - Automated regression tests for duplicate/malformed IDs, absent edition tips, editor decisions,
   review-label separation and reproducible report generation. Read-only GitHub Actions checks the baseline.
 
+### Security and build hygiene
+- Updated Astro 7.4.4 to 7.4.12, and correctly classified Astro as a development/build-only dependency for the static GitHub Pages output. Full builds and TypeScript checks were run against the patched dependency tree.
+- The production dependency security gate is still enforced. Full npm audit evidence continues to report unpatched picomatch ReDoS advisory GHSA-fc5q-39xc-vjpf in the build dependency graph; this unresolved build-tool risk is tracked in [issue #25](https://github.com/RohannShetty/LifeAsUsual/issues/25). This is not a claim that the underlying advisory has been fixed.
+
 ### Not yet shipped
 - Reviewed Indian replacement content, Chapter 7 job-loss flow, state/language coverage improvements,
   new reader navigation, redirect/migration implementation or full high-risk publication coverage.
