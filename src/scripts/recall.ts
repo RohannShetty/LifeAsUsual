@@ -1,4 +1,10 @@
-import { getLedger, recallDueTipIds, recordRecall, nextRecallLabel } from './storage-ledger';
+import {
+  getLedger,
+  recallDueTipIds,
+  recordRecall,
+  nextRecallLabel,
+  RECALL_INTERVALS_DAYS,
+} from './storage-ledger';
 
 interface PoolTip {
   i: string; // tip id
@@ -7,32 +13,31 @@ interface PoolTip {
   s: string; // chapter slug without number
 }
 
-interface DeckElements {
-  deck: HTMLElement;
-  list: HTMLUListElement;
-  empty: HTMLElement;
-  pool: PoolTip[];
-}
+const DAY_MS = 24 * 60 * 60 * 1000;
 
 function chapterHref(tip: PoolTip): string {
   return '/chapters/' + tip.c + '-' + tip.s + '/';
 }
 
+/**
+ * Soonest future check across the tips this deck can show. A read tip with no
+ * timestamp is due now, so it never produces a "come back tomorrow" promise.
+ */
 function nextDueSentence(pool: PoolTip[]): string {
   const state = getLedger();
   const known = new Set(pool.map((tip) => tip.i));
   let soonest: number | null = null;
   for (const tipId of state.readTipIds) {
     if (!known.has(tipId)) continue;
-    const stage = state.recall?.[tipId] ?? 0;
-    const intervals = [3, 7, 21, 60];
     const readAt = state.readAt?.[tipId];
-    if (readAt === undefined) return 'Come back tomorrow.';
-    const at = readAt + intervals[Math.min(stage, intervals.length - 1)] * 86400000;
+    if (readAt === undefined || !Number.isFinite(readAt)) continue;
+    const rawStage = state.recall?.[tipId] ?? 0;
+    const stage = Math.min(Math.max(rawStage, 0), RECALL_INTERVALS_DAYS.length - 1);
+    const at = readAt + RECALL_INTERVALS_DAYS[stage] * DAY_MS;
     if (at > Date.now() && (soonest === null || at < soonest)) soonest = at;
   }
-  if (soonest === null) return '';
-  const days = Math.max(1, Math.ceil((soonest - Date.now()) / 86400000));
+  if (soonest === null) return 'Come back tomorrow.';
+  const days = Math.max(1, Math.ceil((soonest - Date.now()) / DAY_MS));
   return 'Next check in ' + days + (days === 1 ? ' day.' : ' days.');
 }
 
@@ -40,7 +45,7 @@ function tipMeta(tip: PoolTip): string {
   return 'Chapter ' + tip.c;
 }
 
-function renderRow(tip: PoolTip, deck: DeckElements, onAnswer: () => void): HTMLLIElement {
+function renderRow(tip: PoolTip, onAnswer: () => void): HTMLLIElement {
   const item = document.createElement('li');
   item.className = 'recall-item';
 
@@ -53,9 +58,11 @@ function renderRow(tip: PoolTip, deck: DeckElements, onAnswer: () => void): HTML
   revealBtn.className = 'recall-reveal ui-btn ui-btn-secondary';
   revealBtn.textContent = 'Show the tip';
   revealBtn.setAttribute('aria-expanded', 'false');
+  revealBtn.setAttribute('aria-controls', 'recall-answer-' + tip.i);
 
   const answer = document.createElement('div');
   answer.className = 'recall-answer';
+  answer.id = 'recall-answer-' + tip.i;
   answer.hidden = true;
 
   const link = document.createElement('a');
@@ -81,13 +88,18 @@ function renderRow(tip: PoolTip, deck: DeckElements, onAnswer: () => void): HTML
   const status = document.createElement('p');
   status.className = 'recall-status';
   status.setAttribute('aria-live', 'polite');
+  status.tabIndex = -1;
 
   const answerChoice = (remembered: boolean) => {
     recordRecall(tip.i, remembered);
     actions.hidden = true;
     const days = nextRecallLabel(tip.i);
-    status.textContent = remembered ? 'Nice. Next check ' + days + '.' : 'No shame in that. It comes back tomorrow.';
+    status.textContent = remembered
+      ? 'Nice. Next check ' + days + '.'
+      : 'No shame in that. It comes back ' + days + '.';
     item.classList.add('is-done');
+    // The button that had focus just disappeared; move focus to the outcome.
+    status.focus();
     onAnswer();
   };
 
@@ -121,7 +133,6 @@ function init(): void {
   if (!list || !empty) return;
 
   const alwaysShow = deckEl.dataset.mode === 'progress';
-  const deck: DeckElements = { deck: deckEl, list, empty, pool };
   const state = getLedger();
   const byId = new Map(pool.map((tip) => [tip.i, tip]));
   const due = recallDueTipIds(state).filter((tipId) => byId.has(tipId));
@@ -131,8 +142,9 @@ function init(): void {
     deckEl.hidden = false;
     list.hidden = true;
     empty.hidden = false;
-    empty.textContent = state.readTipIds.length === 0
-      ? 'Read a few tips first. Your first memory check appears three days after you read them.'
+    const poolRead = state.readTipIds.filter((tipId) => byId.has(tipId)).length;
+    empty.textContent = poolRead === 0
+      ? 'Read a few Very-high tips first. Your first memory check appears three days after you read them.'
       : 'Nothing due today. ' + nextDueSentence(pool);
     return;
   }
@@ -144,15 +156,18 @@ function init(): void {
   let answered = 0;
   const onAnswer = () => {
     answered += 1;
-    if (answered >= due.length) {
-      empty.hidden = false;
-      empty.textContent = 'That is the check for today. ' + nextDueSentence(pool);
-    }
+    if (answered < due.length) return;
+    // Three rows are shown at a time; more may be due right behind them.
+    const remaining = recallDueTipIds(getLedger()).filter((tipId) => byId.has(tipId)).length;
+    empty.hidden = false;
+    empty.textContent = remaining > 0
+      ? answered + ' for today. ' + remaining + (remaining === 1 ? ' more is' : ' more are') + ' due. Open Progress to keep going.'
+      : 'That is the check for today. ' + nextDueSentence(pool);
   };
 
   for (const tipId of due) {
     const tip = byId.get(tipId);
-    if (tip) list.appendChild(renderRow(tip, deck, onAnswer));
+    if (tip) list.appendChild(renderRow(tip, onAnswer));
   }
 }
 

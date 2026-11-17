@@ -28,7 +28,7 @@ const pool = chapters.flatMap((chapter) =>
 <section class="recall-deck liquid-glass" data-recall-deck data-mode={mode} aria-labelledby="recall-title" hidden>
   <p class="recall-kicker">Memory check</p>
   <h2 class="recall-title" id="recall-title">Do you still remember these?</h2>
-  <p class="recall-lead">You read these a while ago. Recalling one is what keeps it. Nothing leaves this device.</p>
+  <p class="recall-lead">From the Very-high tips you have read. Recalling one is what keeps it. Nothing leaves this device.</p>
   <ul class="recall-list" data-recall-list hidden></ul>
   <p class="recall-empty" data-recall-empty hidden></p>
   <script type="application/json" id="recall-pool" set:html={JSON.stringify(pool)}></script>
@@ -110,7 +110,8 @@ const pool = chapters.flatMap((chapter) =>
     text-underline-offset: 2px;
   }
 
-  .recall-list :global(.recall-actions) {
+  /* :not([hidden]) beats the UA [hidden] rule, which a bare display:flex overrides. */
+  .recall-list :global(.recall-actions:not([hidden])) {
     display: flex;
     flex-wrap: wrap;
     gap: 0.45rem;

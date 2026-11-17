@@ -119,6 +119,9 @@ export function unmarkTipRead(tipId: string): void {
   const idx = state.readTipIds.indexOf(tipId);
   if (idx !== -1) {
     state.readTipIds.splice(idx, 1);
+    // Re-reading a tip should restart its recall clock, not inherit the old one.
+    if (state.readAt) delete state.readAt[tipId];
+    if (state.recall) delete state.recall[tipId];
     saveLedger(state);
   }
 }
@@ -163,6 +166,15 @@ export function exportLedgerJSON(): void {
   downloadAnchor.remove();
 }
 
+function numericMap(value: unknown): Record<string, number> {
+  if (!value || typeof value !== 'object') return {};
+  const clean: Record<string, number> = {};
+  for (const [key, entry] of Object.entries(value as Record<string, unknown>)) {
+    if (typeof entry === 'number' && Number.isFinite(entry)) clean[key] = entry;
+  }
+  return clean;
+}
+
 export function importLedgerJSON(jsonString: string): boolean {
   try {
     const parsed = JSON.parse(jsonString);
@@ -175,8 +187,8 @@ export function importLedgerJSON(jsonString: string): boolean {
         history: typeof parsed.history === 'object' && parsed.history !== null ? parsed.history : {},
         streak: typeof parsed.streak === 'number' ? parsed.streak : 0,
         lastActiveDate: parsed.lastActiveDate || null,
-        readAt: typeof parsed.readAt === 'object' && parsed.readAt !== null ? parsed.readAt : {},
-        recall: typeof parsed.recall === 'object' && parsed.recall !== null ? parsed.recall : {},
+        readAt: numericMap(parsed.readAt),
+        recall: numericMap(parsed.recall),
       };
       saveLedger(cleanState);
       return true;
@@ -206,7 +218,8 @@ export function recallStage(tipId: string, state: LedgerState = getLedger()): nu
 
 export function recallDueAt(tipId: string, state: LedgerState = getLedger()): number | null {
   const readAt = state.readAt?.[tipId];
-  if (readAt === undefined) return Date.now();
+  // A missing or corrupt timestamp means "due now", never "never due".
+  if (readAt === undefined || !Number.isFinite(readAt)) return Date.now();
   return readAt + RECALL_INTERVALS_DAYS[recallStage(tipId, state)] * DAY_MS;
 }
 
@@ -226,6 +239,10 @@ export function recallDueTipIds(
 
 export function recordRecall(tipId: string, remembered: boolean, now = Date.now()): LedgerState {
   const state = getLedger();
+  // Only a tip that is actually due may advance, so a duplicate click, a key
+  // repeat, or a second tab cannot skip a review stage.
+  const dueAt = recallDueAt(tipId, state);
+  if (dueAt !== null && dueAt > now) return state;
   state.readAt = state.readAt ?? {};
   state.recall = state.recall ?? {};
   const stage = recallStage(tipId, state);
