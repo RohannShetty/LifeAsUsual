@@ -1,16 +1,19 @@
 ---
+import { readEditionStats } from '../lib/edition';
+
 interface Props {
   size?: number;
   strokeWidth?: number;
+  totalTips?: number;
 }
 
-const { size = 120, strokeWidth = 10 } = Astro.props;
+const { size = 120, strokeWidth = 10, totalTips = readEditionStats().totalTips } = Astro.props;
 
 const radius = (size - strokeWidth) / 2;
 const circumference = 2 * Math.PI * radius;
 ---
 
-<div class="progress-ring-card" style={`--ring-size: ${size}px;`}>
+<div class="progress-ring-card" style={`--ring-size: ${size}px;`} data-total-tips={totalTips}>
   <div class="ring-wrapper">
     <svg 
       class="progress-ring-svg" 
@@ -43,7 +46,7 @@ const circumference = 2 * Math.PI * radius;
 
     <div class="ring-content">
       <span class="ring-percent" id="ring-percent-text">0%</span>
-      <span class="ring-label" id="ring-count-text">0 / 765</span>
+      <span class="ring-label" id="ring-count-text">0 / {totalTips}</span>
     </div>
   </div>
 </div>
@@ -123,8 +126,9 @@ const circumference = 2 * Math.PI * radius;
 
     subscribeLedger((state) => {
       const readCount = state.readTipIds.length;
-      const total = 765;
-      const percent = Math.min(100, Math.round((readCount / total) * 100));
+      const parsedTotal = Number(document.querySelector('.progress-ring-card')?.getAttribute('data-total-tips'));
+      const total = Number.isFinite(parsedTotal) && parsedTotal > 0 ? parsedTotal : 0;
+      const percent = total > 0 ? Math.min(100, Math.round((readCount / total) * 100)) : 0;
 
       const offset = circumference - (percent / 100) * circumference;
       ring.style.strokeDashoffset = String(offset);

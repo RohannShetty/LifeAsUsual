@@ -10,6 +10,7 @@ import calmChapters from '../../../data/calm-chapters.json';
 import manifest from '../../../data/en-in/manifest.json';
 import type { EnglishChapter } from '../../../scripts/ingest-parveen';
 import { resolvePath } from '../../utils/paths';
+import { readEditionStats } from '../../lib/edition';
 
 export async function getStaticPaths() {
   const enAllPath = path.resolve('data/en-in/all-chapters.json');
@@ -39,6 +40,7 @@ interface Props {
   nextChapter: EnglishChapter | null;
 }
 
+const edition = readEditionStats();
 const { chapter, prevChapter, nextChapter } = Astro.props;
 const isCalm = calmChapters.includes(chapter.chapter);
 const isIndiaRewrite = chapter.edition === 'india';
@@ -113,7 +115,7 @@ const sealTicks = Array.from({ length: 12 }, (_, index) => {
 
     <!-- Chapter Hero -->
     <header class="chapter-hero">
-      <span class="comic-sticker sticker-benefit">Chapter {chapter.chapter} of 34</span>
+      <span class="comic-sticker sticker-benefit">Chapter {chapter.chapter} of {edition.chapters}</span>
       <h1 class="chapter-main-title">{chapter.title}</h1>
       <p class="chapter-meta-line">
         {isIndiaRewrite

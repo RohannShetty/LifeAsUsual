@@ -3,6 +3,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import type { EnglishChapter } from '../../scripts/ingest-parveen';
 import { resolvePath } from '../utils/paths';
+import { readEditionStats } from '../lib/edition';
 
 // Load all chapters at build time
 const enAllPath = path.resolve('data/en-in/all-chapters.json');
@@ -20,6 +21,8 @@ try {
 // angle). preserveAspectRatio="none" stretches the same path to each cluster,
 // and vector-effect keeps the stroke at one device pixel, so no per-cluster
 // geometry or media query is needed.
+const edition = readEditionStats();
+
 const KOLAM_PATH = (() => {
   const inset = 6;
   const far = 100 - inset;
@@ -37,20 +40,20 @@ const KOLAM_PATH = (() => {
 })();
 ---
 
-<div class="reading-map-card liquid-glass">
+<div class="reading-map-card liquid-glass" data-total-tips={edition.totalTips}>
   <header class="map-header">
     <div class="map-title-row">
       <h2 class="map-title">Reading Map</h2>
       <span class="comic-sticker sticker-benefit map-stat-chip" id="map-read-counter">
-        0 / 765 Beads
+        0 / {edition.totalTips} Beads
       </span>
     </div>
     <p class="map-desc">
-      765 glass beads representing every tip in the book. Beads light up as you read. Tap any bead to jump straight to that tip.
+      {edition.totalTips} glass beads representing every tip in the book. Beads light up as you read. Tap any bead to jump straight to that tip.
     </p>
   </header>
 
-  <!-- Visual Bead Map (765 Glass Beads grouped by Chapter) -->
+  <!-- Visual Bead Map (one glass bead per tip, grouped by chapter) -->
   <div class="beads-container" aria-hidden="true">
     {chapters.map(ch => (
       <div class="chapter-cluster" data-chapter={ch.chapter}>
@@ -305,7 +308,9 @@ const KOLAM_PATH = (() => {
       });
 
       if (counter) {
-        counter.textContent = `${count} / 765 Beads`;
+        const parsedTotal = Number(document.querySelector('.reading-map-card')?.getAttribute('data-total-tips'));
+        const grandTotal = Number.isFinite(parsedTotal) && parsedTotal > 0 ? parsedTotal : count;
+        counter.textContent = `${count} / ${grandTotal} Beads`;
       }
     });
   }

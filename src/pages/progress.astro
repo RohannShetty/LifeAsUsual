@@ -1,21 +1,25 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { readEditionStats } from '../lib/edition';
+
+const edition = readEditionStats();
 import ProgressRing from '../components/ProgressRing.astro';
 import ReadingMap from '../components/ReadingMap.astro';
+import RecallDeck from '../components/RecallDeck.astro';
 import Character from '../cast/Character.astro';
 import Bubble from '../cast/Bubble.astro';
 ---
 
 <BaseLayout
   title="Reading Progress & Ledger - How To Live Better"
-  description="Visualise your reading journey through 765 evidence-backed recommendations across 34 chapters."
+  description={`Visualise your reading journey through ${edition.totalTips} evidence-backed recommendations across ${edition.chapters} chapters.`}
 >
   <div class="progress-page-container">
     <header class="progress-header">
       <span class="comic-sticker sticker-benefit">Reading Ledger</span>
       <h1 class="page-title">Your Progress Map</h1>
       <p class="page-lead">
-        765 beads across 34 chapters. Beads glow jade as you read tips. All progress is kept strictly on your device.
+        {edition.totalTips} beads across {edition.chapters} chapters. Beads glow jade as you read tips. All progress is kept strictly on your device.
       </p>
 
       <div class="cast-progress-row" data-cast-note aria-hidden="true">
@@ -45,7 +49,9 @@ import Bubble from '../cast/Bubble.astro';
       </div>
     </section>
 
-    <!-- 765 Beads SVG Map -->
+    <RecallDeck mode="progress" />
+
+    <!-- One bead per tip SVG map -->
     <section class="map-section">
       <ReadingMap />
     </section>

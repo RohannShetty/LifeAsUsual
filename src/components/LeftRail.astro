@@ -7,7 +7,7 @@ interface Props {
 
 const { currentPath = '/' } = Astro.props;
 
-const navItems = [
+const allItems = [
   {
     name: 'Home',
     path: '/',
@@ -57,6 +57,10 @@ const navItems = [
     icon: `<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>`
   },
 ];
+
+// One door: onboarding lives on the home intent fork now, and India provenance
+// is reached from About and the home India pill. Both routes stay published.
+const navItems = allItems.filter((item) => item.path !== '/start/' && item.path !== '/india/');
 ---
 
 <aside class="left-rail-container" aria-label="Desktop Sidebar Navigation">

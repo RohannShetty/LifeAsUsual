@@ -125,10 +125,15 @@ const source: Chapter[] = JSON.parse(fs.readFileSync(sourcePath, 'utf-8'));
 const sourceByChapter = new Map(source.map((chapter) => [chapter.chapter, chapter]));
 
 if (manifest.edition !== 'india') errors.push('manifest.edition must be "india"');
-if (manifest.totalChapters !== 34) errors.push('manifest.totalChapters must be 34');
-if (manifest.totalTips !== 765) errors.push('manifest.totalTips must be 765');
-if (Object.keys(manifest.chapters).length !== 34) {
-  errors.push('manifest must declare 34 chapters, found ' + Object.keys(manifest.chapters).length);
+const sourceTipTotal = source.reduce((sum, chapter) => sum + chapter.tips.length, 0);
+if (manifest.totalChapters !== source.length) {
+  errors.push('manifest.totalChapters must match the source edition: expected ' + source.length + ', found ' + manifest.totalChapters);
+}
+if (manifest.totalTips !== sourceTipTotal) {
+  errors.push('manifest.totalTips must match the source edition: expected ' + sourceTipTotal + ', found ' + manifest.totalTips);
+}
+if (Object.keys(manifest.chapters).length !== manifest.totalChapters) {
+  errors.push('manifest must declare ' + manifest.totalChapters + ' chapters, found ' + Object.keys(manifest.chapters).length);
 }
 
 const files = fs.existsSync(chapterDir)
@@ -358,10 +363,14 @@ if (finalMode) {
   const completed = Object.values(manifest.chapters).filter(
     (chapter) => chapter.status === 'checked' || chapter.status === 'reviewed'
   ).length;
-  if (completed !== 34) errors.push('Final mode requires 34 checked/reviewed chapters, found ' + completed);
-  if (totalTips !== 765) errors.push('Final mode requires 765 rewritten tips, found ' + totalTips);
-  if (checkedTips !== 765) errors.push('Final mode requires 765 checked/reviewed tips, found ' + checkedTips);
-  if (files.length !== 34) errors.push('Final mode requires 34 chapter files, found ' + files.length);
+  if (completed !== manifest.totalChapters)
+    errors.push('Final mode requires ' + manifest.totalChapters + ' checked/reviewed chapters, found ' + completed);
+  if (totalTips !== manifest.totalTips)
+    errors.push('Final mode requires ' + manifest.totalTips + ' rewritten tips, found ' + totalTips);
+  if (checkedTips !== manifest.totalTips)
+    errors.push('Final mode requires ' + manifest.totalTips + ' checked/reviewed tips, found ' + checkedTips);
+  if (files.length !== manifest.totalChapters)
+    errors.push('Final mode requires ' + manifest.totalChapters + ' chapter files, found ' + files.length);
   const draft = Object.values(manifest.chapters).filter((chapter) => chapter.status === 'draft').length;
   if (draft !== 0) errors.push('Final mode requires 0 draft chapters, found ' + draft);
 }

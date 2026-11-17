@@ -1,4 +1,6 @@
 import { test, expect } from '@playwright/test';
+import { readEditionStats } from '../src/lib/edition';
+import { pageTypeFor } from '../src/lib/page-type';
 
 test.describe('How To Live Better - Comprehensive E2E Tests', () => {
 
@@ -145,21 +147,54 @@ test.describe('How To Live Better - Comprehensive E2E Tests', () => {
     await expect(page.locator('html')).toHaveAttribute('data-palette', 'monsoon');
   });
 
-  test('8. Guided finder produces a filtered Explore link', async ({ page }) => {
+  test('8. The intent fork opens a filtered Explore list', async ({ page }) => {
     await page.goto('/');
-    const finder = page.locator('#find-your-step');
-    await finder.scrollIntoViewIfNeeded();
 
-    await finder.locator('.finder-option[data-value="Money"]').click();
-    await finder.locator('.finder-option[data-value="Quick"]').click();
-    await finder.locator('.finder-option[data-value="None needed"]').click();
+    const fork = page.locator('#find');
+    await fork.scrollIntoViewIfNeeded();
+    await expect(fork.getByRole('heading', { name: /what do you want back first/i })).toBeVisible();
+    await expect(fork.locator('.fork-card')).toHaveCount(5);
 
-    const result = finder.locator('[data-finder-result]');
-    await expect(result).toBeVisible();
-    const href = await result.locator('[data-result-link]').getAttribute('href');
-    expect(href).toContain('/explore/');
-    expect(href).toContain('scope=Money');
-    expect(href).toContain('time=Quick');
+    const money = fork.locator('a[href*="scope=Money"]');
+    expect(await money.getAttribute('href')).toContain('/explore/?scope=Money');
+
+    await money.click();
+    await expect(page).toHaveURL(/scope=Money/);
+    const scopeChip = page.locator('.filter-chips[data-filter="scope"] .filter-chip[data-value="Money"]');
+    await expect(scopeChip).toHaveAttribute('aria-pressed', 'true');
+    await expect(page.locator('#results-count')).toContainText('of ' + readEditionStats().totalTips + ' tips');
+  });
+
+  test('9. The memory check asks about a tip read days ago', async ({ page }) => {
+    await page.addInitScript(() => {
+      const DAY = 24 * 60 * 60 * 1000;
+      localStorage.setItem('htlb_ledger_v1', JSON.stringify({
+        version: 1,
+        readTipIds: ['1-1'],
+        readAt: { '1-1': Date.now() - 4 * DAY },
+        recall: {},
+        picks: [],
+        lastPosition: null,
+        history: {},
+        streak: 0,
+        lastActiveDate: null,
+      }));
+    });
+
+    await page.goto('/');
+    const deck = page.locator('[data-recall-deck]');
+    await expect(deck).toBeVisible();
+    await expect(deck).toContainText('Do you still remember these?');
+
+    await deck.getByRole('button', { name: 'Show the tip' }).first().click();
+    await expect(deck.getByRole('button', { name: 'I remembered' }).first()).toBeVisible();
+
+    await deck.getByRole('button', { name: 'I remembered' }).first().click();
+    await expect(deck).toContainText('Next check in 7 days.');
+    // The answer buttons must leave the page, or a second click skips a stage.
+    await expect(deck.getByRole('button', { name: 'I remembered' }).first()).toBeHidden();
+    const stored = await page.evaluate(() => JSON.parse(localStorage.getItem('htlb_ledger_v1') || '{}'));
+    expect(stored.recall['1-1']).toBe(1);
   });
 
   test('10. INR reference toggle stays controllable on rewritten chapters', async ({ page }) => {
@@ -196,6 +231,62 @@ test.describe('How To Live Better - Comprehensive E2E Tests', () => {
 
     await page.reload();
     await expect(page.locator('.tip-card').first().locator('.mark-read-btn')).toHaveClass(/is-read/);
+  });
+
+  test('12. The memory check stays hidden on home when nothing is due', async ({ page }) => {
+    await page.addInitScript(() => {
+      const DAY = 24 * 60 * 60 * 1000;
+      localStorage.setItem('htlb_ledger_v1', JSON.stringify({
+        version: 1,
+        readTipIds: ['1-1'],
+        readAt: { '1-1': Date.now() - DAY },
+        recall: {},
+        picks: [],
+        lastPosition: null,
+        history: {},
+        streak: 0,
+        lastActiveDate: null,
+      }));
+    });
+
+    await page.goto('/');
+    await expect(page.locator('[data-recall-deck]')).toBeHidden();
+  });
+
+  test('13. A legacy ledger is due at once and "Not yet" schedules three days', async ({ page }) => {
+    await page.addInitScript(() => {
+      localStorage.setItem('htlb_ledger_v1', JSON.stringify({
+        version: 1,
+        readTipIds: ['1-1'],
+        picks: [],
+        lastPosition: null,
+        history: {},
+        streak: 0,
+        lastActiveDate: null,
+      }));
+    });
+
+    await page.goto('/');
+    const deck = page.locator('[data-recall-deck]');
+    await expect(deck).toBeVisible();
+
+    await deck.getByRole('button', { name: 'Show the tip' }).first().click();
+    await deck.getByRole('button', { name: 'Not yet' }).first().click();
+    await expect(deck).toContainText('It comes back in 3 days.');
+    await expect(deck.getByRole('button', { name: 'Not yet' }).first()).toBeHidden();
+
+    const stored = await page.evaluate(() => JSON.parse(localStorage.getItem('htlb_ledger_v1') || '{}'));
+    expect(stored.recall['1-1']).toBe(0);
+  });
+
+  test('14. Page types survive the GitHub Pages base path', () => {
+    expect(pageTypeFor('/LifeAsUsual/', '/LifeAsUsual/')).toBe('home');
+    expect(pageTypeFor('/LifeAsUsual/chapters/', '/LifeAsUsual/')).toBe('collection');
+    expect(pageTypeFor('/LifeAsUsual/chapters/01-do-not-die-early/', '/LifeAsUsual/')).toBe('chapter');
+    expect(pageTypeFor('/LifeAsUsual/guides/', '/LifeAsUsual/')).toBe('collection');
+    expect(pageTypeFor('/LifeAsUsual/help/report-financial-cyber-fraud/', '/LifeAsUsual/')).toBe('reference');
+    expect(pageTypeFor('/', '/')).toBe('home');
+    expect(pageTypeFor('/chapters/01-do-not-die-early', '/')).toBe('chapter');
   });
 
 });
