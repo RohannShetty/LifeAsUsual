@@ -1,6 +1,6 @@
 # India-first inherited content audit: baseline
 
-> Not an editorial approval. Classification is a search queue only; every disposition is UNASSESSED.
+> Not an editorial approval. Automated flags identify review candidates; explicit decisions are separate from source verification and qualified review.
 
 - Legacy IDs inventoried: **765**
 - Present in current India edition: **765**
@@ -50,6 +50,6 @@
 
 ## Required review
 
-Use legacy-inventory.csv to record KEEP, REWRITE, REPLACE, COMBINE, RETIRE or HOLD decisions after checking the actual tip, applicability and primary-source passages. Do not label a tip professionally reviewed because it has evidence grade A, independently-checked, or a passing browser test.
+Record KEEP, REWRITE, REPLACE, COMBINE, RETIRE or HOLD decisions with rationale and author in editorial-decisions.json, then regenerate legacy-inventory.csv. Never hand-edit generated CSV rows. Do not label a tip professionally reviewed because it has evidence grade A, independently-checked, or a passing browser test.
 
 No public routes, anchors, current tip bodies or stored progress are modified by this report. Track implementation under [Issue #23](https://github.com/RohannShetty/LifeAsUsual/issues/23).
