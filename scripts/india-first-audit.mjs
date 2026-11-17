@@ -112,7 +112,7 @@ export function asCsv(report) {
 export function asSummary(report) {
   const flagged = report.rows.filter(r => r.potential_content_gaps);
   return '# India-first inherited content audit: baseline\n\n' +
-    '> Not an editorial approval. Classification is a search queue only; every disposition is UNASSESSED.\n\n' +
+    '> Not an editorial approval. Automated flags identify review candidates; explicit decisions are separate from source verification and qualified review.\n\n' +
     '- Legacy IDs inventoried: **' + report.legacyIdCount + '**\n' +
     '- Present in current India edition: **' + report.inEditionCount + '**\n' +
     '- Missing from edition (requiring mapping): **' + report.legacyIdsMissingFromEdition.length + '**\n' +
@@ -121,7 +121,7 @@ export function asSummary(report) {
     '- Tips flagged for further inspection by keyword triage: **' + flagged.length + '** (not verified defects)\n\n' +
     '## Chapter queue\n\n| Chapter | Current title | Inherited IDs | Flagged candidates | Unassessed |\n|---|---|---:|---:|---:|\n' +
     report.byChapter.map(c => '| ' + c.chapter + ' | ' + c.name.replaceAll('|','/') + ' | ' + c.tips + ' | ' + c.attentionCandidates + ' | ' + c.unassessed + ' |').join('\n') +
-    '\n\n## Required review\n\nUse legacy-inventory.csv to record KEEP, REWRITE, REPLACE, COMBINE, RETIRE or HOLD decisions after checking the actual tip, applicability and primary-source passages. Do not label a tip professionally reviewed because it has evidence grade A, independently-checked, or a passing browser test.\n\n' +
+    '\n\n## Required review\n\nRecord KEEP, REWRITE, REPLACE, COMBINE, RETIRE or HOLD decisions with rationale and author in editorial-decisions.json, then regenerate legacy-inventory.csv. Never hand-edit generated CSV rows. Do not label a tip professionally reviewed because it has evidence grade A, independently-checked, or a passing browser test.\n\n' +
     'No public routes, anchors, current tip bodies or stored progress are modified by this report. Track implementation under [Issue #23](https://github.com/RohannShetty/LifeAsUsual/issues/23).\n';
 }
 function readJson(p) { return JSON.parse(fs.readFileSync(p, 'utf8')); }
