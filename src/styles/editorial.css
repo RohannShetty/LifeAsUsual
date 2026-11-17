@@ -1,0 +1,85 @@
+/*
+ * Editorial reading shell.
+ *
+ * Scope: the long-form pages only. data-page-type is derived from the route in
+ * BaseLayout (chapter / collection / home / reference), so this file never
+ * needs per-page imports. Nothing here changes the comic layer; the cast keeps
+ * its own placement rules in comic.css.
+ */
+
+/* ---- Chapter: reading first ---- */
+
+[data-page-type='chapter'] .chapter-content .chapter-hero {
+  padding-bottom: 1.1rem;
+  border-bottom: 1px solid var(--glass-border, rgba(147, 163, 201, 0.25));
+  margin-bottom: 1.4rem;
+}
+
+[data-page-type='chapter'] .chapter-content .chapter-main-title {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: clamp(1.8rem, 5vw, 2.6rem);
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+  text-wrap: balance;
+}
+
+[data-page-type='chapter'] .chapter-content .chapter-meta-line {
+  font-size: 0.86rem;
+  line-height: 1.55;
+}
+
+[data-page-type='chapter'] .chapter-content .tips-stream {
+  max-width: 66ch;
+  margin-inline: auto;
+}
+
+[data-page-type='chapter'] .chapter-content .tip-card {
+  padding-block: 1.1rem;
+}
+
+[data-page-type='chapter'] .chapter-content .tip-title {
+  font-family: var(--font-serif);
+  font-size: 1.18rem;
+  line-height: 1.3;
+  letter-spacing: -0.005em;
+  text-wrap: balance;
+}
+
+[data-page-type='chapter'] .chapter-content .in-plain-words {
+  font-size: 1.02rem;
+  line-height: 1.7;
+}
+
+/* A quiet reading measure for the pagination that closes each chapter. */
+[data-page-type='chapter'] .chapter-content .chapter-pagination {
+  max-width: 66ch;
+  margin-inline: auto;
+}
+
+/* ---- Collection: the same voice, one step quieter ---- */
+
+[data-page-type='collection'] .page-title {
+  text-wrap: balance;
+}
+
+[data-page-type='collection'] .page-lead {
+  max-width: 62ch;
+}
+
+/* ---- Print: the article, nothing else ---- */
+
+@media print {
+  [data-page-type] .left-rail-container,
+  [data-page-type] [data-bottom-nav],
+  [data-page-type] .cast-welcome-row,
+  [data-page-type] .chapter-celebration,
+  [data-page-type] .chapter-pagination,
+  [data-page-type] .chapter-progress-track {
+    display: none !important;
+  }
+
+  [data-page-type='chapter'] .chapter-content .tip-card {
+    break-inside: avoid;
+  }
+}

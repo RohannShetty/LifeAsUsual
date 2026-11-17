@@ -12,6 +12,7 @@ import '../styles/ground.css';
 import '../styles/comic.css';
 import '../styles/ui.css';
 import '../styles/ornament.css';
+import '../styles/editorial.css';
 
 interface Props {
   title?: string;
@@ -24,10 +25,19 @@ const {
 } = Astro.props;
 
 const currentPath = Astro.url.pathname;
+
+// Page type drives the editorial shell only; navigation and the cast do not use it.
+function pageTypeFor(pathname: string): 'home' | 'chapter' | 'collection' | 'reference' {
+  if (pathname === '/' || pathname === '') return 'home';
+  if (/^\/chapters\/[^/]+\//.test(pathname)) return 'chapter';
+  if (/^\/(chapters|guides|explore|picks)\/?$/.test(pathname)) return 'collection';
+  return 'reference';
+}
+const pageType = pageTypeFor(currentPath);
 ---
 
 <!doctype html>
-<html lang="en" data-theme="dark" data-palette="midnight" data-comic-effects="on" data-show-inr="true">
+<html lang="en" data-page-type={pageType} data-theme="dark" data-palette="midnight" data-comic-effects="on" data-show-inr="true">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
