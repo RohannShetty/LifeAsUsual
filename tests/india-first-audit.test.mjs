@@ -47,3 +47,21 @@ test('the repository baseline covers every immutable source ID without approving
   assert.equal(new Set(report.rows.map(r=>r.legacy_id)).size,report.rows.length);
   assert.ok(report.rows.every(r=>r.disposition==='UNASSESSED' && r.claim_source_verified_in_this_audit==='NO'));
 });
+
+test('an explicit editorial disposition is separate from evidence or qualified review', () => {
+  const report = makeInventory(original, current, manifest, {
+    '7-1': { disposition: 'REWRITE', rationale: 'Make the Indian job-loss journey action-first', author: 'Editorial owner',
+      india_first_journey: 'lost-employment', migration_decision: 'KEEP_LEGACY_ANCHOR' }
+  });
+  assert.equal(report.unassessed, 0);
+  assert.equal(report.rows[0].disposition, 'REWRITE');
+  assert.equal(report.rows[0].india_first_journey, 'lost-employment');
+  assert.equal(report.rows[0].reviewer_approval, 'NONE');
+  assert.equal(report.rows[0].claim_source_verified_in_this_audit, 'NO');
+});
+
+test('unsupported or unattributed editorial decisions fail closed', () => {
+  assert.throws(() => makeInventory(original,current,manifest,{'99-1':{disposition:'KEEP',rationale:'x',author:'x'}}),/unknown legacy ID/);
+  assert.throws(() => makeInventory(original,current,manifest,{'7-1':{disposition:'REWRITE'}}),/rationale and decision author/);
+  assert.throws(() => makeInventory(original,current,manifest,{'7-1':{disposition:'PUBLISHED',rationale:'x',author:'x'}}),/Invalid disposition/);
+});
