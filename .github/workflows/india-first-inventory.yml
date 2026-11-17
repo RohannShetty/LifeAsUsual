@@ -1,0 +1,31 @@
+name: India-first editorial inventory
+on:
+  push:
+    branches:
+      - master
+      - feat/india-first-editorial-audit-20261117
+    paths:
+      - scripts/india-first-audit.mjs
+      - tests/india-first-audit.test.mjs
+      - reports/india-first-inventory/**
+      - .github/workflows/india-first-inventory*.yml
+  pull_request:
+    paths:
+      - scripts/india-first-audit.mjs
+      - tests/india-first-audit.test.mjs
+      - reports/india-first-inventory/**
+      - .github/workflows/india-first-inventory*.yml
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Test legacy ID and review safeguards
+        run: node --test tests/india-first-audit.test.mjs
+      - name: Check deterministic full inventory
+        run: node scripts/india-first-audit.mjs --check
