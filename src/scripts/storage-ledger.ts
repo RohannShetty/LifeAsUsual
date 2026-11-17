@@ -11,6 +11,8 @@ export interface LedgerState {
   history: Record<string, number>; // "YYYY-MM-DD" -> count of tips read that day
   streak: number;
   lastActiveDate: string | null; // "YYYY-MM-DD"
+  readAt?: Record<string, number>; // tip id -> ms timestamp of first read
+  recall?: Record<string, number>; // tip id -> completed review stage, 0 = first due
 }
 
 const STORAGE_KEY = 'htlb_ledger_v1';
@@ -33,6 +35,8 @@ function getDefaultState(): LedgerState {
     history: {},
     streak: 0,
     lastActiveDate: null,
+    readAt: {},
+    recall: {},
   };
 }
 
@@ -82,6 +86,8 @@ export function markTipRead(tipId: string, chapter: number, tip: number): boolea
   }
 
   state.readTipIds.push(tipId);
+  state.readAt = state.readAt ?? {};
+  if (state.readAt[tipId] === undefined) state.readAt[tipId] = Date.now();
   state.lastPosition = { chapter, tip, timestamp: Date.now() };
 
   // Update daily count and streak
@@ -169,6 +175,8 @@ export function importLedgerJSON(jsonString: string): boolean {
         history: typeof parsed.history === 'object' && parsed.history !== null ? parsed.history : {},
         streak: typeof parsed.streak === 'number' ? parsed.streak : 0,
         lastActiveDate: parsed.lastActiveDate || null,
+        readAt: typeof parsed.readAt === 'object' && parsed.readAt !== null ? parsed.readAt : {},
+        recall: typeof parsed.recall === 'object' && parsed.recall !== null ? parsed.recall : {},
       };
       saveLedger(cleanState);
       return true;
@@ -182,3 +190,58 @@ export function importLedgerJSON(jsonString: string): boolean {
 export function resetLedger(): void {
   saveLedger(getDefaultState());
 }
+
+/**
+ * Spaced recall over tips already read. Stage 0 asks after 3 days, then 7,
+ * then 21, then 60. Forgetting drops the tip back to stage 0. Everything stays
+ * in the same local ledger as reading progress.
+ */
+export const RECALL_INTERVALS_DAYS = [3, 7, 21, 60] as const;
+const DAY_MS = 24 * 60 * 60 * 1000;
+
+export function recallStage(tipId: string, state: LedgerState = getLedger()): number {
+  const stage = state.recall?.[tipId] ?? 0;
+  return stage >= 0 && stage < RECALL_INTERVALS_DAYS.length ? stage : 0;
+}
+
+export function recallDueAt(tipId: string, state: LedgerState = getLedger()): number | null {
+  const readAt = state.readAt?.[tipId];
+  if (readAt === undefined) return Date.now();
+  return readAt + RECALL_INTERVALS_DAYS[recallStage(tipId, state)] * DAY_MS;
+}
+
+export function recallDueTipIds(
+  state: LedgerState = getLedger(),
+  now = Date.now(),
+  limit = 3
+): string[] {
+  return state.readTipIds
+    .filter((tipId) => {
+      const due = recallDueAt(tipId, state);
+      return due !== null && due <= now;
+    })
+    .sort((a, b) => recallStage(a, state) - recallStage(b, state))
+    .slice(0, limit);
+}
+
+export function recordRecall(tipId: string, remembered: boolean, now = Date.now()): LedgerState {
+  const state = getLedger();
+  state.readAt = state.readAt ?? {};
+  state.recall = state.recall ?? {};
+  const stage = recallStage(tipId, state);
+  state.recall[tipId] = remembered
+    ? Math.min(stage + 1, RECALL_INTERVALS_DAYS.length - 1)
+    : 0;
+  if (state.readAt[tipId] === undefined) state.readAt[tipId] = now;
+  // Restart the interval from now, so the next check counts from this recall.
+  state.readAt[tipId] = now;
+  saveLedger(state);
+  return state;
+}
+
+export function nextRecallLabel(tipId: string, state: LedgerState = getLedger()): string {
+  const stage = recallStage(tipId, state);
+  const days = RECALL_INTERVALS_DAYS[stage];
+  return 'in ' + days + ' days';
+}
+

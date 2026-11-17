@@ -5,6 +5,7 @@ import { readEditionStats } from '../lib/edition';
 const edition = readEditionStats();
 import ProgressRing from '../components/ProgressRing.astro';
 import ReadingMap from '../components/ReadingMap.astro';
+import RecallDeck from '../components/RecallDeck.astro';
 import Character from '../cast/Character.astro';
 import Bubble from '../cast/Bubble.astro';
 ---
@@ -47,6 +48,8 @@ import Bubble from '../cast/Bubble.astro';
         </div>
       </div>
     </section>
+
+    <RecallDeck mode="progress" />
 
     <!-- One bead per tip SVG map -->
     <section class="map-section">

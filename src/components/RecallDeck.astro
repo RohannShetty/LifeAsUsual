@@ -1,0 +1,141 @@
+---
+import fs from 'node:fs';
+import path from 'node:path';
+
+interface Props {
+  mode?: 'home' | 'progress';
+}
+
+const { mode = 'home' } = Astro.props;
+
+interface ChapterRecord {
+  chapter: number;
+  slug: string;
+  tips: Array<{ id: string; title: string; valueTier: string }>;
+}
+
+const chapters = JSON.parse(
+  fs.readFileSync(path.resolve(process.cwd(), 'data/en-in/all-chapters.json'), 'utf-8')
+) as ChapterRecord[];
+
+const pool = chapters.flatMap((chapter) =>
+  chapter.tips
+    .filter((tip) => tip.valueTier === 'Very high')
+    .map((tip) => ({ i: tip.id, t: tip.title, c: chapter.chapter, s: chapter.slug }))
+);
+---
+
+<section class="recall-deck liquid-glass" data-recall-deck data-mode={mode} aria-labelledby="recall-title" hidden>
+  <p class="recall-kicker">Memory check</p>
+  <h2 class="recall-title" id="recall-title">Do you still remember these?</h2>
+  <p class="recall-lead">You read these a while ago. Recalling one is what keeps it. Nothing leaves this device.</p>
+  <ul class="recall-list" data-recall-list hidden></ul>
+  <p class="recall-empty" data-recall-empty hidden></p>
+  <script type="application/json" id="recall-pool" set:html={JSON.stringify(pool)}></script>
+</section>
+
+<script>
+  import '../scripts/recall';
+</script>
+
+<style>
+  .recall-deck {
+    margin: 1.25rem 0 1.75rem;
+    padding: 1.1rem 1rem 1.2rem;
+  }
+
+  .recall-kicker {
+    margin: 0 0 0.3rem;
+    font-family: var(--font-sans);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--color-amber);
+  }
+
+  .recall-title {
+    margin: 0 0 0.3rem;
+    font-family: var(--font-sans);
+    font-size: 1.15rem;
+    color: var(--color-mist);
+  }
+
+  .recall-lead {
+    margin: 0 0 0.8rem;
+    font-size: 0.86rem;
+    line-height: 1.45;
+    color: var(--color-steel);
+  }
+
+  .recall-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .recall-list :global(.recall-item) {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+    padding: 0.75rem 0.8rem;
+    border: 1px solid var(--glass-border, rgba(147, 163, 201, 0.28));
+    border-radius: var(--radius-card, 12px);
+    background: rgba(10, 18, 48, 0.35);
+  }
+
+  .recall-list :global(.recall-item.is-done) {
+    opacity: 0.75;
+  }
+
+  .recall-list :global(.recall-meta) {
+    margin: 0;
+    font-size: 0.72rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--color-steel);
+  }
+
+  .recall-list :global(.recall-answer) {
+    margin: 0;
+  }
+
+  .recall-list :global(.recall-tip-title) {
+    color: var(--color-mist);
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  .recall-list :global(.recall-actions) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+  }
+
+  .recall-list :global(.recall-choice) {
+    min-height: 44px;
+  }
+
+  .recall-list :global(.recall-reveal) {
+    align-self: flex-start;
+    min-height: 44px;
+  }
+
+  .recall-list :global(.recall-status) {
+    margin: 0;
+    min-height: 1rem;
+    font-size: 0.82rem;
+    color: var(--color-jade);
+  }
+
+  .recall-empty {
+    margin: 0;
+    font-size: 0.86rem;
+    line-height: 1.45;
+    color: var(--color-steel);
+  }
+</style>

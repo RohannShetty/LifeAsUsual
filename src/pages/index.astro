@@ -4,6 +4,7 @@ import path from 'node:path';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ProgressRing from '../components/ProgressRing.astro';
 import IntentFork from '../components/IntentFork.astro';
+import RecallDeck from '../components/RecallDeck.astro';
 import Character from '../cast/Character.astro';
 import Bubble from '../cast/Bubble.astro';
 import type { EnglishChapter, EnglishTip } from '../../scripts/ingest-parveen';
@@ -151,6 +152,8 @@ for (const tip of allTips) {
       </section>
     </div>
   )}
+
+  <RecallDeck />
 
   <section class="overview-section paper">
     <div class="overview-ring-col">
