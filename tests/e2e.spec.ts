@@ -158,9 +158,37 @@ test.describe('How To Live Better - Comprehensive E2E Tests', () => {
 
     await money.click();
     await expect(page).toHaveURL(/scope=Money/);
-    const results = page.locator('#results-count');
-    await expect(results).toContainText('of 765 tips');
-    await expect(results).not.toHaveText(/^Showing 765 of/);
+    const scopeChip = page.locator('.filter-chips[data-filter="scope"] .filter-chip[data-value="Money"]');
+    await expect(scopeChip).toHaveAttribute('aria-pressed', 'true');
+    await expect(page.locator('#results-count')).toContainText('of 765 tips');
+  });
+
+  test('9. The memory check asks about a tip read days ago', async ({ page }) => {
+    await page.addInitScript(() => {
+      const DAY = 24 * 60 * 60 * 1000;
+      localStorage.setItem('htlb_ledger_v1', JSON.stringify({
+        version: 1,
+        readTipIds: ['1-1'],
+        readAt: { '1-1': Date.now() - 4 * DAY },
+        recall: {},
+        picks: [],
+        lastPosition: null,
+        history: {},
+        streak: 0,
+        lastActiveDate: null,
+      }));
+    });
+
+    await page.goto('/');
+    const deck = page.locator('[data-recall-deck]');
+    await expect(deck).toBeVisible();
+    await expect(deck).toContainText('Do you still remember these?');
+
+    await deck.getByRole('button', { name: 'Show the tip' }).first().click();
+    await expect(deck.getByRole('button', { name: 'I remembered' }).first()).toBeVisible();
+
+    await deck.getByRole('button', { name: 'I remembered' }).first().click();
+    await expect(deck).toContainText('Next check in 7 days.');
   });
 
   test('10. INR reference toggle stays controllable on rewritten chapters', async ({ page }) => {
