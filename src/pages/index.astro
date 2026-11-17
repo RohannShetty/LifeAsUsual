@@ -9,7 +9,9 @@ import Bubble from '../cast/Bubble.astro';
 import type { EnglishChapter, EnglishTip } from '../../scripts/ingest-parveen';
 import calmChapters from '../../data/calm-chapters.json';
 import { resolvePath } from '../utils/paths';
+import { readEditionStats } from '../lib/edition';
 
+const edition = readEditionStats();
 const enAllPath = path.resolve('data/en-in/all-chapters.json');
 let chapters: EnglishChapter[] = [];
 try {
@@ -105,7 +107,7 @@ for (const scope of ['all', ...scopeOptions]) {
 
 <BaseLayout
   title="How To Live Better — Evidence-Based Life Guide for India"
-  description="765 evidence-graded tips on health, money, work and freedom, with an India edition policy crosswalk. Spend less, get back more."
+  description={`${edition.totalTips} evidence-graded tips on health, money, work and freedom, with an India edition policy crosswalk. Spend less, get back more.`}
 >
   <header class="home-hero">
     <div class="hero-meta">
@@ -113,7 +115,7 @@ for (const scope of ['all', ...scopeOptions]) {
         <span class="india-dot" aria-hidden="true"></span>
         India edition
       </a>
-      <span class="hero-count">765 tips · 34 chapters</span>
+      <span class="hero-count">{edition.totalTips} tips · {edition.chapters} chapters</span>
     </div>
 
     <h1 class="home-headline">How To Live Better</h1>
@@ -190,7 +192,7 @@ for (const scope of ['all', ...scopeOptions]) {
   <section class="map-teaser paper">
     <div>
       <p class="overview-kicker">Reading map</p>
-      <h2 class="map-teaser-title">765 beads. One for every tip.</h2>
+      <h2 class="map-teaser-title">{edition.totalTips} beads. One for every tip.</h2>
       <p class="map-teaser-desc">Beads light up as you read. Your progress stays on this device.</p>
     </div>
     <a class="ui-btn ui-btn-secondary map-teaser-link" href={resolvePath('/progress/')}>Open the map <span aria-hidden="true">→</span></a>

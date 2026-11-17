@@ -2,6 +2,9 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { readEditionStats } from '../../lib/edition';
+
+const edition = readEditionStats();
 import type { EnglishChapter } from '../../../scripts/ingest-parveen';
 import { resolvePath } from '../../utils/paths';
 
@@ -16,7 +19,7 @@ try {
 
 <BaseLayout 
   title="Chapters - How To Live Better"
-  description="Explore all 34 chapters of How To Live Better, spanning longevity, emergency aid, personal finance, and legal rights."
+  description={`Explore all ${edition.chapters} chapters of How To Live Better, spanning longevity, emergency aid, personal finance, and legal rights.`}
 >
   <header style="margin-bottom: 2rem;">
     <div style="margin-bottom: 0.5rem;">
@@ -26,7 +29,7 @@ try {
       All 34 Chapters
     </h1>
     <p class="chapters-lead">
-      A menu of 765 evidence-graded life recommendations. Choose the chapters that matter to you now.
+      A menu of {edition.totalTips} evidence-graded life recommendations. Choose the chapters that matter to you now.
     </p>
     <a class="india-note" href={resolvePath('/india/')}>
       <span class="india-note-badge">IN</span>

@@ -7,7 +7,9 @@ import Character from '../cast/Character.astro';
 import Bubble from '../cast/Bubble.astro';
 import type { EnglishChapter, EnglishTip } from '../../scripts/ingest-parveen';
 import { resolvePath } from '../utils/paths';
+import { readEditionStats } from '../lib/edition';
 
+const edition = readEditionStats();
 const enAllPath = path.resolve('data/en-in/all-chapters.json');
 let allTips: EnglishTip[] = [];
 try {
@@ -21,8 +23,8 @@ try {
 ---
 
 <BaseLayout
-  title="Explore 765 Tips - How To Live Better"
-  description="Search and filter 765 evidence-graded tips by payoff, evidence grade, cost, time, effort, audience and verification status."
+  title={`Explore ${edition.totalTips} Tips - How To Live Better`}
+  description={`Search and filter ${edition.totalTips} evidence-graded tips by payoff, evidence grade, cost, time, effort, audience and verification status.`}
 >
   <div class="explore-container">
     <header class="explore-header">
@@ -31,7 +33,7 @@ try {
         <a class="finder-link" href={resolvePath('/#find-your-step')}>Not sure? Answer 3 questions →</a>
       </div>
       <h1 class="page-title">Find the tip you need.</h1>
-      <p class="page-lead">Search all 765 tips, or narrow by what you can afford in money, time and effort.</p>
+      <p class="page-lead">Search all {edition.totalTips} tips, or narrow by what you can afford in money, time and effort.</p>
     </header>
 
     <section class="explore-controls liquid-glass" aria-label="Search and quick filters">
@@ -69,7 +71,7 @@ try {
     </section>
 
     <div class="results-head">
-      <span class="results-count" id="results-count">Showing 765 of 765 tips</span>
+      <span class="results-count" id="results-count">Showing {edition.totalTips} of {edition.totalTips} tips</span>
       <button type="button" id="reset-filters-btn" class="reset-link">Reset</button>
     </div>
 
@@ -216,7 +218,7 @@ try {
 
     <footer class="filter-sheet-foot">
       <button type="button" id="filter-clear" class="filter-clear">Clear all</button>
-      <button type="button" id="filter-apply" class="ui-btn ui-btn-primary filter-apply">Show 765 tips</button>
+      <button type="button" id="filter-apply" class="ui-btn ui-btn-primary filter-apply">Show {edition.totalTips} tips</button>
     </footer>
   </aside>
 </BaseLayout>
