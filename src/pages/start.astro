@@ -4,6 +4,9 @@ import Character from '../cast/Character.astro';
 import Bubble from '../cast/Bubble.astro';
 import { resolvePath } from '../utils/paths';
 import IndiaNotice from '../components/IndiaNotice.astro';
+import { readEditionStats } from '../lib/edition';
+
+const edition = readEditionStats();
 ---
 
 <BaseLayout 
@@ -56,7 +59,7 @@ import IndiaNotice from '../components/IndiaNotice.astro';
         The author calculates a cost score based on three dimensions: <strong>Money</strong> (0 to 2), <strong>Time</strong> (0 to 2), and <strong>Willpower</strong> (0 to 2).
       </p>
       <p style="margin-top: 0.5rem;">
-        When an action requires zero money, negligible time, and zero willpower while producing large benefits, it is ranked <strong>Very High ROI</strong> (122 tips). Start with these for the biggest life wins with the least resistance.
+        When an action requires zero money, negligible time, and zero willpower while producing large benefits, it is ranked <strong>Very High ROI</strong> ({edition.veryHigh} tips). Start with these for the biggest life wins with the least resistance.
       </p>
     </section>
 

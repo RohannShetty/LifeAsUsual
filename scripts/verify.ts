@@ -10,9 +10,11 @@ function main() {
 
   console.log(`Checking ${enChapters.length} English chapters against ${zhChapters.length} Chinese chapters...`);
 
-  if (enChapters.length !== 34) {
-    errors.push(`Expected 34 English chapters, got ${enChapters.length}`);
+  if (enChapters.length !== zhChapters.length) {
+    errors.push(`Expected ${zhChapters.length} English chapters to mirror the source, got ${enChapters.length}`);
   }
+
+  const totalChineseTips = zhChapters.reduce((sum: number, chapter: any) => sum + chapter.tips.length, 0);
 
   let totalEnglishTips = 0;
   let totalNumChecks = 0;
@@ -71,8 +73,8 @@ function main() {
   }
 
   console.log(`\n================ VERIFY RESULTS ================`);
-  console.log(`Total Chapters: ${enChapters.length} / 34`);
-  console.log(`Total Tips: ${totalEnglishTips} / 765`);
+  console.log(`Total Chapters: ${enChapters.length} / ${zhChapters.length}`);
+  console.log(`Total Tips: ${totalEnglishTips} / ${totalChineseTips}`);
   console.log(`Total URL Checks: ${totalUrlChecks}`);
   console.log(`Total Number Checks: ${totalNumChecks}`);
   console.log(`================================================\n`);
@@ -82,7 +84,7 @@ function main() {
     errors.slice(0, 10).forEach(e => console.error('  - ' + e));
     process.exit(1);
   } else {
-    console.log('✓ Zero CJK characters found across all 765 English tips.');
+    console.log(`✓ Zero CJK characters found across all ${totalEnglishTips} English tips.`);
     console.log('✓ All chapter tip counts match the Chinese source exactly.');
     console.log('✓ Acceptance Check 2 passed!');
   }

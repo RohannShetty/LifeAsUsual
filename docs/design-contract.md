@@ -37,7 +37,11 @@ Reading progress used to be passive. It now schedules recall
 - The deck shows at most three due tips; a tip is due only after it has been
   read.
 - "I remembered" moves the tip one stage forward. "Not yet" resets it to stage
-  zero. Either answer restarts the interval from now.
+  zero and returns after three days. Either answer restarts the interval from
+  now. Only a tip that is due may advance, so a duplicate click or a second tab
+  cannot skip a stage.
+- The deck draws from the Very-high tips the reader has read; its copy says so.
+  If a wide pool is ever needed, change the copy with it.
 - Home shows the deck only when something is due. `/progress/` always shows it,
   including its empty states.
 - Everything stays in the same `localStorage` ledger as reading progress and
@@ -50,7 +54,10 @@ with no third-party request.
 ## 3. A reading shell
 
 `src/styles/editorial.css`, scoped by `data-page-type` on `<html>`, derives
-the page type from the route in `BaseLayout.astro`.
+the page type from the route in `BaseLayout.astro` via
+`src/lib/page-type.ts`. That helper strips `import.meta.env.BASE_URL` first,
+because the deployed site lives under `/LifeAsUsual/`; without it every route
+falls back to `reference`.
 
 - `chapter`: serif chapter title and tip titles, 66ch reading measure, a hairline
   under the chapter header, balanced title wrapping.
@@ -66,7 +73,10 @@ add a request.
 `src/lib/edition.ts` is the only source of published counts (tips, chapters,
 Very-high tips). Pages and components read it; filter chips on `/explore/` count
 the loaded tips. `scripts/parse.ts` keeps its literals because it validates the
-immutable source corpus, not the edition.
+immutable source corpus, not the edition. `scripts/verify-india.ts` compares
+the manifest against the actual source and edition files, and `scripts/verify.ts`
+compares the English corpus against the Chinese source counts rather than typed
+targets.
 
 Rule: a new chapter must not require editing a literal anywhere. If a count is
 typed by hand in a page, that is a defect.

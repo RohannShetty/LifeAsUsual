@@ -2,6 +2,9 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { resolvePath } from '../utils/paths';
 import manifest from '../../data/en-in/manifest.json';
+import { readEditionStats } from '../lib/edition';
+
+const edition = readEditionStats();
 
 const chapterStatuses = Object.values(manifest.chapters);
 const checkedChapters = chapterStatuses.filter((chapter) => chapter.status === 'checked' || chapter.status === 'reviewed').length;
@@ -82,7 +85,7 @@ const awaitingHumanReview = chapterStatuses.filter((chapter) => chapter.tier ===
           <span class="stat-label">Evidence Grade A</span>
         </div>
         <div class="stat-box">
-          <span class="stat-number">122</span>
+          <span class="stat-number">{edition.veryHigh}</span>
           <span class="stat-label">Very High ROI</span>
         </div>
         <div class="stat-box">

@@ -100,7 +100,7 @@ const queuedRows = manifestRows
 
     <section class="india-section" id="chapters">
       <p class="section-kicker">{queuedRows.length === 0 ? 'Coverage' : 'Still queued'}</p>
-      <h2 class="india-h2">{queuedRows.length === 0 ? 'All {readEditionStats().chapters} chapters have an India rewrite' : 'Chapters still on the source text'}</h2>
+      <h2 class="india-h2">{queuedRows.length === 0 ? 'All ' + readEditionStats().chapters + ' chapters have an India rewrite' : 'Chapters still on the source text'}</h2>
       {queuedRows.length === 0 ? (
         <p class="india-body">All current chapters have India-adapted files with automated review statuses. These checks do not prove every source supports every claim. Review and correction work continues, especially for high-stakes topics.</p>
       ) : (
@@ -135,7 +135,7 @@ const queuedRows = manifestRows
 
     <aside class="india-disclaimer">
       <strong>This is a checked draft, not legal or medical advice.</strong>
-      <p>All 34 inherited chapters have India-adapted drafts, but automated checks are not professional verification. Some citations or claims may still need correction. For an important decision, confirm the applicable rules with the current official source and a qualified professional.</p>
+      <p>All {readEditionStats().chapters} inherited chapters have India-adapted drafts, but automated checks are not professional verification. Some citations or claims may still need correction. For an important decision, confirm the applicable rules with the current official source and a qualified professional.</p>
     </aside>
   </article>
 </BaseLayout>

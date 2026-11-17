@@ -308,7 +308,8 @@ const KOLAM_PATH = (() => {
       });
 
       if (counter) {
-        const grandTotal = Number(document.querySelector('.reading-map-card')?.getAttribute('data-total-tips')) || count;
+        const parsedTotal = Number(document.querySelector('.reading-map-card')?.getAttribute('data-total-tips'));
+        const grandTotal = Number.isFinite(parsedTotal) && parsedTotal > 0 ? parsedTotal : count;
         counter.textContent = `${count} / ${grandTotal} Beads`;
       }
     });
