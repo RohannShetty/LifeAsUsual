@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import guides from '../../../data/en/guides.json';
+import publications from '../../../data/india-publications.json';
 import { resolvePath } from '../../utils/paths';
 ---
 
@@ -23,6 +24,19 @@ import { resolvePath } from '../../utils/paths';
       <p>Start with the official financial cyber-fraud reporting process, not an unverified recovery agent. This guide links to the national helpline, complaint portal and RBI rules.</p>
       <a href={resolvePath('/help/report-financial-cyber-fraud/')} class="journey-link">Open cyber-fraud reporting checklist →</a>
     </section>
+
+    {publications.length > 0 && (
+      <section class="india-journeys" aria-label="Step-by-step help when something has gone wrong">
+        <p class="journey-kicker">When something has gone wrong</p>
+        <ul class="help-list" role="list">
+          {publications.map((entry) => (
+            <li>
+              <a class="journey-link" href={resolvePath(entry.route)}>{entry.lesson.title} →</a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
 
     <div class="guides-grid">
       {guides.map((guide, idx) => (

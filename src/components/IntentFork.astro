@@ -1,0 +1,165 @@
+---
+import { readEditionStats } from '../lib/edition';
+import { resolvePath } from '../utils/paths';
+
+interface ScopeCounts {
+  [scope: string]: number;
+}
+
+interface Props {
+  scopeCounts?: ScopeCounts;
+}
+
+const edition = readEditionStats();
+const { scopeCounts = {} } = Astro.props;
+
+interface Intent {
+  scope: string;
+  label: string;
+  detail: string;
+}
+
+const intents: Intent[] = [
+  { scope: 'Money', label: 'Money', detail: 'Fees, debt, insurance, what to do when cash runs out' },
+  { scope: 'Lifespan', label: 'Health', detail: 'Sleep, food, movement, emergencies' },
+  { scope: 'Time and energy', label: 'Time and energy', detail: 'Focus, habits, the day that gets away' },
+  { scope: 'Personal freedom', label: 'Freedom', detail: 'Rights, contracts, standing your ground' },
+];
+
+function countLabel(scope: string): string {
+  const total = scopeCounts[scope] ?? 0;
+  return total > 0 ? total + ' tips' : 'tips';
+}
+---
+
+<section class="intent-fork" id="find" aria-labelledby="find-heading">
+  <p class="fork-kicker">Start here</p>
+  <h2 class="fork-title" id="find-heading">What do you want back first?</h2>
+  <p class="fork-lead">Pick one. You will get a short, filtered list — not the whole book.</p>
+
+  <ul class="fork-list" role="list">
+    {intents.map((intent) => (
+      <li>
+        <a class="fork-card" href={resolvePath('/explore/?scope=' + encodeURIComponent(intent.scope))}>
+          <span class="fork-card-text">
+            <span class="fork-card-label">{intent.label}</span>
+            <span class="fork-card-detail">{intent.detail}</span>
+          </span>
+          <span class="fork-card-count" aria-hidden="true">{countLabel(intent.scope)}</span>
+        </a>
+      </li>
+    ))}
+    <li>
+      <a class="fork-card fork-card-browse" href={resolvePath('/chapters/')}>
+        <span class="fork-card-text">
+          <span class="fork-card-label">Just browsing</span>
+          <span class="fork-card-detail">All {edition.chapters} chapters, {edition.totalTips} tips, in order</span>
+        </span>
+        <span class="fork-card-count" aria-hidden="true">→</span>
+      </a>
+    </li>
+  </ul>
+</section>
+
+<style>
+  .intent-fork {
+    margin: 1.5rem 0 2rem;
+  }
+
+  .fork-kicker {
+    margin: 0 0 0.4rem;
+    font-family: var(--font-sans);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--color-jade);
+  }
+
+  .fork-title {
+    margin: 0 0 0.35rem;
+    font-family: var(--font-sans);
+    font-size: clamp(1.3rem, 2.6vw, 1.65rem);
+    line-height: 1.2;
+    color: var(--color-mist);
+  }
+
+  .fork-lead {
+    margin: 0 0 0.9rem;
+    color: var(--color-steel);
+    font-size: 0.95rem;
+  }
+
+  .fork-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.55rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  @media (min-width: 720px) {
+    .fork-list {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .fork-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    min-height: 64px;
+    padding: 0.8rem 0.95rem;
+    border: 1px solid var(--glass-border, rgba(147, 163, 201, 0.28));
+    border-radius: var(--radius-card, 14px);
+    background: var(--glass-bg, rgba(236, 239, 247, 0.05));
+    text-decoration: none;
+    transition: border-color var(--dur-fast) var(--ease-out), background var(--dur-fast) var(--ease-out);
+  }
+
+  .fork-card:hover,
+  .fork-card:focus-visible {
+    border-color: var(--color-jade);
+    background: rgba(63, 201, 180, 0.09);
+  }
+
+  .fork-card:focus-visible {
+    outline: 2px solid var(--color-jade);
+    outline-offset: 2px;
+  }
+
+  .fork-card-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    min-width: 0;
+  }
+
+  .fork-card-label {
+    font-family: var(--font-sans);
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--color-mist);
+  }
+
+  .fork-card-detail {
+    font-size: 0.83rem;
+    line-height: 1.35;
+    color: var(--color-steel);
+  }
+
+  .fork-card-count {
+    flex: none;
+    font-family: var(--font-sans);
+    font-size: 0.78rem;
+    font-variant-numeric: tabular-nums;
+    color: var(--color-jade);
+    white-space: nowrap;
+  }
+
+  .fork-card-browse {
+    border-style: dashed;
+  }
+</style>

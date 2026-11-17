@@ -3,7 +3,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ProgressRing from '../components/ProgressRing.astro';
-import QuestionFlow from '../components/QuestionFlow.astro';
+import IntentFork from '../components/IntentFork.astro';
 import Character from '../cast/Character.astro';
 import Bubble from '../cast/Bubble.astro';
 import type { EnglishChapter, EnglishTip } from '../../scripts/ingest-parveen';
@@ -83,25 +83,9 @@ const ARCH_PATH = (() => {
   return d;
 })();
 
-const scopeOptions = ['Lifespan', 'Money', 'Time and energy', 'Personal freedom'];
-const timeOptions = ['Quick', 'A few hours', 'Takes time every day'];
-const willpowerOptions = ['None needed', 'Some', 'A lot'];
-const finderCounts: Record<string, { vh: number; all: number }> = {};
-
-for (const scope of ['all', ...scopeOptions]) {
-  for (const time of ['all', ...timeOptions]) {
-    for (const willpower of ['all', ...willpowerOptions]) {
-      const matches = allTips.filter((tip) =>
-        (scope === 'all' || tip.tags.scope === scope) &&
-        (time === 'all' || tip.tags.time === time) &&
-        (willpower === 'all' || tip.tags.willpower === willpower)
-      );
-      finderCounts[scope + '|' + time + '|' + willpower] = {
-        vh: matches.filter((tip) => tip.valueTier === 'Very high').length,
-        all: matches.length
-      };
-    }
-  }
+const scopeCounts: Record<string, number> = {};
+for (const tip of allTips) {
+  scopeCounts[tip.tags.scope] = (scopeCounts[tip.tags.scope] ?? 0) + 1;
 }
 ---
 
@@ -127,6 +111,8 @@ for (const scope of ['all', ...scopeOptions]) {
       <Bubble speaker="Plus" text="One quick win is enough. Start there." tailDirection="left" autoDismissSeconds={12} />
     </div>
   </header>
+
+  <IntentFork scopeCounts={scopeCounts} />
 
   {dailyTip && (
     <div class="daily-crown">
@@ -186,8 +172,6 @@ for (const scope of ['all', ...scopeOptions]) {
       </div>
     </div>
   </section>
-
-  <QuestionFlow counts={finderCounts} />
 
   <section class="map-teaser paper">
     <div>

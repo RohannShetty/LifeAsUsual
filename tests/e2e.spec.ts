@@ -145,21 +145,22 @@ test.describe('How To Live Better - Comprehensive E2E Tests', () => {
     await expect(page.locator('html')).toHaveAttribute('data-palette', 'monsoon');
   });
 
-  test('8. Guided finder produces a filtered Explore link', async ({ page }) => {
+  test('8. The intent fork opens a filtered Explore list', async ({ page }) => {
     await page.goto('/');
-    const finder = page.locator('#find-your-step');
-    await finder.scrollIntoViewIfNeeded();
 
-    await finder.locator('.finder-option[data-value="Money"]').click();
-    await finder.locator('.finder-option[data-value="Quick"]').click();
-    await finder.locator('.finder-option[data-value="None needed"]').click();
+    const fork = page.locator('#find');
+    await fork.scrollIntoViewIfNeeded();
+    await expect(fork.getByRole('heading', { name: /what do you want back first/i })).toBeVisible();
+    await expect(fork.locator('.fork-card')).toHaveCount(5);
 
-    const result = finder.locator('[data-finder-result]');
-    await expect(result).toBeVisible();
-    const href = await result.locator('[data-result-link]').getAttribute('href');
-    expect(href).toContain('/explore/');
-    expect(href).toContain('scope=Money');
-    expect(href).toContain('time=Quick');
+    const money = fork.locator('a[href*="scope=Money"]');
+    expect(await money.getAttribute('href')).toContain('/explore/?scope=Money');
+
+    await money.click();
+    await expect(page).toHaveURL(/scope=Money/);
+    const results = page.locator('#results-count');
+    await expect(results).toContainText('of 765 tips');
+    await expect(results).not.toHaveText(/^Showing 765 of/);
   });
 
   test('10. INR reference toggle stays controllable on rewritten chapters', async ({ page }) => {

@@ -10,6 +10,8 @@ import { resolvePath } from '../utils/paths';
 import { readEditionStats } from '../lib/edition';
 
 const edition = readEditionStats();
+const gradeCount: Record<string, number> = {};
+const tierCount: Record<string, number> = {};
 const enAllPath = path.resolve('data/en-in/all-chapters.json');
 let allTips: EnglishTip[] = [];
 try {
@@ -19,6 +21,11 @@ try {
   }
 } catch (e) {
   console.warn('Could not load tips for explore:', e);
+}
+
+for (const tip of allTips) {
+  gradeCount[tip.evidenceGrade] = (gradeCount[tip.evidenceGrade] ?? 0) + 1;
+  tierCount[tip.valueTier] = (tierCount[tip.valueTier] ?? 0) + 1;
 }
 ---
 
@@ -30,7 +37,7 @@ try {
     <header class="explore-header">
       <div class="explore-topline">
         <span class="section-kicker">Explore</span>
-        <a class="finder-link" href={resolvePath('/#find-your-step')}>Not sure? Answer 3 questions →</a>
+        <a class="finder-link" href={resolvePath('/#find')}>Not sure where to start? Pick what you want back →</a>
       </div>
       <h1 class="page-title">Find the tip you need.</h1>
       <p class="page-lead">Search all {edition.totalTips} tips, or narrow by what you can afford in money, time and effort.</p>
@@ -135,9 +142,9 @@ try {
         <span class="filter-label">Evidence grade</span>
         <div class="filter-chips" data-filter="evidence">
           <button type="button" class="filter-chip active" data-value="all">All</button>
-          <button type="button" class="filter-chip chip-a" data-value="A">Grade A · 495</button>
-          <button type="button" class="filter-chip chip-b" data-value="B">Grade B · 218</button>
-          <button type="button" class="filter-chip chip-c" data-value="C">Grade C · 52</button>
+          <button type="button" class="filter-chip chip-a" data-value="A">Grade A · {gradeCount.A ?? 0}</button>
+          <button type="button" class="filter-chip chip-b" data-value="B">Grade B · {gradeCount.B ?? 0}</button>
+          <button type="button" class="filter-chip chip-c" data-value="C">Grade C · {gradeCount.C ?? 0}</button>
         </div>
       </div>
 
@@ -145,9 +152,9 @@ try {
         <span class="filter-label">Payoff tier</span>
         <div class="filter-chips" data-filter="tier">
           <button type="button" class="filter-chip active" data-value="all">All</button>
-          <button type="button" class="filter-chip" data-value="Very high">Very high · 122</button>
-          <button type="button" class="filter-chip" data-value="High">High · 344</button>
-          <button type="button" class="filter-chip" data-value="Average">Average · 299</button>
+          <button type="button" class="filter-chip" data-value="Very high">Very high · {tierCount['Very high'] ?? 0}</button>
+          <button type="button" class="filter-chip" data-value="High">High · {tierCount.High ?? 0}</button>
+          <button type="button" class="filter-chip" data-value="Average">Average · {tierCount.Average ?? 0}</button>
         </div>
       </div>
 
