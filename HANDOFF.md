@@ -1,5 +1,9 @@
 # HANDOFF — 2026-10-31 · v2.7.0 "Monsoon Ornaments"
 
+> **Latest release: v2.8.0 (2026-11-17), "One door, memory loop, reading shell"** — see
+> `CHANGELOG.md` [2.8.0] and PR #22 (merged as `6544d16`). The body below describes the v2.7.0 state; its
+> "unpushed" and "open" notes are historical.
+
 Supersedes `HANDOFF.md` dated 2026-10-30. That version was written *before* the three workstreams ran;
 its numbered sections are now history (§1 records what actually happened). Read this file, then
 `AGENTS.md` (hard rules), then `reports/qa.md` line 84 and the v2.7.0 block at lines 58-82.
