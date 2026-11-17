@@ -3,7 +3,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 // This produces an editorial review QUEUE, never a verification approval.
-export function makeInventory(legacyChapters, indiaChapters, manifest) {
+export function makeInventory(legacyChapters, indiaChapters, manifest, editorialDecisions = {}) {
   if (!Array.isArray(legacyChapters) || !Array.isArray(indiaChapters)) throw new Error('Invalid chapter collections');
   const legacyById = new Map();
   const indiaById = new Map();
@@ -27,8 +27,17 @@ export function makeInventory(legacyChapters, indiaChapters, manifest) {
     }
   }
   if (legacyById.size === 0) throw new Error('Legacy corpus is empty');
+  const choices = editorialDecisions || {};
+  const allowed = new Set(['UNASSESSED','KEEP','REWRITE','REPLACE','COMBINE','RETIRE','HOLD']);
+  for (const [key, decision] of Object.entries(choices)) {
+    if (!legacyById.has(key)) throw new Error('Editorial decision for unknown legacy ID: ' + key);
+    if (!decision || !allowed.has(decision.disposition)) throw new Error('Invalid disposition for ' + key);
+    if (decision.disposition !== 'UNASSESSED' && (!decision.rationale || !decision.author))
+      throw new Error('Disposition needs a rationale and decision author: ' + key);
+  }
   const rows = [];
   for (const [id, original] of legacyById) {
+    const decision = choices[id] || {};
     const entry = indiaById.get(id);
     const ch = entry?.chapter || chapters.get(original.chapter.chapter) || original.chapter;
     const tip = entry?.tip;
@@ -64,11 +73,11 @@ export function makeInventory(legacyChapters, indiaChapters, manifest) {
       chapter_human_review_from_manifest: meta.humanReview || '',
       verification_date_from_manifest: meta.verifiedAt || '',
       claim_source_verified_in_this_audit: 'NO',
-      disposition: 'UNASSESSED',
-      india_first_journey: '',
-      replacement_or_redirect_id: '',
-      migration_decision: 'PRESERVE_LEGACY_ID_PENDING_REVIEW',
-      editorial_rationale: '',
+      disposition: decision.disposition || 'UNASSESSED',
+      india_first_journey: decision.india_first_journey || '',
+      replacement_or_redirect_id: decision.replacement_or_redirect_id || '',
+      migration_decision: decision.migration_decision || 'PRESERVE_LEGACY_ID_PENDING_REVIEW',
+      editorial_rationale: decision.rationale || '',
       reviewer_identity: '',
       reviewer_approval: 'NONE'
     });
@@ -121,7 +130,10 @@ export function inventoryFromDirectory(root = process.cwd()) {
   const dir = path.join(root,'data/en-in/chapters');
   const india = fs.readdirSync(dir).filter(f => f.endsWith('.json')).sort().map(f => readJson(path.join(dir,f)));
   const manifest = readJson(path.join(root,'data/en-in/manifest.json'));
-  return makeInventory(src,india,manifest);
+  const decisionFile = readJson(path.join(root,'reports/india-first-inventory/editorial-decisions.json'));
+  if (decisionFile.schema !== 'india-first-editorial-decisions/v1' || !decisionFile.decisions || Array.isArray(decisionFile.decisions))
+    throw new Error('Invalid editorial decision file');
+  return makeInventory(src,india,manifest,decisionFile.decisions);
 }
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
   const report = inventoryFromDirectory();
