@@ -26,13 +26,13 @@
     "test:india": "playwright test tests/india-rewrite.spec.ts"
   },
   "dependencies": {
-    "astro": "7.4.4",
     "zod": "4.6.7"
   },
   "devDependencies": {
     "@astrojs/check": "0.9.12",
     "@playwright/test": "^1.64.1",
     "@types/node": "^22.10.0",
+    "astro": "7.4.12",
     "pagefind": "^1.5.2",
     "tsx": "^4.19.2",
     "typescript": "^5.7.2"
