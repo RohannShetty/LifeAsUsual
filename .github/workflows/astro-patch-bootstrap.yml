@@ -1,0 +1,39 @@
+name: One-time Astro security patch
+on:
+  push:
+    branches:
+      - feat/india-first-editorial-audit-20261117
+    paths:
+      - .github/workflows/astro-patch-bootstrap.yml
+permissions:
+  contents: write
+jobs:
+  patch:
+    if: github.repository == 'RohannShetty/LifeAsUsual'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install patched Astro without a major-version upgrade
+        run: npm install --save-exact astro@7.4.12
+      - name: Fail if production high severity advisories remain
+        run: npm audit --omit=dev --audit-level=high
+      - name: Verify Astro build and typecheck
+        run: |
+          npm run check
+          npm run build
+      - name: Test editorial audit
+        run: |
+          node --test tests/india-first-audit.test.mjs
+          node scripts/india-first-audit.mjs --check
+      - name: Commit reviewed dependency manifest and lockfile
+        run: |
+          git add package.json package-lock.json
+          if ! git diff --cached --quiet; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git commit -m "fix(security): patch Astro and transitive advisories"
+            git push origin HEAD:feat/india-first-editorial-audit-20261117
+          fi
