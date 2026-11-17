@@ -4,7 +4,9 @@ test.describe('India-first financial cyber-fraud reporting guide', () => {
   test('has visible draft status, official reporting routes and realistic limitations', async ({ page }) => {
     await page.goto('/help/report-financial-cyber-fraud/');
     await expect(page.getByRole('heading', { name: /Money lost to a UPI or online scam/ })).toBeVisible();
-    await expect(page.getByText('Editorial draft, not professional advice.')).toBeVisible();
+    await expect(page.getByText('Editorial guidance, not professional advice.')).toBeVisible();
+    await expect(page.getByText(/checked against the cited official sources by Rohan Shetty/)).toBeVisible();
+    await expect(page.getByText(/reports\/india-fraud-guide-human-review\.md/)).toBeVisible();
     await expect(page.locator('a[href="tel:1930"]')).toBeVisible();
     await expect(page.locator('.urgent a[href="https://cybercrime.gov.in/"]')).toHaveCount(1);
     await expect(page.locator('.sources a[href="https://cybercrime.gov.in/"]')).toHaveCount(1);
@@ -25,7 +27,7 @@ test.describe('India-first financial cyber-fraud reporting guide', () => {
 
     const links = await page.locator('.sources a').count();
     expect(links).toBe(6);
-    await expect(page.getByText(/Claim-level source mapping is recorded/)).toBeVisible();
+    await expect(page.getByText(/Claim-level records are in/)).toBeVisible();
     await expect(page.locator('a[href*="Crime_AuthoLogin.aspx"]')).toHaveCount(0);
   });
 
