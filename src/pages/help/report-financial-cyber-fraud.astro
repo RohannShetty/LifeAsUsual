@@ -2,7 +2,6 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { resolvePath } from '../../utils/paths';
 
-const draftUpdatedAt = '17 November 2026';
 const actions = [
   { id: 'bank', title: 'Contact your bank or payment provider immediately', details: 'Use the official bank app, number on your card, or the bank’s verified website. Report the transaction as suspected fraud. Ask for an acknowledgement or complaint number and whether any protective action is available. Do not trust a support number supplied in a suspicious message.' },
   { id: 'call', title: 'Call the national cyber-fraud reporting helpline: 1930', details: 'The National Cyber Crime Reporting Portal states that 1930 is the national helpline for reporting cyber financial fraud and that it runs in all States and Union Territories. Keep your transaction information ready. Reporting quickly may help authorities and banks respond, but recovery is not guaranteed.' },
@@ -12,7 +11,7 @@ const actions = [
 ];
 ---
 
-<BaseLayout title="I lost money to a UPI or online scam: What to do in India" description="An India-first draft checklist for reporting suspected cyber financial fraud: contact the bank, call 1930, use cybercrime.gov.in and preserve evidence.">
+<BaseLayout title="I lost money to a UPI or online scam: What to do in India" description="An India-first guide to reporting suspected cyber financial fraud in India: contact the bank, call 1930, use cybercrime.gov.in and preserve evidence.">
   <article class="journey">
     <nav class="breadcrumb" aria-label="Breadcrumb">
       <a href={resolvePath('/guides/')}>All guides</a>
@@ -25,7 +24,7 @@ const actions = [
       <h1>Money lost to a UPI or online scam?</h1>
       <p class="lede">Act quickly. Contact your bank, report the incident through India's official cybercrime channels, and keep your evidence. These steps can help you report a loss, but no guide can promise that money will be recovered.</p>
       <div class="status" role="note">
-        <strong>Editorial guidance, not professional advice.</strong> Updated {draftUpdatedAt}. Every factual claim was checked against the cited official sources by Rohan Shetty on 17 November 2026. That check covers what the sources say, not your individual case. Claim-level records are in <code>reports/india-fraud-guide-source-verification.md</code> and <code>reports/india-fraud-guide-human-review.md</code>. State-level police procedures and individual bank decisions may differ.
+        <strong>Editorial guidance, not professional advice.</strong> Sources checked 16 November 2026; page reviewed on 17 November 2026 by Rohan Shetty, the site owner. That review is editorial self-review — a careful reading of the cited official documents — not independent or professional review, and it covers what those documents say, not your individual case. Claim-level records are in <code>reports/india-fraud-guide-source-verification.md</code> and <code>reports/india-fraud-guide-human-review.md</code>. State-level police procedures and individual bank decisions may differ.
       </div>
     </header>
 
@@ -68,11 +67,17 @@ const actions = [
         <li><a href="https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=11040" target="_blank" rel="noopener noreferrer">Reserve Bank of India, Customer Protection – Limiting Liability of Customers in Unauthorised Electronic Banking Transactions (6 July 2017)</a>, paragraphs 6–10: zero and limited liability, the ₹5,000/₹10,000/₹25,000 caps, shadow reversal within 10 working days, and resolution within 90 days.</li>
         <li><a href="https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63011" target="_blank" rel="noopener noreferrer">RBI press release, 24 June 2026</a> and the <a href="https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=13543" target="_blank" rel="noopener noreferrer">amended Responsible Business Conduct directions</a>: “fraudulent electronic banking transaction” includes a payment approved under coercion or duress, effective for transactions on or after 1 January 2027.</li>
       </ul>
-      <p class="note">The former “complainant checklist” reference pointed to a portal login route, not a verified public checklist; it was removed pending an exact accessible source. The cybercrime portal and bank are official destinations. This project is independent and is not affiliated with the Government of India, RBI or any bank.</p>
+      <p class="note">The cybercrime portal and your bank are the official destinations. This project is independent and is not affiliated with the Government of India, RBI, NCRP or any bank.</p>
     </section>
 
     <footer>
       <a href={resolvePath('/guides/')}>Back to all practical guides</a>
+      <p class="attribution">
+        India-first guide for this edition. The wider site is based on
+        <a href="https://github.com/eternity4719/HowToLiveBetter" target="_blank" rel="noopener noreferrer">How To Live Better by eternity4719</a>,
+        licensed <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a>.
+        Translated into English and reformatted for the web. Changes were made. Not endorsed by the author.
+      </p>
     </footer>
   </article>
 </BaseLayout>
@@ -104,6 +109,7 @@ const actions = [
   .clarification { background: var(--theme-card); }
   .clarification h2 { margin-top: 0; }
   footer { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--theme-hairline); }
+  .attribution { margin-top: .75rem; color: var(--theme-text-muted); font-size: .86rem; line-height: 1.55; }
   @media (max-width: 430px) {
     .journey { padding-inline: .3rem; }
     .step-head { gap: .65rem; }

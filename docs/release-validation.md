@@ -18,7 +18,7 @@ Operational runbook for the India-first LifeAsUsual release. It records the chec
 | Jurisdiction registry | `npm run verify:jurisdictions` | Missing State/UT coverage states |
 | Types | `npx astro check` | Type and template errors |
 | Internal links | `npm run check:links` | Broken navigation |
-| Terminology | `npm run scan:terms` | Banned wording and non-English text in shipped pages |
+| Terminology | `npm run scan:terms -- --final` | Banned wording and non-English text in every shipped page, including `/help` |
 | Behaviour | `npx playwright test` | Regressions across 360x800, 390x844, 768x1024, 1440x900 |
 
 ## Release sequence
@@ -28,11 +28,11 @@ npm ci
 npx astro check              # expect: 0 errors, 0 warnings, hints only
 npm run build                # runs every prebuild gate, then the static build
 npm run check:links          # expect: PASS, every internal link resolves
-npm run scan:terms           # expect: PASS, no banned terms found
+npm run scan:terms -- --final # expect: PASS, no banned terms found across all 53 pages
 npx playwright test          # expect: all tests passed
 ```
 
-Verified on master `e198f5f` on 16 November 2026: `astro check` 0/0/5, build 52 pages, link check 2,234 links, term scan 37 pages, Playwright 332 passed.
+Verified on master `fb0b39b` on 17 November 2026: `astro check` 0 errors, build 53 pages, link check 2,256 links, term scan 53 pages with `--final`, Playwright 332 passed.
 
 ### Playwright serves `dist`, it does not build it
 
@@ -40,12 +40,14 @@ Verified on master `e198f5f` on 16 November 2026: `astro check` 0/0/5, build 52 
 
 ## Publication gate in detail
 
-`scripts/verify-published-lessons.ts` runs from `prebuild`, so a failing gate fails the Pages deploy. It scans `src/pages/help/**/*.astro`, rejects dynamic routes, and requires one record per route in `data/india-publications.json`.
+`scripts/verify-published-lessons.ts` runs from `prebuild`, so a failing gate fails the Pages deploy. It scans `src/pages/help/**` for known page extensions, rejects dynamic routes and non-`.astro` page formats, validates the whole registry against a Zod schema (`src/lib/publication-registry.ts`), and requires one record per route in `data/india-publications.json`.
 
 `assessLesson` (in `src/lib/content-trust.ts`) then decides publishability:
 
-- High and critical risk require `reviewStatus: "human-reviewed"` with a documented `humanApproval` (reviewer, role, date, reviewed revision).
+- High and critical risk require `reviewStatus: "human-reviewed"` with a documented `humanApproval` `{ name, qualification, scope, approvedAt }`. The approval is **not** bound to a revision; only the verification event carries `lessonRevision`.
 - Evidence needs an exact locator of at least four characters, a date, and a matching verification event for the revision.
+- Every verification `reportPath` must be an existing, non-empty file inside the repo that mentions the reviewed revision.
+- The registry is schema-validated at runtime, so an enum typo (for example `"High"` for `"high"`) fails closed instead of skipping the high-risk branch.
 - `checkedAt`, `reviewedAt` and `approvedAt` must not be in the future.
 - Duplicate normalized routes fail closed.
 
@@ -58,7 +60,7 @@ India-first publication gate failed closed:
 
 **Do not** satisfy this by inventing a review, marking high-risk content as low risk, or deleting the route check. Publish the route only after the documented review exists; until then the page stays off `master`.
 
-Coverage limit: the gate only sees `/help` routes. On master there are none, so the gate currently passes vacuously. Extending it to every India-original route is still open work.
+Coverage limit: the gate only sees `/help` routes, and it only understands `.astro` pages (another format under that tree fails closed rather than being ignored). It does not yet cover India-original routes outside `/help`, such as anything added under `/guides/`. Extending it to every India-original route is still open work.
 
 ## Deployment verification
 
@@ -74,7 +76,7 @@ for p in "" chapters/ guides/ about/ india/; do
 done
 ```
 
-Expected on 16 November 2026: deployment `e198f5f`, Pages `built`, routes 200. Unpublished draft routes must return 404 — `/help/report-financial-cyber-fraud/` returning 200 would mean the publication gate was bypassed.
+Expected after 17 November 2026: deployment `fb0b39b`, Pages `built`, routes 200, and `/help/report-financial-cyber-fraud/` 200 because it is a registered, reviewed route. A `/help/` route returning 404 while listed in `data/india-publications.json` means the registry and the tree disagree; a route returning 200 while absent from the registry cannot happen without the gate being bypassed.
 
 Check the rendered title matches the India-first identity: `curl -s $BASE/ | grep -o '<title>[^<]*'`.
 
@@ -92,3 +94,5 @@ Check the rendered title matches the India-first identity: `curl -s $BASE/ | gre
 | 2026-11-16 | `e198f5f` | Playwright matrix | 332 passed |
 | 2026-11-16 | `e198f5f` | Pages deployment | built, deployment SHA matches master |
 | 2026-11-16 | `ad2c046` | PR #15 guide + spec | astro check clean; 12 passed; gate fails closed as designed |
+| 2026-11-17 | `fb0b39b` | guide published with owner review | gate passed for 1 route; 53 pages; 2,256 links; 37 pages term scan; Playwright 332 passed |
+| 2026-11-17 | `fb0b39b` | registry runtime validation added | schema + cross-reference checks; gate passes real registry |

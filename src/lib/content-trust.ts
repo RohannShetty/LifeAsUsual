@@ -96,8 +96,13 @@ function validDate(date: string | undefined): boolean {
   return !Number.isNaN(value.valueOf()) && value.toISOString().slice(0, 10) === date;
 }
 
+/** Today in India, so a review dated today in IST is not rejected as future-dated. */
+function todayInIndia(): string {
+  return new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Kolkata' }).format(new Date());
+}
+
 function validPastDate(date: string | undefined): boolean {
-  return validDate(date) && date! <= new Date().toISOString().slice(0, 10);
+  return validDate(date) && date! <= todayInIndia();
 }
 
 function validSourceUrl(value: string): boolean {
@@ -147,6 +152,7 @@ export function assessLesson(lesson: CanonicalLesson): TrustAssessment {
     ids.add(claim.id);
     if (!claim.text.trim()) add('Empty claim text: ' + claim.id);
     if (!claim.jurisdiction.trim()) add('Missing claim jurisdiction: ' + claim.id);
+    const claimJurisdiction = claim.jurisdiction.trim().toUpperCase();
     if (claim.sourceIds.length === 0) add('Claim has no source: ' + claim.id);
     if (new Set(claim.sourceIds).size !== claim.sourceIds.length) add('Duplicate claim source IDs: ' + claim.id);
 
@@ -158,20 +164,21 @@ export function assessLesson(lesson: CanonicalLesson): TrustAssessment {
         continue;
       }
       if (source.assessment === 'contradicts') add('Contradicting source for claim ' + claim.id);
+      const sourceJurisdiction = source.jurisdiction.trim().toUpperCase();
       if (source.assessment === 'supports' && source.locator?.trim().length >= 4 &&
           (!(claim.risk === 'high' || claim.risk === 'critical') ||
-           !claim.jurisdiction.startsWith('IN') ||
-           source.jurisdiction === claim.jurisdiction || source.jurisdiction === 'IN')) supported = true;
+           !claimJurisdiction.startsWith('IN') ||
+           sourceJurisdiction === claimJurisdiction || sourceJurisdiction === 'IN')) supported = true;
       // International studies can inform general advice but do not establish
       // that a jurisdiction-specific law or percentage applies in India.
-      if (claim.jurisdiction.startsWith('IN') &&
-          source.jurisdiction !== claim.jurisdiction &&
-          source.jurisdiction !== 'IN') {
+      if (claimJurisdiction.startsWith('IN') &&
+          sourceJurisdiction !== claimJurisdiction &&
+          sourceJurisdiction !== 'IN') {
         if ((claim.risk === 'high' || claim.risk === 'critical') && source.assessment === 'supports') {
           // Foreign studies and another state's rules cannot establish a
           // high-stakes India-specific claim. Require a matching India source.
           warnings.push('Foreign or other-state source is not India-specific evidence for ' + claim.id + ': ' + sourceId);
-        } else if (source.jurisdiction !== 'international') {
+        } else if (sourceJurisdiction !== 'INTERNATIONAL') {
           warnings.push('Check jurisdiction mismatch for claim ' + claim.id + ': ' + sourceId);
         }
       }

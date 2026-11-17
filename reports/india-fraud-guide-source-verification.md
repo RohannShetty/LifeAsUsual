@@ -2,8 +2,8 @@
 
 **Subject:** `src/pages/help/report-financial-cyber-fraud.astro` (PR #15, branch `feat/india-fraud-journey`)
 **Verification date:** 16 November 2026 (IST)
-**Verified by:** AI agent source check of primary/official pages. This is **not** qualified legal, financial, or victim-support review, and it does not satisfy the repository's human-review requirement.
-**Publication status:** **Unpublished / draft.** The route is intentionally absent from `data/india-publications.json`, so `npm run build` fails closed (see "Publication gate" below).
+**Verified by:** AI-agent source check of the primary/official pages on 16 November 2026, then an owner review of the same sources and the built page by Rohan Shetty on 17 November 2026 (`reports/india-fraud-guide-human-review.md`). Neither step is qualified legal, financial, or victim-support review, and the owner review is **self-review by the site owner**, not independent review.
+**Publication status:** published 17 November 2026 after the owner review. The AI source check alone would not have met the repository's human-review requirement; that requirement is met only in the narrow sense described in the human-review record, and an independent professional review remains outstanding.
 
 ## Method
 
@@ -30,7 +30,7 @@ Every cited page was fetched on 16 November 2026 and the quoted passage was read
 3. The 2017 circular was linked as a PDF that this environment could download (100,028 bytes, valid PDF) but not text-extract, because the file uses CID-encoded fonts. Replaced with RBI's official HTML notification page, whose full text was read and quoted above.
 4. The draft predated a material change in the governing framework: the amendment effective 1 January 2027. A paragraph and two sources were added so readers are not given 2017-only guidance after the change takes effect.
 
-## Publication gate (why this cannot merge yet)
+## Publication gate (how this was gated)
 
 `scripts/verify-published-lessons.ts` runs in `prebuild`. It requires a record in `data/india-publications.json` for every route under `src/pages/help/`. `assessLesson` in `src/lib/content-trust.ts` refuses to publish high- or critical-risk content unless `reviewStatus` is `human-reviewed` with a documented `humanApproval`. This guide is financial-harm content and is treated as high risk.
 
@@ -40,18 +40,20 @@ Consequences, all verified on this branch:
   `India-first publication gate failed closed:` / `- No canonical trust record for India-first route /help/report-financial-cyber-fraud/`
 - With a record that is not human-reviewed, the build fails the high-risk review requirement.
 
-Both behaviours are intended fail-closed behaviour. Merging this branch in either state would break the production build, and weakening the gate to accept an AI-checked record would violate the repository's safety rule.
+Both behaviours are intended fail-closed behaviour. The page was published only after a registry record and a named, dated owner approval existed; the gate was never weakened to accept an AI-only record.
 
 ## Remaining blockers
 
-1. **Qualified human review** of C1–C8 by someone competent in Indian consumer-protection and cyber-fraud practice, recorded with a name, role, date, and the exact revisions reviewed. Without it this page must stay unpublished.
-2. **A registered publication record** for `/help/report-financial-cyber-fraud` that references that review.
+1. **Independent professional review** of C1–C8 by someone competent in Indian consumer-protection and cyber-fraud practice. The published page carries owner self-review only, and says so; that is weaker than professional sign-off and is recorded as such.
+2. ~~A registered publication record~~ — done on 17 November 2026 (`data/india-publications.json`).
 3. Optional: a screenshot or archived copy of the cybercrime.gov.in complaint flow, so C3 can be verified rather than described as unverified.
+4. Optional: bind the review to a content hash, so editing the page without a new review fails closed.
 
 ## Re-verification
 
 ```bash
-npm run build          # expected to fail while the /help route is unregistered
+npm run verify:publication   # must pass for the single registered /help route
+npm run build
 npx astro check        # must stay at 0 errors
 npx playwright test tests/india-fraud-journey.spec.ts
 ```
