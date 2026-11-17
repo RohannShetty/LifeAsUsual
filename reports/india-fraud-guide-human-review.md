@@ -12,7 +12,9 @@ Lesson: `india-fraud-report-v1`, revision `2026-11-17`
 
 ## Qualification, stated plainly
 
-The reviewer read the cited primary sources end to end and compared them with the page text. The reviewer is **not** a licensed financial adviser or lawyer, and this review is **not** a professional legal opinion. The page therefore continues to describe itself as editorial guidance, not professional advice. That limit is deliberate: a personal reading of official documents is a real check of what those documents say, and it is not the same thing as qualified professional sign-off, so we do not claim the latter.
+The reviewer read the cited primary sources end to end and compared them with the page text. The reviewer is **not** a licensed financial adviser or lawyer, and this review is **not** a professional legal opinion.
+
+This is **self-review by the site owner**, who is also the person publishing the page. It is not independent review, and the repository does not describe it as qualified professional sign-off. It is recorded because the owner accepted responsibility for the page with that limitation stated openly on the page itself. The page therefore continues to describe itself as editorial guidance, not professional advice. That limit is deliberate: a personal reading of official documents is a real check of what those documents say, and it is not the same thing as qualified professional sign-off, so we do not claim the latter.
 
 ## Claim-level outcome
 

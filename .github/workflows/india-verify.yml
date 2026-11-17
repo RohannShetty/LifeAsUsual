@@ -46,8 +46,8 @@ jobs:
       - name: Build the site
         run: npm run build
 
-      - name: Scan built HTML for source-edition terms
-        run: npm run scan:terms
+      - name: Scan every built page for source-edition terms
+        run: npm run scan:terms -- --final
 
       - name: Install Playwright browsers
         run: npx playwright install --with-deps chromium
