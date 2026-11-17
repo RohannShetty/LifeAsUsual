@@ -6,6 +6,30 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ---
 
+## [2.8.1] - 2026-11-17
+
+India-first editorial foundation. This release makes the complete inherited edition auditable before
+the approved India-first content rebuild. **There are no public tip rewrites, redirects or navigation
+changes in this release.** Passing checks do not establish the accuracy of any individual claim.
+
+### Added
+- A deterministic editorial inventory generator covering all 765 inherited IDs across 34 chapters,
+  with current permalinks, sources, existing evidence metadata, automated triage flags and explicit
+  UNASSESSED dispositions. 562 tips have screening flags, not 562 confirmed defects.
+- A separate, initially empty editorial decision ledger. Any KEEP/REWRITE/REPLACE/COMBINE/RETIRE/HOLD
+  decision requires an author and rationale; it does not grant human professional sign-off.
+- An India-first reader journey and information architecture blueprint, with the old IDs, fragments,
+  bookmarks and reading-progress compatibility as constraints.
+- Automated regression tests for duplicate/malformed IDs, absent edition tips, editor decisions,
+  review-label separation and reproducible report generation. Read-only GitHub Actions checks the baseline.
+
+### Not yet shipped
+- Reviewed Indian replacement content, Chapter 7 job-loss flow, state/language coverage improvements,
+  new reader navigation, redirect/migration implementation or full high-risk publication coverage.
+  These remain tracked under issues #23, #5–#8 and epic #4.
+
+---
+
 ## [2.8.0] - 2026-11-17
 
 One door, memory loop, reading shell: the home page asks one question instead of offering four competing
