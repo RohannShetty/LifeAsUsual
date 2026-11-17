@@ -6,6 +6,85 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ---
 
+## [2.8.0] - 2026-11-17
+
+One door, memory loop, reading shell: the home page asks one question instead of offering four competing
+invitations, tips already read come back for a spaced memory check, and every page declares a page type
+that the reading shell styles. Edition totals are read from the edition data at build time rather than
+typed into pages. Plan: `docs/superpowers/plans/2026-11-17-one-door-memory-loop.md`. Contract:
+`docs/design-contract.md`.
+
+### Added
+- **An intent fork as the home page's only door** (`src/components/IntentFork.astro`, section `#find`):
+  four scope answers — Money, Health (`scope=Lifespan`), Time and energy, Personal freedom — each a link
+  to `/explore/?scope=…` carrying its own tip count, plus "Just browsing" to `/chapters/` with all 34
+  chapters and 765 tips. The cards are 64 px minimum touch targets with a jade focus ring, one column
+  below 720 px.
+- **A spaced memory check** (`src/components/RecallDeck.astro`, `src/scripts/recall.ts`): a pool of the
+  122 Very-high tips, embedded as JSON, checked at 3, 7, 21 and 60 days after the tip was read. The
+  intervals live in the existing `htlb_ledger_v1` state as `readAt` and `recall` maps, so nothing new is
+  stored and nothing leaves the device. At most three tips are due per day; "I remembered" advances a
+  stage, "Not yet" returns the tip in three days. The home page shows nothing when nothing is due;
+  `/progress/` shows the next due date and how many tips remain.
+- **A page-type reading shell** (`src/lib/page-type.ts`, `src/styles/editorial.css`): `<html
+  data-page-type>` is `home`, `chapter`, `collection` or `reference`, stripped of the deploy base path.
+  Chapter pages get serif titles, a 66ch tips stream and print rules that drop the rail, cast,
+  celebration and pagination.
+- **`src/lib/edition.ts`** as the single source of published totals: `readEditionStats()` returns
+  `{ totalTips: 765, chapters: 34, veryHigh: 122 }` from `data/en-in/all-chapters.json` and feeds home,
+  explore, progress, the chapter index and template, India, About, Start, `ProgressRing` and
+  `ReadingMap` (passed through a `data-total-tips` attribute).
+- **`docs/design-contract.md`**: one door, memory loop, reading shell and derived-totals rules, plus the
+  release gate list.
+
+### Changed
+- **`/start/` and `/india/` left the navigation** (`src/components/LeftRail.astro` filters them out of
+  `navItems`) but both routes still publish. `/start/` keeps the evidence-grade and ROI explainer that
+  readers still need; its India crosswalk link now points to `/about/`.
+- **`/guides/` lists the help routes** from `data/india-publications.json` under "When something has gone
+  wrong", so the published fraud guide is reachable from the guides index as well as its own URL.
+- **Counts are derived, not typed**: `scripts/verify-india.ts` compares the manifest and final-mode counts
+  against the Chinese source corpus instead of the literals 765 and 34, and `scripts/verify.ts` derives its
+  expected chapter and tip counts. `scripts/parse.ts` keeps its literals because it validates the
+  immutable Chinese source corpus, not the published edition.
+- **QuestionFlow left the home page** and its component was deleted; the fork answers the same question
+  in one card row.
+
+### Fixed
+- **Page types were inert in production.** The shell matched the raw pathname, so with the deploy base
+  path `/LifeAsUsual/` every page classified as `reference`. `pageTypeFor()` strips the base; verified with
+  `BASE=/LifeAsUsual/ npm run build` on home, chapter, collection and reference pages.
+- **The India heading printed literal braces**, "All {readEditionStats().chapters} chapters have an India
+  rewrite", from a single-quoted string; it now interpolates 34.
+- **Answered memory rows kept live buttons.** `.recall-actions { display: flex }` beat `[hidden]`, so a
+  second press advanced the spaced stage again; the actions now hide on answer and `recordRecall` refuses
+  a tip that is not yet due.
+- **The deck's copy now matches its behaviour.** "Not yet" says "It comes back in 3 days." rather than
+  "tomorrow" (stage 0 is three days); it no longer claims the day's check is finished while more tips are
+  due; a legacy read tip with no timestamp is due at once instead of "tomorrow"; and the lead says the
+  pool is the Very-high tips that were read.
+- **Smaller correctness fixes**: `aria-controls` and a focus move on reveal, sanitised numeric maps on
+  import, `unmarkTipRead` clears `readAt`/`recall`, zero-total guards in `ProgressRing` and
+  `ReadingMap`, and typed 34 and 122 in About, Start, the chapter index and India replaced with
+  `edition.chapters` and `edition.veryHigh`.
+
+### Verified
+- `npm run check`: 0 errors (5 pre-existing hints). `npm run build`: 53 pages.
+- `npm run scan:terms`: 37 pages, PASS. `npm run check:links`: 2,157 internal links, PASS.
+- `npm run verify:india`: PASS, 34 chapters and 765 rewritten tips. `npm run verify:publication`: 1 help
+  route. `npm run verify:jurisdictions`: 28 states and 8 union territories.
+- Playwright: **396 passed** (4.0 min) at 360x800, 390x844, 768x1024 and 1440x900, including new checks
+  for the filtered fork, the reveal/answer flow, a one-day-old tip staying hidden, a legacy ledger being
+  due at once, and page types under both `/` and `/LifeAsUsual/`.
+- Home page client JavaScript: 10,905 B gzip against the 60 KB budget.
+- Merged as `6544d16`; "India edition verification" and "Deploy to GitHub Pages" both green; live at
+  <https://rohannshetty.github.io/LifeAsUsual/> with `data-page-type` present, the fork on the home page,
+  and the India heading reading 34.
+- **Still open:** a human pass on the fork framing and the recall copy on a real phone, and a Lighthouse
+  mobile run for this release (no Lighthouse toolchain is installed here).
+
+---
+
 ## [2.7.0] - 2026-10-30
 
 Monsoon ornaments: one brass hairline family for the reading map, the home daily panel and the chapter
