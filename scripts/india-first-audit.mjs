@@ -3,6 +3,24 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 // This produces an editorial review QUEUE, never a verification approval.
+// A candidate is a queue proposal, never a decision. It exists so the editor
+// has a starting point per tip; only editorial-decisions.json can record a
+// disposition, and the audit refuses one without a rationale and an author.
+export function dispositionCandidate({ present, risk, signals, urls, disputed }) {
+  if (!present) return { disposition: 'REPLACE', rule: 'missing-from-edition',
+    rationale: 'Not present in the current India edition; decide a replacement or an explicit retirement before publication.' };
+  if (disputed) return { disposition: 'REWRITE', rule: 'existing-uncertainty',
+    rationale: 'The edition already marks this tip disputed or still being verified; rewrite only with corrected evidence.' };
+  if (risk.length > 0) return { disposition: 'HOLD', rule: 'high-consequence-claim',
+    rationale: 'Carries ' + risk.join(', ') + ' advice; needs a named reviewer and a passage-level source check before it is presented as India guidance.' };
+  if (signals.includes('foreign-specific-reference') || signals.includes('absence-or-comparison-framing')) return { disposition: 'REWRITE', rule: 'source-specific-framing',
+    rationale: 'Refers to source-edition systems or frames India by absence; rewrite around the Indian equivalent or state the gap.' };
+  if (urls.length === 0) return { disposition: 'REWRITE', rule: 'no-source-url',
+    rationale: 'The tip carries no source URL; add a primary source or the tip cannot be assessed.' };
+  return { disposition: 'KEEP', rule: 'low-risk-evergreen',
+    rationale: 'Low-consequence advice, present in the edition and carrying at least one source; keep the text pending editor confirmation.' };
+}
+
 export function makeInventory(legacyChapters, indiaChapters, manifest, editorialDecisions = {}) {
   if (!Array.isArray(legacyChapters) || !Array.isArray(indiaChapters)) throw new Error('Invalid chapter collections');
   const legacyById = new Map();
@@ -55,6 +73,7 @@ export function makeInventory(legacyChapters, indiaChapters, manifest, editorial
     if (/\b(?:law|legal|court|police|tenant|landlord|property|arrest|complaint|rights|statute|labour|wages|work injury)\b/i.test(prose)) risk.push('legal-rights');
     if (/\b(?:money|bank|fraud|loan|insurance|investment|tax|benefits?|pension|EPFO|ESIC|salary|payment|cash|PF)\b/i.test(prose)) risk.push('financial-benefits');
     const urls = [...new Set((tip?.sources || '').match(/https?:\/\/[^\s<>;,)\]]+/g) || [])];
+    const candidate = dispositionCandidate({ present: Boolean(entry), risk, signals, urls, disputed: Boolean(tip?.disputed || tip?.stillVerifying) });
     rows.push({
       legacy_id: id,
       legacy_chapter: original.chapter.chapter,
@@ -79,7 +98,10 @@ export function makeInventory(legacyChapters, indiaChapters, manifest, editorial
       migration_decision: decision.migration_decision || 'PRESERVE_LEGACY_ID_PENDING_REVIEW',
       editorial_rationale: decision.rationale || '',
       reviewer_identity: '',
-      reviewer_approval: 'NONE'
+      reviewer_approval: 'NONE',
+      disposition_candidate: candidate.disposition,
+      candidate_rule: candidate.rule,
+      candidate_rationale: candidate.rationale
     });
   }
   const extras = [...indiaById.keys()].filter(id => !legacyById.has(id));
@@ -104,7 +126,8 @@ const csvColumns = ['legacy_id','legacy_chapter','legacy_title','current_title',
   'scope','audience','tier_from_manifest','risk_triage_signals','potential_content_gaps','source_urls',
   'evidence_grade_from_edition','ai_review_status_from_edition','chapter_human_review_from_manifest',
   'verification_date_from_manifest','claim_source_verified_in_this_audit','disposition','india_first_journey',
-  'replacement_or_redirect_id','migration_decision','editorial_rationale','reviewer_identity','reviewer_approval'];
+  'replacement_or_redirect_id','migration_decision','editorial_rationale','reviewer_identity','reviewer_approval',
+  'disposition_candidate','candidate_rule','candidate_rationale'];
 export function asCsv(report) {
   const q = value => { const s = String(value ?? ''); return /[",\r\n]/.test(s) ? '"' + s.replaceAll('"', '""') + '"' : s; };
   return [csvColumns.join(','), ...report.rows.map(row => csvColumns.map(k => q(row[k])).join(','))].join('\n') + '\n';

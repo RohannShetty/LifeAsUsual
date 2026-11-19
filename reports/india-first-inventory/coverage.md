@@ -61,6 +61,19 @@ Queue order: 1. health and safety (50 tips); 2. health and safety (48 tips); 3. 
 | RETIRE | 0 |
 | HOLD | 0 |
 
+## Disposition candidates (proposals, not decisions)
+
+Every candidate comes from a named rule in `scripts/india-first-audit.mjs` and none of them is a decision. A candidate becomes a disposition only when editorial-decisions.json records it with a rationale and an author.
+
+| Candidate | Tips |
+| --- | --- |
+| KEEP | 69 |
+| REWRITE | 90 |
+| REPLACE | 0 |
+| COMBINE | 0 |
+| RETIRE | 0 |
+| HOLD | 606 |
+
 ## Audit gaps to resolve in P1
 
 - Chapters with at least one tip carrying no source URL: **0** (rows appear as empty `source_urls` in the inventory).

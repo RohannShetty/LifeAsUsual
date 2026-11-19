@@ -22,7 +22,7 @@ const ALLOWED_DISPOSITIONS = new Set(["UNASSESSED", "KEEP", "REWRITE", "REPLACE"
 const SEVERITY = ["health-safety", "legal-rights", "financial-benefits"];
 const BT = String.fromCharCode(96);
 
-function parseCsv(text) {
+function parseCsv(text: string): string[][] {
   const rows = [];
   let row = [];
   let cell = "";
@@ -48,11 +48,18 @@ function parseCsv(text) {
   return rows;
 }
 
-const errors = [];
-const rows = parseCsv(fs.readFileSync(inventoryPath, "utf8"));
+interface InventoryRow { [key: string]: string }
+interface ChapterCoverage {
+  tips: number; present: number; absent: number;
+  grades: Record<string, number>; risk: Record<string, number>;
+  unassessed: number; decisions: number; noSource: number; route: string;
+}
+
+const errors: string[] = [];
+const rows: string[][] = parseCsv(fs.readFileSync(inventoryPath, "utf8"));
 const header = rows[0] ?? [];
-const data = rows.slice(1).map((cells) => {
-  const record = {};
+const data: InventoryRow[] = rows.slice(1).map((cells: string[]): InventoryRow => {
+  const record: InventoryRow = {};
   header.forEach((key, index) => { record[key] = cells[index] ?? ""; });
   return record;
 });
@@ -60,7 +67,7 @@ const data = rows.slice(1).map((cells) => {
 const required = ["legacy_id", "legacy_chapter", "current_route", "current_presence", "evidence_grade_from_edition", "risk_triage_signals", "disposition", "reviewer_approval"];
 for (const key of required) if (!header.includes(key)) errors.push("Inventory is missing column " + key);
 
-const seen = new Map();
+const seen = new Map<string, InventoryRow>();
 for (const [index, record] of data.entries()) {
   const where = "row " + (index + 2) + " (" + (record.legacy_id || "no id") + ")";
   if (!/^\d+-\d+$/.test(record.legacy_id)) errors.push(where + ": legacy_id must look like <chapter>-<tip>");
@@ -71,13 +78,17 @@ for (const [index, record] of data.entries()) {
   if (!["A", "B", "C"].includes(record.evidence_grade_from_edition)) errors.push(where + ": evidence grade must be A, B or C");
   if (!ALLOWED_DISPOSITIONS.has(record.disposition)) errors.push(where + ": invalid disposition " + record.disposition);
   if (record.disposition !== "UNASSESSED" && record.reviewer_approval === "NONE") errors.push(where + ": disposition recorded without a named reviewer approval");
+  if (!ALLOWED_DISPOSITIONS.has(record.disposition_candidate)) errors.push(where + ": invalid disposition candidate " + record.disposition_candidate);
+  if (!record.candidate_rule) errors.push(where + ": a candidate needs a rule name so it can be audited");
+  if (record.disposition_candidate === "KEEP" && (record.risk_triage_signals || record.source_urls === "")) errors.push(where + ": KEEP candidate on a risky or unsourced tip");
+  if (record.disposition_candidate === "HOLD" && !record.risk_triage_signals) errors.push(where + ": HOLD candidate without a risk signal");
   for (const signal of (record.risk_triage_signals || "").split("|").filter(Boolean)) {
     if (!SEVERITY.includes(signal)) errors.push(where + ": unknown risk signal " + signal);
   }
 }
 
 const indiaChapters = JSON.parse(fs.readFileSync(indiaPath, "utf8"));
-const expectedIds = new Set();
+const expectedIds = new Set<string>();
 for (const chapter of indiaChapters) for (const tip of chapter.tips) expectedIds.add(tip.id);
 if (expectedIds.size !== seen.size) errors.push("Inventory has " + seen.size + " rows but the India edition has " + expectedIds.size + " tips");
 for (const id of expectedIds) if (!seen.has(id)) errors.push("India tip missing from the inventory: " + id);
@@ -90,10 +101,10 @@ if (errors.length > 0) {
   process.exit(1);
 }
 
-const chapters = new Map();
+const chapters = new Map<string, ChapterCoverage>();
 for (const record of data) {
   const key = String(record.legacy_id.split("-")[0]).padStart(2, "0");
-  const entry = chapters.get(key) ?? { tips: 0, present: 0, absent: 0, grades: { A: 0, B: 0, C: 0 }, risk: { "health-safety": 0, "legal-rights": 0, "financial-benefits": 0 }, unassessed: 0, decisions: 0, noSource: 0, route: record.current_route.split("#")[0] };
+  const entry: ChapterCoverage = chapters.get(key) ?? { tips: 0, present: 0, absent: 0, grades: { A: 0, B: 0, C: 0 }, risk: { "health-safety": 0, "legal-rights": 0, "financial-benefits": 0 }, unassessed: 0, decisions: 0, noSource: 0, route: record.current_route.split("#")[0] };
   entry.tips += 1;
   if (record.current_presence === "PRESENT") entry.present += 1; else entry.absent += 1;
   entry.grades[record.evidence_grade_from_edition] += 1;
@@ -103,11 +114,13 @@ for (const record of data) {
   chapters.set(key, entry);
 }
 
-const severityOf = (entry) => (entry.risk["health-safety"] > 0 ? 0 : entry.risk["legal-rights"] > 0 ? 1 : entry.risk["financial-benefits"] > 0 ? 2 : 3);
-const ordered = [...chapters.entries()].sort((a, b) => severityOf(a[1]) - severityOf(b[1]) || b[1].tips - a[1].tips);
-const band = (value) => value === 0 ? "health and safety" : value === 1 ? "legal rights" : value === 2 ? "money and benefits" : "low risk";
+const severityOf = (entry: ChapterCoverage): number => (entry.risk["health-safety"] > 0 ? 0 : entry.risk["legal-rights"] > 0 ? 1 : entry.risk["financial-benefits"] > 0 ? 2 : 3);
+const ordered = [...chapters.entries()].sort((a: [string, ChapterCoverage], b: [string, ChapterCoverage]) => severityOf(a[1]) - severityOf(b[1]) || b[1].tips - a[1].tips);
+const band = (value: number): string => value === 0 ? "health and safety" : value === 1 ? "legal rights" : value === 2 ? "money and benefits" : "low risk";
 
-const dispositionCounts = {};
+const candidateCounts: Record<string, number> = {};
+for (const record of data) candidateCounts[record.disposition_candidate] = (candidateCounts[record.disposition_candidate] || 0) + 1;
+const dispositionCounts: Record<string, number> = {};
 for (const record of data) dispositionCounts[record.disposition] = (dispositionCounts[record.disposition] || 0) + 1;
 const total = data.length;
 const present = data.filter((record) => record.current_presence === "PRESENT").length;
@@ -126,7 +139,7 @@ lines.push("## Review queue by severity");
 lines.push("");
 lines.push("| Order | Chapter route | Tips | Health | Legal | Money | Unassessed | Decisions | Grade A |");
 lines.push("| --- | --- | --- | --- | --- | --- | --- | --- | --- |");
-for (const [index, [key, entry]] of ordered.entries()) {
+for (const [index, [, entry]] of ordered.entries()) {
   lines.push("| " + (index + 1) + " | " + BT + entry.route + BT + " | " + entry.tips + " | " + entry.risk["health-safety"] + " | " + entry.risk["legal-rights"] + " | " + entry.risk["financial-benefits"] + " | " + entry.unassessed + " | " + entry.decisions + " | " + entry.grades.A + " |");
 }
 lines.push("");
@@ -138,6 +151,16 @@ lines.push("| Disposition | Tips |");
 lines.push("| --- | --- |");
 for (const key of ["UNASSESSED", "KEEP", "REWRITE", "REPLACE", "COMBINE", "RETIRE", "HOLD"]) {
   lines.push("| " + key + " | " + (dispositionCounts[key] || 0) + " |");
+}
+lines.push("");
+lines.push("## Disposition candidates (proposals, not decisions)");
+lines.push("");
+lines.push("Every candidate comes from a named rule in " + BT + "scripts/india-first-audit.mjs" + BT + " and none of them is a decision. A candidate becomes a disposition only when editorial-decisions.json records it with a rationale and an author.");
+lines.push("");
+lines.push("| Candidate | Tips |");
+lines.push("| --- | --- |");
+for (const key of ["KEEP", "REWRITE", "REPLACE", "COMBINE", "RETIRE", "HOLD"]) {
+  lines.push("| " + key + " | " + (candidateCounts[key] || 0) + " |");
 }
 lines.push("");
 lines.push("## Audit gaps to resolve in P1");
