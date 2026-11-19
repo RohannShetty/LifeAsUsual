@@ -1,0 +1,130 @@
+---
+import { resolvePath } from '../utils/paths';
+
+// P4.1: two equal, first-class entry points. Equal prominence must not mean
+// equal claims: each card states what is actually verified.
+const entries = [
+  {
+    id: 'library',
+    kicker: 'Reading library',
+    title: '765 tips, 34 chapters',
+    body: 'Short, evidence-graded ideas on health, money, time and freedom, adapted for India. Every tip is an AI-reviewed draft — not professional sign-off.',
+    href: '/chapters/',
+    action: 'Browse the library',
+  },
+  {
+    id: 'guides',
+    kicker: 'Practical guides',
+    title: '9 field manuals, 1 India-first guide',
+    body: 'Longer checklists for a job loss, an emergency or a scam. The field manuals are inherited English checklists, not yet India-adapted. The cyber-fraud guide is owner self-reviewed, not independently reviewed.',
+    href: '/guides/',
+    action: 'Open the guides',
+  },
+];
+---
+
+<section class="two-ways" aria-labelledby="two-ways-heading">
+  <p class="two-ways-kicker">Two ways in</p>
+  <h2 class="two-ways-heading" id="two-ways-heading">Pick the shape of help you need</h2>
+  <p class="two-ways-lead">Both are first-class. Neither is a substitute for a doctor, lawyer or qualified adviser.</p>
+  <ul class="two-ways-list" role="list">
+    {entries.map((entry) => (
+      <li>
+        <a
+          class="entry-card liquid-glass"
+          data-entry-point={entry.id}
+          href={resolvePath(entry.href)}
+        >
+          <span class="entry-kicker">{entry.kicker}</span>
+          <span class="entry-title">{entry.title}</span>
+          <span class="entry-body">{entry.body}</span>
+          <span class="entry-action">{entry.action} <span aria-hidden="true">→</span></span>
+        </a>
+      </li>
+    ))}
+  </ul>
+</section>
+
+<style>
+  .two-ways {
+    margin: 1.25rem 0 2rem;
+  }
+
+  .two-ways-kicker {
+    margin: 0 0 0.35rem;
+    font-family: var(--font-sans);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--color-jade);
+  }
+
+  .two-ways-heading {
+    margin: 0 0 0.3rem;
+    font-family: var(--font-sans);
+    font-size: clamp(1.25rem, 2.4vw, 1.55rem);
+    line-height: 1.2;
+    color: var(--color-mist);
+  }
+
+  .two-ways-lead {
+    margin: 0 0 0.85rem;
+    color: var(--color-steel);
+    font-size: 0.93rem;
+  }
+
+  .two-ways-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.7rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  @media (min-width: 720px) {
+    .two-ways-list {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .entry-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    min-height: 100%;
+    padding: 0.95rem 1rem;
+    border-radius: var(--radius-card, 14px);
+    text-decoration: none;
+  }
+
+  .entry-kicker {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-jade);
+  }
+
+  .entry-title {
+    font-family: var(--font-sans);
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--color-mist);
+  }
+
+  .entry-body {
+    flex: 1;
+    font-size: 0.85rem;
+    line-height: 1.45;
+    color: var(--color-steel);
+  }
+
+  .entry-action {
+    margin-top: 0.35rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--color-gold, #e0b45c);
+  }
+</style>
