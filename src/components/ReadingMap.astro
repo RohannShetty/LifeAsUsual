@@ -54,7 +54,7 @@ const KOLAM_PATH = (() => {
   </header>
 
   <!-- Visual Bead Map (one glass bead per tip, grouped by chapter) -->
-  <div class="beads-container" aria-hidden="true">
+  <div class="beads-container">
     {chapters.map(ch => (
       <div class="chapter-cluster" data-chapter={ch.chapter}>
         <div class="cluster-header">
@@ -162,8 +162,8 @@ const KOLAM_PATH = (() => {
     /* Positioning context for the kolam contour; the bead row is the second
        one, so the loop hugs the beads and never crosses the cluster header. */
     position: relative;
-    --kolam-pitch: 20px;
-    --kolam-disc: 14px;
+    --kolam-pitch: 32px;
+    --kolam-disc: 24px;
     background: rgba(0, 0, 0, 0.15);
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 12px;
