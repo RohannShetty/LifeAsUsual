@@ -3,12 +3,16 @@ import path from 'node:path';
 import { publicationInventoryErrors, type IndiaPublicationRecord } from '../src/lib/publication-gate';
 import { publicationRegistryErrors } from '../src/lib/publication-registry';
 import { inheritedPublicationErrors, type InheritedRouteDeclaration } from '../src/lib/inherited-publication';
+import { guidePublicationErrors, type GuideRouteDeclaration } from '../src/lib/guide-publication';
 
 const helpRoot = path.resolve('src/pages/help');
 const registryPath = path.resolve('data/india-publications.json');
 const inheritedPolicyPath = path.resolve('data/india-inherited-publication.json');
 const chaptersPath = path.resolve('data/en-in/all-chapters.json');
 const chapterTemplatePath = path.resolve('src/pages/chapters/[n]-[slug].astro');
+const guidesPath = path.resolve('data/en/guides.json');
+const guidePolicyPath = path.resolve('data/india-guide-publication.json');
+const guideTemplatePath = path.resolve('src/pages/guides/[slug].astro');
 const repoRoot = path.resolve('.');
 const PAGE_EXTENSIONS = new Set(['.astro', '.md', '.mdx', '.ts', '.js', '.tsx', '.jsx']);
 
@@ -60,6 +64,19 @@ function readChapterRoutes(): string[] {
   });
 }
 
+function readGuideRoutes(): string[] {
+  const guides = JSON.parse(fs.readFileSync(guidesPath, 'utf8')) as { slug: string }[];
+  return guides.map((guide) => '/guides/' + guide.slug + '/');
+}
+
+function readGuideDeclarations(): GuideRouteDeclaration[] {
+  const policy = JSON.parse(fs.readFileSync(guidePolicyPath, 'utf8')) as { routes?: GuideRouteDeclaration[] };
+  if (!Array.isArray(policy.routes)) {
+    throw new Error('data/india-guide-publication.json must carry a routes array');
+  }
+  return policy.routes;
+}
+
 function readInheritedDeclarations(): InheritedRouteDeclaration[] {
   const policy = JSON.parse(fs.readFileSync(inheritedPolicyPath, 'utf8')) as { routes?: InheritedRouteDeclaration[] };
   if (!Array.isArray(policy.routes)) {
@@ -83,6 +100,12 @@ try {
       discoveredRoutes: readChapterRoutes(),
       chapterTemplate: fs.readFileSync(chapterTemplatePath, 'utf8'),
       reviewedRoutes
+    }),
+    ...guidePublicationErrors({
+      declarations: readGuideDeclarations(),
+      discoveredRoutes: readGuideRoutes(),
+      guideTemplate: fs.readFileSync(guideTemplatePath, 'utf8'),
+      reviewedRoutes
     })
   ];
   if (errors.length) {
@@ -90,7 +113,7 @@ try {
     for (const error of errors) console.error(' - ' + error);
     process.exitCode = 1;
   } else {
-    console.log('India-first publication gate passed for ' + routes.length + ' help route(s) and ' + readChapterRoutes().length + ' inherited chapter route(s).');
+    console.log('India-first publication gate passed for ' + routes.length + ' help route(s), ' + readChapterRoutes().length + ' inherited chapter route(s) and ' + readGuideRoutes().length + ' guide route(s).');
   }
 } catch (error) {
   console.error('India-first publication gate failed closed:', error);
