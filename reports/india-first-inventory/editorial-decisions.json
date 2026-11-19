@@ -1,4 +1,36 @@
 {
   "schema": "india-first-editorial-decisions/v1",
-  "decisions": {}
+  "note": "PROPOSED_* marks an editorial recommendation recorded by an automated source audit. It is not an owner decision, a reviewer approval or a publication authorisation; only a named human approval may drop the PROPOSED_ prefix.",
+  "decisions": {
+    "4-13": {
+      "disposition": "PROPOSED_REWRITE",
+      "author": "editorial source audit (agent), owner sign-off pending",
+      "rationale": "Chapter 4 packet D2/D3: the tip appends MoHFW and WHO homepage links that support no specific claim and swaps the source hotline for Tele-MANAS 14416 without a citation. Keep Tele-MANAS, cite it, and remove or replace the homepage-only links before this is presented as India guidance."
+    },
+    "4-14": {
+      "disposition": "PROPOSED_REWRITE",
+      "author": "editorial source audit (agent), owner sign-off pending",
+      "rationale": "Packet D4: the rewritten tip has no quantity at all, so the reader cannot judge the claim. Replace the invented universal one-hour framing with the MoSPI TUS 2024 figures (about 305 minutes of unpaid domestic work for female participants, about 140 minutes of caregiving) and state the source year."
+    },
+    "4-15": {
+      "disposition": "PROPOSED_REWRITE",
+      "author": "editorial source audit (agent), owner sign-off pending",
+      "rationale": "Packet D5: the in-plain-words text says no Indian regulator publishes an average daily short-video figure, which reads as a national-survey gap. MoSPI TUS exists and reports 11% of the day on culture, leisure, mass media and sports in 2024 against 9.9% in 2019. Keep the 365/40 arithmetic and state that no short-video-specific average is published."
+    },
+    "4-16": {
+      "disposition": "PROPOSED_REWRITE",
+      "author": "editorial source audit (agent), owner sign-off pending",
+      "rationale": "Packet D6: the tip now cites United States BLS ATUS 2.6 hours without telling the reader the figure is American. Add one provenance sentence and keep the number."
+    },
+    "4-18": {
+      "disposition": "PROPOSED_REWRITE",
+      "author": "editorial source audit (agent), owner sign-off pending",
+      "rationale": "Packet D6: China time-use figures were silently replaced with Stutzer and Frey 2008 commute evidence. Add one provenance sentence for the substitution rather than presenting the result as an Indian finding."
+    },
+    "7-1": {
+      "disposition": "PROPOSED_KEEP",
+      "author": "editorial source audit (agent), owner sign-off pending",
+      "rationale": "Anchor tip of the chapter 7 pilot. Source audit against https://esic.gov.in/unemployment-allowance (last reviewed 2026-10-09) confirmed the ABVKY and RGSKY terms now stated in the tip, the 90-day lifetime cap, the 30-day payment point and the 30 June 2027 validity. Keep the structure; the published terms are now explicit."
+    }
+  }
 }

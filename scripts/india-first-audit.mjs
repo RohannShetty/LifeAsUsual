@@ -46,7 +46,8 @@ export function makeInventory(legacyChapters, indiaChapters, manifest, editorial
   }
   if (legacyById.size === 0) throw new Error('Legacy corpus is empty');
   const choices = editorialDecisions || {};
-  const allowed = new Set(['UNASSESSED','KEEP','REWRITE','REPLACE','COMBINE','RETIRE','HOLD']);
+  const allowed = new Set(['UNASSESSED','KEEP','REWRITE','REPLACE','COMBINE','RETIRE','HOLD',
+    'PROPOSED_KEEP','PROPOSED_REWRITE','PROPOSED_REPLACE','PROPOSED_COMBINE','PROPOSED_RETIRE','PROPOSED_HOLD']);
   for (const [key, decision] of Object.entries(choices)) {
     if (!legacyById.has(key)) throw new Error('Editorial decision for unknown legacy ID: ' + key);
     if (!decision || !allowed.has(decision.disposition)) throw new Error('Invalid disposition for ' + key);
