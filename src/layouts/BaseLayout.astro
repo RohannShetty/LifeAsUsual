@@ -36,6 +36,11 @@ const pageType = pageTypeFor(currentPath, import.meta.env.BASE_URL);
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <link rel="icon" type="image/svg+xml" href={resolvePath('favicon.svg')} />
+    <link rel="manifest" href={resolvePath('manifest.webmanifest')} />
+    <link rel="apple-touch-icon" sizes="192x192" href={resolvePath('icons/icon-192.png')} />
+    <meta name="application-name" content="Life as Usual" />
+    <meta name="apple-mobile-web-app-title" content="Life as Usual" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
     <meta name="description" content={description} />
@@ -85,6 +90,17 @@ const pageType = pageTypeFor(currentPath, import.meta.env.BASE_URL);
         }, true);
       }
     </script>
+    <script is:inline define:vars={{ baseUrl: import.meta.env.BASE_URL, isProd: import.meta.env.PROD }}>
+      // Register the offline shell only for the built site, never in dev where
+      // cached HTML would hide live edits.
+      if (isProd && 'serviceWorker' in navigator && window.isSecureContext) {
+        window.addEventListener('load', function () {
+          var sw = (baseUrl && baseUrl !== '/' ? baseUrl.replace(/\/$/, '/') : '/') + 'sw.js';
+          navigator.serviceWorker.register(sw, { scope: baseUrl || '/' }).catch(function () {});
+        });
+      }
+    </script>
+
   </head>
   <body class="theme-root">
     <div class="monsoon-ground" aria-hidden="true"></div>

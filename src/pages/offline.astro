@@ -1,0 +1,18 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { resolvePath } from '../utils/paths';
+---
+<BaseLayout title="Offline — Life as Usual" description="You are offline. Pages you have already visited remain available.">
+  <div class="page-shell offline-shell">
+    <h1>You are offline</h1>
+    <p>This page has not been saved on this device yet. Pages you have already opened stay readable while the connection is down.</p>
+    <p><a class="btn btn-primary" href={resolvePath('chapters/')}>Try the chapters</a></p>
+    <p class="muted">Reading progress is stored on this device only and is not affected by being offline.</p>
+  </div>
+</BaseLayout>
+
+<style>
+  .offline-shell { max-width: 44rem; margin: 0 auto; padding: 4rem 1.25rem 6rem; display: grid; gap: 1rem; }
+  .offline-shell h1 { font-size: clamp(1.8rem, 5vw, 2.6rem); }
+  .muted { color: var(--ink-soft); }
+</style>
