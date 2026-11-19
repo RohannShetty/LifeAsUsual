@@ -2,9 +2,13 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { publicationInventoryErrors, type IndiaPublicationRecord } from '../src/lib/publication-gate';
 import { publicationRegistryErrors } from '../src/lib/publication-registry';
+import { inheritedPublicationErrors, type InheritedRouteDeclaration } from '../src/lib/inherited-publication';
 
 const helpRoot = path.resolve('src/pages/help');
 const registryPath = path.resolve('data/india-publications.json');
+const inheritedPolicyPath = path.resolve('data/india-inherited-publication.json');
+const chaptersPath = path.resolve('data/en-in/all-chapters.json');
+const chapterTemplatePath = path.resolve('src/pages/chapters/[n]-[slug].astro');
 const repoRoot = path.resolve('.');
 const PAGE_EXTENSIONS = new Set(['.astro', '.md', '.mdx', '.ts', '.js', '.tsx', '.jsx']);
 
@@ -48,19 +52,45 @@ function readReport(relativePath: string): string | null {
   }
 }
 
+function readChapterRoutes(): string[] {
+  const chapters = JSON.parse(fs.readFileSync(chaptersPath, 'utf8')) as { chapter: number; slug: string }[];
+  return chapters.map((chapter) => {
+    const folder = String(chapter.chapter).padStart(2, '0') + '-' + chapter.slug;
+    return '/chapters/' + folder + '/';
+  });
+}
+
+function readInheritedDeclarations(): InheritedRouteDeclaration[] {
+  const policy = JSON.parse(fs.readFileSync(inheritedPolicyPath, 'utf8')) as { routes?: InheritedRouteDeclaration[] };
+  if (!Array.isArray(policy.routes)) {
+    throw new Error('data/india-inherited-publication.json must carry a routes array');
+  }
+  return policy.routes;
+}
+
 try {
   const parsed: unknown = JSON.parse(fs.readFileSync(registryPath, 'utf8'));
   const routes = collectHelpRoutes(helpRoot);
+  const records = (parsed as IndiaPublicationRecord[]) ?? [];
+  const reviewedRoutes = records
+    .filter((record) => record.lesson?.reviewStatus === 'human-reviewed')
+    .map((record) => record.route);
   const errors = [
     ...publicationRegistryErrors(parsed, { readReport }),
-    ...publicationInventoryErrors(routes, (parsed as IndiaPublicationRecord[]) ?? [])
+    ...publicationInventoryErrors(routes, records),
+    ...inheritedPublicationErrors({
+      declarations: readInheritedDeclarations(),
+      discoveredRoutes: readChapterRoutes(),
+      chapterTemplate: fs.readFileSync(chapterTemplatePath, 'utf8'),
+      reviewedRoutes
+    })
   ];
   if (errors.length) {
     console.error('India-first publication gate failed closed:');
     for (const error of errors) console.error(' - ' + error);
     process.exitCode = 1;
   } else {
-    console.log('India-first publication gate passed for ' + routes.length + ' help route(s).');
+    console.log('India-first publication gate passed for ' + routes.length + ' help route(s) and ' + readChapterRoutes().length + ' inherited chapter route(s).');
   }
 } catch (error) {
   console.error('India-first publication gate failed closed:', error);
