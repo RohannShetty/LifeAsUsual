@@ -1,0 +1,68 @@
+name: Correction report
+description: Report a wrong, outdated, unsafe or unsupported claim in the India edition
+title: "Correction: "
+labels: ["correction"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for checking a claim against a source. Reports are public and are handled in best-effort order, safety and money claims first. Do not include personal, financial or medical record numbers.
+  - type: input
+    id: page
+    attributes:
+      label: Page or tip
+      description: Page address, or the tip number on the card (for example 7-13).
+      placeholder: /chapters/07-living-with-no-money/#7-13
+    validations:
+      required: true
+  - type: textarea
+    id: claim
+    attributes:
+      label: The exact sentence that is wrong
+      description: Quote it as it appears, without paraphrasing.
+    validations:
+      required: true
+  - type: textarea
+    id: correct
+    attributes:
+      label: What the correct position is
+      description: State the correction and why the current text is wrong.
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Official source link
+      description: A government, statute, regulator or peer-reviewed source that shows the correction.
+      placeholder: https://
+    validations:
+      required: true
+  - type: input
+    id: checked
+    attributes:
+      label: Date you checked the source
+      placeholder: 19 November 2026
+    validations:
+      required: true
+  - type: dropdown
+    id: scope
+    attributes:
+      label: Does the correction apply across India?
+      options:
+        - Applies across India
+        - Only some states or union territories
+        - Not sure
+    validations:
+      required: true
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Why it matters
+      options:
+        - Safety or health risk
+        - Money, benefits or legal rights
+        - Outdated figure or scheme detail
+        - Citation or attribution problem
+        - Other accuracy problem
+    validations:
+      required: true
