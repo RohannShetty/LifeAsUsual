@@ -45,7 +45,8 @@ test('the repository baseline covers every immutable source ID without approving
   assert.equal(report.legacyIdCount,report.rows.length);
   assert.ok(report.legacyIdCount > 0);
   assert.equal(new Set(report.rows.map(r=>r.legacy_id)).size,report.rows.length);
-  assert.ok(report.rows.every(r=>r.disposition==='UNASSESSED' && r.claim_source_verified_in_this_audit==='NO'));
+  assert.ok(report.rows.every(r=>r.reviewer_approval==='NONE' && r.claim_source_verified_in_this_audit==='NO'),
+    'no recorded disposition may carry a reviewer approval or claim source verification');
 });
 
 test('an explicit editorial disposition is separate from evidence or qualified review', () => {
