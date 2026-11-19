@@ -216,10 +216,17 @@ export function recallStage(tipId: string, state: LedgerState = getLedger()): nu
   return stage >= 0 && stage < RECALL_INTERVALS_DAYS.length ? stage : 0;
 }
 
-export function recallDueAt(tipId: string, state: LedgerState = getLedger()): number | null {
+export function recallDueAt(
+  tipId: string,
+  state: LedgerState = getLedger(),
+  now = Date.now()
+): number | null {
   const readAt = state.readAt?.[tipId];
-  // A missing or corrupt timestamp means "due now", never "never due".
-  if (readAt === undefined || !Number.isFinite(readAt)) return Date.now();
+  // A missing or corrupt timestamp means "due now", never "never due". Return the
+  // caller's clock, not a fresh Date.now(): the due check compares against that same
+  // clock, so re-reading it here made a legacy ledger due only when both reads landed
+  // in the same millisecond.
+  if (readAt === undefined || !Number.isFinite(readAt)) return now;
   return readAt + RECALL_INTERVALS_DAYS[recallStage(tipId, state)] * DAY_MS;
 }
 
@@ -230,7 +237,7 @@ export function recallDueTipIds(
 ): string[] {
   return state.readTipIds
     .filter((tipId) => {
-      const due = recallDueAt(tipId, state);
+      const due = recallDueAt(tipId, state, now);
       return due !== null && due <= now;
     })
     .sort((a, b) => recallStage(a, state) - recallStage(b, state))
@@ -241,7 +248,7 @@ export function recordRecall(tipId: string, remembered: boolean, now = Date.now(
   const state = getLedger();
   // Only a tip that is actually due may advance, so a duplicate click, a key
   // repeat, or a second tab cannot skip a review stage.
-  const dueAt = recallDueAt(tipId, state);
+  const dueAt = recallDueAt(tipId, state, now);
   if (dueAt !== null && dueAt > now) return state;
   state.readAt = state.readAt ?? {};
   state.recall = state.recall ?? {};
