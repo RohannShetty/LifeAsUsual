@@ -1,48 +1,33 @@
-# Agent Operating Rules & Non-Negotiables
+# Agent operating contract: LifeAsUsual India-first
 
-This file preserves the **legacy rules for the inherited English edition**. The approved India-first direction is recorded in [docs/india-first-roadmap.md](docs/india-first-roadmap.md). Until the content-schema and acceptance-test migration is implemented, the current release checks must still pass. Do not reinterpret the legacy source fidelity and English-only restrictions below as a ban on future original Indian lessons, accurate state-specific adaptation, or localized Hindi/regional scripts. Those features require new explicit verification and licensing rules before publication.
+## Authority and scope
 
-**Current status:** 34 inherited chapters and 765 tips are India-adapted drafts with automated checks. Automated checks are not qualified human sign-off; never claim that every cited source independently establishes every claim. Preserve the original source and attribution. This header does not mark planned languages, states, PWA, audio or checklists as delivered.
+The approved product direction is [docs/india-first-roadmap.md](docs/india-first-roadmap.md), tracked in [issue #4](https://github.com/RohannShetty/LifeAsUsual/issues/4). This file governs new work. The inherited 34-chapter / 765-tip edition is a legacy corpus, **not** the size, language, or subject-matter limit of the India-first product.
 
----
+Keep inherited source IDs, public anchors, attribution, reading progress and the pinned `source` submodule intact. Do not overwrite legacy content wholesale or silently reinterpret original attribution. New India-original lessons must have separate provenance and stable IDs. A retired legacy tip must remain traceable and must not corrupt saved progress.
 
-## 1. Non-Negotiables (Section 3)
+## Editorial and publication safety
 
-1. **English Only:** Zero CJK characters in anything shipped: pages, alt text, meta tags, OG image, slugs, JSON-LD, console output.
-2. **Faithful Translation:** Never summarize, omit, add, reorder, soften, or strengthen. Do not add medical, legal, or safety advice. Keep every number, percentage, unit, date, statute reference, evidence grade, DOI, URL, and citation exactly as in the source. Keep currency in RMB (¥); do not convert.
-3. **Licence (CC BY 4.0):** Every page footer and the About page credit "How To Live Better by eternity4719", link original repo and licence, and say: *"Translated into English and reformatted for the web. Changes were made. Not endorsed by the author."* Keep author's caveat that content may be outdated or wrong and that readers should defer to local authorities, doctors, and lawyers. Add one dismissible line at top of each chapter: *"Written for mainland China. Laws, insurance and procedures elsewhere may differ."*
-4. **Privacy:** No analytics, cookies, or third-party requests; self-host all fonts. Reading progress lives only in `localStorage`.
-5. **Source Stays Untouched:** Keep `./source` submodule pinned to a commit. Content is baked in at build time; no runtime fetching.
-6. **The Cast Never Touches the Advice:** Characters (Plus & Minus) speak only about the interface: greetings, progress, empty states, celebrations. They never comment on, summarize, rate, or joke about a tip, and never add advice, claims, numbers, or disclaimers. Sensitive chapters run in Calm Mode.
+- Prioritize actual Indian reader needs. Curate, replace, rewrite, or retire irrelevant foreign-specific advice with an explicit disposition record; do not carry over foreign government services as if available in India.
+- Never invent eligibility, schemes, laws, fees, offices, hotlines, statistics, or expert signoff. Separate national guidance from independently verified state/UT procedures; unsupported jurisdictions must say unsupported.
+- Record claim-level primary sources, exact locators, applicable jurisdiction, date checked, risk and review status. An accessible link is not evidence that its source supports a claim.
+- Distinguish `unverified`, `ai-reviewed-draft`, `human-reviewed`, and `withdrawn` from evidence quality. Do not label AI review as qualified human review.
+- Fail closed on high-/critical-risk medical, legal, financial, or emergency publication without the required source and qualified human review evidence. Existing `src/pages/help/**` publication checks are **not** proof that all legacy pages are gated.
+- The current 765-tip inventory and disposition ledger are an audit starting point, not 765 individually reviewed tips. Do not mark editorial acceptance gates complete based on counts alone.
 
----
+## Language, provenance and licensing
 
-## 2. Acceptance Checks (Section 13)
+- English (`en-IN`), Hindi (`hi-IN`) and Marathi (`mr-IN`) are initial pilots; regional languages are explicitly allowed. Non-English scripts are not contamination. Test localized numerals, negation, safety instructions, citations and search independently.
+- Fidelity rules for an inherited translation apply **only to content represented as a translation**. India-original guidance and verified adaptations must not be forced to retain RMB, mainland China notices, or irrelevant foreign procedures.
+- Preserve accurate CC BY 4.0 attribution to the inherited source and label substantive changes honestly. Do not falsely attribute new India-original content to the original author or imply endorsement.
+- Maintain privacy protections: avoid analytics, cookies and third-party tracking without explicit approval; self-host assets where practical. Preserve local-only reading progress unless a separately approved migration changes this.
 
-The build fails if any of these checks are red (`reports/qa.md`):
+## Engineering and acceptance
 
-1. **Parse Check:** Every total matches (765 tips; Evidence A 495 / B 218 / C 52; Value tier Very high 122 / High 344 / Average 299; Disputed 88; Still being verified 3; Scope Lifespan 274 / Money 290 / Freedom 124 / Time 77).
-2. **Translation Check:** Tip counts per chapter equal source; 0 CJK characters in `dist/`; every URL, DOI, and Arabic numeral matches source; glossary terms used consistently.
-3. **Link Check:** Every cross-reference resolves; no broken internal links; no leftover raw tokens or comments.
-4. **Review Check:** Chapter 4 reviewed line-by-line; 3 random tips per chapter spot-checked in `reports/spotcheck.md`.
-5. **Playwright Check:** Verified at 360x800, 390x844, 768x1024, 1440x900 in light and dark, reduced motion on/off, Comic effects on/off: no horizontal overflow, touch targets $\ge 44\text{ px}$, progress persists, Reset/Export/Import work, chapter-complete moment fires once.
-6. **Budgets Check:** Reader page JS $\le 60\text{ KB}$ gzip; character SVG $\le 25\text{ KB}$; comic font $\le 25\text{ KB}$; mobile Lighthouse $\ge 90$ performance, $\ge 95$ a11y, best practices, SEO.
-7. **Legal Check:** Attribution and mainland China notice appear where required.
-8. **Comic Layer Check:** `data/dialogue.json` passes lint (at most 12 words per bubble; no digits; none of *should, must, cure, guarantee, doctor, lawyer, medicine*; no CJK); calm chapters render with no cast, SFX, or bursts; Comic effects off removes all characters/bursts; no character, halftone, or ink outline inside reading column.
-9. **Motion Check:** Route change uses panel wipe or fade fallback; no layout shift; no task over 50ms during transitions on throttled mobile.
+- Make small scoped PRs with tests and explicit links to the epic or issue. Do not merge unverified work or declare content professionally reviewed without evidence.
+- Treat old 34/765 totals and English-only checks as **legacy-corpus invariants**, not global output restrictions. New India-original and localized records need their own version-aware verification.
+- Keep internal links, source provenance, public routes, import/export/reset and saved progress working. Run relevant type checks, build, source/link checks, Playwright and security gates for the exact changed commit; report unrun checks plainly.
+- Keep the reader accessible, responsive and calm for sensitive topics. Plus and Minus must not joke about or supply medical, legal or financial advice. Do not animate body text, hijack scrolling or add decorative interference in the reading column.
+- The approved target also includes usable problem journeys, all 36 state/UT coverage statuses, selective offline PWA, audio, checklists, corrections, accessible mobile UX, a researched new identity and independent funding. A schema, draft or green build alone does not complete those gates.
 
----
-
-## 3. Don'ts (Section 14)
-
-1. Don't paraphrase or "improve" the author's advice.
-2. Don't invent statistics, hotlines, or disclaimers.
-3. Don't ship Chinese text or original `og.png`.
-4. Don't add analytics, a chart library, scroll hijacking, or extra features.
-5. Don't animate body text.
-6. Don't put characters, SFX, halftone, or ink outlines inside the reading column.
-7. Don't use copyrighted characters, brand mascots, or any named artist's style; Plus and Minus are original.
-8. Don't use raster character art or Lottie.
-9. Don't joke about illness, death, crime, money trouble, or disability.
-10. Don't change layout, navigation, features, palette, or body typography for the sake of the comic layer.
-11. Don't stop to ask unless fully blocked.
+When older BRIEF/PLAN/editor rules conflict with the approved India-first roadmap, document and reconcile the conflict rather than reverting to the old English-only translation product.
