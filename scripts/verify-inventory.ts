@@ -15,7 +15,7 @@ import path from "node:path";
 
 const root = path.resolve(".");
 const inventoryPath = path.join(root, "reports/india-first-inventory/legacy-inventory.csv");
-const indiaPath = path.join(root, "data/en-in/all-chapters.json");
+const indiaDir = path.join(root, "data/en-in/chapters");
 const outPath = path.join(root, "reports/india-first-inventory/coverage.md");
 
 const ALLOWED_DISPOSITIONS = new Set(["UNASSESSED", "KEEP", "REWRITE", "REPLACE", "COMBINE", "RETIRE", "HOLD"]);
@@ -87,7 +87,7 @@ for (const [index, record] of data.entries()) {
   }
 }
 
-const indiaChapters = JSON.parse(fs.readFileSync(indiaPath, "utf8"));
+const indiaChapters = fs.readdirSync(indiaDir).filter((name) => name.endsWith(".json")).map((name) => JSON.parse(fs.readFileSync(path.join(indiaDir, name), "utf8")));
 const expectedIds = new Set<string>();
 for (const chapter of indiaChapters) for (const tip of chapter.tips) expectedIds.add(tip.id);
 if (expectedIds.size !== seen.size) errors.push("Inventory has " + seen.size + " rows but the India edition has " + expectedIds.size + " tips");
