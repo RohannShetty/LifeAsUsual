@@ -6,6 +6,10 @@ import currency from '../../data/currency.json';
 import manifest from '../../data/en-in/manifest.json';
 import allChapters from '../../data/en/all-chapters.json';
 import { resolvePath } from '../utils/paths';
+import jurisdictionData from '../../data/india-jurisdictions.json';
+
+const jurisdictions = jurisdictionData.jurisdictions;
+const verifiedJurisdictions = jurisdictions.filter((row) => row.coverageStatus === 'verified').length;
 
 const sourceByChapter = new Map(
   (allChapters as Array<{ chapter: number; slug: string; title: string }>).map((chapter) => [chapter.chapter, chapter])
@@ -57,6 +61,7 @@ const queuedRows = manifestRows
       <a href="#what-changed">Rewrite status</a>
       <a href="#helplines">Helplines</a>
       <a href="#chapters">Chapters</a>
+      <a href="#states">States and UTs</a>
       <a href="#sources">Sources</a>
     </nav>
 
@@ -118,6 +123,21 @@ const queuedRows = manifestRows
           </a>
         ))}
       </div>
+    </section>
+
+    <section class="india-section" id="states">
+      <p class="section-kicker">Where you are</p>
+      <h2 class="india-h2">State and UT coverage</h2>
+      <p class="india-body">National guidance on this site is written for India as a whole. No state- or UT-specific procedure has been verified yet, so this page does not claim your state's rules are the same. Start with the national route, then confirm the local office, form and fee with the state department or the district administration. {verifiedJurisdictions} of {jurisdictions.length} states and UTs have a verified local procedure.</p>
+      <ul class="state-list">
+        {jurisdictions.map((row) => (
+          <li class="state-row">
+            <span class="state-name">{row.name}</span>
+            <span class="state-status">{row.coverageStatus === 'verified' ? 'Verified' : row.coverageStatus === 'partial' ? 'Partly verified' : 'Not yet verified'}</span>
+          </li>
+        ))}
+      </ul>
+      <p class="source-note">Registry checked {jurisdictionData.directorySource.checkedAt} against the <a href={jurisdictionData.directorySource.url} target="_blank" rel="noopener noreferrer">{jurisdictionData.directorySource.title}</a>. A registry entry is not a coverage claim.</p>
     </section>
 
     <section class="india-section" id="sources">
@@ -491,6 +511,35 @@ const queuedRows = manifestRows
   }
 
   .chapter-arrow { color: var(--color-jade-text); font-size: 0.9rem; }
+
+  .state-list {
+    display: grid;
+    gap: 0.35rem;
+    list-style: none;
+    padding: 0;
+    margin: 0.8rem 0 0;
+  }
+
+  @media (min-width: 640px) {
+    .state-list { grid-template-columns: 1fr 1fr; }
+  }
+
+  .state-row {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 0.6rem;
+    padding: 0.35rem 0.55rem;
+    border: 1px solid var(--theme-hairline);
+    border-radius: 9px;
+    background: var(--theme-card);
+    font-family: var(--font-sans);
+    font-size: 0.73rem;
+  }
+
+  .state-name { color: var(--theme-text); }
+
+  .state-status { color: var(--theme-text-muted); font-size: 0.66rem; }
 
   .source-list {
     display: grid;
