@@ -40,14 +40,69 @@ function getDefaultState(): LedgerState {
   };
 }
 
+const TIP_ID = /^\d+-\d+$/;
+
+function dateKey(value: unknown): string | null {
+  return typeof value === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(value) ? value : null;
+}
+
+function position(value: unknown): LedgerState['lastPosition'] {
+  if (!value || typeof value !== 'object') return null;
+  const raw = value as Record<string, unknown>;
+  if (!Number.isInteger(raw.chapter) || !Number.isInteger(raw.tip)) return null;
+  return {
+    chapter: raw.chapter as number,
+    tip: raw.tip as number,
+    timestamp: typeof raw.timestamp === 'number' && Number.isFinite(raw.timestamp) ? raw.timestamp : 0,
+  };
+}
+
+function dayCounts(value: unknown): Record<string, number> {
+  if (!value || typeof value !== 'object') return {};
+  const clean: Record<string, number> = {};
+  for (const [key, entry] of Object.entries(value as Record<string, unknown>)) {
+    if (dateKey(key) && typeof entry === 'number' && Number.isFinite(entry) && entry >= 0) clean[key] = entry;
+  }
+  return clean;
+}
+
+/**
+ * Turn whatever is stored or imported into a ledger this build can trust.
+ *
+ * Returns null for anything this version cannot read, including a future
+ * version: silently downgrading a newer ledger would destroy reading history,
+ * so an unknown version is left untouched and the caller falls back to an
+ * empty ledger for display only. Duplicate or malformed tip IDs are dropped
+ * rather than crashing the reader, and the result is idempotent, so running
+ * the migration again never changes a normalized ledger.
+ */
+export function normalizeLedger(input: unknown): LedgerState | null {
+  if (!input || typeof input !== 'object') return null;
+  const parsed = input as Record<string, unknown>;
+  if (parsed.version !== 1) return null;
+  const defaultState = getDefaultState();
+  const ids = (value: unknown): string[] =>
+    Array.isArray(value) ? Array.from(new Set(value.map(String).filter((entry) => TIP_ID.test(entry)))) : [];
+  return {
+    ...defaultState,
+    readTipIds: ids(parsed.readTipIds),
+    picks: ids(parsed.picks),
+    lastPosition: position(parsed.lastPosition),
+    history: dayCounts(parsed.history),
+    streak: typeof parsed.streak === 'number' && Number.isFinite(parsed.streak) && parsed.streak >= 0 ? Math.floor(parsed.streak) : 0,
+    lastActiveDate: dateKey(parsed.lastActiveDate),
+    readAt: numericMap(parsed.readAt),
+    recall: numericMap(parsed.recall),
+  };
+}
+
 export function getLedger(): LedgerState {
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
     if (!raw) return getDefaultState();
     const parsed = JSON.parse(raw);
-    if (parsed && parsed.version === 1) {
-      return parsed;
-    }
+    const normalized = normalizeLedger(parsed);
+    if (normalized) return normalized;
   } catch (e) {
     console.warn('[Ledger] Failed to load state from localStorage:', e);
   }
@@ -56,6 +111,17 @@ export function getLedger(): LedgerState {
 
 export function saveLedger(state: LedgerState): void {
   try {
+    // A newer build may have written a version this build cannot read. Do not
+    // replace it with a downgraded ledger: refusing to save keeps that reader's
+    // history recoverable when they go back to the newer build.
+    const existing = localStorage.getItem(STORAGE_KEY);
+    if (existing) {
+      const stored = JSON.parse(existing) as { version?: unknown };
+      if (typeof stored?.version === 'number' && stored.version > state.version) {
+        console.warn('[Ledger] Newer ledger version stored; refusing to overwrite it');
+        return;
+      }
+    }
     localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
     window.dispatchEvent(new CustomEvent(EVENT_NAME, { detail: state }));
   } catch (e) {
@@ -179,19 +245,11 @@ export function importLedgerJSON(jsonString: string): boolean {
   try {
     const parsed = JSON.parse(jsonString);
     if (parsed && Array.isArray(parsed.readTipIds)) {
-      const cleanState: LedgerState = {
-        version: 1,
-        readTipIds: Array.from(new Set(parsed.readTipIds.map(String))),
-        picks: Array.isArray(parsed.picks) ? Array.from(new Set(parsed.picks.map(String))) : [],
-        lastPosition: parsed.lastPosition || null,
-        history: typeof parsed.history === 'object' && parsed.history !== null ? parsed.history : {},
-        streak: typeof parsed.streak === 'number' ? parsed.streak : 0,
-        lastActiveDate: parsed.lastActiveDate || null,
-        readAt: numericMap(parsed.readAt),
-        recall: numericMap(parsed.recall),
-      };
-      saveLedger(cleanState);
-      return true;
+      const cleanState = normalizeLedger(parsed);
+      if (cleanState) {
+        saveLedger(cleanState);
+        return true;
+      }
     }
   } catch (e) {
     console.error('[Ledger] Invalid import JSON:', e);
