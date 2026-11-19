@@ -166,9 +166,10 @@ test.describe('Brass ornament layer', () => {
         overlayPointer: getComputedStyle(cluster.querySelector('.orn-kolam') as Element).pointerEvents
       };
     });
-    expect(geometry.pitch).toBe('20px');
-    expect(geometry.gap).toBe('6px');
-    expect(Math.round(geometry.bead)).toBe(14);
+    // WCAG 2.2 target-size: the visible bead is 24px with a 32px lattice pitch.
+    expect(geometry.pitch).toBe('32px');
+    expect(geometry.gap).toBe('8px');
+    expect(Math.round(geometry.bead)).toBe(24);
     expect(parseFloat(geometry.target)).toBeGreaterThanOrEqual(44);
     expect(geometry.overlayPointer).toBe('none');
     expect(await overflowX(page)).toBe(0);
