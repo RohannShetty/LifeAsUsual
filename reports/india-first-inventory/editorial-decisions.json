@@ -86,6 +86,21 @@
       "disposition": "PROPOSED_REWRITE",
       "author": "editorial source audit (agent), owner sign-off pending",
       "rationale": "Source audit 19 Nov 2026: the two Cochrane reviews are specific and should stay, but the tip also appends MoHFW and WHO home-page links that support no claim. Drop the home pages and cite the specific guidance if an Indian recommendation is added."
+    },
+    "7-7": {
+      "disposition": "PROPOSED_REWRITE",
+      "author": "editorial source audit (agent), owner sign-off pending",
+      "rationale": "Chapter 7 source audit, 19 November 2026: NFSA quantities (5 kg per person per month priority households, 35 kg per household Antyodaya, 75 per cent rural and 50 per cent urban caps) match PIB Release 2179514, which also states the grain is presently free of cost; the tip was changed from a Centre-fixed price to the Centre-set price that is presently free. Section 3 and 4 references, the food-security allowance and the school-meal sentence had no readable primary passage and remain open review items."
+    },
+    "7-8": {
+      "disposition": "PROPOSED_REWRITE",
+      "author": "editorial source audit (agent), owner sign-off pending",
+      "rationale": "Chapter 7 source audit, 19 November 2026: the UDID scheme page states fees NIL and free speed-post delivery nationally, so the tip no longer says most states charge no fee. IGNDPS age band, BPL requirement and central rate were confirmed against PIB Release 2187327. State caregiver allowances remain unverified and are described only as varying by state."
+    },
+    "7-13": {
+      "disposition": "PROPOSED_REWRITE",
+      "author": "editorial source audit (agent), owner sign-off pending",
+      "rationale": "Chapter 7 source audit, 19 November 2026: PIB Release 2294856 says stipend support is credited into apprentices bank accounts through the National Apprenticeship Portal, so the tip no longer says NAPS reimburses the employer; the 25 per cent cap of Rs 1,500 per month is retained. PM-DAKSH beneficiary list updated to the current PIB Release 2223175 wording (SC, OBC, EWS, De-notified Tribes, Safai Karamcharis). PMKVY free-assessment and verifiable-certificate claims were not confirmed and remain open."
     }
   }
 }
