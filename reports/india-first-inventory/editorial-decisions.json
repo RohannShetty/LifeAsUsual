@@ -51,6 +51,21 @@
       "disposition": "PROPOSED_KEEP",
       "author": "editorial source audit (agent), owner sign-off pending",
       "rationale": "Source audit 19 Nov 2026: the RBI LRS FAQ (https://rbi.org.in/SCRIPTS/FAQDisplay.aspx?Id=115) states the USD 250,000 per financial year limit in an individual's own capacity and the sole-proprietorship restriction, matching the tip's caveat. The tip already tells the reader the cap and purposes change with each budget. Keep."
+    },
+    "1-7": {
+      "disposition": "PROPOSED_REWRITE",
+      "author": "editorial source audit (agent), owner sign-off pending",
+      "rationale": "Source audit 19 Nov 2026: the tip cites the MoHFW home page (https://mohfw.gov.in/) and the WHO home page (https://www.who.int/) beside a specific blood-pressure target. A home page carries no recommendation, so it cannot support this claim. Replace them with the specific guideline page that states the target, or remove them; do not invent a citation. The Lancet review DOI stays."
+    },
+    "1-8": {
+      "disposition": "PROPOSED_REWRITE",
+      "author": "editorial source audit (agent), owner sign-off pending",
+      "rationale": "Source audit 19 Nov 2026: the only substantive citation is the US Preventive Services Task Force recommendation, which is written for the US health system, and it is followed by unsupported MoHFW and WHO home-page links. Replace with the Indian screening guidance that applies to this reader (for example the ministry or ICMR recommendation) once its exact page is identified, and remove the home pages. Jurisdiction mismatch is the reason for the rewrite, not a challenge to the underlying screening advice."
+    },
+    "1-13": {
+      "disposition": "PROPOSED_REWRITE",
+      "author": "editorial source audit (agent), owner sign-off pending",
+      "rationale": "Source audit 19 Nov 2026: the two Cochrane reviews are specific and should stay, but the tip also appends MoHFW and WHO home-page links that support no claim. Drop the home pages and cite the specific guidance if an Indian recommendation is added."
     }
   }
 }
