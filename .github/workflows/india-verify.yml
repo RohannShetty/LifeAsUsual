@@ -46,6 +46,9 @@ jobs:
       - name: Build the site
         run: npm run build
 
+      - name: Check fragment links and duplicate anchor ids
+        run: npm run check:anchors
+
       - name: Scan every built page for source-edition terms
         run: npm run scan:terms -- --final
 

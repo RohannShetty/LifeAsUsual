@@ -24,6 +24,7 @@
     "verify:jurisdictions": "tsx scripts/verify-jurisdictions.ts",
     "scan:terms": "node scripts/scan-dist-terms.mjs",
     "check:links": "node scripts/check-links.mjs",
+    "check:anchors": "node scripts/verify-anchors.mjs",
     "test:india": "playwright test tests/india-rewrite.spec.ts",
     "verify:inventory": "tsx scripts/verify-inventory.ts"
   },
