@@ -29,3 +29,5 @@ jobs:
         run: node --test tests/india-first-audit.test.mjs
       - name: Check deterministic full inventory
         run: node scripts/india-first-audit.mjs --check
+      - name: Verify inventory coverage and review queue
+        run: node --experimental-strip-types scripts/verify-inventory.ts
