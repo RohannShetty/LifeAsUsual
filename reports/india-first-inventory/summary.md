@@ -6,7 +6,7 @@
 - Present in current India edition: **765**
 - Missing from edition (requiring mapping): **0**
 - New India-only IDs (outside inherited corpus): **0**
-- Editorial decisions pending: **759**
+- Editorial decisions pending: **755**
 - Tips flagged for further inspection by keyword triage: **562** (not verified defects)
 
 ## Chapter queue
@@ -17,7 +17,7 @@
 | 2 | Do Not Die Slowly | 47 | 25 | 47 |
 | 3 | Do Not Waste Energy | 27 | 4 | 27 |
 | 4 | Do Not Waste Time | 18 | 2 | 13 |
-| 5 | Do Not Waste Money | 50 | 50 | 50 |
+| 5 | Do Not Waste Money | 50 | 50 | 46 |
 | 6 | The Negative List | 35 | 18 | 35 |
 | 7 | How to Get By in India When You Have No Money | 23 | 23 | 22 |
 | 8 | Law and Property Safety | 46 | 46 | 46 |

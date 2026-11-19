@@ -31,6 +31,26 @@
       "disposition": "PROPOSED_KEEP",
       "author": "editorial source audit (agent), owner sign-off pending",
       "rationale": "Anchor tip of the chapter 7 pilot. Source audit against https://esic.gov.in/unemployment-allowance (last reviewed 2026-10-09) confirmed the ABVKY and RGSKY terms now stated in the tip, the 90-day lifetime cap, the 30-day payment point and the 30 June 2027 validity. Keep the structure; the published terms are now explicit."
+    },
+    "5-2": {
+      "disposition": "PROPOSED_KEEP",
+      "author": "editorial source audit (agent), owner sign-off pending",
+      "rationale": "Source audit 19 Nov 2026: the e-filing portal (https://www.incometax.gov.in/) is live and the tip keeps every date and deduction claim hedged (\"normally 31 July and is sometimes extended\", \"check the other triggers\"), with the old-versus-new regime choice stated in the benefit and caveat. Nothing load-bearing is asserted as a fixed number that the official material contradicts. Keep; add no unsourced figure."
+    },
+    "5-13": {
+      "disposition": "PROPOSED_KEEP",
+      "author": "editorial source audit (agent), owner sign-off pending",
+      "rationale": "Source audit 19 Nov 2026: the PIB backgrounder of 22 Sep 2026 (https://www.pib.gov.in/PressReleasePage.aspx?PRID=2313393) states annual cashless hospitalisation cover of up to Rs 5 lakh per family under AB PM-JAY, matching the tip's household-sharing description. The tip correctly separates PM-JAY, ESIC, CGHS and private cover instead of claiming a portable family account. Keep."
+    },
+    "5-20": {
+      "disposition": "PROPOSED_KEEP",
+      "author": "editorial source audit (agent), owner sign-off pending",
+      "rationale": "Source audit 19 Nov 2026: the Income Tax Department deductions table (https://www.incometaxindia.gov.in/w/deductions) lists 80CCD(1B) at a maximum of Rs 50,000 and 80CCD(2) employer contribution at 14% of salary for Central/State Government and 10%/14% otherwise, matching the tip. The tip already says the extra deduction is unavailable in the lower-rate regime and that the 2025 Act renumbered the provisions, so the reader is told to re-check the current number. Keep."
+    },
+    "5-38": {
+      "disposition": "PROPOSED_KEEP",
+      "author": "editorial source audit (agent), owner sign-off pending",
+      "rationale": "Source audit 19 Nov 2026: the RBI LRS FAQ (https://rbi.org.in/SCRIPTS/FAQDisplay.aspx?Id=115) states the USD 250,000 per financial year limit in an individual's own capacity and the sole-proprietorship restriction, matching the tip's caveat. The tip already tells the reader the cap and purposes change with each budget. Keep."
     }
   }
 }
