@@ -2,6 +2,21 @@
   "schema": "india-first-editorial-decisions/v1",
   "note": "PROPOSED_* marks an editorial recommendation recorded by an automated source audit. It is not an owner decision, a reviewer approval or a publication authorisation; only a named human approval may drop the PROPOSED_ prefix.",
   "decisions": {
+    "5-1": {
+      "disposition": "PROPOSED_REWRITE",
+      "author": "editorial source audit (agent), owner sign-off pending",
+      "rationale": "Chapter 5 batch 04: the claim was specific (pre-debit notice before a recurring card or UPI debit) but the only citation was the RBI homepage. Verified the consolidation in RBI Digital Payments - E-mandate Framework, 2026 (RBI/DPSS/2026-27/396, 21 April 2026), section 6: pre-transaction notification at least 24 hours before the debit, with an opt-out validated by AFA. Sources now cite that framework; wording says pre-transaction notification and the Rs 15,000 AFA threshold. https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=13374"
+    },
+    "5-4": {
+      "disposition": "PROPOSED_REWRITE",
+      "author": "editorial source audit (agent), owner sign-off pending",
+      "rationale": "Chapter 5 batch 04: the three-level grievance route (call centre, nodal officer, appellate authority) is cited only to the TRAI homepage. The page now lists the Telecom Consumers Complaint Redressal Regulations, 2012 with three amendments plus a Fourth Amendment Regulation dated 7 May 2026 (https://trai.gov.in/sites/default/files/2026-05/Regulation_07052026.pdf), which this audit could not read from the rendered PDF. Source now points at the regulations page; the tip text must be re-checked against the 2026 amendment before publication. https://trai.gov.in/consumer-info/telecom/grievance-redressal-mechanism"
+    },
+    "5-8": {
+      "disposition": "PROPOSED_REWRITE",
+      "author": "editorial source audit (agent), owner sign-off pending",
+      "rationale": "Chapter 5 batch 04: the one-tap/e-mandate claim cited the RBI homepage. Replaced with the 2026 E-mandate Framework and stated its 24-hour pre-transaction notification. The framework exempts FASTag and NCMC auto-replenishment from pre-transaction notification, which the tip does not need but the caveat should not contradict. https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=13374"
+    },
     "7-12": {
       "disposition": "PROPOSED_REWRITE",
       "author": "editorial source audit (agent), owner sign-off pending",
