@@ -27,3 +27,22 @@ India Code returned "Access Denied" (Akamai), and these could not be retrieved o
 ## Review status
 
 All four tips still carry review status `independently-checked` and evidence grade A in the chapter file even though several claims rested on domain-root links. That label is accurate only for automated checking, not for professional sign-off, and the 7-13 and 7-8 corrections show why: a link existing is not the same as the link supporting the sentence. Dispositions recorded: 7-7, 7-8 and 7-13 `PROPOSED_REWRITE`; 7-9 left unchanged pending a readable PM-JAY source.
+
+## Second pass: tips 7-2, 7-3, 7-5 and 7-6 (19 November 2026)
+
+This pass checked the procedural safety-net tips. It removed guarantees that no readable official page supports and kept the verified route structure.
+
+| Tip | Verified | Changed | Left as unverified |
+| --- | --- | --- | --- |
+| 7-2 | CLC(Central) functions and central-sphere jurisdiction (clc.gov.in); four labour codes commenced 21 November 2025 and SAMADHAN accepts labour-code filings (PIB 2192463, samadhan.labour.gov.in) | Title no longer claims "neither charges a court fee"; cost section says the first stage is conciliation, not a court trial, and that a lawyer is optional but advisable; "three free doors" became "three routes"; removed the savings-for-pending-cases phrase and the decree-enforceability claim | Repeal savings clause, documents checklist, "1-3 visits", claims-authority section numbers, labour-court fee waiver |
+| 7-3 | Section 12 categories including industrial workmen and persons in custody; 15100 helpline; DLSA location; Lok Adalat award final with no appeal and no court fee (nalsa.gov.in/legal-aid, /lok-adalats) | Removed the ration-card sentence; court-fee exemption replaced with process fees and drafting, which NALSA actually lists; removed the unverified prison/juvenile/shelter clinic sentence; stopped attributing Lok Adalats to a section number | Section 19 attribution, prison clinics, "many wage disputes" characterisation |
+| 7-5 | NCS is the central job-matching platform with job fairs and counselling (PIB 1883671); e-Shram gives a Universal Account Number (PIB 2303053) | Title and prose dropped "free"; "employers are checked before posting" replaced with the published blacklist; exchange certificates softened to "some recruitments ask, check the vacancy notice"; removed the unsupported placement-fee rule | Free registration, pre-posting vetting, registration certificates, agency fee of a month's salary |
+| 7-6 | SDRF constituted under section 48(1)(a) for notified disasters and immediate relief; NDRF under section 46; NFBS pays Rs 20,000 to a BPL household on the death of a primary earner aged 18-59 (ndmindia.mha.gov.in/ndmi/response-fund, PIB 2187327) | Title and opening qualified as "no universal" grant; NFBS sentence now states the 18-59 age band, BPL condition and Rs 20,000; SDRF sentence reframed as immediate relief after a notified disaster | CMRF legal basis and discretion, collector's sanctioning power, PM-JAY cross-claim, "slow and discretionary" characterisation |
+
+### Sources that could not be read in this pass
+
+India Code (Akamai "Access Denied", then an Angular single-page app whose Act PDFs are viewer wrappers), labour.gov.in labour-codes page (Next.js shell with no text) and its PDFs (Access Denied), doj.gov.in (empty body), ncs.gov.in and its FAQ (Angular shell), eshram.gov.in (language gate), and nsap.nic.in (DNS failure). The SDRF norms table sits in an MHA PDF behind a viewer and was not extractable. Unreadable does not mean wrong: those claims were softened or left unverified instead of being deleted.
+
+### Review status
+
+The four tips still carry review status `independently-checked` and grades A or B. This pass found claims in each that no readable source supported, which confirms that the label describes automated citation checking, not passage-level verification by a named reviewer. Dispositions recorded as PROPOSED_REWRITE for all four.

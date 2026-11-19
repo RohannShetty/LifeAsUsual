@@ -101,6 +101,26 @@
       "disposition": "PROPOSED_REWRITE",
       "author": "editorial source audit (agent), owner sign-off pending",
       "rationale": "Chapter 7 source audit, 19 November 2026: PIB Release 2294856 says stipend support is credited into apprentices bank accounts through the National Apprenticeship Portal, so the tip no longer says NAPS reimburses the employer; the 25 per cent cap of Rs 1,500 per month is retained. PM-DAKSH beneficiary list updated to the current PIB Release 2223175 wording (SC, OBC, EWS, De-notified Tribes, Safai Karamcharis). PMKVY free-assessment and verifiable-certificate claims were not confirmed and remain open."
+    },
+    "7-2": {
+      "disposition": "PROPOSED_REWRITE",
+      "author": "editorial source audit (agent), owner sign-off pending",
+      "rationale": "Chapter 7 second pass, 19 November 2026: CLC(Central) jurisdiction, 21 November 2025 labour-code commencement and SAMADHAN filing confirmed at clc.gov.in and PIB 2192463. Removed the unsupported court-fee and no-lawyer guarantees, the savings-for-pending-cases phrase and the decree-enforceability claim; the first stage is now described as conciliation rather than a court trial. Repeal savings, document lists and processing times remain unverified."
+    },
+    "7-3": {
+      "disposition": "PROPOSED_REWRITE",
+      "author": "editorial source audit (agent), owner sign-off pending",
+      "rationale": "Chapter 7 second pass, 19 November 2026: section 12 categories, 15100 helpline, DLSA location, Lok Adalat finality and no court fee confirmed at nalsa.gov.in. Court-fee exemption replaced with the process fees and drafting NALSA actually lists; ration-card sentence and prison-clinic sentence removed as unverified; section 19 attribution removed because the Act text was unreadable."
+    },
+    "7-5": {
+      "disposition": "PROPOSED_REWRITE",
+      "author": "editorial source audit (agent), owner sign-off pending",
+      "rationale": "Chapter 7 second pass, 19 November 2026: NCS platform confirmed by PIB 1883671 and e-Shram UAN by PIB 2303053. Dropped the free-registration claim and the pre-posting employer-check claim, which no readable NCS page supports; replaced with the published blacklist. Exchange certificates and agency fees remain unverified and are now conditional."
+    },
+    "7-6": {
+      "disposition": "PROPOSED_REWRITE",
+      "author": "editorial source audit (agent), owner sign-off pending",
+      "rationale": "Chapter 7 second pass, 19 November 2026: SDRF section 48(1)(a) and immediate-relief scope, NDRF section 46, and NFBS Rs 20,000 confirmed at ndmindia.mha.gov.in and PIB 2187327. Fixed the NFBS sentence to include the 18-59 age band and BPL condition, and qualified the opening as no universal grant. CMRF legal basis, collector powers and processing times remain unverified."
     }
   }
 }
