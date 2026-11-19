@@ -127,7 +127,7 @@ test.describe('India-first claim-level trust contract (synthetic fixtures)', () 
     expect(assessLesson(lesson).publishable).toBe(false);
     lesson.humanApproval = {
       name: 'Reviewer Example', qualification: 'Qualified reviewer fixture',
-      scope: 'Synthetic lesson 1', approvedAt: '2026-11-01'
+      scope: 'Synthetic lesson 1', approvedAt: '2026-11-01', independent: true
     };
     lesson.verification = [{
       reviewer: 'Reviewer Example', method: 'qualified-human',
@@ -154,7 +154,7 @@ test.describe('India-first claim-level trust contract (synthetic fixtures)', () 
     lesson.reviewStatus = 'human-reviewed';
     lesson.humanApproval = {
       name: 'Fixture reviewer', qualification: 'Fixture qualification',
-      scope: 'Fixture claim', approvedAt: '2026-11-01'
+      scope: 'Fixture claim', approvedAt: '2026-11-01', independent: true
     };
     lesson.verification = [{
       reviewer: 'Fixture reviewer', method: 'qualified-human',
@@ -174,7 +174,7 @@ test.describe('India-first claim-level trust contract (synthetic fixtures)', () 
     lesson.reviewStatus = 'human-reviewed';
     lesson.humanApproval = {
       name: 'Fixture reviewer', qualification: 'Fixture qualification',
-      scope: 'Fixture claim', approvedAt: '2026-11-01'
+      scope: 'Fixture claim', approvedAt: '2026-11-01', independent: true
     };
     lesson.verification = [{
       reviewer: 'Fixture reviewer', method: 'qualified-human',
@@ -232,6 +232,52 @@ test.describe('India-first claim-level trust contract (synthetic fixtures)', () 
     expect(assessLesson(lesson).publishable).toBe(false);
     lesson.sourceEditionId = '4-9';
     expect(assessLesson(lesson).publishable).toBe(true);
+  });
+
+  test('owner self-review is labelled as such and cannot claim qualified review', () => {
+    const lesson = fixture();
+    lesson.reviewStatus = 'human-reviewed';
+    lesson.claims[0].risk = 'high';
+    lesson.humanApproval = {
+      name: 'Fixture owner',
+      qualification: 'Site owner, not a licensed professional',
+      scope: 'Fixture claim',
+      approvedAt: '2026-11-01',
+      independent: false,
+      limitation: 'A careful reading of the cited documents, not independent review.'
+    };
+    lesson.verification = [{
+      reviewer: 'Fixture owner', method: 'owner-self-review',
+      reviewedAt: '2026-11-01', lessonRevision: '1',
+      claimIds: ['in-test-only-claim1'], verdict: 'pass',
+      reportPath: 'fixtures/owner-self-review.md'
+    }];
+    // Editorial self-review can publish high-risk guidance only while it is
+    // recorded honestly as self-review.
+    expect(assessLesson(lesson).publishable).toBe(true);
+    // The same reading cannot be relabelled as qualified human review.
+    lesson.verification![0].method = 'qualified-human';
+    expect(assessLesson(lesson).publishable).toBe(false);
+    // Nor can the approval be marked independent without an independent review.
+    lesson.verification![0].method = 'owner-self-review';
+    lesson.humanApproval!.independent = true;
+    expect(assessLesson(lesson).publishable).toBe(false);
+  });
+
+  test('self-review without a stated limitation fails closed', () => {
+    const lesson = fixture();
+    lesson.reviewStatus = 'human-reviewed';
+    lesson.humanApproval = {
+      name: 'Fixture owner', qualification: 'Site owner',
+      scope: 'Fixture claim', approvedAt: '2026-11-01', independent: false
+    };
+    lesson.verification = [{
+      reviewer: 'Fixture owner', method: 'owner-self-review',
+      reviewedAt: '2026-11-01', lessonRevision: '1',
+      claimIds: ['in-test-only-claim1'], verdict: 'pass',
+      reportPath: 'fixtures/owner-self-review.md'
+    }];
+    expect(assessLesson(lesson).errors.join(' ')).toContain('Owner self-review must state its limitation');
   });
 
   test('state and locale variants cannot pretend to be reviewed without evidence', () => {

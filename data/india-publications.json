@@ -129,7 +129,7 @@
       "verification": [
         {
           "reviewer": "Rohan Shetty",
-          "method": "qualified-human",
+          "method": "owner-self-review",
           "reviewedAt": "2026-11-17",
           "lessonRevision": "2026-11-17",
           "claimIds": [
@@ -149,7 +149,9 @@
         "name": "Rohan Shetty",
         "qualification": "Site owner. Read the cited primary sources (I4C/NCRP, PIB 2022, RBI 2017 circular, RBI 2026 press release and amended directions) and the built page in full. Not a licensed financial or legal professional.",
         "scope": "The seven recorded claims of /help/report-financial-cyber-fraud, revision 2026-11-17",
-        "approvedAt": "2026-11-17"
+        "approvedAt": "2026-11-17",
+        "independent": false,
+        "limitation": "An owner's careful reading of the cited documents is editorial self-review. It is not independent or professional review, and it does not cover an individual reader's case."
       }
     }
   }

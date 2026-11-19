@@ -36,11 +36,19 @@ export interface HumanApproval {
   qualification: string;
   scope: string;
   approvedAt: string;
+  /**
+   * Whether the reviewer is independent of the site owner. Reading your own
+   * page carefully is editorial work, not independent review. A missing value
+   * is read as self-review so the record fails closed rather than upgrading.
+   */
+  independent?: boolean;
+  /** What a non-independent review does not cover. Required when independent is false. */
+  limitation?: string;
 }
 
 export interface VerificationEvent {
   reviewer: string; // Named AI model/harness or reviewer identity
-  method: 'independent-ai' | 'qualified-human';
+  method: 'independent-ai' | 'qualified-human' | 'owner-self-review';
   reviewedAt: string;
   lessonRevision: string;
   claimIds: string[];
@@ -201,7 +209,13 @@ export function assessLesson(lesson: CanonicalLesson): TrustAssessment {
   if (lesson.claims.length === 0) add('Lesson has no claim records');
   if (lesson.reviewStatus === 'unverified') add('Unverified lessons are not publishable');
   if (lesson.reviewStatus === 'ai-reviewed-draft' || lesson.reviewStatus === 'human-reviewed') {
-    const method = lesson.reviewStatus === 'human-reviewed' ? 'qualified-human' : 'independent-ai';
+    // Only a documented independent reviewer may be recorded as qualified
+    // human review. Anything else a person checked is owner self-review and
+    // must be labelled as such instead of inheriting the stronger claim.
+    const method: VerificationEvent['method'] =
+      lesson.reviewStatus === 'human-reviewed'
+        ? lesson.humanApproval?.independent === true ? 'qualified-human' : 'owner-self-review'
+        : 'independent-ai';
     const validEvent = lesson.verification?.some((v) =>
       v.method === method && v.verdict === 'pass' &&
       v.lessonRevision === lesson.revision &&
@@ -209,7 +223,11 @@ export function assessLesson(lesson: CanonicalLesson): TrustAssessment {
       validPastDate(v.reviewedAt) &&
       lesson.claims.every((claim) => v.claimIds.includes(claim.id))
     );
-    if (!validEvent) add('Missing independent passing verification for current lesson revision');
+    if (!validEvent) {
+      add(method === 'owner-self-review'
+        ? 'Missing passing owner self-review for current lesson revision'
+        : 'Missing independent passing verification for current lesson revision');
+    }
   }
 
   // A failed review for this revision cannot be overridden by an earlier pass.
@@ -225,6 +243,12 @@ export function assessLesson(lesson: CanonicalLesson): TrustAssessment {
     if (!approval?.name.trim() || !approval.qualification.trim() ||
         !approval.scope.trim() || !validPastDate(approval.approvedAt)) {
       add('Named, dated, scoped qualified human approval is required');
+    }
+    if (approval && approval.independent !== true && approval.independent !== false) {
+      add('Review record must state whether the reviewer was independent');
+    }
+    if (approval && approval.independent === false && !approval.limitation?.trim()) {
+      add('Owner self-review must state its limitation');
     }
   }
 
