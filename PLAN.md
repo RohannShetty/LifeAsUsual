@@ -14,6 +14,14 @@
 
 **Product decisions already approved:** (1) all ages/backgrounds, rural and urban; (2) useful universal life guidance plus Indian practical journeys; (3) English, Hindi and regional languages, with `en-IN`, `hi-IN`, `mr-IN` pilots; (4) all 28 states + 8 UTs represented, but no invented coverage; (5) no fixed public 34-chapter/765-tip cap; (6) AI-reviewed drafts clearly distinguished from human review; (7) website, PWA/offline, audio and checklists; (8) new India-first identity after migration/clearance; (9) free access, optional donations/sponsorship with editorial independence. The owner has explicitly approved **KEEP / REWRITE / REPLACE / COMBINE / RETIRE / HOLD** decisions for old content while preserving legacy IDs, bookmarks and progress. Do not ask these questions again.
 
+**Owner decisions confirmed 19 November 2026** ([epic #4 comment](https://github.com/RohannShetty/LifeAsUsual/issues/4#issuecomment-7006298594)), binding on this plan:
+
+1. **Equal product prominence.** The inherited 765-tip reading library and the India-first practical problem-solving guides are both first-class, equally prominent experiences, with shared search and discovery and accessible navigation. Library entry points, legacy IDs, anchors, bookmarks, reading history, progress and attribution are preserved. Equal prominence does **not** license advertising unassessed inherited claims as verified India guidance; the P1 dispositions are what separate the library from verified Indian advice.
+2. **17 November cyber-fraud self-review.** The owner confirms personally performing the recorded editorial self-review. The record stays `owner-self-review` with `independent: false`. That confirms the event, not independent source verification, professional qualification or blanket approval of high-risk claims. Publication policy may narrow what such a record permits; it may not widen it.
+3. **Release timing.** Complete and evidence **all** P0–P9 acceptance gates before public promotion. No limited-public-beta shortcut, and a green CI run or an accessible GitHub Pages URL is not release approval. The epic stays open until the P9 evidence matrix passes.
+
+Where earlier wording in this file conflicts with these, this block wins: P0's publication gate must cover inherited chapter routes, not only `src/pages/help/**`; P4 must ship two equal first-class entry points; P9 is mandatory before any promotion or "finished platform" claim.
+
 **Authority precedence (when instructions disagree):** safety and law; explicit owner decisions; current GitHub epic #4 and verified issue acceptance; approved India-first roadmap; this plan; current implementation contracts/tests; historical `BRIEF.md`, old `PLAN.md`, legacy AGENTS/Cursor translation-era directions. Preserve historical documentation as historical material, but do not let obsolete English-only, fixed-765-public-output or RMB/faithful-translation rules control new Indian material. In the first documentation PR, reconcile the actual repo instructions so this precedence is explicit.
 
 **Operating rules:**
@@ -153,10 +161,12 @@ Mark **Owner action needed** only for: (a) factual confirmation of an alleged pe
 
 ### P0.5 — Published high-risk review record integrity
 - [ ] Compare merged PR #15, `data/india-publications.json`, actual published page and `reports/india-fraud-guide-human-review.md` with content-trust rules.
-- [ ] Confirm that the 17 Nov claimed site-owner reading/review genuinely occurred before repeating it as fact or as an authenticated review.
+- [x] Owner confirmed on 19 November 2026 that the 17 Nov site-owner reading/review genuinely occurred (#4 comment 7006298594); the record stays `owner-self-review` / `independent: false`, and the confirmation is recorded as an event, not as independent verification.
 - [ ] Check whether `qualified-human` in code is incorrectly satisfied by an unqualified self-review; ensure schema semantics, independence and policy match reality.
 - [ ] For unverifiable/high-risk claims, correct status and withhold or limit publication as policy requires. Avoid pretending a record is professional legal/financial sign-off.
 - [ ] Recheck RBI 2017 vs 2026 amendment effective **1 Jan 2027** and other time-sensitive claims before changing the page; require new revision-specific review.
+- [ ] Extend the fail-closed publication gate beyond `src/pages/help/**` to inherited chapter routes that present high-risk India guidance, with explicit withheld/qualified states instead of unassessed publication.
+- [ ] Add a regression test that a high-risk inherited route without a permitted review record fails the build.
 
 ### P0.6 — Historical content/instruction reconciliation
 - [ ] Preserve old root `PLAN.md` in Git before replacement; migrate active instructions to this P0–P9 file.
@@ -172,7 +182,7 @@ Mark **Owner action needed** only for: (a) factual confirmation of an alleged pe
 
 ## P1 — All 765 inherited tips: decisions, editorial queue and audit accuracy
 
-**Goal:** turn inventory into a controlled **reviewed disposition queue**, not a fabricated claim that the 765 tips were individually approved. **Trackers:** #23, #4.
+**Goal:** turn inventory into a controlled **reviewed disposition queue**, not a fabricated claim that the 765 tips were individually approved. The dispositions are also what let the reading library stay equally prominent with the practical guides without presenting unassessed tips as verified India advice. **Trackers:** #23, #4.
 
 ### P1.1 — Trustworthy inventory pipeline
 - [ ] Reuse merged PR #24 script/report; confirm all **765 unique inherited IDs** appear once, with missing/duplicate ID tests and deterministic ordering.
@@ -277,6 +287,8 @@ Mark **Owner action needed** only for: (a) factual confirmation of an alleged pe
 **Goal:** ensure real readers can find and use approved material. **Trackers:** #6, #8, #3. **Depends on:** stable canonical routes; can prototype sooner.
 
 ### P4.1 — Navigation and discovery
+- [ ] Ship **two equal first-class entry points**: the reading library and practical problem-solving guides, neither demoted to a secondary or archive experience, sharing search, discovery and accessible navigation (owner decision, 19 November 2026).
+- [ ] Preserve library deep links, anchors, bookmarks, reading progress and attribution through the new IA.
 - [ ] Home has **Get help with a problem**, **Everyday life**, **Life stages**, **Browse topics**, plus search; highlight urgent routes without distracting animation.
 - [ ] Allow changing state/UT and language without sign-in, with visible fallback/unsupported notice and no false coverage claims.
 - [ ] Search returns relevant official Indian journeys, handles common colloquial terms, typos and script differences where indexed; test no-results and stale/withdrawn content.
@@ -412,6 +424,7 @@ Mark **Owner action needed** only for: (a) factual confirmation of an alleged pe
 - [ ] Recheck every published high-risk claim's effective date, source accessibility, revision, jurisdiction, author/verifier separation and required real approval; no hidden unsupported routes.
 - [ ] Validate all changed URLs/anchors, export/import formats, progress migrations, search indexes, hreflang, canonicals, sitemap, robots, 404 and RSS/change notices if supported.
 - [ ] Verify WCAG 2.2 AA target findings, actual Android touch/offline checks, desktop/tablet behavior, Core Web Vitals, network/low-storage failure states and privacy.
+- [ ] Produce the **final evidence matrix** mapping every P0–P9 gate to its commit, tests, source/human verification where required, production observation and open-risk disposition; no public promotion before it passes in full.
 
 ### P9.2 — Production end-to-end and release notes
 - [ ] Validate deployed origin corresponds to tested SHA. CI success alone does not prove live publishing.
