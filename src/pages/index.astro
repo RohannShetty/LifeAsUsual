@@ -4,6 +4,7 @@ import path from 'node:path';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ProgressRing from '../components/ProgressRing.astro';
 import IntentFork from '../components/IntentFork.astro';
+import TwoWaysIn from '../components/TwoWaysIn.astro';
 import RecallDeck from '../components/RecallDeck.astro';
 import Character from '../cast/Character.astro';
 import Bubble from '../cast/Bubble.astro';
@@ -114,6 +115,8 @@ for (const tip of allTips) {
   </header>
 
   <IntentFork scopeCounts={scopeCounts} />
+
+  <TwoWaysIn />
 
   {dailyTip && (
     <div class="daily-crown">
