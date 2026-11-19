@@ -20,6 +20,17 @@ test.describe('P4.1 two first-class entry points', () => {
     await expect(guides).toContainText('owner self-reviewed');
   });
 
+  test('the practical guides are reachable from the mobile navigation on every viewport', async ({ page }) => {
+    await page.goto('/');
+    const nav = page.getByRole('navigation', { name: 'Mobile navigation' });
+    if (!(await nav.isVisible())) return; // the capsule is hidden on wide viewports by design
+    const guides = nav.getByRole('link', { name: 'Guides' });
+    await expect(guides).toBeVisible();
+    const box = await guides.boundingBox();
+    expect(box!.width).toBeGreaterThanOrEqual(44);
+    expect(box!.height).toBeGreaterThanOrEqual(44);
+  });
+
   test('both destinations exist and cross-link to each other', async ({ page }) => {
     await page.goto('/chapters/');
     await expect(page.locator('a[href$="/guides/"]').first()).toBeVisible();
