@@ -5,22 +5,22 @@
     "5-1": {
       "disposition": "PROPOSED_REWRITE",
       "author": "editorial source audit (agent), owner sign-off pending",
-      "rationale": "Chapter 5 batch 04: the claim was specific (pre-debit notice before a recurring card or UPI debit) but the only citation was the RBI homepage. Verified the consolidation in RBI Digital Payments - E-mandate Framework, 2026 (RBI/DPSS/2026-27/396, 21 April 2026), section 6: pre-transaction notification at least 24 hours before the debit, with an opt-out validated by AFA. Sources now cite that framework; wording says pre-transaction notification and the Rs 15,000 AFA threshold. https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=13374"
+      "rationale": "Chapter 5 batch 04, re-checked 19 November 2026 against the RBI Digital Payments - E-mandate Framework, 2026 (RBI/DPSS/2026-27/396, 21 April 2026, https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=13374), sections 6 and 8: pre-transaction notification at least 24 hours before the debit and an opt-out validated by AFA; AFA is required above Rs 15,000 per transaction, while insurance premiums, mutual-fund subscriptions and credit-card bill payments are exempt from AFA up to Rs 1,00,000 per transaction. The unconditional claim that a merchant cannot force a renewal after cancellation was softened to the issuer obligation; the Rs 1,00,000 exceptions were added."
     },
     "5-4": {
       "disposition": "PROPOSED_REWRITE",
       "author": "editorial source audit (agent), owner sign-off pending",
-      "rationale": "Chapter 5 batch 04: the three-level grievance route (call centre, nodal officer, appellate authority) is cited only to the TRAI homepage. The page now lists the Telecom Consumers Complaint Redressal Regulations, 2012 with three amendments plus a Fourth Amendment Regulation dated 7 May 2026 (https://trai.gov.in/sites/default/files/2026-05/Regulation_07052026.pdf), which this audit could not read from the rendered PDF. Source now points at the regulations page; the tip text must be re-checked against the 2026 amendment before publication. https://trai.gov.in/consumer-info/telecom/grievance-redressal-mechanism"
+      "rationale": "Chapter 5 batch 04, corrected 19 November 2026: the 7 May 2026 Fourth Amendment was only a draft. The final Telecom Consumers Complaint Redressal (Fourth Amendment) Regulations, 2026 were issued on 2 November 2026 (PIB Release ID 2331704, https://www.pib.gov.in/PressReleasePage.aspx?PRID=2331704; TRAI regulation https://trai.gov.in/sites/default/files/2026-11/Regulation_02112026.pdf). Salient features: complaint centres round the clock with at least 16 hours of human assistance; complaints and appeals through the provider app, website and portal; appeal filing window cut from 30 to 15 days after disposal; appellate authority of regular management employees with 5 years experience deciding within 15 days; PwD desks and accessibility; feedback surveys, oversight committees, regulatory review and financial disincentives. The three-level route is retained. The notification commencement clause could not be read from the rendered PDF, so the tip tells readers to confirm commencement before relying on the 15-day window."
     },
     "5-8": {
       "disposition": "PROPOSED_REWRITE",
       "author": "editorial source audit (agent), owner sign-off pending",
-      "rationale": "Chapter 5 batch 04: the one-tap/e-mandate claim cited the RBI homepage. Replaced with the 2026 E-mandate Framework and stated its 24-hour pre-transaction notification. The framework exempts FASTag and NCMC auto-replenishment from pre-transaction notification, which the tip does not need but the caveat should not contradict. https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=13374"
+      "rationale": "Chapter 5 batch 04, corrected 19 November 2026: replaced the RBI homepage citation with the 2026 E-mandate Framework (https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=13374) and removed the categorical claim that a guardian can demand money back because a minor's contract is void. An agreement with a minor is void, which can support a refund claim, but recovery depends on the platform process and proof, so the text now says a refund is not automatic. The 5-9 title was aligned to challenge rather than automatic reversal."
     },
     "7-12": {
       "disposition": "PROPOSED_REWRITE",
       "author": "editorial source audit (agent), owner sign-off pending",
-      "rationale": "P3 job-loss pilot: the tip is a thin registration note with no exit sequence. Rewrite it around the five desks a worker must approach after a job loss, using the 2025 EPFO reform figures (PIB PRID 2179689), the 2020 labour-code gratuity and retrenchment changes (PIB PRID 2193100), ESIC unemployment allowance and the existing NCS/e-Shram routes; keep the employment-exchange caveat as one line."
+      "rationale": "P3 job-loss pilot, corrected 19 November 2026: the five-desk sequence is retained, but the 12-month final-settlement statement now records that the EPFO Board approved a two-month wait and a 10% minimum retained balance on 19 November 2026 (PIB Release ID 2338531) and that the approval needs a notified amendment before it changes payments. The 75% anytime withdrawal stays from the October 2025 reform (PIB PRID 2179689); gratuity eligibility and fixed-term treatment stay from PIB PRID 2193100."
     },
     "4-13": {
       "disposition": "PROPOSED_REWRITE",
@@ -48,9 +48,9 @@
       "rationale": "Packet D6: China time-use figures were silently replaced with Stutzer and Frey 2008 commute evidence. Add one provenance sentence for the substitution rather than presenting the result as an Indian finding."
     },
     "7-1": {
-      "disposition": "PROPOSED_KEEP",
+      "disposition": "PROPOSED_REWRITE",
       "author": "editorial source audit (agent), owner sign-off pending",
-      "rationale": "Anchor tip of the chapter 7 pilot. Source audit against https://esic.gov.in/unemployment-allowance (last reviewed 2026-10-09) confirmed the ABVKY and RGSKY terms now stated in the tip, the 90-day lifetime cap, the 30-day payment point and the 30 June 2027 validity. Keep the structure; the published terms are now explicit."
+      "rationale": "P3 chapter-7 audit, corrected 19 November 2026: the tip said EPFO pays the accumulated fund after two months of unemployment, while tip 7-12 said the final settlement waits 12 months. The contradiction is resolved to the operational rule (12-month wait, 75% available earlier) plus the 19 November 2026 EPFO Board approval of a two-month wait and a 10% minimum retained balance, which needs a notified amendment before it changes payments (PIB Release ID 2338531, https://www.pib.gov.in/PressReleasePage.aspx?PRID=2338531). ABVKY figures and the 30 June 2027 validity remain from https://esic.gov.in/unemployment-allowance."
     },
     "5-2": {
       "disposition": "PROPOSED_KEEP",

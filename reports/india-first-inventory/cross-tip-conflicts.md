@@ -1,0 +1,28 @@
+# Cross-tip conflict findings (inherited corpus, checked 19 November 2026)
+
+Scope: all 34 inherited chapters and 765 tips in data/en-in/chapters/. This is a targeted conflict pass over shared legal, scheme, deadline and threshold claims, not a new architecture audit. Every finding names the tips, the discrepancy, the official source checked, and the action taken or still open.
+
+## Resolved in this pass
+
+| # | Tips | Conflict found | Official source checked | Resolution |
+|---|---|---|---|---|
+| C1 | 7-1 vs 7-12 | 7-1 said EPFO pays the accumulated fund after two months of unemployment; 7-12 said the final settlement waits 12 months. Same scheme, contradictory waits. | PIB Release ID 2338531 (19 Nov 2026, 240th CBT meeting): Board approved reducing the final-withdrawal wait from 12 to 2 months and the minimum retained balance from 25% to 10%. The EPFO circulars page showed no notified amendment as of 19 Nov 2026. | Both tips now state the operational 12-month wait and the 75% earlier withdrawal, then record the 19 November 2026 Board approval as needing a notified amendment. 7-1 corrected; 7-12 corrected. |
+| C2 | 5-4 | Tip cited the TRAI grievances page and a 7 May 2026 Fourth Amendment; the 7 May text was only the draft consultation. | PIB Release ID 2331704 and TRAI regulation dated 2 Nov 2026 (Regulation_02112026.pdf): final Fourth Amendment issued 2 November 2026; complaint centres 24x7 with 16 hours human support; appeal window cut from 30 to 15 days; appellate authority decision within 15 days; accessibility and PwD desks; feedback surveys, oversight committees, regulatory review, financial disincentives. | Tip now describes the final amendment and tells readers to confirm commencement before relying on the 15-day window. The commencement clause could not be read from the rendered PDF, so it is not asserted. |
+| C3 | 5-1 | Tip said a recurring payment above Rs 15,000 needs additional authentication, with no exceptions, and that a merchant cannot force a renewal after cancellation. | RBI Digital Payments - E-mandate Framework, 2026 (RBI/DPSS/2026-27/396, 21 April 2026), ss. 6 and 8: AFA above Rs 15,000 per transaction; insurance premiums, mutual-fund subscriptions and credit-card bill payments exempt from AFA up to Rs 1,00,000 per transaction; opt-out must be AFA-validated. | Tip now states the Rs 1,00,000 exceptions and the issuer obligation to allow and authenticate cancellation. The unconditional merchant claim was removed. |
+| C4 | 5-8 vs 5-9 | 5-8 said a guardian can demand the money back because a minor agreement is void; 5-9 titled the purchase as reversible. Both read as an automatic refund right. | Indian Contract Act, 1872 s.11 (agreement with a minor is void); Consumer Protection Act, 2019 and E-Commerce Rules, 2020 (grievance route). Neither creates an automatic reversal. | 5-8 now says a void contract can support a claim but a refund is not automatic and depends on the platform process and proof; 5-9 title changed from reversible to challenged. |
+| C5 | 7-12 vs 19-4 | 7-12 said fixed-term employees become eligible for gratuity after one year under the 2020 labour codes; 19-4 said gratuity needs five years with no fixed-term exception. | Code on Social Security, 2020 s.53(1)-(2); PIB Release ID 2193100 (labour codes implementation). | 19-4 now records the one-year fixed-term eligibility under s.53(2). |
+
+## Open findings (not corrected)
+
+| # | Tips | Issue | Why it is open | Next action |
+|---|---|---|---|---|
+| O1 | 5-4 | Commencement date of the Fourth Amendment is not established from a readable official text. | The TRAI PDF renders as an embedded object; the PIB note gives the issue date but not the commencement clause. | Read the Gazette or regulation commencement clause before telling readers the 15-day appeal window is in force; keep the confirm-commencement caveat until then. |
+| O2 | 7-1, 7-12 | The 19 November 2026 EPFO approval is not yet a notified rule; readers may act on press coverage. | No EPFO circular or Gazette amendment was listed at the checked date. | Re-check EPFO circulars and the Gazette before the next release; update the tips only when notified, and record the notification number and effective date. |
+| O3 | 7-1, 7-12 | ABVKY validity is recorded as 30 June 2027 from the ESIC page; no later extension was checked. | Scheme extensions are published by ESIC circular, not in the tip sources. | Re-check https://esic.gov.in/unemployment-allowance in the next chapter-7 batch; HOLD any stronger claim. |
+
+## Scan coverage and method
+
+- Tokens scanned across all 765 tips: 12 months, two months, 25%, 75%, 10%, 15,000, 1,00,000/1 lakh, 90 days, 30 days, 15 days, 60 days, six months, one year, five years, ten years, gratuity, minimum balance, EPS/pension, consumer commission, limitation.
+- Each token match was read in its sentence, then compared with the other tips that state the same rule. Numeric coincidences in medical or research claims (for example a 25% mortality change) were excluded as unrelated.
+- No conflict was found for: EPS ten-year pension threshold (7-1, 7-18), ABVKY 90-day duration (7-1, 7-12), insurance free-look 30 days (5-41, 5-42), or claim limitation periods (5-44).
+- This pass does not establish that any cited page supports every word of a tip; that remains the per-tip verification recorded in reports/india-first-inventory/legacy-inventory.csv.

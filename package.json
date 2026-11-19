@@ -3,7 +3,7 @@
   "type": "module",
   "version": "2.8.1",
   "scripts": {
-    "precheck": "tsx scripts/build-india-data.ts && tsx scripts/verify-india.ts && npm run verify:instructions",
+    "precheck": "tsx scripts/build-india-data.ts && tsx scripts/verify-india.ts && npm run verify:instructions && npm run verify:review-integrity",
     "predev": "tsx scripts/build-india-data.ts && tsx scripts/verify-india.ts",
     "dev": "astro dev",
     "build": "astro build && pagefind --site dist",
@@ -26,7 +26,8 @@
     "check:links": "node scripts/check-links.mjs",
     "check:anchors": "node scripts/verify-anchors.mjs",
     "test:india": "playwright test tests/india-rewrite.spec.ts",
-    "verify:inventory": "tsx scripts/verify-inventory.ts"
+    "verify:inventory": "tsx scripts/verify-inventory.ts",
+    "verify:review-integrity": "node scripts/verify-review-integrity.mjs"
   },
   "dependencies": {
     "zod": "4.6.7"
