@@ -38,12 +38,16 @@ const approvalSchema = z.object({
   name: nonEmpty,
   qualification: nonEmpty,
   scope: nonEmpty,
-  approvedAt: isoDate
+  approvedAt: isoDate,
+  // Only an independent reviewer may be recorded as qualified human review.
+  // A missing value is read as self-review, which fails closed.
+  independent: z.boolean().optional(),
+  limitation: nonEmpty.optional()
 }).strict();
 
 const verificationSchema = z.object({
   reviewer: nonEmpty,
-  method: z.enum(['independent-ai', 'qualified-human']),
+  method: z.enum(['independent-ai', 'qualified-human', 'owner-self-review']),
   reviewedAt: isoDate,
   lessonRevision: nonEmpty,
   claimIds: z.array(nonEmpty).min(1),

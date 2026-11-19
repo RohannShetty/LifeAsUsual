@@ -9,6 +9,7 @@ Lesson: `india-fraud-report-v1`, revision `2026-11-17`
 - **Role:** Site owner and editor of this edition.
 - **What was reviewed:** the seven recorded claims, the five-step checklist, and the rendered page.
 - **Date:** 17 November 2026
+- **Recorded as:** verification method `owner-self-review` with `independent: false` in `data/india-publications.json`. The publication gate only accepts the `qualified-human` method when the approval record states an independent reviewer, so this review cannot be relabelled as qualified sign-off.
 
 ## Qualification, stated plainly
 
