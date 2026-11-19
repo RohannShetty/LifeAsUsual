@@ -1,0 +1,80 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { resolvePath } from '../utils/paths';
+---
+
+<BaseLayout title="Report a correction — Life as Usual" description="How to report a wrong, outdated or unsafe tip in the India edition, and what happens to your report.">
+  <div class="page-shell correction-shell">
+    <p class="eyebrow">Corrections</p>
+    <h1>Tell us where we are wrong</h1>
+    <p class="lede">
+      This edition carries inherited claims, automated adaptations and a recorded owner self-review. It is not professionally
+      verified. If a tip is outdated, misquoted, unsafe, or says something about India that the official source does not support,
+      a correction report is the fastest way to get it fixed.
+    </p>
+
+    <section class="info-card liquid-glass">
+      <h2 class="card-heading">What to include</h2>
+      <ul class="clean-list">
+        <li>The page address, or the tip number shown on the card (for example 7-13).</li>
+        <li>The exact sentence that is wrong, quoted.</li>
+        <li>What the correct position is, and a link to the official source that shows it.</li>
+        <li>The date you checked the source, and whether it applies in every state or only some.</li>
+      </ul>
+      <p class="small">
+        Leave out personal details. Never send Aadhaar, bank account, card, policy or medical record numbers. Reports live in a
+        public issue tracker, so anything you post is public.
+      </p>
+    </section>
+
+    <section class="info-card liquid-glass">
+      <h2 class="card-heading">How to send it</h2>
+      <p>
+        Open a correction report on GitHub. It creates a public issue with the fields above.
+      </p>
+      <p>
+        <a class="btn btn-primary" href="https://github.com/RohannShetty/LifeAsUsual/issues/new?template=correction.yml" rel="noopener noreferrer">
+          Open a correction report
+        </a>
+      </p>
+      <p class="small">
+        If you cannot use GitHub, a message to the repository owner through GitHub is the only other supported route. There is
+        no email address, contact form or support desk for this edition, and this page does not pretend otherwise.
+      </p>
+    </section>
+
+    <section class="info-card liquid-glass">
+      <h2 class="card-heading">What happens next</h2>
+      <ol class="clean-list ordered">
+        <li>The report is checked against the current official source, not against another summary.</li>
+        <li>If the source supports the correction, the tip text is fixed, the source link is replaced, and the correction is logged in the public corrections log with the checking date.</li>
+        <li>If the claim cannot be checked, the tip is marked as unverified or held rather than silently kept as fact.</li>
+        <li>If the report is wrong or the source does not support it, the report is closed with the reason and the source that was read.</li>
+      </ol>
+      <p class="small">
+        This is a small, single-editor project. Reports are handled in best-effort order with safety and money claims first.
+        No response time is promised, and no report is treated as professional review or approval.
+      </p>
+      <p>
+        <a class="link" href="https://github.com/RohannShetty/LifeAsUsual/blob/master/docs/corrections-log.md" rel="noopener noreferrer">Read the corrections log</a>
+      </p>
+    </section>
+
+    <section class="info-card liquid-glass">
+      <h2 class="card-heading">If the problem is urgent</h2>
+      <p>
+        This site cannot help in an emergency. For immediate danger call 112. For a financial fraud in progress, use the
+        national cybercrime portal at cybercrime.gov.in or call 1930. Do not wait for a correction report.
+      </p>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .correction-shell { max-width: 48rem; margin: 0 auto; padding: 3rem 1.25rem 6rem; display: grid; gap: 1.25rem; }
+  .correction-shell h1 { font-size: clamp(1.9rem, 5vw, 2.8rem); line-height: 1.1; }
+  .eyebrow { text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.75rem; color: var(--color-jade); font-family: var(--font-sans); }
+  .lede { font-size: 1.05rem; color: var(--color-ink-muted); max-width: 40rem; }
+  .small { font-size: 0.875rem; color: var(--color-ink-muted); margin-top: 0.75rem; }
+  .clean-list.ordered { list-style: decimal; }
+</style>
