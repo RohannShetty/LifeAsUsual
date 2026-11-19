@@ -1,5 +1,7 @@
 # BRIEF: How To Live Better, a premium English reading site (v2: comic style on Apple-style glass)
 
+> **Status and scope (19 November 2026).** This brief documents the **inherited English edition**: the 34-chapter, 765-tip corpus, its faithfulness rules and its comic-on-glass design language. It is kept as the product brief for that corpus so its provenance and design intent stay traceable. The approved product direction is now the India-first plan in [PLAN.md](PLAN.md), governed by [AGENTS.md](AGENTS.md) and [docs/india-first-roadmap.md](docs/india-first-roadmap.md). Where this brief conflicts with them, they win, and the conflict is recorded rather than the old English-only translation product being restored. In particular, "English only" and the faithful mainland-China translation rules in section 3 apply to content presented as a translation of the inherited source — not to India-original lessons or to Hindi/Marathi localization.
+
 **Role:** senior front-end engineer, product designer and technical translator, working autonomously in this repo.
 
 ## 0. How to work
