@@ -22,7 +22,7 @@ import Bubble from '../cast/Bubble.astro';
         {edition.totalTips} beads across {edition.chapters} chapters. Beads glow jade as you read tips. All progress is kept strictly on your device.
       </p>
 
-      <div class="cast-progress-row" data-cast-note aria-hidden="true">
+      <div class="cast-progress-row" data-cast-note aria-hidden="true" inert>
         <Character character="plus" mood="cheering" size={42} />
         <Bubble speaker="Plus" text="Steady consistency wins." tailDirection="left" autoDismissSeconds={12} />
       </div>
@@ -365,7 +365,7 @@ import Bubble from '../cast/Bubble.astro';
   }
 
   .btn-danger {
-    background: #FF6B6B;
+    background: #B3261E;
     color: #FFFFFF;
   }
 
