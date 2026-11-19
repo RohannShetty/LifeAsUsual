@@ -2,6 +2,11 @@
   "schema": "india-first-editorial-decisions/v1",
   "note": "PROPOSED_* marks an editorial recommendation recorded by an automated source audit. It is not an owner decision, a reviewer approval or a publication authorisation; only a named human approval may drop the PROPOSED_ prefix.",
   "decisions": {
+    "7-12": {
+      "disposition": "PROPOSED_REWRITE",
+      "author": "editorial source audit (agent), owner sign-off pending",
+      "rationale": "P3 job-loss pilot: the tip is a thin registration note with no exit sequence. Rewrite it around the five desks a worker must approach after a job loss, using the 2025 EPFO reform figures (PIB PRID 2179689), the 2020 labour-code gratuity and retrenchment changes (PIB PRID 2193100), ESIC unemployment allowance and the existing NCS/e-Shram routes; keep the employment-exchange caveat as one line."
+    },
     "4-13": {
       "disposition": "PROPOSED_REWRITE",
       "author": "editorial source audit (agent), owner sign-off pending",
