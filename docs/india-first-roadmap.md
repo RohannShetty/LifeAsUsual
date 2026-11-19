@@ -21,6 +21,11 @@ An openly accessible, evidence-informed life guide for India that combines gener
 7. **Formats:** website, offline PWA, audio, practical checklists.
 8. **Identity:** seek a new India-first name and visual identity. Do not rename the repository or change public URLs until a migration plan is ready.
 9. **Funding:** free public access, optional donations or disclosed sponsorships. Editorial independence is mandatory.
+10. **Equal product prominence:** the inherited reading library and the India-first practical guides are both first-class, equally prominent experiences with shared search and accessible navigation. Preserve inherited IDs, anchors, bookmarks, reading history, progress and attribution. Equal prominence does not permit presenting unassessed legacy claims as verified India advice.
+
+### Release gate
+
+Complete and evidence all P0–P9 acceptance gates before public promotion. There is no limited-public-beta shortcut: a green CI run or an accessible GitHub Pages URL is not release approval, and the epic stays open until the P9 evidence matrix passes.
 
 ### Recommended first localization pilots
 
