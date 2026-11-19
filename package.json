@@ -3,7 +3,7 @@
   "type": "module",
   "version": "2.8.1",
   "scripts": {
-    "precheck": "tsx scripts/build-india-data.ts && tsx scripts/verify-india.ts",
+    "precheck": "tsx scripts/build-india-data.ts && tsx scripts/verify-india.ts && npm run verify:instructions",
     "predev": "tsx scripts/build-india-data.ts && tsx scripts/verify-india.ts",
     "dev": "astro dev",
     "build": "astro build && pagefind --site dist",
@@ -19,6 +19,7 @@
     "india:worklist": "tsx scripts/build-india-worklist.ts",
     "india:cost-audit": "tsx scripts/audit-costs.ts",
     "verify:india": "tsx scripts/verify-india.ts",
+    "verify:instructions": "node scripts/verify-instructions.mjs",
     "verify:publication": "tsx scripts/verify-published-lessons.ts",
     "verify:jurisdictions": "tsx scripts/verify-jurisdictions.ts",
     "scan:terms": "node scripts/scan-dist-terms.mjs",
