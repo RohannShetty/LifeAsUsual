@@ -1,0 +1,376 @@
+{
+  "$comment": "Declared publication policy for inherited chapter routes. Derived from reports/india-first-inventory/legacy-inventory.csv risk_triage_signals; state ai-draft-labelled means the page shows the AI-reviewed draft notice and does not claim verification. scripts/verify-published-lessons.ts fails closed on undeclared or stale routes, on reviewed routes without a trust record, and on sensitive routes whose template lost the draft notice.",
+  "source": "reports/india-first-inventory/legacy-inventory.csv",
+  "routes": [
+    {
+      "route": "/chapters/01-do-not-die-early/",
+      "chapter": 1,
+      "title": "Do Not Die Early",
+      "signals": [
+        "financial-benefits",
+        "health-safety",
+        "legal-rights"
+      ],
+      "state": "ai-draft-labelled"
+    },
+    {
+      "route": "/chapters/02-do-not-die-slowly/",
+      "chapter": 2,
+      "title": "Do Not Die Slowly",
+      "signals": [
+        "financial-benefits",
+        "health-safety",
+        "legal-rights"
+      ],
+      "state": "ai-draft-labelled"
+    },
+    {
+      "route": "/chapters/03-do-not-waste-energy/",
+      "chapter": 3,
+      "title": "Do Not Waste Energy",
+      "signals": [
+        "financial-benefits",
+        "health-safety",
+        "legal-rights"
+      ],
+      "state": "ai-draft-labelled"
+    },
+    {
+      "route": "/chapters/04-do-not-waste-time/",
+      "chapter": 4,
+      "title": "Do Not Waste Time",
+      "signals": [
+        "financial-benefits",
+        "health-safety",
+        "legal-rights"
+      ],
+      "state": "ai-draft-labelled"
+    },
+    {
+      "route": "/chapters/05-do-not-waste-money/",
+      "chapter": 5,
+      "title": "Do Not Waste Money",
+      "signals": [
+        "financial-benefits",
+        "health-safety",
+        "legal-rights"
+      ],
+      "state": "ai-draft-labelled"
+    },
+    {
+      "route": "/chapters/06-the-negative-list/",
+      "chapter": 6,
+      "title": "The Negative List",
+      "signals": [
+        "financial-benefits",
+        "health-safety",
+        "legal-rights"
+      ],
+      "state": "ai-draft-labelled"
+    },
+    {
+      "route": "/chapters/07-living-with-no-money/",
+      "chapter": 7,
+      "title": "How to Get By in India When You Have No Money",
+      "signals": [
+        "financial-benefits",
+        "health-safety",
+        "legal-rights"
+      ],
+      "state": "ai-draft-labelled"
+    },
+    {
+      "route": "/chapters/08-law-and-property-safety/",
+      "chapter": 8,
+      "title": "Law and Property Safety",
+      "signals": [
+        "financial-benefits",
+        "health-safety",
+        "legal-rights"
+      ],
+      "state": "ai-draft-labelled"
+    },
+    {
+      "route": "/chapters/09-everyday-legal-red-lines/",
+      "chapter": 9,
+      "title": "Everyday Legal Red Lines",
+      "signals": [
+        "financial-benefits",
+        "health-safety",
+        "legal-rights"
+      ],
+      "state": "ai-draft-labelled"
+    },
+    {
+      "route": "/chapters/10-dating-and-marriage/",
+      "chapter": 10,
+      "title": "Are Dating and Marriage Worth It",
+      "signals": [
+        "financial-benefits",
+        "health-safety",
+        "legal-rights"
+      ],
+      "state": "ai-draft-labelled"
+    },
+    {
+      "route": "/chapters/11-red-lines-for-developers/",
+      "chapter": 11,
+      "title": "Red Lines for Developers and Techies",
+      "signals": [
+        "financial-benefits",
+        "legal-rights"
+      ],
+      "state": "ai-draft-labelled"
+    },
+    {
+      "route": "/chapters/12-starting-a-business/",
+      "chapter": 12,
+      "title": "Starting Your Own Business",
+      "signals": [
+        "financial-benefits",
+        "health-safety",
+        "legal-rights"
+      ],
+      "state": "ai-draft-labelled"
+    },
+    {
+      "route": "/chapters/13-emergencies-what-to-do-first/",
+      "chapter": 13,
+      "title": "Emergencies: What to Do First",
+      "signals": [
+        "financial-benefits",
+        "health-safety",
+        "legal-rights"
+      ],
+      "state": "ai-draft-labelled"
+    },
+    {
+      "route": "/chapters/14-accounts-and-information-security/",
+      "chapter": 14,
+      "title": "Accounts and Information Security",
+      "signals": [
+        "financial-benefits",
+        "legal-rights"
+      ],
+      "state": "ai-draft-labelled"
+    },
+    {
+      "route": "/chapters/15-renting-and-buying-housing/",
+      "chapter": 15,
+      "title": "Renting and Buying Housing",
+      "signals": [
+        "financial-benefits",
+        "health-safety",
+        "legal-rights"
+      ],
+      "state": "ai-draft-labelled"
+    },
+    {
+      "route": "/chapters/16-living-with-chronic-disease/",
+      "chapter": 16,
+      "title": "Living with Chronic Disease",
+      "signals": [
+        "financial-benefits",
+        "health-safety"
+      ],
+      "state": "ai-draft-labelled"
+    },
+    {
+      "route": "/chapters/17-elderly-at-home/",
+      "chapter": 17,
+      "title": "Elderly at Home",
+      "signals": [
+        "financial-benefits",
+        "health-safety",
+        "legal-rights"
+      ],
+      "state": "ai-draft-labelled"
+    },
+    {
+      "route": "/chapters/18-is-having-kids-worth-it/",
+      "chapter": 18,
+      "title": "Is Having Kids Worth It",
+      "signals": [
+        "financial-benefits",
+        "health-safety",
+        "legal-rights"
+      ],
+      "state": "ai-draft-labelled"
+    },
+    {
+      "route": "/chapters/19-employment-and-work-injury/",
+      "chapter": 19,
+      "title": "Employment & Work Injury",
+      "signals": [
+        "financial-benefits",
+        "health-safety",
+        "legal-rights"
+      ],
+      "state": "ai-draft-labelled"
+    },
+    {
+      "route": "/chapters/20-newborn-care/",
+      "chapter": 20,
+      "title": "Newborn Care",
+      "signals": [
+        "financial-benefits",
+        "health-safety",
+        "legal-rights"
+      ],
+      "state": "ai-draft-labelled"
+    },
+    {
+      "route": "/chapters/21-travel-and-abroad-safety/",
+      "chapter": 21,
+      "title": "Travel and Abroad Safety",
+      "signals": [
+        "financial-benefits",
+        "health-safety",
+        "legal-rights"
+      ],
+      "state": "ai-draft-labelled"
+    },
+    {
+      "route": "/chapters/22-how-to-relax/",
+      "chapter": 22,
+      "title": "How to Relax",
+      "signals": [
+        "financial-benefits",
+        "health-safety",
+        "legal-rights"
+      ],
+      "state": "ai-draft-labelled"
+    },
+    {
+      "route": "/chapters/23-which-skills-to-learn/",
+      "chapter": 23,
+      "title": "Which Skills to Learn",
+      "signals": [
+        "financial-benefits",
+        "health-safety",
+        "legal-rights"
+      ],
+      "state": "ai-draft-labelled"
+    },
+    {
+      "route": "/chapters/24-navigating-healthcare/",
+      "chapter": 24,
+      "title": "Navigating Healthcare and Doctors",
+      "signals": [
+        "financial-benefits",
+        "health-safety",
+        "legal-rights"
+      ],
+      "state": "ai-draft-labelled"
+    },
+    {
+      "route": "/chapters/25-after-someone-dies/",
+      "chapter": 25,
+      "title": "After Someone Dies",
+      "signals": [
+        "financial-benefits",
+        "health-safety",
+        "legal-rights"
+      ],
+      "state": "ai-draft-labelled"
+    },
+    {
+      "route": "/chapters/26-building-a-website-or-platform/",
+      "chapter": 26,
+      "title": "Building a Website or Platform",
+      "signals": [
+        "financial-benefits",
+        "health-safety",
+        "legal-rights"
+      ],
+      "state": "ai-draft-labelled"
+    },
+    {
+      "route": "/chapters/27-pregnancy-and-childbirth/",
+      "chapter": 27,
+      "title": "Pregnancy and Childbirth",
+      "signals": [
+        "financial-benefits",
+        "health-safety",
+        "legal-rights"
+      ],
+      "state": "ai-draft-labelled"
+    },
+    {
+      "route": "/chapters/28-do-not-ruin-health-for-looks/",
+      "chapter": 28,
+      "title": "Do Not Ruin Health for Looks",
+      "signals": [
+        "financial-benefits",
+        "health-safety",
+        "legal-rights"
+      ],
+      "state": "ai-draft-labelled"
+    },
+    {
+      "route": "/chapters/29-after-a-major-blow/",
+      "chapter": 29,
+      "title": "After a Major Blow",
+      "signals": [
+        "financial-benefits",
+        "health-safety",
+        "legal-rights"
+      ],
+      "state": "ai-draft-labelled"
+    },
+    {
+      "route": "/chapters/30-school-age-kids/",
+      "chapter": 30,
+      "title": "School-Age Kids",
+      "signals": [
+        "financial-benefits",
+        "health-safety",
+        "legal-rights"
+      ],
+      "state": "ai-draft-labelled"
+    },
+    {
+      "route": "/chapters/31-paths-after-eighteen/",
+      "chapter": 31,
+      "title": "Paths After Eighteen",
+      "signals": [
+        "financial-benefits",
+        "health-safety",
+        "legal-rights"
+      ],
+      "state": "ai-draft-labelled"
+    },
+    {
+      "route": "/chapters/32-studying-abroad/",
+      "chapter": 32,
+      "title": "Studying Abroad",
+      "signals": [
+        "financial-benefits",
+        "health-safety",
+        "legal-rights"
+      ],
+      "state": "ai-draft-labelled"
+    },
+    {
+      "route": "/chapters/33-living-with-disability/",
+      "chapter": 33,
+      "title": "Living with Disability",
+      "signals": [
+        "financial-benefits",
+        "health-safety",
+        "legal-rights"
+      ],
+      "state": "ai-draft-labelled"
+    },
+    {
+      "route": "/chapters/34-safe-home-medications/",
+      "chapter": 34,
+      "title": "Safe Home Medications",
+      "signals": [
+        "financial-benefits",
+        "health-safety"
+      ],
+      "state": "ai-draft-labelled"
+    }
+  ]
+}
