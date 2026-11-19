@@ -1,29 +1,17 @@
 ---
-description: Core project rules, non-negotiables, acceptance checks, and do-nots for How To Live Better
-globs: *
+description: LifeAsUsual India-first product rules and legacy-corpus safeguards
+globs: "*"
 alwaysApply: true
 ---
 
-# Project Rules: How To Live Better
+# Project rules
 
-## 1. Non-Negotiables
-- **English only:** Zero CJK characters in anything shipped (`dist/`, slugs, OG image, JSON-LD, console).
-- **Faithful translation:** Never summarize, omit, add, or alter numbers, percentages, units, dates, DOIs, URLs, citations, or RMB (¥).
-- **Licence (CC BY 4.0):** Attribution to eternity4719 on every page footer, link to original repo and license, plus mainland China disclaimers.
-- **Privacy:** No analytics, no cookies, no third-party requests; self-host all fonts; state in `localStorage` only.
-- **Source untouched:** Read-only submodule `./source`.
-- **Character discipline:** Plus & Minus never comment on, rate, or joke about tips. Calm mode on sensitive chapters.
+Follow [AGENTS.md](../../AGENTS.md) and [docs/india-first-roadmap.md](../../docs/india-first-roadmap.md). The approved India-first epic is [#4](https://github.com/RohannShetty/LifeAsUsual/issues/4).
 
-## 2. Acceptance Criteria
-- 765 tips total; exact evidence grades and value tier counts match.
-- Zero CJK in output; all cross-references resolve.
-- Lighthouse $\ge 90$ performance, $\ge 95$ a11y, best practices, SEO.
-- Reader JS budget $\le 60\text{ KB}$ gzip; character SVG $\le 25\text{ KB}$; comic font $\le 25\text{ KB}$.
-- Playwright E2E passing on 360px mobile viewports with no overflow.
-
-## 3. Don'ts
-- Don't improve advice or invent statistics/hotlines.
-- Don't use external chart libraries or raster character art.
-- Don't put characters, halftone, or ink outlines inside the reading column.
-- Don't animate body text or hijack native scrolling.
-- Don't stop to ask unless fully blocked.
+- The inherited 34 chapters / 765 tips, source translation fidelity, mainland-China notices and legacy source-count checks apply **only to the inherited translation corpus**. They do not prohibit original Indian guides, verified adaptations or Hindi/Marathi/regional scripts.
+- Preserve stable inherited IDs, anchors, progress, attribution and the pinned read-only `source` submodule. Record editorial dispositions for rewritten/retired legacy tips.
+- New Indian guidance requires its own canonical record, exact primary-source locators, jurisdiction, risk, date checked and truthful review status. Do not invent state procedures, eligibility, numbers or professional approval.
+- High-/critical-risk publication must fail closed without required verification and qualified human review. Existing help-route gates do not cover every legacy public route.
+- Separate supported national content from explicitly unsupported state/UT overlays. Localization must independently verify safety-critical numerals and negation.
+- Preserve privacy, accessibility, responsive navigation, internal links and reader progress. Plus and Minus never give advice or joke about sensitive subjects; keep the reading column free of disruptive decoration.
+- Run scoped tests on the changed commit, record failures and keep epic checkboxes truthful. Do not silently merge.
