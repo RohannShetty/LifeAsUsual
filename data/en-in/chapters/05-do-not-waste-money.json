@@ -60,7 +60,7 @@
       "id": "5-3",
       "chapter": 5,
       "tip": 3,
-      "title": "Your EPF is not only for buying a home: it can also pay rent, a housing loan, medical bills and some life events",
+      "title": "Use EPF partial withdrawals only for eligible needs, and check the current rules",
       "tags": {
         "money": "Free",
         "time": "Quick",
@@ -74,11 +74,11 @@
       "disputed": false,
       "stillVerifying": false,
       "cost": "No fee on the EPFO portal. A bank or employer may ask for documents. An agent who charges a commission is not necessary.",
-      "inPlainWords": "The Employees' Provident Fund is not limited to a home purchase. EPFO rules allow a member to withdraw or advance funds for buying or building a house, repaying a housing loan, paying rent in some cases, treatment of a serious illness, marriage or education, and a few other purposes. The amount and the conditions depend on the purpose and the number of years of service. Apply through the EPFO member portal, not an agent.",
-      "benefit": "The EPF Scheme, 1952 and the EPFO's circulars set the withdrawal and advance categories. A member can take an advance for a house purchase or construction, for repayment of a housing loan, for rent in specified cases, for illness, for marriage or education, and for a few other needs. The account earns interest declared annually by the EPFO. On death, the nominee or legal heir can withdraw the balance. An early withdrawal reduces the retirement corpus.",
-      "evidenceGrade": "A",
-      "sources": "Employees' Provident Fund Organisation, member portal. <https://www.epfo.gov.in/>; Code on Social Security, 2020, and the Employees' Provident Funds Scheme, 1952 (continued). <https://labour.gov.in/>; Income-tax Department, EPF taxation. <https://www.incometax.gov.in/>",
-      "caveats": "The purpose and the eligible amount change with the EPFO circulars. A withdrawal for a non-eligible purpose can be rejected and may attract tax. Check the passbook and the UAN before applying.",
+      "inPlainWords": "EPF is not only a lump sum you access when leaving a job. The Government’s 31 October 2026 summary describes partial withdrawals for specified needs such as housing, higher education, marriage and medical treatment, subject to conditions. It does not establish that rent, a home-loan payment or every housing expense qualifies. Check the latest EPFO instructions and your own eligibility before applying.",
+      "benefit": "The 31 October 2026 Government summary says the minimum service requirement for partial withdrawals is 12 months and describes a withdrawal limit of up to 75% of the PF balance. A 19 November 2026 Central Board release records approval to reduce the minimum retained balance from 25% to 10%, but the effective date and implementing amendment were not established in this source pass. Check the current EPFO instructions before relying on either limit. Any partial withdrawal reduces the amount left for retirement.",
+      "evidenceGrade": "B",
+      "sources": "Ministry of Labour & Employment, PIB backgrounder “India’s Social Security Coverage”, 31 October 2026, Release ID 2330727, paragraphs on EPF Scheme 2026 and partial withdrawals. <https://www.pib.gov.in/PressReleaseIframePage.aspx?PRID=2330727&lang=2&reg=3>; Ministry of Labour & Employment, PIB, 238th Central Board of Trustees meeting, 13 October 2025, Release ID 2178522, partial-withdrawal categories, 12-month minimum service and 25% minimum retained balance. <https://www.pib.gov.in/PressReleasePage.aspx?PRID=2178522&lang=1&reg=3>; Ministry of Labour & Employment, PIB, 240th Central Board of Trustees meeting, 19 November 2026, Release ID 2338667, Board approval to reduce the minimum retained balance from 25% to 10%; the release does not state an effective date or supply the implementing amendment. <https://www.pib.gov.in/PressReleseDetailm.aspx?PRID=2338667&lang=1&reg=3>",
+      "caveats": "The PIB backgrounder is a Government summary, not the full statutory EPF Scheme 2026 text. Purpose-specific eligibility, documentation and current operational limits must be checked in the latest EPFO instructions or Member Portal. The 19 November 2026 Board approval to reduce the retained minimum from 25% to 10% had no readable effective date or implementing amendment in this source pass. Do not assume rent or home-loan payments are covered. A partial withdrawal reduces retirement savings.",
       "reviewStatus": "source-checked"
     },
     {
