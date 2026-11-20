@@ -50,7 +50,16 @@ async function staleWhileRevalidate(request) {
       return response;
     })
     .catch(() => null);
-  return cached || network || fetch(request);
+  // A rejected fetch resolves to null above. Returning that null from respondWith
+  // violates the FetchEvent contract (it requires a Response) and produces an
+  // opaque service-worker error when an uncached asset is requested offline.
+  // Cached assets remain available while the background refresh fails.
+  if (cached) return cached;
+  const response = await network;
+  return response || new Response('Asset unavailable offline', {
+    status: 503,
+    headers: { 'Content-Type': 'text/plain; charset=utf-8' },
+  });
 }
 
 self.addEventListener('fetch', (event) => {
