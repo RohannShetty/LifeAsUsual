@@ -147,7 +147,7 @@ Mark **Owner action needed** only for: (a) factual confirmation of an alleged pe
 - [x] The historical failure in [run 44374495592](https://github.com/RohannShetty/LifeAsUsual/actions/runs/44374495592) is no longer an open PR blocker. PR #26 merged and its exact-head India verification [run 44495559340](https://github.com/RohannShetty/LifeAsUsual/actions/runs/44495559340) passed.
 - [x] PR #27 fixed the `recallDueAt` millisecond race with deterministic regression coverage; the recorded bead matrix was 12/12 and the full suite passed.
 - [x] The current master Playwright matrix passed on SHA `7861d9d` in [run 44729019206](https://github.com/RohannShetty/LifeAsUsual/actions/runs/44729019206).
-- [ ] Reopen this task only if a new exact-head regression appears. Real-device touch/visual validation remains separately open under P0.3.
+**Status:** automated recall-deck regression work is closed on the verified master baseline. Reopen only if a new exact-head failure appears. Real-device touch/visual validation remains separately open under P0.3.
 
 ### P0.3 — Mobile reading map issue #3
 - [ ] Inspect pointer target and nearest-bead calculations; account for nav overlays, adjacent 44px hit targets, scroll, JS readiness and reduced-JS mode.
@@ -174,8 +174,9 @@ Mark **Owner action needed** only for: (a) factual confirmation of an alleged pe
 
 ### P0.6 — Historical content/instruction reconciliation
 - [x] Preserve the old root plan at `docs/history/legacy-reading-edition-plan.md` and migrate the active root plan to the India-first P0–P9 plan (#28).
-- [x] Reconcile `AGENTS.md`, `.cursor/rules/project.mdc`, `BRIEF.md`, OpenSpec references and active scripts with the India-first scope through PRs #26, #28, #31 and #32.
+- [x] Reconcile `AGENTS.md`, `.cursor/rules/project.mdc`, `BRIEF.md` and the root plan with the India-first scope through PRs #26, #28 and #31.
 - [x] Add deterministic instruction-drift checks to precheck (#32); keep review-status integrity checks separate.
+- [ ] Recheck OpenSpec proposal/task records for stale English-only, China-translation or legacy-release requirements; PR #14 is a design record, not proof that every task is implemented.
 - [ ] Reconcile the upstream pinned submodule's historical 17-commit delta with the editorial report; do not import it blindly.
 - [ ] Finish Chapter 4 D1–D7 owner decisions and the prioritized claim-safety audit. The MoSPI Time Use Survey correction is already in PR #40; remaining recommendations still need owner sign-off.
 - [ ] Fix any remaining stale claims in `data/india-context.json`, `/about` and `/india` only when contradicted by current evidence; do not imply unreviewed chapters are approved.
@@ -505,6 +506,8 @@ Also use script-specific unit tests, source checks, performance/accessibility to
 | Payments/third-party accounts | Approve spend, identity verification and account permissions. | Design compliant, editorially independent integration without activating it. |
 
 **No other already-approved product decisions should be reasked.** A missing owner action must not block independent implementation, source research or test work.
+
+---
 
 ## 3. Agent orchestration and safe autonomy
 
