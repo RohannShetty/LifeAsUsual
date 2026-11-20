@@ -2,6 +2,16 @@
   "schema": "india-first-editorial-decisions/v1",
   "note": "PROPOSED_* marks an editorial recommendation recorded by an automated source audit. It is not an owner decision, a reviewer approval or a publication authorisation; only a named human approval may drop the PROPOSED_ prefix.",
   "decisions": {
+    "1-1": {
+      "disposition": "PROPOSED_REWRITE",
+      "rationale": "Rear-seat belt duty was stated without its legal scope; the Rajya Sabha answer on Rule 138(3) of the Central Motor Vehicles Rules, 1989 covers front-facing rear seats. https://sansad.in/getFile/annex/270/AU3771_33KE6D.pdf",
+      "author": "editorial source audit (agent), owner sign-off pending"
+    },
+    "1-4": {
+      "disposition": "PROPOSED_REWRITE",
+      "rationale": "Hose and regulator were both said to carry a printed replacement interval; no readable PESO or oil-marketing-company page confirms a regulator interval, and OMC consumer pages were script redirects. Text now asserts only the printed hose date.",
+      "author": "editorial source audit (agent), owner sign-off pending"
+    },
     "1-7": {
       "disposition": "PROPOSED_REWRITE",
       "author": "editorial source audit (agent), owner sign-off pending",
@@ -16,6 +26,36 @@
       "disposition": "PROPOSED_REWRITE",
       "author": "editorial source audit (agent), owner sign-off pending",
       "rationale": "Source audit 19 Nov 2026: the two Cochrane reviews are specific and should stay, but the tip also appends MoHFW and WHO home-page links that support no claim. Drop the home pages and cite the specific guidance if an Indian recommendation is added."
+    },
+    "1-17": {
+      "disposition": "PROPOSED_REWRITE",
+      "rationale": "A US two-yearly mammogram programme was described without saying India runs none; NHM NPCDCS offers clinical breast examination from 30 every five years. https://www.nhm.gov.in/images/pdf/NHM/NHM-Guidelines/Operational_Guidelines_NCDs.pdf",
+      "author": "editorial source audit (agent), owner sign-off pending"
+    },
+    "1-18": {
+      "disposition": "PROPOSED_REWRITE",
+      "rationale": "A single HPV test was said to buy five years of protection, which could discourage indicated follow-up; India’s 2026 rollout plans testing twice in a lifetime at 35 and 45. https://www.nhm.gov.in/New-Update-2025-26/Immunization/Operational-Guidelines/Operational-Guidelines-for-Roll-Out-of-HPV-Vaccination-CampaignFebruary-2026.pdf",
+      "author": "editorial source audit (agent), owner sign-off pending"
+    },
+    "1-38": {
+      "disposition": "PROPOSED_REWRITE",
+      "rationale": "An ICTC was said to refer readers to a PrEP prescriber; national technical guidelines place PrEP initiation at ART centres and HIV clinics, and public-sector access is not universal. https://naco.mohfw.gov.in/wp-content/uploads/2026/08/National-Technical-GuidelinesWeb-1.pdf",
+      "author": "editorial source audit (agent), owner sign-off pending"
+    },
+    "1-45": {
+      "disposition": "PROPOSED_REWRITE",
+      "rationale": "Title told every adult to screen; NVHCP tests people with risk factors and offers free treatment. https://nvhcp.mohfw.gov.in/common_libs/Operational_Guidelines.pdf",
+      "author": "editorial source audit (agent), owner sign-off pending"
+    },
+    "1-46": {
+      "disposition": "PROPOSED_REWRITE",
+      "rationale": "“Over half of all confined space fatalities are would-be rescuers” overstates the cited NIOSH investigations, which report about a third; 108 was also presented as universal when it is a state ambulance service.",
+      "author": "editorial source audit (agent), owner sign-off pending"
+    },
+    "1-48": {
+      "disposition": "PROPOSED_REWRITE",
+      "rationale": "“Indian kitchens ferment rice, dal and corn…” had no Indian source; no FSSAI advisory on bongkrekic acid was found. The unsupported generalisation was replaced with the mechanism.",
+      "author": "editorial source audit (agent), owner sign-off pending"
     },
     "4-13": {
       "disposition": "PROPOSED_REWRITE",
