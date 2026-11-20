@@ -6,14 +6,14 @@
 - Present in current India edition: **765**
 - Missing from edition (requiring mapping): **0**
 - New India-only IDs (outside inherited corpus): **0**
-- Editorial decisions pending: **737**
+- Editorial decisions pending: **729**
 - Tips flagged for further inspection by keyword triage: **562** (not verified defects)
 
 ## Chapter queue
 
 | Chapter | Current title | Inherited IDs | Flagged candidates | Unassessed |
 |---|---|---:|---:|---:|
-| 1 | Do Not Die Early | 48 | 48 | 45 |
+| 1 | Do Not Die Early | 48 | 48 | 37 |
 | 2 | Do Not Die Slowly | 47 | 25 | 47 |
 | 3 | Do Not Waste Energy | 27 | 4 | 27 |
 | 4 | Do Not Waste Time | 18 | 2 | 13 |
