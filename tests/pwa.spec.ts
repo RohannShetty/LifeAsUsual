@@ -38,4 +38,36 @@ test.describe('installable offline shell', () => {
     await expect(page.getByRole('heading', { name: 'You are offline' })).toBeVisible();
     await expect(page.getByText(/stored on this device only/)).toBeVisible();
   });
+  test('an uncached asset requested offline returns a 503 instead of a network error', async ({ page, context }) => {
+    await page.goto('/');
+    await page.waitForFunction(() => Boolean(navigator.serviceWorker.controller), null, { timeout: 15000 });
+    await context.setOffline(true);
+    const result = await page.evaluate(async () => {
+      const response = await fetch('/_astro/never-cached-' + Date.now() + '.js');
+      return { status: response.status, type: response.headers.get('content-type'), body: await response.text() };
+    });
+    expect(result.status).toBe(503);
+    expect(result.type).toContain('text/plain');
+    expect(result.body).toContain('unavailable offline');
+    await context.setOffline(false);
+  });
+
+  test('the precached shell opens offline with a real response', async ({ page, context }) => {
+    await page.goto('/');
+    await page.waitForFunction(() => Boolean(navigator.serviceWorker.controller), null, { timeout: 15000 });
+    await context.setOffline(true);
+    const response = await page.goto('/');
+    expect(response?.status()).toBe(200);
+    await expect(page.locator('h1').first()).toBeVisible();
+    await context.setOffline(false);
+  });
+
+  test('offline navigation to an unvisited page falls back to the offline page', async ({ page, context }) => {
+    await page.goto('/');
+    await page.waitForFunction(() => Boolean(navigator.serviceWorker.controller), null, { timeout: 15000 });
+    await context.setOffline(true);
+    await page.goto('/chapters/05-do-not-waste-money/');
+    await expect(page.getByRole('heading', { name: 'You are offline' })).toBeVisible();
+    await context.setOffline(false);
+  });
 });
