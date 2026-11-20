@@ -121,6 +121,46 @@
       "disposition": "PROPOSED_REWRITE",
       "author": "editorial source audit (agent), owner sign-off pending",
       "rationale": "Chapter 7 second pass, 19 November 2026: SDRF section 48(1)(a) and immediate-relief scope, NDRF section 46, and NFBS Rs 20,000 confirmed at ndmindia.mha.gov.in and PIB 2187327. Fixed the NFBS sentence to include the 18-59 age band and BPL condition, and qualified the opening as no universal grant. CMRF legal basis, collector powers and processing times remain unverified."
+    },
+    "13-3": {
+      "disposition": "PROPOSED_REWRITE",
+      "author": "editorial source audit (agent), owner sign-off pending",
+      "rationale": "Chapter 13 safety pass, 20 November 2026: the 108 wording was a generalisation. ERSS 112 confirmed on the MHA page; 108 now described as operating in many but not all states. The chapter 112.gov.in citation is unreadable (self-signed certificate) and should be replaced by the MHA ERSS page."
+    },
+    "13-9": {
+      "disposition": "PROPOSED_REWRITE",
+      "author": "editorial source audit (agent), owner sign-off pending",
+      "rationale": "Chapter 13 safety pass, 20 November 2026: removed an unsourced head CT price (\"a few hundred rupees\"). The Ottawa SAH rule percentages remain as published; the rupee figure had no Indian source."
+    },
+    "13-10": {
+      "disposition": "PROPOSED_REWRITE",
+      "author": "editorial source audit (agent), owner sign-off pending",
+      "rationale": "Chapter 13 safety pass, 20 November 2026: removed an unsourced CT price band (Rs 2,800-4,300). Clinical content unchanged."
+    },
+    "13-11": {
+      "disposition": "PROPOSED_REWRITE",
+      "author": "editorial source audit (agent), owner sign-off pending",
+      "rationale": "Chapter 13 safety pass, 20 November 2026: removed an unsourced leg-vein ultrasound price band (Rs 1,400-2,800). ICOPER and WHO figures unchanged."
+    },
+    "13-15": {
+      "disposition": "PROPOSED_REWRITE",
+      "author": "editorial source audit (agent), owner sign-off pending",
+      "rationale": "Chapter 13 safety pass, 20 November 2026: removed the promise that 112 responders can bring epinephrine; no Indian emergency-service page documents carrying it. Now advises calling 112, stating suspected anaphylaxis, and using a prescribed auto-injector. Still needs clinical review before any human-reviewed label."
+    },
+    "13-20": {
+      "disposition": "PROPOSED_REWRITE",
+      "author": "editorial source audit (agent), owner sign-off pending",
+      "rationale": "Chapter 13 safety pass, 20 November 2026: added the AIIMS National Poisons Information Centre 24x7 toll-free helpline 1800 116 117, verified on aiims.edu. Prior text had no Indian poison-centre route."
+    },
+    "13-23": {
+      "disposition": "PROPOSED_REWRITE",
+      "author": "editorial source audit (agent), owner sign-off pending",
+      "rationale": "Chapter 13 safety pass, 20 November 2026: replaced a quoted blanket \"do not give water\" line that contradicted NDMA heat-wave guidance. Now: cool first; ORS, lemon sarbat or lightly salted water in small sips if fully conscious; nothing by mouth if unconscious or confused."
+    },
+    "13-30": {
+      "disposition": "PROPOSED_REWRITE",
+      "author": "editorial source audit (agent), owner sign-off pending",
+      "rationale": "Chapter 13 safety pass, 20 November 2026: removed the instruction to head outside during shaking. NDMA says stay inside until the shaking stops; most injuries occur when occupants move or try to leave. Armenian evacuation study retained with its limits; no longer used to justify running out."
     }
   }
 }
