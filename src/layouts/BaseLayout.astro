@@ -90,6 +90,21 @@ const pageType = pageTypeFor(currentPath, import.meta.env.BASE_URL);
         }, true);
       }
     </script>
+    <script is:inline>
+      // Tell the reader when a cached page cannot be rechecked. Runs on every
+      // page load because view transitions replace the notice element.
+      (function () {
+        function update() {
+          var notice = document.querySelector('[data-offline-notice]');
+          if (!notice) return;
+          notice.hidden = navigator.onLine !== false;
+        }
+        update();
+        window.addEventListener('offline', function () { setTimeout(update, 0); });
+        window.addEventListener('online', function () { setTimeout(update, 0); });
+        document.addEventListener('astro:page-load', update);
+      })();
+    </script>
     <script is:inline define:vars={{ baseUrl: import.meta.env.BASE_URL, isProd: import.meta.env.PROD }}>
       // Register the offline shell only for the built site, never in dev where
       // cached HTML would hide live edits.
@@ -111,6 +126,10 @@ const pageType = pageTypeFor(currentPath, import.meta.env.BASE_URL);
     <!-- Main Content Column -->
     <div class="app-layout-shell">
       <main class="reading-column" id="main-content" tabindex="-1" data-pagefind-body>
+        <p class="offline-notice" data-offline-notice hidden>
+          You are offline. This page came from your device, so a source, date or figure may
+          have changed since it was saved. Reconnect before you act on a time-sensitive claim.
+        </p>
         <slot />
       </main>
     </div>
@@ -171,6 +190,24 @@ const pageType = pageTypeFor(currentPath, import.meta.env.BASE_URL);
 
   .skip-link:focus-visible {
     top: 1rem;
+  }
+
+  /* Shown only while the device is offline: cached text cannot be rechecked. */
+  .offline-notice {
+    margin: 0 auto 1.5rem;
+    max-width: var(--measure-reading, 46rem);
+    padding: 0.85rem 1rem;
+    border-left: 3px solid var(--color-marigold, #e8b04b);
+    border-radius: 4px;
+    background: color-mix(in srgb, var(--color-marigold, #e8b04b) 14%, transparent);
+    color: var(--theme-text);
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    line-height: 1.45;
+  }
+
+  .offline-notice[hidden] {
+    display: none;
   }
 
   .app-layout-shell {

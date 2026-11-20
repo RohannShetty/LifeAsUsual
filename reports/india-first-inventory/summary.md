@@ -6,7 +6,7 @@
 - Present in current India edition: **765**
 - Missing from edition (requiring mapping): **0**
 - New India-only IDs (outside inherited corpus): **0**
-- Editorial decisions pending: **733**
+- Editorial decisions pending: **729**
 - Tips flagged for further inspection by keyword triage: **562** (not verified defects)
 
 ## Chapter queue
@@ -19,7 +19,7 @@
 | 4 | Do Not Waste Time | 18 | 2 | 13 |
 | 5 | Do Not Waste Money | 50 | 50 | 43 |
 | 6 | The Negative List | 35 | 18 | 35 |
-| 7 | How to Get By in India When You Have No Money | 23 | 23 | 14 |
+| 7 | How to Get By in India When You Have No Money | 23 | 23 | 10 |
 | 8 | Law and Property Safety | 46 | 46 | 46 |
 | 9 | Everyday Legal Red Lines | 29 | 29 | 29 |
 | 10 | Are Dating and Marriage Worth It | 23 | 8 | 23 |

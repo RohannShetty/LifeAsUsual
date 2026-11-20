@@ -46,3 +46,41 @@ India Code (Akamai "Access Denied", then an Angular single-page app whose Act PD
 ### Review status
 
 The four tips still carry review status `independently-checked` and grades A or B. This pass found claims in each that no readable source supported, which confirms that the label describes automated citation checking, not passage-level verification by a named reviewer. Dispositions recorded as PROPOSED_REWRITE for all four.
+
+## Third pass, 20 November 2026 — tips 7-10, 7-11, 7-14 to 7-23
+
+Read-only audit of the remaining chapter-7 tips against official Indian sources. Six tips had their core claims verified with readable passages (7-10, 7-14, 7-17, 7-20, 7-22, 7-23), three partially (7-15, 7-16, 7-18), one is mostly unreadable (7-11), and two carried stale or overbroad statements that were corrected in this pass (7-19, 7-21).
+
+### Corrections applied
+
+| Tip | What it said | Evidence | What it says now |
+| --- | --- | --- | --- |
+| 7-19 | "India has no individual bankruptcy law in force"; the individual insolvency chapter "has never been brought into force" | IBBI: Part III of the IBC was notified for personal guarantors to corporate debtors from 1 December 2019 | no general personal-bankruptcy route for ordinary individuals; Part III is partly in force for personal guarantors only; the fresh-start framework is not operational |
+| 7-21 | rain basera "run under the urban shelter programme" | PIB 2220349: "The implementation period of DAY-NULM ended on 30.09.2024"; 1,995 shelters, about 1.41 lakh beds built | shelters were built under DAY-NULM, whose implementation period ended on 30 September 2024, and are now run by urban local bodies, states or NGOs; no live central shelter mission is implied |
+| 7-20 | "pre-existing waiting period capped at 36 months"; "offer health cover to all ages" | IRDAI master circular 29 May 2024: moratorium is 60 months and claims are not contestable after it except for established fraud; the circular does not state a 36-month cap, and requires products catering to all ages rather than guaranteed acceptance | cap no longer asserted (the policy is the source); moratorium stated as 60 months; "products catering to all ages" |
+| 7-11 | "no temporary Aadhaar", "no 60-day rule", email "legally equivalent" to the card | UIDAI page lists e-Aadhaar download and describes it as a password-protected, digitally signed copy; the UIDAI FAQ, ECI and Parivahan pages could not be loaded | asserts only what UIDAI states, and records in the caveat that the PAN, e-EPIC and duplicate-licence steps are unverified |
+
+### Verified in this pass
+
+| Tip | Claim | Source |
+| --- | --- | --- |
+| 7-10 | PM-JAY Rs 5 lakh per household, cashless; pre-existing conditions from day one; 3 days pre- and 15 days post-hospitalisation | PIB 2185049; PIB NoteId 153181 |
+| 7-10 | ESIC sickness benefit up to 91 days a year; employment injury moved to Code chapter VII; codes in force 21.11.2025 | esic.gov.in; Social Security Code 2020; PIB 2223852 |
+| 7-14 | job-search coaching meta-analysis, 47 studies, OR 2.67 (95% CI 2.06-3.47) | Liu, Huang & Wang (2014), Psychological Bulletin 140(4):1009-41, DOI 10.1037/a0035923 |
+| 7-15 | overseas recruitment agents registered, charges capped at 45 days' wages up to Rs 20,000; unregulated deposit schemes banned | mea.gov.in/ras; BUDS Act 2019 s.3 |
+| 7-17 | food share of household spending 46% rural, 39% urban (HCES 2022-23) | PIB 2026672 |
+| 7-18 | EPS needs 10 years of eligible service for pension, otherwise withdrawal benefit | epfo.gov.in pension scheme page |
+| 7-19 | RBI Integrated Ombudsman Scheme 2021 | RBI notification 12192 |
+| 7-20 | lifetime renewability; 60-month moratorium not contestable except established fraud | IRDAI health insurance FAQ; IRDAI master circular, 29 May 2024 |
+| 7-21 | One Stop Centre services and 181 helpline | PIB factsheet 149109 |
+| 7-22 | OSH Code s.45(1) 50-worker threshold, s.53 principal-employer welfare, s.55(3) wage liability | OSH Code 2020 gazette PDF |
+| 7-23 | recovery calls only 8 a.m. to 7 p.m.; KFS and cooling-off for digital loans | RBI 12 August 2022 recovery circular; RBI digital lending master direction |
+
+### Left unverified, and why
+
+- 7-10 Rashtriya Arogya Nidhi and CM Relief Fund: the MoHFW page is a JavaScript shell; no readable passage.
+- 7-11 PAN reprint, e-EPIC, duplicate licence, police lost-document report: UIDAI FAQ is blocked by a web application firewall; ECI and Parivahan are script-only.
+- 7-14 free NCS counselling; 7-15 Prize Chits Act, Code on Wages deductions, Usurious Loans Act, state moneylending Acts; 7-16 DDA/MHADA lotteries and "applying is free"; 7-17 Amma/Indira canteens; 7-18 EPF interest and ESIC cessation; 7-19 JJ Act s.24, CICRA, Lok Adalat debt relief; 7-20 Arogya Sanjeevani and Insurance Act s.45; 7-22 BOCW, Shops Act, domestic-work exclusion.
+- 7-18 EPS paragraph is verified but the EDLI and EPF interest claims are not.
+
+Everything above is an automated pass with recorded sources. No tip in this chapter has a named human reviewer, and none of these edits constitutes legal, financial or medical review.

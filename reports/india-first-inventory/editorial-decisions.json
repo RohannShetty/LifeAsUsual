@@ -2,25 +2,20 @@
   "schema": "india-first-editorial-decisions/v1",
   "note": "PROPOSED_* marks an editorial recommendation recorded by an automated source audit. It is not an owner decision, a reviewer approval or a publication authorisation; only a named human approval may drop the PROPOSED_ prefix.",
   "decisions": {
-    "5-1": {
+    "1-7": {
       "disposition": "PROPOSED_REWRITE",
       "author": "editorial source audit (agent), owner sign-off pending",
-      "rationale": "Chapter 5 batch 04, re-checked 19 November 2026 against the RBI Digital Payments - E-mandate Framework, 2026 (RBI/DPSS/2026-27/396, 21 April 2026, https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=13374), sections 6 and 8: pre-transaction notification at least 24 hours before the debit and an opt-out validated by AFA; AFA is required above Rs 15,000 per transaction, while insurance premiums, mutual-fund subscriptions and credit-card bill payments are exempt from AFA up to Rs 1,00,000 per transaction. The unconditional claim that a merchant cannot force a renewal after cancellation was softened to the issuer obligation; the Rs 1,00,000 exceptions were added."
+      "rationale": "Source audit 19 Nov 2026: the tip cites the MoHFW home page (https://mohfw.gov.in/) and the WHO home page (https://www.who.int/) beside a specific blood-pressure target. A home page carries no recommendation, so it cannot support this claim. Replace them with the specific guideline page that states the target, or remove them; do not invent a citation. The Lancet review DOI stays."
     },
-    "5-4": {
+    "1-8": {
       "disposition": "PROPOSED_REWRITE",
       "author": "editorial source audit (agent), owner sign-off pending",
-      "rationale": "Chapter 5 batch 04, corrected 19 November 2026: the 7 May 2026 Fourth Amendment was only a draft. The final Telecom Consumers Complaint Redressal (Fourth Amendment) Regulations, 2026 were issued on 2 November 2026 (PIB Release ID 2331704, https://www.pib.gov.in/PressReleasePage.aspx?PRID=2331704; TRAI regulation https://trai.gov.in/sites/default/files/2026-11/Regulation_02112026.pdf). Salient features: complaint centres round the clock with at least 16 hours of human assistance; complaints and appeals through the provider app, website and portal; appeal filing window cut from 30 to 15 days after disposal; appellate authority of regular management employees with 5 years experience deciding within 15 days; PwD desks and accessibility; feedback surveys, oversight committees, regulatory review and financial disincentives. The three-level route is retained. The notification commencement clause could not be read from the rendered PDF, so the tip tells readers to confirm commencement before relying on the 15-day window."
+      "rationale": "Source audit 19 Nov 2026: the only substantive citation is the US Preventive Services Task Force recommendation, which is written for the US health system, and it is followed by unsupported MoHFW and WHO home-page links. Replace with the Indian screening guidance that applies to this reader (for example the ministry or ICMR recommendation) once its exact page is identified, and remove the home pages. Jurisdiction mismatch is the reason for the rewrite, not a challenge to the underlying screening advice."
     },
-    "5-8": {
+    "1-13": {
       "disposition": "PROPOSED_REWRITE",
       "author": "editorial source audit (agent), owner sign-off pending",
-      "rationale": "Chapter 5 batch 04, corrected 19 November 2026: replaced the RBI homepage citation with the 2026 E-mandate Framework (https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=13374) and removed the categorical claim that a guardian can demand money back because a minor's contract is void. An agreement with a minor is void, which can support a refund claim, but recovery depends on the platform process and proof, so the text now says a refund is not automatic. The 5-9 title was aligned to challenge rather than automatic reversal."
-    },
-    "7-12": {
-      "disposition": "PROPOSED_REWRITE",
-      "author": "editorial source audit (agent), owner sign-off pending",
-      "rationale": "P3 job-loss pilot, corrected 19 November 2026: the five-desk sequence is retained, but the 12-month final-settlement statement now records that the EPFO Board approved a two-month wait and a 10% minimum retained balance on 19 November 2026 (PIB Release ID 2338531) and that the approval needs a notified amendment before it changes payments. The 75% anytime withdrawal stays from the October 2025 reform (PIB PRID 2179689); gratuity eligibility and fixed-term treatment stay from PIB PRID 2193100."
+      "rationale": "Source audit 19 Nov 2026: the two Cochrane reviews are specific and should stay, but the tip also appends MoHFW and WHO home-page links that support no claim. Drop the home pages and cite the specific guidance if an Indian recommendation is added."
     },
     "4-13": {
       "disposition": "PROPOSED_REWRITE",
@@ -47,15 +42,25 @@
       "author": "editorial source audit (agent), owner sign-off pending",
       "rationale": "Packet D6: China time-use figures were silently replaced with Stutzer and Frey 2008 commute evidence. Add one provenance sentence for the substitution rather than presenting the result as an Indian finding."
     },
-    "7-1": {
+    "5-1": {
       "disposition": "PROPOSED_REWRITE",
       "author": "editorial source audit (agent), owner sign-off pending",
-      "rationale": "P3 chapter-7 audit, corrected 19 November 2026: the tip said EPFO pays the accumulated fund after two months of unemployment, while tip 7-12 said the final settlement waits 12 months. The contradiction is resolved to the operational rule (12-month wait, 75% available earlier) plus the 19 November 2026 EPFO Board approval of a two-month wait and a 10% minimum retained balance, which needs a notified amendment before it changes payments (PIB Release ID 2338531, https://www.pib.gov.in/PressReleasePage.aspx?PRID=2338531). ABVKY figures and the 30 June 2027 validity remain from https://esic.gov.in/unemployment-allowance."
+      "rationale": "Chapter 5 batch 04, re-checked 19 November 2026 against the RBI Digital Payments - E-mandate Framework, 2026 (RBI/DPSS/2026-27/396, 21 April 2026, https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=13374), sections 6 and 8: pre-transaction notification at least 24 hours before the debit and an opt-out validated by AFA; AFA is required above Rs 15,000 per transaction, while insurance premiums, mutual-fund subscriptions and credit-card bill payments are exempt from AFA up to Rs 1,00,000 per transaction. The unconditional claim that a merchant cannot force a renewal after cancellation was softened to the issuer obligation; the Rs 1,00,000 exceptions were added."
     },
     "5-2": {
       "disposition": "PROPOSED_KEEP",
       "author": "editorial source audit (agent), owner sign-off pending",
       "rationale": "Source audit 19 Nov 2026: the e-filing portal (https://www.incometax.gov.in/) is live and the tip keeps every date and deduction claim hedged (\"normally 31 July and is sometimes extended\", \"check the other triggers\"), with the old-versus-new regime choice stated in the benefit and caveat. Nothing load-bearing is asserted as a fixed number that the official material contradicts. Keep; add no unsourced figure."
+    },
+    "5-4": {
+      "disposition": "PROPOSED_REWRITE",
+      "author": "editorial source audit (agent), owner sign-off pending",
+      "rationale": "Chapter 5 batch 04, corrected 19 November 2026: the 7 May 2026 Fourth Amendment was only a draft. The final Telecom Consumers Complaint Redressal (Fourth Amendment) Regulations, 2026 were issued on 2 November 2026 (PIB Release ID 2331704, https://www.pib.gov.in/PressReleasePage.aspx?PRID=2331704; TRAI regulation https://trai.gov.in/sites/default/files/2026-11/Regulation_02112026.pdf). Salient features: complaint centres round the clock with at least 16 hours of human assistance; complaints and appeals through the provider app, website and portal; appeal filing window cut from 30 to 15 days after disposal; appellate authority of regular management employees with 5 years experience deciding within 15 days; PwD desks and accessibility; feedback surveys, oversight committees, regulatory review and financial disincentives. The three-level route is retained. The notification commencement clause could not be read from the rendered PDF, so the tip tells readers to confirm commencement before relying on the 15-day window."
+    },
+    "5-8": {
+      "disposition": "PROPOSED_REWRITE",
+      "author": "editorial source audit (agent), owner sign-off pending",
+      "rationale": "Chapter 5 batch 04, corrected 19 November 2026: replaced the RBI homepage citation with the 2026 E-mandate Framework (https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=13374) and removed the categorical claim that a guardian can demand money back because a minor's contract is void. An agreement with a minor is void, which can support a refund claim, but recovery depends on the platform process and proof, so the text now says a refund is not automatic. The 5-9 title was aligned to challenge rather than automatic reversal."
     },
     "5-13": {
       "disposition": "PROPOSED_KEEP",
@@ -72,35 +77,10 @@
       "author": "editorial source audit (agent), owner sign-off pending",
       "rationale": "Source audit 19 Nov 2026: the RBI LRS FAQ (https://rbi.org.in/SCRIPTS/FAQDisplay.aspx?Id=115) states the USD 250,000 per financial year limit in an individual's own capacity and the sole-proprietorship restriction, matching the tip's caveat. The tip already tells the reader the cap and purposes change with each budget. Keep."
     },
-    "1-7": {
+    "7-1": {
       "disposition": "PROPOSED_REWRITE",
       "author": "editorial source audit (agent), owner sign-off pending",
-      "rationale": "Source audit 19 Nov 2026: the tip cites the MoHFW home page (https://mohfw.gov.in/) and the WHO home page (https://www.who.int/) beside a specific blood-pressure target. A home page carries no recommendation, so it cannot support this claim. Replace them with the specific guideline page that states the target, or remove them; do not invent a citation. The Lancet review DOI stays."
-    },
-    "1-8": {
-      "disposition": "PROPOSED_REWRITE",
-      "author": "editorial source audit (agent), owner sign-off pending",
-      "rationale": "Source audit 19 Nov 2026: the only substantive citation is the US Preventive Services Task Force recommendation, which is written for the US health system, and it is followed by unsupported MoHFW and WHO home-page links. Replace with the Indian screening guidance that applies to this reader (for example the ministry or ICMR recommendation) once its exact page is identified, and remove the home pages. Jurisdiction mismatch is the reason for the rewrite, not a challenge to the underlying screening advice."
-    },
-    "1-13": {
-      "disposition": "PROPOSED_REWRITE",
-      "author": "editorial source audit (agent), owner sign-off pending",
-      "rationale": "Source audit 19 Nov 2026: the two Cochrane reviews are specific and should stay, but the tip also appends MoHFW and WHO home-page links that support no claim. Drop the home pages and cite the specific guidance if an Indian recommendation is added."
-    },
-    "7-7": {
-      "disposition": "PROPOSED_REWRITE",
-      "author": "editorial source audit (agent), owner sign-off pending",
-      "rationale": "Chapter 7 source audit, 19 November 2026: NFSA quantities (5 kg per person per month priority households, 35 kg per household Antyodaya, 75 per cent rural and 50 per cent urban caps) match PIB Release 2179514, which also states the grain is presently free of cost; the tip was changed from a Centre-fixed price to the Centre-set price that is presently free. Section 3 and 4 references, the food-security allowance and the school-meal sentence had no readable primary passage and remain open review items."
-    },
-    "7-8": {
-      "disposition": "PROPOSED_REWRITE",
-      "author": "editorial source audit (agent), owner sign-off pending",
-      "rationale": "Chapter 7 source audit, 19 November 2026: the UDID scheme page states fees NIL and free speed-post delivery nationally, so the tip no longer says most states charge no fee. IGNDPS age band, BPL requirement and central rate were confirmed against PIB Release 2187327. State caregiver allowances remain unverified and are described only as varying by state."
-    },
-    "7-13": {
-      "disposition": "PROPOSED_REWRITE",
-      "author": "editorial source audit (agent), owner sign-off pending",
-      "rationale": "Chapter 7 source audit, 19 November 2026: PIB Release 2294856 says stipend support is credited into apprentices bank accounts through the National Apprenticeship Portal, so the tip no longer says NAPS reimburses the employer; the 25 per cent cap of Rs 1,500 per month is retained. PM-DAKSH beneficiary list updated to the current PIB Release 2223175 wording (SC, OBC, EWS, De-notified Tribes, Safai Karamcharis). PMKVY free-assessment and verifiable-certificate claims were not confirmed and remain open."
+      "rationale": "P3 chapter-7 audit, corrected 19 November 2026: the tip said EPFO pays the accumulated fund after two months of unemployment, while tip 7-12 said the final settlement waits 12 months. The contradiction is resolved to the operational rule (12-month wait, 75% available earlier) plus the 19 November 2026 EPFO Board approval of a two-month wait and a 10% minimum retained balance, which needs a notified amendment before it changes payments (PIB Release ID 2338531, https://www.pib.gov.in/PressReleasePage.aspx?PRID=2338531). ABVKY figures and the 30 June 2027 validity remain from https://esic.gov.in/unemployment-allowance."
     },
     "7-2": {
       "disposition": "PROPOSED_REWRITE",
@@ -121,6 +101,46 @@
       "disposition": "PROPOSED_REWRITE",
       "author": "editorial source audit (agent), owner sign-off pending",
       "rationale": "Chapter 7 second pass, 19 November 2026: SDRF section 48(1)(a) and immediate-relief scope, NDRF section 46, and NFBS Rs 20,000 confirmed at ndmindia.mha.gov.in and PIB 2187327. Fixed the NFBS sentence to include the 18-59 age band and BPL condition, and qualified the opening as no universal grant. CMRF legal basis, collector powers and processing times remain unverified."
+    },
+    "7-7": {
+      "disposition": "PROPOSED_REWRITE",
+      "author": "editorial source audit (agent), owner sign-off pending",
+      "rationale": "Chapter 7 source audit, 19 November 2026: NFSA quantities (5 kg per person per month priority households, 35 kg per household Antyodaya, 75 per cent rural and 50 per cent urban caps) match PIB Release 2179514, which also states the grain is presently free of cost; the tip was changed from a Centre-fixed price to the Centre-set price that is presently free. Section 3 and 4 references, the food-security allowance and the school-meal sentence had no readable primary passage and remain open review items."
+    },
+    "7-8": {
+      "disposition": "PROPOSED_REWRITE",
+      "author": "editorial source audit (agent), owner sign-off pending",
+      "rationale": "Chapter 7 source audit, 19 November 2026: the UDID scheme page states fees NIL and free speed-post delivery nationally, so the tip no longer says most states charge no fee. IGNDPS age band, BPL requirement and central rate were confirmed against PIB Release 2187327. State caregiver allowances remain unverified and are described only as varying by state."
+    },
+    "7-11": {
+      "disposition": "PROPOSED_REWRITE",
+      "author": "editorial source audit (agent), owner sign-off pending",
+      "rationale": "Chapter 7 third pass, 20 November 2026: removed the unsupported claims that e-Aadhaar is legally equivalent to the card and that there is no temporary card or 60-day rule. Now states only what UIDAI publishes, and records that the PAN, e-EPIC and duplicate-licence steps could not be verified because the portals are blocked or script-only."
+    },
+    "7-12": {
+      "disposition": "PROPOSED_REWRITE",
+      "author": "editorial source audit (agent), owner sign-off pending",
+      "rationale": "P3 job-loss pilot, corrected 19 November 2026: the five-desk sequence is retained, but the 12-month final-settlement statement now records that the EPFO Board approved a two-month wait and a 10% minimum retained balance on 19 November 2026 (PIB Release ID 2338531) and that the approval needs a notified amendment before it changes payments. The 75% anytime withdrawal stays from the October 2025 reform (PIB PRID 2179689); gratuity eligibility and fixed-term treatment stay from PIB PRID 2193100."
+    },
+    "7-13": {
+      "disposition": "PROPOSED_REWRITE",
+      "author": "editorial source audit (agent), owner sign-off pending",
+      "rationale": "Chapter 7 source audit, 19 November 2026: PIB Release 2294856 says stipend support is credited into apprentices bank accounts through the National Apprenticeship Portal, so the tip no longer says NAPS reimburses the employer; the 25 per cent cap of Rs 1,500 per month is retained. PM-DAKSH beneficiary list updated to the current PIB Release 2223175 wording (SC, OBC, EWS, De-notified Tribes, Safai Karamcharis). PMKVY free-assessment and verifiable-certificate claims were not confirmed and remain open."
+    },
+    "7-19": {
+      "disposition": "PROPOSED_REWRITE",
+      "author": "editorial source audit (agent), owner sign-off pending",
+      "rationale": "Chapter 7 third pass, 20 November 2026: the \"no individual bankruptcy law in force\" framing was overbroad. Part III of the IBC has been partly in force since 1 December 2019 for personal guarantors to corporate debtors (IBBI notice); the general individual route and fresh start are not operational. JJ Act s.24 text could not be loaded, so that detail is flagged unverified."
+    },
+    "7-20": {
+      "disposition": "PROPOSED_REWRITE",
+      "author": "editorial source audit (agent), owner sign-off pending",
+      "rationale": "Chapter 7 third pass, 20 November 2026: the 36-month PED cap is not in the IRDAI master circular of 29 May 2024 and is no longer asserted; the 60-month moratorium and the \"products catering to all ages\" wording now follow the circular and IRDAI FAQ."
+    },
+    "7-21": {
+      "disposition": "PROPOSED_REWRITE",
+      "author": "editorial source audit (agent), owner sign-off pending",
+      "rationale": "Chapter 7 third pass, 20 November 2026: replaced the live \"urban shelter programme\" framing with the DAY-NULM record (implementation period ended 30 September 2024; 1,995 shelters, about 1.41 lakh beds) and noted that remaining beds are run by ULBs, states or NGOs."
     },
     "13-3": {
       "disposition": "PROPOSED_REWRITE",
