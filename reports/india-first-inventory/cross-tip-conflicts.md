@@ -1,4 +1,4 @@
-# Cross-tip conflict findings (inherited corpus, checked 19 November 2026)
+# Cross-tip conflict findings (inherited corpus, updated 21 November 2026; earlier checks retain their recorded dates)
 
 Scope: all 34 inherited chapters and 765 tips in data/en-in/chapters/. This is a targeted conflict pass over shared legal, scheme, deadline and threshold claims, not a new architecture audit. Every finding names the tips, the discrepancy, the official source checked, and the action taken or still open.
 
@@ -20,7 +20,9 @@ Scope: all 34 inherited chapters and 765 tips in data/en-in/chapters/. This is a
 | O2 | 7-1, 7-12 | The 19 November 2026 EPFO approval is not yet a notified rule; readers may act on press coverage. | No EPFO circular or Gazette amendment was listed at the checked date. | Re-check EPFO circulars and the Gazette before the next release; update the tips only when notified, and record the notification number and effective date. |
 | O3 | 7-1, 7-12 | ABVKY validity is recorded as 30 June 2027 from the ESIC page; no later extension was checked. | Scheme extensions are published by ESIC circular, not in the tip sources. | Re-check https://esic.gov.in/unemployment-allowance in the next chapter-7 batch; HOLD any stronger claim. |
 
-| O4 | 5-3 | Exact purpose-specific eligibility under the current EPF framework remains unresolved. | PIB Release ID 2330727 (31 Oct 2026) describes broad categories and 12-month/75% limits, but is a summary rather than the full EPF Scheme 2026 text. The 19 Nov 2026 CBT release records approval of a 10% minimum retained balance; the implementing notification/effective date was not established in this pass. | Keep only the broad supported categories; do not promise rent or housing-loan eligibility. Read the current Scheme/Gazette/EPFO instruction before adding purpose-specific tests or the 10% limit. |\n\n## Scan coverage and method
+| O4 | 5-3 | Exact purpose-specific eligibility under the current EPF framework remains unresolved. | PIB Release ID 2330727 (31 Oct 2026) describes broad categories and 12-month/75% limits, but is a summary rather than the full EPF Scheme 2026 text. The 19 Nov 2026 CBT release records approval of a 10% minimum retained balance; the implementing notification/effective date was not established in this pass. | Keep only the broad supported categories; do not promise rent or housing-loan eligibility. Read the current Scheme/Gazette/EPFO instruction before adding purpose-specific tests or the 10% limit. |
+
+## Scan coverage and method
 
 - Tokens scanned across all 765 tips: 12 months, two months, 25%, 75%, 10%, 15,000, 1,00,000/1 lakh, 90 days, 30 days, 15 days, 60 days, six months, one year, five years, ten years, gratuity, minimum balance, EPS/pension, consumer commission, limitation.
 - Each token match was read in its sentence, then compared with the other tips that state the same rule. Numeric coincidences in medical or research claims (for example a 25% mortality change) were excluded as unrelated.
