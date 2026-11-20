@@ -83,5 +83,5 @@ test('EPF tip 5-3 narrows unsupported withdrawal promises and remains an unappro
   assert.equal(row.reviewer_approval, 'NONE');
   assert.equal(row.disposition_candidate, 'HOLD');
   assert.equal(row.evidence_grade_from_edition, 'B');
-  assert.match(row.source_urls, /PRID=2330727/);
+  assert.match(row.source_urls, /NoteId=160661/);
 });
