@@ -14,7 +14,9 @@ on:
   pull_request:
     paths:
       - scripts/india-first-audit.mjs
+      - scripts/verify-inventory.ts
       - tests/india-first-audit.test.mjs
+      - tests/verify-inventory.test.mjs
       - reports/india-first-inventory/**
       - .github/workflows/india-first-inventory*.yml
 permissions:
