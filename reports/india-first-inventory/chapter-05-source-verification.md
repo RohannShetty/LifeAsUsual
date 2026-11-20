@@ -28,7 +28,7 @@ A separate PIB release dated 19 November 2026 reports that the Central Board app
 
 ## Sources inspected
 
-1. **Ministry of Labour & Employment / PIB**, “India’s Social Security Coverage”, 31 October 2026, Release ID 2330727. Relevant sections: Employees' Provident Funds Scheme, 2026; simplified partial withdrawals; 12-month minimum service; up-to-75% withdrawal limit. <https://www.pib.gov.in/PressReleaseIframePage.aspx?PRID=2330727&lang=2&reg=3>
+1. **Ministry of Labour & Employment / PIB Research**, “India’s Social Security Coverage”, posted 31 October 2026, Explainer ID 160661. Relevant sections: Employees' Provident Funds Scheme, 2026; simplified partial withdrawals; 12-month minimum service; up-to-75% withdrawal limit. <https://www.pib.gov.in/PressNoteDetails.aspx?ModuleId=3&NoteId=160661&lang=1&reg=3>
 2. **Ministry of Labour & Employment / PIB**, 238th Central Board of Trustees meeting, 13 October 2025, Release ID 2178522. Relevant paragraphs: three partial-withdrawal categories, 12-month minimum service and 25% minimum retained balance. <https://www.pib.gov.in/PressReleasePage.aspx?PRID=2178522&lang=1&reg=3>
 3. **Ministry of Labour & Employment / PIB**, 240th Central Board of Trustees meeting, 19 November 2026, Release ID 2338667. Relevant paragraph: Board approval to reduce the minimum retained balance from 25% to 10%; the release does not give an effective date or reproduce the implementing amendment. <https://www.pib.gov.in/PressReleseDetailm.aspx?PRID=2338667&lang=1&reg=3>
 4. Earlier same-meeting PIB release, Release ID 2338531, records the same minimum-balance and final-withdrawal changes at 4:59 PM. <https://www.pib.gov.in/PressReleasePage.aspx?PRID=2338531>
