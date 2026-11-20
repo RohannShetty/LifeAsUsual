@@ -77,4 +77,4 @@ Every candidate comes from a named rule in `scripts/india-first-audit.mjs` and n
 ## Audit gaps to resolve in P1
 
 - Chapters with at least one tip carrying no source URL: **0** (rows appear as empty `source_urls` in the inventory).
-No owner-approved editorial dispositions are recorded yet. 49 proposed decisions remain unapproved. 716 tips remain unassessed. P1 exit requires a named human decision (including an explicit HOLD) for every inherited ID.
+- No owner-approved editorial dispositions are recorded yet. 49 proposed decisions remain unapproved. 716 tips remain unassessed. P1 exit requires a named human decision (including an explicit HOLD) for every inherited ID.
