@@ -182,7 +182,7 @@ lines.push("## Audit gaps to resolve in P1");
 lines.push("");
 const gaps = ordered.filter(([, entry]) => entry.noSource > 0);
 lines.push("- Chapters with at least one tip carrying no source URL: **" + gaps.length + "** (rows appear as empty " + BT + "source_urls" + BT + " in the inventory).");
-lines.push(editorialProgressSummary(total, dispositionCounts.UNASSESSED || 0, proposed));
+lines.push("- " + editorialProgressSummary(total, dispositionCounts.UNASSESSED || 0, proposed));
 lines.push("");
 
 fs.writeFileSync(outPath, lines.join("\n"), "utf8");
