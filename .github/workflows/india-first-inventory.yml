@@ -6,13 +6,17 @@ on:
       - feat/india-first-editorial-audit-20261117
     paths:
       - scripts/india-first-audit.mjs
+      - scripts/verify-inventory.ts
       - tests/india-first-audit.test.mjs
+      - tests/verify-inventory.test.mjs
       - reports/india-first-inventory/**
       - .github/workflows/india-first-inventory*.yml
   pull_request:
     paths:
       - scripts/india-first-audit.mjs
+      - scripts/verify-inventory.ts
       - tests/india-first-audit.test.mjs
+      - tests/verify-inventory.test.mjs
       - reports/india-first-inventory/**
       - .github/workflows/india-first-inventory*.yml
 permissions:
@@ -27,6 +31,8 @@ jobs:
           node-version: '22'
       - name: Test legacy ID and review safeguards
         run: node --test tests/india-first-audit.test.mjs
+      - name: Test inventory progress summary
+        run: node --experimental-strip-types --test tests/verify-inventory.test.mjs
       - name: Check deterministic full inventory
         run: node scripts/india-first-audit.mjs --check
       - name: Verify inventory coverage and review queue

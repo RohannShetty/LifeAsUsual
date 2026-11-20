@@ -23,6 +23,18 @@ const ALLOWED_DISPOSITIONS = new Set(["UNASSESSED", "KEEP", "REWRITE", "REPLACE"
 const SEVERITY = ["health-safety", "legal-rights", "financial-benefits"];
 const BT = String.fromCharCode(96);
 
+export function editorialProgressSummary(total: number, unassessed: number, proposed: number): string {
+  const ownerApproved = total - unassessed - proposed;
+  if (ownerApproved < 0) throw new Error("Editorial progress counts exceed the inventory total");
+  const approvedText = ownerApproved === 0
+    ? "No owner-approved editorial dispositions are recorded yet."
+    : ownerApproved + " owner-approved editorial dispositions are recorded.";
+  const proposedText = proposed === 0
+    ? "No proposed decisions remain unapproved."
+    : proposed + " proposed decisions remain unapproved.";
+  return approvedText + " " + proposedText + " " + unassessed + " tips remain unassessed. P1 exit requires a named human decision (including an explicit HOLD) for every inherited ID.";
+}
+
 function parseCsv(text: string): string[][] {
   const rows = [];
   let row = [];
@@ -170,7 +182,7 @@ lines.push("## Audit gaps to resolve in P1");
 lines.push("");
 const gaps = ordered.filter(([, entry]) => entry.noSource > 0);
 lines.push("- Chapters with at least one tip carrying no source URL: **" + gaps.length + "** (rows appear as empty " + BT + "source_urls" + BT + " in the inventory).");
-lines.push("- Every disposition is still " + BT + "UNASSESSED" + BT + ": the queue exists, the editorial decisions do not. P1 exit requires a decision or an explicit HOLD with a named reviewer for each of the 765 IDs.");
+lines.push("- " + editorialProgressSummary(total, dispositionCounts.UNASSESSED || 0, proposed));
 lines.push("");
 
 fs.writeFileSync(outPath, lines.join("\n"), "utf8");

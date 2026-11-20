@@ -77,4 +77,4 @@ Every candidate comes from a named rule in `scripts/india-first-audit.mjs` and n
 ## Audit gaps to resolve in P1
 
 - Chapters with at least one tip carrying no source URL: **0** (rows appear as empty `source_urls` in the inventory).
-- Every disposition is still `UNASSESSED`: the queue exists, the editorial decisions do not. P1 exit requires a decision or an explicit HOLD with a named reviewer for each of the 765 IDs.
+- No owner-approved editorial dispositions are recorded yet. 49 proposed decisions remain unapproved. 716 tips remain unassessed. P1 exit requires a named human decision (including an explicit HOLD) for every inherited ID.
