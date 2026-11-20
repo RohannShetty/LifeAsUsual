@@ -9,7 +9,7 @@
 
 ## Finding
 
-The previous India-edition text said EPF could pay rent, repay a housing loan, cover medical bills and several life events. It cited generic EPFO/Labour/Income-tax homepages and named the Employees' Provident Funds Scheme, 1952. Those sources did not identify the current purpose-specific rules. The inherited source title was about a foreign housing provident-fund system, not Indian EPF law.
+The previous India-edition text said EPF could pay rent, repay a housing loan, cover medical bills and several life events. It cited generic EPFO/Labour/Income-tax homepages and named the Employees' Provident Funds Scheme, 1952. Those sources did not identify the current purpose-specific rules. The inherited source title refers to a housing provident-fund system, not an Indian EPF statute.
 
 The readable Government of India backgrounder dated 31 October 2026 identifies the current framework as the Employees' Provident Funds Scheme, 2026 under the Code on Social Security, 2020. It describes broad partial-withdrawal categories including **housing, higher education, marriage and medical treatment**, subject to prescribed conditions. It also reports a **12-month minimum service** and a limit of **up to 75%** of the PF balance. It does not establish that rent, a home-loan EMI or every housing expense qualifies, and it does not provide the complete purpose-specific tests.
 
