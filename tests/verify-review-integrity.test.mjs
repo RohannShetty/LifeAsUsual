@@ -4,8 +4,8 @@ import { reviewIntegrityErrors, CHAPTER_NOTICE_MARKERS, TIPCARD_MARKERS } from '
 
 const page = CHAPTER_NOTICE_MARKERS.join(' ');
 const card = TIPCARD_MARKERS.join(' ');
-const chapter = { chapter: 5, slug: 'do-not-waste-money', rewriteStatus: 'checked', tips: [{ id: '5-1', reviewStatus: 'independently-checked' }] };
-const manifest = { chapters: { '5': { tier: 'A', humanReview: 'pending' } } };
+const chapter = { chapter: 5, slug: 'do-not-waste-money', rewriteStatus: 'checked', tips: [{ id: '5-1', reviewStatus: 'source-checked' }] };
+const manifest = { chapters: { '5': { tier: 'A', humanReview: 'pending', reviewMethod: 'ai-delegated-source-check' } } };
 const ownerRecord = { route: '/help/report-financial-cyber-fraud/', lesson: { reviewStatus: 'human-reviewed', revision: 'v1', verification: [{ method: 'owner-self-review', verdict: 'pass', lessonRevision: 'v1' }], humanApproval: { independent: false, limitation: 'Site owner, not a lawyer.' } } };
 function input(overrides = {}) {
   return { chapters: [structuredClone(chapter)], manifest: structuredClone(manifest), records: [structuredClone(ownerRecord)], chapterPage: page, tipCard: card, ...overrides };
@@ -13,6 +13,16 @@ function input(overrides = {}) {
 
 test('accepts a checked chapter with automated tip labels and an owner self-review record', () => {
   assert.deepEqual(reviewIntegrityErrors(input()), []);
+});
+
+test('rejects the retired label that claimed independence', () => {
+  const errors = reviewIntegrityErrors(input({ chapters: [{ ...chapter, tips: [{ id: '5-1', reviewStatus: 'independently-checked' }] }] }));
+  assert.ok(errors.some((e) => e.includes('retired label independently-checked')));
+});
+
+test('rejects a checked chapter whose manifest has no review method', () => {
+  const errors = reviewIntegrityErrors(input({ manifest: { chapters: { '5': { tier: 'A', humanReview: 'pending' } } } }));
+  assert.ok(errors.some((e) => e.includes('reviewMethod as missing')));
 });
 
 test('rejects a chapter that renders as human-reviewed without an approved record', () => {

@@ -32,7 +32,7 @@
       "evidenceGrade": "A",
       "sources": "Moon RY, Carlin RF, Hand I, Task Force on Sudden Infant Death Syndrome and the Committee on Fetus and Newborn (2022). Sleep-Related Infant Deaths: Updated 2022 Recommendations for Reducing Infant Deaths in the Sleep Environment. Pediatrics, 150(1), e2022057990. <https://doi.org/10.1542/peds.2022-057990>",
       "caveats": "“Do not place any soft items in the bed” means absolutely no pillows, blankets, bed rails, stuffed toys, or shaped pillows — even nursing pillows that appear perfectly safe are prohibited. Inclined cribs and baby chairs must never be used as sleeping areas. This requirement represents the biggest departure from common practice in this section, and it often requires the strongest resistance to family pressure.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "20-2",
@@ -60,7 +60,7 @@
       "evidenceGrade": "A",
       "sources": "World Health Organization. Hepatitis B fact sheet. <https://www.who.int/news-room/fact-sheets/detail/hepatitis-b>",
       "caveats": "If the mother tests positive for hepatitis B surface antigen, the newborn must receive an injection of hepatitis B immunoglobulin right after birth. This fact must be clarified during prenatal checkups; do not wait until after delivery to ask about it. Details on screening requirements for mothers can be found in Section 1.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "20-3",
@@ -89,7 +89,7 @@
       "evidenceGrade": "A",
       "sources": "Ministry of Health and Family Welfare, Universal Immunisation Programme. <https://mohfw.gov.in/>; National Health Mission. <https://nhm.gov.in/>; World Health Organization. <https://www.who.int/>",
       "caveats": "A common misconception is that children with weaker health should delay vaccination. In reality, having an “allergic constitution,” a family history of allergies, or prior food or drug allergies does not constitute a barrier to vaccination. Conditions such as atopic dermatitis (eczema), hives, allergic rhinitis, and bronchial asthma can all be managed safely provided they remain under control. Children taking antihistamines or inhaled corticosteroids may also be vaccinated. Physiological or breast milk–related neonatal jaundice poses no issue either. The only true contraindications are prior occurrence of acute severe allergic reactions to a specific vaccine or known hypersensitivity to any component of that vaccine. Children with immune deficiencies, undergoing chemotherapy or radiotherapy, or on immunosuppressive therapy require individualized assessment by a medical professional prior to vaccination. For details on the first dose of hepatitis B vaccine, refer to section 2. Non‑schedule vaccines sold at additional cost are unrelated to this free program.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "20-4",
@@ -117,7 +117,7 @@
       "evidenceGrade": "A",
       "sources": "World Health Organization. Breastfeeding. <https://www.who.int/health-topics/breastfeeding>; Ministry of Health and Family Welfare, National Health Mission. Mother and Child Protection (MCP) Guide Book. <https://nhm.gov.in/>",
       "caveats": "If breast milk is insufficient or not an option, formula is a perfectly acceptable substitute — there is no need for guilt. The difference between breastfeeding and formula feeding is far smaller than the impact of ensuring safe sleeping practices. As for frequency of solid food intake, India's Mother and Child Protection guidance is the local standard: infants aged 6–8 months should eat 2–3 times a day plus 1–2 snacks, and those aged 9–12 months should have 3–4 meals a day plus 1–2 snacks between meals. Alongside the meals, add a little oil or ghee so that the food is energy-dense, and include an animal-source food — egg, fish, meat or dairy — where the family eats it: iron and zinc are the nutrients most often short after six months. The food should be thick enough to stay on a spoon, not a thin broth. For infants with severe eczema or egg allergies, the question of whether to avoid peanuts is addressed in Section 12 of this chapter — the answer is: there is no need to avoid peanuts.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "20-5",
@@ -145,7 +145,7 @@
       "evidenceGrade": "A",
       "sources": "Beary MA, Daly SE, Baker J, Snyder AB (2025). Assessing Hot Water Reconstitution Instructions and Labeling of Powdered Infant Formula to Ensure Cronobacter spp. Reduction. Journal of Food Protection, 88(9), 100571. <https://doi.org/10.1016/j.jfp.2025.100571>; Sima WG, Legesse T, Girma S, et al. (2025). Emerging microbial risks: Cronobacter sakazakii in powdered infant formula for infants under six months of age in Ethiopia. BMC Microbiology, 26, 307. <https://doi.org/10.1186/s12866-025-04380-y>; World Health Organization & FAO (2007). Safe preparation, storage and handling of powdered infant formula: guidelines. <https://www.who.int/publications/i/item/9789241595414>",
       "caveats": "The 70 °C threshold is specified in public health guidelines. Beary et al. explicitly state: “Public health guidelines for caregivers of high-risk infants recommend using water heated to at least 70 °C (158 °F) to prepare infant formula, in order to inactivate harmful microorganisms.” Premature infants, those with low birth weight, and babies under 2 months of age are at the highest risk of infection. Never use water that has been stored in a thermos for a full day to prepare formula, and do not leave prepared milk at room temperature for later use.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "20-6",
@@ -173,7 +173,7 @@
       "evidenceGrade": "A",
       "sources": "US CDC. Preventing Botulism. <https://www.cdc.gov/botulism/prevention/index.html>",
       "caveats": "Foods and drinks to avoid include honey water, honey mixed into baby food, and any pastries containing honey. Likewise, homemade pickled foods and fermented products should not be given to infants.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "20-7",
@@ -201,7 +201,7 @@
       "evidenceGrade": "B",
       "sources": "Fiesack S, Smits A, Rayyan M, et al. (2021). Nutrients, 13(11), 4109. <https://doi.org/10.3390/nu13114109>; Tursunov D, Yoshida Y, Yrysov K, et al. (2018). Nagoya Journal of Medical Science, 80(1), 11. <https://doi.org/10.18999/nagjms.80.1.11>",
       "caveats": "However, for home births or births at unlicensed facilities, it’s crucial to confirm whether the injection was given. Oral administration is less effective than intramuscular injection.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "20-8",
@@ -229,7 +229,7 @@
       "evidenceGrade": "A",
       "sources": "Pantell RH, Roberts KB, Adams WG, et al. (2021). Evaluation and Management of Well-Appearing Febrile Infants 8 to 60 Days Old. Pediatrics, 148(2), e2021052228. <https://doi.org/10.1542/peds.2021-052228>",
       "caveats": "Infants at this age can have serious bacterial infections that only manifest as fever. So, the fact that a baby seems alert and in good spirits is not a valid reason to keep them at home. Do not give them fever reducers first and then wait to see if symptoms improve.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "20-9",
@@ -257,7 +257,7 @@
       "evidenceGrade": "B",
       "sources": "Spies EL, Klevens J (2016). Fatal Abusive Head Trauma Among Children Aged <5 Years — United States, 1999–2014. MMWR 65(20):505-509. <https://doi.org/10.15585/mmwr.mm6520a1>; Choudhary AK et al. (2018). Consensus statement on abusive head trauma in infants and young children. Pediatric Radiology 48(8):1048-1065. <https://doi.org/10.1007/s00247-018-4149-1>",
       "caveats": "When you truly feel you’re about to lose control, the safest action is to return the baby to their crib and leave the room for a few minutes. Allowing them to cry briefly is much safer than holding them and shaking them. This advice is especially vital for parents who care for their children alone and often suffer from sleep deprivation. For guidance on managing your own emotions, please refer to Section 3.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "20-10",
@@ -285,7 +285,7 @@
       "evidenceGrade": "C",
       "sources": "Bureau of Indian Standards. <https://www.bis.gov.in/>; Consumer Protection Act, 2019. <https://www.indiacode.nic.in/>; National Consumer Helpline. <https://consumerhelpline.gov.in/>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>",
       "caveats": "A rash is more often caused by infrequent changing, a wet nappy left against the skin, or a poor fit than by the brand. Change as soon as the nappy is soiled, clean with plain water and pat the skin dry, and give it air time. If a rash has satellite spots, is bright red in the skin folds, or has not settled in a few days, it may be a fungal infection and needs a doctor rather than a different brand. Night-time leaks are a fit problem: try the next size up before paying more for an ultra-absorbent product.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "20-11",
@@ -313,7 +313,7 @@
       "evidenceGrade": "C",
       "sources": "author’s experience, no direct literature; see Section 1 for evidence of safety seats and Section 5 for impulsive consumption; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>; World Health Organization. <https://www.who.int/>",
       "caveats": "This book neither recommends nor discourages postpartum care centers, early-education classes, or baby swimming classes. Still, they’re all optional big expenses, so the 24-hour cooling-off period described in Section 5 applies to them.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "20-12",
@@ -341,7 +341,7 @@
       "evidenceGrade": "A",
       "sources": "Du Toit G, Roberts G, Sayre PH, et al. (2015). Randomized trial of peanut consumption in infants at risk for peanut allergy. New England Journal of Medicine, 372(9), 803-813. <https://doi.org/10.1056/NEJMoa1414850>; Perkin MR et al. (2016). Randomized Trial of Introduction of Allergenic Foods in Breast-Fed Infants. New England Journal of Medicine, 374(18), 1733-1743. <https://doi.org/10.1056/NEJMoa1514210> (The general infant trial EAT in the remarks)",
       "caveats": "Peanuts must be given only as thinned peanut butter or powdered form mixed into food — never as whole nuts. The same applies to the food itself: whole peanuts, other nuts, jelly and similar foods can be inhaled into the airway and cause choking, so for an infant they must be given only as thinned peanut butter or as a powder mixed into food. For choking first aid, see Section 13, Item 26. This guidance applies only to high‑risk children with severe eczema or egg allergy. A medical assessment is mandatory before introduction; in the LEAP trial, children with a skin‑test reaction greater than 4 mm were excluded. Another study of 1,162 breastfed infants found no significant difference in overall food allergy rates between early‑introduction and standard groups, though a subset showed a clear benefit: 5.6% versus 7.1% (P=0.32) and 2.4% versus 7.3% respectively. Evidence for typical infants is far weaker.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "20-13",
@@ -369,7 +369,7 @@
       "evidenceGrade": "B",
       "sources": "Kemper AR, Newman TB, Slaughter JL, et al. (2022). Clinical Practice Guideline Revision: Management of Hyperbilirubinemia in the Newborn Infant 35 or More Weeks of Gestation. Pediatrics, 150(3), e2022058859. <https://doi.org/10.1542/peds.2022-058859>; NHS. Jaundice in babies (reviewed 2026-03-24). <https://www.nhs.uk/conditions/jaundice-newborn/>; NICE (revised 2010, 2023). Jaundice in newborn babies under 28 days (CG98), 1.2.6, 1.7.1. <https://www.nice.org.uk/guidance/cg98/chapter/Recommendations>; Bhutani VK, Zipursky A, Blencowe H, et al. (2013). Neonatal hyperbilirubinemia and Rhesus disease of the newborn: incidence and impairment estimates for 2010 at regional and global levels. Pediatric Research, 74(Suppl 1), 86-100. <https://doi.org/10.1038/pr.2013.208>; Hsiao CH, Chang MH, Chen HL, et al. (2008). Universal screening for biliary atresia using an infant stool color card in Taiwan. Hepatology, 47(4), 1233-1240. <https://doi.org/10.1002/hep.22182>; Lee M, Chen SC, Yang HY, et al. (2016). Infant Stool Color Card Screening Helps Reduce the Hospitalization Rate and Mortality of Biliary Atresia: A 14-Year Nationwide Cohort Study in Taiwan. Medicine, 95(12), e3166. <https://doi.org/10.1097/MD.0000000000003166>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>; World Health Organization. <https://www.who.int/>",
       "caveats": "Phototherapy uses special light on the skin to change bilirubin into forms that are easier to excrete. Do not substitute sunbathing at home: the AAP says sun exposure is hard to make both safe and effective, so it is not recommended as treatment. Do not give water or glucose water to “flush” jaundice — the guideline also advises against that. Visual yellow depth does not reliably estimate bilirubin level. UK NICE says not to rely on eyes alone; if unsure, measure once. Babies born before 38 weeks, siblings who had phototherapy, or insufficient breastfeeding raise risk of severe jaundice. Follow-up in India runs through the Home Based Newborn Care programme under the National Health Mission: an ASHA or ANM visits the home on a fixed schedule, with six visits in the first 42 days, and each visit checks feeding, weight and colour. Take the baby to the nearest health centre rather than waiting for the next visit if the yellowness is deepening, the baby is feeding poorly or is hard to wake. The six-week immunisation visit is another checkpoint. If discharge orders include bilirubin recheck, go on that schedule. Full-term jaundice beyond 14 days or preterm beyond 21 days: NICE requires conjugated bilirubin testing and checking stool color. Jaundice alone does not delay vaccines (this section item 3). Newborn screening: Section 27, item 13 (heel-prick screening).",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "20-14",
@@ -397,7 +397,7 @@
       "evidenceGrade": "B",
       "sources": "Centers for Disease Control and Prevention (2003). Neurologic impairment in children associated with maternal dietary deficiency of cobalamin—Georgia, 2001. MMWR, 52(4), 61-64. <https://www.cdc.gov/mmwr/preview/mmwrhtml/mm5204a1.htm>; Fewtrell M, Bronsky J, Campoy C, et al. (2017). Complementary Feeding: A Position Paper by the European Society for Paediatric Gastroenterology, Hepatology, and Nutrition (ESPGHAN) Committee on Nutrition. Journal of Pediatric Gastroenterology and Nutrition, 64(1), 119-132. <https://doi.org/10.1097/MPG.0000000000001454>; Melina V, Craig W, Levin S (2016). Position of the Academy of Nutrition and Dietetics: Vegetarian Diets. Journal of the Academy of Nutrition and Dietetics, 116(12), 1970-1980. <https://doi.org/10.1016/j.jand.2016.09.025>",
       "caveats": "Controversy: The Academy of Nutrition and Dietetics (AND, 2016) states that well-planned vegetarian and vegan diets can be nutritionally adequate for all life stages, including pregnancy, lactation, infancy, and childhood. However, AND explicitly emphasizes that vegans must consume reliable sources of vitamin B12 through regular fortified foods or dietary supplements. While professional societies debate whether pure vegan feeding of infants is advisable even with supplementation, there is absolute scientific consensus across all medical bodies that maternal vegan diets require mandatory B12 supplementation. Lacto-ovo vegetarians face lower risk, but individuals consuming minimal dairy or eggs remain susceptible to subclinical depletion. Early infant B12 deficiency symptoms are non-specific (lethargy, feeding difficulties, hypotonia); CDC notes standard newborn blood counts may not detect early neurologic deficiency before structural injury occurs. If an infant displays growth stalling or motor regression, parents must proactively inform clinicians of the family's dietary pattern. Do not reject evidence-based therapies in favor of unverified alternative diets (see Chapter 16, Item 4). Introducing complementary solids at 6 months is covered in Chapter 20, Item 4; prenatal folic acid supplementation is covered in Chapter 27, Item 1. Benefit magnitude is categorized as Moderate based on prevention of irreversible neurological disability. Primary beneficiaries are infants and nursing mothers.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "20-15",
@@ -425,7 +425,7 @@
       "evidenceGrade": "B",
       "sources": "Sims A, Chounthirath T, Yang J, Hodges NL, Smith GA (2018). Infant Walker-Related Injuries in the United States. Pediatrics, 142(4), e20174332. <https://doi.org/10.1542/peds.2017-4332>; American Academy of Pediatrics, Committee on Injury and Poison Prevention (2001). Injuries Associated With Infant Walkers. Pediatrics, 108(3), 790-792. <https://doi.org/10.1542/peds.108.3.790>; American Academy of Pediatrics (2022). Baby Walkers: A Dangerous Choice. HealthyChildren.org. <https://www.healthychildren.org/English/safety-prevention/at-home/Pages/baby-walkers-a-dangerous-choice.aspx>; Garrett M, McElroy AM, Staines A (2002). Locomotor milestones and babywalkers: cross sectional study. BMJ, 324(7352), 1494. <https://doi.org/10.1136/bmj.324.7352.1494>; Burrows P, Griffiths P (2002). Do baby walkers delay onset of walking in young children? British Journal of Community Nursing, 7(11), 581-586. <https://doi.org/10.12968/bjcn.2002.7.11.10889>; Health Canada (2004-04-07). Minister Pettigrew announces a ban on baby walkers. News Release 2004-15. <https://www.canada.ca/en/news/archive/2004/04/minister-pettigrew-announces-ban-baby-walkers.html>; Canada Consumer Product Safety Act (S.C. 2010, c. 21), section 5 and Schedule 2 item 3. <https://laws-lois.justice.gc.ca/eng/acts/C-1.68/FullText.html>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>; World Health Organization. <https://www.who.int/>",
       "caveats": "Canada enacted a comprehensive ban on the sale, advertising, and importation of baby walkers on April 7, 2004, extending even to secondhand sales at garage sales or flea markets under the Canada Consumer Product Safety Act. In other jurisdictions, product safety standards regulate mechanical stability and braking at drop-offs, but cannot prevent children from propelling themselves toward stairs, pulling hot liquids from tables, or falling into pools and bathtubs. Recommended safe alternatives include stationary activity centers without wheels (swivel/bounce seats), floor playpens, and high chairs. Always verify daycare or caregiver environments are free of wheeled walkers. For nursery gear purchasing sequence, see Chapter 20, Item 11.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "20-16",
@@ -453,7 +453,7 @@
       "evidenceGrade": "B",
       "sources": "Munns CF, Shaw N, Kiely M, et al. (2016). Global Consensus Recommendations on Prevention and Management of Nutritional Rickets. Journal of Clinical Endocrinology & Metabolism, 101(2), 394-415. <https://doi.org/10.1210/jc.2015-2175>; Beser E, Cakmakci T (1994). Factors affecting the morbidity of vitamin D deficiency rickets and primary protection. East African Medical Journal, 71(6), 358-362. <https://europepmc.org/article/MED/7835254>; Tan ML, Abrams SA, Osborn DA (2020). Vitamin D supplementation for term breastfed infants to prevent vitamin D deficiency and improve bone health. Cochrane Database of Systematic Reviews, 12, CD013046. <https://doi.org/10.1002/14651858.CD013046.pub2>; American Academy of Pediatrics (2022). Where We Stand: Vitamin D & Iron Supplements for Babies. HealthyChildren.org. <https://www.healthychildren.org/English/ages-stages/baby/feeding-nutrition/Pages/Vitamin-Iron-Supplements.aspx>; Gallo S, Comeau K, Vanstone C, et al. (2013). Effect of different dosages of oral vitamin D supplementation on vitamin D status in healthy, breastfed infants: a randomized trial. JAMA, 309(17), 1785-1792. <https://doi.org/10.1001/jama.2013.3404>; Indian Academy of Pediatrics. <https://iapindia.org/>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>; World Health Organization. <https://www.who.int/>",
       "caveats": "Graded B because rickets incidence figures derive from observational comparative trials rather than double-blind placebo RCTs. The 2020 Cochrane review found 400 IU daily reduced vitamin D deficiency by 43% (RR 0.57), though individual trials lacked statistical power for fracture endpoints. Formula feeding guidelines differ slightly: the AAP notes that infants consuming at least 27 to 32 ounces (approx. 800–1000 mL) per day of vitamin D-fortified formula obtain sufficient vitamin D without additional drops. Avoid excessive dosing: in a Canadian randomized trial, an arm receiving 1,600 IU daily was terminated early due to hypercalcemia risk; doses between 400 and 1,200 IU showed no linear growth differences. Non-deficient adults should not take high-dose vitamin D solely for longevity (see Chapter 6, Item 3).",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "20-17",
@@ -481,7 +481,7 @@
       "evidenceGrade": "B",
       "sources": "US Consumer Product Safety Commission. Avoiding Tap Water Scalds (Document 5098). <https://www.cpsc.gov/s3fs-public/5098.pdf>; American Academy of Pediatrics (2025). Bathing Your Baby. HealthyChildren.org. <https://www.healthychildren.org/English/ages-stages/baby/bathing-skin-care/Pages/Bathing-Your-Newborn.aspx>; NHS. Washing and bathing your baby (reviewed 2024-07-23). <https://www.nhs.uk/baby/caring-for-a-newborn/washing-and-bathing-your-baby/>; World Health Organization, UNICEF (2008). World report on child injury prevention, Chapter 4 Burns. <https://iris.who.int/handle/10665/43851>; Erdmann TC, Feldman KW, Rivara FP, Heimbach DM, Wall HA (1991). Tap water burn prevention: the effect of legislation. Pediatrics, 88(3), 572-577. <https://europepmc.org/article/MED/1881739>; World Health Organization (2007). Legionella and the prevention of legionellosis. <https://iris.who.int/handle/10665/43233>",
       "caveats": "Graded B because findings derive from legislative before-and-after studies and burn center epidemiological registries rather than controlled trials. For tankless (on-demand gas) water heaters, set the master outlet temperature directly to 48–50 °C (120 °F). For electric storage water heaters, WHO Legionella guidance recommends maintaining tank water at 60 °C (to inhibit Legionella pneumophila bacteria) while installing thermostatic mixing valves at bathroom outlets to limit delivery temperature to 50 °C. Never leave an infant unattended in the bath for any reason (over half of infant tub drownings occur in moments of inattention; see Chapter 1, Item 12). Avoid holding an infant while carrying hot coffee or tea, which represents the most frequent scald mechanism in high-income countries. For immediate burn first aid, flush with cool tap water (see Chapter 13, Item 14).",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     }
   ]
 }

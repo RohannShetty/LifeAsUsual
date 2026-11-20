@@ -29,7 +29,7 @@
       "evidenceGrade": "B",
       "sources": "Krassioukov A, Warburton DE, Teasell R, Eng JJ; Spinal Cord Injury Rehabilitation Evidence Research Team (2009). A systematic review of the management of autonomic dysreflexia after spinal cord injury. Archives of Physical Medicine and Rehabilitation, 90(4):682-695. <https://doi.org/10.1016/j.apmr.2008.10.017>; Department of Empowerment of Persons with Disabilities. <https://depwd.gov.in/>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>",
       "caveats": "This B rating reflects the fact that there are no randomized controlled trials supporting those three immediate actions — only clinical consensus and physiological reasoning. The review itself notes that most of these measures are supported solely by non-controlled studies. Medication administration is strictly a medical professional’s responsibility; family members must not give antihypertensive drugs at home. Lying the person down can further raise blood pressure, so sitting upright is essential. Family members and caregivers must also master these three steps. This condition must never be mistaken for ordinary headaches.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "33-2",
@@ -54,7 +54,7 @@
       "evidenceGrade": "A",
       "sources": "Savic G, DeVivo MJ, Frankel HL, Jamous MA, Soni BM, Charlifue S (2018). Suicide and traumatic spinal cord injury - a cohort study. Spinal Cord, 56(1):2-6. <https://doi.org/10.1038/sc.2017.98>; Department of Empowerment of Persons with Disabilities. <https://depwd.gov.in/>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>",
       "caveats": "This research was limited to spinal cord injury patients only, so the findings should be extrapolated with caution to other causes of disability such as blindness, amputation, or burns. Its main takeaway is the time window of heightened risk: this elevated risk does not fade away immediately after discharge, and requires close monitoring for a full decade. For support services, please refer to Section 29, Item 11 (14416 (Tele-MANAS)). To prevent accidental harm, avoid storing sleeping pills or pesticides at home; see Section 1, Item 25 (thoughts of suicide). If feelings of grief and emotional distress persist for more than six months, seek help from a psychiatrist or clinical psychologist; see Section 29, Item 8 (grief lasting over half a year).",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "33-3",
@@ -79,7 +79,7 @@
       "evidenceGrade": "A",
       "sources": "India Code, Mental Healthcare Act, 2017 (Act 10 of 2017). <https://www.indiacode.nic.in/>; Ministry of Health and Family Welfare, mental health programmes. <https://mohfw.gov.in/>; National Legal Services Authority, legal aid for persons with mental illness. <https://nalsa.gov.in/>",
       "caveats": "If the person lacks capacity and has not named a nominated representative, the hospital has to follow the Act's procedure for that case, and a relative cannot simply admit them as a guardian. Keep the admission papers, the independent psychiatric and mental health assessments, and the Board reference number. If the person asks to leave and is not discharged, or the capacity review under section 89(8) of a supported admission does not happen, complain to the hospital's medical superintendent, then to the State Mental Health Authority and the Review Board. An emergency can justify a short admission while the paperwork is completed, but it still has to be reported and reviewed.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "33-4",
@@ -104,7 +104,7 @@
       "evidenceGrade": "A",
       "sources": "Schulz R, Beach SR (1999). Caregiving as a risk factor for mortality: the Caregiver Health Effects Study. JAMA, 282(23):2215-2219. <https://doi.org/10.1001/jama.282.23.2215>",
       "caveats": "Caution: The lower bound of the confidence interval here is exactly 1.00, meaning there remains a small chance that no actual difference exists. This study focused on older U.S. adults living with disabled spouses, so its findings may not fully apply to caregivers of younger disabled family members. Still, it clearly shows that those experiencing high stress face greater risk. Whenever possible, share caregiving duties with others; contact local disability associations, or a District Disability Rehabilitation Centre, for respite care or day programmes. Caregivers should also keep taking any prescribed medications — see Section 16, Item 1. The main beneficiary of all this advice is you.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "33-5",
@@ -129,7 +129,7 @@
       "evidenceGrade": "B",
       "sources": "Brienza D, Kelsey S, Karg P, et al. (2010). A randomized clinical trial on preventing pressure ulcers with wheelchair seat cushions. Journal of the American Geriatrics Society, 58(12):2308-2314. <https://doi.org/10.1111/j.1532-5415.2010.03168.x>",
       "caveats": "Two factors justify a B rating. First, the sample size was only 232 participants; the P‑value for the primary outcome (0.04) barely crossed the threshold, while secondary outcomes showed no difference. Second, the participants were elderly nursing‑home residents; results may not apply to younger wheelchair users. Since all subjects received a properly fitted wheelchair, both “proper fit” and “cushion type” contributed to outcomes; therefore, merely swapping the cushion is insufficient. For pressure‑ulcer prevention in bedridden individuals, air mattresses and regular repositioning are discussed in Section 17, Item 8 (Pressure ulcers). Information on applying for subsidies for basic assistive devices can be found in Section 7 of this chapter (contact the district disability office).",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "33-6",
@@ -154,7 +154,7 @@
       "evidenceGrade": "A",
       "sources": "Rights of Persons with Disabilities Act, 2016. <https://www.indiacode.nic.in/>; Consumer Protection Act, 2019. <https://consumeraffairs.nic.in/>; National Medical Commission. <https://www.nmc.org.in/>; Central Drugs Standard Control Organisation. <https://cdsco.gov.in/>",
       "caveats": "Rehabilitation, physiotherapy and assistive devices can improve function; they are not a cure. A claim based only on testimonials is not evidence. Do not stop a proven treatment for a miracle cure.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "33-7",
@@ -179,7 +179,7 @@
       "evidenceGrade": "A",
       "sources": "Department of Empowerment of Persons with Disabilities, Unique Disability ID. <https://swavlambancard.gov.in/>; Department of Empowerment of Persons with Disabilities, UDID. <https://depwd.gov.in/en/unique-disability-id-udid/>; Department of Empowerment of Persons with Disabilities, schemes and services. <https://depwd.gov.in/en/schemes-and-services/>",
       "caveats": "The disability percentage on the card is what the medical board assessed, and it can be reviewed if the condition changes. A pension from one state usually stops when you move to another, because the scheme is state-funded, so tell the new district office before you move. The UDID does not replace every document: a railway concession and some scholarships ask for their own form or a specific certificate. Keep a scanned copy and note the UDID number, because you will need it repeatedly.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "33-8",
@@ -207,7 +207,7 @@
       "evidenceGrade": "A",
       "sources": "Department of Empowerment of Persons with Disabilities, ADIP scheme. <https://depwd.gov.in/en/adip-scheme/>; National Trust, Niramaya health insurance. <https://nationaltrust.nic.in/about-niramaya/>; Department of Empowerment of Persons with Disabilities, DDRS. <https://depwd.gov.in/en/ddrs/>; Department of Empowerment of Persons with Disabilities, cross-disability early intervention centres. <https://depwd.gov.in/en/cross-disability-early-intervention-centres/>",
       "caveats": "ADIP covers a given device once in three years, or once in five years for a motorised wheelchair, so plan the purchase and keep the receipt. Niramaya pays after you spend, so keep every prescription, bill and discharge summary, and remember that it is not a substitute for a health insurance policy. The income ceiling is the family's, and a household just above it pays the full market price. Private therapy is not covered by any national scheme, and the quality and cost of therapists vary widely.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "33-9",
@@ -232,7 +232,7 @@
       "evidenceGrade": "B",
       "sources": "Department of Empowerment of Persons with Disabilities, schemes and services. <https://depwd.gov.in/en/schemes-and-services/>; Department of Empowerment of Persons with Disabilities, ADIP scheme. <https://depwd.gov.in/en/adip-scheme/>; Department of Empowerment of Persons with Disabilities, the RPwD Act, 2016 and its rules. <https://depwd.gov.in/en/rpwd-act-2016/>",
       "caveats": "Do not pay anyone who promises a central home-modification subsidy: there is no such scheme. A landlord's refusal to build a ramp is not automatically unlawful, because the Act's accessibility duties do not bind a private dwelling. Put a request to a landlord in writing, keep the reply, and consider a portable ramp that you can take with you. If you rent a flat in a building with a residents' association, the association's approval is a separate step from the landlord's.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "33-10",
@@ -257,7 +257,7 @@
       "evidenceGrade": "A",
       "sources": "Rights of Persons with Disabilities Act, 2016. <https://www.indiacode.nic.in/>; Department of Empowerment of Persons with Disabilities. <https://depwd.gov.in/>; Income-tax Department. <https://www.incometax.gov.in/>",
       "caveats": "A reservation applies to an identified post and a government establishment. A private employer is not bound by the 4% quota, but is bound by the anti-discrimination provisions. Keep the medical records for a reassessment.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "33-11",
@@ -282,7 +282,7 @@
       "evidenceGrade": "A",
       "sources": "Income Tax Department, e-filing portal. <https://www.incometax.gov.in/iec/foportal/>; Income Tax Department, deductions for disability. <https://www.incometaxindia.gov.in/>; Department of Empowerment of Persons with Disabilities, UDID. <https://depwd.gov.in/en/unique-disability-id-udid/>",
       "caveats": "This is a deduction, not a payment: it reduces taxable income, so the saving is your marginal tax rate multiplied by the amount. If you file under the new regime in section 115BAC, most deductions of this kind are withdrawn, so work out both regimes before choosing, because for a family with a large medical bill the old regime can still be better. A certificate must be renewed if the disability changes, and a false certificate is an offence. Keep the certificate and the acknowledgement with your return papers.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "33-12",
@@ -307,7 +307,7 @@
       "evidenceGrade": "A",
       "sources": "Department of Empowerment of Persons with Disabilities, the RPwD Act, 2016 and its rules. <https://depwd.gov.in/en/rpwd-act-2016/>; Department of Empowerment of Persons with Disabilities, schemes and services. <https://depwd.gov.in/en/schemes-and-services/>; Ministry of Road Transport and Highways. <https://morth.gov.in/>",
       "caveats": "There is no statutory right to free travel across India, so a refusal in a city without a scheme is not necessarily unlawful. Assistance dogs are a gap: Indian law does not give a trained service dog a general right of entry the way some countries do, so ask the operator in advance and expect to negotiate. Accessible buses are unevenly rolled out, and a low-floor bus is not the same as an accessible stop. For a complaint, keep the bus number, the time and the route.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "33-13",
@@ -332,7 +332,7 @@
       "evidenceGrade": "A",
       "sources": "Central Board of Secondary Education, academic and examination circulars. <https://cbseacademic.nic.in/>; National Testing Agency. <https://nta.ac.in/>; Department of Empowerment of Persons with Disabilities, the RPwD Act, 2016 and its rules. <https://depwd.gov.in/en/rpwd-act-2016/>",
       "caveats": "Deadlines are strict and a request made after the correction window is normally refused, so diarise the date. The percentage of extra time and the list of permitted devices differ from exam to exam and change between years, so read the current bulletin rather than a senior's account. A scribe is usually required to be a student of a lower standard and not a relative. If a centre is physically inaccessible, ask for a change of centre when you apply, because it cannot be fixed on the day.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "33-14",
@@ -359,7 +359,7 @@
       "evidenceGrade": "A",
       "sources": "Department of Empowerment of Persons with Disabilities, the RPwD Act, 2016 and its rules. <https://depwd.gov.in/en/rpwd-act-2016/>; Ministry of Education. <https://www.education.gov.in/>; Central Board of Secondary Education, academic circulars. <https://cbseacademic.nic.in/>",
       "caveats": "Home-based education is meant for a child who cannot attend even with support, and the state has to arrange it; a school cannot use it to avoid admitting the child. Put a refusal in writing with the date and the name of the person who refused, because a complaint without a record is easy to deny. The RTE Act covers ages six to fourteen, so for an older child the RPwD Act and the state's scheme apply, and for a younger child the anganwadi and early intervention route. Expelling a child because of a disability is discrimination, not discipline.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "33-15",
@@ -384,7 +384,7 @@
       "evidenceGrade": "A",
       "sources": "Ministry of Road Transport and Highways, Parivahan Sewa. <https://parivahan.gov.in/parivahan/>; Ministry of Road Transport and Highways. <https://morth.gov.in/>; Department of Empowerment of Persons with Disabilities, the RPwD Act, 2016 and its rules. <https://depwd.gov.in/en/rpwd-act-2016/>",
       "caveats": "Practice varies between states and even between offices, so telephone the RTO before you go and ask which form it wants for your disability. A refusal has to be in writing, and it can be challenged before the transport commissioner. A licence is not a right to drive unsafely: if the condition changes, or a seizure happens, you have to stop and be reassessed. Do not let a driving school promise a licence without the medical step; that is how licences get cancelled later.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "33-16",
@@ -409,7 +409,7 @@
       "evidenceGrade": "A",
       "sources": "Langhorne P, Ramachandra S; Stroke Unit Trialists' Collaboration (2020). Organised inpatient (stroke unit) care for stroke: network meta-analysis. Cochrane Database of Systematic Reviews, 4:CD000197. <https://doi.org/10.1002/14651858.CD000197.pub4>; AVERT Trial Collaboration group (2015). Efficacy and safety of very early mobilisation within 24 h of stroke onset (AVERT): a randomised controlled trial. Lancet, 386(9988):46-55. <https://doi.org/10.1016/S0140-6736(15)60690-0>",
       "caveats": "Caution: Both studies involve stroke patients; their findings cannot be directly applied to other disabling conditions such as spinal cord injury, amputation, or burns. The AVERT trial demonstrates that “the earlier and more intense the activity, the better” is not true; it does not mean that early activity is useless. In both trials, the majority of participants began walking within 24 hours; the difference lay in frequency and total volume of exercise. When selecting a facility, verify whether it has a rehabilitation medicine department and qualified physical and occupational therapists — do not rely solely on a “rehabilitation” sign. Information on referrals between primary and tertiary hospitals and related cost thresholds can be found in Section 24.1 (step‑by‑step referrals). Community‑based rehabilitation and assistive devices are discussed in Section 16.7 (contact the district disability office).",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "33-17",
@@ -434,7 +434,7 @@
       "evidenceGrade": "A",
       "sources": "Lin FR, Pike JR, Albert MS, et al.; ACHIEVE Collaborative Research Group (2023). Hearing intervention versus health education control to reduce cognitive decline in older adults with hearing loss in the USA (ACHIEVE): a multicentre, randomised controlled trial. Lancet, 402(10404):786-797. <https://doi.org/10.1016/S0140-6736(23)01406-X>",
       "caveats": "Controversy: The oft‑quoted claim that “hearing aids cut cognitive decline by nearly half” stems from a subgroup analysis of this trial, not its primary result, which showed no overall difference. This note is included to separate the practical benefit of hearing aids from the unproven dementia‑prevention claim. Exam bodies and universities have to provide reasonable accommodations under the Rights of Persons with Disabilities Act, 2016; see item 13 in this section. A driver with hearing loss should wear the hearing aids the licensing authority expects; see item 15 in this section.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "33-18",
@@ -459,7 +459,7 @@
       "evidenceGrade": "A",
       "sources": "Department of Empowerment of Persons with Disabilities, the RPwD Act, 2016 and its rules. <https://depwd.gov.in/en/rpwd-act-2016/>; National Trust, legal guardianship. <https://nationaltrust.nic.in/about-legal-guardianship/>; India Code. <https://www.indiacode.nic.in/>",
       "caveats": "The Act does not abolish guardianship for children: a minor's property is still dealt with under the Guardians and Wards Act, 1890. A limited guardianship order can be reviewed and appealed, and it does not transfer the person's rights to the guardian. If a relative is managing someone's money without any order, that is a civil dispute about the money, not a legal guardianship, and it should be challenged rather than regularised. Keep the order, the period and the decisions it covers in writing.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "33-19",
@@ -484,7 +484,7 @@
       "evidenceGrade": "A",
       "sources": "Department of Empowerment of Persons with Disabilities, the RPwD Act, 2016 and its rules. <https://depwd.gov.in/en/rpwd-act-2016/>; National Legal Services Authority. <https://nalsa.gov.in/>; India Code. <https://www.indiacode.nic.in/>",
       "caveats": "This is a general account, not advice on a specific case: the facts decide, and a lawyer should see the papers. Do not sign an undertaking that you are responsible for all harm the person may cause, because no law requires it and a signed undertaking can be enforced as a contract. Guardianship is not a way to take over someone's property, and a transfer made by a limited guardian outside the order can be set aside. If a relative is already acting as a guardian without an order, regularise it or stop.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "33-20",
@@ -509,7 +509,7 @@
       "evidenceGrade": "A",
       "sources": "Rights of Persons with Disabilities Act, 2016. <https://www.indiacode.nic.in/>; Department of Empowerment of Persons with Disabilities. <https://depwd.gov.in/>; National Legal Services Authority. <https://nalsa.gov.in/>",
       "caveats": "A 'disability' must fall within the Act's list and be certified. A delay can weaken the case. A settlement should be in writing.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "33-21",
@@ -534,7 +534,7 @@
       "evidenceGrade": "B",
       "sources": "Savic G, DeVivo MJ, Frankel HL, Jamous MA, Soni BM, Charlifue S (2017). Causes of death after traumatic spinal cord injury—a 70-year British study. Spinal Cord, 55(10):891-897. <https://doi.org/10.1038/sc.2017.64>; Weld KJ, Dmochowski RR (2000). Effect of bladder management on urological complications in spinal cord injured patients. Journal of Urology, 163(3):768-772. <https://doi.org/10.1016/s0022-5347(05)67800-7>; European Association of Urology (2026). EAU Guidelines on Neuro-Urology (Sections 3.3.8, 3.4.2.e, 3.5.1, 3.7). <https://uroweb.org/guidelines/neuro-urology/chapter/the-guideline>",
       "caveats": "Controversy: The EAU guidelines classify both intermittent catheterization and indwelling catheterization as standard clinical options, emphasizing that treatment modality should be decided through shared decision-making between patient and clinician. Among patients with tetraplegia or severe upper-limb impairment who lack reliable caregiver assistance, indwelling suprapubic or urethral catheterization may be a necessary pragmatic choice; in such cases, silicone catheters are preferred over latex to reduce encrustation and allergic reactions. Never leave an indwelling catheter unmonitored for years. Seek prompt medical care upon developing signs of urinary tract infection: fever, new or worsening urinary leakage, aggravated spasticity, malaise, cloudy or foul-smelling urine, flank pain, or autonomic dysreflexia. An overdistended bladder can precipitate life-threatening autonomic dysreflexia (see Chapter 33, Item 1).",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     }
   ]
 }

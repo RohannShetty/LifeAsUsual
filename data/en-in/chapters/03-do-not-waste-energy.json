@@ -29,7 +29,7 @@
       "evidenceGrade": "B",
       "sources": "Stothart, Mitchum & Yehnert (2015). The attentional cost of receiving a cell phone notification. Journal of Experimental Psychology: Human Perception and Performance. <https://doi.org/10.1037/xhp0000100>; Ward, Duke, Gneezy & Bos (2017). Brain Drain: The Mere Presence of One's Own Smartphone Reduces Available Cognitive Capacity. Journal of the Association for Consumer Research. <https://doi.org/10.1086/691462>",
       "caveats": "All of these results are based on single‑task experiments conducted in a lab setting. No research has examined how these effects accumulate over days or weeks in real‑world conditions. For jobs where immediate responsiveness is essential, it may be advisable to allow notifications only from a limited set of contacts.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "3-2",
@@ -54,7 +54,7 @@
       "evidenceGrade": "B",
       "sources": "Phillips et al. (2017). Irregular sleep/wake patterns are associated with poorer academic performance and delayed circadian and sleep/wake timing. Scientific Reports. <https://doi.org/10.1038/s41598-017-03171-4>",
       "caveats": "This is the sole study on this topic, with a relatively small sample size and no control groups. Researchers estimate that these circadian differences stem mainly from varying daily exposure to natural light. Therefore, maintaining a fixed wake-up time works best when paired with exposure to morning sunlight. For tips on how to recover after occasional late nights, see Section 2, Item 39: the recommended approach is to go to bed earlier that very night rather than sleeping in until noon the following day.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "3-3",
@@ -79,7 +79,7 @@
       "evidenceGrade": "A",
       "sources": "Van Dongen, Maislin, Mullington & Dinges (2003). The cumulative cost of additional wakefulness. Sleep. <https://doi.org/10.1093/sleep/26.2.117>; Lim & Dinges (2010). A meta-analysis of the impact of short-term sleep deprivation on cognitive variables. Psychological Bulletin. <https://doi.org/10.1037/a0018883>",
       "caveats": "The most important takeaway is that “not feeling sleepy” is not proof that you’ve gotten enough sleep. People who regularly sleep just 6 hours simply get used to the state, but their actual performance does not improve. The results from the meta-analysis apply to staying awake for an entire night; there is only one randomized controlled trial supporting the idea that consistently getting less than 6 hours of sleep has any real negative impact.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "3-4",
@@ -104,7 +104,7 @@
       "evidenceGrade": "A",
       "sources": "Drake, Roehrs, Shambroom & Roth (2013). Caffeine effects on sleep taken 0, 3, or 6 hours before going to bed. Journal of Clinical Sleep Medicine. <https://doi.org/10.5664/jcsm.3170>; Gardiner et al. (2023). The effect of caffeine on subsequent sleep: A systematic review and meta-analysis. Sleep Medicine Reviews. <https://doi.org/10.1016/j.smrv.2023.101764>",
       "caveats": "The sole study by Drake utilized a relatively high caffeine dose of 400 mg, equivalent to roughly two or three cups of coffee, and was conducted in a single laboratory setting. Individuals with slower caffeine metabolism must adhere to an even earlier cutoff time. This recommendation complements the third item, which advises aiming for 7–8 hours of sleep nightly.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "3-5",
@@ -129,7 +129,7 @@
       "evidenceGrade": "B",
       "sources": "Kushlev & Dunn (2015). Checking email less frequently reduces stress. Computers in Human Behavior. <https://doi.org/10.1016/j.chb.2014.11.005>",
       "caveats": "Only one study has examined this approach, showing a modest effect size. It measured stress levels rather than actual work output. No direct research exists on limiting instant messaging checks; this recommendation is extrapolated from similar email studies.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "3-6",
@@ -154,7 +154,7 @@
       "evidenceGrade": "B",
       "sources": "Altmann, Trafton & Hambrick (2014). Momentary interruptions can derail the train of thought. Journal of Experimental Psychology: General. <https://doi.org/10.1037/a0030986>; Mark, Gonzalez & Harris (2005). No task left behind? Examining the nature of fragmented work. CHI 2005. <https://doi.org/10.1145/1054972.1055017>; Mark, Gudith & Klocke (2008). The cost of interrupted work: More speed and stress. CHI 2008. <https://doi.org/10.1145/1357054.1357072>",
       "caveats": "The field study mentioned above categorized interruptions into two types: those caused by others approaching the worker, and those initiated by the worker themselves. Simply closing the door blocks only the first type of interruption. To handle the second type, combine this tip with Tip 1 (turn off non-essential notifications) and Tip 5 (batch-process messages).",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "3-7",
@@ -179,7 +179,7 @@
       "evidenceGrade": "B",
       "sources": "Monsell (2003). Task switching. Trends in Cognitive Sciences. <https://doi.org/10.1016/S1364-6613(03)00028-7>; Ophir, Nass & Wagner (2009). Cognitive control in media multitaskers. PNAS. <https://doi.org/10.1073/pnas.0903620106>",
       "caveats": "Exactly how much extra effort task-switching requires varies a lot depending on the task, so no single number can be given here. The Ophir study compares people at one single point in time, so it’s hard to tell whether multitasking makes attention worse, or whether people with poorer attention skills simply prefer to multitask.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "3-8",
@@ -204,7 +204,7 @@
       "evidenceGrade": "B",
       "sources": "Chang, Aeschbach, Duffy & Czeisler (2015). Evening use of light-emitting eReaders negatively affects sleep, circadian timing, and next-morning alertness. PNAS. <https://doi.org/10.1073/pnas.1418490112>",
       "caveats": "The study involved a small number of participants and was conducted under tightly controlled lab conditions. Real-world effects may be smaller given typical phone brightness and usage patterns. The study did not evaluate how much nighttime screen modes actually help.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "3-9",
@@ -229,7 +229,7 @@
       "evidenceGrade": "B",
       "sources": "Carter et al. (2016). Association Between Portable Screen-Based Media Device Access or Use and Sleep Outcomes. JAMA Pediatrics. <https://doi.org/10.1001/jamapediatrics.2016.2341>; Exelmans & Van den Bulck (2016). Bedtime mobile phone use and sleep in adults. Social Science & Medicine. <https://doi.org/10.1016/j.socscimed.2015.11.037>; Grubbs JB et al. (2018). Pornography Problems Due to Moral Incongruence: An Integrative Model with a Systematic Review and Meta-Analysis. Archives of Sexual Behavior. <https://doi.org/10.1007/s10508-018-1248-x> (One of the disputing parties in the remarks); Prause N, Pfaus J (2015). Viewing Sexual Stimuli Associated with Greater Sexual Responsiveness, Not Erectile Dysfunction. Sexual Medicine. <https://doi.org/10.1002/sm2.58> (The second disputing party in the remarks)",
       "caveats": "This recommendation is somewhat controversial. The overall risks of chronic sleep deprivation are covered in section 3 of this chapter (aiming for 7–8 hours of sleep per night). Currently there is no reliable evidence linking porn to reduced energy or cognitive ability in the general population. One meta‑analysis suggests that so‑called “porn problems” often stem from a mismatch between personal beliefs and behavior rather than from the content itself. Another study of 280 men found no correlation between the amount of time spent watching porn and erectile function during sexual activity with a partner. This recommendation specifically addresses how porn consumes sleep time.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "3-10",
@@ -254,7 +254,7 @@
       "evidenceGrade": "B",
       "sources": "Killgore, Balkin & Wesensten (2006). Impaired decision making following 49 h of sleep deprivation. Journal of Sleep Research. <https://doi.org/10.1111/j.1365-2869.2006.00487.x>",
       "caveats": "The research focused on the extreme case of two nights of continuous sleep deprivation. There is no direct data on how ordinary people fare after staying awake until 2 a.m. The advice to avoid sending messages late at night is based on the authors’ personal experience (rated as Grade C evidence); it is perfectly fine to send such messages the following day instead.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "3-11",
@@ -279,7 +279,7 @@
       "evidenceGrade": "B",
       "sources": "Brooks & Lack (2006). A brief afternoon nap following nocturnal sleep restriction: Which nap duration is most recuperative? Sleep. <https://doi.org/10.1093/sleep/29.6.831>",
       "caveats": "Only one laboratory study exists, and its participants were healthy young adults. If you can’t fall asleep, there’s no need to force it; there’s no research showing any benefit from simply lying down with eyes closed for 10 minutes. Naps longer than an hour have been linked to higher mortality and increased risk of coronary heart disease — see Section 2, Item 38 (keep naps under 30 minutes).",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "3-12",
@@ -304,7 +304,7 @@
       "evidenceGrade": "B",
       "sources": "Jahncke, Hygge, Halin, Green & Dimberg (2011). Open-plan office noise: Cognitive performance and restoration. Journal of Environmental Psychology. <https://doi.org/10.1016/j.jenvp.2011.07.002>",
       "caveats": "Only one laboratory study exists on this topic. Among all noise types, speech that can be clearly understood has the greatest negative impact on performance. White noise headphones may help mitigate this effect, but they were not tested in this research.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "3-13",
@@ -329,7 +329,7 @@
       "evidenceGrade": "B",
       "sources": "Pencavel (2015). The Productivity of Working Hours. The Economic Journal. <https://doi.org/10.1111/ecoj.12166>",
       "caveats": "These figures come from factories a century ago where most workers were women performing manual labor. This threshold may differ for cognitive work; the authors themselves note that other occupations could have higher or lower limits. What is reliable, though, is the overall trend: beyond a certain point, adding more hours yields almost no extra output. The specific figure of 49 hours is not proven.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "3-14",
@@ -354,7 +354,7 @@
       "evidenceGrade": "B",
       "sources": "Nolen-Hoeksema, Wisco & Lyubomirsky (2008). Rethinking Rumination. Perspectives on Psychological Science. <https://doi.org/10.1111/j.1745-6924.2008.00088.x>",
       "caveats": "This is the hardest item in this section to quantify; the review only provides general direction. “Doing something else” reflects the author’s own approach. The literature supports one core idea: diverting attention is better than staying trapped in rumination. No research has compared which specific activities work best.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "3-15",
@@ -379,7 +379,7 @@
       "evidenceGrade": "B",
       "sources": "Whitfield JB, Zhu G, Landers JG, Martin NG (2020). Pessimism is associated with greater all-cause and cardiovascular mortality, but optimism is not protective. Scientific Reports, 10, 12609. <https://doi.org/10.1038/s41598-020-69388-y>",
       "caveats": "This finding remains somewhat controversial. It is purely observational and no subgroups were defined. Some argue that illness might precede and cause heightened pessimism; the authors counter that if that were true, pessimism should also correlate with cancer mortality. Nevertheless, other unmeasured factors could still be at play. Importantly, optimism does not offer any protective effect, so there is no need to force oneself to “think positively.” What matters is refraining from treating pessimistic expectations as accurate forecasts of the future.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "3-16",
@@ -404,7 +404,7 @@
       "evidenceGrade": "C",
       "sources": "Rook (1984). The negative side of social interaction: Impact on psychological well-being. Journal of Personality and Social Psychology. <https://doi.org/10.1037/0022-3514.46.5.1097>",
       "caveats": "The study group is quite specific, and the questionnaire was administered only once, so no cause‑and‑effect sequence can be determined. It measures overall happiness rather than energy levels. The author includes this example as a speculative inference. There is no objective definition of what counts as a “draining” relationship; each person must judge that for themselves.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "3-17",
@@ -429,7 +429,7 @@
       "evidenceGrade": "B",
       "sources": "Webb TL, Miles E, Sheeran P (2012). Dealing with feeling: A meta-analysis of the effectiveness of strategies derived from the process model of emotion regulation. Psychological Bulletin. <https://doi.org/10.1037/a0027600>; Carlsmith KM, Wilson TD, Gilbert DT (2008). The paradoxical consequences of revenge. Journal of Personality and Social Psychology. <https://doi.org/10.1037/a0012165>",
       "caveats": "The portion of this analysis dealing with emotional intensity — not energy expenditure — shows effects ranging from small to moderate. Because only one experiment addresses the issue of revenge, the overall grade is B. The “empty boat” parable originates from Zhuangzi’s “Mountain Trees”: one remains calm when an empty boat bumps into them, but becomes angry when a boat carrying people does the same; the impact is identical in both cases. This is purely an analogy, not empirical evidence. If actual harm has occurred, following the legal procedures outlined in Sections 8 and 9 is far less costly than reacting impulsively on the spot.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "3-18",
@@ -454,7 +454,7 @@
       "evidenceGrade": "A",
       "sources": "Noetel M et al. (2024). Effect of exercise for depression: systematic review and network meta-analysis of randomized controlled trials. BMJ. <https://doi.org/10.1136/bmj-2023-075847>; Karyotaki E et al. (2021). Internet-Based Cognitive Behavioral Therapy for Depression: A Systematic Review and Individual Patient Data Network Meta-analysis. JAMA Psychiatry. <https://doi.org/10.1001/jamapsychiatry.2020.4364>; Tele-MANAS, Ministry of Health and Family Welfare. <https://telemanas.mohfw.gov.in/>; Press Information Bureau, National Tele Mental Health Programme. <https://pib.gov.in/>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>",
       "caveats": "These measures serve as adjuncts for mild‑to‑moderate depression. Individuals with moderate‑to‑severe depression or suicidal thoughts should seek professional care; they may also call 14416 (Tele-MANAS) first (see Section 1, Item 25). Most exercise trials involve relatively few participants and cannot employ the placebo blinding used in drug studies. Light‑therapy research available up to 2003 also includes limited sample sizes. The advice to “stick to a schedule” and “talk to someone” reflects the authors’ experience rather than specific published evidence. Remember, even a ten‑minute walk counts as “getting active” for someone dealing with depression.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "3-19",
@@ -479,7 +479,7 @@
       "evidenceGrade": "C",
       "sources": "Bharatiya Nagarik Suraksha Sanhita, 2023. <https://www.indiacode.nic.in/>; Ministry of Home Affairs. <https://www.mha.gov.in/>; National Legal Services Authority. <https://nalsa.gov.in/>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>",
       "caveats": "Grade C is assigned because there is no scholarly source supporting the premise that “many people treat front-desk staff as archetypes rather than ordinary workers.” The only evidence lies in the rules themselves: paperwork, acknowledgement and appeal mechanisms are explicitly codified. The police route summarised here is the one in the Bharatiya Nagarik Suraksha Sanhita, 2023, set out in Chapter 8, Item 39: a right to have a cognisable offence registered and a copy given free of cost, and a route to the Superintendent of Police under section 173(4) and then to the magistrate under section 175(3). It does not fix a schedule for the investigation, so treat any deadline you are quoted at a counter as something to confirm in the statute rather than assume. This entry does not promise to “guarantee success” by following the rules, nor does it address “unfriendly attitudes” on the part of officials. It merely shifts expectations and the initial course of action. The same logic applies to bank tellers and government service windows: their actions are documented, subject to review, and accountable for errors. Therefore, the proper steps are to keep receipts, request written confirmations, and file complaints through official channels — rather than speculating about whether someone might “take advantage” of you. Legitimate priorities are laid out in law; for example, emergency care is allocated based on medical severity, not on first-come-first-served order (see Chapter 24, Item 8 on triage). If you wish to thank a doctor who helped you, send a thank-you letter or leave a satisfaction rating as described in Chapter 24, Item 11. Offering gifts to law-enforcement personnel to “get better service” constitutes bribery, a crime with severe statutory penalties (see Chapter 8, Item 40). Any obvious discrimination should be reported and monitored, not imitated as an unwritten norm.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "3-20",
@@ -504,7 +504,7 @@
       "evidenceGrade": "A",
       "sources": "Lei Y, Hu S, Sun Y, Zheng L (2026). \"Looking up\" linked to feeling down: a meta-analysis of online upward social comparison and psychological maladjustment. Frontiers in Psychology. <https://doi.org/10.3389/fpsyg.2026.1825169>; Allcott H, Braghieri L, Eichmeyer S, Gentzkow M (2020). Welfare Effects of Social Media. American Economic Review, 110(3), 629–676. <https://doi.org/10.1257/aer.20190658>; Allcott H, Braghieri L, Eichmeyer S, Gentzkow M (2019). The Welfare Effects of Social Media. NBER Working Paper No. 25514 (The specific numbers quoted in this article are verified verbatim in this edition, and the published abstract does not include numbers). <https://www.nber.org/papers/w25514>; Hunt MG, Marx R, Lipson C, Young J (2018). No More FOMO: Limiting Social Media Decreases Loneliness and Depression. Journal of Social and Clinical Psychology, 37(10), 751–768. <https://doi.org/10.1521/jscp.2018.37.10.751>",
       "caveats": "The correlation findings merely indicate that these patterns tend to appear together; they do not prove causation. The undergraduate trial involved only 143 subjects, limiting its statistical power. Overall effect sizes remain modest, so cutting off these apps alone will not resolve all emotional issues. This advice targets usage aimed at monitoring how others are faring; it does not apply to staying in touch with family, seeking information or job hunting. If strict limits prove hard to maintain, start by disabling push notifications, “people you may know” suggestions and homepage recommendations. For broader screen‑time management, see sections 4.15 and 4.16 (hard caps on short‑video apps and scrolling news). When feeling down, consider the actions outlined in section 19 (exercise, sunlight and regular sleep). For those seeking identity through purchases, see section 6.23; those striving to “move up a social rung” should review section 6.24.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "3-21",
@@ -529,7 +529,7 @@
       "evidenceGrade": "B",
       "sources": "Gilovich T, Medvec VH, Savitsky K (2000). The spotlight effect in social judgment: An egocentric bias in estimates of the salience of one's own actions and appearance. Journal of Personality and Social Psychology, 78(2), 211–222. <https://doi.org/10.1037/0022-3514.78.2.211>; Boothby EJ, Cooney G, Sandstrom GM, Clark MS (2018). The Liking Gap in Conversations: Do People Like Us More Than We Think? Psychological Science, 29(11), 1742–1756. <https://doi.org/10.1177/0956797618783714>",
       "caveats": "Grade B reflects that all studies were conducted in laboratory or campus settings with relatively small sample sizes, involving wearing shirts or chatting with strangers. There is no direct evidence that these findings apply to situations such as being discussed by colleagues or making a mistake in a meeting. The numbers merely indicate the direction and approximate magnitude of overestimation; they do not provide a fixed multiplier you can apply. This advice is not meant to imply that others' opinions are irrelevant. In genuine evaluation contexts—interviews, defenses, assessments, or medical evaluations—judgments are real and should be taken seriously. It specifically addresses that everyday feeling of \"everyone is watching me\"; the real opponent here is your own estimation bias.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "3-22",
@@ -554,7 +554,7 @@
       "evidenceGrade": "B",
       "sources": "Smith MM, Sherry SB, Chen S, Saklofske DH, Mushquash C, Flett GL, Hewitt PL (2018). The perniciousness of perfectionism: A meta-analytic review of the perfectionism-suicide relationship. Journal of Personality, 86(3), 522–542. <https://doi.org/10.1111/jopy.12333>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>; World Health Organization. <https://www.who.int/>",
       "caveats": "This item is graded B because most included studies relied on single-time surveys, making it hard to establish temporal sequence. The correlation strength is moderate (r ≈.28), accounting for only a few to ten percent of total variance. Since the outcomes measured are suicidal thoughts and attempts rather than actual mortality, the overall benefit is rated as limited due to reliance on surrogate endpoints. The authors themselves note that the data on perfectionistic concerns and suicide attempts may suffer from publication bias, with studies showing weaker or null results less likely to be published; even after accounting for such missing studies, the overall trend remains unchanged. This recommendation does not oppose setting high standards; rather, it emphasizes where those standards originate and whether failure to meet them leads to feelings of personal worthlessness. Similar to the idea discussed in Item 15 — viewing pessimistic expectations like “things will definitely get worse” as symptoms — this pattern can also be addressed clinically. If you or someone you know is experiencing suicidal thoughts, call 14416 (Tele-MANAS) immediately and remove any means of self-harm, as outlined in Section 1, Item 25. For guidance on how to respond when someone close expresses such thoughts, refer to Section 8, Item 15. Information on depression screening for children can be found in Section 30, Item 8.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "3-23",
@@ -579,7 +579,7 @@
       "evidenceGrade": "A",
       "sources": "Kjærvik SL, Bushman BJ (2024). A meta-analytic review of anger management activities that increase or decrease arousal: What fuels or douses rage? Clinical Psychology Review. <https://doi.org/10.1016/j.cpr.2024.102414>",
       "caveats": "These findings measure anger and aggression, not overall energy levels. The authors categorize the time spent on calming activities as “minutes saved from dealing with fallout after an argument.” Immediate techniques you can use right now include the “circular sighing” method described in Section 22, Item 9, and “stepping away when angry” in Item 17 of this section. Running isn’t useless in the long run — it helps ease low mood, as noted in Section 22, Item 7 (“When feeling down, go for a walk or run”). It simply isn't a good short-term fix for anger. While angry, avoid driving, sending messages, or making important decisions. If someone is physically attacking you, leave the scene and call the police; your priority then is safety, not emotional regulation — see Section 8, Item 43 (“If you’re being abused”).",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "3-24",
@@ -604,7 +604,7 @@
       "evidenceGrade": "B",
       "sources": "Frattaroli J (2006). Experimental disclosure and its moderators: a meta-analysis. Psychological Bulletin. <https://doi.org/10.1037/0033-2909.132.6.823>; Mogk C, Otte S, Reinhold-Hurley B, Kröner-Herwig B (2006). Health effects of expressive writing on stressful or traumatic experiences - a meta-analysis. Psycho-Social Medicine. <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2736499/>; Zachariae R, O'Toole MS (2015). The effect of expressive writing intervention on psychological and physical health outcomes in cancer patients--a systematic review and meta-analysis. Psycho-Oncology. <https://doi.org/10.1002/pon.3802>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>; World Health Organization. <https://www.who.int/>",
       "caveats": "This approach remains controversial. Proponents point to the 146-study meta-analysis showing a small positive effect, while critics cite two meta-analyses of randomized controlled trials that found no significant benefits. The recommended frequency and duration of writing sessions come from the original experimental designs, as summarized in Mogk’s meta-analysis. This method is included here because it requires virtually no expense or time and can be done alone. It may be useful when someone has no one to talk to about their problems. The time-based measurement used here reflects how authors categorized effort levels. If writing becomes increasingly distressing, stop and dial 14416 (Tele-MANAS), as described in Section 1, Item 25.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "3-25",
@@ -631,7 +631,7 @@
       "evidenceGrade": "A",
       "sources": "Marjoribanks J, Ayeleke RO, Farquhar C, Proctor M (2015). Nonsteroidal anti-inflammatory drugs for dysmenorrhoea. Cochrane Database of Systematic Reviews, (7), CD001751. <https://doi.org/10.1002/14651858.CD001751.pub3>; National Institute for Health and Care Excellence (2017, updated 2024). Endometriosis: diagnosis and management (NG73), recommendations 1.3.1, 1.4.2, 1.4.3, 1.5.4. <https://www.nice.org.uk/guidance/ng73/chapter/Recommendations>; Nnoaham KE, Hummelshoj L, Webster P, et al.; World Endometriosis Research Foundation Global Study of Women's Health consortium (2011). Impact of endometriosis on quality of life and work productivity: a multicenter study across ten countries. Fertility and Sterility, 96(2), 366-373.e8. <https://doi.org/10.1016/j.fertnstert.2011.05.090>; Schoep ME, Adang EMM, Maas JWM, De Bie B, Aarts JWM, Nieboer TE (2019). Productivity loss due to menstruation-related symptoms: a nationwide cross-sectional survey among 32 748 women. BMJ Open, 9(6), e026186. <https://doi.org/10.1136/bmjopen-2018-026186>; Haleon (2026). Advil (ibuprofen capsule, liquid filled), OTC drug label: Warnings. DailyMed. <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1f01c10a-9434-91a4-2ee4-352315a6b610>",
       "caveats": "Individuals aged 60 and older, those with past gastrointestinal bleeding, or those currently taking anticoagulants or systemic corticosteroids must consult a physician prior to using NSAIDs (detailed in Chapter 34, Item 3). FDA drug labeling notes that ibuprofen may cause severe allergic reactions, particularly in individuals with aspirin sensitivity; those with active asthma should seek medical advice beforehand. Never self-administer NSAIDs after 20 weeks of gestation due to fetal renal risks (detailed in Chapter 34, Item 5). For individuals who cannot tolerate NSAIDs, acetaminophen is a suitable alternative (observe daily maximum dosage limits in Chapter 34, Item 1). Pain medication for dysmenorrhea is taken acutely during the first few days of menstruation; it does not reach the monthly medication-overuse headache threshold (15 days per month) described in Chapter 34, Item 9. Grade A reflects high-volume randomized trials. Benefit magnitude is categorized as Moderate based on the symptom reduction and restored daily functionality. Primary beneficiary is yourself.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "3-26",
@@ -656,7 +656,7 @@
       "evidenceGrade": "A",
       "sources": "Qaseem A, Kansagara D, Forciea MA, Cooke M, Denberg TD; American College of Physicians (2016). Management of Chronic Insomnia Disorder in Adults: A Clinical Practice Guideline From the American College of Physicians. Annals of Internal Medicine, 165(2), 125-133. <https://doi.org/10.7326/M15-2175>; Trauer JM, Qian MY, Doyle JS, Rajaratnam SM, Cunnington D (2015). Cognitive Behavioral Therapy for Chronic Insomnia: A Systematic Review and Meta-analysis. Annals of Internal Medicine, 163(3), 191-204. <https://doi.org/10.7326/M14-2841>; van der Zweerde T, Bisdounis L, Kyle SD, Lancee J, van Straten A (2019). Cognitive behavioral therapy for insomnia: A meta-analysis of long-term effects in controlled studies. Sleep Medicine Reviews, 48, 101208. <https://doi.org/10.1016/j.smrv.2019.08.002>; Zachariae R, Lyby MS, Ritterband LM, O'Toole MS (2016). Efficacy of internet-delivered cognitive-behavioral therapy for insomnia - A systematic review and meta-analysis of randomized controlled trials. Sleep Medicine Reviews, 30, 1-10. <https://doi.org/10.1016/j.smrv.2015.10.004>; Espie CA, Emsley R, Kyle SD, et al. (2019). Effect of Digital Cognitive Behavioral Therapy for Insomnia on Health, Psychological Well-being, and Sleep-Related Quality of Life: A Randomized Clinical Trial. JAMA Psychiatry, 76(1), 21-30. <https://doi.org/10.1001/jamapsychiatry.2018.2745>; Glass J, Lanctôt KL, Herrmann N, Sproule BA, Busto UE (2005). Sedative hypnotics in older people with insomnia: meta-analysis of risks and benefits. BMJ, 331(7526), 1169. <https://doi.org/10.1136/bmj.38623.768588.47>; Edinger JD, Arnedt JT, Bertisch SM, et al. (2021). Behavioral and psychological treatments for chronic insomnia disorder in adults: an American Academy of Sleep Medicine clinical practice guideline. Journal of Clinical Sleep Medicine, 17(2), 255-262. <https://doi.org/10.5664/jcsm.8986>",
       "caveats": "Stimulus control rules derive from American Academy of Sleep Medicine (AASM) 2021 guidelines. Sleep restriction restricts in-bed duration to actual baseline sleep duration, progressively expanding as sleep efficiency exceeds 85–90%; AASM cautions that temporary daytime somnolence during initial weeks poses risks for drivers and heavy machinery operators, and sleep restriction should be used cautiously or under medical supervision in patients with bipolar disorder, uncontrolled epilepsy, or pre-existing severe daytime sleepiness. Providing generic sleep hygiene advice alone is ineffective and explicitly not recommended by guidelines as monotherapy. Occasional poor nights do not constitute insomnia disorder: stabilize wake times (Chapter 3, Item 2), restrict afternoon caffeine (Chapter 3, Item 4), and eliminate illuminated screens before bed (Chapter 3, Item 8). Patients who snore heavily or experience breath-holding must first rule out obstructive sleep apnea, detailed in Chapter 3, Item 27. Insomnia comorbid with persistent low mood is covered in Chapter 3, Item 18. Benefit magnitude is rated Moderate: nocturnal sleep latency and wakefulness savings total ~45 minutes nightly, accumulating to hours weekly, though total sleep duration changes little. Melatonin is ineffective for chronic insomnia, detailed in Chapter 6, Item 34. Primary beneficiary is yourself.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "3-27",
@@ -681,7 +681,7 @@
       "evidenceGrade": "A",
       "sources": "Kapur VK, Auckley DH, Chowdhuri S, et al. (2017). Clinical Practice Guideline for Diagnostic Testing for Adult Obstructive Sleep Apnea: An American Academy of Sleep Medicine Clinical Practice Guideline. Journal of Clinical Sleep Medicine, 13(3), 479-504. <https://doi.org/10.5664/jcsm.6506>; Patil SP, Ayappa IA, Caples SM, Kimoff RJ, Patel SR, Harrod CG (2019). Treatment of Adult Obstructive Sleep Apnea With Positive Airway Pressure: An American Academy of Sleep Medicine Systematic Review, Meta-Analysis, and GRADE Assessment. Journal of Clinical Sleep Medicine, 15(2), 301-334. <https://doi.org/10.5664/jcsm.7638>; Tregear S, Reston J, Schoelles K, Phillips B (2010). Continuous positive airway pressure reduces risk of motor vehicle crash among drivers with obstructive sleep apnea: systematic review and meta-analysis. Sleep, 33(10), 1373-1380. <https://doi.org/10.1093/sleep/33.10.1373>; Tregear S, Reston J, Schoelles K, Phillips B (2009). Obstructive sleep apnea and risk of motor vehicle crash: systematic review and meta-analysis. Journal of Clinical Sleep Medicine, 5(6), 573-581. <https://pubmed.ncbi.nlm.nih.gov/20465027/>; McEvoy RD, Antic NA, Heeley E, et al. (2016). CPAP for Prevention of Cardiovascular Events in Obstructive Sleep Apnea. New England Journal of Medicine, 375(10), 919-931. <https://doi.org/10.1056/NEJMoa1606599>; Yu J, Zhou Z, McEvoy RD, et al. (2017). Association of Positive Airway Pressure With Cardiovascular Events and Death in Adults With Sleep Apnea: A Systematic Review and Meta-analysis. JAMA, 318(2), 156-166. <https://doi.org/10.1001/jama.2017.7967>; Benjafield AV, Ayas NT, Eastwood PR, et al. (2019). Estimation of the global prevalence and burden of obstructive sleep apnoea: a literature-based analysis. The Lancet Respiratory Medicine, 7(8), 687-698. <https://doi.org/10.1016/S2213-2600(19)30198-5>; US Preventive Services Task Force (2022). Screening for Obstructive Sleep Apnea in Adults: US Preventive Services Task Force Recommendation Statement. JAMA, 328(19), 1945-1950. <https://doi.org/10.1001/jama.2022.20304>",
       "caveats": "Controverted regarding cardiovascular mortality prevention. Randomized trials conclusively demonstrate that CPAP does not reduce hard cardiovascular endpoints or extend lifespan; SAVE participants were minimally sleepy at baseline and achieved average nightly use of 3.3 hours, but stratified meta-analyses by hours of use also showed no difference. Crash risk reductions come from pre-post observational cohorts rather than randomized trials, where treated drivers may have practiced greater caution. The USPSTF (2022) found insufficient evidence to recommend screening asymptomatic adults. Therefore, individuals without snoring or daytime sleepiness do not need screening. Benefit magnitude is categorized as Moderate: ESS reductions reflect meaningful alertness improvements, and crash prevention confers major safety value. If feeling fatigued while driving, pull over immediately (Chapter 1, Item 9). Excessive daytime napping warrants evaluation (Chapter 2, Item 37). Managing chronic insomnia is covered in Chapter 3, Item 26. Primary beneficiaries are yourself, vehicle passengers, and fellow road users.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     }
   ]
 }

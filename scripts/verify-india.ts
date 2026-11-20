@@ -12,6 +12,7 @@ interface ManifestChapter {
   verifiedAt: string | null;
   sourceCount: number;
   humanReview: string;
+  reviewMethod?: string;
   openIssues: string[];
   bannedTerms: number;
 }
@@ -317,7 +318,7 @@ for (const [key, meta] of Object.entries(manifest.chapters)) {
     }
 
     const expectedReview = meta.status === 'reviewed' ? 'reviewed'
-      : meta.status === 'checked' ? 'independently-checked'
+      : meta.status === 'checked' ? 'source-checked'
       : 'draft';
     if (tip.reviewStatus !== expectedReview) {
       errors.push('Tip ' + tip.id + ' reviewStatus is ' + (tip.reviewStatus ?? 'missing') + ', expected ' + expectedReview);
@@ -339,6 +340,12 @@ for (const [key, meta] of Object.entries(manifest.chapters)) {
     }
     if (meta.sourceCount <= 0) errors.push('Chapter ' + key + ' has no source count');
     if (!meta.verifier) errors.push('Chapter ' + key + ' has no verifier');
+    if ((meta.status === 'checked' || meta.status === 'reviewed') && !meta.reviewMethod) {
+      errors.push('Chapter ' + key + ' has no reviewMethod');
+    }
+    if (meta.status === 'reviewed' && meta.reviewMethod === 'ai-delegated-source-check') {
+      errors.push('Chapter ' + key + ' is reviewed with an AI-delegated review method');
+    }
     if (!meta.verifiedAt) errors.push('Chapter ' + key + ' has no verifiedAt');
     if (!Array.isArray(meta.openIssues)) errors.push('Chapter ' + key + ' openIssues must be an array');
     if (meta.bannedTerms !== 0) errors.push('Chapter ' + key + ' recorded bannedTerms must be 0');

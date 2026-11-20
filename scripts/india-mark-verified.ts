@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 /**
- * Flip one chapter to the independently-checked state after reading its
+ * Flip one chapter to the source-checked state after reading its
  * verification report. Refuses to run unless the report ends in a PASS verdict.
  *
  *   npx tsx scripts/india-mark-verified.ts 12
@@ -33,7 +33,7 @@ if (!/verdict\s*:\s*pass/i.test(report)) {
 
 const reportVerifier = (report.match(/^Verifier:\s*(.+)$/im)?.[1] ?? '').trim();
 const reportDate = (report.match(/^(?:Date|Access date):\s*(\d{4}-\d{2}-\d{2})/im)?.[1] ?? '');
-const verifier = flag('verifier') || reportVerifier || 'independent-verifier';
+const verifier = flag('verifier') || reportVerifier || 'automated-source-check (agent)';
 const date = flag('date') || reportDate || new Date().toISOString().slice(0, 10);
 
 const manifestPath = 'data/en-in/manifest.json';
@@ -56,12 +56,13 @@ const built = JSON.parse(fs.readFileSync(chapterFile, 'utf-8'));
 built.rewriteStatus = 'checked';
 let withSource = 0;
 for (const tip of built.tips) {
-  tip.reviewStatus = 'independently-checked';
+  tip.reviewStatus = 'source-checked';
   if (/https?:\/\//i.test(tip.sources ?? '')) withSource += 1;
 }
 fs.writeFileSync(chapterFile, JSON.stringify(built, null, 2) + '\n');
 
 meta.status = 'checked';
+meta.reviewMethod = 'ai-delegated-source-check';
 meta.verifier = verifier;
 meta.verifiedAt = date;
 meta.sourceCount = withSource;

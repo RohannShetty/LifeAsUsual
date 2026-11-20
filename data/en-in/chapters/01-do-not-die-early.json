@@ -29,7 +29,7 @@
       "evidenceGrade": "A",
       "sources": "NHTSA (2024). Occupant Protection in Passenger Vehicles: 2022 Data (DOT HS 813 573). <https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/813573>; WHO (2025). Road traffic injuries fact sheet. <https://www.who.int/news-room/fact-sheets/detail/road-traffic-injuries>",
       "caveats": "Seat belts must be worn in the back seat as well. In the same report, 60% of rear‑seat occupants killed in crashes were not wearing belts. The 45% and 60% figures are NHTSA estimates derived from crash‑database analysis (Kahane 2015), not from randomized trials.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "1-2",
@@ -54,7 +54,7 @@
       "evidenceGrade": "A",
       "sources": "Liu BC et al. (2008). Helmets for preventing injury in motorcycle riders. Cochrane Database of Systematic Reviews. <https://doi.org/10.1002/14651858.CD004333.pub3>",
       "caveats": "The helmet strap must be fastened securely. A helmet left hanging on the handlebars does not count as being worn. The figures above apply specifically to motorcycles. For e-bikes, no direct studies exist, but the mechanics of head injury in a crash remain the same.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "1-3",
@@ -79,7 +79,7 @@
       "evidenceGrade": "B",
       "sources": "Marshall SW et al. (1998). Fatal residential fires: who dies and who survives? JAMA. <https://doi.org/10.1001/jama.279.20.1633>; USFA (2022). Fatal Fires in Residential Buildings (2018-2020), Topical Fire Report Series 22(2). <https://www.usfa.fema.gov/downloads/pdf/statistics/v22i2.pdf>",
       "caveats": "This grade is assigned because only one study exists on smoke alarms; it compared past fire incidents in various homes rather than using a randomized trial design. No research has shown that carbon monoxide alarms reduce mortality rates. The reported benefits are inferred from the fact that most poisoning deaths happen at home during winter.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "1-4",
@@ -104,7 +104,7 @@
       "evidenceGrade": "C",
       "sources": "Petroleum and Natural Gas Regulatory Board. <https://pngrb.gov.in/>; Petroleum and Explosives Safety Organisation, Gas Cylinders Rules, 2016. <https://peso.gov.in/>; Ministry of Petroleum and Natural Gas. <https://mopng.gov.in/>; Bureau of Indian Standards, IS 4384, rubber hoses for liquefied petroleum gas. <https://www.bis.gov.in/>",
       "caveats": "People pose as gas inspectors, perform a perfunctory “check” and then sell self-closing valves, alarms or hoses at a mark-up. You may refuse, and you may complain to the distributor or to the oil marketing company. If you smell gas: shut the cylinder valve, open the doors and windows, do not switch any electrical switch on or off, including lights and exhaust fans, do not light a flame, and leave the house. Call the 24-hour emergency number printed on the cylinder or the consumer card — every oil marketing company runs an LPG emergency line — or the city gas distribution emergency number for piped gas, from outside. A headache, nausea or drowsiness in the house at the same time is carbon monoxide poisoning until proved otherwise; get everyone out and to a hospital. See Chapter 13.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "1-5",
@@ -129,7 +129,7 @@
       "evidenceGrade": "A",
       "sources": "White J, Weinstein SA, De Haro L, et al. (2019). Mushroom poisoning: a proposed new clinical classification. Toxicon, 157, 53-65.; Indian Council of Medical Research. <https://www.icmr.gov.in/>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>",
       "caveats": "If anyone has eaten a suspect mushroom, go to a hospital at once and take the leftovers, the trimmings, or photographs of what was picked and where. Do not wait for the stomach upset to pass: the quiet day that follows is part of the poisoning, not the end of it. Treatment differs by toxin, so identifying the species matters. “Local people know them” is not a safe assumption, and neither is any of the folk tests above.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "1-6",
@@ -154,7 +154,7 @@
       "evidenceGrade": "A",
       "sources": "Bureau of Indian Standards, lithium-ion battery standards. <https://www.bis.gov.in/>; National Disaster Management Authority, fire safety. <https://ndma.gov.in/>; Ministry of Housing and Urban Affairs. <https://mohua.gov.in/>",
       "caveats": "Do not buy a modified battery or a generic charger. Do not charge a damaged battery. If a battery swells, heats up or smells, stop using it and take it to a service centre.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "1-7",
@@ -179,7 +179,7 @@
       "evidenceGrade": "A",
       "sources": "Ettehad D et al. (2016). Blood pressure lowering for prevention of cardiovascular disease and death: a systematic review and meta-analysis. Lancet. <https://doi.org/10.1016/S0140-6736(15)01225-8>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>; World Health Organization. <https://www.who.int/>",
       "caveats": "Start by getting your blood pressure measured at least once. There is still some debate over what exact target level (130 or 140 mmHg) is ideal, but there is no dispute that knowing you have hypertension and taking steps to lower it is highly beneficial.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "1-8",
@@ -206,7 +206,7 @@
       "evidenceGrade": "A",
       "sources": "US Preventive Services Task Force (2021). Screening for Prediabetes and Type 2 Diabetes. <https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/screening-for-prediabetes-and-type-2-diabetes>: \"at a lower BMI (≥23) if the patient is Asian American\"; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>; World Health Organization. <https://www.who.int/>",
       "caveats": "Having a prediabetes diagnosis does not mean you must start taking medication right away. Many people can fully reverse this condition simply by making lifestyle changes.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "1-9",
@@ -231,7 +231,7 @@
       "evidenceGrade": "B",
       "sources": "World Health Organization (2025). Road traffic injuries fact sheet. <https://www.who.int/news-room/fact-sheets/detail/road-traffic-injuries>; Dingus TA et al. (2016). Driver crash risk factors and prevalence evaluation using naturalistic driving data. PNAS, 113(10), 2636-2641. <https://doi.org/10.1073/pnas.1513271113>; Motor Vehicles Act, 1988. <https://www.indiacode.nic.in/>; Ministry of Road Transport and Highways. <https://morth.nic.in/>",
       "caveats": "The 1% speed and 4% fatality ratio comes from traffic modelling, not from randomised trials. For alcohol, WHO describes an upward trend with no fixed harmless threshold. The phone and drowsiness odds ratios cover all injury and property-damage crashes, not fatal crashes alone, and the baseline was ideal attentive driving, which inflates the ratios a little. Indian law penalises drink-driving under section 185 of the Motor Vehicles Act, 1988 and dangerous driving under section 184; it sets no statutory rest break for a private driver, so the four-hour guidance here is advice, not a legal rule. Commercial passenger and goods vehicles run to permit conditions and state rules, so if you drive for a living, check what your permit requires. If you are drowsy, pull over at a fuel station and sleep. Sedating antihistamines such as chlorpheniramine or diphenhydramine also impair driving markedly, as Chapter 34, Item 12 sets out. Persistent drowsiness at the wheel with loud snoring is worth a sleep-apnoea assessment, described in Chapter 3, Item 27.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "1-10",
@@ -260,7 +260,7 @@
       "evidenceGrade": "A",
       "sources": "NHTSA (2024). Occupant Protection in Passenger Vehicles: 2022 Data (DOT HS 813 573). <https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/813573>; WHO (2025). Road traffic injuries fact sheet. <https://www.who.int/news-room/fact-sheets/detail/road-traffic-injuries>",
       "caveats": "Follow the manufacturer’s instructions to install the seat correctly; a faulty installation offers no protection. Infants under one year must be placed rear‑facing. These figures are based on official U.S. crash data.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "1-11",
@@ -288,7 +288,7 @@
       "evidenceGrade": "B",
       "sources": "Spiegel CN, Lindaman FC (1977). Children can't fly: a program to prevent childhood morbidity and mortality from window falls. American Journal of Public Health: \"Significant reduction in falls resulted, particularly in the Bronx, where reported falls declined 50 percent from 1973 to 1975\", 1976 \"to require that landlords provide window guards in apartments where children ten years old and younger reside\". <https://doi.org/10.2105/AJPH.67.12.1143>; (2021). Unintentional Window Falls in Children and Adolescents. Academic Pediatrics: 2007 1 2017 8 38,840 , \"The majority of falls occurred in children under the age of 6 and were related to falls from a second story or below\". <https://doi.org/10.1016/j.acap.2020.07.008>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>; World Health Organization. <https://www.who.int/>",
       "caveats": "Avoid placing beds, sofas, boxes, or any other objects near windows or balconies that kids might climb onto. Screen windows only keep mosquitoes out; they can be easily pushed open, so never rely on them as a safety barrier. This protection is needed even on lower floors: most child falls recorded in U.S. data actually occur on the second floor or even lower.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "1-12",
@@ -313,7 +313,7 @@
       "evidenceGrade": "A",
       "sources": "Cummings P et al. (2011). Association between wearing a personal floatation device and death by drowning among recreational boaters. Injury Prevention. <https://doi.org/10.1136/ip.2010.028688>; World Health Organization (2026). Drowning [fact sheet, 1 May 2026]. <https://www.who.int/news-room/fact-sheets/detail/drowning> (accessed 21 October 2026)",
       "caveats": "The Grade A rating applies only to the protective effect of life jackets. The practice of keeping children within sight is widely accepted but only qualifies for a Grade C rating due to lack of randomized trials; no such trials are expected in the future.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "1-13",
@@ -341,7 +341,7 @@
       "evidenceGrade": "A",
       "sources": "Sherrington C et al. (2019). Exercise for preventing falls in older people living in the community. Cochrane Database of Systematic Reviews. <https://doi.org/10.1002/14651858.CD012424.pub2>; Gillespie LD et al. (2012). Interventions for preventing falls in older people living in the community. Cochrane Database of Systematic Reviews. <https://doi.org/10.1002/14651858.CD007146.pub3>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>; World Health Organization. <https://www.who.int/>",
       "caveats": "This recommendation applies to seniors aged 60 and above who live independently at home rather than in nursing homes. The studies referenced here focus on the total number of falls, not on actual mortality rates. It’s important to note that the path from a fall to a hip fracture — and ultimately death — can be very short for older adults.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "1-14",
@@ -366,7 +366,7 @@
       "evidenceGrade": "A",
       "sources": "Qu C et al. (2014). Efficacy of neonatal HBV vaccination on liver cancer and other liver diseases over 30-year follow-up of the Qidong hepatitis B intervention study. PLoS Medicine. <https://doi.org/10.1371/journal.pmed.1001774>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>; World Health Organization. <https://www.who.int/>",
       "caveats": "This recommendation is for adults who were never vaccinated as a child, or whose antibodies have waned. India ran a hepatitis B vaccination pilot in ten states from 2002–03 and added the vaccine to the routine infant schedule nationally only in 2011, so most adults born before that were not vaccinated at birth and should check their status rather than assume they are covered. The 84% cancer-risk reduction belongs to people immunised at birth; adolescents vaccinated later saw only a 21% fall in virus carriage. For an adult the aim is to prevent a new infection, not to reproduce that cancer benefit. Vaccination does nothing for someone already infected; they need regular follow-up with a hepatologist. Infection is confirmed when the hepatitis B surface antigen (HBsAg) test is positive, and a full panel tells you whether you are immune, infected or susceptible.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "1-15",
@@ -391,7 +391,7 @@
       "evidenceGrade": "B",
       "sources": "U.S. Centers for Disease Control and Prevention (CDC). Tetanus: \"Tetanus bacteria can get into someone's body through broken skin, usually through injuries.\"\"Tetanus can lead to death (1 in 10 cases in the United States are fatal).\"\"People who didn't complete the primary series or who aren't up to date with their 10-year tetanus booster shots are also at increased risk.\"\"Vaccination also helps prevent tetanus in people with wounds, depending on their tetanus vaccination history.\"<https://www.cdc.gov/tetanus/about/index.html>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>; World Health Organization. <https://www.who.int/>",
       "caveats": "At the hospital, let the doctor make the decision — don’t guess on your own, and don’t hesitate to ask questions. Not every wound requires a tetanus shot; the doctor will assess the wound category and your vaccination history before deciding. The idea that “one shot in childhood provides lifelong protection” is a myth. If a wound is dirty, a booster is needed after 5 years, so try to recall when you last received a tetanus shot before heading to the clinic.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "1-16",
@@ -419,7 +419,7 @@
       "evidenceGrade": "A",
       "sources": "Lei J et al. (2020). HPV Vaccination and the Risk of Invasive Cervical Cancer. New England Journal of Medicine. <https://doi.org/10.1056/NEJMoa1917338>",
       "caveats": "The greatest benefit is seen when vaccination occurs between ages 9 and 14. Even for women aged 17–30, risk is still reduced by more than half. After age 30, the protective effect gradually diminishes. Vaccinated women still need regular cervical cancer screening; the vaccine does not replace screening — see item 18 for screening guidelines for women over 30.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "1-17",
@@ -447,7 +447,7 @@
       "evidenceGrade": "A",
       "sources": "US Preventive Services Task Force (2024). Breast Cancer: Screening. <https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/breast-cancer-screening>; Central Government Health Scheme (2025). Rate for X-ray mammography, both sides (RI060), rates effective 13 October 2025. <https://cghshospitals.com/rates/x-ray-mammography-bilateral-unilateral-398>; Apollo 247. Breast scan (mammography), Pune. <https://www.apollo247.com/radiology-details/breast-scan-c-pune> (accessed 21 October 2026)",
       "caveats": "The recommended starting age for screening varies by country. Women with a family history of breast cancer — such as parents, children or siblings who have had it — or those carrying BRCA mutations are at higher risk. They should consult a doctor individually to determine the right screening plan; the above recommendations do not apply to them.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "1-18",
@@ -474,7 +474,7 @@
       "evidenceGrade": "A",
       "sources": "Sankaranarayanan R et al. (2009). HPV screening for cervical cancer in rural India. New England Journal of Medicine. <https://doi.org/10.1056/NEJMoa0808516>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>; World Health Organization. <https://www.who.int/>",
       "caveats": "Even women who have received the HPV vaccine still need screening, since the vaccine does not protect against all viral types. What makes this study unique is that it was a randomized screening trial with mortality as the primary outcome and only one round of testing performed.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "1-19",
@@ -501,7 +501,7 @@
       "evidenceGrade": "A",
       "sources": "Hewitson P et al. (2007). Screening for colorectal cancer using the faecal occult blood test, Hemoccult. Cochrane Database of Systematic Reviews. <https://doi.org/10.1002/14651858.CD001216.pub2>; Bretthauer M et al. (2022). Effect of Colonoscopy Screening on Risks of Colorectal Cancer and Related Death. New England Journal of Medicine. <https://doi.org/10.1056/NEJMoa2208375>",
       "caveats": "This topic remains debated. The NordICC trial tracked participants based on whether they were invited to get a colonoscopy; the difference in colorectal cancer mortality between groups was 0.28% versus 0.31% (RR 0.90, 95% CI 0.64–1.16), a gap well within statistical margins of error. This suggests earlier estimates of colonoscopy’s mortality benefits may have been overstated, while evidence for fecal tests’ impact on mortality is more robust. Most national guidelines recommend starting screening at ages 45–50; those with a family history of colorectal cancer should begin even earlier.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "1-20",
@@ -526,7 +526,7 @@
       "evidenceGrade": "A",
       "sources": "Fröbert O et al. (2021). Influenza Vaccination After Myocardial Infarction: A Randomized, Double-Blind, Placebo-Controlled, Multicenter Trial. Circulation. <https://doi.org/10.1161/CIRCULATIONAHA.121.057042>; Behrouzi B et al. (2022). Association of Influenza Vaccination With Cardiovascular Risk: A Meta-analysis. JAMA Network Open. <https://doi.org/10.1001/jamanetworkopen.2022.8873>; Demicheli V et al. (2018). Vaccines for preventing influenza in the elderly. Cochrane Database of Systematic Reviews. <https://doi.org/10.1002/14651858.CD004876.pub4> ( Cochrane ); Ministry of Health and Family Welfare. <https://mohfw.gov.in/>; World Health Organization. <https://www.who.int/>",
       "caveats": "This recommendation is somewhat controversial. The Grade A rating applies only to people with cardiovascular disease. For otherwise healthy older adults, a Cochrane review offers only limited evidence. Flu vaccination also lowered the seasonal flu infection rate from 6% to 2.4%. The review rated the evidence for infection outcomes as “low” quality and the evidence for mortality as “very low” quality. This review was published in 2018 by Demicheli V et al.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "1-21",
@@ -554,7 +554,7 @@
       "evidenceGrade": "A",
       "sources": "Lal H, Cunningham AL, Godeaux O, et al. (2015). Efficacy of an adjuvanted herpes zoster subunit vaccine in older adults. New England Journal of Medicine, 372(22), 2087-2096. <https://doi.org/10.1056/NEJMoa1501184>; Tata 1mg (21 October 2026). Shingrix vaccine price. <https://www.1mg.com/labs/test/shingrix-vaccine-vaccination-at-home-38671/gautam-buddha-nagar/price>; Apollo Homecare (21 October 2026). Adult vaccination. <https://www.apollohomecare.com/adult-vaccination/>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>; World Health Organization. <https://www.who.int/>",
       "caveats": "This option ranks low in terms of cost-effectiveness primarily due to its high price. While shingles itself rarely proves fatal, its most troublesome complication is post-herpetic neuralgia, which can persist for months or even years. After vaccination, a notable percentage of recipients experience pain at the injection site and fever. In particular, severe side effects (graded as Grade 3) occurred in 17.0% of vaccine recipients versus 3.2% of those given a placebo.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "1-22",
@@ -582,7 +582,7 @@
       "evidenceGrade": "A",
       "sources": "Bonten MJ, Huijts SM, Bolkenbaas M, et al. (2015). Polysaccharide conjugate vaccine against pneumococcal pneumonia in adults. New England Journal of Medicine, 372(12), 1114-1125. <https://doi.org/10.1056/NEJMoa1408544>; Tata 1mg (21 October 2026). Pneumovax 23 vaccine price. <https://www.1mg.com/labs/test/pneumovax-23-vaccine-vaccination-at-home-38685/pune/price>; Apollo Homecare (21 October 2026). Adult vaccination. <https://www.apollohomecare.com/adult-vaccination/>; National Health Mission, Universal Immunisation Programme. <https://nhm.gov.in/>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>; World Health Organization. <https://www.who.int/>",
       "caveats": "This vaccine only protects against the specific bacterial strains it targets; it does not prevent all types of pneumonia.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "1-23",
@@ -607,7 +607,7 @@
       "evidenceGrade": "A",
       "sources": "Li WQ et al. (2019). Effects of Helicobacter pylori treatment and vitamin and garlic supplementation on gastric cancer incidence and mortality: follow-up of a randomized intervention trial. BMJ. <https://doi.org/10.1136/bmj.l5016>",
       "caveats": "Reinfection can still occur after eradication, so it is advisable for all household members to be tested and treated together. This trial involved residents of an area with a high incidence of gastric cancer; people living in regions with lower incidence may gain considerably less benefit.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "1-24",
@@ -634,7 +634,7 @@
       "evidenceGrade": "A",
       "sources": "National Lung Screening Trial Research Team (2011). Reduced Lung-Cancer Mortality with Low-Dose Computed Tomographic Screening. New England Journal of Medicine. <https://doi.org/10.1056/NEJMoa1102873>",
       "caveats": "This recommendation applies only to high-risk smokers. In the same study, 24.2% of CT recipients showed suspicious findings, yet 96.4% of those cases turned out to be false positives. For non-smokers, undergoing this test offers no benefit and only adds unnecessary anxiety.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "1-25",
@@ -659,7 +659,7 @@
       "evidenceGrade": "B",
       "sources": "Zalsman G et al. (2016). Suicide prevention strategies revisited: 10-year systematic review. Lancet Psychiatry. <https://doi.org/10.1016/S2215-0366(16)30030-X>; Tele-MANAS, Ministry of Health and Family Welfare. <https://telemanas.mohfw.gov.in/>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>",
       "caveats": "The B rating is based on two factors: most evidence supporting restrictive measures comes from ecological studies that compare suicide rates before and after policy implementation; there is currently no direct evidence that the helpline itself reduces overall mortality rates. Suicidal impulses typically last only a few minutes to a few hours, so simply removing lethal items from immediate reach is a meaningful intervention on its own. Data on outcomes over longer time periods following suicide attempts, as well as information on long-term consequences for survivors, can be found in Chapter 1, Item 32 (“Tell someone close to you as soon as suicidal thoughts arise”).",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "1-26",
@@ -684,7 +684,7 @@
       "evidenceGrade": "B",
       "sources": "Kendrick D et al. (2012). Home safety education and provision of safety equipment for injury prevention. Cochrane Database of Systematic Reviews. <https://doi.org/10.1002/14651858.CD005014.pub3>; Bureau of Indian Standards. <https://www.bis.gov.in/>; National Disaster Management Authority. <https://ndma.gov.in/>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>",
       "caveats": "This finding is somewhat controversial. The same Cochrane meta-analysis found that interventions that did not provide emergency supplies also lowered injury rates by roughly 20%. The original IRR for those interventions was 0.78, with a 95% confidence interval of 0.66 to 0.92. Providing emergency supplies alone did not yield better results than other measures. The main effect of these interventions comes from on-site education and home modifications, so the benefit of supplying emergency supplies is rated as “moderate” rather than “significant”. When buying a fire extinguisher, look for the ISI mark and check that the pressure gauge needle points to the green zone. Details on smoke alarms and carbon monoxide detectors are covered in Item 3 of this chapter. Instructions for using tourniquets can be found in Chapter 13, Item 12. Ask the supplier how each item is refilled or replaced, and what its service life is.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "1-27",
@@ -709,7 +709,7 @@
       "evidenceGrade": "B",
       "sources": "Price SJ, Shephard EA, Stapley SA, Barraclough K, Hamilton WT (2014). Non-visible versus visible haematuria and bladder cancer risk: a study of electronic records in primary care. British Journal of General Practice, 64(626), e584-e589. <https://doi.org/10.3399/bjgp14X681409>",
       "caveats": "The absence of pain is a key clue. Blood in urine caused by kidney stones or infections usually comes with abdominal or flank pain, plus frequent, urgent, or painful urination. Cancer-related bleeding, however, often causes no discomfort at all and may disappear for a few days before returning — which is why many people overlook it. Taking anticoagulant medications is not a valid reason to skip testing. Blood in urine after intense exercise or during a woman’s menstrual period can be re-evaluated before deciding on further checks. The benefit is rated “low” because it reflects only detection rates, not any measurable reduction in mortality resulting from early diagnosis.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "1-28",
@@ -734,7 +734,7 @@
       "evidenceGrade": "A",
       "sources": "Vlachopoulos CV, Terentes-Printzios DG, Ioakeimidis NK, Aznaouridis KA, Stefanadis CI (2013). Prediction of cardiovascular events and all-cause mortality with erectile dysfunction: a systematic review and meta-analysis of cohort studies. Circulation: Cardiovascular Quality and Outcomes, 6(1), 99-109. <https://doi.org/10.1161/CIRCOUTCOMES.112.966903>; DailyMed (). VIAGRA (sildenafil citrate) tablet, CONTRAINDICATIONS. <https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=d905dc8d-917f-4ea3-a4ee-a1ecf6967d4e>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>; World Health Organization. <https://www.who.int/>",
       "caveats": "These 14 studies tracked groups of men over time; they are not randomized controlled trials. Hence the “40% higher” figure reflects an association, not a proven cause‑and‑effect relationship. Occasional episodes do not count; the condition is considered present only when symptoms persist for three months or more. The tests recommended — blood pressure measurement, fasting blood‑glucose testing, plus cholesterol checks, smoking status assessment, and waist‑circumference measurement — are the same as those listed in sections 7 and 8 of this chapter. Avoid purchasing “male‑enhancement” supplements online; legitimate medications for this purpose are prescription drugs, and their instructions list nitrates as a contraindication — meaning men already taking nitroglycerin or similar drugs must not use them, as doing so can cause a sudden drop in blood pressure. For ways to improve erectile function, see section 29 (weight loss and smoking cessation can help). The benefit is rated “moderate” rather than “large”: the 44% figure represents the difference between two groups, not the actual reduction in mortality achieved by testing. It is also not “small”; unlike the situation described in section 27 (visible blood in urine), where detection alone is the benefit, here hypertension, diabetes, and abnormal cholesterol levels each have established treatments available.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "1-29",
@@ -759,7 +759,7 @@
       "evidenceGrade": "A",
       "sources": "Gupta BP, Murad MH, Clifton MM, Prokop L, Nehra A, Kopecky SL (2011). The effect of lifestyle modification and cardiovascular risk factor reduction on erectile dysfunction: a systematic review and meta-analysis. Archives of Internal Medicine, 171(20), 1797-1803. <https://doi.org/10.1001/archinternmed.2011.440>; Rosen RC, Cappelleri JC, Smith MD, Lipsky J, Peña BM (1999). Development and evaluation of an abridged, 5-item version of the International Index of Erectile Function (IIEF-5) as a diagnostic tool for erectile dysfunction. International Journal of Impotence Research, 11(6), 319-326. <https://doi.org/10.1038/sj.ijir.3900472>",
       "caveats": "These six trials used different interventions — some combined weight loss and exercise, while others used medication to control blood pressure and lipids. With only 740 participants overall, the results confirm a positive trend, though the exact degree of improvement varies per individual. The benefit is rated as “minor” because the outcome measured was solely questionnaire scores, not actual reductions in disease incidence. However, similar lifestyle changes have been shown to produce measurable health benefits elsewhere: quitting smoking (see Section 2, Item 1), maintaining a BMI between 20–25 through weight control (Section 2, Item 33), and managing blood pressure with medication when necessary (Section 7). Prescription medications are acceptable when prescribed by a doctor; caution is advised with over-the-counter “health supplements,” which may contain unregulated amounts of active ingredients. For guidance on identifying safe products, see Section 28, Item 4.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "1-30",
@@ -784,7 +784,7 @@
       "evidenceGrade": "A",
       "sources": "Giannou FK, Tsiara CG, Nikolopoulos GK, et al. (2016). Condom effectiveness in reducing heterosexual HIV transmission: a systematic review and meta-analysis of studies on HIV serodiscordant couples. Expert Review of Pharmacoeconomics & Outcomes Research, 16(4), 489-499. <https://doi.org/10.1586/14737167.2016.1102635>; Fonner VA et al. (2016). Effectiveness and safety of oral HIV preexposure prophylaxis for all populations. AIDS. <https://doi.org/10.1097/QAD.0000000000001145> ( PrEP)",
       "caveats": "The difference between “infrequent use” and “no use” is minimal; the whole benefit hinges on the phrase “every time, throughout.” Sharing needles is a separate, highly effective route of transmission that has nothing to do with sex — this includes drug injection, tattooing, and piercing. For people at high risk, pre‑exposure prophylaxis (PrEP) offers another option: taking medication in advance to block infection. Pooled data from 18 studies show that when at least 70% of participants adhered to the regimen, PrEP cut HIV risk by about 70% compared to placebo (RR = 0.30; 95% CI 0.21–0.45). Trials with lower adherence rates showed no protective effect. PrEP is a prescription medication; consult an infectious‑disease specialist or public‑health clinic rather than ordering it online. Information on what to do after potential exposure can be found in Section 13.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "1-31",
@@ -809,7 +809,7 @@
       "evidenceGrade": "A",
       "sources": "Rodger AJ, Cambiano V, Bruun T, et al. (2019). Risk of HIV transmission through condomless sex in serodifferent gay couples with the HIV-positive partner taking suppressive antiretroviral therapy (PARTNER): final results of a multicentre, prospective, observational study. The Lancet, 393(10189), 2428-2438. <https://doi.org/10.1016/S0140-6736(19)30418-0>; HIV and AIDS (Prevention and Control) Act, 2017. <https://www.indiacode.nic.in/>; National AIDS Control Organisation. <https://naco.gov.in/>",
       "caveats": "The “window period” is a property of the test, not of the infection: a nucleic-acid test can detect HIV after roughly one week, a fourth-generation antigen-antibody test after about two weeks, and a third-generation antibody-only test after three weeks. No Indian agency publishes an official table of window periods, so these figures come from the assay makers and from WHO. It is advisable to wait at least two weeks post-exposure and then retest after another two to four weeks; after three months, 99.99% of people can be certain they are not infected. The Act prohibits discrimination against people living with HIV and their families in employment, education, healthcare, housing and public facilities, and requires that they be treated like anyone else. It also obliges a person diagnosed with HIV to take reasonable precautions to prevent transmission, while protecting their right to keep their status confidential; compelling a partner disclosure is not the mechanism the Act uses. Screening for HIV, syphilis, and hepatitis B during pregnancy and related prevention measures are covered in Chapter 27.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "1-32",
@@ -834,7 +834,7 @@
       "evidenceGrade": "B",
       "sources": "Deisenhammer EA, Ing CM, Strauss R, Kemmler G, Hinterhuber H, Weiss EM (2009). The duration of the suicidal process: how much time is left for intervention between consideration and accomplishment of a suicide attempt? Journal of Clinical Psychiatry, 70(1), 19-24. <https://doi.org/10.4088/JCP.07m03904>; Owens D, Horrocks J, House A (2002). Fatal and non-fatal repetition of self-harm: systematic review. British Journal of Psychiatry, 181, 193-199. <https://doi.org/10.1192/bjp.181.3.193>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>; World Health Organization. <https://www.who.int/>; Tele-MANAS mental health helpline (Ministry of Health and Family Welfare), 14416. <https://telemanas.mohfw.gov.in/> (accessed 21 October 2026)",
       "caveats": "Grade B is assigned for two main reasons: the Deisenhammer study involved only 82 participants from a single hospital and relied on retrospective recollections; Owens’s review aggregated median figures from 90 studies employing different methods, rather than producing a single combined statistic. That same review also emphasizes that the suicide risk among self-harm patients remains hundreds of times higher than in the general population. Consequently, the statement “the vast majority did not follow that path” describes the overall trajectory of this group, not a guarantee for any individual; appropriate medical care must still be sought. For advice on removing lethal means and contacting the helpline 14416 (Tele-MANAS), see item 25 in this section. Steps to take when feeling down are outlined in item 19 of Section 3. Long-term consequences following survival are discussed in item 33 of this section. Finally, actions you can take if someone close to you expresses such thoughts are detailed in item 15 of Section 8.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "1-33",
@@ -859,7 +859,7 @@
       "evidenceGrade": "B",
       "sources": "Gawarammana IB, Buckley NA (2011). Medical management of paraquat ingestion. British Journal of Clinical Pharmacology, 72(5), 745-757. <https://doi.org/10.1111/j.1365-2125.2011.04026.x>; Weaver LK, Hopkins RO, Chan KJ, et al. (2002). Hyperbaric oxygen for acute carbon monoxide poisoning. New England Journal of Medicine, 347(14), 1057-1067. <https://doi.org/10.1056/NEJMoa013121>; Parkinson RB, Hopkins RO, Cleavinger HB, et al. (2002). White matter hyperintensities and neuropsychological outcome following carbon monoxide poisoning. Neurology, 58(10), 1525-1532. <https://doi.org/10.1212/WNL.58.10.1525>; Chowdhury FR et al. (2026). Clinical and Laboratory Profile of Paraquat Poisoning: A Toxicological Crisis in Bangladesh. American Journal of Tropical Medicine and Hygiene, 115, 176-182. <https://doi.org/10.4269/ajtmh.25-0719>; Central Insecticides Board and Registration Committee. <https://cibrc.nic.in/>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>; Ministry of Agriculture and Farmers Welfare (2026). Order S.O. 5234(E) dated 22 September 2026 under section 27(2) read with section 28 of the Insecticides Act, 1968. Gazette of India, Extraordinary, Part II, Section 3(ii), CG-DL-E-28092026-276542. <https://gazettetracker.com/g/CG-DL-E-28092026-276542> (accessed 21 October 2026)",
       "caveats": "Grade B is assigned because these studies involve general poisoning patients rather than solely suicide attempt survivors; the carbon monoxide trial even included accidental poisoning cases. Consequently, observed complication rates cannot be directly interpreted as probabilities specific to suicide attempts. This entry does not compare mortality rates across different treatment methods nor recommend any specific actions. The sole certainty is that no treatment pathway guarantees a completely clean outcome. On-site management of carbon monoxide poisoning is detailed in Chapter 13, Item 19. For accidental ingestion of pesticides or medications, avoid inducing vomiting and seek medical help while bringing the container along (Chapter 13, Item 20). Finally, refrain from storing pesticides or sedatives at home (Chapter 1, Item 25). The text of the order was read from a copy of Gazette issue CG-DL-E-28092026-276542; the official eGazette portal could not be reached when this chapter was checked on 21 October 2026, so confirm the current position with the Central Insecticides Board and Registration Committee (cibrc.nic.in) before relying on it.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "1-34",
@@ -884,7 +884,7 @@
       "evidenceGrade": "B",
       "sources": "Chen Y, Li W, Wang X, Zhong Q, Abudurexiti A, Qiu Q, Li J, Luo J (2025). Clinical features and prognostic predictors for patients admitted to trauma intensive care unit due to fall from height in South Xinjiang. International Journal of Emergency Medicine, 18, 142. <https://doi.org/10.1186/s12245-025-00959-4>; Simmel S, Wurm S, Drisch S, Woltmann A, Coenen M (2020). Prädiktion der Rückkehr zur Arbeit nach Polytrauma bei Patienten mit einem ISS von mindestens 25. Die Rehabilitation, 59(2), 95-103. <https://doi.org/10.1055/a-0977-6853>",
       "caveats": "Grade B is assigned because the fall‑related data come from a single hospital’s retrospective chart review without distinguishing between accidental and self‑inflicted falls. The figure on return‑to‑work is based on only 84 patients in Germany; neither dataset can be taken as a reliable predictor of outcomes for any individual who falls from a height.  No direct correlation between fall height and injury severity is presented, as the source only supplies the height distribution of this group. For information on pressure ulcers that often develop during prolonged bed rest, see Section 17, Item 8. Deep‑vein thrombosis and pulmonary embolism are discussed in Section 13, Item 11 (sudden swelling of one leg). If suicidal thoughts arise, refer to Section 32 of this chapter. Details on paraquat poisoning are covered in Section 33 — remember that “being saved” does not guarantee a completely uncomplicated recovery. The timeline described here reflects the author’s own experience: after falling from the fourth floor, he initially believed he would recover in a few weeks, but ended up hospitalized for a full year, undergoing multiple surgeries, wearing steel plates, and unable to sit up on his own for half a year; his family had to take on debt to cover the expenses.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "1-35",
@@ -909,7 +909,7 @@
       "evidenceGrade": "A",
       "sources": "Muzaale AD, Massie AB, Wang MC, Montgomery RA, McBride MA, Wainright JL, Segev DL (2014). Risk of end-stage renal disease following live kidney donation. JAMA, 311(6), 579-586. <https://doi.org/10.1001/jama.2013.285141>; Mjøen G, Hallan S, Hartmann A, et al. (2014). Long-term risks for kidney donors. Kidney International, 86(1), 162-167. <https://doi.org/10.1038/ki.2013.460>; Ibrahim HN, Foley R, Tan L, et al. (2009). Long-term consequences of kidney donation. New England Journal of Medicine, 360(5), 459-469. <https://doi.org/10.1056/NEJMoa0804883>; Goyal M, Mehta RL, Schneiderman LJ, Sehgal AR (2002). Economic and health consequences of selling a kidney in India. JAMA, 288(13), 1589-1593. <https://doi.org/10.1001/jama.288.13.1589>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>; World Health Organization. <https://www.who.int/>; National Health Authority. Ayushman Bharat PM-JAY: key features. <https://nha.gov.in/PM-JAY> (accessed 21 October 2026); National Health Authority. PM-JAY support: treatment outside the home state. <https://supportbeta.nha.gov.in/kb/faq.php?id=11> (accessed 21 October 2026); Employees' State Insurance Corporation. <https://esic.gov.in/> (accessed 21 October 2026); Central Government Health Scheme, Ministry of Health and Family Welfare. <https://cghs.mohfw.gov.in/> (accessed 21 October 2026)",
       "caveats": "Controversy exists: Ibrahim’s study used ordinary citizens as controls and found no difference in survival or ESRD risk between donors and non‑donors. Muzaale and Mjøen compared donors to equally healthy, eligible non‑donors and found markedly higher risks. The disagreement concerns the control group, not the donors themselves. All three studies agree that absolute risks remain low (30.8 per 10,000 over 15 years). Thus the key points are two: first, the remaining kidney does bear extra strain, as shown by higher rates of hypertension and proteinuria; second, these figures apply only to donors who undergo pre‑ and post‑operative screening and medical care — conditions absent for illegal kidney sellers, whose outcomes differ sharply according to Indian follow‑up data. Original studies provide only self‑reported health decline, proteinuria, hypertension, and ESRD rates; no figures on bed‑bound status are included here. Selling a kidney is a criminal offence in India under the Transplantation of Human Organs and Tissues Act, 1994, and the rules on who may lawfully donate at all are covered in Chapter 9, Item 22. Paying for long-term dialysis after your own kidneys fail is the harder problem, and the cover depends on which scheme you are in. Employees of establishments covered by the Employees' State Insurance Act get medical care for themselves and their families through ESIC dispensaries and hospitals, with referral for specialist treatment. Central government employees and pensioners use CGHS wellness centres and empanelled hospitals. Families on the eligible lists get ₹5 lakh a year of hospital cover under Ayushman Bharat PM-JAY; the National Health Authority says a beneficiary can be treated cashless at any empanelled hospital outside the home state, with the home state paying. Many states also run their own scheme for residents who are not on those lists. None of these pays at a private hospital of your choosing: the hospital has to be empanelled under the scheme that covers you, and job- or city-linked cover such as ESIC and CGHS has to be transferred when you move. Ask the hospital's scheme desk which cover it will accept before treatment starts.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "1-36",
@@ -934,7 +934,7 @@
       "evidenceGrade": "A",
       "sources": "International Atomic Energy Agency (1988). The Radiological Accident in Goiânia. IAEA, Vienna. <https://www-pub.iaea.org/MTCD/Publications/PDF/Pub815_web.pdf>; Atomic Energy Regulatory Board. <https://www.aerb.gov.in/>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>; World Health Organization. <https://www.who.int/>",
       "caveats": "If you ever encounter such a source, move away, note its location, do not touch it, and call 112. Reporting is mandatory to environmental, police, and health authorities. Distance and time are the only effective safeguards; plastic bags or pockets offer no protection. Devices such as X‑ray machines or CT scanners emit radiation only when powered; once turned off, they pose no residual risk. The real danger lies in the sealed radioactive source inside them. Radiotherapy machines, pipeline and boiler inspection devices, well‑logging tools, and level gauges all contain such sources, which look identical to ordinary metal parts. Therefore, never try to identify a source — simply avoid picking up, selling, or taking home any unidentified equipment parts. Workers in scrap recycling, dismantling, hardware, and construction face higher risks; they should steer clear of any area marked with the clover warning symbol. Nuclear plant leaks represent a different type of incident, with an even lower probability of affecting the general public. The primary beneficiaries of these precautions are you and anyone else present at the scene.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "1-37",
@@ -959,7 +959,7 @@
       "evidenceGrade": "B",
       "sources": "Karlsson A, Håkansson A. (2018). Gambling disorder, increased mortality, suicidality, and associated comorbidity: A longitudinal nationwide register study. Journal of Behavioral Addictions, 7(4), 1091–1099. <https://doi.org/10.1556/2006.7.2018.112>; Karlsson A, Håkansson A. (2023). Corrigendum. Journal of Behavioral Addictions, 12(1), 302. <https://doi.org/10.1556/2006.2023.10000>; Tele-MANAS, Ministry of Health and Family Welfare. <https://telemanas.mohfw.gov.in/>",
       "caveats": "This grade is assigned because only one study exists, and it includes only individuals who sought specialist care — a group with relatively severe conditions. Consequently, the 15-fold suicide risk increase cannot be generalized to all gamblers. Handing over financial control to family members is a widely practiced approach, though lacking direct research support; thus it receives a C grade. Legal boundaries regarding gambling are outlined in Section 9, Article 13 (prohibiting bookmaking and online gambling). Whether family members should repay gambling debts incurred by a spouse is discussed in Section 8, Article 44 (such debts do not qualify as joint marital obligations). For guidance on responding to suicidal thoughts, refer to Item 32 of this section (inform a trusted person immediately). The primary beneficiaries are the gamblers themselves; however, family members who notice warning signs can also encourage them to follow these steps.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "1-38",
@@ -984,7 +984,7 @@
       "evidenceGrade": "A",
       "sources": "Grant RM, Lama JR, Anderson PL, et al. (2010). Preexposure chemoprophylaxis for HIV prevention in men who have sex with men. New England Journal of Medicine, 363(27), 2587–2599. <https://doi.org/10.1056/NEJMoa1011205>; McCormack S, Dunn DT, Desai M, et al. (2016). Pre-exposure prophylaxis to prevent the acquisition of HIV-1 infection (PROUD): effectiveness results from the pilot phase of a pragmatic open-label randomised trial. The Lancet, 387(10013), 53–60. <https://doi.org/10.1016/S0140-6736(15)00056-2>; Molina JM, Capitant C, Spire B, et al. (2015). On-demand preexposure prophylaxis in men at high risk for HIV-1 infection. New England Journal of Medicine, 373(23), 2237–2246. <https://doi.org/10.1056/NEJMoa1506273>; Fonner VA, Dalglish SL, Kennedy CE, et al. (2016). Effectiveness and safety of oral HIV preexposure prophylaxis for all populations. AIDS, 30(12), 1973–1983. <https://doi.org/10.1097/QAD.0000000000001145>; World Health Organization (2019). What's the 2+1+1? Event-driven oral pre-exposure prophylaxis to prevent HIV for men who have sex with men (WHO/CDS/HIV/19.8). <https://www.who.int/publications/i/item/what-s-the-2-1-1-event-driven-oral-pre-exposure-prophylaxis-to-prevent-hiv-for-men-who-have-sex-with-men>; National AIDS Control Organisation. HIV/AIDS helplines: National AIDS Helpline 1097. <https://naco.mohfw.gov.in/living-with-hiv-aids/hotlines-helplines/> (accessed 21 October 2026)",
       "caveats": "The participants in these trials were primarily men who have sex with men; therefore, they are the group most encouraged to seek this treatment. Others at high risk of infection can also consult doctors to determine suitability. Prior to prescribing, it is essential to confirm that patients are not already infected; taking the medication while infected can foster viral resistance. Self-test results cannot be used as a basis for prescription. For individuals with hepatitis B, discontinuing treatment may trigger a flare-up, so testing is mandatory beforehand. WHO currently recommends on-demand dosing only for men who have sex with men engaging in sex fewer than twice a week; the regimen involves taking two tablets 2–24 hours prior to sex, followed by one tablet 24 and 48 hours afterward. Women and hepatitis B carriers must adhere to daily dosing. Trials involving on-demand dosing reported more gastrointestinal and kidney-related side effects than placebo groups; hence, regular medical checkups are indispensable. In India, ask an Integrated Counselling and Testing Centre (ICTC) under the National AIDS and STD Control Programme: it will test you and refer you to the ART centre or clinic that prescribes PrEP. The National AIDS Helpline on 1097 is toll-free, runs 24×7, and can tell you where the nearest ICTC and ART centre are. Importantly, this medication does not protect against sexually transmitted infections such as syphilis or gonorrhea; condoms must still be used consistently, as noted in Section 30 of this chapter. In cases where exposure has already occurred, emergency post-exposure prophylaxis is available per Section 13, Item 38 (within 72 hours). Ultimately, this treatment safeguards both the individual and their sexual partners.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "1-39",
@@ -1013,7 +1013,7 @@
       "evidenceGrade": "A",
       "sources": "US Preventive Services Task Force, Nicholson WK, Silverstein M, et al. (2025). Screening for Osteoporosis to Prevent Fractures: US Preventive Services Task Force Recommendation Statement. JAMA. <https://doi.org/10.1001/jama.2024.27154>; Kahwati LC, Kistler CE, Booth G, et al. (2025). Screening for Osteoporosis to Prevent Fractures: A Systematic Evidence Review for the US Preventive Services Task Force. JAMA. <https://doi.org/10.1001/jama.2024.21653>; Shepstone L, Lenaghan E, Cooper C, et al. (2018). Screening in the community to reduce fractures in older women (SCOOP): a randomised controlled trial. The Lancet. <https://doi.org/10.1016/S0140-6736(17)32640-5>",
       "caveats": "Controversy: SCOOP's prespecified primary outcome was all osteoporotic fractures; the screening group did not show a clear reduction (HR 0.94, 95% CI 0.85 to 1.03)—only hip fractures fell. All three trials used \"assess risk, then measure bone density\"; none compared bone density testing alone. The evidence review also estimated 11.8% to 24.1% overdiagnosis—people who would never have fractured from this cause in their lifetime. This item is about whether bone can survive a fall; avoiding falls themselves is item 13 (balance and leg strength)—do both. After osteoporosis is found, see item 40 (treat with medication). Primary beneficiaries are you and your parents.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "1-40",
@@ -1041,7 +1041,7 @@
       "evidenceGrade": "A",
       "sources": "Wells GA, Hsieh SC, Peterson J, et al. (2025). Alendronate for the primary and secondary prevention of osteoporotic fractures in postmenopausal women. Cochrane Database of Systematic Reviews. <https://doi.org/10.1002/14651858.CD001155.pub3>; Lyles KW, Colón-Emeric CS, Magaziner JS, et al. (2007). Zoledronic acid and clinical fractures and mortality after hip fracture. New England Journal of Medicine. <https://doi.org/10.1056/NEJMoa074941>; Cummings SR, Lui LY, Eastell R, Allen IE (2019). Association Between Drug Treatments for Patients With Osteoporosis and Overall Mortality Rates: A Meta-analysis. JAMA Internal Medicine. <https://doi.org/10.1001/jamainternmed.2019.2779>; Kahwati LC, Kistler CE, Booth G, et al. (2025). Screening for Osteoporosis to Prevent Fractures: A Systematic Evidence Review for the US Preventive Services Task Force. JAMA. <https://doi.org/10.1001/jama.2024.21653>",
       "caveats": "Controversy: A meta-analysis of 38 trials did not show these drugs lowering overall mortality (RR 0.98, 95% CI 0.91 to 1.05). Zoledronic acid alone was also not significant (RR 0.88, 95% CI 0.68 to 1.13). The authors concluded these drugs should be used to prevent fractures, not to cut death rates. Cochrane rated those fracture estimates low to moderate certainty. In women without prior fracture and lower risk, alendronate did not clearly reduce hip fractures (RR 0.76, 95% CI 0.43 to 1.32). Rare harms such as jaw osteonecrosis and atypical femur fracture may not show up in trials of a few years—keep follow-up visits and do not change dose on your own. Injection versus pills depends on the doctor. How to find osteoporosis is item 39 (bone density testing). Primary beneficiaries are you and your parents.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "1-41",
@@ -1066,7 +1066,7 @@
       "evidenceGrade": "C",
       "sources": "Minnesota Department of Natural Resources. General ice thickness guidelines. <https://www.dnr.state.mn.us/safety/ice/thickness.html>; Minnesota Department of Natural Resources. Ice safety protocols. <https://www.dnr.state.mn.us/safety/ice/index.html>; Minnesota Department of Natural Resources. Steps for surviving immersion. <https://www.dnr.state.mn.us/safety/ice/survival.html>; National Weather Service. Winter Weather Safety: Ice and Frost. <https://www.weather.gov/safety/winter-ice-frost>; Canadian Centre for Occupational Health and Safety. Working on or near Ice Covered Water - Basic Information. <https://www.ccohs.ca/oshanswers/hsprograms/work_ice.html>; National Disaster Management Authority. <https://ndma.gov.in/>",
       "caveats": "Official safety agencies emphasize that no outdoor natural ice is 100% safe. Meeting minimum thickness is merely a baseline qualification, never a guarantee. The early winter freeze-up and early spring thaw are the most dangerous periods. If you fall through, do not strip off your clothes: trapped air inside winter clothing provides crucial temporary buoyancy. Turn immediately toward the direction you came from, as that ice was solid enough to hold you moments earlier. Place your forearms on the ice shelf, drive your rescue ice picks into the surface, kick your legs horizontally behind you, and pull yourself out. Once out, do not stand immediately—roll horizontally away from the hole until you reach safe ground, then seek warm shelter immediately. If you witness someone else fall through, never run across the ice to grab them: follow emergency rescue protocol (shout for help, call emergency services, extend a pole, or throw a rope from a safe distance), as detailed in Chapter 13, Item 25. Primary beneficiaries are yourself and children you accompany outdoors.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "1-42",
@@ -1091,7 +1091,7 @@
       "evidenceGrade": "C",
       "sources": "Canadian Centre for Occupational Health and Safety (2025). Abrasive Wheels - Use of Portable Grinders. <https://www.ccohs.ca/oshanswers/safety_haz/abrasive_wheels/safeuse1.html>; Canadian Centre for Occupational Health and Safety (2025). Powered Hand Tools - Use of Grinder Attachments. <https://www.ccohs.ca/oshanswers/safety_haz/power_tools/powered-hand-tools-use-of-grinder-attachments.html>; Workplace Health and Safety Queensland (2017). Guards and discs on angle grinders. <https://www.worksafe.qld.gov.au/news-and-events/alerts/workplace-health-and-safety-alerts/2017/guards-and-discs-on-angle-grinders>; Song J, Jeon YB, Jang JH, Cho JS, Choi JY, Choi WS. (2023). Severity of grinder injuries and related factors compared with other high-rotation cutting tool injuries: a multicenter retrospective study from 2011 to 2018. Journal of Trauma and Injury, 36(1), 32-38. <https://doi.org/10.20408/jti.2021.0057>; Ke W, Gu K, Zhu S, Wu J, Dai Y. (2025). Prognostics Factors to Avoid Eye Injuries in Angle Grinders. Journal of Craniofacial Surgery, 36(6), e629-e631. <https://doi.org/10.1097/scs.0000000000011108>; Sozbilen MC, Dastan AE, Gunay H, Kucuk L. (2018). A prospective study of angle grinder injuries in the hands and forearms during a one-year period. Hand Surgery and Rehabilitation, 37(5), 300-304. <https://doi.org/10.1016/j.hansur.2018.07.002>; Tsumura T, Matsumoto T, Matsushita M, Kishimoto K, Shiode H. (2021). Do Not Cut Wood with an Angle Grinder, or You Might Lose a Finger: A Retrospective Study. Journal of Hand Surgery Asian-Pacific Volume, 26(3), 446-450. <https://doi.org/10.1142/s2424835521500053>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>; World Health Organization. <https://www.who.int/>",
       "caveats": "Grade C is assigned because protocols derive from safety engineering standards and forensic accident investigations rather than randomized controlled trials. Outcomes range from fatal arterial exsanguination to permanent blindness and traumatic limb amputations, exclusively concentrated among grinder operators. Manufacturers explicitly warn against attaching toothed saw blades; woodworking should strictly utilize purpose-built tools such as hand saws, jigsaws, or circular saws with appropriate guards. Ensure loose clothing, jewelry, and long hair are tied back to prevent entanglement. Grinding generates significant airborne particulates and hazardous noise; respiratory and hearing protection standards are detailed in Chapter 19, Item 10. In the event of acute arterial laceration, immediately apply direct, continuous, heavy manual pressure, as described in Chapter 13, Item 12. Primary beneficiaries are yourself and bystanders assisting with home renovation.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "1-43",
@@ -1116,7 +1116,7 @@
       "evidenceGrade": "B",
       "sources": "Gould MS, Marrocco FA, Kleinman M, Thomas JG, Mostkoff K, Cote J, Davies M (2005). Evaluating iatrogenic risk of youth suicide screening programs: a randomized controlled trial. JAMA, 293(13), 1635-1643. <https://doi.org/10.1001/jama.293.13.1635>; Polihronis C, Cloutier P, Kaur J, Skinner R, Cappelli M (2022). What's the harm in asking? A systematic review and meta-analysis on the risks of asking about suicide-related behaviors and self-harm with quality appraisal. Archives of Suicide Research, 26(2), 325-347. <https://doi.org/10.1080/13811118.2020.1793857>; Dazzi T, Gribble R, Wessely S, Fear NT (2014). Does asking about suicide and related behaviours induce suicidal ideation? What is the evidence? Psychological Medicine, 44(16), 3361-3363. <https://doi.org/10.1017/S0033291714001299>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>; World Health Organization. <https://www.who.int/>",
       "caveats": "Grade B is assigned because while trials conclusively prove that direct inquiry causes no harm, trials cannot ethically measure reductions in completed suicides. Benefit magnitude is rated Low because it reflects surrogate endpoints (ideation frequency rather than absolute mortality counts). Most trial protocols utilized clinical interviews or standardized screening questionnaires rather than informal peer conversations, though clinical guidelines generalize this finding to friends and family. If someone confirms they are having suicidal thoughts, do not leave them unattended: stay with them, connect them immediately to a crisis helpline (Tele-MANAS on 14416, or 112 if it is an emergency), and remove access to lethal means (medications, sharp objects, chemicals), as outlined in Chapter 1, Item 25. If they express intent to harm others or have active preparations underway, immediate emergency services or hospital evaluation is necessary, as described in Chapter 8, Item 15. The interval between acute ideation and action is often mere minutes, as noted in Chapter 1, Item 32. Primary beneficiaries are family members, partners, friends, and colleagues.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "1-44",
@@ -1141,7 +1141,7 @@
       "evidenceGrade": "A",
       "sources": "Hart RG, Pearce LA, Aguilar MI. (2007). Meta-analysis: antithrombotic therapy to prevent stroke in patients who have nonvalvular atrial fibrillation. Annals of Internal Medicine, 146(12), 857-867. <https://doi.org/10.7326/0003-4819-146-12-200706190-00007>; Aguilar MI, Hart R. (2005). Oral anticoagulants for preventing stroke in patients with non-valvular atrial fibrillation and no previous history of stroke or transient ischemic attacks. Cochrane Database of Systematic Reviews, (3), CD001927. <https://doi.org/10.1002/14651858.CD001927.pub2>; Ruff CT, Giugliano RP, Braunwald E, et al. (2014). Comparison of the efficacy and safety of new oral anticoagulants with warfarin in patients with atrial fibrillation: a meta-analysis of randomised trials. Lancet, 383(9921), 955-962. <https://doi.org/10.1016/S0140-6736(13)62343-0>; Connolly SJ, Eikelboom J, Joyner C, et al. (2011). Apixaban in patients with atrial fibrillation. New England Journal of Medicine, 364(9), 806-817. <https://doi.org/10.1056/NEJMoa1007432>; Mant J, Hobbs FD, Fletcher K, et al. (2007). Warfarin versus aspirin for stroke prevention in an elderly community population with atrial fibrillation (the Birmingham Atrial Fibrillation Treatment of the Aged Study, BAFTA): a randomised controlled trial. Lancet, 370(9586), 493-503. <https://doi.org/10.1016/S0140-6736(07)61233-1>; Joglar JA, Chung MK, Armbruster AL, et al. (2024). 2023 ACC/AHA/ACCP/HRS Guideline for the Diagnosis and Management of Atrial Fibrillation. Circulation, 149(1), e1-e156. <https://doi.org/10.1161/CIR.0000000000011108>; US Preventive Services Task Force (2022). Screening for Atrial Fibrillation: US Preventive Services Task Force Recommendation Statement. JAMA, 327(4), 360-367. <https://doi.org/10.1001/jama.2021.23732>; Svennberg E, Friberg L, Frykman V, et al. (2021). Clinical outcomes in systematic screening for atrial fibrillation (STROKESTOP): a multicentre, parallel group, unmasked, randomised controlled trial. Lancet, 398(10310), 1498-1506. <https://doi.org/10.1016/S0140-6736(21)01637-8>; Svendsen JH, Diederichsen SZ, Højberg S, et al. (2021). Implantable loop recorder detection of atrial fibrillation to prevent stroke (The LOOP Study): a randomised controlled trial. Lancet, 398(10310), 1507-1516. <https://doi.org/10.1016/S0140-6736(21)01698-6>; Saggu DKS, Sundar G, Nair SG, et al. (2016). Prevalence of atrial fibrillation in an urban population in India: the Nagpur pilot study. Heart Asia, 8(1), 56-59. <https://doi.org/10.1136/heartasia-2015-010674>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>; World Health Organization. <https://www.who.int/>",
       "caveats": "Controverted in terms of asymptomatic population screening, though anticoagulation following diagnosis is undisputed. Evidence remains insufficient regarding whether asymptomatic individuals should undergo targeted mass screening. The USPSTF (2022) concluded evidence is insufficient to assess the balance of benefits and harms of routine screening. The Swedish STROKESTOP trial in 75–76 year-olds found a modest 4% composite reduction in stroke, mortality, and severe bleed after ~7 years, just reaching statistical significance. The Danish LOOP study in 70–90 year-olds with implantable loop recorders detected AFib in 31.8% vs 12.2%, yet saw no significant difference in stroke rates. Thus, individuals with symptoms must be evaluated, and seniors aged >=65 should ask their doctor to check their pulse during visits, but buying dedicated commercial consumer screening monitors is unnecessary. Once on anticoagulants, do not self-administer NSAIDs like ibuprofen without medical supervision, as noted in Chapter 34, Item 3. Anticoagulants must be taken long-term; never stop them simply because you feel fine, as described in Chapter 16, Item 1. Hypertension is also a key risk factor, as detailed in Chapter 1, Item 7. Individuals with AFib do not necessarily need to eliminate coffee, as discussed in Chapter 2, Item 26. If sudden facial drooping or unilateral limb weakness develops, call emergency services immediately regardless of medication status, as detailed in Chapter 13, Item 3. Primary beneficiaries are yourself and elderly family members.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "1-45",
@@ -1166,7 +1166,7 @@
       "evidenceGrade": "A",
       "sources": "US Preventive Services Task Force, Owens DK, Davidson KW, et al. (2020). Screening for Hepatitis C Virus Infection in Adolescents and Adults: US Preventive Services Task Force Recommendation Statement. JAMA, 323(10), 970-975. <https://doi.org/10.1001/jama.2020.1123>; Chou R, Dana T, Fu R, Zakher B, Wagner J, Ramirez S, Grusing S, Jou JH (2020). Screening for Hepatitis C Virus Infection in Adolescents and Adults: Updated Evidence Report and Systematic Review for the US Preventive Services Task Force. JAMA. <https://doi.org/10.1001/jama.2019.20788>; Carrat F, Fontaine H, Dorival C, et al. (2019). Clinical outcomes in patients with chronic hepatitis C after direct-acting antiviral treatment: a prospective cohort study. The Lancet, 393(10179), 1453-1464. <https://doi.org/10.1016/S0140-6736(18)32111-1>; Backus LI, Belperio PS, Shahoumian TA, Mole LA (2019). Impact of Sustained Virologic Response with Direct-Acting Antiviral Treatment on Mortality in Patients with Advanced Liver Disease. Hepatology, 69(2), 487-497. <https://doi.org/10.1002/hep.29408>; Jakobsen JC, Nielsen EE, Feinberg J, et al. (2017). Direct-acting antivirals for chronic hepatitis C. Cochrane Database of Systematic Reviews, CD012143.pub3. <https://doi.org/10.1002/14651858.CD012143.pub3>; Ministry of Health and Family Welfare, National Viral Hepatitis Control Programme. <https://mohfw.gov.in/>; World Health Organization (2026). Hepatitis C fact sheet. <https://www.who.int/news-room/fact-sheets/detail/hepatitis-c>",
       "caveats": "Controverted by Cochrane (2017), which restricts its evaluation strictly to randomized trials; finding that 138 trials were mostly short-term and assessed surrogate virologic clearance rather than clinical morbidities or long-term mortality, Cochrane asserted that whether SVR translates to reduced mortality has not yet been directly demonstrated in randomized controlled trials. Mortality and liver cancer data presented above originate from extensive prospective longitudinal observational cohorts. No trials directly randomize patients to screening versus no screening. High-risk populations designated for screening include individuals undergoing major surgery, blood transfusion, endoscopy, or hemodialysis; those with unexplained liver enzyme elevations; individuals with a history of intravenous drug use, paid plasma donation, multiple sexual partners, or men who have sex with men; people living with HIV; and regular sexual partners of HCV-infected individuals. Transmission can also occur through unsterilized tattooing, ear piercing, or shared razors and toothbrushes; casual contact (hugging, sharing utensils or cups) does not spread HCV. After successful treatment, antibody tests remain positive for life; RNA testing is required to verify cure or identify re-infection. Successful cure does not confer immunity against re-infection; active injection drug users should undergo annual RNA testing. If discovered during pregnancy, curative treatment is deferred until after delivery and cessation of breastfeeding; strict contraception is required during treatment. Patients with established cirrhosis require ongoing ultrasound surveillance for hepatocellular carcinoma even after viral clearance. Avoiding shared needles is detailed in Chapter 1, Item 30. Hepatitis B requires a separate diagnostic panel, described in Chapter 1, Item 14. HIV screening is discussed in Chapter 1, Item 31. Guidelines caution that combining chronic HCV with excessive alcohol markedly accelerates progression to hepatic failure; alcohol limitations are detailed in Chapter 2, Item 19. Primary beneficiaries are yourself, your spouse, and intimate partners.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "1-46",
@@ -1191,7 +1191,7 @@
       "evidenceGrade": "C",
       "sources": "Factories Act, 1948, section 36 (precautions against dangerous fumes, gases, etc.) — the pre-Code factory rule, repealed on 21 November 2025. <https://indiankanoon.org/doc/1762196/> (accessed 21 October 2026); Occupational Safety, Health and Working Conditions Code, 2020, sections 6, 23 and 143 (employer duties; repeal of the Factories Act, 1948). <https://indiankanoon.org/doc/77342310/> (accessed 21 October 2026); Press Information Bureau, Government of India (21 November 2025). India's Labour Reforms: Simplification, Security, and Sustainable Growth. <https://static.pib.gov.in/WriteReadData/specificdocs/documents/2025/nov/doc20251121701501.pdf> (accessed 21 October 2026); Prohibition of Employment as Manual Scavengers and their Rehabilitation Act, 2013, section 7. <https://indiankanoon.org/doc/193205499/>; National Action for Mechanised Sanitation Ecosystem (NAMASTE), Department of Social Justice and Empowerment. <https://socialjustice.gov.in/schemes/37>; Helpline numbers (police 100, fire 101, ambulance 108, single emergency number 112). <https://ddd.gov.in/helpline/>; NIOSH (1994). Worker Deaths in Confined Spaces: A Summary of NIOSH Surveillance and Investigative Findings (DHHS (NIOSH) Publication No. 94-103), pp. 20, 22. <https://web.archive.org/web/20230308204907/https://www.cdc.gov/niosh/docs/94-103/pdfs/94-103.pdf>; NIOSH (1986). Request for Assistance in Preventing Occupational Fatalities in Confined Spaces (DHHS (NIOSH) Publication No. 86-110). <https://web.archive.org/web/20230611112004/https://www.cdc.gov/niosh/docs/86-110/default.html>; Ministry of Labour and Employment. <https://labour.gov.in/>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>; World Health Organization. <https://www.who.int/>",
       "caveats": "Grade C is assigned because data stem from occupational casualty registries and safety engineering codes rather than clinical intervention trials. Benefit magnitude is rated Moderate: while the event outcome is frequently fatal (often taking multiple lives at once), exposure is concentrated among individuals who access these subterranean structures. Common domestic encounters include cleaning septic or biogas tanks and descending into winter vegetable storage cellars. Never rely on smell to judge atmospheric safety; absence of odor does not mean toxic gas is absent. If an employer assigns work in a shaft or tank without mechanical ventilation, gas testing, continuous surface monitoring or a safety harness, raise it with the employer before entering and, if nothing changes, report it to the Inspector-cum-Facilitator appointed under the Occupational Safety, Health and Working Conditions Code, 2020, or to the state labour department. If someone collapses inside, shout for help and dial 112 (ambulance 108); external actions are limited to removing covers and using fans or blowers from outside. Once an unconscious victim is extracted to fresh air, check for breathing and initiate chest compressions if breathing is absent, as outlined in Chapter 13, Item 1. The protocol remains identical whether the victim is a coworker, neighbor, or stranger, adhering to the same safety boundary as Chapter 13, Item 25 (do not jump into water if you see someone drowning). Carbon monoxide risks from indoor fuel burning are covered in Chapter 1, Item 3. Primary beneficiaries are yourself (as the prospective rescuer) and coworkers or family members.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "1-47",
@@ -1218,7 +1218,7 @@
       "evidenceGrade": "A",
       "sources": "Jun JK et al. (2017). Effectiveness of the Korean National Cancer Screening Program in Reducing Gastric Cancer Mortality. Gastroenterology, 152(6), 1319-1328. <https://doi.org/10.1053/j.gastro.2017.01.029>; Zhang X et al. (2018). Endoscopic Screening in Asian Countries Is Associated With Reduced Gastric Cancer Mortality: A Meta-analysis. Gastroenterology, 155(2), 347-354. <https://doi.org/10.1053/j.gastro.2018.04.026>; Hibino M et al. (2023). Effectiveness of gastric cancer screening on gastric cancer incidence and mortality. Lancet Regional Health Western Pacific. <https://doi.org/10.1016/j.lanwpc.2023.100884>; Chen R et al. (2021). Effectiveness of one-time endoscopic screening programme in prevention of upper gastrointestinal cancer: a multicentre population-based cohort study. Gut, 70(2), 251-260. <https://doi.org/10.1136/gutjnl-2019-320200>; Wei WQ et al. (2015). Long-Term Follow-Up of a Community Assignment, One-Time Endoscopic Screening Study of Esophageal Cancer. Journal of Clinical Oncology, 33(17), 1951-1957. <https://doi.org/10.1200/JCO.2014.58.0423>; Liu M et al. (2024). Effectiveness of Endoscopic Screening on Esophageal Cancer Incidence and Mortality: A 9-Year Report of the ESECC Randomized Trial. Journal of Clinical Oncology, 42(14), 1655-1664. <https://doi.org/10.1200/JCO.23.01284>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>; Indian Council of Medical Research. <https://www.icmr.gov.in/>",
       "caveats": "Controverted in literature. Most evidence demonstrating mortality reduction stems from observational cohorts comparing volunteers who attend screening against non-participants; self-selected participants tend to have higher health consciousness, exaggerating estimated benefits. The 2023 Lancet Regional Health meta-analysis classified study bias risk as moderate to serious. In the cluster-randomized ESECC trial, 9-year mortality differences did not reach statistical significance. Guidelines for endoscopic screening cite potential harms including overdiagnosis, false positives, missed diagnoses, hemorrhage, perforation, cardiopulmonary complications, aspiration pneumonia, and infection. Overdiagnosis refers to detecting indolent early lesions that would never cause symptoms during a lifetime. For those who cannot tolerate standard endoscopy, clinical protocols specify procedures can be performed under sedation or anesthesia. Individuals aged >=45 with positive Helicobacter pylori are categorized as high gastric cancer risk. Eradication of H. pylori is detailed in Chapter 1, Item 23, but eradication does not eliminate the need for endoscopic screening—both are required. Upper GI barium swallow, serum pepsinogen alone, tumor biomarker panels, and PET-CT scans are not recommended for screening. Commercial tumor marker panels are reviewed in Chapter 6, Item 7. Those diagnosed with chronic atrophic gastritis, intestinal metaplasia, or intraepithelial neoplasia require shorter endoscopic surveillance intervals per gastroenterologist guidance. India issues no area-based screening invitation, so a person with a family history of the disease or a long-standing H. pylori infection should ask a gastroenterologist whether an endoscopy is warranted. Anyone already experiencing alarm symptoms like dysphagia, hematemesis, or melena requires urgent diagnostic medical care rather than screening, as outlined in Chapter 34, Item 6. Avoiding scalding hot tea is detailed in Chapter 2, Item 30. Primary beneficiaries are yourself and aging parents.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "1-48",
@@ -1243,7 +1243,7 @@
       "evidenceGrade": "B",
       "sources": "Liu Z et al. (2026). Controlling the Storage Time Is an Effective Measure to Reduce the Risk of Bongkrekic Acid Poisoning Caused by Wet Rice Noodles. Foodborne Pathogens and Disease, 23(7), 468-472. <https://doi.org/10.1089/fpd.2024.0131>; Food Safety and Standards Authority of India. <https://www.fssai.gov.in/>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>; World Health Organization. <https://www.who.int/>",
       "caveats": "Dried black fungus requires only 1 to 2 hours of cold-water soaking; market guidelines stipulate soaking should never exceed 8 hours. If soaked fungus feels slimy, loses elasticity, gives off a sour or unpleasant odor, or the soaking water turns turbid, discard the whole batch. If vomiting, dizziness or profound weakness appear after eating, do not wait to see how it goes: go to a hospital emergency department immediately and take the leftover food or its container with you. Anyone who shared the meal should be medically evaluated even if they feel well so far. Wild toxic mushrooms are covered in Item 5 of this chapter.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     }
   ]
 }

@@ -29,7 +29,7 @@
       "evidenceGrade": "A",
       "sources": "Indian Succession Act, 1925. <https://www.indiacode.nic.in/>; Mental Healthcare Act, 2017. <https://www.indiacode.nic.in/>; Guardians and Wards Act, 1890. <https://www.indiacode.nic.in/>; National Trust for the Welfare of Persons with Autism, Cerebral Palsy, Mental Retardation and Multiple Disabilities Act, 1999. <https://www.indiacode.nic.in/>; Rights of Persons with Disabilities Act, 2016. <https://www.indiacode.nic.in/>; Ministry of Social Justice and Empowerment. <https://socialjustice.gov.in/>",
       "caveats": "A power of attorney is not a guardianship order, and a dispute over it goes to court. An unregistered will is valid but must be proved after death, so the witnesses must still be findable. A family agreement has no statutory force of its own; it works because everyone signed it, and it is the document a court reads first if the family falls out. Do not let one sibling hold every original.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "17-2",
@@ -54,7 +54,7 @@
       "evidenceGrade": "A",
       "sources": "Indian Succession Act, 1925, section 63. <https://www.indiacode.nic.in/>; Registration Act, 1908. <https://www.indiacode.nic.in/>; Ministry of Law and Justice. <https://lawmin.gov.in/>",
       "caveats": "Two witnesses must see you sign, and each must sign in your presence; a will signed alone and witnessed on a later day is easier to challenge. Keep the original where a family member can find it, and tell the executor that it exists. A bank or insurance nomination decides who collects the money, but the nominee holds it for the people who inherit under the will, so keep the nomination and the will consistent.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "17-3",
@@ -82,7 +82,7 @@
       "evidenceGrade": "B",
       "sources": "Author’s experience, no direct literature; see Sections 8 and 13 for general anti-fraud rules; Ministry of Social Justice and Empowerment. <https://socialjustice.gov.in/>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>",
       "caveats": "Frame this not as “protecting them from fraud” but as “keeping household finances organized.” That approach is far easier for seniors to accept. Also, avoid moving all of their money into a child’s account — doing so can lead to entirely different kinds of disputes.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "17-4",
@@ -110,7 +110,7 @@
       "evidenceGrade": "B",
       "sources": "author’s experience, no direct literature; Ministry of Social Justice and Empowerment. <https://socialjustice.gov.in/>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>",
       "caveats": "Use this together with tip #3 (keeping the senior’s money in a separate account). You can also carry out home modifications to prevent falls, as described in Section 1. This phrase isn’t meant to protect the senior from themselves; it simply provides a way to decline politely without feeling awkward. When surrounded by salespeople, the hardest part isn’t judging whether they’re trustworthy — it’s finding the courage to say no in front of everyone. Agreeing on this line beforehand removes that burden entirely.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "17-5",
@@ -138,7 +138,7 @@
       "evidenceGrade": "A",
       "sources": "Maintenance and Welfare of Parents and Senior Citizens Act, 2007. <https://www.indiacode.nic.in/>; Ministry of Social Justice and Empowerment. <https://socialjustice.gov.in/>; Reserve Bank of India, unauthorised schemes. <https://www.rbi.org.in/>; Securities and Exchange Board of India. <https://www.sebi.gov.in/>",
       "caveats": "A 'lifetime care' promise is only as good as the company. A transfer of property for care should be a registered deed with a life interest. Take a lawyer and a family member to the signing.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "17-6",
@@ -166,7 +166,7 @@
       "evidenceGrade": "B",
       "sources": "Reserve Bank of India. <https://www.rbi.org.in/>; Insurance Regulatory and Development Authority of India. <https://irdai.gov.in/>; Ministry of Finance. <https://finmin.nic.in/>",
       "caveats": "The yield warnings are rules of thumb, not statutory thresholds: a scheme promising a guaranteed 6, 8 or 10 per cent return on a property-backed product is a warning sign, not a regulated rate. Read whether the house has to be transferred, who pays maintenance and property tax, and what happens if the owner has to move into a care home. Show the agreement to a family member and a lawyer before signing, and never sign a blank or undated document. For an ordinary monthly pension instead, see item 5.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "17-7",
@@ -191,7 +191,7 @@
       "evidenceGrade": "A",
       "sources": "National Health Authority, PM-JAY. <https://nha.gov.in/>; Department of Empowerment of Persons with Disabilities. <https://depwd.gov.in/>; Ministry of Health and Family Welfare, elderly care. <https://mohfw.gov.in/>; Employees' State Insurance Corporation. <https://esic.gov.in/>",
       "caveats": "A disability certificate is issued after an assessment by a medical board; it is not automatic. A home-care NGO should be verified. Keep the treatment records.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "17-8",
@@ -216,7 +216,7 @@
       "evidenceGrade": "B",
       "sources": "Porter SB, Pla R, Chow JH, et al. (2022). Preoperative Pressure Ulcers, Mortality, and Complications in Older Hip Fracture Surgery Patients. JAAOS Global Research & Reviews, 6(11). <https://doi.org/10.5435/JAAOSGlobal-D-22-00117>; Ottaviani S, Rondanina E, Longo E, et al. (2026). Impact of pressure ulcers and frailty on long-term mortality: a prospective cohort study of hospitalized older adults. European Geriatric Medicine, 17(2), 665-672. <https://doi.org/10.1007/s41999-025-01331-8>; Shi C, Dumville JC, Cullum N (2018). Support surfaces for pressure ulcer prevention: A network meta-analysis. PLoS ONE, 13(2), e0192707. <https://doi.org/10.1371/journal.pone.0192707>; Latimer SL, Chaboyer WP, Probst S, et al. (2026). Repositioning for pressure injury prevention in adults. Cochrane Database of Systematic Reviews, 6, CD009958. <https://doi.org/10.1002/14651858.CD009958.pub4>; Ministry of Social Justice and Empowerment. <https://socialjustice.gov.in/>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>",
       "caveats": "This grade reflects three main points. First, the mortality studies showed only that patients with ulcers fared worse; they did not prove that preventing ulcers directly lowers death rates. Second, the evidence on optimal turning intervals from randomized trials is quite weak. Third, the data on air mattresses are relatively stronger, yet they compared hospital‑grade mattresses to ordinary home mattresses, so extrapolation to home use is somewhat uncertain. Daily inspection of bony areas is standard nursing practice and lacks dedicated research support. The mortality benefit is evaluated separately from cost calculations for other items in this section. Home-based care — a hired attendant, home nursing, or a day-care centre — is described in item 7. India has no long-term care insurance scheme for this, so the family pays, and the cost of an attendant is the largest recurring item. Sudden leg swelling should be treated as a possible deep‑vein thrombosis, as covered in section 13, item 11. Situations involving prolonged bed rest after falls or severe injury are discussed in section 1, item 34.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "17-9",
@@ -244,7 +244,7 @@
       "evidenceGrade": "B",
       "sources": "National Programme for Control of Blindness and Visual Impairment. <https://npcbvi.gov.in/>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>; All India Institute of Medical Sciences, ophthalmology. <https://www.aiims.edu/>",
       "caveats": "The waiting period varies by district. A 'free' camp should be a government or a registered NGO camp. Bring the Aadhaar or another ID for the hospital record.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "17-10",
@@ -272,7 +272,7 @@
       "evidenceGrade": "B",
       "sources": "Pirruccio K, Yoon YM, Ahn J (2019). Fractures in Elderly Americans Associated With Walking Leashed Dogs. JAMA Surgery, 154(5), 458-459. <https://doi.org/10.1001/jamasurg.2019.0061>; Forrester MB (2020). Dog leash-related injuries treated at emergency departments. American Journal of Emergency Medicine, 38(9), 1782-1786. <https://doi.org/10.1016/j.ajem.2020.05.082>; Plusch K, Givner D, Wiafe B, Lutsky K, Beredjiklian P (2026). Hand and Wrist Dog-Leash Injuries in the Outpatient Setting: A Review of 443 Cases. Hand, 21(4), 582-586. <https://doi.org/10.1177/15589447241299128>; CDC (2009). Nonfatal fall-related injuries associated with dogs and cats — United States, 2001-2006. MMWR, 58(11), 277-281. <https://www.cdc.gov/mmwr/preview/mmwrhtml/mm5811a1.htm>; Rosa R, Buckley RE (2024). Leash-related injuries associated with dog walking: an understudied risk for dog owners? Journal of the American Veterinary Medical Association, 262(7), 973-978. <https://doi.org/10.2460/javma.23.11.0608>",
       "caveats": "Gripping the leash firmly in the palm without wrapping it around fingers or wrists is explicitly recommended by hand surgeons: it protects fingers and wrists against spiral fractures and degloving injuries, though it does not completely prevent falls caused by aggressive surges. Keeping the lead short prevents the dog from building kinetic momentum and reduces trip hazards. Extended retractable leashes function as hazardous long lines; however, no controlled trials have isolated fall incidence between retractable versus standard fixed leashes (noted in a 2024 JAVMA review). Behavioral loose-leash training is recommended by both the CDC and orthopedic trauma researchers. For seniors considering adopting a new pet, researchers recommend smaller, lower-mass breeds. Benefit magnitude is rated small as exact reduction percentages for these combined interventions have not been evaluated in randomized trials. For bone fracture resilience, see Chapter 1, Item 39 (bone mineral density screening) and Rule 40 (osteoporosis medication). For elder balance training, see Chapter 1, Item 13. For counting dog walking toward daily physical activity goals, see Chapter 2, Item 44. Beneficiaries are elderly parents and grandparents.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "17-11",
@@ -299,7 +299,7 @@
       "evidenceGrade": "A",
       "sources": "Clinical Establishments (Registration and Regulation) Act, 2010. <https://www.indiacode.nic.in/>; Maintenance and Welfare of Parents and Senior Citizens Act, 2007. <https://www.indiacode.nic.in/>; Ministry of Social Justice and Empowerment. <https://socialjustice.gov.in/>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>",
       "caveats": "No central rule caps the deposit, so a large 'lifetime' deposit is the main risk: pay by bank transfer, get a receipt, and put the refund formula in the contract. Ask what the home does when a resident becomes bed-bound — many quietly ask the family to move the person. Check the fire exit and the doctor's visiting arrangement, and visit once without an appointment. If the home is unregistered, the district health authority and the state welfare department for senior citizens are the two places to complain.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "17-12",
@@ -326,7 +326,7 @@
       "evidenceGrade": "B",
       "sources": "Code on Social Security, 2020 (Chapter VI, sections 59 to 72). <https://www.indiacode.nic.in/>; The Occupational Safety, Health and Working Conditions Code, 2020 (sections 25 and 32). <https://www.indiacode.nic.in/>; Central Civil Services (Leave) Rules, 1972. <https://dopt.gov.in/>; Ministry of Labour and Employment. <https://labour.gov.in/>",
       "caveats": "Do not resign to care for a parent before checking what leave you have and what notice your contract requires. A verbal promise of leave is hard to prove; ask by email and keep the reply. Leave without pay preserves the job but not the salary, and it may break continuity of service for gratuity. If the parent needs care for months rather than weeks, plan for hired help or a care home instead (item 11).",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "17-13",
@@ -354,7 +354,7 @@
       "evidenceGrade": "B",
       "sources": "National Institute for Health and Care Excellence (2018). Dementia: assessment, management and support for people living with dementia and their carers (NICE NG97, Recommendations 1.1.12, 1.2.1, 1.2.2, 1.2.6). <https://www.nice.org.uk/guidance/ng97/chapter/Recommendations>; Clarfield AM (2003). The decreasing prevalence of reversible dementias: an updated meta-analysis. Archives of Internal Medicine, 163(18), 2219-2229. <https://doi.org/10.1001/archinte.163.18.2219>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>; Ministry of Social Justice and Empowerment. <https://socialjustice.gov.in/>",
       "caveats": "Graded Evidence Grade B based on clinical consensus guidelines and diagnostic cohort reviews. Benefit is categorized as Low because clinical reversibility is under 1% and no evidence indicates that early screening alters ultimate dementia mortality. Never discontinue medications unilaterally; bring medication boxes to consultation. For acute cognitive decline and gait ataxia following minor head trauma, see Chapter 13, Item 10 (head CT for chronic subdural hematoma). Hearing aid fitting for cognitive maintenance is covered in Chapter 33, Item 17. Crucially, while the person is still clear-minded, put a will in place (Chapter 17, Item 2) and the family's care and money arrangements in writing (Chapter 17, Item 1). Beneficiaries are elderly parents and grandparents.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     }
   ]
 }
