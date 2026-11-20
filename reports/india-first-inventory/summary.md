@@ -6,7 +6,7 @@
 - Present in current India edition: **765**
 - Missing from edition (requiring mapping): **0**
 - New India-only IDs (outside inherited corpus): **0**
-- Editorial decisions pending: **721**
+- Editorial decisions pending: **716**
 - Tips flagged for further inspection by keyword triage: **562** (not verified defects)
 
 ## Chapter queue
@@ -31,7 +31,7 @@
 | 16 | Living with Chronic Disease | 14 | 14 | 14 |
 | 17 | Elderly at Home | 13 | 13 | 13 |
 | 18 | Is Having Kids Worth It | 7 | 3 | 7 |
-| 19 | Employment & Work Injury | 24 | 24 | 24 |
+| 19 | Employment & Work Injury | 24 | 24 | 19 |
 | 20 | Newborn Care | 17 | 4 | 17 |
 | 21 | Travel and Abroad Safety | 13 | 1 | 13 |
 | 22 | How to Relax | 12 | 4 | 12 |
