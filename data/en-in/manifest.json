@@ -13,7 +13,8 @@
       "sourceCount": 48,
       "humanReview": "pending",
       "openIssues": [],
-      "bannedTerms": 0
+      "bannedTerms": 0,
+      "reviewMethod": "ai-delegated-source-check"
     },
     "2": {
       "status": "checked",
@@ -24,7 +25,8 @@
       "sourceCount": 47,
       "humanReview": "pending",
       "openIssues": [],
-      "bannedTerms": 0
+      "bannedTerms": 0,
+      "reviewMethod": "ai-delegated-source-check"
     },
     "3": {
       "status": "checked",
@@ -35,7 +37,8 @@
       "sourceCount": 27,
       "humanReview": "pending",
       "openIssues": [],
-      "bannedTerms": 0
+      "bannedTerms": 0,
+      "reviewMethod": "ai-delegated-source-check"
     },
     "4": {
       "status": "checked",
@@ -46,7 +49,8 @@
       "sourceCount": 18,
       "humanReview": "pending",
       "openIssues": [],
-      "bannedTerms": 0
+      "bannedTerms": 0,
+      "reviewMethod": "ai-delegated-source-check"
     },
     "5": {
       "status": "checked",
@@ -57,7 +61,8 @@
       "sourceCount": 50,
       "humanReview": "pending",
       "openIssues": [],
-      "bannedTerms": 0
+      "bannedTerms": 0,
+      "reviewMethod": "ai-delegated-source-check"
     },
     "6": {
       "status": "checked",
@@ -68,7 +73,8 @@
       "sourceCount": 35,
       "humanReview": "pending",
       "openIssues": [],
-      "bannedTerms": 0
+      "bannedTerms": 0,
+      "reviewMethod": "ai-delegated-source-check"
     },
     "7": {
       "status": "checked",
@@ -79,7 +85,8 @@
       "sourceCount": 23,
       "humanReview": "pending",
       "openIssues": [],
-      "bannedTerms": 0
+      "bannedTerms": 0,
+      "reviewMethod": "ai-delegated-source-check"
     },
     "8": {
       "status": "checked",
@@ -90,7 +97,8 @@
       "sourceCount": 46,
       "humanReview": "pending",
       "openIssues": [],
-      "bannedTerms": 0
+      "bannedTerms": 0,
+      "reviewMethod": "ai-delegated-source-check"
     },
     "9": {
       "status": "checked",
@@ -101,7 +109,8 @@
       "sourceCount": 29,
       "humanReview": "pending",
       "openIssues": [],
-      "bannedTerms": 0
+      "bannedTerms": 0,
+      "reviewMethod": "ai-delegated-source-check"
     },
     "10": {
       "status": "checked",
@@ -112,7 +121,8 @@
       "sourceCount": 23,
       "humanReview": "pending",
       "openIssues": [],
-      "bannedTerms": 0
+      "bannedTerms": 0,
+      "reviewMethod": "ai-delegated-source-check"
     },
     "11": {
       "status": "checked",
@@ -123,7 +133,8 @@
       "sourceCount": 21,
       "humanReview": "pending",
       "openIssues": [],
-      "bannedTerms": 0
+      "bannedTerms": 0,
+      "reviewMethod": "ai-delegated-source-check"
     },
     "12": {
       "status": "checked",
@@ -134,7 +145,8 @@
       "sourceCount": 28,
       "humanReview": "pending",
       "openIssues": [],
-      "bannedTerms": 0
+      "bannedTerms": 0,
+      "reviewMethod": "ai-delegated-source-check"
     },
     "13": {
       "status": "checked",
@@ -145,7 +157,8 @@
       "sourceCount": 48,
       "humanReview": "pending",
       "openIssues": [],
-      "bannedTerms": 0
+      "bannedTerms": 0,
+      "reviewMethod": "ai-delegated-source-check"
     },
     "14": {
       "status": "checked",
@@ -156,7 +169,8 @@
       "sourceCount": 12,
       "humanReview": "pending",
       "openIssues": [],
-      "bannedTerms": 0
+      "bannedTerms": 0,
+      "reviewMethod": "ai-delegated-source-check"
     },
     "15": {
       "status": "checked",
@@ -167,7 +181,8 @@
       "sourceCount": 18,
       "humanReview": "pending",
       "openIssues": [],
-      "bannedTerms": 0
+      "bannedTerms": 0,
+      "reviewMethod": "ai-delegated-source-check"
     },
     "16": {
       "status": "checked",
@@ -178,7 +193,8 @@
       "sourceCount": 14,
       "humanReview": "pending",
       "openIssues": [],
-      "bannedTerms": 0
+      "bannedTerms": 0,
+      "reviewMethod": "ai-delegated-source-check"
     },
     "17": {
       "status": "checked",
@@ -189,7 +205,8 @@
       "sourceCount": 13,
       "humanReview": "pending",
       "openIssues": [],
-      "bannedTerms": 0
+      "bannedTerms": 0,
+      "reviewMethod": "ai-delegated-source-check"
     },
     "18": {
       "status": "checked",
@@ -200,7 +217,8 @@
       "sourceCount": 7,
       "humanReview": "pending",
       "openIssues": [],
-      "bannedTerms": 0
+      "bannedTerms": 0,
+      "reviewMethod": "ai-delegated-source-check"
     },
     "19": {
       "status": "checked",
@@ -211,7 +229,8 @@
       "sourceCount": 24,
       "humanReview": "pending",
       "openIssues": [],
-      "bannedTerms": 0
+      "bannedTerms": 0,
+      "reviewMethod": "ai-delegated-source-check"
     },
     "20": {
       "status": "checked",
@@ -222,7 +241,8 @@
       "sourceCount": 17,
       "humanReview": "pending",
       "openIssues": [],
-      "bannedTerms": 0
+      "bannedTerms": 0,
+      "reviewMethod": "ai-delegated-source-check"
     },
     "21": {
       "status": "checked",
@@ -233,7 +253,8 @@
       "sourceCount": 13,
       "humanReview": "pending",
       "openIssues": [],
-      "bannedTerms": 0
+      "bannedTerms": 0,
+      "reviewMethod": "ai-delegated-source-check"
     },
     "22": {
       "status": "checked",
@@ -244,7 +265,8 @@
       "sourceCount": 12,
       "humanReview": "pending",
       "openIssues": [],
-      "bannedTerms": 0
+      "bannedTerms": 0,
+      "reviewMethod": "ai-delegated-source-check"
     },
     "23": {
       "status": "checked",
@@ -255,7 +277,8 @@
       "sourceCount": 25,
       "humanReview": "pending",
       "openIssues": [],
-      "bannedTerms": 0
+      "bannedTerms": 0,
+      "reviewMethod": "ai-delegated-source-check"
     },
     "24": {
       "status": "checked",
@@ -266,7 +289,8 @@
       "sourceCount": 15,
       "humanReview": "pending",
       "openIssues": [],
-      "bannedTerms": 0
+      "bannedTerms": 0,
+      "reviewMethod": "ai-delegated-source-check"
     },
     "25": {
       "status": "checked",
@@ -277,7 +301,8 @@
       "sourceCount": 12,
       "humanReview": "pending",
       "openIssues": [],
-      "bannedTerms": 0
+      "bannedTerms": 0,
+      "reviewMethod": "ai-delegated-source-check"
     },
     "26": {
       "status": "checked",
@@ -288,7 +313,8 @@
       "sourceCount": 13,
       "humanReview": "pending",
       "openIssues": [],
-      "bannedTerms": 0
+      "bannedTerms": 0,
+      "reviewMethod": "ai-delegated-source-check"
     },
     "27": {
       "status": "checked",
@@ -299,7 +325,8 @@
       "sourceCount": 20,
       "humanReview": "pending",
       "openIssues": [],
-      "bannedTerms": 0
+      "bannedTerms": 0,
+      "reviewMethod": "ai-delegated-source-check"
     },
     "28": {
       "status": "checked",
@@ -310,7 +337,8 @@
       "sourceCount": 10,
       "humanReview": "pending",
       "openIssues": [],
-      "bannedTerms": 0
+      "bannedTerms": 0,
+      "reviewMethod": "ai-delegated-source-check"
     },
     "29": {
       "status": "checked",
@@ -321,7 +349,8 @@
       "sourceCount": 14,
       "humanReview": "pending",
       "openIssues": [],
-      "bannedTerms": 0
+      "bannedTerms": 0,
+      "reviewMethod": "ai-delegated-source-check"
     },
     "30": {
       "status": "checked",
@@ -332,7 +361,8 @@
       "sourceCount": 21,
       "humanReview": "pending",
       "openIssues": [],
-      "bannedTerms": 0
+      "bannedTerms": 0,
+      "reviewMethod": "ai-delegated-source-check"
     },
     "31": {
       "status": "checked",
@@ -343,7 +373,8 @@
       "sourceCount": 17,
       "humanReview": "pending",
       "openIssues": [],
-      "bannedTerms": 0
+      "bannedTerms": 0,
+      "reviewMethod": "ai-delegated-source-check"
     },
     "32": {
       "status": "checked",
@@ -354,7 +385,8 @@
       "sourceCount": 12,
       "humanReview": "pending",
       "openIssues": [],
-      "bannedTerms": 0
+      "bannedTerms": 0,
+      "reviewMethod": "ai-delegated-source-check"
     },
     "33": {
       "status": "checked",
@@ -365,7 +397,8 @@
       "sourceCount": 21,
       "humanReview": "pending",
       "openIssues": [],
-      "bannedTerms": 0
+      "bannedTerms": 0,
+      "reviewMethod": "ai-delegated-source-check"
     },
     "34": {
       "status": "checked",
@@ -376,7 +409,8 @@
       "sourceCount": 12,
       "humanReview": "pending",
       "openIssues": [],
-      "bannedTerms": 0
+      "bannedTerms": 0,
+      "reviewMethod": "ai-delegated-source-check"
     }
   }
 }

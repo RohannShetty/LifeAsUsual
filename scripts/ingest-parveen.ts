@@ -27,7 +27,7 @@ const EnglishTipSchema = z.object({
   evidenceGrade: z.enum(['A', 'B', 'C']),
   sources: z.string(),
   caveats: z.string(),
-  reviewStatus: z.enum(['source', 'draft', 'independently-checked', 'reviewed']).optional(),
+  reviewStatus: z.enum(['source', 'draft', 'source-checked', 'reviewed']).optional(),
 });
 
 export type EnglishTip = z.infer<typeof EnglishTipSchema>;

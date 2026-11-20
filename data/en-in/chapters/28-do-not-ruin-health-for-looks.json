@@ -29,7 +29,7 @@
       "evidenceGrade": "A",
       "sources": "Arcelus J et al. (2011). Mortality rates in patients with anorexia nervosa and other eating disorders. A meta-analysis of 36 studies. Arch Gen Psychiatry. <https://doi.org/10.1001/archgenpsychiatry.2011.74>; Patton GC et al. (1999). Onset of adolescent eating disorders: population based cohort study over 3 years. BMJ. <https://doi.org/10.1136/bmj.318.7186.765>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>",
       "caveats": "The term “severe dieting” here refers to long-term food intake that is far below the body’s actual needs; it does not include skipping a single meal or foregoing late-night snacks. If you or someone you know exhibits symptoms such as self-induced vomiting, feelings of guilt after binge eating, or an inability to stop weighing oneself, it is recommended to seek help from a psychiatrist or a clinical psychology department at a general hospital. This is a medical condition with established treatment methods, and it is not a matter of lacking willpower. For information on the relationship between BMI and mortality, please refer to Section 2, Item 32, which discusses long-term weight ranges rather than weight-loss methods.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "28-2",
@@ -54,7 +54,7 @@
       "evidenceGrade": "A",
       "sources": "Clinical Establishments (Registration and Regulation) Act, 2010. <https://www.indiacode.nic.in/>; Ministry of Health and Family Welfare. <https://www.mohfw.gov.in/>; Central Drugs Standard Control Organisation. <https://cdsco.gov.in/>",
       "caveats": "Ask to see the registration certificate and the doctor's registration number, and check the number with the state medical council. Do not accept a practitioner whose only qualification is a short course. Keep the bill and the batch number of the product used.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "28-3",
@@ -79,7 +79,7 @@
       "evidenceGrade": "B",
       "sources": "Beleznay K et al. (2019). Update on Avoiding and Treating Blindness From Fillers: A Recent Review of the World Literature. Aesthet Surg J. <https://doi.org/10.1093/asj/sjz053>; Central Drugs Standard Control Organisation. <https://cdsco.gov.in/>",
       "caveats": "These figures were derived by manually tallying each reported case across medical journals. They reflect only the number of patients experiencing complications, not the total number of injections performed; thus it is impossible to calculate the exact probability of blindness per injection. The B rating reflects this limitation. Reputable clinics naturally employ standard risk‑minimization practices: mapping vascular pathways beneath the injection sites, using blunt‑tip needles instead of sharp ones, administering small amounts of filler while slowly withdrawing the needle, and keeping hyaluronidase on hand. All these steps must be carried out by trained physicians — which is precisely why unregulated providers should be avoided. Before proceeding, verify that the clinic holds proper licensing and that the attending physician is qualified, as outlined in Section 2 of this chapter.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "28-4",
@@ -104,7 +104,7 @@
       "evidenceGrade": "A",
       "sources": "James WPT et al. (2010). Effect of sibutramine on cardiovascular outcomes in overweight and obese subjects. NEJM. <https://doi.org/10.1056/NEJMoa1003114>; Food Safety and Standards Authority of India. <https://www.fssai.gov.in/>; Central Drugs Standard Control Organisation. <https://cdsco.gov.in/>",
       "caveats": "SCOUT enrolled high‑risk individuals already suffering from heart disease or diabetes; it does not prove that healthy young people would experience the same effects. Because it’s impossible to identify who is truly low‑risk, regulators opted to withdraw the drug entirely. Another common illicit additive is phenolphthalein, originally a laxative whose chronic overuse can disturb electrolyte balance and provoke arrhythmias. How to tell a legitimate product from a fraudulent one: genuine weight‑loss medicines are prescription drugs whose approval numbers can be verified at pharmacies or hospitals. In India, weight‑loss products sit between two regimes: medicines are cleared by the Central Drugs Standard Control Organisation, while foods and supplements fall under the Food Safety and Standards Authority of India; a licensed pharmacist can confirm whether a product is a licensed medicine. Products marketed as “coffee,” “candies,” “plums,” or “meal replacements” that promise rapid weight loss should, by definition, have no therapeutic effect; any such effect indicates illegal adulteration.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "28-5",
@@ -129,7 +129,7 @@
       "evidenceGrade": "A",
       "sources": "Horwitz H et al. (2019). Health consequences of androgenic anabolic steroid use. J Intern Med. <https://doi.org/10.1111/joim.12850>; Drugs and Cosmetics Rules, 1945 (Schedule H and rule 65). <https://www.indiacode.nic.in/>; Central Drugs Standard Control Organisation. <https://cdsco.gov.in/>",
       "caveats": "This is an observational study, not a randomized trial; steroid users may also engage in other risky behaviors, so the three‑fold risk increase may not be attributable solely to the drugs. The true effect size likely falls between 1.3 and 7.0. However, visible side effects such as acne, gynecomastia, and erectile dysfunction are less prone to bias. Legally these products are termed “anabolic steroids”; any product described with that phrase contains them. Ordinary protein powder or creatine does not fall under this category. A problem is that some products marketed as “muscle‑building powders” or “nutritional supplements” may contain hidden steroids while claiming rapid results. The screening method is the same as for weight‑loss products (see item 4: avoid any weight‑loss drug promising quick results). Legitimate drugs are prescription‑only and carry verifiable approval numbers; any product sold as a “muscle‑building supplement” that promises results within weeks is probably adulterated.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "28-6",
@@ -154,7 +154,7 @@
       "evidenceGrade": "B",
       "sources": "Drugs and Cosmetics Rules, 1945 (rules 65(3), 65(7) and 65(9)). <https://www.indiacode.nic.in/>; Central Drugs Standard Control Organisation. <https://cdsco.gov.in/>; Ministry of Health and Family Welfare. <https://www.mohfw.gov.in/>; Drugs and Cosmetics Act, 1940. <https://www.indiacode.nic.in/>",
       "caveats": "Do not buy a weight-loss injection or pill from a social-media seller. Check the batch, the expiry and the licence number on the pack. Report an illegal sale to the state drug controller.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "28-7",
@@ -179,7 +179,7 @@
       "evidenceGrade": "A",
       "sources": "Getahun D et al. (2018). Cross-sex Hormones and Acute Cardiovascular Events in Transgender Persons: A Cohort Study. Ann Intern Med. <https://doi.org/10.7326/M17-2785>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>",
       "caveats": "The researchers acknowledged a limitation: they could not determine how many participants obtained hormones outside the health‑care system, so the data on actual medication use are incomplete. This limitation actually underscores why regular medical follow‑up is essential. The study only examined vascular events; it does not address whether hormone therapy should be used or what its overall benefits are — those questions require different evidence. The same principle applies to any use of sex hormones, including birth‑control pills, menopausal hormone therapy, and testosterone replacement. Anyone who buys hormones online, adjusts doses based on internet advice, and never monitors blood clots or liver/kidney function is at risk primarily because there is no medical oversight.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "28-8",
@@ -204,7 +204,7 @@
       "evidenceGrade": "B",
       "sources": "Ribeiro RVE (2017). Prevalence of Body Dysmorphic Disorder in Plastic Surgery and Dermatology Patients: A Systematic Review with Meta-Analysis. Aesthetic Plast Surg. <https://doi.org/10.1007/s00266-017-0869-0>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>",
       "caveats": "The reported prevalence varies widely — from 2.21% up to 56.67% — because different studies use distinct questionnaires and populations. Thus we can only conclude that this condition is fairly common and warrants screening; the 15.04% figure should not be taken as an exact statistic. This is why it is graded B. Importantly, most people seeking cosmetic treatments do not have psychological issues; only a small subset — those whose preoccupation is persistent, interferes with work or social life, and leads to repeated surgical attempts — are at risk. Warning signs include spending excessive time each day inspecting or concealing a body part, avoiding social interactions or photos, and constantly fixating on new areas after previous corrections.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "28-9",
@@ -229,7 +229,7 @@
       "evidenceGrade": "C",
       "sources": "Central Drugs Standard Control Organisation, medical devices. <https://cdsco.gov.in/>; Ministry of Health and Family Welfare. <https://www.mohfw.gov.in/>; National Dental Commission Act, 2023. <https://indiacode.gov.in/>",
       "caveats": "A severe case, such as an impacted tooth, gum disease or a jaw discrepancy, is not an aligner case at all. Wear the retainer afterwards. Keep the treatment plan and the records.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     },
     {
       "id": "28-10",
@@ -254,7 +254,7 @@
       "evidenceGrade": "B",
       "sources": "Central Drugs Standard Control Organisation, cosmetics. <https://cdsco.gov.in/>; Ministry of Health and Family Welfare. <https://www.mohfw.gov.in/>; Drugs and Cosmetics Act, 1940. <https://www.indiacode.nic.in/>",
       "caveats": "Do not use a cream from a salon jar, or a treatment mixed at a parlour. Patch-test first. If the skin thins, streaks or burns, stop and see a dermatologist.",
-      "reviewStatus": "independently-checked"
+      "reviewStatus": "source-checked"
     }
   ]
 }

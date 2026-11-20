@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { makeInventory, asCsv, asSummary, inventoryFromDirectory } from '../scripts/india-first-audit.mjs';
 
 const original = [{chapter:7,slug:'living-with-no-money',title:'Legacy',tips:[{id:'7-1',tip:1,title:'Old'}]}];
-const current = [{chapter:7,slug:'living-with-no-money',title:'India edition',tips:[{id:'7-1',tip:1,title:'India has no national unemployment insurance',tags:{scope:'Money',audience:[]},sources:'ESIC <https://esic.gov.in/>',reviewStatus:'independently-checked',evidenceGrade:'A'}]}];
+const current = [{chapter:7,slug:'living-with-no-money',title:'India edition',tips:[{id:'7-1',tip:1,title:'India has no national unemployment insurance',tags:{scope:'Money',audience:[]},sources:'ESIC <https://esic.gov.in/>',reviewStatus:'source-checked',evidenceGrade:'A'}]}];
 const manifest = {chapters:{7:{tier:'A',humanReview:'pending',verifiedAt:'2026-10-21'}}};
 
 test('creates an unapproved row, retains the exact public anchor and separates AI from human review', () => {

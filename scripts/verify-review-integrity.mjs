@@ -5,7 +5,8 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 export const CHAPTER_REVIEW_STATES = ['draft', 'checked', 'reviewed'];
-export const TIP_REVIEW_STATES = ['independently-checked', 'reviewed'];
+export const TIP_REVIEW_STATES = ['source-checked', 'reviewed'];
+export const RETIRED_TIP_REVIEW_STATES = ['independently-checked'];
 export const APPROVED_METHODS = ['qualified-human', 'owner-self-review'];
 export const CHAPTER_NOTICE_MARKERS = [
   'AI-reviewed draft for India.',
@@ -15,6 +16,7 @@ export const CHAPTER_NOTICE_MARKERS = [
 export const TIPCARD_MARKERS = ['AI-reviewed draft', 'Automated source checks are not professional verification.'];
 export const FORBIDDEN_VERIFICATION_PHRASES = [
   'verified for India', 'India-verified', 'clinically verified', 'legally verified', 'specialist-approved',
+  'independently verified', 'independently checked',
 ];
 
 export function chapterRoute(chapter) {
@@ -64,9 +66,19 @@ export function reviewIntegrityErrors(input) {
     if (entry.humanReview === 'signed-off' && !approvedByRoute.has(route)) {
       errors.push(route + ': manifest says signed-off with no approved publication record.');
     }
+    if (status === 'checked' || status === 'reviewed') {
+      if (!entry.reviewMethod) {
+        errors.push(route + ': manifest records reviewMethod as missing for a ' + status + ' chapter.');
+      }
+      if (status === 'reviewed' && entry.reviewMethod === 'ai-delegated-source-check') {
+        errors.push(route + ': reviewed chapter still records an AI-delegated review method.');
+      }
+    }
     for (const tip of chapter.tips || []) {
-      const tipStatus = tip.reviewStatus || 'independently-checked';
-      if (!TIP_REVIEW_STATES.includes(tipStatus)) {
+      const tipStatus = tip.reviewStatus || 'source-checked';
+      if (RETIRED_TIP_REVIEW_STATES.includes(tipStatus)) {
+        errors.push(route + '# ' + tip.id + ': retired label ' + tipStatus + ' claims an independence the record does not show; use source-checked.');
+      } else if (!TIP_REVIEW_STATES.includes(tipStatus)) {
         errors.push(route + '# ' + tip.id + ': unknown tip review status ' + tipStatus + '.');
       }
       if (tipStatus === 'reviewed' && !approvedByRoute.has(route)) {
