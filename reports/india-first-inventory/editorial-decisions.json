@@ -121,6 +121,26 @@
       "disposition": "PROPOSED_REWRITE",
       "author": "editorial source audit (agent), owner sign-off pending",
       "rationale": "Chapter 7 second pass, 19 November 2026: SDRF section 48(1)(a) and immediate-relief scope, NDRF section 46, and NFBS Rs 20,000 confirmed at ndmindia.mha.gov.in and PIB 2187327. Fixed the NFBS sentence to include the 18-59 age band and BPL condition, and qualified the opening as no universal grant. CMRF legal basis, collector powers and processing times remain unverified."
+    },
+    "7-11": {
+      "disposition": "PROPOSED_REWRITE",
+      "author": "editorial source audit (agent), owner sign-off pending",
+      "rationale": "Chapter 7 third pass, 20 November 2026: removed the unsupported claims that e-Aadhaar is legally equivalent to the card and that there is no temporary card or 60-day rule. Now states only what UIDAI publishes, and records that the PAN, e-EPIC and duplicate-licence steps could not be verified because the portals are blocked or script-only."
+    },
+    "7-19": {
+      "disposition": "PROPOSED_REWRITE",
+      "author": "editorial source audit (agent), owner sign-off pending",
+      "rationale": "Chapter 7 third pass, 20 November 2026: the \"no individual bankruptcy law in force\" framing was overbroad. Part III of the IBC has been partly in force since 1 December 2019 for personal guarantors to corporate debtors (IBBI notice); the general individual route and fresh start are not operational. JJ Act s.24 text could not be loaded, so that detail is flagged unverified."
+    },
+    "7-20": {
+      "disposition": "PROPOSED_REWRITE",
+      "author": "editorial source audit (agent), owner sign-off pending",
+      "rationale": "Chapter 7 third pass, 20 November 2026: the 36-month PED cap is not in the IRDAI master circular of 29 May 2024 and is no longer asserted; the 60-month moratorium and the \"products catering to all ages\" wording now follow the circular and IRDAI FAQ."
+    },
+    "7-21": {
+      "disposition": "PROPOSED_REWRITE",
+      "author": "editorial source audit (agent), owner sign-off pending",
+      "rationale": "Chapter 7 third pass, 20 November 2026: replaced the live \"urban shelter programme\" framing with the DAY-NULM record (implementation period ended 30 September 2024; 1,995 shelters, about 1.41 lakh beds) and noted that remaining beds are run by ULBs, states or NGOs."
     }
   }
 }
