@@ -221,6 +221,31 @@
       "disposition": "PROPOSED_REWRITE",
       "author": "editorial source audit (agent), owner sign-off pending",
       "rationale": "Chapter 13 safety pass, 20 November 2026: removed the instruction to head outside during shaking. NDMA says stay inside until the shaking stops; most injuries occur when occupants move or try to leave. Armenian evacuation study retained with its limits; no longer used to justify running out."
+    },
+    "19-1": {
+      "disposition": "PROPOSED_REWRITE",
+      "rationale": "The 48-hour week was attributed to OSH Code s.25(1)(a), which sets eight hours a day and leaves weekly hours, intervals and spreadovers to notification under s.25(1)(b). Overtime at twice the rate was also presented as the general rule of Code on Wages s.14, which is limited to minimum wages fixed by the hour or day.",
+      "author": "editorial source audit (agent), owner sign-off pending"
+    },
+    "19-4": {
+      "disposition": "PROPOSED_REWRITE",
+      "rationale": "Wrong section and rule for fixed-term gratuity: s.53(2) pays pro rata and s.53(1)(d) makes the end of the fixed term a trigger. https://indiankanoon.org/doc/37077486/",
+      "author": "editorial source audit (agent), owner sign-off pending"
+    },
+    "19-7": {
+      "disposition": "PROPOSED_REWRITE",
+      "rationale": "EPF status read as settled while 19-21 cited the Social Security Code for EPF; the 21 November 2025 commencement position is transitional and EPFO circulars are operative.",
+      "author": "editorial source audit (agent), owner sign-off pending"
+    },
+    "19-8": {
+      "disposition": "PROPOSED_REWRITE",
+      "rationale": "“Author experience” was listed as a source for an employment-records claim; removed, leaving the two official portals.",
+      "author": "editorial source audit (agent), owner sign-off pending"
+    },
+    "19-21": {
+      "disposition": "PROPOSED_REWRITE",
+      "rationale": "Benefit cited the Social Security Code for EPF; now the EPF Act, 1952 for EPF and the Code for ESIC.",
+      "author": "editorial source audit (agent), owner sign-off pending"
     }
   }
 }
