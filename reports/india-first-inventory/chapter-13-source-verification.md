@@ -42,3 +42,28 @@ Chapter 13 gives instructions that a reader may follow in the first minutes of a
 ## Review status
 
 These edits are an automated source audit with recorded passages. They are not medical review, and this chapter still has no named human reviewer. Dispositions for the edited tips are recorded as PROPOSED_REWRITE in reports/india-first-inventory/editorial-decisions.json, pending owner sign-off.
+
+
+## Fifth pass: rabies exposure and post-exposure prophylaxis (22 November 2026)
+
+This pass rechecked tip 13-13 against the National Centre for Disease Control (NCDC) National Guidelines for Rabies Prophylaxis, 2019. The guideline remains listed on the National Rabies Control Programme's official downloads page, checked on 22 November 2026. This is an AI/delegated source pass, not medical review, a named clinician's approval or professional sign-off.
+
+### Findings
+
+| Claim | Exact source text read | Correction |
+| --- | --- | --- |
+| Wound washing | NCDC guideline, section 2.6.1.1, pp. 6–7: wash and flush all wounds immediately with soap and water; washing for up to 15 minutes is desirable. | Keep the 15-minute instruction, say to start immediately, and avoid implying that a late presentation makes wound care useless. |
+| Exposure categories | NCDC guideline, Table 1, p. 5: Category II includes nibbling of uncovered skin, minor scratches and abrasions without bleeding; Category III includes transdermal bites/scratches, licks on broken skin and saliva on mucous membranes. Wild-animal bites and all bites in forest areas are Category III. | Replace the old blanket instruction to vaccinate every bite with urgent assessment and the national category-based PEP pathway. |
+| Vaccine and RIG | NCDC guideline, sections 2.6 and 2.7, pp. 6–9, and the decision chart: PEP combines wound management, vaccine and RIG as indicated; RIG is required for Category III, with exceptions for people who have already completed PrEP/PEP. | State that Category II needs vaccine and Category III normally needs vaccine plus RIG; do not publish a dosing schedule in this tip. |
+| Animal vaccination and observation | NCDC FAQ 4 says PEP should be given irrespective of the biting dog's vaccination status. FAQ 9 says not to wait for 10-day observation before starting PEP; the observation rule applies only to dogs and cats, and PEP may be discontinued or converted if the animal remains healthy. | Tell readers not to delay the first assessment or PEP. Leave any later change to the treating clinician. |
+| Cost claims | The old tip gave unreferenced vaccine and RIG price ranges. | Remove the price claims; costs and availability vary by facility and product. |
+
+### Source and scope limitations
+
+- The primary Indian source is the NCDC/MoHFW PDF: https://ncdc.mohfw.gov.in/wp-content/uploads/2025/06/Rabies-Guidelines.pdf. Relevant locators are Table 1 (p. 5), sections 2.6–2.7 (pp. 6–9), and FAQs 4 and 9 (pp. 33–34).
+- The NRCP downloads page lists the 2019 National Guidelines for Rabies Prophylaxis: https://www.rabiesfreeindia.mohfw.gov.in/downloads.
+- The NRCP website was updated 19 November 2026 when checked, but the listed national guideline remains the 2019 document. This pass does not claim that a newer guideline was found.
+- The NRCP helpline's current service coverage is limited to five states, so no nationwide helpline claim was added.
+- The text does not give vaccine schedules, dosing, or a promise of free treatment. A clinician must assess the wound, prior complete vaccination and immune status.
+
+Tip 13-13 remains `PROPOSED_REWRITE`, with reviewer approval `NONE` and automated candidate `HOLD`. The original ID and anchor remain unchanged. No human medical review is recorded.

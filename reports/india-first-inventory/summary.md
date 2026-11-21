@@ -6,7 +6,7 @@
 - Present in current India edition: **765**
 - Missing from edition (requiring mapping): **0**
 - New India-only IDs (outside inherited corpus): **0**
-- Editorial decisions pending: **715**
+- Editorial decisions pending: **714**
 - Tips flagged for further inspection by keyword triage: **562** (not verified defects)
 
 ## Chapter queue
@@ -25,7 +25,7 @@
 | 10 | Are Dating and Marriage Worth It | 23 | 8 | 23 |
 | 11 | Red Lines for Developers and Techies | 21 | 6 | 21 |
 | 12 | Starting Your Own Business | 28 | 28 | 28 |
-| 13 | Emergencies: What to Do First | 48 | 48 | 40 |
+| 13 | Emergencies: What to Do First | 48 | 48 | 39 |
 | 14 | Accounts and Information Security | 12 | 12 | 12 |
 | 15 | Renting and Buying Housing | 18 | 18 | 18 |
 | 16 | Living with Chronic Disease | 14 | 14 | 14 |
