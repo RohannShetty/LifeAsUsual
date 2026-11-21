@@ -85,3 +85,38 @@ test('EPF tip 5-3 narrows unsupported withdrawal promises and remains an unappro
   assert.equal(row.evidence_grade_from_edition, 'B');
   assert.match(row.source_urls, /NoteId=160661/);
 });
+
+
+test('Chapter 7 EPF and EPS advice uses the 2026 schemes and separates full settlement from partial withdrawal', () => {
+  const chapter = JSON.parse(fs.readFileSync('data/en-in/chapters/07-living-with-no-money.json', 'utf8'));
+  const epf = chapter.tips.find((item) => item.id === '7-1');
+  const jobLoss = chapter.tips.find((item) => item.id === '7-12');
+  assert.ok(epf && jobLoss);
+
+  assert.match(epf.sources, /G\.S\.R\. 525\(E\)/);
+  assert.match(epf.sources, /paragraphs 46 and 49/);
+  assert.match(epf.sources, /G\.S\.R\. 527\(E\)/);
+  assert.match(epf.sources, /paragraphs 12 and 13/);
+  assert.doesNotMatch(epf.sources, /EPF Scheme, 1952/);
+  assert.match(epf.benefit, /12 continuous months/);
+  assert.match(epf.benefit, /100% of the Eligible Member Balance/);
+  assert.match(epf.benefit, /25% Minimum Balance/);
+  assert.match(epf.benefit, /36 months/);
+  assert.match(epf.benefit, /no effective date or implementing Gazette amendment/);
+  assert.match(epf.benefit, /paragraph 49\(1\)\(vi\)/);
+
+  assert.match(jobLoss.inPlainWords, /purpose-specific/);
+  assert.match(jobLoss.inPlainWords, /25% Minimum Balance/);
+  assert.match(jobLoss.inPlainWords, /not a general two-month wait/);
+  assert.doesNotMatch(jobLoss.inPlainWords, /75% of the eligible balance to be withdrawn at any time without documentation/);
+
+  const rows = inventoryFromDirectory().rows;
+  for (const id of ['7-1', '7-12']) {
+    const row = rows.find((item) => item.legacy_id === id);
+    assert.ok(row);
+    assert.equal(row.disposition, 'PROPOSED_REWRITE');
+    assert.equal(row.reviewer_approval, 'NONE');
+    assert.equal(row.disposition_candidate, 'HOLD');
+    assert.equal(row.claim_source_verified_in_this_audit, 'NO');
+  }
+});
