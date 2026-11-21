@@ -102,12 +102,14 @@ test('Chapter 7 EPF and EPS advice uses the 2026 schemes and separates full sett
   assert.match(epf.benefit, /100% of the Eligible Member Balance/);
   assert.match(epf.benefit, /25% Minimum Balance/);
   assert.match(epf.benefit, /36 months/);
-  assert.match(epf.benefit, /no effective date or implementing Gazette amendment/);
+  assert.match(epf.benefit, /Central Government's amending notification/);
+  assert.match(epf.sources, /section 15\\(1\\)\\(e\\)/);
   assert.match(epf.benefit, /[Pp]aragraph 49\(1\)\(vi\)/);
 
   assert.match(jobLoss.inPlainWords, /purpose-specific/);
   assert.match(jobLoss.inPlainWords, /25% Minimum Balance/);
   assert.match(jobLoss.inPlainWords, /not a general two-month wait/);
+  assert.match(jobLoss.inPlainWords, /section 15\\(1\\)\\(e\\)/);
   assert.doesNotMatch(jobLoss.inPlainWords, /75% of the eligible balance to be withdrawn at any time without documentation/);
 
   const rows = inventoryFromDirectory().rows;
