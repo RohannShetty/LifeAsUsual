@@ -78,24 +78,34 @@ test.describe('How To Live Better - Comprehensive E2E Tests', () => {
   test('4. Explore page filters recommendations instantly and updates URL', async ({ page }) => {
     await page.goto('/explore/');
 
-    // Initial state: 765 tips
+    // Counts come from the current India-edition records, not the inherited-source snapshot.
+    const edition = readEditionStats();
     const resultsCount = page.locator('#results-count');
-    await expect(resultsCount).toContainText('765 of 765 tips');
+    await expect(resultsCount).toContainText(`${edition.totalTips} of ${edition.totalTips} tips`);
 
-    // Open the filter sheet, then filter by Grade A
+    // Open the filter sheet, then filter by Grade A.
     await page.locator('#open-filter-sheet').click();
     const chipA = page.locator('.filter-chip.chip-a');
     await chipA.click();
 
-    // Verified exact count from BRIEF: 495 Grade A tips
-    await expect(resultsCount).toContainText('495 of 765 tips');
+    await expect(resultsCount).toContainText(`${edition.evidenceGrades.A} of ${edition.totalTips} tips`);
     expect(page.url()).toContain('evidence=A');
     await page.locator('#close-filter-sheet').click();
 
     // Search query filter
     const searchInput = page.locator('#explore-search');
     await searchInput.fill('hypertension');
-    await expect(resultsCount).not.toContainText('495 of 765 tips');
+    await expect(resultsCount).not.toContainText(`${edition.evidenceGrades.A} of ${edition.totalTips} tips`);
+
+    // The reading guide and About page must show the same data-derived totals.
+    await page.goto('/start/');
+    const evidenceList = page.locator('.evidence-list');
+    await expect(evidenceList).toContainText(`Grade A (${edition.evidenceGrades.A} tips)`);
+    await expect(evidenceList).toContainText(`Grade B (${edition.evidenceGrades.B} tips)`);
+    await expect(evidenceList).toContainText(`Grade C (${edition.evidenceGrades.C} tips)`);
+
+    await page.goto('/about/');
+    await expect(page.locator('.stat-box').nth(1)).toContainText(String(edition.evidenceGrades.A));
   });
 
   test('5. Mobile touch targets meet the 44px ergonomics requirement', async ({ page, isMobile }) => {
