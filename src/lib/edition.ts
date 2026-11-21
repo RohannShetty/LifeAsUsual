@@ -5,10 +5,11 @@ export interface EditionStats {
   totalTips: number;
   chapters: number;
   veryHigh: number;
+  evidenceGrades: { A: number; B: number; C: number };
 }
 
 interface RawChapter {
-  tips: Array<{ valueTier?: string }>;
+  tips: Array<{ valueTier?: string; evidenceGrade?: 'A' | 'B' | 'C' }>;
 }
 
 let cached: EditionStats | null = null;
@@ -27,6 +28,14 @@ export function readEditionStats(): EditionStats {
     (sum, chapter) => sum + chapter.tips.filter((tip) => tip.valueTier === 'Very high').length,
     0
   );
-  cached = { totalTips, chapters: chapters.length, veryHigh };
+  const evidenceGrades = { A: 0, B: 0, C: 0 };
+  for (const chapter of chapters) {
+    for (const tip of chapter.tips) {
+      if (tip.evidenceGrade === 'A') evidenceGrades.A += 1;
+      if (tip.evidenceGrade === 'B') evidenceGrades.B += 1;
+      if (tip.evidenceGrade === 'C') evidenceGrades.C += 1;
+    }
+  }
+  cached = { totalTips, chapters: chapters.length, veryHigh, evidenceGrades };
   return cached;
 }

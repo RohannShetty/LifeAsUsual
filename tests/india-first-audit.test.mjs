@@ -1,4 +1,5 @@
 import test from 'node:test';
+import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import { makeInventory, asCsv, asSummary, inventoryFromDirectory } from '../scripts/india-first-audit.mjs';
 
@@ -65,4 +66,22 @@ test('unsupported or unattributed editorial decisions fail closed', () => {
   assert.throws(() => makeInventory(original,current,manifest,{'99-1':{disposition:'KEEP',rationale:'x',author:'x'}}),/unknown legacy ID/);
   assert.throws(() => makeInventory(original,current,manifest,{'7-1':{disposition:'REWRITE'}}),/rationale and decision author/);
   assert.throws(() => makeInventory(original,current,manifest,{'7-1':{disposition:'PUBLISHED',rationale:'x',author:'x'}}),/Invalid disposition/);
+});
+
+
+test('EPF tip 5-3 narrows unsupported withdrawal promises and remains an unapproved high-risk proposal', () => {
+  const chapter = JSON.parse(fs.readFileSync('data/en-in/chapters/05-do-not-waste-money.json', 'utf8'));
+  const tip = chapter.tips.find((item) => item.id === '5-3');
+  assert.ok(tip);
+  assert.match(tip.title, /eligible needs/);
+  assert.match(tip.inPlainWords, /housing, higher education, marriage and medical treatment/);
+  assert.match(tip.caveats, /Do not assume rent or home-loan payments are covered/);
+  assert.equal(tip.evidenceGrade, 'B');
+  const row = inventoryFromDirectory().rows.find((item) => item.legacy_id === '5-3');
+  assert.equal(row.current_route, '/chapters/05-do-not-waste-money/#5-3');
+  assert.equal(row.disposition, 'PROPOSED_REWRITE');
+  assert.equal(row.reviewer_approval, 'NONE');
+  assert.equal(row.disposition_candidate, 'HOLD');
+  assert.equal(row.evidence_grade_from_edition, 'B');
+  assert.match(row.source_urls, /NoteId=160661/);
 });
