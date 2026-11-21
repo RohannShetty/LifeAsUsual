@@ -313,7 +313,7 @@
       "id": "13-13",
       "chapter": 13,
       "tip": 13,
-      "title": "For dog or cat bites and scratches, rinse the area with soap and running water for 15 minutes, then get vaccinated on the same day.",
+      "title": "After an animal bite or scratch, wash the wound promptly and seek rabies post-exposure care without delay.",
       "tags": {
         "money": "Small cost",
         "time": "Quick",
@@ -326,12 +326,12 @@
       "valueTier": "High",
       "disputed": false,
       "stillVerifying": false,
-      "cost": "Rinsing requires no expense. The full course of rabies vaccination costs a few hundred rupees. For category III exposures, an additional passive immunization product—essentially ready-made antibodies administered directly—is needed, adding several hundred to over a thousand rupees. The greatest cost, however, comes from delays.",
-      "inPlainWords": "Once rabies symptoms appear, the fatality rate is practically 100%. Rinsing with soap and water followed by vaccination is the sole safeguard. First, rinse the affected area with alternating streams of soap and running water for 15 minutes, then seek medical care on the same day. If the skin is broken and the wound has been licked, this constitutes a category III exposure, requiring the extra passive immunization product. The fact that a pet has been vaccinated does not alter this classification; exposure level is determined solely by the nature of the injury, not by the animal’s background.",
-      "benefit": "Category III exposures, involving penetrating wounds or licked broken skin, mandate both wound treatment, passive immunization, and full vaccination. The WHO reports that roughly 59,000 people worldwide die from rabies each year, 99% of cases linked to dog bites.",
+      "cost": "No reliable nationwide price was verified. Ask an anti-rabies clinic about availability and charges; do not delay wound washing or medical assessment because of cost.",
+      "inPlainWords": "Wash the bite or scratch immediately with soap and running water for about 15 minutes, then go to an anti-rabies clinic without delay. Category II exposure includes nibbling of uncovered skin and minor scratches or abrasions without bleeding; it needs prompt rabies vaccination. Category III includes transdermal bites or scratches, licks on broken skin, or saliva reaching a mucous membrane; it needs wound care, rabies vaccine and rabies immunoglobulin (RIG). Wild-animal bites and bites in forest areas are also treated as Category III in the national guideline. Do not try to classify the wound or choose a vaccine schedule yourself.",
+      "benefit": "Post-exposure prophylaxis can prevent rabies before symptoms begin. India's National Guidelines describe three parts of care: wound management, rabies vaccination and RIG when indicated. Category III exposure normally needs RIG as well as vaccine; a clinician must account for previous complete vaccination and immune status.",
       "evidenceGrade": "A",
-      "sources": "WHO. Rabies Live reports. <https://www.who.int/en/news-room/fact-sheets/detail/rabies>; Ministry of Health and Family Welfare. <https://mohfw.gov.in/>",
-      "caveats": "Never skip treatment on the assumption that a pet is vaccinated or well‑tended; guidelines base classification strictly on wound severity, not on the animal’s status. Do not attempt to bandage the wound yourself. The ten‑day observation method may inform whether to discontinue vaccination, but it never negates the need to begin it. The same protocol applies to bites inflicted by wild animals or bats.",
+      "sources": "National Centre for Disease Control, Ministry of Health and Family Welfare, National Guidelines for Rabies Prophylaxis, 2019, Table 1 (exposure categories), section 2.6 (wound management), section 2.7 (RIG), decision chart, and FAQs 4 and 9. <https://ncdc.mohfw.gov.in/wp-content/uploads/2025/06/Rabies-Guidelines.pdf>; National Rabies Control Programme, NCDC, Ministry of Health and Family Welfare, official downloads page (lists the National Guidelines for Rabies Prophylaxis 2019). <https://www.rabiesfreeindia.mohfw.gov.in/downloads>",
+      "caveats": "Do not wait for an animal to be observed before starting post-exposure care. The NCDC guideline says PEP should start promptly irrespective of the biting dog's vaccination status. Its 10-day observation advice applies only to dogs and cats; if the animal remains healthy, a clinician may later discontinue or modify PEP. Category I contact (touching or feeding an animal, or a lick on intact skin) does not require PEP; Category II and III do. Wild-animal bites and bites in forest areas are Category III. Do not apply irritants such as chilli, oil, turmeric, lime or soil. Exposure category and treatment depend on the wound, prior complete vaccination and immune status, so attend an anti-rabies clinic and follow the treating clinician's instructions. This is a source-checked draft, not medical review or professional sign-off.",
       "reviewStatus": "source-checked"
     },
     {
