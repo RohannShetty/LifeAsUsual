@@ -26,7 +26,7 @@ India Code returned "Access Denied" (Akamai), and these could not be retrieved o
 
 ## Review status
 
-All four tips still carry review status `independently-checked` and evidence grade A in the chapter file even though several claims rested on domain-root links. That label is accurate only for automated checking, not for professional sign-off, and the 7-13 and 7-8 corrections show why: a link existing is not the same as the link supporting the sentence. Dispositions recorded: 7-7, 7-8 and 7-13 `PROPOSED_REWRITE`; 7-9 left unchanged pending a readable PM-JAY source.
+At the time of this 19 November pass, all four tips still carried the now-retired `independently-checked` label and evidence grade A, even though several claims rested on domain-root links. PR #63, merged on 20 November 2026, replaced that label with `source-checked` across all 765 inherited tips; it did not change source text, evidence grades, dates, caveats or the underlying review work. The current Chapter 7 file records these tips as `source-checked`. This means an AI/delegated source-check pass, not independent verification, named human review or professional sign-off. The 7-13 and 7-8 corrections show why: a link existing is not the same as the link supporting the sentence. Dispositions recorded: 7-7, 7-8 and 7-13 `PROPOSED_REWRITE`; 7-9 left unchanged pending a readable PM-JAY source.
 
 ## Second pass: tips 7-2, 7-3, 7-5 and 7-6 (19 November 2026)
 
@@ -45,7 +45,7 @@ India Code (Akamai "Access Denied", then an Angular single-page app whose Act PD
 
 ### Review status
 
-The four tips still carry review status `independently-checked` and grades A or B. This pass found claims in each that no readable source supported, which confirms that the label describes automated citation checking, not passage-level verification by a named reviewer. Dispositions recorded as PROPOSED_REWRITE for all four.
+At the time of this pass, the four tips still carried the now-retired `independently-checked` label and grades A or B. PR #63 subsequently migrated the corpus to `source-checked` without changing the review substance. This pass found claims in each tip that no readable source supported; the current label must not be read as passage-level verification by a named reviewer. Dispositions recorded as PROPOSED_REWRITE for all four.
 
 ## Third pass, 20 November 2026 — tips 7-10, 7-11, 7-14 to 7-23
 
