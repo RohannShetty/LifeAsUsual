@@ -103,7 +103,7 @@ test('Chapter 7 EPF and EPS advice uses the 2026 schemes and separates full sett
   assert.match(epf.benefit, /25% Minimum Balance/);
   assert.match(epf.benefit, /36 months/);
   assert.match(epf.benefit, /no effective date or implementing Gazette amendment/);
-  assert.match(epf.benefit, /paragraph 49\(1\)\(vi\)/);
+  assert.match(epf.benefit, /[Pp]aragraph 49\(1\)\(vi\)/);
 
   assert.match(jobLoss.inPlainWords, /purpose-specific/);
   assert.match(jobLoss.inPlainWords, /25% Minimum Balance/);
