@@ -48,9 +48,24 @@ Advisory metadata was read with `gh api advisories/<ID>` on the check date.
 - Only `deploy.yml` holds write permissions, only on master, through the Pages OIDC flow.
 - The audit job captures `npm audit --json` for the full and production trees and uploads both as artifacts before gating.
 
+
+## GitHub Actions SHA pinning — 23 November 2026
+
+The workflow baseline at master `7dc2a15` used movable major-version tags. The reviewed patch pins all 13 third-party action references across the five repository workflows to immutable 40-character commit SHAs. The inline release labels below are for human auditability; the SHA is what Actions executes.
+
+| Action | Release label | Immutable commit |
+| --- | --- | --- |
+| `actions/checkout` | `v4.4.0` | [`11d5960a326750d5838078e36cf38b85af677262`](https://github.com/actions/checkout/commit/11d5960a326750d5838078e36cf38b85af677262) |
+| `actions/setup-node` | `v4.4.0` | [`49933ea5288caeca8642d1e84afbd3f7d6820020`](https://github.com/actions/setup-node/commit/49933ea5288caeca8642d1e84afbd3f7d6820020) |
+| `actions/upload-artifact` | `v4.6.2` | [`ea165f8d65b6e75b540449e92b4886f43607fa02`](https://github.com/actions/upload-artifact/commit/ea165f8d65b6e75b540449e92b4886f43607fa02) |
+| `actions/upload-pages-artifact` | `v3.0.1` | [`56afc609e74202658d3ffba0e8f6dda462b719fa`](https://github.com/actions/upload-pages-artifact/commit/56afc609e74202658d3ffba0e8f6dda462b719fa) |
+| `actions/deploy-pages` | `v4.0.5` | [`d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e`](https://github.com/actions/deploy-pages/commit/d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e) |
+
+A deterministic verifier scans every `.yml`/`.yaml` workflow and rejects non-SHA references or missing version annotations. It is part of `precheck` and the required India verification workflow, with unit tests for moving tags, malformed pins and local actions. This is supply-chain hardening, not an audit of the action source code; future upgrades still require reviewing the release and updating the pinned SHA.
+
 ## Residual risk
 
-1. Actions are pinned to major tags (`actions/checkout@v4`, `actions/setup-node@v4`, `actions/upload-pages-artifact@v3`, `actions/deploy-pages@v4`), not commit SHAs. SHA pinning is a hardening step and remains open.
+1. SHA pinning prevents a mutable release tag from silently changing the workflow input, but it does not establish that the third-party action code is safe. Future updates still require release review and explicit SHA changes.
 2. npm dependencies are the only ecosystem audited. No container, OS package or signature verification exists; a green audit is not a general security clearance.
 3. A withdrawn advisory can be re-published. The weekly scheduled audit is the detector; if GHSA-fc5q-39xc-vjpf returns, #25 must be reopened and re-triaged.
 4. No production deployment, runtime probe or penetration test was performed in this pass.
