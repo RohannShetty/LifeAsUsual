@@ -36,5 +36,5 @@ test('ignores repository-local composite actions', () => {
 
 test('Pages deployment is restricted to the master branch', () => {
   const workflow = readFileSync('.github/workflows/deploy.yml', 'utf8');
-  assert.match(workflow, /^  deploy:\n    if: github\\.ref == 'refs\\/heads\\/master'$/m);
+  assert.match(workflow, /^  deploy:\n    if: github\.ref == 'refs\/heads\/master'$/m);
 });
