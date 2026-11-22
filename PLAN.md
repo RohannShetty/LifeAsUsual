@@ -1,7 +1,7 @@
 # LifeAsUsual — India-First Product Completion Plan (P0–P9)
 
 > **Status:** ACTIVE DELIVERY PLAN, not a claim of completion  
-> **Plan revision:** 2026-11-19 · baseline must be refreshed at each agent run  
+> **Plan revision:** 2026-11-22 · baseline must be refreshed at each agent run  
 > **Repository:** https://github.com/RohannShetty/LifeAsUsual  
 > **Canonical goal:** https://github.com/RohannShetty/LifeAsUsual/issues/4  
 > **Approved roadmap:** `docs/india-first-roadmap.md`  
@@ -50,29 +50,35 @@ Where earlier wording in this file conflicts with these, this block wins: P0's p
 | **Blocked** | Specific external authorization, source unavailability or qualified human dependency makes the next step unsafe |
 | **Acceptance gate complete** | User-observable behavior + tests + sources/review + verified release evidence all satisfy the gate |
 
-### 0.2 Baseline known on 19 November 2026: **revalidate before changing checkboxes**
+### 0.2 Baseline revalidated on 22 November 2026: **refresh before changing checkboxes**
 
-- [x] [PR #24](https://github.com/RohannShetty/LifeAsUsual/pull/24) merged reproducible inventory for **765 inherited IDs**, as an inventory input only; this is **not 765 editorial approvals** (`master` reference `1ac22c7`, v2.8.1 at last inspection).
-- [x] [PR #17](https://github.com/RohannShetty/LifeAsUsual/pull/17) merged the structural registry for 28 states + 8 UTs; **not verified local service coverage**.
-- [x] PRs #16/#18/#19 introduced and strengthened fail-closed publication validation for `/help` paths; broader content-route gate and real verification workflow remain incomplete.
-- [x] [PR #15](https://github.com/RohannShetty/LifeAsUsual/pull/15) **merged on 17 Nov 2026**. Its cyber-fraud guide has a site-owner **self-review record**, not independent specialist approval. The authenticity and semantics of that approval require attention; do not rewrite history or claim professional sign-off.
-- [ ] [PR #26](https://github.com/RohannShetty/LifeAsUsual/pull/26) remains draft and unmerged at last inspection. [Run 44374495592](https://github.com/RohannShetty/LifeAsUsual/actions/runs/44374495592) failed: **395 Playwright passed, 1 failed**, mobile `tests/e2e.spec.ts` legacy recall deck remained hidden at 390×844. Build and type-check passed.
-- [ ] [Issue #25](https://github.com/RohannShetty/LifeAsUsual/issues/25) unresolved build dependency `picomatch` ReDoS advisory; monitor actual upstream version, reachability, CI permissions and mitigations; do not describe as fixed.
-- [ ] [Issue #3](https://github.com/RohannShetty/LifeAsUsual/issues/3) real-device touch/navigation evidence outstanding despite automated pointer regression coverage.
-- [ ] Epic #4 and [issues #5–#8](https://github.com/RohannShetty/LifeAsUsual/issues) have substantive acceptance work still open; issue #4's historical statement that PR #15 is draft must be corrected without falsely checking the broader gate.
+- **Master:** `53f616b83b1cf19f44228613542b8e7e028fe347`, after PR #72 merged. The last known required branch-protection context is `Verify India edition`; the protection endpoint returned 403 in this run, so recheck the live rule in GitHub before any future merge.
+- **PR #72** merged as `53f616b`. Exact-head inventory [44941074856](https://github.com/RohannShetty/LifeAsUsual/actions/runs/44941074856) and full India verification/Playwright [44941074874](https://github.com/RohannShetty/LifeAsUsual/actions/runs/44941074874) passed on head `836d5f16b699299c5eaadad1ec8d72a63b8cf9d2`. It conservatively rewrote Chapter 5 tip 5-3 and corrected the Explore/Start/About evidence-grade totals to derive from current India-edition data.
+- **PR #73** merged as `47ac608`. Its exact-head inventory [44802058297](https://github.com/RohannShetty/LifeAsUsual/actions/runs/44802058297) and full India verification [44802058037](https://github.com/RohannShetty/LifeAsUsual/actions/runs/44802058037) passed. It corrected the Chapter 7 source report's historical review-label wording and explicitly retained AI/delegated source checking, not named human or specialist review.
+- **Post-PR #72 master verification:** inventory [44941637565](https://github.com/RohannShetty/LifeAsUsual/actions/runs/44941637565), full India verification/Playwright [44941637596](https://github.com/RohannShetty/LifeAsUsual/actions/runs/44941637596), and Pages deployment [44941637581](https://github.com/RohannShetty/LifeAsUsual/actions/runs/44941637581) all passed on exact master `53f616b`.
+- **PR #62** merged as `d893084`. It fixes the uncached-offline-asset service-worker response and adds 9 worker tests plus Chromium offline checks. It does not deliver selective offline packs or real-device Android acceptance.
+- **Recent merged work:** PRs #59–#69, #72 and #73 are on master. This includes the installable offline shell (#59), corrections intake (#60), source/safety passes, review-status vocabulary (#63), deterministic inventory reporting (#69), Chapter 5 EPF correction (#72), and Chapter 7 review-label history correction (#73).
+- **PR #74:** draft, current head `5d291aafc458e75e15a5c6876ae7cdd88f19d8b1`. It reconciles Chapter 7 tips 7-1/7-12 with the 2026 EPF/EPS schemes, removes the unsupported 75%-anytime claim, and records the 19 November CBT approval as not yet confirmed by an implementing amendment/effective date. Exact-head editorial inventory [44942952414](https://github.com/RohannShetty/LifeAsUsual/actions/runs/44942952414) and full India verification/Playwright [44942952424](https://github.com/RohannShetty/LifeAsUsual/actions/runs/44942952424) both passed. Keep the PR draft: the Scheme text was read from third-party PDF mirrors because the e-Gazette host was unavailable, and no qualified independent financial/legal review is evidenced.
+- **Editorial inventory:** 765/765 inherited IDs are present. The current queue is **715 unassessed, 50 proposed (46 PROPOSED_REWRITE + 4 PROPOSED_KEEP), 0 owner-approved**. A proposal is not an approved disposition or source review.
+- **Publication gate scope:** `verify:publication` inventories 1 help route, 34 inherited chapter routes and 9 guide routes. Only the help route has claim-level `assessLesson` records. Inherited chapters are guarded by route declarations and visible AI-draft notices; the nine inherited guides carry provenance declarations. This is not claim-level verification or professional review of all routes.
+- **Fraud guide:** PR #15 is merged and published. The owner confirmed the 17 November reading/self-review. Its record remains `owner-self-review`, `independent: false`; qualified independent specialist review is not evidenced.
+- **Security:** issue #25 is closed after PR #29. The recorded full-tree `npm audit` had 0 vulnerabilities on master `b1ee21b` on 19 November; the original picomatch advisory was withdrawn upstream on 18 November. Weekly auditing and CI permission review are recorded. Residual risks remain: Actions use major tags rather than commit SHAs, only npm is audited, and no runtime/penetration probe was performed. This is not a general security clearance.
+- **Mobile:** issue #3 remains open for real-device touch/visual QA. Browser emulation is not device evidence.
+- **PWA/corrections:** PR #59 delivered an installable offline shell; PR #62 fixed the uncached-asset failure; PR #60 delivered a corrections page and GitHub issue intake. Selective offline packs, real-device acceptance, a staffed correction service and response SLA remain open.
+- **Release:** epic #4 remains OPEN. No public promotion until all P0–P9 gates are evidenced and the owner authorizes release.
 
-**First agent action:** `git status`, branch/default SHA, `git log`, PR list, issue states, Actions on exact commits, deployed origin, package scripts, content inventory. Log confirmed differences in an issue comment or `reports/delivery/`, then work; do not repeat a full repository audit without a concrete reason.
+### 0.3 How this file was integrated
 
-### 0.3 How to integrate this file
+The root India-first P0–P9 plan has already replaced the inherited reading-edition plan. The migration is recorded and must not be repeated:
 
-This repository already has a legacy `PLAN.md` describing the old English-only translation/design milestone M0–M4. Before replacing it in GitHub:
+1. [x] The prior root plan was preserved at `docs/history/legacy-reading-edition-plan.md` in PR #28.
+2. [x] The active root plan was replaced with this India-first plan in PR #28.
+3. [x] `AGENTS.md` and `.cursor/rules/project.mdc` were reconciled to the India-first editorial contract in PR #26; `BRIEF.md` received a scope/status banner in PR #31.
+4. [x] `npm run verify:instructions` was wired into precheck in PR #32 so key scope statements cannot silently drift.
+5. [ ] Continue preserving useful accessibility and UX constraints from inherited documentation where they do not conflict with the approved India-first product.
+6. [ ] Recheck Markdown links and issue references whenever this plan changes.
 
-1. Preserve the exact historical version as `docs/history/legacy-reading-edition-plan.md` (or an equivalent immutable Git-tracked archive); record its original blob SHA.
-2. Replace root `PLAN.md` with this India-first plan on a **scoped documentation PR**, not directly on `master`.
-3. Clearly mark `BRIEF.md`, legacy source translation specs and outdated scripts/rules as *historical/inherited-edition only* rather than deleting source provenance.
-4. Reconcile with PR #26 rather than overwriting its changes. Review the combined instructions, including `.cursor/rules/project.mdc`, `AGENTS.md`, OpenSpec and the roadmap.
-5. Preserve any still-useful UX/accessibility constraints from the legacy plan where they do not conflict with the approved India-first product.
-6. Verify markdown links, the plan's issue references and its placement; merge only after applicable checks pass.
+Do not reopen the completed PR #26/28/31/32 migration work unless a new concrete regression is found.
 
 ## 1. Delivery protocol, task accounting and PR workflow
 
@@ -134,17 +140,16 @@ Mark **Owner action needed** only for: (a) factual confirmation of an alleged pe
 **Goal:** establish a repeatable, trustworthy build and remove immediately actionable failures before expanding live high-risk advice. **Trackers:** #4, #3, #25, #23. **Parallelism:** CI engineering + dependency/security + editorial safety.
 
 ### P0.1 — Establish current truth
-- [ ] Read current GitHub `master`, all open PRs, issue statuses, recent Actions, current deployed pages, relevant `package.json` and lockfile; record SHAs and links.
-- [ ] Identify old checked boxes that lack evidence and stale status assertions; correct by narrow issue updates, preserving historical record.
-- [ ] Record existing build commands and CI matrix; preserve baseline screenshots/metrics where available.
-- [ ] Distinguish legacy behavior bugs from new India-first defects; prioritize high-risk user harms.
+- [x] Revalidated current master SHA, open PRs, issue states and recent Actions on 22 November 2026; see baseline 0.2.
+- [x] Identified stale claims about PR #26, issue #25 and the owner-confirmed fraud-guide self-review; correct these in the canonical epic and plan rather than repeating the old audit.
+- [ ] Verify the deployed origin against the tested SHA and capture a current production smoke/performance/accessibility baseline.
+- [x] Keep legacy behavior defects separate from India-first editorial gaps; prioritize high-risk user harms.
 
-### P0.2 — Fix the exact current failure
-- [ ] Download/inspect [run 44374495592](https://github.com/RohannShetty/LifeAsUsual/actions/runs/44374495592) and its mobile failure context.
-- [ ] Reproduce the `tests/e2e.spec.ts` legacy recall-deck (`[data-recall-deck]`) hidden-state failure at 390×844; inspect localStorage initialization, hydration, timing, page modes and mock state.
-- [ ] Fix root cause (app or test), not merely timeout/retry/suppression; add deterministic negative and positive cases.
-- [ ] Repeat failing test to assess flakiness and verify across supported viewports, browsers and reduced motion.
-- [ ] Re-run exact-head TypeScript, build, links, term scans, content gate and all Playwright; repair any additional actual failures.
+### P0.2 — Recall-deck regression and automated mobile reliability
+- [x] The historical failure in [run 44374495592](https://github.com/RohannShetty/LifeAsUsual/actions/runs/44374495592) is no longer an open PR blocker. PR #26 merged and its exact-head India verification [run 44495559340](https://github.com/RohannShetty/LifeAsUsual/actions/runs/44495559340) passed.
+- [x] PR #27 fixed the `recallDueAt` millisecond race with deterministic regression coverage; the recorded bead matrix was 12/12 and the full suite passed.
+- [x] The current master Playwright matrix passed on post-PR72 master `53f616b` in [run 44941637596](https://github.com/RohannShetty/LifeAsUsual/actions/runs/44941637596); its inventory [44941637565](https://github.com/RohannShetty/LifeAsUsual/actions/runs/44941637565) and Pages deployment [44941637581](https://github.com/RohannShetty/LifeAsUsual/actions/runs/44941637581) also passed.
+**Status:** automated recall-deck regression work is closed on the verified master baseline. Reopen only if a new exact-head failure appears. Real-device touch/visual validation remains separately open under P0.3.
 
 ### P0.3 — Mobile reading map issue #3
 - [ ] Inspect pointer target and nearest-bead calculations; account for nav overlays, adjacent 44px hit targets, scroll, JS readiness and reduced-JS mode.
@@ -152,29 +157,31 @@ Mark **Owner action needed** only for: (a) factual confirmation of an alleged pe
 - [ ] Verify a real touch device or explicitly document missing device evidence. Do not infer physical touch results from browser emulation.
 - [ ] Update #3 only for demonstrated acceptance completion.
 
-### P0.4 — Security issue #25
-- [ ] Produce full `npm audit` report and current lockfile tree; record Astro and `picomatch` versions and the exact advisory and fix availability **as of check date**.
-- [ ] Verify Astro's static generation/build dependency exposure versus delivered client/runtime code; evaluate untrusted pattern/input paths.
-- [ ] Apply supported fixed versions when they exist; if not, document tested mitigation and residual risk, without silencing full auditing.
-- [ ] Review GitHub Actions least privilege, PR trust boundaries, third-party actions and pinned versions; never expose secrets to untrusted PR workflows.
-- [ ] Verify production/runtime high/critical audit gates still fail for real exposure; retain periodic complete audit and close #25 only with justified remediation/approved risk acceptance.
+### P0.4 — Security baseline and residual hardening
+- [x] Issue #25 was closed with evidence in PR #29 and its closing comment: full-tree `npm audit` reported 0 vulnerabilities on master `b1ee21b` on 19 November 2026; the original picomatch advisory was withdrawn upstream on 18 November.
+- [x] Astro advisories were cleared by the patched build dependency, and the static site does not ship the Node adapter. The weekly dependency audit and CI least-privilege review are recorded in `reports/security-risk-register.md`.
+- [x] No `pull_request_target` workflow was found; deploy write scope is isolated to the master Pages workflow.
+- [ ] Residual hardening remains: pin third-party Actions to commit SHAs, assess non-npm ecosystems, and plan a production runtime/security probe. These are not grounds to describe the withdrawn advisory as still open; reopen #25 only if the advisory returns or a new exposure is found.
+- [ ] Revalidate dependency and workflow state at release time; the 19 November audit is a dated measurement, not a permanent security guarantee.
 
 ### P0.5 — Published high-risk review record integrity
-- [ ] Compare merged PR #15, `data/india-publications.json`, actual published page and `reports/india-fraud-guide-human-review.md` with content-trust rules.
-- [x] Owner confirmed on 19 November 2026 that the 17 Nov site-owner reading/review genuinely occurred (#4 comment 7006298594); the record stays `owner-self-review` / `independent: false`, and the confirmation is recorded as an event, not as independent verification.
-- [ ] Check whether `qualified-human` in code is incorrectly satisfied by an unqualified self-review; ensure schema semantics, independence and policy match reality.
-- [ ] For unverifiable/high-risk claims, correct status and withhold or limit publication as policy requires. Avoid pretending a record is professional legal/financial sign-off.
-- [ ] Recheck RBI 2017 vs 2026 amendment effective **1 Jan 2027** and other time-sensitive claims before changing the page; require new revision-specific review.
-- [ ] Extend the fail-closed publication gate beyond `src/pages/help/**` to inherited chapter routes that present high-risk India guidance, with explicit withheld/qualified states instead of unassessed publication.
-- [ ] Add a regression test that a high-risk inherited route without a permitted review record fails the build.
+- [x] Compare PR #15, `data/india-publications.json`, the published help route and `reports/india-fraud-guide-human-review.md` with the content-trust rules.
+- [x] Owner confirmed on 19 November 2026 that the 17 November source-reading/self-review genuinely occurred. Keep the recorded method `owner-self-review`, `independent: false`; do not ask for this confirmation again or relabel it as specialist review.
+- [x] Review-status integrity rejects the retired `independently-checked` label and requires owner self-review to state its non-independence and limitation.
+- [x] The publication build gate now inventories 1 help route, 34 inherited chapter routes and 9 guide routes. Inherited chapter routes require explicit declarations and a visible AI-draft notice; inherited guides require provenance declarations.
+- [ ] Claim-level `assessLesson` validation is still wired only to the help-route registry. Inherited chapter and guide routes do not yet have complete canonical claim/source records; route inventory and draft labels are not equivalent to claim-level verification.
+- [ ] Arrange qualified independent specialist review for the fraud guide before promoting high-risk claims as professionally verified. The owner's self-review is not that review.
+- [ ] Recheck the RBI 2026 amendment effective 1 January 2027 and other time-sensitive claims before that date; require a new revision-specific source/review event.
+- [ ] Extend claim-level fail-closed review to all actionable public routes and add negative tests proving a high-risk inherited route without its required record cannot publish.
 
 ### P0.6 — Historical content/instruction reconciliation
-- [ ] Preserve old root `PLAN.md` in Git before replacement; migrate active instructions to this P0–P9 file.
-- [ ] Reconcile existing draft PR #26 with `AGENTS.md`, `.cursor/rules/project.mdc`, `BRIEF.md`, old `PLAN.md`, OpenSpec and scripts. No more global English-only, faithful-China-translation or public 765-count rules.
-- [ ] Fix stale status in `data/india-context.json`, `/about` and `/india` where contradicted by current editorial evidence; do not imply unreviewed chapters are approved.
-- [ ] Add deterministic checks against contradictory instruction strings and incorrect claims of India verification.
-- [ ] Reconcile upstream pinned submodule's historical 17-commit delta with a report; never import blindly.
-- [ ] Review known Chapter 4 decisions and critical health/safety claims; correct or HOLD dangerous information rather than invent expert sign-off.
+- [x] Preserve the old root plan at `docs/history/legacy-reading-edition-plan.md` and migrate the active root plan to the India-first P0–P9 plan (#28).
+- [x] Reconcile `AGENTS.md`, `.cursor/rules/project.mdc`, `BRIEF.md` and the root plan with the India-first scope through PRs #26, #28 and #31.
+- [x] Add deterministic instruction-drift checks to precheck (#32); keep review-status integrity checks separate.
+- [ ] Recheck OpenSpec proposal/task records for stale English-only, China-translation or legacy-release requirements; PR #14 is a design record, not proof that every task is implemented.
+- [ ] Reconcile the upstream pinned submodule's historical 17-commit delta with the editorial report; do not import it blindly.
+- [ ] Finish Chapter 4 D1–D7 owner decisions and the prioritized claim-safety audit. The MoSPI Time Use Survey correction is already in PR #40; remaining recommendations still need owner sign-off.
+- [ ] Fix any remaining stale claims in `data/india-context.json`, `/about` and `/india` only when contradicted by current evidence; do not imply unreviewed chapters are approved.
 
 **P0 exit evidence:** exact-head green mandatory CI or explicitly quarantined nonrelease work; honest human-review semantics; linked security risk register; reproducible mobile regression checks; PR #26 safely resolved; deployment/release claims only if production verified. Do not block independent content draft work while a patchless dev dependency remains documented and controlled.
 
@@ -185,10 +192,11 @@ Mark **Owner action needed** only for: (a) factual confirmation of an alleged pe
 **Goal:** turn inventory into a controlled **reviewed disposition queue**, not a fabricated claim that the 765 tips were individually approved. The dispositions are also what let the reading library stay equally prominent with the practical guides without presenting unassessed tips as verified India advice. **Trackers:** #23, #4.
 
 ### P1.1 — Trustworthy inventory pipeline
-- [ ] Reuse merged PR #24 script/report; confirm all **765 unique inherited IDs** appear once, with missing/duplicate ID tests and deterministic ordering.
-- [ ] Verify chapter, route, title, source origin, original attribution, audience, dependencies, risk, evidence and current review status fields.
-- [ ] Include source accessibility and checked date; flag evidence-grade/status contradictions. Missing verification must be `UNVERIFIED/UNASSESSED`, not fabricated.
-- [ ] Report coverage counts by chapter, risk, foreign dependency, disposition candidate/approved state and held content; distinguish **input 765** from public output count.
+- [x] PR #24 provides the deterministic 765-ID inventory. All 765 inherited IDs are present exactly once in the current India edition; no ID is missing from the edition.
+- [x] The inventory records route, source origin, scope, audience, risk signals, source URLs, evidence grade, inherited AI review label, chapter review metadata, candidate disposition and reviewer-approval separation.
+- [x] Current baseline: **765 total; 715 UNASSESSED; 50 PROPOSED_* (46 rewrites + 4 keeps); 0 owner-approved**. PR #72's Chapter 5 proposal is included; proposals remain separate from approved dispositions.
+- [ ] Add verified source accessibility and claim-level checked-date coverage; current URL presence and manifest dates do not prove that each passage was readable or supports every claim.
+- [ ] Continue coverage reporting by chapter/risk/disposition candidate and approved state; never turn a proposal count into an editorial completion percentage.
 
 ### P1.2 — Chapter review workstream
 - [ ] Queue chapters by severity: dangerous health/emergency/legal/financial claims; foreign-only service dependencies; stale government procedures; low-risk evergreen advice.
@@ -228,11 +236,12 @@ Mark **Owner action needed** only for: (a) factual confirmation of an alleged pe
 - [ ] Publish corrections and withdrawal reasons without exposing private reviewer credentials or reader data.
 
 ### P2.3 — Every relevant publication route
-- [ ] Audit all generated pages and sources, not only `src/pages/help/**`; categorize legacy, archived, informational and actionable routes before gates.
-- [ ] Make checks cover **every actionable publishable route** using a route inventory that cannot be bypassed by direct imports, aliases or dynamically generated output.
-- [ ] Ensure raw legacy content is correctly disclosed as heritage/unverified where appropriate, not silently grandfathered into "reviewed" status.
-- [ ] Add negative tests for unregistered route, source contradiction, unsupported locale/state, duplicate route, missing review, withdrawn revision, stale source and misleading badge.
-- [ ] Verify actual production output contains no gated high-risk route on failure.
+- [x] The build gate inventories all generated help, inherited chapter and guide routes: current baseline is 1 help route, 34 chapter routes and 9 guide routes.
+- [x] Inherited chapters have explicit publication declarations and a permanent AI-reviewed-draft notice; inherited guides carry an explicit `inherited-unverified` provenance declaration.
+- [ ] Connect claim-level `assessLesson` records to every actionable chapter and guide route. At present, the help-route registry is the only route set with complete canonical claim/source records.
+- [ ] Make checks cover every actionable publishable route with no bypass through direct imports, aliases or dynamically generated output.
+- [ ] Add negative tests for unregistered routes, source contradiction, unsupported locale/state, duplicate route, missing qualified review, withdrawn revision, stale source and misleading badge.
+- [ ] Verify actual production output withholds a high-risk route when its required claim-level review is missing; a visible draft label is disclosure, not a professional approval.
 
 ### P2.4 — Reading continuity and data migration
 - [ ] Inventory existing storage key formats, `localStorage` schemas, picks, last position, history, reminders, exports and imported legacy data.
@@ -362,11 +371,13 @@ Mark **Owner action needed** only for: (a) factual confirmation of an alleged pe
 **Goal:** one real offline end-to-end guide, not merely a manifest or a play button. **Trackers:** #7, #8. **Depends on:** P2 routes, P6 locale metadata, approved lesson content.
 
 ### P7.1 — Offline PWA architecture
-- [ ] Manifest, icons, installability, appropriate service worker/caching strategy and scope; respect static GitHub Pages base paths.
-- [ ] Selective pack manifest keyed by journey, state, locale, content revision and verified date; avoid downloading every piece by default.
-- [ ] Handle install, update, first load, offline navigation, deleted/retired content, stale high-risk guidance, failed updates, storage quotas and eviction.
+- [x] PR #59 delivered a base-aware manifest, 192/512 icons, installable shell, service worker, production-only registration, asset caching and an offline navigation fallback. Manifest and offline route returned 200 in the recorded smoke check.
+- [x] PR #62 fixed the uncached-offline-asset path with a valid 503 response, 9 service-worker tests and Chromium offline checks. Safari/Firefox and real-device Android update/offline behavior remain unverified.
+- [ ] Build selective offline pack manifests keyed by journey, state, locale, content revision and verified date; do not download every piece by default.
+- [ ] Handle install, update, first load, deleted/retired content, stale high-risk guidance, failed updates, storage quotas and eviction.
 - [ ] Ensure offline text includes source/caveat/date and warns when freshness cannot be rechecked; no automatic unreviewed content upgrades.
 - [ ] Keep privacy local by default, without pushing personal reading data or checklist details to third parties.
+- [ ] Complete real Android install/offline/update acceptance under P7.4. The service-worker shell alone is not the finished offline product.
 
 ### P7.2 — Checklists
 - [ ] Represent checklist steps as stable, versioned, approved action records linked to claims; never manufacture medical/legal commands from summaries.
@@ -398,10 +409,11 @@ Mark **Owner action needed** only for: (a) factual confirmation of an alleged pe
 - [ ] Ship brand changes only with source attribution, UX and performance regression checks.
 
 ### P8.2 — Reader correction and content lifecycle
-- [ ] Provide visible report/correction entry point on actionable pages, including claim reference, anonymous submission option and basic spam controls.
-- [ ] Record editorial triage, owner, severity, issue-to-fix status, corrected version, withdrawal and public changelog with privacy-safe minimal data.
-- [ ] Define urgent misinformation removal/rollback procedure; corrected claims require evidence and proper review before republication.
+- [x] PR #60 delivered a public `/corrections/` page and GitHub issue-form intake, with privacy limits and a public corrections log. Six actual corrections were recorded in the initial log.
+- [ ] Add accountable triage ownership, severity, issue-to-fix status, corrected version, withdrawal and a privacy-safe public changelog.
+- [ ] Define and rehearse urgent misinformation removal/rollback; corrected claims require evidence and proper review before republication.
 - [ ] Schedule official source/freshness reviews, but never treat automated check success as human passage approval.
+- [ ] Validate the correction path end to end from an actionable page and document a realistic response process; a form is not a staffed correction service or SLA.
 
 ### P8.3 — Legal, attribution, privacy and funding
 - [ ] Verify upstream CC BY 4.0 authorship/changes, translations, images, fonts, audio, code and third-party assets; identify actual license obligations.
@@ -490,13 +502,13 @@ Also use script-specific unit tests, source checks, performance/accessibility to
 
 | When | Exact owner action | Agent may do beforehand |
 |---|---|---|
-| **Now, authenticity only** | Confirm whether the recorded 17 Nov cyber-fraud source-reading/self-review in `reports/india-fraud-guide-human-review.md` really occurred; if not, correct record and reassess live guide | Inspect PR #15, code gate, citations and page; prepare safe correction/withholding PR |
-| High-risk release review | Arrange/approve **real, appropriately qualified** legal/medical/financial review where the publication rules require it | Prepare compact evidence packet and list unresolved claims; HOLD until verified |
-| Device validation | Provide actual touch/offline test observation when automated hardware is unavailable | Automate browser tests and publish reproducible device checklist |
-| Brand/domain migration | Select brand and authorize domain/production URL changes | Research candidates, trademarks, UX options and rollback plan |
-| Payments/third-party accounts | Approve spend, identity verification and account permissions | Design compliant, editorially independent integration without activating it |
+| High-risk release review | Arrange/approve **real, appropriately qualified** legal, medical or financial review where publication rules require it. The 17 November owner self-review is already confirmed and remains `owner-self-review` / `independent: false`. | Prepare compact evidence packets and list unresolved claims; keep claims visibly draft/held until the required review exists. |
+| Chapter 4 decisions | Review the D1–D7 recommendation packet and record the actual owner decisions. | Keep the packet current with MoSPI 2019/2024 evidence and clearly separate recommendations from decisions. |
+| Device validation | Provide actual touch/offline test observations when automated hardware is unavailable. | Automate browser tests and publish a reproducible device checklist. |
+| Brand/domain migration | Select the brand and authorize domain/production URL changes. | Research candidates, trademarks, UX options and rollback plan. |
+| Payments/third-party accounts | Approve spend, identity verification and account permissions. | Design compliant, editorially independent integration without activating it. |
 
-**No other already-approved product decisions should be reasked.** If an owner action is pending, work on another safe task rather than blocking all implementation.
+**No other already-approved product decisions should be reasked.** A missing owner action must not block independent implementation, source research or test work.
 
 ---
 
@@ -508,26 +520,25 @@ Also use script-specific unit tests, source checks, performance/accessibility to
 
 **Preferred immediate sequence:**
 
-1. Refresh baseline and correct stale PR #15 status claims in GitHub tracking.
-2. Diagnose the real one-test mobile failure and stabilize PR #26; protect older `PLAN.md` in history before replacing it with this plan.
-3. Address mobile navigation/security and review-record honesty (P0) in parallel.
-4. Complete canonical IDs, full-route content gates and rollback/migration fixtures (P2).
-5. Work Chapter 7 jobs/income pilot (P3) while the 765-tip queue advances (P1); keep unverified claims held.
-6. Ship reader discovery and jurisdiction pilots (P4/P5) based on reviewed material.
-7. Release reviewed `en-IN`/`hi-IN`/`mr-IN` pilot, then offline packs/checklists/audio (P6/P7).
-8. Implement correction/identity/governance (P8), complete production evidence (P9), then close only verified epic gates.
+1. Keep the exact master baseline current: PRs #72 and #73 are merged, and inventory, India verification/Playwright and Pages deployment are green on `53f616b`.
+2. Preserve draft PR #74 despite its green exact-head inventory and Playwright checks. Do not merge it while the high-risk EPF/EPS content lacks qualified independent financial/legal review and the statutory text remains available only through third-party PDF mirrors; preserve `PROPOSED_REWRITE`, `reviewer_approval: NONE` and `HOLD`.
+3. Continue the P1 severity queue and the Chapter 7 job-loss journey. Recheck every benefit against current scheme text and effective dates; distinguish Board approval from an operative notification.
+4. Continue P0.3 real-device touch/visual QA, P0.4 security residual hardening and P0.5 qualified review preparation without blocking unrelated work.
+5. Reconcile the upstream source delta and Chapter 4 D1–D7 owner decisions; keep recommendations separate from decisions and do not reask settled product questions.
+6. Continue P2–P9: claim-level publication gates, equal first-class discovery, verified jurisdiction pilots, reviewed locale journeys, selective offline packs/checklists/audio, correction operations and release evidence.
 
 **Checkpoint after each PR:** produce concise `Completed | Verified SHAs/CI | Risks | Blockers (owner vs external) | Next unblocked task`. Where an agent session ends, leave the exact next branch, issue, command and blocker as a durable handoff. **Do not claim background or continuous work that the current harness cannot actually perform.**
 
 ## 4. First executable task for the next agent session
 
-**Task:** reconcile repository plan and fix the current failing PR #26 test, not start another architecture audit.
+**Task:** continue from verified master `53f616b`; do not restart PR #26, repeat a completed architecture audit or reask approved product decisions.
 
-1. Fetch `master`, `PLAN.md`, roadmap, `AGENTS.md`, PR #26 head/diff, epic #4, #23, #25 and workflow 44374495592.
-2. Diagnose `tests/e2e.spec.ts` recall-deck hidden state at 390×844; add deterministic regression and fix app/test cause.
-3. Prepare scoped PR changes preserving old root plan at `docs/history/legacy-reading-edition-plan.md`; integrate this root `PLAN.md` without overwriting unrelated PR #26 updates.
-4. Run exact-head tests, review diff, then integrate only if approved checks and policy pass. Update issue #4's stale PR #15 statement.
-5. Record status/evidence and continue to P0's next unblocked gate.
+1. Reconcile current master, open PRs and exact-head Actions. Master inventory, India verification/Playwright and Pages deployment are green on `53f616b`.
+2. PR #74's exact-head inventory and full India verification/Playwright now pass on `5d291aafc458e75e15a5c6876ae7cdd88f19d8b1`. The earlier case-sensitive assertion failure was fixed. Keep the PR draft while qualified independent financial/legal review and the official Gazette-source access limitation remain unresolved.
+3. Preserve Chapter 7 tips 7-1/7-12 as `PROPOSED_REWRITE`, reviewer approval `NONE`, candidate `HOLD`. Do not turn the 19 November CBT announcement into an operative entitlement without the implementing amendment and commencement date.
+4. Continue the next unblocked P1 editorial batch and cross-tip contradiction work. Recalculate all inventory totals from the generated CSV; regenerate artifacts with repository scripts and verify the exact PR head.
+5. Continue P0.3 real-device touch QA, P0.4 security residual review, P0.5 qualified-review preparation, and P2–P9 work in parallel where file ownership permits.
+6. Update issue #23 and epic #4 with actual counts, exact SHAs, CI links and named external blockers. Keep all P0–P9 release gates open until their full acceptance evidence exists.
 
 **STOP CONDITIONS:** no trusted tool access needed for safe repo work, actual authorization/credentials required, published high-risk claims cannot be verified, required qualified human sign-off missing, or all verified acceptance gates complete. A single blocked content item is **not** a reason to stop unrelated coding, evidence gathering or UI work. Escalate exactly what the owner must do, with link and consequence.
 
