@@ -1,5 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
 import { inspectWorkflowActions } from '../scripts/verify-actions-pinned.mjs';
 
 test('accepts an immutable SHA with a release annotation', () => {
@@ -31,4 +32,9 @@ test('ignores repository-local composite actions', () => {
   const result = inspectWorkflowActions('- uses: ./.github/actions/local-check');
   assert.deepEqual(result.failures, []);
   assert.deepEqual(result.pins, []);
+});
+
+test('Pages deployment is restricted to the master branch', () => {
+  const workflow = readFileSync('.github/workflows/deploy.yml', 'utf8');
+  assert.match(workflow, /^  deploy:\n    if: github\\.ref == 'refs\\/heads\\/master'$/m);
 });
