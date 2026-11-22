@@ -45,7 +45,7 @@ Advisory metadata was read with `gh api advisories/<ID>` on the check date.
 | `deploy.yml` | `contents: read`, `pages: write`, `id-token: write` | push to master, manual |
 
 - No `pull_request_target` trigger exists, so pull-request code never runs with a writable token or repository secrets.
-- Only `deploy.yml` holds write permissions, only on master, through the Pages OIDC flow.
+- Only `deploy.yml` holds write permissions. Its deploy job explicitly requires `github.ref == 'refs/heads/master'`; a manual dispatch from another branch may build/upload an artifact but cannot deploy it. Production publishing uses the Pages OIDC flow.
 - The audit job captures `npm audit --json` for the full and production trees and uploads both as artifacts before gating.
 
 
