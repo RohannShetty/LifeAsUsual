@@ -1,6 +1,13 @@
 # Verification: Chapter 07 - How to Get By in India When You Have No Money
 
-Verifier: Independent verifier (delegated, did not write the chapter)
+> **Freshness and review limitation — updated 24 November 2026:** This file is a historical source-check snapshot accessed on 21 October 2026. It is **not** a current claim-by-claim verification of the Chapter 7 text now on `master`. The chapter was revised after this report on 19–20 November 2026, including the ESIC ABVKY terms, the job-loss action sequence, labour/legal-aid wording, NAPS and safety-net claims, source URLs, Aadhaar retrieval wording, and personal-insolvency wording. The report below must not be used as evidence that those later revisions were checked. See the dated revision commits: [71aacf0](https://github.com/RohannShetty/LifeAsUsual/commit/71aacf004786a5952bd58d940813ade9c8b53cce), [9f0008a](https://github.com/RohannShetty/LifeAsUsual/commit/9f0008a8f1c96b5661c9761e7c27f3e7210d4cb0), [dcd53cf](https://github.com/RohannShetty/LifeAsUsual/commit/dcd53cf9c8472b445884b9444aa903fee6ad9064), [bdf8c4d](https://github.com/RohannShetty/LifeAsUsual/commit/bdf8c4d060d8619091e688f4c236445d506bf865), [1590796](https://github.com/RohannShetty/LifeAsUsual/commit/159079604d11d199d1beaa0291492af7fef46429), [2114f2e](https://github.com/RohannShetty/LifeAsUsual/commit/2114f2e557ed1eaacf56a21cffd6f01cbff9b6d8), and [216d384](https://github.com/RohannShetty/LifeAsUsual/commit/216d384f2af7725015dbd83707c7316b60db67c3).
+>
+> The current inherited chapter review method is recorded as `ai-delegated-source-check` with status `source-checked`. This describes source-checking activity only; it is not independent qualified human review, medical/legal/financial professional review, or owner approval. [PR #74](https://github.com/RohannShetty/LifeAsUsual/pull/74) contains a later EPF/EPS revision but remains an unmerged draft and is not part of the master chapter.
+>
+> A new claim-level pass is still required against the exact current master revision before this report can be called current.
+
+
+Verifier: delegated source-check session (did not author the chapter; not a qualified human reviewer)
 Date: 2026-10-21
 Access date: 2026-10-21
 Chapter file: data/en-in/chapters/07-living-with-no-money.json
