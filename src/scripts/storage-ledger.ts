@@ -167,8 +167,7 @@ export function updateChecklistStep(
     completedActionIds: [...completedIds],
     updatedAt: Math.floor(now),
   };
-  saveLedger(state);
-  return true;
+  return saveLedger(state);
 }
 
 /** Remove only this checklist's local completion state. */
@@ -177,8 +176,7 @@ export function resetChecklistProgress(checklistId: string): boolean {
   const state = getLedger();
   if (!state.checklists[checklistId]) return false;
   delete state.checklists[checklistId];
-  saveLedger(state);
-  return true;
+  return saveLedger(state);
 }
 
 export function getLedger(): LedgerState {
@@ -194,7 +192,7 @@ export function getLedger(): LedgerState {
   return getDefaultState();
 }
 
-export function saveLedger(state: LedgerState): void {
+export function saveLedger(state: LedgerState): boolean {
   try {
     // A newer build may have written a version this build cannot read. Do not
     // replace it with a downgraded ledger: refusing to save keeps that reader's
@@ -204,13 +202,15 @@ export function saveLedger(state: LedgerState): void {
       const stored = JSON.parse(existing) as { version?: unknown };
       if (typeof stored?.version === 'number' && stored.version > state.version) {
         console.warn('[Ledger] Newer ledger version stored; refusing to overwrite it');
-        return;
+        return false;
       }
     }
     localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
     window.dispatchEvent(new CustomEvent(EVENT_NAME, { detail: state }));
+    return true;
   } catch (e) {
     console.warn('[Ledger] Failed to save state to localStorage:', e);
+    return false;
   }
 }
 
