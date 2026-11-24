@@ -11,7 +11,7 @@ const DAY = 24 * 60 * 60 * 1000;
 
 function ledger(patch: Partial<LedgerState>): LedgerState {
   return {
-    version: 1,
+    version: 2,
     readTipIds: [],
     picks: [],
     lastPosition: null,
@@ -20,6 +20,7 @@ function ledger(patch: Partial<LedgerState>): LedgerState {
     lastActiveDate: null,
     readAt: {},
     recall: {},
+    checklists: {},
     ...patch,
   };
 }
