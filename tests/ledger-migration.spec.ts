@@ -61,6 +61,7 @@ test.describe('ledger migration', () => {
         updatedAt: 1764000000000
       }
     });
+    expect(normalizeLedger(state)).toEqual(state);
     const current = checklistProgressFor(state!, 'job-loss', '2026-11-25', ['save-records', 'call-official-office']);
     expect(current).toEqual({
       revision: '2026-11-25',
