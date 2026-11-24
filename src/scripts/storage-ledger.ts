@@ -3,8 +3,14 @@
  * Section 6: Versioned localStorage key, sets of tip IDs, try/catch safety, export/import
  */
 
+export interface ChecklistProgress {
+  revision: string;
+  completedActionIds: string[];
+  updatedAt: number;
+}
+
 export interface LedgerState {
-  version: 1;
+  version: 2;
   readTipIds: string[]; // e.g. ["1-1", "7-12"]
   picks: string[]; // Bookmarked tip IDs
   lastPosition: { chapter: number; tip: number; timestamp: number } | null;
@@ -13,9 +19,13 @@ export interface LedgerState {
   lastActiveDate: string | null; // "YYYY-MM-DD"
   readAt?: Record<string, number>; // tip id -> ms timestamp of first read
   recall?: Record<string, number>; // tip id -> completed review stage, 0 = first due
+  checklists: Record<string, ChecklistProgress>;
 }
 
 const STORAGE_KEY = 'htlb_ledger_v1';
+const CHECKLIST_ID = /^[a-z0-9][a-z0-9._-]{0,79}$/;
+const CHECKLIST_REVISION = /^[A-Za-z0-9][A-Za-z0-9._-]{0,63}$/;
+const ACTION_ID = /^[a-z0-9][a-z0-9._-]{0,79}$/;
 const EVENT_NAME = 'htlb:ledger-update';
 
 function getTodayString(): string {
@@ -28,7 +38,7 @@ function getTodayString(): string {
 
 function getDefaultState(): LedgerState {
   return {
-    version: 1,
+    version: 2,
     readTipIds: [],
     picks: [],
     lastPosition: null,
@@ -37,6 +47,7 @@ function getDefaultState(): LedgerState {
     lastActiveDate: null,
     readAt: {},
     recall: {},
+    checklists: {},
   };
 }
 
@@ -66,6 +77,22 @@ function dayCounts(value: unknown): Record<string, number> {
   return clean;
 }
 
+function checklistMap(value: unknown): Record<string, ChecklistProgress> {
+  if (!value || typeof value !== 'object' || Array.isArray(value)) return {};
+  const clean: Record<string, ChecklistProgress> = {};
+  for (const [id, entry] of Object.entries(value as Record<string, unknown>)) {
+    if (!CHECKLIST_ID.test(id) || !entry || typeof entry !== 'object' || Array.isArray(entry)) continue;
+    const raw = entry as Record<string, unknown>;
+    if (typeof raw.revision !== 'string' || !CHECKLIST_REVISION.test(raw.revision)) continue;
+    if (typeof raw.updatedAt !== 'number' || !Number.isFinite(raw.updatedAt) || raw.updatedAt < 0) continue;
+    const completedActionIds = Array.isArray(raw.completedActionIds)
+      ? Array.from(new Set(raw.completedActionIds.filter((item): item is string => typeof item === 'string' && ACTION_ID.test(item))))
+      : [];
+    clean[id] = { revision: raw.revision, completedActionIds, updatedAt: Math.floor(raw.updatedAt) };
+  }
+  return clean;
+}
+
 /**
  * Turn whatever is stored or imported into a ledger this build can trust.
  *
@@ -79,7 +106,7 @@ function dayCounts(value: unknown): Record<string, number> {
 export function normalizeLedger(input: unknown): LedgerState | null {
   if (!input || typeof input !== 'object') return null;
   const parsed = input as Record<string, unknown>;
-  if (parsed.version !== 1) return null;
+  if (parsed.version !== 1 && parsed.version !== 2) return null;
   const defaultState = getDefaultState();
   const ids = (value: unknown): string[] =>
     Array.isArray(value) ? Array.from(new Set(value.map(String).filter((entry) => TIP_ID.test(entry)))) : [];
@@ -93,7 +120,65 @@ export function normalizeLedger(input: unknown): LedgerState | null {
     lastActiveDate: dateKey(parsed.lastActiveDate),
     readAt: numericMap(parsed.readAt),
     recall: numericMap(parsed.recall),
+    checklists: checklistMap(parsed.checklists),
   };
+}
+
+/**
+ * Retain completion only for stable action IDs still present in the current
+ * approved checklist. Changed actions must receive new IDs in content data.
+ */
+export function checklistProgressFor(
+  state: LedgerState,
+  checklistId: string,
+  revision: string,
+  allowedActionIds: readonly string[]
+): ChecklistProgress | null {
+  if (!CHECKLIST_ID.test(checklistId) || !CHECKLIST_REVISION.test(revision)) return null;
+  const allowed = new Set(allowedActionIds.filter((id) => ACTION_ID.test(id)));
+  const stored = state.checklists[checklistId];
+  return {
+    revision,
+    completedActionIds: stored ? stored.completedActionIds.filter((id) => allowed.has(id)) : [],
+    updatedAt: stored?.updatedAt ?? 0,
+  };
+}
+
+/** Update one action only when its stable ID belongs to the current approved record. */
+export function updateChecklistStep(
+  checklistId: string,
+  revision: string,
+  actionId: string,
+  completed: boolean,
+  allowedActionIds: readonly string[],
+  now = Date.now()
+): boolean {
+  if (!CHECKLIST_ID.test(checklistId) || !CHECKLIST_REVISION.test(revision)) return false;
+  if (!ACTION_ID.test(actionId) || !allowedActionIds.includes(actionId)) return false;
+  if (!Number.isFinite(now) || now < 0) return false;
+  const state = getLedger();
+  const current = checklistProgressFor(state, checklistId, revision, allowedActionIds);
+  if (!current) return false;
+  const completedIds = new Set(current.completedActionIds);
+  if (completed) completedIds.add(actionId);
+  else completedIds.delete(actionId);
+  state.checklists[checklistId] = {
+    revision,
+    completedActionIds: [...completedIds],
+    updatedAt: Math.floor(now),
+  };
+  saveLedger(state);
+  return true;
+}
+
+/** Remove only this checklist's local completion state. */
+export function resetChecklistProgress(checklistId: string): boolean {
+  if (!CHECKLIST_ID.test(checklistId)) return false;
+  const state = getLedger();
+  if (!state.checklists[checklistId]) return false;
+  delete state.checklists[checklistId];
+  saveLedger(state);
+  return true;
 }
 
 export function getLedger(): LedgerState {
