@@ -49,9 +49,9 @@ Advisory metadata was read with `gh api advisories/<ID>` on the check date.
 - The audit job captures `npm audit --json` for the full and production trees and uploads both as artifacts before gating.
 
 
-## GitHub Actions SHA pinning — 23 November 2026
+## GitHub Actions SHA pinning — merged 23 November 2026 (PR #76)
 
-The workflow baseline at master `7dc2a15` used movable major-version tags. The reviewed patch pins all 13 third-party action references across the five repository workflows to immutable 40-character commit SHAs. The inline release labels below are for human auditability; the SHA is what Actions executes.
+The workflow baseline at master `7dc2a15` used movable major-version tags. PR #76 merged as `02b8251` and pins all 13 third-party action references across the five repository workflows to immutable 40-character commit SHAs. Each annotated release tag was resolved through its official action repository and matched the pinned commit. The inline release labels below are for human auditability; the SHA is what Actions executes.
 
 | Action | Release label | Immutable commit |
 | --- | --- | --- |
@@ -68,4 +68,4 @@ A deterministic verifier scans every `.yml`/`.yaml` workflow and rejects non-SHA
 1. SHA pinning prevents a mutable release tag from silently changing the workflow input, but it does not establish that the third-party action code is safe. Future updates still require release review and explicit SHA changes.
 2. npm dependencies are the only ecosystem audited. No container, OS package or signature verification exists; a green audit is not a general security clearance.
 3. A withdrawn advisory can be re-published. The weekly scheduled audit is the detector; if GHSA-fc5q-39xc-vjpf returns, #25 must be reopened and re-triaged.
-4. No production deployment, runtime probe or penetration test was performed in this pass.
+4. A routine GitHub Pages deployment succeeded on master `02b8251` ([run 45242655359](https://github.com/RohannShetty/LifeAsUsual/actions/runs/45242655359)). This is deployment verification, not a runtime security probe or penetration test; neither was performed.
