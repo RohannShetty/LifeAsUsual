@@ -99,7 +99,7 @@ test.describe('India rewrite chapters', () => {
       const raw = localStorage.getItem('htlb_ledger_v1');
       return raw ? JSON.parse(raw) : null;
     });
-    expect(state?.version).toBe(1);
+    expect(state?.version).toBe(2);
     expect(state?.readTipIds?.length).toBeGreaterThan(0);
   });
 });
