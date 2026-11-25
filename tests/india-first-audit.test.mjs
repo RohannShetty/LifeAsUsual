@@ -110,6 +110,7 @@ test('Chapter 7 EPF and EPS advice uses the 2026 schemes and separates full sett
   assert.match(epf.benefit, /36 months/);
   assert.match(epf.benefit, /Central Government's amending notification/);
   assert.ok(epf.sources.includes('section 15(1)(e)'));
+  assert.match(epf.sources, /aA2020-36\.pdf/);
   assert.match(epf.benefit, /[Pp]aragraph 49\(1\)\(vi\)/);
 
   assert.match(jobLoss.sources, /pdunass\.epfo\.gov\.in/);
