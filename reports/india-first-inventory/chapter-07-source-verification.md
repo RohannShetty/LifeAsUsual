@@ -119,3 +119,8 @@ This pass rechecked tips 7-1 and 7-12 after the 19 November 2026 EPFO Board anno
 - Recheck the Official Gazette and EPFO implementation pages for the Central Government notification required by section 15(1)(e), recording its number and commencement date before changing the current-rule wording.
 - Recheck ABVKY validity and the current ESIC portal conditions; the earlier 30 June 2027 date was not independently revalidated in this pass.
 - Obtain qualified independent financial/legal review before treating either job-loss tip as professionally reviewed. No such review is claimed here.
+
+
+## Rebase checkpoint (26 November 2026)
+
+This draft has been rebased onto the then-current master baseline `4c7ddbe` after confirming that none of the six changed files had been modified on master since the PR base. The official PDUNASS-hosted scheme PDFs and the linked Gazette corrigenda/amendments are now recorded above. Exact-head inventory, India verification, source scan, type-check and Playwright validation must pass on the final synchronized PR head before merge; qualified independent financial/legal review remains outstanding.
