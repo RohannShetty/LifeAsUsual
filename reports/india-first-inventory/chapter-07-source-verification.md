@@ -1,4 +1,4 @@
-# Chapter 7 source verification (19 November 2026)
+# Chapter 7 source verification (19–22 November 2026)
 
 Audit of tips 7-7, 7-8, 7-9 and 7-13 in `data/en-in/chapters/07-living-with-no-money.json` against official Indian sources. This record separates what was read in a primary source from what could not be verified. It is not a reviewer approval: all four tips remain AI-checked drafts and the dispositions below are proposals.
 
@@ -84,3 +84,38 @@ Read-only audit of the remaining chapter-7 tips against official Indian sources.
 - 7-18 EPS paragraph is verified but the EDLI and EPF interest claims are not.
 
 Everything above is an automated pass with recorded sources. No tip in this chapter has a named human reviewer, and none of these edits constitutes legal, financial or medical review.
+
+## Fourth pass: EPF and EPS rules after the 2026 schemes (22 November 2026)
+
+This pass rechecked tips 7-1 and 7-12 after the 19 November 2026 EPFO Board announcement. It separates EPF full settlement, EPF partial withdrawal and EPS pension/withdrawal benefit. This is an AI/delegated source pass, not legal or financial advice, a named human review, or professional sign-off.
+
+### Findings from the notified schemes
+
+| Tip | Claim checked | Text read | Correction |
+| --- | --- | --- | --- |
+| 7-1, 7-12 | Ordinary full EPF settlement | Employees' Provident Funds Scheme, 2026, G.S.R. 525(E), paragraph 49(2): full amount in cases not covered by paragraph 49(1) may be withdrawn after the member has not been employed in a covered establishment for a continuous period of at least 12 months immediately before applying. | Retained the ordinary 12-month rule; removed wording that treated the period as a universal two-month wait. |
+| 7-1, 7-12 | Statutory two-month cases | Paragraph 49(1)(vi) separately requires at least two continuous months immediately before application for specified cases: a closed establishment transferring non-retrenched employees to a non-covered establishment; transfer to a non-covered establishment under the same employer; and discharge with retrenchment compensation under the Industrial Relations Code. Paragraph 49(1)(iv) separately lists mass or individual retrenchment, and paragraph 49(1)(v) voluntary retirement under a mutual scheme. | Explicitly distinguished the narrow two-month cases from ordinary exit under paragraph 49(2). |
+| 7-1, 7-12 | EPF partial withdrawals | Paragraph 46: the Minimum Balance is 25% of aggregate employee and employer contributions plus interest, and must remain after a partial withdrawal. Eligible Member Balance is the account balance after deducting that Minimum Balance. Paragraphs 46(2)–(4) permit up to 100% of Eligible Member Balance for listed illness, education, marriage, housing and special-circumstance purposes, with eligibility and frequency limits. Most listed purposes require 12 months' total membership; paragraph 46(5) separately covers a member exiting before 12 months. | Replaced the inaccurate “75% of the eligible balance at any time” claim with the correct distinction: up to 100% of Eligible Member Balance for permitted purposes, after retaining the 25% Minimum Balance. |
+| 7-1 | EPS monthly pension and withdrawal benefit | Employees' Pension Scheme, 2026, G.S.R. 527(E), paragraph 12(1): ten years of eligible service for monthly superannuation or early pension. Paragraph 13: before meeting that threshold, a member may take a withdrawal benefit or choose a scheme certificate where eligible; for exits before superannuation, withdrawal benefit is available only after 36 months from the date the last contribution became due or on reaching superannuation age, whichever is earlier. | Added the scheme-certificate option and the 36-month EPS withdrawal-benefit condition; kept it separate from EPF's 12-month full-settlement rule. |
+| 7-1, 7-12 | 19 November 2026 Board approval | PIB Release ID 2338667, posted 19 November 2026, reports CBT approval to reduce the minimum balance from 25% to 10% and the ordinary final-withdrawal wait from 12 months to two months. Section 15(1)(e) of the Code on Social Security, 2020 says the Central Government may modify a scheme by notification. The PIB release records Board approval but does not identify an amending notification number or commencement date. The Scheme text read in this pass still states 25% and 12 months. | Kept the Board decision as an announcement only; readers are told not to rely on the proposed change until the amended rule and commencement are confirmed. |
+
+### Source copies and access limitations
+
+- EPF Scheme: G.S.R. 525(E), dated 29 June 2026, Gazette ID CG-DL-E-01072026-273957; paragraphs 46 and 49 appear on PDF pages 86–90. The e-Gazette host did not load in this retrieval environment. The text was read from a third-party PDF mirror that displays the Gazette heading, notification number and text: https://www.staffnews.in/wp-content/uploads/2026/07/Employees-Provident-Funds-Scheme-2026-273957.pdf. The 4 August 2026 corrigendum G.S.R. 703(E) was also checked; its listed corrections concern earlier pages, not paragraphs 46 or 49.
+- EPS Scheme: G.S.R. 527(E), dated 29 June 2026, Gazette ID CG-DL-E-30062026-273951; paragraphs 12 and 13 were read from a third-party PDF mirror: https://labour-codes-by-vivek.github.io/sources/ntf-2026-06-29-pension-scheme-2026.pdf. The 4 August corrigendum G.S.R. 704(E), 25 September amendment G.S.R. 847(E), and 15 October amendment G.S.R. 890(E) were checked; the ten-year threshold in paragraph 12(1) and the withdrawal-benefit rule in paragraph 13 remain as described here.
+- Board announcement: Ministry of Labour and Employment, PIB, 240th Central Board of Trustees meeting, 19 November 2026, Release ID 2338667: https://www.pib.gov.in/PressReleasePage.aspx?PRID=2338667&lang=1&reg=3. Section 15(1)(e) of the Code on Social Security, 2020 requires a Central Government notification to modify a scheme. The PIB release records Board approval but does not identify that notification or a commencement date for the two withdrawal changes. Official India Code text: https://www.indiacode.nic.in/bitstream/123456789/16823/1/a2020-36.pdf.
+- The two-month period already present in paragraph 49(1)(vi) is limited to the listed closure/transfer/discharge cases. It must not be presented as the general post-employment waiting period in paragraph 49(2).
+
+### Changes applied
+
+- Replaced the superseded EPF Scheme 1952 paragraph 69 citation in 7-1 with the 2026 Scheme's paragraphs 46 and 49.
+- Removed the claim that 75% of the “eligible balance” can be withdrawn at any time without documentation.
+- Distinguished EPF partial withdrawal from full settlement and EPS withdrawal benefit from monthly pension.
+- Added the 19 November Board approval as pending the Central Government notification required by section 15(1)(e).
+- Updated the Chapter 7 conflict record and the two proposed editorial rationales. Both remain PROPOSED_REWRITE; reviewer approval remains NONE.
+
+### Still open
+
+- Recheck the Official Gazette and EPFO implementation pages for the Central Government notification required by section 15(1)(e), recording its number and commencement date before changing the current-rule wording.
+- Recheck ABVKY validity and the current ESIC portal conditions; the earlier 30 June 2027 date was not independently revalidated in this pass.
+- Obtain qualified independent financial/legal review before treating either job-loss tip as professionally reviewed. No such review is claimed here.
