@@ -66,6 +66,8 @@ Where earlier wording in this file conflicts with these, this block wins: P0's p
 - **Security:** PR #76 closes the specific movable-action-tag residual. Dependency audit passed on its exact head. Non-npm ecosystems, runtime probing and penetration testing remain outside this work.
 - **Release status:** no P0–P9 acceptance gate is closed by this baseline snapshot. The epic remains open and public promotion is not authorized.
 
+- **Snapshot semantics:** this section records the verified master at the start of this integration cycle. The PR carrying this refresh will itself advance master; refresh the baseline after merge before the next integration cycle.
+
 ### 0.3 How this file was integrated
 
 The root India-first P0–P9 plan has already replaced the inherited reading-edition plan. The migration is recorded and must not be repeated:
