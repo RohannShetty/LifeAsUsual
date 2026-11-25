@@ -112,7 +112,8 @@ test('Chapter 7 EPF and EPS advice uses the 2026 schemes and separates full sett
   assert.ok(epf.sources.includes('section 15(1)(e)'));
   assert.match(epf.benefit, /[Pp]aragraph 49\(1\)\(vi\)/);
 
-  assert.match(jobLoss.sources, /pdunass\.epfo\.gov\.in/);\n  assert.match(jobLoss.inPlainWords, /purpose-specific/);
+  assert.match(jobLoss.sources, /pdunass\.epfo\.gov\.in/);
+  assert.match(jobLoss.inPlainWords, /purpose-specific/);
   assert.match(jobLoss.inPlainWords, /25% Minimum Balance/);
   assert.match(jobLoss.inPlainWords, /not a general two-month wait/);
   assert.ok(jobLoss.inPlainWords.includes('section 15(1)(e)'));
