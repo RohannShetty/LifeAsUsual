@@ -1,3 +1,4 @@
+import { EXPECTED_INDIA_JURISDICTION_CODES } from './india-jurisdictions';
 /**
  * India-first content trust model (first additive slice).
  *
@@ -123,7 +124,8 @@ function validSourceUrl(value: string): boolean {
 }
 
 export function validateJurisdiction(value: string): boolean {
-  return LOCAL_JURISDICTION.test(value);
+  const normalized = value.trim().toUpperCase();
+  return normalized === 'IN' || EXPECTED_INDIA_JURISDICTION_CODES.has(normalized);
 }
 
 export function assessLesson(lesson: CanonicalLesson): TrustAssessment {
