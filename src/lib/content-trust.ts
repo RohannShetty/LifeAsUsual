@@ -97,7 +97,6 @@ export interface TrustAssessment {
 }
 
 const ISO_DATE = /^\d{4}-\d{2}-\d{2}$/;
-const LOCAL_JURISDICTION = /^IN(?:-[A-Z0-9]{2,3})?$/;
 
 function validDate(date: string | undefined): boolean {
   if (!date || !ISO_DATE.test(date)) return false;
