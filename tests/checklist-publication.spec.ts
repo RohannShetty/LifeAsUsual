@@ -148,6 +148,13 @@ test.describe('approved checklist publication contract (synthetic fixtures)', ()
       .toMatch(/review report does not record/);
   });
 
+  test('unknown state codes cannot pass checklist publication', () => {
+    const record = approvedRecord();
+    record.jurisdiction = 'IN-XX';
+    expect(checklistPublicationErrors([record], [lesson()]).join('\\n'))
+      .toMatch(/invalid Indian jurisdiction/);
+  });
+
   test('state-specific checklists cannot reuse a claim from another state', () => {
     const record = approvedRecord();
     record.jurisdiction = 'IN-MH';
