@@ -284,6 +284,8 @@ test.describe('India-first claim-level trust contract (synthetic fixtures)', () 
     expect(validateJurisdiction('IN')).toBe(true);
     expect(validateJurisdiction('IN-MH')).toBe(true);
     expect(validateJurisdiction('IN-DL')).toBe(true);
+    expect(validateJurisdiction('IN-XX')).toBe(false);
+    expect(validateJurisdiction('IN-mh')).toBe(true);
     expect(validateJurisdiction('UK')).toBe(false);
     expect(validateOverlay({
       lessonId: 'in-test-only', jurisdiction: 'IN-MH', status: 'unsupported', claimIds: []
