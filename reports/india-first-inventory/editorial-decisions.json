@@ -252,6 +252,13 @@
       "author": "editorial source audit (agent), owner sign-off pending",
       "rationale": "Chapter 5 EPF source pass, checked 21 November 2026. The existing India text cites the EPF Scheme, 1952 and says rent and housing-loan repayment qualify, but the current readable Government backgrounder (PIB Explainer ID 160661, 31 October 2026) describes the EPF Scheme, 2026 framework and names broad partial-withdrawal categories: housing, higher education, marriage and medical treatment, subject to prescribed conditions. It also reports a 12-month minimum service requirement and up to 75% of the PF balance. It does not establish rent or housing-loan repayment as eligible purposes or provide the full purpose-specific tests. The 19 November 2026 CBT release (PIB Release ID 2338667) reports Board approval to reduce the minimum retained balance from 25% to 10%, but no effective date or implementing amendment was readable; the earlier EPFO circular check recorded in cross-tip-conflicts.md found no notified amendment as of 19 November. Narrow the tip to the broad supported categories, remove unsupported promises and keep the exact eligibility caveat. The full statutory EPF Scheme 2026 text was not readable in this pass. Proposal only; owner sign-off and qualified review remain outstanding. The previous blanket claim that the EPFO portal charges no fee was also removed because no fee schedule was verified in this pass; the replacement directs readers to official channels and rejects guaranteed-approval promises.",
       "migration_decision": "PRESERVE_LEGACY_ID_PENDING_REVIEW"
+    },
+    "13-13": {
+      "disposition": "PROPOSED_REWRITE",
+      "author": "editorial source audit (agent), owner sign-off pending",
+      "rationale": "Source pass 22 Nov 2026: the existing text promised vaccination for every bite/scratch, called vaccination alone the 'sole safeguard', and quoted unsupported rupee costs. The official NCDC National Guidelines for Rabies Prophylaxis, 2019 distinguish Category I, II and III exposure; require prompt wound washing; specify vaccine for Category II/III and RIG for Category III; and say PEP should begin irrespective of the biting dog's vaccination status. The 10-day observation rule applies only to dogs/cats and must not delay starting PEP. The rewrite removes prices and replaces blanket treatment promises with exposure-category and clinician-assessment language.",
+      "india_first_journey": "emergency-health",
+      "migration_decision": "KEEP_LEGACY_ANCHOR"
     }
   }
 }

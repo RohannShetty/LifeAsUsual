@@ -85,3 +85,25 @@ test('EPF tip 5-3 narrows unsupported withdrawal promises and remains an unappro
   assert.equal(row.evidence_grade_from_edition, 'B');
   assert.match(row.source_urls, /NoteId=160661/);
 });
+
+
+test('rabies tip 13-13 uses national exposure categories and remains an unapproved high-risk proposal', () => {
+  const chapter = JSON.parse(fs.readFileSync('data/en-in/chapters/13-emergencies-what-to-do-first.json', 'utf8'));
+  const tip = chapter.tips.find((item) => item.id === '13-13');
+  assert.ok(tip);
+  assert.match(tip.title, /seek rabies post-exposure care without delay/);
+  assert.match(tip.inPlainWords, /Category II exposure/);
+  assert.match(tip.inPlainWords, /Category III/);
+  assert.match(tip.inPlainWords, /rabies immunoglobulin/);
+  assert.doesNotMatch(tip.cost, /few hundred|thousand rupees/);
+  assert.match(tip.caveats, /Do not wait for an animal to be observed/);
+  assert.match(tip.caveats, /10-day observation advice applies only to dogs and cats/);
+  assert.ok(tip.sources.includes('https://ncdc.mohfw.gov.in/wp-content/uploads/2025/06/Rabies-Guidelines.pdf'));
+  const row = inventoryFromDirectory().rows.find((item) => item.legacy_id === '13-13');
+  assert.ok(row);
+  assert.equal(row.current_route, '/chapters/13-emergencies-what-to-do-first/#13-13');
+  assert.equal(row.disposition, 'PROPOSED_REWRITE');
+  assert.equal(row.reviewer_approval, 'NONE');
+  assert.equal(row.disposition_candidate, 'HOLD');
+  assert.equal(row.claim_source_verified_in_this_audit, 'NO');
+});
