@@ -1,3 +1,4 @@
+import { EXPECTED_INDIA_JURISDICTION_CODES } from './india-jurisdictions';
 /**
  * India-first content trust model (first additive slice).
  *
@@ -96,7 +97,6 @@ export interface TrustAssessment {
 }
 
 const ISO_DATE = /^\d{4}-\d{2}-\d{2}$/;
-const LOCAL_JURISDICTION = /^IN(?:-[A-Z0-9]{2,3})?$/;
 
 function validDate(date: string | undefined): boolean {
   if (!date || !ISO_DATE.test(date)) return false;
@@ -123,7 +123,8 @@ function validSourceUrl(value: string): boolean {
 }
 
 export function validateJurisdiction(value: string): boolean {
-  return LOCAL_JURISDICTION.test(value);
+  const normalized = value.trim().toUpperCase();
+  return normalized === 'IN' || EXPECTED_INDIA_JURISDICTION_CODES.has(normalized);
 }
 
 export function assessLesson(lesson: CanonicalLesson): TrustAssessment {
