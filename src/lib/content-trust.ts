@@ -154,6 +154,11 @@ export function assessLesson(lesson: CanonicalLesson): TrustAssessment {
     }
     if (!validPastDate(source.checkedAt)) add('Invalid evidence checked date: ' + source.id);
     if (!source.jurisdiction.trim()) add('Missing study/source jurisdiction: ' + source.id);
+    const sourceJurisdiction = source.jurisdiction.trim().toUpperCase();
+    if ((sourceJurisdiction === 'IN' || sourceJurisdiction.startsWith('IN-')) &&
+        !validateJurisdiction(sourceJurisdiction)) {
+      add('Invalid Indian source jurisdiction: ' + source.id);
+    }
   }
 
   for (const claim of lesson.claims) {
@@ -162,6 +167,10 @@ export function assessLesson(lesson: CanonicalLesson): TrustAssessment {
     if (!claim.text.trim()) add('Empty claim text: ' + claim.id);
     if (!claim.jurisdiction.trim()) add('Missing claim jurisdiction: ' + claim.id);
     const claimJurisdiction = claim.jurisdiction.trim().toUpperCase();
+    if ((claimJurisdiction === 'IN' || claimJurisdiction.startsWith('IN-')) &&
+        !validateJurisdiction(claimJurisdiction)) {
+      add('Invalid Indian jurisdiction for claim ' + claim.id);
+    }
     if (claim.sourceIds.length === 0) add('Claim has no source: ' + claim.id);
     if (new Set(claim.sourceIds).size !== claim.sourceIds.length) add('Duplicate claim source IDs: ' + claim.id);
 

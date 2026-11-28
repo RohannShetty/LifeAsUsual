@@ -73,6 +73,22 @@ test.describe('India-first claim-level trust contract (synthetic fixtures)', () 
     expect(assessLesson(lesson).errors.join(' ')).toContain('Named, dated, scoped qualified human approval');
   });
 
+  test('unknown Indian jurisdiction codes cannot be used by claims or source evidence', () => {
+    const lesson = fixture();
+    lesson.claims[0].jurisdiction = 'IN-XX';
+    expect(assessLesson(lesson).errors.join(' ')).toContain('Invalid Indian jurisdiction for claim');
+
+    lesson.claims[0].jurisdiction = 'IN';
+    lesson.evidence[0].jurisdiction = 'IN-XX';
+    expect(assessLesson(lesson).errors.join(' ')).toContain('Invalid Indian source jurisdiction');
+  });
+
+  test('a known state-specific claim can use a national Indian source', () => {
+    const lesson = fixture();
+    lesson.claims[0].jurisdiction = 'IN-MH';
+    expect(assessLesson(lesson).publishable).toBe(true);
+  });
+
   test('missing evidence locator fails closed', () => {
     const lesson = fixture();
     lesson.evidence[0].locator = '';
