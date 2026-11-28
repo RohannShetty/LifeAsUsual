@@ -1,7 +1,7 @@
 # LifeAsUsual — India-First Product Completion Plan (P0–P9)
 
 > **Status:** ACTIVE DELIVERY PLAN, not a claim of completion  
-> **Plan revision:** 2026-11-26 · baseline must be refreshed at each agent run  
+> **Plan revision:** 2026-11-28 · baseline must be refreshed at each agent run  
 > **Repository:** https://github.com/RohannShetty/LifeAsUsual  
 > **Canonical goal:** https://github.com/RohannShetty/LifeAsUsual/issues/4  
 > **Approved roadmap:** `docs/india-first-roadmap.md`  
@@ -50,7 +50,27 @@ Where earlier wording in this file conflicts with these, this block wins: P0's p
 | **Blocked** | Specific external authorization, source unavailability or qualified human dependency makes the next step unsafe |
 | **Acceptance gate complete** | User-observable behavior + tests + sources/review + verified release evidence all satisfy the gate |
 
-### 0.2 Baseline snapshot revalidated on 26 November 2026: **refresh before changing checkboxes**
+### 0.2 Baseline snapshot revalidated on 28 November 2026: **refresh before changing checkboxes**
+
+- **Master:** `8da359bcc7eecc9afd8af039a65625b90fe3b935`. PR #83 merged as `8da359b`; it replaces the permissive `IN-XX` pattern with membership in the canonical 36-code state/UT registry and adds trust-model and checklist negative tests. It does not mark any state as covered or reviewed.
+- **PR #83 exact-head evidence:** `392b37da32a3758e559731571f2704fdd48e0e63` passed [claim-level trust checks](https://github.com/RohannShetty/LifeAsUsual/actions/runs/45885407575) and [India verification/Playwright](https://github.com/RohannShetty/LifeAsUsual/actions/runs/45885407675). The dependency audit did not trigger because the workflow is path-filtered and no dependency manifest, lockfile or audit script changed; the unchanged dependency tree passed on base master in [run 45885105135](https://github.com/RohannShetty/LifeAsUsual/actions/runs/45885105135).
+- **PR #85 / claim and source jurisdiction validation:** open draft, head `01c5eafb3c3513912e012776bfece7c1d27224bd`. It extends the canonical 36-code check into `assessLesson()`, so unknown India-scoped claim/source jurisdictions such as `IN-XX` fail, while `IN-MH` claims may use national `IN` sources. Exact-head trust and India/Playwright workflows are running; do not treat this as verified or merged yet.
+- **Post-merge master verification:** [India edition verification](https://github.com/RohannShetty/LifeAsUsual/actions/runs/46056417966) and [Pages deployment](https://github.com/RohannShetty/LifeAsUsual/actions/runs/46056417940) were still running at the time this snapshot was prepared. The verification job had completed immutable-action verification, manifest validation, type-check, build, anchor validation and source-term scan; Playwright browser installation was still running. Pages build had passed; deploy was still running. Do not call either workflow complete until GitHub reports success.
+- **PR #82 / checklist publication gate:** merged as `02e28ab`. Exact-head India verification/Playwright [45690163815](https://github.com/RohannShetty/LifeAsUsual/actions/runs/45690163815), content-trust checks [45690163613](https://github.com/RohannShetty/LifeAsUsual/actions/runs/45690163613), and dependency audit [45690163559](https://github.com/RohannShetty/LifeAsUsual/actions/runs/45690163559) passed. The validator binds checklist/action/claim IDs to an exact lesson revision, jurisdiction, content hash and independent-review evidence. `data/india-checklists.json` intentionally contains zero approved records; there is no published checklist route or action advice. It cannot authenticate reviewer identity or credentials. P7.2 remains open.
+- **PR #79 / checklist progress storage:** merged as `4c7ddbe`. It provides local progress storage and migration only; no approved checklist content, interface, offline completion or device acceptance.
+- **PR #78 / Chapter 7 report honesty:** merged as `45fb130`. The 21 October report is labelled historical; delegated source checking is not represented as independent or qualified professional review.
+- **PR #76 / Actions hardening:** merged as `02b8251`. Thirteen third-party Actions references across five workflows are pinned to full SHAs, with a verifier and master-only Pages deployment. Non-npm ecosystems, runtime probing and penetration testing remain open; this is not general security clearance.
+- **PR #74 / EPF-EPS 2026:** open draft, head `7740cdd`, based on an older master (`4c7ddbe`). It requires rebase/current-head verification, full legal-source reconciliation and qualified independent financial/legal review. The 19 November PIB announcement is recorded as Board approval, not an implemented entitlement. Do not merge or describe this as professionally reviewed.
+- **PR #75 / rabies guidance:** open draft, head `a213bf3`, based on an older master (`53f616b`). It requires rebase/current-head verification and qualified medical review. It is an AI/delegated source pass, not medical review.
+- **Editorial inventory:** 765/765 inherited IDs; 715 unassessed, 50 proposed (46 `PROPOSED_REWRITE` + 4 `PROPOSED_KEEP`), 0 owner-approved. Proposals are not approvals.
+- **Publication gate scope:** `verify:publication` inventories 1 help route, 34 inherited chapter routes and 9 guide routes. Only the help route has claim-level `assessLesson` records. Inherited chapters have declarations and visible AI-draft notices; inherited guides have provenance declarations. This is not claim-level verification or professional review of all routes.
+- **Jurisdictions:** all 36 codes exist as structural registry metadata; state-specific evidence and coverage remain unsupported unless separately sourced and reviewed.
+- **Fraud guide:** PR #15 is merged and published. The owner's recorded self-review remains `owner-self-review` with `independent: false`; qualified independent specialist review is not evidenced.
+- **Release status:** no P0–P9 acceptance gate is closed by this baseline. The epic remains open and public promotion is not authorized.
+
+- **Snapshot semantics:** this records the master at the start of this integration cycle. Refresh the baseline after post-merge checks finish and before the next integration cycle; do not change acceptance checkboxes based on this documentation update.
+
+### 0.3 How this file was integrated
 
 - **Master:** `3bca72018298fc7bac88851f6ea048ba5c381ea4`. Post-merge India verification/Playwright [45688747404](https://github.com/RohannShetty/LifeAsUsual/actions/runs/45688747404) and Pages deployment [45688743949](https://github.com/RohannShetty/LifeAsUsual/actions/runs/45688743949) both passed on this exact master.
 - **PR #81:** merged as `3bca720` after exact-head India verification [45687161067](https://github.com/RohannShetty/LifeAsUsual/actions/runs/45687161067) passed. It refreshes the delivery baseline and risk register; it does not close any P0–P9 acceptance gate.
