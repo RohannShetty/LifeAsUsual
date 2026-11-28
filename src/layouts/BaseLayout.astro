@@ -28,6 +28,11 @@ const {
 const currentPath = Astro.url.pathname;
 // Page type drives the editorial shell only; navigation and the cast do not use it.
 const pageType = pageTypeFor(currentPath, import.meta.env.BASE_URL);
+
+// Canonical URL for search engines: absolute origin + the already base-prefixed
+// pathname. Astro.url.pathname includes the configured base under Pages.
+const canonicalUrl = new URL(currentPath, Astro.site ?? Astro.url.origin).href;
+
 ---
 
 <!doctype html>
@@ -45,6 +50,16 @@ const pageType = pageTypeFor(currentPath, import.meta.env.BASE_URL);
     <title>{title}</title>
     <meta name="description" content={description} />
     <meta name="theme-color" content="#0A1230" id="theme-color-meta" />
+    <link rel="canonical" href={canonicalUrl} />
+    <meta property="og:site_name" content="Life as Usual" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:locale" content="en_IN" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
 
     <!-- Apply saved theme before first paint (no flash) -->
     <script is:inline>

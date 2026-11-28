@@ -49,6 +49,9 @@ jobs:
       - name: Build the site
         run: npm run build
 
+      - name: Verify sitemap and robots generation
+        run: node --test tests/build-sitemap.test.mjs
+
       - name: Check fragment links and duplicate anchor ids
         run: npm run check:anchors
 

@@ -6,7 +6,7 @@
     "precheck": "tsx scripts/build-india-data.ts && tsx scripts/verify-india.ts && npm run verify:actions && npm run verify:instructions && npm run verify:review-integrity && npm run verify:checklists",
     "predev": "tsx scripts/build-india-data.ts && tsx scripts/verify-india.ts",
     "dev": "astro dev",
-    "build": "astro build && pagefind --site dist",
+    "build": "astro build && pagefind --site dist && node scripts/build-sitemap.mjs",
     "preview": "astro preview",
     "astro": "astro",
     "parse": "tsx scripts/parse.ts",
